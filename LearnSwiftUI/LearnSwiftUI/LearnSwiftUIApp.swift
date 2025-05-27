@@ -11,7 +11,9 @@ import SwiftUI
 struct LearnSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            TextBootCamp()
+//            TextBootCamp()
+//            ShapesBootCamp()
+            ColorsBootCamp()
         }
     }
 }

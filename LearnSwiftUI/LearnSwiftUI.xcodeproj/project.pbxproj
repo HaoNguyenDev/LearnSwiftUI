@@ -15,6 +15,8 @@
 		DA415E702DE5BFF9009F515E /* Dosis-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA415E6F2DE5BFF9009F515E /* Dosis-VariableFont_wght.ttf */; };
 		DA415E742DE5C31F009F515E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E732DE5C31F009F515E /* Font.swift */; };
 		DA415E8B2DE5C845009F515E /* ShapesBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E8A2DE5C845009F515E /* ShapesBootCamp.swift */; };
+		DA415E8D2DE5CD41009F515E /* ColorsBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E8C2DE5CD41009F515E /* ColorsBootCamp.swift */; };
+		DA415E8F2DE5DCC0009F515E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E8E2DE5DCC0009F515E /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		DA415E712DE5C00D009F515E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DA415E732DE5C31F009F515E /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		DA415E8A2DE5C845009F515E /* ShapesBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesBootCamp.swift; sourceTree = "<group>"; };
+		DA415E8C2DE5CD41009F515E /* ColorsBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsBootCamp.swift; sourceTree = "<group>"; };
+		DA415E8E2DE5DCC0009F515E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 			children = (
 				DA415E6D2DE5BFDD009F515E /* TextBootCamp.swift */,
 				DA415E8A2DE5C845009F515E /* ShapesBootCamp.swift */,
+				DA415E8C2DE5CD41009F515E /* ColorsBootCamp.swift */,
 			);
 			path = BootCamp;
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				DA415E732DE5C31F009F515E /* Font.swift */,
+				DA415E8E2DE5DCC0009F515E /* Color.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -187,7 +193,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA415E8D2DE5CD41009F515E /* ColorsBootCamp.swift in Sources */,
 				DA415E8B2DE5C845009F515E /* ShapesBootCamp.swift in Sources */,
+				DA415E8F2DE5DCC0009F515E /* Color.swift in Sources */,
 				DA415E742DE5C31F009F515E /* Font.swift in Sources */,
 				DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */,
 				DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */,
