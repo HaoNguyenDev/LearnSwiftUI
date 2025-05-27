@@ -6,17 +6,27 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E632DE5BFAB009F515E /* ContentView.swift */; };
+		DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */; };
+		DA415E682DE5BFAB009F515E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA415E602DE5BFAB009F515E /* Preview Assets.xcassets */; };
+		DA415E692DE5BFAB009F515E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA415E622DE5BFAB009F515E /* Assets.xcassets */; };
+		DA415E6E2DE5BFDD009F515E /* TextBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E6D2DE5BFDD009F515E /* TextBootCamp.swift */; };
+		DA415E702DE5BFF9009F515E /* Dosis-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA415E6F2DE5BFF9009F515E /* Dosis-VariableFont_wght.ttf */; };
+		DA415E742DE5C31F009F515E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E732DE5C31F009F515E /* Font.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		DA415E4F2DE5BF26009F515E /* LearnSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA415E602DE5BFAB009F515E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DA415E622DE5BFAB009F515E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA415E632DE5BFAB009F515E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnSwiftUIApp.swift; sourceTree = "<group>"; };
+		DA415E6D2DE5BFDD009F515E /* TextBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBootCamp.swift; sourceTree = "<group>"; };
+		DA415E6F2DE5BFF9009F515E /* Dosis-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		DA415E712DE5C00D009F515E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DA415E732DE5C31F009F515E /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		DA415E512DE5BF26009F515E /* LearnSwiftUI */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = LearnSwiftUI;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DA415E4C2DE5BF26009F515E /* Frameworks */ = {
@@ -32,7 +42,7 @@
 		DA415E462DE5BF26009F515E = {
 			isa = PBXGroup;
 			children = (
-				DA415E512DE5BF26009F515E /* LearnSwiftUI */,
+				DA415E652DE5BFAB009F515E /* LearnSwiftUI */,
 				DA415E502DE5BF26009F515E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +53,61 @@
 				DA415E4F2DE5BF26009F515E /* LearnSwiftUI.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DA415E612DE5BFAB009F515E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DA415E602DE5BFAB009F515E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DA415E652DE5BFAB009F515E /* LearnSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				DA415E712DE5C00D009F515E /* Info.plist */,
+				DA415E612DE5BFAB009F515E /* Preview Content */,
+				DA415E622DE5BFAB009F515E /* Assets.xcassets */,
+				DA415E632DE5BFAB009F515E /* ContentView.swift */,
+				DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */,
+				DA415E6B2DE5BFBD009F515E /* Resource */,
+				DA415E722DE5C307009F515E /* Extension */,
+				DA415E6A2DE5BFAF009F515E /* BootCamp */,
+			);
+			path = LearnSwiftUI;
+			sourceTree = "<group>";
+		};
+		DA415E6A2DE5BFAF009F515E /* BootCamp */ = {
+			isa = PBXGroup;
+			children = (
+				DA415E6D2DE5BFDD009F515E /* TextBootCamp.swift */,
+			);
+			path = BootCamp;
+			sourceTree = "<group>";
+		};
+		DA415E6B2DE5BFBD009F515E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				DA415E6C2DE5BFC6009F515E /* Font */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		DA415E6C2DE5BFC6009F515E /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				DA415E6F2DE5BFF9009F515E /* Dosis-VariableFont_wght.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		DA415E722DE5C307009F515E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DA415E732DE5C31F009F515E /* Font.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +124,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				DA415E512DE5BF26009F515E /* LearnSwiftUI */,
 			);
 			name = LearnSwiftUI;
 			packageProductDependencies = (
@@ -109,6 +171,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA415E682DE5BFAB009F515E /* Preview Assets.xcassets in Resources */,
+				DA415E692DE5BFAB009F515E /* Assets.xcassets in Resources */,
+				DA415E702DE5BFF9009F515E /* Dosis-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +184,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA415E742DE5C31F009F515E /* Font.swift in Sources */,
+				DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */,
+				DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */,
+				DA415E6E2DE5BFDD009F515E /* TextBootCamp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +323,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"LearnSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LearnSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -282,6 +352,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"LearnSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LearnSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
