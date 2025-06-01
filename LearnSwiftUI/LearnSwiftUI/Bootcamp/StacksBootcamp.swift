@@ -56,16 +56,45 @@ struct StacksBootcamp: View {
                         
                     }
                     
+                    HorizontalScrollView()
+                    
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                 .onAppear {
                     screenWidth = geometry.size.width
                 }
+                
+
+                
             }
+            
+            
         }
     }
 }
 
 #Preview {
     StacksBootcamp()
+}
+
+struct HorizontalScrollView: View {
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 20) {
+                ForEach (0..<10) { index in
+                    Circle()
+                        .fill(Color.blue)
+                        .frame(width: 100, height: 100)
+                        .overlay(content: {
+                            Text("\(index)")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .foregroundStyle(.white)
+                                .padding()
+                        })
+                }
+            }
+            .frame(height: 150)
+        }
+    }
 }
