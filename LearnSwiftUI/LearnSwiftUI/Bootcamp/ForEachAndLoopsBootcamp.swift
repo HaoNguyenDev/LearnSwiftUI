@@ -33,7 +33,7 @@ struct ForEachAndLoopsBootcamp: View {
             ScrollView(.vertical) {
                 LazyVStack(alignment: .leading) {
                     ForEach(numbers, id: \.self) { value in
-                        RoundedRectangle(cornerRadius: 8)
+                        RoundedRectangle(cornerRadius: 50)
                             .fill(Color.green)
                             .frame(width: 100, height: 100)
                             .overlay(
