@@ -93,12 +93,12 @@
 				DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */,
 				DA415E6B2DE5BFBD009F515E /* Resource */,
 				DA415E722DE5C307009F515E /* Extension */,
-				DA415E6A2DE5BFAF009F515E /* BootCamp */,
+				DA415E6A2DE5BFAF009F515E /* Bootcamp */,
 			);
 			path = LearnSwiftUI;
 			sourceTree = "<group>";
 		};
-		DA415E6A2DE5BFAF009F515E /* BootCamp */ = {
+		DA415E6A2DE5BFAF009F515E /* Bootcamp */ = {
 			isa = PBXGroup;
 			children = (
 				DA415E6D2DE5BFDD009F515E /* TextBootcamp.swift */,
@@ -112,7 +112,7 @@
 				DAEBAE3B2DEB07A500082B1C /* SpacerBootcamp.swift */,
 				DAEBAE3D2DEB149C00082B1C /* InitializerBootcamp.swift */,
 			);
-			path = BootCamp;
+			path = Bootcamp;
 			sourceTree = "<group>";
 		};
 		DA415E6B2DE5BFBD009F515E /* Resource */ = {
