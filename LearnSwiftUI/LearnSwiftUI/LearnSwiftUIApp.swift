@@ -13,7 +13,7 @@ struct LearnSwiftUIApp: App {
         WindowGroup {
 //            TextBootCamp()
 //            ShapesBootCamp()
-            ColorsBootCamp()
+            ColorsBootcamp()
         }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ColorsBootCamp.swift
+//  ColorsBootcamp.swift
 //  LearnSwiftUI
 //
 //  Created by Hao Nguyen on 27/5/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ColorsBootCamp: View {
+struct ColorsBootcamp: View {
     var body: some View {
         ZStack {
             Rectangle()
@@ -37,5 +37,5 @@ struct ColorsBootCamp: View {
 }
 
 #Preview {
-    ColorsBootCamp()
+    ColorsBootcamp()
 }

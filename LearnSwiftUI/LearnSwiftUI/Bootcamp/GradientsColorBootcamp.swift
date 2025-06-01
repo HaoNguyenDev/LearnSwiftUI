@@ -1,5 +1,5 @@
 //
-//  GradientsColorBootCamp.swift
+//  GradientsColorBootcamp.swift
 //  LearnSwiftUI
 //
 //  Created by Hao Nguyen on 27/5/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GradientsColorBootCamp: View {
+struct GradientsColorBootcamp: View {
     var body: some View {
         ZStack {
             Rectangle()
@@ -22,5 +22,5 @@ struct GradientsColorBootCamp: View {
 }
 
 #Preview {
-    GradientsColorBootCamp()
+    GradientsColorBootcamp()
 }

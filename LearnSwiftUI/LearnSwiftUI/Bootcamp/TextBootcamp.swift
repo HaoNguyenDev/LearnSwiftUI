@@ -1,5 +1,5 @@
 //
-//  TextBootCamp.swift
+//  TextBootcamp.swift
 //  LearnSwiftUI
 //
 //  Created by Hao Nguyen on 27/5/25.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct TextBootCamp: View {
+struct TextBootcamp: View {
     var body: some View {
         Text("Hello! This is a text, and we can style it, color it, and make it look pretty! And we can even make it look like a link!")
 //            .font(.title)
@@ -36,5 +36,5 @@ struct TextBootCamp: View {
 }
 
 #Preview {
-    TextBootCamp()
+    TextBootcamp()
 }

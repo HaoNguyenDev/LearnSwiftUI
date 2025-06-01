@@ -1,5 +1,5 @@
 //
-//  ShapesBootCamp.swift
+//  ShapesBootcamp.swift
 //  LearnSwiftUI
 //
 //  Created by Hao Nguyen on 27/5/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ShapesBootCamp: View {
+struct ShapesBootcamp: View {
     var body: some View {
 //        Circle()
 //        ContainerRelativeShape()
@@ -23,5 +23,5 @@ struct ShapesBootCamp: View {
 }
 
 #Preview {
-    ShapesBootCamp()
+    ShapesBootcamp()
 }
