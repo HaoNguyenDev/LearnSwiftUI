@@ -26,6 +26,7 @@
 		DAEBAE3E2DEB149C00082B1C /* InitializerBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE3D2DEB149C00082B1C /* InitializerBootcamp.swift */; };
 		DAEBAE402DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE3F2DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift */; };
 		DAEBAE422DECB55B00082B1C /* ScrollViewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE412DECB55B00082B1C /* ScrollViewBootcamp.swift */; };
+		DAEBAE442DECC2D100082B1C /* GridBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE432DECC2D100082B1C /* GridBootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		DAEBAE3D2DEB149C00082B1C /* InitializerBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializerBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE3F2DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForEachAndLoopsBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE412DECB55B00082B1C /* ScrollViewBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewBootcamp.swift; sourceTree = "<group>"; };
+		DAEBAE432DECC2D100082B1C /* GridBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				DAEBAE3D2DEB149C00082B1C /* InitializerBootcamp.swift */,
 				DAEBAE3F2DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift */,
 				DAEBAE412DECB55B00082B1C /* ScrollViewBootcamp.swift */,
+				DAEBAE432DECC2D100082B1C /* GridBootcamp.swift */,
 			);
 			path = Bootcamp;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */,
 				DAEBAE3A2DEAF92400082B1C /* StacksBootcamp.swift in Sources */,
 				DAEBAE3C2DEB07A500082B1C /* SpacerBootcamp.swift in Sources */,
+				DAEBAE442DECC2D100082B1C /* GridBootcamp.swift in Sources */,
 				DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */,
 				DA415E952DE5E707009F515E /* ImagesBootcamp.swift in Sources */,
 			);

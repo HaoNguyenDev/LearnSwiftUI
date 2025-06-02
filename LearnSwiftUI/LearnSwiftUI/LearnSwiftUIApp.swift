@@ -14,7 +14,8 @@ struct LearnSwiftUIApp: App {
 //            TextBootCamp()
 //            ShapesBootCamp()
 //            ColorsBootcamp()
-            InitializerBootcamp(newPoint: 100)
+//            InitializerBootcamp(newPoint: 100)
+            GridBootcamp()
         }
     }
 }
