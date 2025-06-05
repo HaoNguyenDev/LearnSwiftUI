@@ -27,6 +27,7 @@
 		DAEBAE402DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE3F2DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift */; };
 		DAEBAE422DECB55B00082B1C /* ScrollViewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE412DECB55B00082B1C /* ScrollViewBootcamp.swift */; };
 		DAEBAE442DECC2D100082B1C /* GridBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE432DECC2D100082B1C /* GridBootcamp.swift */; };
+		DAEBAE462DF11C7300082B1C /* ButtonBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE452DF11C7300082B1C /* ButtonBootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		DAEBAE3F2DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForEachAndLoopsBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE412DECB55B00082B1C /* ScrollViewBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE432DECC2D100082B1C /* GridBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBootcamp.swift; sourceTree = "<group>"; };
+		DAEBAE452DF11C7300082B1C /* ButtonBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				DAEBAE3F2DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift */,
 				DAEBAE412DECB55B00082B1C /* ScrollViewBootcamp.swift */,
 				DAEBAE432DECC2D100082B1C /* GridBootcamp.swift */,
+				DAEBAE452DF11C7300082B1C /* ButtonBootcamp.swift */,
 			);
 			path = Bootcamp;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				DA415E8B2DE5C845009F515E /* ShapesBootcamp.swift in Sources */,
 				DAEBAE422DECB55B00082B1C /* ScrollViewBootcamp.swift in Sources */,
 				DA415E8F2DE5DCC0009F515E /* Color.swift in Sources */,
+				DAEBAE462DF11C7300082B1C /* ButtonBootcamp.swift in Sources */,
 				DA415E742DE5C31F009F515E /* Font.swift in Sources */,
 				DA415E912DE5DF63009F515E /* GradientsColorBootcamp.swift in Sources */,
 				DAEBAE402DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift in Sources */,
