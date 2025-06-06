@@ -29,6 +29,8 @@
 		DAEBAE442DECC2D100082B1C /* GridBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE432DECC2D100082B1C /* GridBootcamp.swift */; };
 		DAEBAE462DF11C7300082B1C /* ButtonBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE452DF11C7300082B1C /* ButtonBootcamp.swift */; };
 		DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE472DF2692E00082B1C /* SateBootcamp.swift */; };
+		DAEBAE4A2DF28E1E00082B1C /* SubviewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE492DF28E1E00082B1C /* SubviewBootcamp.swift */; };
+		DAEBAE4F2DF2909E00082B1C /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE4E2DF2909E00082B1C /* Closure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		DAEBAE432DECC2D100082B1C /* GridBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE452DF11C7300082B1C /* ButtonBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE472DF2692E00082B1C /* SateBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SateBootcamp.swift; sourceTree = "<group>"; };
+		DAEBAE492DF28E1E00082B1C /* SubviewBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubviewBootcamp.swift; sourceTree = "<group>"; };
+		DAEBAE4E2DF2909E00082B1C /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 		DA415E652DE5BFAB009F515E /* LearnSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				DAEBAE4B2DF2907900082B1C /* Base */,
 				DA415E712DE5C00D009F515E /* Info.plist */,
 				DA415E612DE5BFAB009F515E /* Preview Content */,
 				DA415E622DE5BFAB009F515E /* Assets.xcassets */,
@@ -126,6 +131,7 @@
 				DAEBAE432DECC2D100082B1C /* GridBootcamp.swift */,
 				DAEBAE452DF11C7300082B1C /* ButtonBootcamp.swift */,
 				DAEBAE472DF2692E00082B1C /* SateBootcamp.swift */,
+				DAEBAE492DF28E1E00082B1C /* SubviewBootcamp.swift */,
 			);
 			path = Bootcamp;
 			sourceTree = "<group>";
@@ -153,6 +159,14 @@
 				DA415E8E2DE5DCC0009F515E /* Color.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		DAEBAE4B2DF2907900082B1C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				DAEBAE4E2DF2909E00082B1C /* Closure.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +245,7 @@
 			files = (
 				DA415E8D2DE5CD41009F515E /* ColorsBootcamp.swift in Sources */,
 				DA415E8B2DE5C845009F515E /* ShapesBootcamp.swift in Sources */,
+				DAEBAE4A2DF28E1E00082B1C /* SubviewBootcamp.swift in Sources */,
 				DAEBAE422DECB55B00082B1C /* ScrollViewBootcamp.swift in Sources */,
 				DA415E8F2DE5DCC0009F515E /* Color.swift in Sources */,
 				DAEBAE462DF11C7300082B1C /* ButtonBootcamp.swift in Sources */,
@@ -239,6 +254,7 @@
 				DAEBAE402DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift in Sources */,
 				DAEBAE3E2DEB149C00082B1C /* InitializerBootcamp.swift in Sources */,
 				DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */,
+				DAEBAE4F2DF2909E00082B1C /* Closure.swift in Sources */,
 				DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */,
 				DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */,
 				DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */,
