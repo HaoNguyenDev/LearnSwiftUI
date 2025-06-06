@@ -28,6 +28,7 @@
 		DAEBAE422DECB55B00082B1C /* ScrollViewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE412DECB55B00082B1C /* ScrollViewBootcamp.swift */; };
 		DAEBAE442DECC2D100082B1C /* GridBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE432DECC2D100082B1C /* GridBootcamp.swift */; };
 		DAEBAE462DF11C7300082B1C /* ButtonBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE452DF11C7300082B1C /* ButtonBootcamp.swift */; };
+		DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE472DF2692E00082B1C /* SateBootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		DAEBAE412DECB55B00082B1C /* ScrollViewBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE432DECC2D100082B1C /* GridBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE452DF11C7300082B1C /* ButtonBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBootcamp.swift; sourceTree = "<group>"; };
+		DAEBAE472DF2692E00082B1C /* SateBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SateBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				DAEBAE412DECB55B00082B1C /* ScrollViewBootcamp.swift */,
 				DAEBAE432DECC2D100082B1C /* GridBootcamp.swift */,
 				DAEBAE452DF11C7300082B1C /* ButtonBootcamp.swift */,
+				DAEBAE472DF2692E00082B1C /* SateBootcamp.swift */,
 			);
 			path = Bootcamp;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */,
 				DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */,
 				DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */,
+				DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */,
 				DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */,
 				DAEBAE3A2DEAF92400082B1C /* StacksBootcamp.swift in Sources */,
 				DAEBAE3C2DEB07A500082B1C /* SpacerBootcamp.swift in Sources */,

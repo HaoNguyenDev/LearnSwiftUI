@@ -31,6 +31,8 @@ extension Font.TextStyle {
             return 21
         case .title:
             return 27
+        case .largeTitle:
+            return 34
         default:
             return 17
         }
