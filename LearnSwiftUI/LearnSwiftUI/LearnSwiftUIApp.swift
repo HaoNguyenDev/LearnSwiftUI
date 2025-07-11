@@ -18,7 +18,8 @@ struct LearnSwiftUIApp: App {
 //            GridBootcamp()
 //            ButtonBootcamp()
 //            SubviewBootcamp()
-            BindingBootcamp()
+//            BindingBootcamp()
+            SheetBootcamp()
         }
     }
 }

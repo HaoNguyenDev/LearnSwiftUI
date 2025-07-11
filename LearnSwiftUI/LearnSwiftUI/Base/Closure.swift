@@ -28,6 +28,7 @@ typealias TripleResult<T1, T2, T3> = TripleResultWithReturn<T1, T2, T3, Void>
 typealias VoidResult = EmptyResult<Void> // () -> Void
 typealias ErrorResult = SingleResult<Error> // (Error) -> Void
 typealias BoolResult = SingleResult<Bool> // (Bool) -> Void
+typealias StringResult = SingleResult<String> // (String) -> Void
 
 // Optional. I think tuples with external parameter name is more readable
 typealias SingleTuple<T> = T
