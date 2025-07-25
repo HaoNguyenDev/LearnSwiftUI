@@ -77,8 +77,25 @@ struct ButtonBootcamp: View {
                     )
                     
             }
-
             
+            Button {
+                print(">>> Button with modifier pressed")
+            } label: {
+                Text("Button with modifier")
+                    .padding(10)
+                    .frame(maxWidth: .infinity, maxHeight: 50)
+            }.buttonStyle(conerRadius: 25, foregroundColor: .blue, padding: (.horizontal, 20))
+            
+            Button {
+                print(">>> Button with modifier pressed")
+            } label: {
+                Text("Button with modifier")
+                    .padding(10)
+                    .frame(maxWidth: .infinity, maxHeight: 50)
+            }
+            .buttonStyle(SecondaryButtonStyle())
+            .padding(.horizontal, 20)
+            .disabled(true)
         })
        
         
