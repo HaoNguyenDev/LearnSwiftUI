@@ -14,7 +14,7 @@ struct ForEachAndLoopsBootcamp: View {
     var body: some View {
         ScrollView {
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 20) {
+                LazyHStack(spacing: 20) {
                     ForEach(numbers, id: \.self) { value in
                         RoundedRectangle(cornerRadius: 8)
                             .fill(Color.green)
@@ -27,11 +27,12 @@ struct ForEachAndLoopsBootcamp: View {
                             )
                     }
                 }
+                
             }
             .padding()
             
             ScrollView(.vertical) {
-                LazyVStack(alignment: .leading) {
+                LazyVStack(alignment: .center) {
                     ForEach(numbers, id: \.self) { value in
                         RoundedRectangle(cornerRadius: 50)
                             .fill(Color.green)

@@ -19,10 +19,11 @@ struct ObservedObjectBootcamp: View {
                 resetParentView.toggle()
             } label: {
                 Text("Re-render Parent View")
-                    .foregroundStyle(resetParentView ? .white : .blue)
+                    .foregroundStyle(.white)
                     .padding()
-                    .background(Color.red)
-                    .cornerRadius(5)
+                    .frame(width: 200)
+                    .background(resetParentView ? Color.red : Color.green)
+                    .cornerRadius(20)
             }
 
         }
@@ -37,20 +38,36 @@ struct ObservedObjectChildView: View {
     @ObservedObject var model: CounterModel
     
     var body: some View {
-        Text("Tap to count up: \(model.count)")
+        VStack {
+            Text("Subview")
+                .font(.title3)
+                .foregroundStyle(.white)
+            ExtractedView2(count: $model.count)
+        }
+        .padding(20)
+        .background(
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color.gray)
+        )
+    }
+}
+
+struct ExtractedView2: View {
+    @Binding var count: Int
+    
+    var body: some View {
+        Text("Tap to count up: \(count)")
             .font(.title3)
             .foregroundStyle(.white)
             .padding()
             .frame(width: 200, height: 100)
             .background {
-                RoundedRectangle(cornerRadius: 5)
+                RoundedRectangle(cornerRadius: 20)
                     .fill(Color.blue)
             }
             .onTapGesture {
-                model.count += 1
+                count += 1
             }
     }
 }
-
-    
 

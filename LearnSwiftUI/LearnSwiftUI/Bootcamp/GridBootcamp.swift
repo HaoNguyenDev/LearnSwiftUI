@@ -46,12 +46,13 @@ struct GridBootcamp: View {
                     }
                 }
                 .padding(20)
+                .background(Color.green)
             }
         
             
             ScrollView(.horizontal) {
                 HStack {
-                    LazyHGrid(rows: rows) {
+                    LazyHGrid(rows: rows, alignment: .center, spacing: 15, pinnedViews: [.sectionHeaders]) {
                         ForEach (alphabet, id: \.self) { word in
                             RoundedRectangle(cornerRadius: 10)
                                 .fill(Color.blue)
@@ -70,6 +71,7 @@ struct GridBootcamp: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 20)
+                .background(Color.red)
             }
             
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 50))], alignment: .leading, spacing: 10, pinnedViews: [.sectionHeaders]) {
@@ -91,6 +93,7 @@ struct GridBootcamp: View {
                         .font(.headline)
                         .fontWeight(.bold)
                 }
+                .background(Color.yellow)
                 
                 Section {
                     ForEach(0..<100) { word in
@@ -109,6 +112,10 @@ struct GridBootcamp: View {
                         .font(.headline)
                         .fontWeight(.bold)
                 }
+                .background(Color.green)
+            }
+            
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 50))], alignment: .leading, spacing: 10, pinnedViews: [.sectionFooters]) {
                 
                 Section {
                     ForEach(29..<41) { word in
@@ -128,10 +135,6 @@ struct GridBootcamp: View {
                         .fontWeight(.bold)
                 }
             }
-            
-            
-
-
 
         }
         .padding(.top, 10)
