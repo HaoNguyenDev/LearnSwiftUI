@@ -6,6 +6,7 @@
 //
 import SwiftUI
 
+//MARK: ViewModifier
 extension View {
     public func buttonStyle(conerRadius: CGFloat,
                             foregroundColor: Color = .white,
@@ -16,6 +17,7 @@ extension View {
     }
 }
 
+//MARK: ViewModifier
 struct StrockLineModifier: ViewModifier {
     var conerRadius: CGFloat = 10
     var foregroundColor: Color = .white
@@ -31,6 +33,7 @@ struct StrockLineModifier: ViewModifier {
     }
 }
 
+//MARK: ButtonStyle
 struct SecondaryButtonStyle: ButtonStyle {
     @Environment(\.isEnabled) private var isEnabled
     func makeBody(configuration: Configuration) -> some View {
