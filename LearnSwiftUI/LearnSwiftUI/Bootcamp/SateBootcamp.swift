@@ -12,143 +12,59 @@ struct User: Identifiable {
     var name: String
 }
 
-struct SateBootcamp: View {
-    
-    @State private var number: Int
-    @State private var viewBackgroundColor: Color
-    @State private var users: [User]
-    
-    init() {
-        number = 0
-        viewBackgroundColor = .blue
-        users = [User(name: "Hao"),
-                 User(name: "Trinh"),
-                 User(name: "Nam"),
-                 User(name: "Linh"),
-                 User(name: "Trung"),
-                 User(name: "Hao"),
-                 User(name: "Trinh"),
-                 User(name: "Nam"),
-                 User(name: "Linh"),
-                 User(name: "Trung")]
-    }
-    
-    var body: some View {
-        ScrollView {
-            VStack {
-                CountTestView(number: $number, viewBackgroundColor: $viewBackgroundColor)
-                    .frame(maxWidth: .infinity, maxHeight: 300)
-                
-                NameScrollView(users: $users)
-                    .frame(maxWidth: .infinity, maxHeight: 500)
-            }
-            
-        }
-        
-       
-    }
-}
-
-
 #Preview {
     SateBootcamp()
 }
 
-struct CountTestView: View {
-    @Binding var number: Int
-    @Binding var viewBackgroundColor: Color
+struct SateBootcamp: View {
+    @State private var newName = ""
+    @State private var isToggled = false
+    @State private var selectedColor: Color = .blue
+    @State private var everyoneName = [User(name: "Hao"), User(name: "Loan")]
     
     var body: some View {
-        VStack {
-            VStack(spacing: 0) {
-                Text("Count Test")
-                    .padding()
-                    .font(.dosis(fontweight: .bold, size: 34.0))
+        
+        VStack(spacing: 20) {
+            
+            //Bool State
+            Toggle("On/Off", isOn: $isToggled)
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(isToggled ? Color.green.opacity(0.5) : Color.gray.opacity(0.2))
+                )
+            Text(isToggled ? "🌝" : "🌚")
+                .font(.system(size: 40, weight: .bold, design: .default))
+            
+            
+            //Text State
+            TextField("Please enter a name", text: $newName)
+                .padding()
+                .background(RoundedRectangle(cornerRadius: 10).fill(Color.gray.opacity(0.2)))
+            Text(newName == "" ? "..." : "Hello 👋 \(newName)")
+            
+            // Array State
+            Button {
+                everyoneName.append(User(name: newName))
+            } label: {
+                Text("Add")
                     .foregroundStyle(.white)
-                
-                Text("Numbner: \(number)")
+                    .font(.system(size: 18, weight: .medium, design: .default))
                     .padding()
-                    .font(.dosis(fontweight: .semibold, size: 34.0))
-                    .foregroundStyle(.yellow)
-                
-                Spacer()
-                
-                HStack {
-                    Button {
-                        decrement()
-                    } label: {
-                        Text("-")
-                            .padding(.top, -10)
-                            .font(.dosis(fontweight: .bold, size: 34.0))
-                            .frame(width: 100, height: 50)
-                            .foregroundStyle(.blue)
-                            .background(Color.white)
-                            .cornerRadius(10)
-                    }
-                    
-                    Spacer()
-                        .frame(width: 40)
-                    
-                    Button(action: {
-                        increment()
-                    }) {
-                        Text("+")
-                            .padding(.top, -10)
-                            .font(.dosis(fontweight: .bold, size: 34.0))
-                            .frame(width: 100, height: 50)
-                            .foregroundStyle(.blue)
-                            .background(Color.white)
-                            .cornerRadius(10)
-                    }
-                }
-                .frame(maxWidth: .infinity, maxHeight: 50)
-                Spacer()
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color.green)
+                    )
             }
-        }
-        .background(viewBackgroundColor)
-        .cornerRadius(20)
-        .padding(.horizontal, 30)
-        .padding(.vertical, 20)
-    }
-}
-
-extension CountTestView {
-    private func increment() {
-        number += 1
-        checkPositiveNumber()
-    }
-    
-    private func decrement() {
-        number -= 1
-        checkPositiveNumber()
-    }
-    
-    private func checkPositiveNumber() {
-        viewBackgroundColor = number > 0 ? Color.blue : Color.red
-    }
-}
-
-struct NameScrollView: View {
-    @Binding var users: [User]
-    
-    var body: some View {
-        VStack() {
-            ScrollView(showsIndicators: true) {
-                ForEach(users, id: \.id) { user in
-                    LazyVStack(alignment: .leading) {
+            ScrollView {
+                LazyVStack(alignment: .center, spacing: 10) {
+                    ForEach(everyoneName) { user in
                         Text(user.name)
-                            .multilineTextAlignment(.leading)
-                            .foregroundStyle(.white)
-                            .font(.system(size: 20, weight: .medium, design: .default))
-                            .padding()
-                            .background(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .fill(Color.blue)
-                            )
                     }
-                    .padding(.leading, 30)
                 }
             }
+            
         }
+        .padding()
     }
 }
