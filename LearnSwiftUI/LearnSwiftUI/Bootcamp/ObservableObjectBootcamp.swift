@@ -130,6 +130,8 @@ struct AddTaskView: View {
             
             Button(action: {
                 onAdd?(task)
+                task.title = ""
+                task.subtitle = ""
             }) {
                 Text("Add Task")
                     .foregroundStyle(.white)
