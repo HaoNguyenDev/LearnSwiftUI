@@ -9,10 +9,10 @@ import SwiftUI
 
 struct BindingBootcamp: View {
     
-    @State var name: String = "default name value"
-    @State var age: String = "default age value"
-    @State var message: String = "default message value"
-    @State var isEnabled: Bool = false
+    @State private var name: String = ""
+    @State private var age: String = ""
+    @State private var message: String = "....."
+    @State private var isEnabled: Bool = false
     var body: some View {
         VStack {
             InputView(name: $name,
@@ -67,9 +67,10 @@ struct InputView: View {
                     .foregroundColor(.white)
             }
             .frame(maxWidth: .infinity, maxHeight: 50)
-            .background(Color.blue)
+            .background(isEnabled ? Color.blue : Color.gray)
             .cornerRadius(10)
             .padding(.horizontal, 10)
+            .disabled(!isEnabled)
             
             Toggle(isOn: $isEnabled) {
                 Text("Enable")

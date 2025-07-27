@@ -33,6 +33,18 @@ struct SateBootcamp: View {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(isToggled ? Color.green.opacity(0.5) : Color.gray.opacity(0.2))
                 )
+            
+            Toggle(isOn: $isToggled) {
+                Text("On/Off")
+                    .font(.headline)
+                    .foregroundStyle(.black)
+                    .frame(maxHeight: 50)
+                    .padding()
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(isToggled ? Color.green.opacity(0.5) : Color.gray.opacity(0.2))
+                    )
+            }
             Text(isToggled ? "🌝" : "🌚")
                 .font(.system(size: 40, weight: .bold, design: .default))
             
