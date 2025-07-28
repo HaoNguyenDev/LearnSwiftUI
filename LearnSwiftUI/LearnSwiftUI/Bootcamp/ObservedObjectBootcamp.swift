@@ -5,27 +5,39 @@
 //  Created by Hao Nguyen on 11/7/25.
 //
 
+/*
+ @ObservedObject: "I only OBSERVE this object"
+ 
+ View receives object from outside
+ View does not own object
+ Object is managed by another View
+ */
+
 import SwiftUI
 
 struct ObservedObjectBootcamp: View {
-    @State private var resetParentView: Bool = false
-    
+    @State private var reRenderParentView: Bool = false
+    @StateObject private var counterModel = CounterModel()
     var body: some View {
-        VStack(spacing: 20) {
-            let model = CounterModel()
-            ObservedObjectChildView(model: model)
-            
-            Button {
-                resetParentView.toggle()
-            } label: {
-                Text("Re-render Parent View")
-                    .foregroundStyle(.white)
-                    .padding()
-                    .frame(width: 200)
-                    .background(resetParentView ? Color.red : Color.green)
-                    .cornerRadius(20)
+        NavigationView {
+            VStack(spacing: 20) {
+                
+                ObservedObjectView(model: counterModel)
+                
+                Button {
+                    reRenderParentView.toggle()
+                    counterModel.reset()
+                } label: {
+                    Text("Re-render Parent View")
+                        .foregroundStyle(.white)
+                        .padding()
+                        .frame(width: 200)
+                        .background(Color.green)
+                        .cornerRadius(20)
+                }
+                
             }
-
+            .navigationTitle("ObservedObject")
         }
     }
 }
@@ -34,15 +46,15 @@ struct ObservedObjectBootcamp: View {
     ObservedObjectBootcamp()
 }
 
-struct ObservedObjectChildView: View {
-    @ObservedObject var model: CounterModel
+struct ObservedObjectView: View {
+    @ObservedObject var model: CounterModel //ObservedObject should be inject from parentview, dont create in this view like this CounterModel()
     
     var body: some View {
         VStack {
             Text("Subview")
                 .font(.title3)
                 .foregroundStyle(.white)
-            ExtractedView2(count: $model.count)
+            CountView2(count: $model.count)
         }
         .padding(20)
         .background(
@@ -52,7 +64,7 @@ struct ObservedObjectChildView: View {
     }
 }
 
-struct ExtractedView2: View {
+struct CountView2: View {
     @Binding var count: Int
     
     var body: some View {
