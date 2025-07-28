@@ -5,31 +5,44 @@
 //  Created by Hao Nguyen on 11/7/25.
 //
 
+/*@StateObject: "I OWN this object"
+ 
+ View creates and manages the lifecycle of the object
+ Objects exist throughout the lifetime of the View
+ SwiftUI does not recreate objects when the View re-renders
+ */
+
 import SwiftUI
 
 class CounterModel: ObservableObject {
     @Published var count = 0
+    
+    func reset() {
+        count = 0
+    }
 }
 
 struct StateObjectBootcamp: View {
-    @State private var resetParentView: Bool = false
+    @State private var reRenderParentView: Bool = false
     
     var body: some View {
-        VStack(spacing: 20) {
-            
-            StateObjectChildView()
-            
-            Button {
-                resetParentView.toggle()
-            } label: {
-                Text("Re-render Parent View")
-                    .foregroundStyle(.white)
-                    .padding()
-                    .frame(width: 200)
-                    .background(resetParentView ? Color.red : Color.green)
-                    .cornerRadius(20)
+        NavigationView {
+            VStack(spacing: 20) {
+                
+                StateObjectView()
+                
+                Button {
+                    reRenderParentView.toggle()
+                } label: {
+                    Text("Re-render Parent View")
+                        .foregroundStyle(.white)
+                        .padding()
+                        .frame(width: 200)
+                        .background(Color.green)
+                        .cornerRadius(20)
+                }
             }
-
+            .navigationTitle(Text("StateObject"))
         }
         
     }
@@ -39,7 +52,7 @@ struct StateObjectBootcamp: View {
     StateObjectBootcamp()
 }
 
-struct StateObjectChildView: View {
+struct StateObjectView: View {
     @StateObject var model = CounterModel()
     
     var body: some View {
@@ -47,7 +60,7 @@ struct StateObjectChildView: View {
             Text("Subview")
                 .font(.title3)
                 .foregroundStyle(.white)
-            ExtractedView(count: $model.count)
+            CountView(model: model)
         }
         .padding(20)
         .background(
@@ -58,11 +71,11 @@ struct StateObjectChildView: View {
 }
 
 
-struct ExtractedView: View {
-    @Binding var count: Int
+struct CountView: View {
+    @ObservedObject var model: CounterModel
     
     var body: some View {
-        Text("Tap to count up: \(count)")
+        Text("Tap to count up: \(model.count)")
             .font(.title3)
             .foregroundStyle(.white)
             .padding()
@@ -72,7 +85,7 @@ struct ExtractedView: View {
                     .fill(Color.blue)
             }
             .onTapGesture {
-                count += 1
+                model.count += 1
             }
     }
 }
