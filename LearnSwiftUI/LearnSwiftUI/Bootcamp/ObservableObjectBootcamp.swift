@@ -96,7 +96,7 @@ struct TaskHStackView: View {
                 
         }
         .frame(maxWidth: .infinity, maxHeight: 100)
-        .background(RoundedRectangle(cornerRadius: 8).fill(Color.gray))
+        .background(RoundedRectangle(cornerRadius: 8).fill(task.isCompleted ? Color.green : Color.gray))
         .padding()
     }
 }
@@ -145,12 +145,8 @@ struct AddTaskView: View {
     }
 }
 
-#Preview {
-    TaskList()
-}
-
 struct TaskList: View {
-    @StateObject private var viewModel = TaskListViewModel()
+    @ObservedObject private var viewModel = TaskListViewModel()
     
     var body: some View {
         VStack {
@@ -173,6 +169,24 @@ struct TaskList: View {
         
         .onAppear {
             viewModel.loadTasks()
+        }
+    }
+}
+
+#Preview {
+    TaskListContentView()
+}
+
+struct TaskListContentView: View {
+    
+    @StateObject private var viewModel = TaskListViewModel()
+    
+    var body: some View {
+        NavigationView {
+            TaskList()
+                .environmentObject(viewModel)
+                .navigationTitle("Todo List")
+                .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
