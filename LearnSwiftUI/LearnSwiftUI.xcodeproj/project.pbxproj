@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */; };
 		DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E632DE5BFAB009F515E /* ContentView.swift */; };
 		DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */; };
 		DA415E682DE5BFAB009F515E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA415E602DE5BFAB009F515E /* Preview Assets.xcassets */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewBootcamp.swift; sourceTree = "<group>"; };
 		DA415E4F2DE5BF26009F515E /* LearnSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA415E602DE5BFAB009F515E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA415E622DE5BFAB009F515E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				DAED677D2E20E45C00309382 /* StateObjectBootcamp.swift */,
 				DAED677F2E21089A00309382 /* ObservedObjectBootcamp.swift */,
 				DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */,
+				DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */,
 			);
 			path = Bootcamp;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */,
 				DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */,
 				DAEBAE3A2DEAF92400082B1C /* StacksBootcamp.swift in Sources */,
+				DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */,
 				DAED67802E21089A00309382 /* ObservedObjectBootcamp.swift in Sources */,
 				DAEBAE3C2DEB07A500082B1C /* SpacerBootcamp.swift in Sources */,
 				DAEBAE442DECC2D100082B1C /* GridBootcamp.swift in Sources */,
