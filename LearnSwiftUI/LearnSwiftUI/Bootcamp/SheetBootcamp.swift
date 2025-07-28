@@ -10,19 +10,29 @@ import SwiftUI
 struct SheetBootcamp: View {
     
     @State private var showSheet = false
-    
+    @State private var inputString: String = ""
     var body: some View {
         ZStack {
             Color.blue
                 .ignoresSafeArea()
-            Button {
-                showSheet.toggle()
-            } label: {
-                Text("Show Sheet")
+            VStack {
+                Button {
+                    showSheet.toggle()
+                } label: {
+                    Text("Show Sheet")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .foregroundStyle(.blue)
+                        .frame(width: 200, height: 50)
+                        .background(Color.white)
+                        .cornerRadius(25)
+                }
+                
+                Text("Input String: \(inputString)")
                     .font(.headline)
                     .fontWeight(.bold)
                     .foregroundStyle(.blue)
-                    .frame(width: 200, height: 50)
+                    .frame(width: 300, height: 50)
                     .background(Color.white)
                     .cornerRadius(25)
             }
@@ -30,11 +40,11 @@ struct SheetBootcamp: View {
             .sheet(isPresented: $showSheet) {
                 print("Sheet is presented")
             } content: {
-                SecondView(stringInput: .constant(""))
+                SecondView(stringInput: $inputString)
             }
             
 //            .fullScreenCover(isPresented: $showSheet) {
-//                SecondView()
+//                SecondView(stringInput: $inputString)
 //            }
         }
     }
