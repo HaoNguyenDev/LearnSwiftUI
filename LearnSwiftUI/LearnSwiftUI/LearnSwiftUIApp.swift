@@ -21,7 +21,8 @@ struct LearnSwiftUIApp: App {
 //            BindingBootcamp()
 //            SheetBootcamp()
 //            SateBootcamp()
-            StateObjectBootcamp()
+//            StateObjectBootcamp()
+            TodoAppView()
         }
     }
 }

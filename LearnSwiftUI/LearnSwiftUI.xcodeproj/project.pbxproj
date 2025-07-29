@@ -20,6 +20,11 @@
 		DA415E8F2DE5DCC0009F515E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E8E2DE5DCC0009F515E /* Color.swift */; };
 		DA415E912DE5DF63009F515E /* GradientsColorBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E902DE5DF63009F515E /* GradientsColorBootcamp.swift */; };
 		DA415E952DE5E707009F515E /* ImagesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E942DE5E707009F515E /* ImagesBootcamp.swift */; };
+		DA5C98B62E391F4B007AC9E9 /* TodoAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B52E391F4B007AC9E9 /* TodoAppView.swift */; };
+		DA5C98B82E391F91007AC9E9 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B72E391F91007AC9E9 /* TodoListView.swift */; };
+		DA5C98BA2E39237C007AC9E9 /* TodoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B92E39237C007AC9E9 /* TodoRowView.swift */; };
+		DA5C98BC2E3924AA007AC9E9 /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98BB2E3924AA007AC9E9 /* TodoDetailView.swift */; };
+		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
 		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
 		DAA930402E33C99C000FE238 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9303F2E33C995000FE238 /* ButtonModifier.swift */; };
 		DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */; };
@@ -58,6 +63,11 @@
 		DA415E8E2DE5DCC0009F515E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		DA415E902DE5DF63009F515E /* GradientsColorBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientsColorBootcamp.swift; sourceTree = "<group>"; };
 		DA415E942DE5E707009F515E /* ImagesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesBootcamp.swift; sourceTree = "<group>"; };
+		DA5C98B52E391F4B007AC9E9 /* TodoAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppView.swift; sourceTree = "<group>"; };
+		DA5C98B72E391F91007AC9E9 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		DA5C98B92E39237C007AC9E9 /* TodoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRowView.swift; sourceTree = "<group>"; };
+		DA5C98BB2E3924AA007AC9E9 /* TodoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
+		DA65B7342E37D34600BF8A59 /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAA9303F2E33C995000FE238 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBootcamp.swift; sourceTree = "<group>"; };
@@ -126,6 +136,7 @@
 				DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */,
 				DA415E6B2DE5BFBD009F515E /* Resource */,
 				DA415E722DE5C307009F515E /* Extension */,
+				DA65B7322E37D31200BF8A59 /* Demo */,
 				DA415E6A2DE5BFAF009F515E /* Bootcamp */,
 			);
 			path = LearnSwiftUI;
@@ -186,6 +197,26 @@
 				DA415E8E2DE5DCC0009F515E /* Color.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		DA65B7322E37D31200BF8A59 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				DA65B7332E37D31B00BF8A59 /* TodoApp */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		DA65B7332E37D31B00BF8A59 /* TodoApp */ = {
+			isa = PBXGroup;
+			children = (
+				DA65B7342E37D34600BF8A59 /* TodoStore.swift */,
+				DA5C98B52E391F4B007AC9E9 /* TodoAppView.swift */,
+				DA5C98B72E391F91007AC9E9 /* TodoListView.swift */,
+				DA5C98B92E39237C007AC9E9 /* TodoRowView.swift */,
+				DA5C98BB2E3924AA007AC9E9 /* TodoDetailView.swift */,
+			);
+			path = TodoApp;
 			sourceTree = "<group>";
 		};
 		DAEBAE4B2DF2907900082B1C /* Base */ = {
@@ -275,6 +306,7 @@
 				DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */,
 				DAEEFB762E366D4000E78DA2 /* ObservableObjectBootcamp.swift in Sources */,
 				DAEBAE4A2DF28E1E00082B1C /* SubviewBootcamp.swift in Sources */,
+				DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */,
 				DAEBAE422DECB55B00082B1C /* ScrollViewBootcamp.swift in Sources */,
 				DAE2EACA2DF5DE280083E733 /* SheetBootcamp.swift in Sources */,
 				DA415E8F2DE5DCC0009F515E /* Color.swift in Sources */,
@@ -294,12 +326,16 @@
 				DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */,
 				DAEBAE3A2DEAF92400082B1C /* StacksBootcamp.swift in Sources */,
 				DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */,
+				DA5C98BC2E3924AA007AC9E9 /* TodoDetailView.swift in Sources */,
 				DAED67802E21089A00309382 /* ObservedObjectBootcamp.swift in Sources */,
+				DA5C98B82E391F91007AC9E9 /* TodoListView.swift in Sources */,
 				DAEBAE3C2DEB07A500082B1C /* SpacerBootcamp.swift in Sources */,
 				DAEBAE442DECC2D100082B1C /* GridBootcamp.swift in Sources */,
 				DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */,
 				DA415E952DE5E707009F515E /* ImagesBootcamp.swift in Sources */,
+				DA5C98B62E391F4B007AC9E9 /* TodoAppView.swift in Sources */,
 				DAA930402E33C99C000FE238 /* ButtonModifier.swift in Sources */,
+				DA5C98BA2E39237C007AC9E9 /* TodoRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
