@@ -10,12 +10,15 @@ import SwiftUI
 struct NavigationViewBootcamp: View {
     @State private var isPresented: Bool = false
     @State private var showFullScreenCover: Bool = false
-    
+    let items = ["Apple", "Orange", "Banana", "Pineapple"]
     var body: some View {
-        NavigationView {
+        
+        NavigationView { //NavigationView wraps the entire interface to enable navigation.
             VStack {
+                
+                //NavigationLink creates a button or clickable area that, when clicked, switches to a DetailView.
                 NavigationLink(destination: {
-                    DestinationDemoView()
+                    DestinationView()
                 }, label: {
                     Text("Go to Destination")
                         .foregroundStyle(.white)
@@ -23,24 +26,34 @@ struct NavigationViewBootcamp: View {
                         .background(Color.blue)
                 })
                 
+                //Show sheet
                 Button(action: {
                     isPresented = true
                 }, label: {
                     Text("Present Modal")
                         .foregroundStyle(.white)
                         .padding()
-                        .background(Color.blue)
-                })
+                }).buttonStyle(.borderedProminent)
                 
+                //Show fullscreen cover
                 Button(action: {
                     showFullScreenCover = true
                 }, label: {
                     Text("Show FullScreen Cover")
                         .foregroundStyle(.white)
                         .padding()
-                        .background(Color.blue)
-                })
+                }).buttonStyle(.borderedProminent)
                 
+                //Destination with list
+                VStack(alignment: .leading) {
+                    ForEach(items, id: \.self) { item in
+                        NavigationLink(destination: DestinationView(string: item)) {
+                            Text(item)
+                        }
+                    }
+                }
+                .padding()
+                .background(Color.gray.opacity(0.5))
                 
                 .navigationTitle(Text("NavigationView"))
                 .navigationBarTitleDisplayMode(.inline)
@@ -51,7 +64,7 @@ struct NavigationViewBootcamp: View {
             print(">>> Dismissed")
             isPresented = false
         }, content: {
-            DestinationDemoView(dismiss: {
+            DestinationView(dismiss: {
                 isPresented = false
             })
         })
@@ -60,17 +73,19 @@ struct NavigationViewBootcamp: View {
             print(">>> Dismissed")
             showFullScreenCover = false
         }, content: {
-            DestinationDemoView(dismiss: {
+            DestinationView(dismiss: {
                 showFullScreenCover = false
             })
         })
     }
 }
 
-struct DestinationDemoView: View {
+struct DestinationView: View {
     var dismiss: (() -> Void)?
+    var string: String?
     
-    init(dismiss: (() -> Void)? = nil) {
+    init(string: String? = nil, dismiss: (() -> Void)? = nil) {
+        self.string = string
         self.dismiss = dismiss
     }
     
@@ -79,14 +94,34 @@ struct DestinationDemoView: View {
             Color.green
                 .ignoresSafeArea()
             VStack {
-                Text("Destination View")
-                    .font(.headline)
-                    .foregroundStyle(.white)
-                
+                text
                 dismissButton
             }
         }
+        .navigationTitle(
+            Text("Destination View")
+                .font(.headline)
+                .foregroundStyle(.white)
+        )
+        .navigationBarItems(
+            trailing: Button(action: {
+                print("Pressed Plus")
+            }) {
+                Image(systemName: "plus")
+            }
+        )
+//        .navigationBarHidden(true) // Hide the navigation bar
         
+        
+    }
+    
+    @ViewBuilder
+    private var text: some View {
+        if let unwrapString = string {
+            Text(unwrapString)
+                .font(.headline)
+                .foregroundStyle(.white)
+        }
     }
     
     @ViewBuilder
