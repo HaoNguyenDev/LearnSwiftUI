@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct LearnSwiftUIApp: App {
+    @StateObject private var taskStore = TodoStore()
+    
     var body: some Scene {
         WindowGroup {
 //            TextBootCamp()

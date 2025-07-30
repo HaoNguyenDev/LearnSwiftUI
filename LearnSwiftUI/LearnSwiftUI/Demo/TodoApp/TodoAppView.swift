@@ -28,7 +28,7 @@ struct TodoAppView: View {
             }
             .tabItem {
                 Image(systemName: "chart.bar")
-                Text("Thống kê")
+                Text("Statistics")
             }
         }
         .environmentObject(todoStore)

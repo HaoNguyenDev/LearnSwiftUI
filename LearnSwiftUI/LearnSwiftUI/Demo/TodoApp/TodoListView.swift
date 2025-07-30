@@ -29,7 +29,7 @@ struct TodoListView: View {
                         }
                     } label: {
                         Text("Add")
-                    }
+                    }.buttonStyle(.borderedProminent)
                     .disabled(newTodoTitle.isEmpty)
 
                 }
