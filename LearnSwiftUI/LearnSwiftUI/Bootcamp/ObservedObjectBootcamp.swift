@@ -7,10 +7,15 @@
 
 /*
  @ObservedObject: "I only OBSERVE this object"
+ Follow a reference object (reference type, usually class) that follows the ObservableObject protocol to update the View when data changes.
  
  View receives object from outside
  View does not own object
  Object is managed by another View
+ Usually used when you need to share data between Views, especially from Parent View to Child View.
+ How it works: When a property marked @Published in ObservableObject changes, the View using @ObservedObject will automatically re-render.
+ NEVER create ObservableObject in the body of the View!
+ Do not create an object with () inside the view, because then each time the view is re-rendered, it will create a new object, you should only inject the object using the init function
  */
 
 import SwiftUI
