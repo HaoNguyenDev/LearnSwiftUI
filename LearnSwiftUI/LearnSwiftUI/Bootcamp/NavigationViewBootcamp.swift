@@ -15,7 +15,7 @@ struct NavigationViewBootcamp: View {
         NavigationView {
             VStack {
                 NavigationLink(destination: {
-                    DestinationDemoView(dismiss: {})
+                    DestinationDemoView()
                 }, label: {
                     Text("Go to Destination")
                         .foregroundStyle(.white)
@@ -70,6 +70,10 @@ struct NavigationViewBootcamp: View {
 struct DestinationDemoView: View {
     var dismiss: (() -> Void)?
     
+    init(dismiss: (() -> Void)? = nil) {
+        self.dismiss = dismiss
+    }
+    
     var body: some View {
         ZStack {
             Color.green
@@ -79,20 +83,25 @@ struct DestinationDemoView: View {
                     .font(.headline)
                     .foregroundStyle(.white)
                 
-                Button {
-                    dismiss?()
-                } label: {
-                    Text("Dissmiss")
-                        .font(.headline)
-                        .foregroundStyle(.white)
-                        .padding(10)
-                        .background(Color.blue)
-                }
-
+                dismissButton
             }
         }
         
     }
+    
+    @ViewBuilder
+    private var dismissButton: some View {
+        if dismiss != nil {
+            Button {
+                dismiss?()
+            } label: {
+                Text("Dissmiss")
+                    .font(.headline)
+                    .foregroundStyle(.white)
+            }.buttonStyle(.borderedProminent)
+        }
+    }
+    
 }
 
 #Preview {
