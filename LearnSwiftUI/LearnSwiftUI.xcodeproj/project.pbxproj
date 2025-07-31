@@ -26,6 +26,7 @@
 		DA5C98BC2E3924AA007AC9E9 /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98BB2E3924AA007AC9E9 /* TodoDetailView.swift */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
 		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
+		DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D32E3A65110051F62F /* SharedModel.swift */; };
 		DAA930402E33C99C000FE238 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9303F2E33C995000FE238 /* ButtonModifier.swift */; };
 		DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */; };
 		DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */; };
@@ -69,6 +70,7 @@
 		DA5C98BB2E3924AA007AC9E9 /* TodoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
 		DA65B7342E37D34600BF8A59 /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
+		DAA3B8D32E3A65110051F62F /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
 		DAA9303F2E33C995000FE238 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBootcamp.swift; sourceTree = "<group>"; };
 		DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBootcamp.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */,
 				DA415E6B2DE5BFBD009F515E /* Resource */,
 				DA415E722DE5C307009F515E /* Extension */,
+				DAA3B8D22E3A64FC0051F62F /* SharedModel */,
 				DA65B7322E37D31200BF8A59 /* Demo */,
 				DA415E6A2DE5BFAF009F515E /* Bootcamp */,
 			);
@@ -217,6 +220,14 @@
 				DA5C98BB2E3924AA007AC9E9 /* TodoDetailView.swift */,
 			);
 			path = TodoApp;
+			sourceTree = "<group>";
+		};
+		DAA3B8D22E3A64FC0051F62F /* SharedModel */ = {
+			isa = PBXGroup;
+			children = (
+				DAA3B8D32E3A65110051F62F /* SharedModel.swift */,
+			);
+			path = SharedModel;
 			sourceTree = "<group>";
 		};
 		DAEBAE4B2DF2907900082B1C /* Base */ = {
@@ -325,6 +336,7 @@
 				DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */,
 				DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */,
 				DAEBAE3A2DEAF92400082B1C /* StacksBootcamp.swift in Sources */,
+				DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */,
 				DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */,
 				DA5C98BC2E3924AA007AC9E9 /* TodoDetailView.swift in Sources */,
 				DAED67802E21089A00309382 /* ObservedObjectBootcamp.swift in Sources */,
