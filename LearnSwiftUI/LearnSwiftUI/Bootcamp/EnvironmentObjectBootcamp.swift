@@ -24,9 +24,9 @@ struct EnvironmentObjectBootcamp: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 30) {
-                EnvironmentSubView()
+                EnvironmentObjectSubView()
                     .environmentObject(counter)
-                EnvironmentSubView2()
+                EnvironmentObjectSubView2()
                     .environmentObject(counter)
             }
             .navigationTitle(Text("EnvironmentObject"))
@@ -35,7 +35,7 @@ struct EnvironmentObjectBootcamp: View {
     }
 }
 
-struct EnvironmentSubView: View {
+struct EnvironmentObjectSubView: View {
     @EnvironmentObject var counter: Counter
     
     var body: some View {
@@ -46,7 +46,7 @@ struct EnvironmentSubView: View {
     }
 }
 
-struct EnvironmentSubView2: View {
+struct EnvironmentObjectSubView2: View {
     @EnvironmentObject var counter: Counter
     
     var body: some View {

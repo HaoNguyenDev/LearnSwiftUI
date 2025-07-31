@@ -27,6 +27,10 @@
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
 		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
 		DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D32E3A65110051F62F /* SharedModel.swift */; };
+		DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */; };
+		DAA3B8D82E3B2CDE0051F62F /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D72E3B2CDE0051F62F /* AppSettings.swift */; };
+        DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */; };
+		DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */; };
 		DAA930402E33C99C000FE238 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9303F2E33C995000FE238 /* ButtonModifier.swift */; };
 		DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */; };
 		DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */; };
@@ -71,6 +75,9 @@
 		DA65B7342E37D34600BF8A59 /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAA3B8D32E3A65110051F62F /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
+		DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentBootcamp.swift; sourceTree = "<group>"; };
+		DAA3B8D72E3B2CDE0051F62F /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableBootcamp.swift; sourceTree = "<group>"; };
 		DAA9303F2E33C995000FE238 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBootcamp.swift; sourceTree = "<group>"; };
 		DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBootcamp.swift; sourceTree = "<group>"; };
@@ -138,7 +145,7 @@
 				DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */,
 				DA415E6B2DE5BFBD009F515E /* Resource */,
 				DA415E722DE5C307009F515E /* Extension */,
-				DAA3B8D22E3A64FC0051F62F /* SharedModel */,
+				DAA3B8D22E3A64FC0051F62F /* Models */,
 				DA65B7322E37D31200BF8A59 /* Demo */,
 				DA415E6A2DE5BFAF009F515E /* Bootcamp */,
 			);
@@ -170,7 +177,9 @@
 				DAEEFB752E366D2F00E78DA2 /* ObservableObjectBootcamp.swift */,
 				DAED677D2E20E45C00309382 /* StateObjectBootcamp.swift */,
 				DAED677F2E21089A00309382 /* ObservedObjectBootcamp.swift */,
+				DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */,
 				DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */,
+				DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */,
 				DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */,
 			);
 			path = Bootcamp;
@@ -222,12 +231,13 @@
 			path = TodoApp;
 			sourceTree = "<group>";
 		};
-		DAA3B8D22E3A64FC0051F62F /* SharedModel */ = {
+		DAA3B8D22E3A64FC0051F62F /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				DAA3B8D32E3A65110051F62F /* SharedModel.swift */,
+				DAA3B8D72E3B2CDE0051F62F /* AppSettings.swift */,
 			);
-			path = SharedModel;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		DAEBAE4B2DF2907900082B1C /* Base */ = {
@@ -327,17 +337,20 @@
 				DAEBAE402DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift in Sources */,
 				DAEBAE3E2DEB149C00082B1C /* InitializerBootcamp.swift in Sources */,
 				DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */,
+				DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */,
 				DAEBAE4F2DF2909E00082B1C /* Closure.swift in Sources */,
 				DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */,
 				DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */,
 				DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */,
 				DAED677E2E20E45C00309382 /* StateObjectBootcamp.swift in Sources */,
+				DAA3B8D82E3B2CDE0051F62F /* AppSettings.swift in Sources */,
 				DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */,
 				DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */,
 				DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */,
 				DAEBAE3A2DEAF92400082B1C /* StacksBootcamp.swift in Sources */,
 				DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */,
 				DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */,
+				DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */,
 				DA5C98BC2E3924AA007AC9E9 /* TodoDetailView.swift in Sources */,
 				DAED67802E21089A00309382 /* ObservedObjectBootcamp.swift in Sources */,
 				DA5C98B82E391F91007AC9E9 /* TodoListView.swift in Sources */,
