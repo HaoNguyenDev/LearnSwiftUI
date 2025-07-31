@@ -20,6 +20,7 @@
 		DA415E8F2DE5DCC0009F515E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E8E2DE5DCC0009F515E /* Color.swift */; };
 		DA415E912DE5DF63009F515E /* GradientsColorBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E902DE5DF63009F515E /* GradientsColorBootcamp.swift */; };
 		DA415E952DE5E707009F515E /* ImagesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E942DE5E707009F515E /* ImagesBootcamp.swift */; };
+		DA5164302E3BCD2500642709 /* NavigationStackBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */; };
 		DA5C98B62E391F4B007AC9E9 /* TodoAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B52E391F4B007AC9E9 /* TodoAppView.swift */; };
 		DA5C98B82E391F91007AC9E9 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B72E391F91007AC9E9 /* TodoListView.swift */; };
 		DA5C98BA2E39237C007AC9E9 /* TodoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B92E39237C007AC9E9 /* TodoRowView.swift */; };
@@ -67,6 +68,7 @@
 		DA415E8E2DE5DCC0009F515E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		DA415E902DE5DF63009F515E /* GradientsColorBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientsColorBootcamp.swift; sourceTree = "<group>"; };
 		DA415E942DE5E707009F515E /* ImagesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesBootcamp.swift; sourceTree = "<group>"; };
+		DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackBootcamp.swift; sourceTree = "<group>"; };
 		DA5C98B52E391F4B007AC9E9 /* TodoAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppView.swift; sourceTree = "<group>"; };
 		DA5C98B72E391F91007AC9E9 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		DA5C98B92E39237C007AC9E9 /* TodoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRowView.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */,
 				DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */,
 				DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */,
+				DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */,
 			);
 			path = Bootcamp;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */,
 				DAEBAE3A2DEAF92400082B1C /* StacksBootcamp.swift in Sources */,
 				DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */,
+				DA5164302E3BCD2500642709 /* NavigationStackBootcamp.swift in Sources */,
 				DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */,
 				DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */,
 				DA5C98BC2E3924AA007AC9E9 /* TodoDetailView.swift in Sources */,
