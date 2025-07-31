@@ -23,6 +23,7 @@ import SwiftUI
 struct ObservedObjectBootcamp: View {
     @State private var reRenderParentView: Bool = false
     @StateObject private var counterModel = CounterModel()
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {

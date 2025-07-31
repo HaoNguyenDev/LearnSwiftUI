@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct TodoAppView: View {
-    @StateObject private var todoStore = TodoStore()
+    @EnvironmentObject private var todoStore: TodoStore
     
     var body: some View {
         TabView {
@@ -36,5 +36,6 @@ struct TodoAppView: View {
 }
 
 #Preview {
-//    TodoAppView(todoStore: .constant(TodoStore()))
+    TodoAppView()
+        .environmentObject(TodoStore())
 }

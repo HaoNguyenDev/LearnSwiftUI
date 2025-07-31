@@ -9,7 +9,8 @@ import SwiftUI
 
 @main
 struct LearnSwiftUIApp: App {
-    @StateObject private var taskStore = TodoStore()
+    @StateObject private var sharedModel = SharedModel()
+    @StateObject private var todoStore = TodoStore()
     
     var body: some Scene {
         WindowGroup {
@@ -25,6 +26,8 @@ struct LearnSwiftUIApp: App {
 //            SateBootcamp()
 //            StateObjectBootcamp()
             TodoAppView()
+                .environmentObject(sharedModel)
+                .environmentObject(todoStore)
         }
     }
 }
