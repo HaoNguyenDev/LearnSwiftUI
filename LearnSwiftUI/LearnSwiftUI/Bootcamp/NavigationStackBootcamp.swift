@@ -22,6 +22,7 @@ import SwiftUI
 enum Scenes {
     case detailView
     case settingView
+    case profileView
     
     var title: String {
         switch self {
@@ -29,36 +30,45 @@ enum Scenes {
             return "Detail"
         case .settingView:
             return "Setting"
+        case .profileView:
+            return "Profile"
         }
     }
 }
 
 struct NavigationStackBootcamp: View {
-    @State private var navigationPath = NavigationPath()
+    @State private var navPath = NavigationPath()
     
     var body: some View {
-        NavigationStack(path: $navigationPath) { // NavigationStack look the changes of $navigationPath
+        NavigationStack(path: $navPath) { // NavigationStack look the changes of $navigationPath
             VStack(spacing: 30) {
                 Text("Home View")
                     .font(.largeTitle)
                 
                 Button("Go to Detail") {
-                    navigationPath.append(Scenes.detailView) // Thêm giá trị vào path
+                    navPath.append(Scenes.detailView) //Add view want to navigate to path
                 }
                 
                 Button("Go to Setting") {
-                    navigationPath.append(Scenes.settingView) // Thêm giá trị khác
+                    navPath.append(Scenes.settingView)
+                }
+                
+                Button("Go to Profile") {
+                    navPath.append(Scenes.profileView)
                 }
             }
             .navigationTitle("Home")
             .navigationBarTitleDisplayMode(.inline)
             
-            // Destination manages changes from navigationPath
-            .navigationDestination(for: Scenes.self) { value in
-                if value == Scenes.detailView {
-                    DetailView(id: 1)
-                } else if value == Scenes.settingView {
+            // Destination manages changes from navigationPath to navigate to destination view
+            .navigationDestination(for: Scenes.self) { view in
+                switch view {
+                case .detailView:
+                    DetailView(navPath: $navPath, id: Int.random(in: 1...10))
+                case .settingView:
                     SettingView()
+                case .profileView:
+                    Text("Profile View")
                 }
             }
             
@@ -67,21 +77,53 @@ struct NavigationStackBootcamp: View {
 }
 
 struct DetailView: View {
+    @Binding var navPath: NavigationPath
     let id: Int
     
     var body: some View {
-        VStack {
+        VStack(spacing: 30) {
             Text("Details of ID: \(id)")
                 .font(.title)
+            
+            Button("Go further") {
+                navPath.append(Scenes.detailView)
+            }
+            
+            Button("Back") {
+                navPath.removeLast() // removeLast(2) number are how many view ypu want to back
+            }
+            
+            Button {
+                navPath = NavigationPath() // this one mean back to rootview
+            } label: {
+                Text("Back to Home")
+            }
+     
         }
         .navigationTitle("Detail View")
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden()
+        .toolbar {                          // custom ToolbarItem with image or test or any view
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: { navPath = NavigationPath() }) {
+                    Image(systemName: "arrowshape.left")
+                }
+            }
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: { navPath = NavigationPath() }) {
+                    Image(systemName: "house")
+                }.buttonStyle(.borderedProminent)
+            }
+        }
     }
 }
 
 struct SettingView: View {
     var body: some View {
         Text("SettingView")
+            .navigationTitle("Setting View")
+            .navigationBarTitleDisplayMode(.inline)
     }
 }
 

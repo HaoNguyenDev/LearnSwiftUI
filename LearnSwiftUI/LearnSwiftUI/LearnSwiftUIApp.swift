@@ -29,9 +29,10 @@ struct LearnSwiftUIApp: App {
 //            TodoAppView()
 //                .environmentObject(sharedModel)
 //                .environmentObject(todoStore)
-            EnvironmentBootcamp()
-                .environment(\.colorScheme, .dark)
-                .environment(sharedModel)
+//            EnvironmentBootcamp()
+//                .environment(\.colorScheme, .dark)
+//                .environment(sharedModel)
+            NavigationStackBootcamp()
         }
     }
 }
