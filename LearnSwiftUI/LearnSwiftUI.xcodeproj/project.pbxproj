@@ -21,10 +21,22 @@
 		DA415E912DE5DF63009F515E /* GradientsColorBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E902DE5DF63009F515E /* GradientsColorBootcamp.swift */; };
 		DA415E952DE5E707009F515E /* ImagesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E942DE5E707009F515E /* ImagesBootcamp.swift */; };
 		DA5164302E3BCD2500642709 /* NavigationStackBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */; };
+		DA5164322E3CB57600642709 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5164312E3CB57600642709 /* NavigationManager.swift */; };
 		DA5C98B62E391F4B007AC9E9 /* TodoAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B52E391F4B007AC9E9 /* TodoAppView.swift */; };
 		DA5C98B82E391F91007AC9E9 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B72E391F91007AC9E9 /* TodoListView.swift */; };
 		DA5C98BA2E39237C007AC9E9 /* TodoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B92E39237C007AC9E9 /* TodoRowView.swift */; };
 		DA5C98BC2E3924AA007AC9E9 /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98BB2E3924AA007AC9E9 /* TodoDetailView.swift */; };
+		DA5D711C2E3D184500C78E40 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D711B2E3D184500C78E40 /* Router.swift */; };
+		DA5D711E2E3D185500C78E40 /* NavRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D711D2E3D185500C78E40 /* NavRouter.swift */; };
+		DA5D71202E3D185F00C78E40 /* ScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D711F2E3D185F00C78E40 /* ScreenCoordinator.swift */; };
+		DA5D71222E3D186900C78E40 /* NavRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71212E3D186900C78E40 /* NavRouterProtocol.swift */; };
+		DA5D71252E3D189100C78E40 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71242E3D189100C78E40 /* Splash.swift */; };
+		DA5D71272E3D18E300C78E40 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71262E3D18E300C78E40 /* UserSettings.swift */; };
+		DA5D712A2E3D19A000C78E40 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71292E3D19A000C78E40 /* Logger.swift */; };
+		DA5D712C2E3D1A8800C78E40 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D712B2E3D1A8500C78E40 /* Login.swift */; };
+		DA5D712E2E3D1D7900C78E40 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D712D2E3D1D7900C78E40 /* AppCoordinator.swift */; };
+		DA5D71302E3D205400C78E40 /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D712F2E3D205000C78E40 /* MainTab.swift */; };
+		DA5D71322E3D20F100C78E40 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71312E3D20F100C78E40 /* Placeholder.swift */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
 		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
 		DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D32E3A65110051F62F /* SharedModel.swift */; };
@@ -69,10 +81,22 @@
 		DA415E902DE5DF63009F515E /* GradientsColorBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientsColorBootcamp.swift; sourceTree = "<group>"; };
 		DA415E942DE5E707009F515E /* ImagesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesBootcamp.swift; sourceTree = "<group>"; };
 		DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackBootcamp.swift; sourceTree = "<group>"; };
+		DA5164312E3CB57600642709 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		DA5C98B52E391F4B007AC9E9 /* TodoAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppView.swift; sourceTree = "<group>"; };
 		DA5C98B72E391F91007AC9E9 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		DA5C98B92E39237C007AC9E9 /* TodoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRowView.swift; sourceTree = "<group>"; };
 		DA5C98BB2E3924AA007AC9E9 /* TodoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
+		DA5D711B2E3D184500C78E40 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		DA5D711D2E3D185500C78E40 /* NavRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavRouter.swift; sourceTree = "<group>"; };
+		DA5D711F2E3D185F00C78E40 /* ScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCoordinator.swift; sourceTree = "<group>"; };
+		DA5D71212E3D186900C78E40 /* NavRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavRouterProtocol.swift; sourceTree = "<group>"; };
+		DA5D71242E3D189100C78E40 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
+		DA5D71262E3D18E300C78E40 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		DA5D71292E3D19A000C78E40 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		DA5D712B2E3D1A8500C78E40 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		DA5D712D2E3D1D7900C78E40 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		DA5D712F2E3D205000C78E40 /* MainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
+		DA5D71312E3D20F100C78E40 /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
 		DA65B7342E37D34600BF8A59 /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAA3B8D32E3A65110051F62F /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
@@ -144,6 +168,7 @@
 				DA415E622DE5BFAB009F515E /* Assets.xcassets */,
 				DA415E632DE5BFAB009F515E /* ContentView.swift */,
 				DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */,
+				DA5D71282E3D198100C78E40 /* Utilities */,
 				DA415E6B2DE5BFBD009F515E /* Resource */,
 				DA415E722DE5C307009F515E /* Extension */,
 				DAA3B8D22E3A64FC0051F62F /* Models */,
@@ -183,6 +208,7 @@
 				DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */,
 				DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */,
 				DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */,
+				DA5164312E3CB57600642709 /* NavigationManager.swift */,
 			);
 			path = Bootcamp;
 			sourceTree = "<group>";
@@ -213,9 +239,43 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		DA5D71042E3CD1EB00C78E40 /* NavigationApp */ = {
+			isa = PBXGroup;
+			children = (
+				DA5D71212E3D186900C78E40 /* NavRouterProtocol.swift */,
+				DA5D711F2E3D185F00C78E40 /* ScreenCoordinator.swift */,
+				DA5D711D2E3D185500C78E40 /* NavRouter.swift */,
+				DA5D711B2E3D184500C78E40 /* Router.swift */,
+				DA5D712D2E3D1D7900C78E40 /* AppCoordinator.swift */,
+				DA5D71262E3D18E300C78E40 /* UserSettings.swift */,
+				DA5D71232E3D188C00C78E40 /* Scenes */,
+			);
+			path = NavigationApp;
+			sourceTree = "<group>";
+		};
+		DA5D71232E3D188C00C78E40 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				DA5D71312E3D20F100C78E40 /* Placeholder.swift */,
+				DA5D712F2E3D205000C78E40 /* MainTab.swift */,
+				DA5D712B2E3D1A8500C78E40 /* Login.swift */,
+				DA5D71242E3D189100C78E40 /* Splash.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		DA5D71282E3D198100C78E40 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DA5D71292E3D19A000C78E40 /* Logger.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		DA65B7322E37D31200BF8A59 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				DA5D71042E3CD1EB00C78E40 /* NavigationApp */,
 				DA65B7332E37D31B00BF8A59 /* TodoApp */,
 			);
 			path = Demo;
@@ -324,24 +384,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA5D712C2E3D1A8800C78E40 /* Login.swift in Sources */,
 				DA415E8D2DE5CD41009F515E /* ColorsBootcamp.swift in Sources */,
+				DA5D712E2E3D1D7900C78E40 /* AppCoordinator.swift in Sources */,
 				DA415E8B2DE5C845009F515E /* ShapesBootcamp.swift in Sources */,
 				DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */,
 				DAEEFB762E366D4000E78DA2 /* ObservableObjectBootcamp.swift in Sources */,
+				DA5D71252E3D189100C78E40 /* Splash.swift in Sources */,
 				DAEBAE4A2DF28E1E00082B1C /* SubviewBootcamp.swift in Sources */,
 				DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */,
+				DA5D712A2E3D19A000C78E40 /* Logger.swift in Sources */,
 				DAEBAE422DECB55B00082B1C /* ScrollViewBootcamp.swift in Sources */,
 				DAE2EACA2DF5DE280083E733 /* SheetBootcamp.swift in Sources */,
 				DA415E8F2DE5DCC0009F515E /* Color.swift in Sources */,
 				DAEBAE462DF11C7300082B1C /* ButtonBootcamp.swift in Sources */,
+				DA5D711C2E3D184500C78E40 /* Router.swift in Sources */,
 				DA415E742DE5C31F009F515E /* Font.swift in Sources */,
 				DA415E912DE5DF63009F515E /* GradientsColorBootcamp.swift in Sources */,
 				DAEBAE402DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift in Sources */,
 				DAEBAE3E2DEB149C00082B1C /* InitializerBootcamp.swift in Sources */,
 				DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */,
 				DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */,
+				DA5D71272E3D18E300C78E40 /* UserSettings.swift in Sources */,
 				DAEBAE4F2DF2909E00082B1C /* Closure.swift in Sources */,
+				DA5D71202E3D185F00C78E40 /* ScreenCoordinator.swift in Sources */,
 				DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */,
+				DA5D71222E3D186900C78E40 /* NavRouterProtocol.swift in Sources */,
+				DA5D71322E3D20F100C78E40 /* Placeholder.swift in Sources */,
 				DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */,
 				DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */,
 				DAED677E2E20E45C00309382 /* StateObjectBootcamp.swift in Sources */,
@@ -350,6 +419,7 @@
 				DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */,
 				DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */,
 				DAEBAE3A2DEAF92400082B1C /* StacksBootcamp.swift in Sources */,
+				DA5D71302E3D205400C78E40 /* MainTab.swift in Sources */,
 				DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */,
 				DA5164302E3BCD2500642709 /* NavigationStackBootcamp.swift in Sources */,
 				DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */,
@@ -359,6 +429,8 @@
 				DA5C98B82E391F91007AC9E9 /* TodoListView.swift in Sources */,
 				DAEBAE3C2DEB07A500082B1C /* SpacerBootcamp.swift in Sources */,
 				DAEBAE442DECC2D100082B1C /* GridBootcamp.swift in Sources */,
+				DA5164322E3CB57600642709 /* NavigationManager.swift in Sources */,
+				DA5D711E2E3D185500C78E40 /* NavRouter.swift in Sources */,
 				DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */,
 				DA415E952DE5E707009F515E /* ImagesBootcamp.swift in Sources */,
 				DA5C98B62E391F4B007AC9E9 /* TodoAppView.swift in Sources */,

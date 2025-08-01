@@ -19,23 +19,6 @@ import SwiftUI
  }
  */
 
-enum Scenes {
-    case detailView
-    case settingView
-    case profileView
-    
-    var title: String {
-        switch self {
-        case .detailView:
-            return "Detail"
-        case .settingView:
-            return "Setting"
-        case .profileView:
-            return "Profile"
-        }
-    }
-}
-
 struct NavigationStackBootcamp: View {
     @State private var navPath = NavigationPath()
     
@@ -46,7 +29,7 @@ struct NavigationStackBootcamp: View {
                     .font(.largeTitle)
                 
                 Button("Go to Detail") {
-                    navPath.append(Scenes.detailView) //Add view want to navigate to path
+                    navPath.append(Scenes.detailView(id: 10)) //Add view want to navigate to path
                 }
                 
                 Button("Go to Setting") {
@@ -64,9 +47,9 @@ struct NavigationStackBootcamp: View {
             .navigationDestination(for: Scenes.self) { view in
                 switch view {
                 case .detailView:
-                    DetailView(navPath: $navPath, id: Int.random(in: 1...10))
+                    DetailView2(navPath: $navPath, id: Int.random(in: 1...10))
                 case .settingView:
-                    SettingView()
+                    SettingView2()
                 case .profileView:
                     Text("Profile View")
                 }
@@ -76,7 +59,7 @@ struct NavigationStackBootcamp: View {
     }
 }
 
-struct DetailView: View {
+struct DetailView2: View {
     @Binding var navPath: NavigationPath
     let id: Int
     
@@ -86,7 +69,7 @@ struct DetailView: View {
                 .font(.title)
             
             Button("Go further") {
-                navPath.append(Scenes.detailView)
+                navPath.append(Scenes.detailView(id: 11))
             }
             
             Button("Back") {
@@ -119,7 +102,7 @@ struct DetailView: View {
     }
 }
 
-struct SettingView: View {
+struct SettingView2: View {
     var body: some View {
         Text("SettingView")
             .navigationTitle("Setting View")
