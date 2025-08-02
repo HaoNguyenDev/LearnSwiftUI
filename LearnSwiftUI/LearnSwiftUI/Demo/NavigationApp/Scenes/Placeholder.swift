@@ -9,8 +9,15 @@
 import SwiftUI
 
 extension Router {
-    enum PlaceholderView {
-        case pop
+    enum PlaceholderView: Routable {
+        case view
+        
+        var id: String {
+            switch self {
+                case .view:
+                return "view"
+            }
+        }
     }
 }
 
@@ -36,7 +43,7 @@ struct PlaceholderViewCoordinator: View, ScreenCoordinator {
             .navigationBarItems(leading: Button(action: {
                 navRouter.pop(animate: true)
             }) {
-                Image(systemName: "arrowshape.left.fill")
+                BackButton()
             })
     }
     
@@ -44,7 +51,7 @@ struct PlaceholderViewCoordinator: View, ScreenCoordinator {
     func getView() -> some View {
         PlaceholderView(newTitle: title,
                         onClose: {
-            navRouter.pop(animate: true)
+            navRouter.dismiss()
         })
         
     }
@@ -52,7 +59,7 @@ struct PlaceholderViewCoordinator: View, ScreenCoordinator {
     @ViewBuilder
     func viewForRouter(router: ScreenRouter) -> some View {
         switch router {
-        case .pop:
+        case .view:
             ContentView()
         }
     }

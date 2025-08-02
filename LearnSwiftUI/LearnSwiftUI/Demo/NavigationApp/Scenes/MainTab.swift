@@ -40,10 +40,18 @@ enum TabType: Int, CaseIterable {
 }
 
 extension Router {
-    enum MainTab: Hashable {
+    enum MainTab: Routable {
         case security
         case feature1
         case feature2
+        
+        var id: String {
+            switch self {
+            case .security: return "security"
+            case .feature1: return "feature1"
+            case .feature2: return "feature2"
+            }
+        }
     }
 }
 

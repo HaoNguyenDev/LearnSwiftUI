@@ -29,7 +29,6 @@
 		DA5D711C2E3D184500C78E40 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D711B2E3D184500C78E40 /* Router.swift */; };
 		DA5D711E2E3D185500C78E40 /* NavRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D711D2E3D185500C78E40 /* NavRouter.swift */; };
 		DA5D71202E3D185F00C78E40 /* ScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D711F2E3D185F00C78E40 /* ScreenCoordinator.swift */; };
-		DA5D71222E3D186900C78E40 /* NavRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71212E3D186900C78E40 /* NavRouterProtocol.swift */; };
 		DA5D71252E3D189100C78E40 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71242E3D189100C78E40 /* Splash.swift */; };
 		DA5D71272E3D18E300C78E40 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71262E3D18E300C78E40 /* UserSettings.swift */; };
 		DA5D712A2E3D19A000C78E40 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71292E3D19A000C78E40 /* Logger.swift */; };
@@ -41,6 +40,7 @@
 		DA5D71362E3DE82A00C78E40 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71352E3DE82A00C78E40 /* Account.swift */; };
 		DA5D71382E3DFBA000C78E40 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71372E3DFBA000C78E40 /* ChangePassword.swift */; };
 		DA5D713A2E3E000D00C78E40 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71392E3E000D00C78E40 /* Security.swift */; };
+		DA5D71432E3E4BF700C78E40 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71422E3E4BF700C78E40 /* BackButton.swift */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
 		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
 		DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D32E3A65110051F62F /* SharedModel.swift */; };
@@ -93,7 +93,6 @@
 		DA5D711B2E3D184500C78E40 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		DA5D711D2E3D185500C78E40 /* NavRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavRouter.swift; sourceTree = "<group>"; };
 		DA5D711F2E3D185F00C78E40 /* ScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCoordinator.swift; sourceTree = "<group>"; };
-		DA5D71212E3D186900C78E40 /* NavRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavRouterProtocol.swift; sourceTree = "<group>"; };
 		DA5D71242E3D189100C78E40 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		DA5D71262E3D18E300C78E40 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		DA5D71292E3D19A000C78E40 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -105,6 +104,7 @@
 		DA5D71352E3DE82A00C78E40 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		DA5D71372E3DFBA000C78E40 /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
 		DA5D71392E3E000D00C78E40 /* Security.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
+		DA5D71422E3E4BF700C78E40 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		DA65B7342E37D34600BF8A59 /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAA3B8D32E3A65110051F62F /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
@@ -170,12 +170,13 @@
 		DA415E652DE5BFAB009F515E /* LearnSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				DAEBAE4B2DF2907900082B1C /* Base */,
 				DA415E712DE5C00D009F515E /* Info.plist */,
 				DA415E612DE5BFAB009F515E /* Preview Content */,
 				DA415E622DE5BFAB009F515E /* Assets.xcassets */,
 				DA415E632DE5BFAB009F515E /* ContentView.swift */,
 				DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */,
+				DAEBAE4B2DF2907900082B1C /* Base */,
+				DA5D71412E3E4BF100C78E40 /* CustomView */,
 				DA5D71282E3D198100C78E40 /* Utilities */,
 				DA415E6B2DE5BFBD009F515E /* Resource */,
 				DA415E722DE5C307009F515E /* Extension */,
@@ -250,9 +251,8 @@
 		DA5D71042E3CD1EB00C78E40 /* NavigationApp */ = {
 			isa = PBXGroup;
 			children = (
-				DA5D71212E3D186900C78E40 /* NavRouterProtocol.swift */,
-				DA5D711F2E3D185F00C78E40 /* ScreenCoordinator.swift */,
 				DA5D711D2E3D185500C78E40 /* NavRouter.swift */,
+				DA5D711F2E3D185F00C78E40 /* ScreenCoordinator.swift */,
 				DA5D711B2E3D184500C78E40 /* Router.swift */,
 				DA5D712D2E3D1D7900C78E40 /* AppCoordinator.swift */,
 				DA5D71262E3D18E300C78E40 /* UserSettings.swift */,
@@ -282,6 +282,14 @@
 				DA5D71292E3D19A000C78E40 /* Logger.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		DA5D71412E3E4BF100C78E40 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				DA5D71422E3E4BF700C78E40 /* BackButton.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		DA65B7322E37D31200BF8A59 /* Demo */ = {
@@ -423,7 +431,6 @@
 				DA5D71342E3DE65500C78E40 /* Home.swift in Sources */,
 				DA5D71202E3D185F00C78E40 /* ScreenCoordinator.swift in Sources */,
 				DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */,
-				DA5D71222E3D186900C78E40 /* NavRouterProtocol.swift in Sources */,
 				DA5D71322E3D20F100C78E40 /* Placeholder.swift in Sources */,
 				DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */,
 				DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */,
@@ -437,6 +444,7 @@
 				DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */,
 				DA5164302E3BCD2500642709 /* NavigationStackBootcamp.swift in Sources */,
 				DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */,
+				DA5D71432E3E4BF700C78E40 /* BackButton.swift in Sources */,
 				DA5D713A2E3E000D00C78E40 /* Security.swift in Sources */,
 				DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */,
 				DA5C98BC2E3924AA007AC9E9 /* TodoDetailView.swift in Sources */,
