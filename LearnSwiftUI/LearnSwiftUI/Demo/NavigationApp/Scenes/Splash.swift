@@ -10,9 +10,16 @@ import Foundation
 import SwiftUI
 
 extension Router {
-    enum Splash {
+    enum Splash: Identifiable, Hashable{
         case login
         case home
+        
+        var id: String {
+            switch self {
+            case .login: return "login"
+            case .home: return "home"
+            }
+        }
     }
 }
 

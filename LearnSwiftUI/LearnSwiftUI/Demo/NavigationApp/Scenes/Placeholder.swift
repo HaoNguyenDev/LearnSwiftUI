@@ -36,7 +36,7 @@ struct PlaceholderViewCoordinator: View, ScreenCoordinator {
             .navigationBarItems(leading: Button(action: {
                 navRouter.pop(animate: true)
             }) {
-                Image(systemName: "arrowshape.left")
+                Image(systemName: "arrowshape.left.fill")
             })
     }
     
@@ -75,6 +75,7 @@ struct PlaceholderView: View {
                 Text("\(newTitle)\n\("in development")")
                     .font(.headline)
                     .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
             } else {
                 Text("In development")
                     .font(.headline)
@@ -98,6 +99,7 @@ struct PlaceholderView: View {
                         Text("Ok bro")
                             .font(.headline)
                             .fontWeight(.bold)
+                            .foregroundStyle(.black)
                     }
                 )
         }
