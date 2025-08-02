@@ -11,7 +11,6 @@ import SwiftUI
 struct LearnSwiftUIApp: App {
     @State private var sharedModel = SharedModel()
     @StateObject private var todoStore = TodoStore()
-    let appSettings = AppSettings()
     
     var body: some Scene {
         WindowGroup {
@@ -34,7 +33,8 @@ struct LearnSwiftUIApp: App {
 //                .environment(sharedModel)
 //            NavigationStackBootcamp()
 //            NavigationManagerBootcamp()
-            AppCoordinator().environmentObject(UserSettings.shared)
+//            AppCoordinator().environmentObject(UserSettings.shared)
+            EnvironmentSettingView().environment(EnvironmentSettings())
         }
     }
 }

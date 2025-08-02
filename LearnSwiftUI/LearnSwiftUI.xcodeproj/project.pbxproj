@@ -45,7 +45,6 @@
 		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
 		DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D32E3A65110051F62F /* SharedModel.swift */; };
 		DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */; };
-		DAA3B8D82E3B2CDE0051F62F /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D72E3B2CDE0051F62F /* AppSettings.swift */; };
 		DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */; };
 		DAA930402E33C99C000FE238 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9303F2E33C995000FE238 /* ButtonModifier.swift */; };
 		DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */; };
@@ -109,7 +108,6 @@
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAA3B8D32E3A65110051F62F /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
 		DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentBootcamp.swift; sourceTree = "<group>"; };
-		DAA3B8D72E3B2CDE0051F62F /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableBootcamp.swift; sourceTree = "<group>"; };
 		DAA9303F2E33C995000FE238 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBootcamp.swift; sourceTree = "<group>"; };
@@ -317,7 +315,6 @@
 			isa = PBXGroup;
 			children = (
 				DAA3B8D32E3A65110051F62F /* SharedModel.swift */,
-				DAA3B8D72E3B2CDE0051F62F /* AppSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -435,7 +432,6 @@
 				DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */,
 				DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */,
 				DAED677E2E20E45C00309382 /* StateObjectBootcamp.swift in Sources */,
-				DAA3B8D82E3B2CDE0051F62F /* AppSettings.swift in Sources */,
 				DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */,
 				DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */,
 				DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */,
