@@ -51,20 +51,26 @@ struct AppCoordinator: View {
                 NavigationStack(path: $rootRouter.path) {
                     SplashCoordinator(navRouter: rootRouter)
                 }
-                .ignoresSafeArea(.all)
+                .sheet(item: $rootRouter.sheet) { sheet in
+                    showSheet(routable: sheet.routable)
+                }
+                .fullScreenCover(item: $rootRouter.fullScreenCover) { cover in
+                    showFullScreen(routable: cover.routable)
+                }
+
             }
             /*
-            if settings.isShowLoading {
-                // Loading View
-                loadingView
-            }
-            toastView(appState.userMessageState.toastMessages.first)
-            informView(appState.userMessageState.informMessage)
-            alertView(appState.userMessageState.alert)
+             if settings.isShowLoading {
+             // Loading View
+             loadingView
+             }
+             toastView(appState.userMessageState.toastMessages.first)
+             informView(appState.userMessageState.informMessage)
+             alertView(appState.userMessageState.alert)
              */
         }
         .onAppear {
-        // TODO: Load remote config from backend
+            // TODO: Load remote config from backend
         }
     }
     
@@ -90,6 +96,33 @@ struct AppCoordinator: View {
     }
 }
 
+extension AppCoordinator {
+    @ViewBuilder
+    func showSheet(routable: any Routable) -> some View {
+        switch routable {
+        case Router.Splash.login:
+            LoginCoordinator(navRouter: rootRouter)
+        case Router.Splash.home:
+            HomeCoordinator(navRouter: rootRouter)
+        case Router.PlaceholderView.view:
+            PlaceholderViewCoordinator(navRouter: rootRouter)
+        default: Text("OOPS!\nThis route is not implemented AppCoordinator showSheet function yet.")
+        }
+    }
+    
+    @ViewBuilder
+    func showFullScreen(routable: any Routable) -> some View {
+        switch routable {
+        case Router.Splash.login:
+            LoginCoordinator(navRouter: rootRouter)
+        case Router.Splash.home:
+            HomeCoordinator(navRouter: rootRouter)
+        case Router.PlaceholderView.view:
+            PlaceholderViewCoordinator(navRouter: rootRouter)
+        default: Text("OOPS!\nThis route is not implemented at AppCoordinator showFullScreen function yet.")
+        }
+    }
+}
 //extension AppCoordinator {
 //    @ViewBuilder
 //    private var loadingView: UserInformView {
@@ -98,7 +131,7 @@ struct AppCoordinator: View {
 //                                             message: "loading_message".localized())
 //        UserInformView(message: loadingMessage)
 //    }
-//    
+//
 //    @ViewBuilder
 //    private func toastView(_ message: UserMessageItem?) -> some View {
 //        Group {
@@ -112,7 +145,7 @@ struct AppCoordinator: View {
 //            }
 //        }
 //    }
-//    
+//
 //    @ViewBuilder
 //    private func informView(_ message: UserMessageItem?) -> some View {
 //        Group {
@@ -121,7 +154,7 @@ struct AppCoordinator: View {
 //            }
 //        }
 //    }
-//    
+//
 //    @ViewBuilder
 //    private func alertView(_ message: UserMessageItem?) -> some View {
 //        Group {
@@ -134,7 +167,7 @@ struct AppCoordinator: View {
 //                        rootRouter.push(Router.Splash.login, animate: false)
 //                    }
 //                })
-//                
+//
 //                UserInformView(message: message,
 //                               primaryAction: action)
 //            }

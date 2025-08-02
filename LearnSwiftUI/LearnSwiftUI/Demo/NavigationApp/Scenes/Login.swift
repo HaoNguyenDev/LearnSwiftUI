@@ -8,9 +8,18 @@
 import SwiftUI
 
 extension Router {
-    enum Login {
+    enum Login: Routable {
         case forgotPassword
         case register
+        
+        var id: String {
+            switch self {
+            case .forgotPassword:
+                return "forgotPassword"
+            case .register:
+                return "register"
+            }
+        }
     }
 }
 

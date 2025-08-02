@@ -9,9 +9,18 @@ import Foundation
 import SwiftUI
 
 extension Router {
-    enum Home {
+    enum Home: Routable {
         case feature1
         case feature2
+        
+        var id: String {
+            switch self {
+            case .feature1:
+                return "feature1"
+            case .feature2:
+                return "feature2"
+            }
+        }
     }
 }
 

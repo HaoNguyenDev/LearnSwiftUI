@@ -9,8 +9,15 @@ import Foundation
 import SwiftUI
 
 extension Router {
-    enum ChangePassword {
+    enum ChangePassword: Routable {
         case changePasswordSuccess
+        
+        var id: String {
+            switch self {
+            case .changePasswordSuccess:
+                return "ChangePasswordSuccess"
+            }
+        }
     }
 }
 
@@ -44,7 +51,7 @@ struct ChangePasswordCoordinator: View, ScreenCoordinator {
         .navigationBarItems(leading: Button(action: {
             navRouter.pop(animate: true)
         }) {
-            Image(systemName: "arrowshape.left.fill")
+            BackButton()
         })
     }
     

@@ -10,14 +10,14 @@ import Foundation
 import SwiftUI
 
 extension Router {
-    enum Splash: Identifiable, Hashable{
+    enum Splash: Routable {
         case login
         case home
         
         var id: String {
             switch self {
-            case .login: return "login"
             case .home: return "home"
+            case .login: return "login"
             }
         }
     }
@@ -48,6 +48,12 @@ struct SplashCoordinator: View, ScreenCoordinator {
                 navRouter.push(ScreenRouter.login, animate: true)
             }
         })
+        .onAppear {
+            //TESTING Show sheet
+//            navRouter.showSheet(RouterView.init(routable: ScreenRouter.home))
+//            navRouter.showFullScreenCover(RouterView.init(routable: ScreenRouter.login))
+            navRouter.showSheet(RouterView.init(routable: Router.Security.changePassword))
+        }
     }
     
     @ViewBuilder
