@@ -37,6 +37,10 @@
 		DA5D712E2E3D1D7900C78E40 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D712D2E3D1D7900C78E40 /* AppCoordinator.swift */; };
 		DA5D71302E3D205400C78E40 /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D712F2E3D205000C78E40 /* MainTab.swift */; };
 		DA5D71322E3D20F100C78E40 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71312E3D20F100C78E40 /* Placeholder.swift */; };
+		DA5D71342E3DE65500C78E40 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71332E3DE65500C78E40 /* Home.swift */; };
+		DA5D71362E3DE82A00C78E40 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71352E3DE82A00C78E40 /* Account.swift */; };
+		DA5D71382E3DFBA000C78E40 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71372E3DFBA000C78E40 /* ChangePassword.swift */; };
+		DA5D713A2E3E000D00C78E40 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71392E3E000D00C78E40 /* Security.swift */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
 		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
 		DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D32E3A65110051F62F /* SharedModel.swift */; };
@@ -97,6 +101,10 @@
 		DA5D712D2E3D1D7900C78E40 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		DA5D712F2E3D205000C78E40 /* MainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
 		DA5D71312E3D20F100C78E40 /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
+		DA5D71332E3DE65500C78E40 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		DA5D71352E3DE82A00C78E40 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		DA5D71372E3DFBA000C78E40 /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
+		DA5D71392E3E000D00C78E40 /* Security.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
 		DA65B7342E37D34600BF8A59 /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAA3B8D32E3A65110051F62F /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
@@ -260,6 +268,10 @@
 				DA5D712F2E3D205000C78E40 /* MainTab.swift */,
 				DA5D712B2E3D1A8500C78E40 /* Login.swift */,
 				DA5D71242E3D189100C78E40 /* Splash.swift */,
+				DA5D71332E3DE65500C78E40 /* Home.swift */,
+				DA5D71352E3DE82A00C78E40 /* Account.swift */,
+				DA5D71392E3E000D00C78E40 /* Security.swift */,
+				DA5D71372E3DFBA000C78E40 /* ChangePassword.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -407,6 +419,8 @@
 				DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */,
 				DA5D71272E3D18E300C78E40 /* UserSettings.swift in Sources */,
 				DAEBAE4F2DF2909E00082B1C /* Closure.swift in Sources */,
+				DA5D71362E3DE82A00C78E40 /* Account.swift in Sources */,
+				DA5D71342E3DE65500C78E40 /* Home.swift in Sources */,
 				DA5D71202E3D185F00C78E40 /* ScreenCoordinator.swift in Sources */,
 				DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */,
 				DA5D71222E3D186900C78E40 /* NavRouterProtocol.swift in Sources */,
@@ -423,6 +437,7 @@
 				DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */,
 				DA5164302E3BCD2500642709 /* NavigationStackBootcamp.swift in Sources */,
 				DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */,
+				DA5D713A2E3E000D00C78E40 /* Security.swift in Sources */,
 				DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */,
 				DA5C98BC2E3924AA007AC9E9 /* TodoDetailView.swift in Sources */,
 				DAED67802E21089A00309382 /* ObservedObjectBootcamp.swift in Sources */,
@@ -434,6 +449,7 @@
 				DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */,
 				DA415E952DE5E707009F515E /* ImagesBootcamp.swift in Sources */,
 				DA5C98B62E391F4B007AC9E9 /* TodoAppView.swift in Sources */,
+				DA5D71382E3DFBA000C78E40 /* ChangePassword.swift in Sources */,
 				DAA930402E33C99C000FE238 /* ButtonModifier.swift in Sources */,
 				DA5C98BA2E39237C007AC9E9 /* TodoRowView.swift in Sources */,
 			);

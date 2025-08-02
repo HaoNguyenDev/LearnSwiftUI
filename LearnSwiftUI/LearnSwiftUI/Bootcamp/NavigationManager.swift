@@ -210,7 +210,7 @@ struct DetailView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: { navManager.pop() }) {
-                    Image(systemName: "arrowshape.left.circle")
+                    Image(systemName: "arrowshape.left.fill")
                 }
             }
             

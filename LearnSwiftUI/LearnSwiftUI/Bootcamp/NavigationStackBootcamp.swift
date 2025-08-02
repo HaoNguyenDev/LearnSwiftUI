@@ -89,7 +89,7 @@ struct DetailView2: View {
         .toolbar {                          // custom ToolbarItem with image or test or any view
             ToolbarItem(placement: .navigationBarLeading) {
                 Button(action: { navPath = NavigationPath() }) {
-                    Image(systemName: "arrowshape.left")
+                    Image(systemName: "arrowshape.left.fill")
                 }
             }
             

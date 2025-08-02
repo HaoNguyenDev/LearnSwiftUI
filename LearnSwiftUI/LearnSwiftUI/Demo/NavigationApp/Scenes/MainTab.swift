@@ -41,10 +41,9 @@ enum TabType: Int, CaseIterable {
 
 extension Router {
     enum MainTab: Hashable {
-        case profile
-        case settings
-        case subview1
-        case subview2
+        case security
+        case feature1
+        case feature2
     }
 }
 
@@ -86,8 +85,8 @@ struct MainTabControllerView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView(selection: $selectedTab) {
-                PlaceholderViewCoordinator(navRouter: navRouter, title: "Home").tag(0)
-                PlaceholderViewCoordinator(navRouter: navRouter, title: "Account").tag(1)
+                HomeCoordinator(navRouter: navRouter).tag(0)
+                AccountCoordinator(navRouter: navRouter).tag(1)
                 PlaceholderViewCoordinator(navRouter: navRouter, title: nil).tag(2)
             }
             tabBar()
@@ -95,16 +94,16 @@ struct MainTabControllerView: View {
         .navigationDestination(for: Router.MainTab.self) { route in
             viewForRoute(route: route)
         }
-//        .onReceive(NotificationCenter.default.publisher(for: .showSettingsScreen)) { _ in
-//            navRouter.push(Router.MainTab.settings, animate: true)
-//        }
-//        .onReceive(NotificationCenter.default.publisher(for: .showProfileScreen)) { _ in
-//            navRouter.push(Router.MainTab.profile, animate: true)
-//        }
-//        .onReceive(NotificationCenter.default.publisher(for: .showPromotionScreen)) { _ in
-//            selectedTab = 1
-//        }
-
+        //        .onReceive(NotificationCenter.default.publisher(for: .showSettingsScreen)) { _ in
+        //            navRouter.push(Router.MainTab.settings, animate: true)
+        //        }
+        //        .onReceive(NotificationCenter.default.publisher(for: .showProfileScreen)) { _ in
+        //            navRouter.push(Router.MainTab.profile, animate: true)
+        //        }
+        //        .onReceive(NotificationCenter.default.publisher(for: .showPromotionScreen)) { _ in
+        //            selectedTab = 1
+        //        }
+        
         .toolbar(.hidden, for: .navigationBar)
         .toolbar(.hidden, for: .bottomBar)
         .toolbar(.hidden, for: .tabBar)
@@ -121,7 +120,7 @@ struct MainTabControllerView: View {
         .padding(.horizontal, 24)
         .frame(width: 333, height: 72)
         .background(
-            Color.green
+            Color.gray
                 .clipShape(RoundedRectangle(cornerRadius: 36))
                 .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 4)
         )
@@ -139,12 +138,13 @@ struct MainTabControllerView: View {
                         Text(tab.title)
                             .font(.body)
                             .fontWeight(.semibold)
+                            .foregroundStyle(isSelected ? .white : .black)
                     }
                 }
                 if tab == .home {
                     Rectangle()
                         .frame(width: 1, height: 40)
-                        .foregroundStyle(Color(hex: "#E5E5EA"))
+                        .foregroundStyle(.black)
                 }
             }
         }
@@ -155,31 +155,32 @@ struct MainTabControllerView: View {
         if isSelected {
             tab.iconSelected
                 .font(.body)
-                .fontWeight(.semibold)                .symbolRenderingMode(.monochrome)
-//                .symbolEffect(.wiggle, options: .repeat(.bitWidth))
+                .fontWeight(.semibold)
+                .symbolRenderingMode(.monochrome)
+            //                .symbolEffect(.wiggle, options: .repeat(.bitWidth))
                 .symbolEffect(.bounce.up.wholeSymbol, options: .nonRepeating)
-//            .resizable()
-//            .frame(width: 24, height: 24)
+                .foregroundStyle(.white)
+            //            .resizable()
+            //            .frame(width: 24, height: 24)
         } else {
             tab.icon
                 .font(.body)
                 .fontWeight(.semibold)
-//            .resizable()
-//            .frame(width: 24, height: 24)
+                .foregroundStyle(.black)
+            //            .resizable()
+            //            .frame(width: 24, height: 24)
         }
     }
     
     @ViewBuilder
     func viewForRoute(route: Router.MainTab) -> some View {
         switch route {
-        case .profile:
-            PlaceholderViewCoordinator(navRouter: navRouter, title: "Profile")
-        case .settings:
-            PlaceholderViewCoordinator(navRouter: navRouter, title: "Settings")
-        case .subview1:
-            PlaceholderViewCoordinator(navRouter: navRouter, title: "Subview 1")
-            case .subview2:
-            PlaceholderViewCoordinator(navRouter: navRouter, title: "Subview 2")
+        case .security:
+            SecurityCoordinator(navRouter: navRouter)
+        case .feature1:
+            PlaceholderViewCoordinator(navRouter: navRouter, title: "Feature 1")
+        case .feature2:
+            PlaceholderViewCoordinator(navRouter: navRouter, title: "Feature 2")
         }
     }
 }

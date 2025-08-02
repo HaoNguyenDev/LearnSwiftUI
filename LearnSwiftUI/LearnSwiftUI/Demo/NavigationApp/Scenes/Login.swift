@@ -34,6 +34,7 @@ struct LoginCoordinator: View, ScreenCoordinator {
     func getView() -> some View {
         LoginView(loginModel: loginModel, loginSuccess: {
             Logger.shared.debug("Login success")
+            UserSettings.shared.hasLoggedIn = true
             navRouter.push(Router.homeRouter, animate: true)
         }, forgotPassword: {
             navRouter.push(ScreenRouter.forgotPassword, animate: true)
