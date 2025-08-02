@@ -54,12 +54,12 @@ class EnvironmentBootcampStore2: ObservableObject {
 }
 
 struct EnvironmentBootcamp: View {
-    @State private var store = EnvironmentBootcampStore() // Object conform i@Observable
+//    @State private var store = EnvironmentBootcampStore() // Object conform i@Observable
     @StateObject private var store2 = EnvironmentBootcampStore2() // Object conform i@ObservableObject protocol
     
     var body: some View {
         EnvironmentSubView()
-            .environment(store)
+            .environment(EnvironmentBootcampStore())
             .environmentObject(store2)
     }
 }
@@ -101,8 +101,11 @@ struct EnvironmentInfoView: View {
     @Environment(\.scenePhase) var scenePhase
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @Environment(\.verticalSizeClass) var verticalSizeClass
-    @EnvironmentObject var appTheme: AppTheme // Khai báo để SwiftUI biết injec
+    @Environment(\.openURL) var openURL
+    @EnvironmentObject var appTheme: AppTheme
 
+    @State private var showSheet = false
+    
     var body: some View {
         VStack(spacing: 20) {
             Text("Color Scheme")
@@ -148,8 +151,43 @@ struct EnvironmentInfoView: View {
                 Text("Theme color: \($appTheme.primaryColor.wrappedValue)")
                     .foregroundColor(appTheme.primaryColor)
             }
+            
+            Button("Show sheet") {
+                showSheet = true
+            }.buttonStyle(.borderedProminent)
+            
+            Button("Open URL") {
+                openURL(URL(string: "https://www.apple.com")!)
+            }.buttonStyle(.borderedProminent)
+            
+            Button("Open Setting") {
+                openURL(URL(string: UIApplication.openSettingsURLString)!)
+            }.buttonStyle(.borderedProminent)
+            
+            
         }
         .padding()
+        .sheet(isPresented: $showSheet) {
+            ModalView()
+        }
+    }
+}
+
+struct ModalView: View {
+    @Environment(\.dismiss) private var dismiss
+    
+    var body: some View {
+        VStack {
+            Text("Modal View")
+                .padding()
+                .background(Color.black)
+                .foregroundColor(.white)
+                .cornerRadius(20)
+            
+            Button("Dismiss") {
+                dismiss()
+            }.buttonStyle(.borderedProminent)
+        }
     }
 }
 
@@ -159,6 +197,73 @@ struct EnvironmentInfoView: View {
 })
 
 //---------------------//---------------------//---------------------//
+
+@Observable
+class EnvironmentSettings {
+    var isDarkModeForced: Bool = false
+    var preferredFontSize: Double = 16.0
+    var enableNotifications: Bool = true
+    var accentColor: Color = .blue
+    var userName: String = ""
+    
+    //Computed properties
+    var effectiveColorScheme: ColorScheme? {
+        isDarkModeForced ? .dark : nil
+    }
+}
+
+struct EnvironmentSettingView: View {
+    @Environment(EnvironmentSettings.self) private var settings
+    
+    var body: some View {
+        @Bindable var bindableAppSetting = settings
+        
+        Form {
+            Section("Appearance") {
+                Toggle("Force Dark Mode", isOn: $bindableAppSetting.isDarkModeForced)
+                ColorPicker("Accent Color", selection: $bindableAppSetting.accentColor)
+                HStack {
+                    Text("Text Size")
+                    Slider(value: $bindableAppSetting.preferredFontSize, in: 12...50, step: 1)
+                    Text("Size: \(Int(settings.preferredFontSize))")
+                }
+            }
+            
+            Section("Profile") {
+                TextField("Username", text: $bindableAppSetting.userName)
+                Toggle("Notifications", isOn: $bindableAppSetting.enableNotifications)
+            }
+            
+            
+            Section("Result") {
+                Text("Color Mode")
+                    .font(.system(size: settings.preferredFontSize))
+                    .padding()
+                    .foregroundStyle(settings.isDarkModeForced ? .white : .primary)
+                    .background(settings.isDarkModeForced ? .black : settings.accentColor)
+                    .cornerRadius(20)
+                    .shadow(radius: 10)
+                
+                Circle()
+                    .fill(settings.accentColor)
+                    .frame(width: 80, height: 80)
+                    .overlay {
+                        Image(systemName: "macpro.gen3.fill")
+                            .foregroundColor(.white)
+                            .font(.system(size: settings.preferredFontSize))
+                    }
+            }
+        }
+        .navigationTitle("Settings")
+    }
+}
+
+#Preview {
+    EnvironmentSettingView()
+        .environment(EnvironmentSettings())
+}
+//---------------------//---------------------//---------------------//
+
 
 @Observable
 class AppParams {
