@@ -57,7 +57,7 @@ extension Router {
 
 struct MainTabControllerView: View {
     var navRouter: any NavRouterProtocol
-    @EnvironmentObject var settings: UserSettings
+    @Environment(UserSettings.self) private var settings
     @State var selectedTab = TabType.home.rawValue
     
     init(navRouter: any NavRouterProtocol) {
@@ -195,5 +195,5 @@ struct MainTabControllerView: View {
 
 #Preview {
     MainTabControllerView(navRouter: NavRouter())
-        .environmentObject(UserSettings.shared)
+        .environment(UserSettings.shared)
 }

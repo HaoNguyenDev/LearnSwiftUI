@@ -119,5 +119,5 @@ extension SplashView {
 
 #Preview {
     SplashView()
-        .environmentObject(UserSettings.shared)
+        .environment(UserSettings.shared)
 }

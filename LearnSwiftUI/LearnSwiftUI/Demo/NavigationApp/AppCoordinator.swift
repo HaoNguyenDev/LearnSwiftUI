@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct AppCoordinator: View {
-    @EnvironmentObject var settings: UserSettings
-    @StateObject var rootRouter = NavRouter()
+    @Environment(UserSettings.self) private var settings
+    @State var rootRouter = NavRouter()
     @State private var isShowBlockingView: Bool = false
     
     var body: some View {
@@ -177,6 +177,6 @@ extension AppCoordinator {
 
 #Preview {
     AppCoordinator()
-        .environmentObject(UserSettings.shared)
+        .environment(UserSettings.shared)
 }
 

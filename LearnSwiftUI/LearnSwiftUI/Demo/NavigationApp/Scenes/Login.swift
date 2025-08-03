@@ -26,7 +26,7 @@ extension Router {
 struct LoginCoordinator: View, ScreenCoordinator {
     typealias ScreenRouter = Router.Login
     var navRouter: any NavRouterProtocol
-    @StateObject private var loginModel = LoginModel()
+    @State private var loginModel = LoginModel()
     
     init(navRouter: any NavRouterProtocol) {
         self.navRouter = navRouter
@@ -69,8 +69,8 @@ struct LoginCoordinator: View, ScreenCoordinator {
 }
 
 struct LoginView: View {
-    @EnvironmentObject var settings: UserSettings
-    @ObservedObject var loginModel: LoginModel
+    @Environment(UserSettings.self) private var userSettings
+    @State var loginModel: LoginModel
     @State private var showLoading: Bool = false
 
     var loginSuccess: VoidResult?
@@ -138,12 +138,12 @@ extension LoginView {
 
 }
 
-class LoginModel: ObservableObject {}
+@Observable final class LoginModel {}
 
 #Preview {
     LoginView(loginModel: LoginModel(),
               loginSuccess: nil,
               forgotPassword: nil,
               register: nil)
-    .environmentObject(UserSettings.shared)
+    .environment(UserSettings.shared)
 }

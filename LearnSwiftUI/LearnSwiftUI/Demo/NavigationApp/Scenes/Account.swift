@@ -61,7 +61,7 @@ struct AccountCoordinator: View, ScreenCoordinator {
 }
 
 struct AccountView: View {
-    @EnvironmentObject var settings: UserSettings
+    @Environment(UserSettings.self) private var settings
     @ObservedObject var model: AccountViewModel
     @State private var showLoading: Bool = false
     
@@ -123,6 +123,6 @@ class AccountViewModel: ObservableObject {}
 
 #Preview {
     AccountView(model: AccountViewModel(), logout: nil, gotoSecurity: nil)
-        .environmentObject(UserSettings.shared)
+        .environment(UserSettings.shared)
 }
 

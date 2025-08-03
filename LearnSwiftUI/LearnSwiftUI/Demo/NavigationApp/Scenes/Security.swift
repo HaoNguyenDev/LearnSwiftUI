@@ -61,7 +61,7 @@ struct SecurityCoordinator: View, ScreenCoordinator {
 }
 
 struct SecurityView: View {
-    @EnvironmentObject var settings: UserSettings
+    @Environment(UserSettings.self) private var settings
     @ObservedObject var model: SecurityViewModel
     
     var changePassword: VoidResult?
@@ -110,6 +110,6 @@ class SecurityViewModel: ObservableObject {}
 
 #Preview {
     SecurityView(model: SecurityViewModel(), changePassword: nil)
-        .environmentObject(UserSettings.shared)
+        .environment(UserSettings.shared)
 }
 
