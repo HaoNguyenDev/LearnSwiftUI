@@ -67,7 +67,7 @@ struct ChangePasswordCoordinator: View, ScreenCoordinator {
 }
 
 struct ChangePasswordView: View {
-    @EnvironmentObject var settings: UserSettings
+    @Environment(UserSettings.self) private var settings
     @ObservedObject var model: ChangePasswordViewModel
     @State private var showLoading: Bool = false
     
@@ -117,6 +117,6 @@ class ChangePasswordViewModel: ObservableObject {}
 
 #Preview {
     ChangePasswordView(model: ChangePasswordViewModel(), changePasswordResult: nil)
-        .environmentObject(UserSettings.shared)
+        .environment(UserSettings.shared)
 }
 

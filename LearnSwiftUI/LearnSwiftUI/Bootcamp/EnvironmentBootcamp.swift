@@ -13,29 +13,7 @@ class EnvironmentBootcampStore {
     var listItems: [AppleProduct] // No need define i@Published if conform i@Observable
     
     init() {
-        self.listItems = [AppleProduct(name: "(1) iPhone 13", price: 1000.0),
-                          AppleProduct(name: "MacBook Pro", price: 2000.0),
-                          AppleProduct(name: "AirPods Pro", price: 300.0),
-                          AppleProduct(name: "Watch Series 7", price: 400.0),
-                          AppleProduct(name: "iMac 24-inch", price: 1500.0),
-                          AppleProduct(name: "iPad Pro 11-inch", price: 800.0),
-                          AppleProduct(name: "Apple TV 4K", price: 300.0),
-                          AppleProduct(name: "HomePod mini", price: 100.0),
-                          AppleProduct(name: "Mac mini (M2)", price: 900.0),
-                          AppleProduct(name: "iMac 27-inch", price: 1800.0),
-                          AppleProduct(name: "MacBook Air (M2)", price: 900.0),
-                          AppleProduct(name: "Apple Watch Series 6", price: 350.0),
-                          AppleProduct(name: "iPad Air (5th generation)", price: 600.0),
-                          AppleProduct(name: "Apple TV 3rd generation", price: 200.0),
-                          AppleProduct(name: "iMac 24", price: 1500.0)]
-    }
-}
-
-class EnvironmentBootcampStore2: ObservableObject {
-    @Published var listItems: [AppleProduct]
-    
-    init() {
-        self.listItems = [AppleProduct(name: "(2) iPhone 13", price: 1000.0),
+        self.listItems = [AppleProduct(name: "iPhone 13", price: 1000.0),
                           AppleProduct(name: "MacBook Pro", price: 2000.0),
                           AppleProduct(name: "AirPods Pro", price: 300.0),
                           AppleProduct(name: "Watch Series 7", price: 400.0),
@@ -54,26 +32,23 @@ class EnvironmentBootcampStore2: ObservableObject {
 }
 
 struct EnvironmentBootcamp: View {
-//    @State private var store = EnvironmentBootcampStore() // Object conform i@Observable
-    @StateObject private var store2 = EnvironmentBootcampStore2() // Object conform i@ObservableObject protocol
+    @State private var store = EnvironmentBootcampStore() // Object conform i@Observable
     
     var body: some View {
         EnvironmentSubView()
-            .environment(EnvironmentBootcampStore())
-            .environmentObject(store2)
+            .environment(store)
     }
 }
 
 struct EnvironmentSubView: View {
     @Environment(EnvironmentBootcampStore.self) var store
-    @EnvironmentObject var store2: EnvironmentBootcampStore2
-    
+
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         VStack {
             ScrollView {
-                ForEach(store2.listItems) { item in
+                ForEach(store.listItems) { item in
                     Text("\(item.name) - \(item.price)").padding()
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
@@ -200,6 +175,7 @@ struct ModalView: View {
 
 @Observable
 class EnvironmentSettings {
+//    @ObservationIgnored
     var isDarkModeForced: Bool = false
     var preferredFontSize: Double = 16.0
     var enableNotifications: Bool = true

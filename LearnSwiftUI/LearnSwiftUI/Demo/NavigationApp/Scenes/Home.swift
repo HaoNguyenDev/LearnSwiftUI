@@ -57,7 +57,7 @@ struct HomeCoordinator: View, ScreenCoordinator {
 }
 
 struct HomeView: View {
-    @EnvironmentObject var settings: UserSettings
+    @Environment(UserSettings.self) private var settings
     @ObservedObject var model: HomeViewModel
     @State private var showLoading: Bool = false
 
@@ -119,6 +119,6 @@ class HomeViewModel: ObservableObject {}
 
 #Preview {
     HomeView(model: HomeViewModel(), gotoFeature1: nil, gotoFeature2: nil)
-    .environmentObject(UserSettings.shared)
+    .environment(UserSettings.shared)
 }
 

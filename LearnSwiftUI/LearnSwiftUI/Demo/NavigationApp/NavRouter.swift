@@ -24,10 +24,10 @@ protocol NavRouterProtocol: AnyObject {
     func dismiss()
 }
 
-final class NavRouter: NavRouterProtocol, ObservableObject {
-    @Published var path: NavigationPath = NavigationPath()
-    @Published var sheet: RouterView?
-    @Published var fullScreenCover: RouterView?
+@Observable final class NavRouter: NavRouterProtocol {
+    var path: NavigationPath = NavigationPath()
+    var sheet: RouterView?
+    var fullScreenCover: RouterView?
     private var children: [AnyHashable] = []
 }
 
