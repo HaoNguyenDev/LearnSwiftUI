@@ -43,6 +43,9 @@
 		DA5D71432E3E4BF700C78E40 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71422E3E4BF700C78E40 /* BackButton.swift */; };
 		DA5D71452E3F43B100C78E40 /* ObservablePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71442E3F43B100C78E40 /* ObservablePattern.swift */; };
 		DA5D71472E3F589A00C78E40 /* CustomEnvironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71462E3F589A00C78E40 /* CustomEnvironmentValues.swift */; };
+		DA5D717E2E3FA57800C78E40 /* NetworkProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D717D2E3FA57800C78E40 /* NetworkProtocols.swift */; };
+		DA5D71822E3FA59900C78E40 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71812E3FA59900C78E40 /* NetworkError.swift */; };
+		DA5D71862E3FA5B400C78E40 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71852E3FA5B400C78E40 /* NetworkManager.swift */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
 		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
 		DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D32E3A65110051F62F /* SharedModel.swift */; };
@@ -108,6 +111,9 @@
 		DA5D71422E3E4BF700C78E40 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		DA5D71442E3F43B100C78E40 /* ObservablePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservablePattern.swift; sourceTree = "<group>"; };
 		DA5D71462E3F589A00C78E40 /* CustomEnvironmentValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEnvironmentValues.swift; sourceTree = "<group>"; };
+		DA5D717D2E3FA57800C78E40 /* NetworkProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocols.swift; sourceTree = "<group>"; };
+		DA5D71812E3FA59900C78E40 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		DA5D71852E3FA5B400C78E40 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		DA65B7342E37D34600BF8A59 /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAA3B8D32E3A65110051F62F /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
@@ -172,6 +178,7 @@
 		DA415E652DE5BFAB009F515E /* LearnSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				DA5D717C2E3FA56900C78E40 /* Networking */,
 				DA415E712DE5C00D009F515E /* Info.plist */,
 				DA415E612DE5BFAB009F515E /* Preview Content */,
 				DA415E622DE5BFAB009F515E /* Assets.xcassets */,
@@ -296,6 +303,16 @@
 			path = CustomView;
 			sourceTree = "<group>";
 		};
+		DA5D717C2E3FA56900C78E40 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DA5D717D2E3FA57800C78E40 /* NetworkProtocols.swift */,
+				DA5D71812E3FA59900C78E40 /* NetworkError.swift */,
+				DA5D71852E3FA5B400C78E40 /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		DA65B7322E37D31200BF8A59 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,7 +434,9 @@
 				DAEBAE4A2DF28E1E00082B1C /* SubviewBootcamp.swift in Sources */,
 				DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */,
 				DA5D712A2E3D19A000C78E40 /* Logger.swift in Sources */,
+				DA5D71822E3FA59900C78E40 /* NetworkError.swift in Sources */,
 				DAEBAE422DECB55B00082B1C /* ScrollViewBootcamp.swift in Sources */,
+				DA5D71862E3FA5B400C78E40 /* NetworkManager.swift in Sources */,
 				DAE2EACA2DF5DE280083E733 /* SheetBootcamp.swift in Sources */,
 				DA415E8F2DE5DCC0009F515E /* Color.swift in Sources */,
 				DA5D71452E3F43B100C78E40 /* ObservablePattern.swift in Sources */,
@@ -437,6 +456,7 @@
 				DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */,
 				DA5D71322E3D20F100C78E40 /* Placeholder.swift in Sources */,
 				DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */,
+				DA5D717E2E3FA57800C78E40 /* NetworkProtocols.swift in Sources */,
 				DA5D71472E3F589A00C78E40 /* CustomEnvironmentValues.swift in Sources */,
 				DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */,
 				DAED677E2E20E45C00309382 /* StateObjectBootcamp.swift in Sources */,
