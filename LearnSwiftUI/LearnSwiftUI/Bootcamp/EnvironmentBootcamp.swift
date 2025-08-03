@@ -10,33 +10,41 @@ import SwiftUI
 
 @Observable
 class EnvironmentBootcampStore {
-    var listItems: [AppleProduct] // No need define i@Published if conform i@Observable
+    var listItems: [AppleProduct]?
     
-    init() {
-        self.listItems = [AppleProduct(name: "iPhone 13", price: 1000.0),
-                          AppleProduct(name: "MacBook Pro", price: 2000.0),
-                          AppleProduct(name: "AirPods Pro", price: 300.0),
-                          AppleProduct(name: "Watch Series 7", price: 400.0),
-                          AppleProduct(name: "iMac 24-inch", price: 1500.0),
-                          AppleProduct(name: "iPad Pro 11-inch", price: 800.0),
-                          AppleProduct(name: "Apple TV 4K", price: 300.0),
-                          AppleProduct(name: "HomePod mini", price: 100.0),
-                          AppleProduct(name: "Mac mini (M2)", price: 900.0),
-                          AppleProduct(name: "iMac 27-inch", price: 1800.0),
-                          AppleProduct(name: "MacBook Air (M2)", price: 900.0),
-                          AppleProduct(name: "Apple Watch Series 6", price: 350.0),
-                          AppleProduct(name: "iPad Air (5th generation)", price: 600.0),
-                          AppleProduct(name: "Apple TV 3rd generation", price: 200.0),
-                          AppleProduct(name: "iMac 24", price: 1500.0)]
+    init(listItems: [AppleProduct]? = nil) {
+        self.listItems = listItems
     }
 }
 
 struct EnvironmentBootcamp: View {
-    @State private var store = EnvironmentBootcampStore() // Object conform i@Observable
+    @State private var store = EnvironmentBootcampStore()
     
     var body: some View {
         EnvironmentSubView()
-            .environment(store)
+            .environment(createEnvironmentStore())
+//            .environment(store)
+    }
+}
+
+extension EnvironmentBootcamp { // Can create object before inject
+    private func createEnvironmentStore() -> EnvironmentBootcampStore {
+        let listItems = [AppleProduct(name: "iPhone 13", price: 1000.0),
+                              AppleProduct(name: "MacBook Pro", price: 2000.0),
+                              AppleProduct(name: "AirPods Pro", price: 300.0),
+                              AppleProduct(name: "Watch Series 7", price: 400.0),
+                              AppleProduct(name: "iMac 24-inch", price: 1500.0),
+                              AppleProduct(name: "iPad Pro 11-inch", price: 800.0),
+                              AppleProduct(name: "Apple TV 4K", price: 300.0),
+                              AppleProduct(name: "HomePod mini", price: 100.0),
+                              AppleProduct(name: "Mac mini (M2)", price: 900.0),
+                              AppleProduct(name: "iMac 27-inch", price: 1800.0),
+                              AppleProduct(name: "MacBook Air (M2)", price: 900.0),
+                              AppleProduct(name: "Apple Watch Series 6", price: 350.0),
+                              AppleProduct(name: "iPad Air (5th generation)", price: 600.0),
+                              AppleProduct(name: "Apple TV 3rd generation", price: 200.0),
+                              AppleProduct(name: "iMac 24", price: 1500.0)]
+        return EnvironmentBootcampStore(listItems: listItems)
     }
 }
 
@@ -47,14 +55,32 @@ struct EnvironmentSubView: View {
     
     var body: some View {
         VStack {
+            addItemButton
+            
+            listItemsView
+        }
+        .padding(.vertical)
+    }
+    
+    @ViewBuilder
+    private var addItemButton: some View {
+        Button("Add Item") {
+            store.listItems?.insert(AppleProduct(name: "New Item", price: Double.random(in: 100...1000)), at: 0)
+        }.buttonStyle(.borderedProminent)
+    }
+    
+    @ViewBuilder
+    private var listItemsView: some View {
+        if let listItems = store.listItems, listItems.count > 0 {
             ScrollView {
-                ForEach(store.listItems) { item in
+                ForEach(store.listItems ?? []) { item in
                     Text("\(item.name) - \(item.price)").padding()
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
             }
+        } else {
+            Text("No data")
         }
-        .padding(.vertical)
     }
 }
 

@@ -42,6 +42,7 @@
 		DA5D713A2E3E000D00C78E40 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71392E3E000D00C78E40 /* Security.swift */; };
 		DA5D71432E3E4BF700C78E40 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71422E3E4BF700C78E40 /* BackButton.swift */; };
 		DA5D71452E3F43B100C78E40 /* ObservablePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71442E3F43B100C78E40 /* ObservablePattern.swift */; };
+		DA5D71472E3F589A00C78E40 /* CustomEnvironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71462E3F589A00C78E40 /* CustomEnvironmentValues.swift */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
 		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
 		DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D32E3A65110051F62F /* SharedModel.swift */; };
@@ -106,6 +107,7 @@
 		DA5D71392E3E000D00C78E40 /* Security.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
 		DA5D71422E3E4BF700C78E40 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		DA5D71442E3F43B100C78E40 /* ObservablePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservablePattern.swift; sourceTree = "<group>"; };
+		DA5D71462E3F589A00C78E40 /* CustomEnvironmentValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEnvironmentValues.swift; sourceTree = "<group>"; };
 		DA65B7342E37D34600BF8A59 /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAA3B8D32E3A65110051F62F /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */,
 				DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */,
 				DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */,
+				DA5D71462E3F589A00C78E40 /* CustomEnvironmentValues.swift */,
 				DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */,
 				DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */,
 				DA5164312E3CB57600642709 /* NavigationManager.swift */,
@@ -434,6 +437,7 @@
 				DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */,
 				DA5D71322E3D20F100C78E40 /* Placeholder.swift in Sources */,
 				DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */,
+				DA5D71472E3F589A00C78E40 /* CustomEnvironmentValues.swift in Sources */,
 				DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */,
 				DAED677E2E20E45C00309382 /* StateObjectBootcamp.swift in Sources */,
 				DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */,
