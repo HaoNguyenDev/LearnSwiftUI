@@ -46,6 +46,15 @@
 		DA5D717E2E3FA57800C78E40 /* NetworkProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D717D2E3FA57800C78E40 /* NetworkProtocols.swift */; };
 		DA5D71822E3FA59900C78E40 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71812E3FA59900C78E40 /* NetworkError.swift */; };
 		DA5D71862E3FA5B400C78E40 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71852E3FA5B400C78E40 /* NetworkManager.swift */; };
+		DA5D71892E3FB05100C78E40 /* UserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71882E3FB05100C78E40 /* UserRowView.swift */; };
+		DA5D718B2E3FB25700C78E40 /* GithubUserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D718A2E3FB25700C78E40 /* GithubUserListView.swift */; };
+		DA5D718E2E3FBA6A00C78E40 /* GithubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D718D2E3FBA6A00C78E40 /* GithubUser.swift */; };
+		DA5D71902E3FBA7400C78E40 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D718F2E3FBA7400C78E40 /* UserDetail.swift */; };
+		DA5D71932E3FBB7C00C78E40 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = DA5D71922E3FBB7C00C78E40 /* SDWebImageSwiftUI */; };
+		DA5D71962E3FBC9100C78E40 /* GitHubAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71952E3FBC9100C78E40 /* GitHubAPIEndpoint.swift */; };
+		DA5D71982E3FBCBA00C78E40 /* GitHubNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71972E3FBCBA00C78E40 /* GitHubNetworkService.swift */; };
+		DA5D719B2E3FC03D00C78E40 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D719A2E3FC03D00C78E40 /* AlertHandler.swift */; };
+		DA5D719E2E40940400C78E40 /* GithubUserListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D719D2E40940400C78E40 /* GithubUserListVM.swift */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
 		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
 		DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D32E3A65110051F62F /* SharedModel.swift */; };
@@ -114,6 +123,14 @@
 		DA5D717D2E3FA57800C78E40 /* NetworkProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocols.swift; sourceTree = "<group>"; };
 		DA5D71812E3FA59900C78E40 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		DA5D71852E3FA5B400C78E40 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DA5D71882E3FB05100C78E40 /* UserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRowView.swift; sourceTree = "<group>"; };
+		DA5D718A2E3FB25700C78E40 /* GithubUserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserListView.swift; sourceTree = "<group>"; };
+		DA5D718D2E3FBA6A00C78E40 /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
+		DA5D718F2E3FBA7400C78E40 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
+		DA5D71952E3FBC9100C78E40 /* GitHubAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIEndpoint.swift; sourceTree = "<group>"; };
+		DA5D71972E3FBCBA00C78E40 /* GitHubNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubNetworkService.swift; sourceTree = "<group>"; };
+		DA5D719A2E3FC03D00C78E40 /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
+		DA5D719D2E40940400C78E40 /* GithubUserListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserListVM.swift; sourceTree = "<group>"; };
 		DA65B7342E37D34600BF8A59 /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAA3B8D32E3A65110051F62F /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
@@ -145,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA5D71932E3FBB7C00C78E40 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +196,6 @@
 		DA415E652DE5BFAB009F515E /* LearnSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				DA5D717C2E3FA56900C78E40 /* Networking */,
 				DA415E712DE5C00D009F515E /* Info.plist */,
 				DA415E612DE5BFAB009F515E /* Preview Content */,
 				DA415E622DE5BFAB009F515E /* Assets.xcassets */,
@@ -190,6 +207,7 @@
 				DA415E6B2DE5BFBD009F515E /* Resource */,
 				DA415E722DE5C307009F515E /* Extension */,
 				DAA3B8D22E3A64FC0051F62F /* Models */,
+				DA5D717C2E3FA56900C78E40 /* Networking */,
 				DA65B7322E37D31200BF8A59 /* Demo */,
 				DA415E6A2DE5BFAF009F515E /* Bootcamp */,
 			);
@@ -298,6 +316,7 @@
 		DA5D71412E3E4BF100C78E40 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				DA5D719A2E3FC03D00C78E40 /* AlertHandler.swift */,
 				DA5D71422E3E4BF700C78E40 /* BackButton.swift */,
 			);
 			path = CustomView;
@@ -306,16 +325,63 @@
 		DA5D717C2E3FA56900C78E40 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				DA5D717D2E3FA57800C78E40 /* NetworkProtocols.swift */,
 				DA5D71812E3FA59900C78E40 /* NetworkError.swift */,
+				DA5D717D2E3FA57800C78E40 /* NetworkProtocols.swift */,
 				DA5D71852E3FA5B400C78E40 /* NetworkManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		DA5D71872E3FB01C00C78E40 /* GithubUsers */ = {
+			isa = PBXGroup;
+			children = (
+				DA5D719C2E4093CB00C78E40 /* ViewModel */,
+				DA5D718C2E3FBA6100C78E40 /* Model */,
+				DA5D71942E3FBC8700C78E40 /* GithubNetworkService */,
+				DA5D71992E3FBCF500C78E40 /* Views */,
+			);
+			path = GithubUsers;
+			sourceTree = "<group>";
+		};
+		DA5D718C2E3FBA6100C78E40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA5D718F2E3FBA7400C78E40 /* UserDetail.swift */,
+				DA5D718D2E3FBA6A00C78E40 /* GithubUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA5D71942E3FBC8700C78E40 /* GithubNetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				DA5D71952E3FBC9100C78E40 /* GitHubAPIEndpoint.swift */,
+				DA5D71972E3FBCBA00C78E40 /* GitHubNetworkService.swift */,
+			);
+			path = GithubNetworkService;
+			sourceTree = "<group>";
+		};
+		DA5D71992E3FBCF500C78E40 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DA5D71882E3FB05100C78E40 /* UserRowView.swift */,
+				DA5D718A2E3FB25700C78E40 /* GithubUserListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DA5D719C2E4093CB00C78E40 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA5D719D2E40940400C78E40 /* GithubUserListVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		DA65B7322E37D31200BF8A59 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				DA5D71872E3FB01C00C78E40 /* GithubUsers */,
 				DA5D71042E3CD1EB00C78E40 /* NavigationApp */,
 				DA65B7332E37D31B00BF8A59 /* TodoApp */,
 			);
@@ -367,6 +433,7 @@
 			);
 			name = LearnSwiftUI;
 			packageProductDependencies = (
+				DA5D71922E3FBB7C00C78E40 /* SDWebImageSwiftUI */,
 			);
 			productName = LearnSwiftUI;
 			productReference = DA415E4F2DE5BF26009F515E /* LearnSwiftUI.app */;
@@ -396,6 +463,9 @@
 			);
 			mainGroup = DA415E462DE5BF26009F515E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DA5D71912E3FBB7C00C78E40 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DA415E502DE5BF26009F515E /* Products */;
 			projectDirPath = "";
@@ -428,6 +498,7 @@
 				DA415E8D2DE5CD41009F515E /* ColorsBootcamp.swift in Sources */,
 				DA5D712E2E3D1D7900C78E40 /* AppCoordinator.swift in Sources */,
 				DA415E8B2DE5C845009F515E /* ShapesBootcamp.swift in Sources */,
+				DA5D718E2E3FBA6A00C78E40 /* GithubUser.swift in Sources */,
 				DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */,
 				DAEEFB762E366D4000E78DA2 /* ObservableObjectBootcamp.swift in Sources */,
 				DA5D71252E3D189100C78E40 /* Splash.swift in Sources */,
@@ -437,20 +508,25 @@
 				DA5D71822E3FA59900C78E40 /* NetworkError.swift in Sources */,
 				DAEBAE422DECB55B00082B1C /* ScrollViewBootcamp.swift in Sources */,
 				DA5D71862E3FA5B400C78E40 /* NetworkManager.swift in Sources */,
+				DA5D719B2E3FC03D00C78E40 /* AlertHandler.swift in Sources */,
 				DAE2EACA2DF5DE280083E733 /* SheetBootcamp.swift in Sources */,
 				DA415E8F2DE5DCC0009F515E /* Color.swift in Sources */,
 				DA5D71452E3F43B100C78E40 /* ObservablePattern.swift in Sources */,
 				DAEBAE462DF11C7300082B1C /* ButtonBootcamp.swift in Sources */,
 				DA5D711C2E3D184500C78E40 /* Router.swift in Sources */,
 				DA415E742DE5C31F009F515E /* Font.swift in Sources */,
+				DA5D719E2E40940400C78E40 /* GithubUserListVM.swift in Sources */,
 				DA415E912DE5DF63009F515E /* GradientsColorBootcamp.swift in Sources */,
+				DA5D718B2E3FB25700C78E40 /* GithubUserListView.swift in Sources */,
 				DAEBAE402DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift in Sources */,
+				DA5D71982E3FBCBA00C78E40 /* GitHubNetworkService.swift in Sources */,
 				DAEBAE3E2DEB149C00082B1C /* InitializerBootcamp.swift in Sources */,
 				DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */,
 				DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */,
 				DA5D71272E3D18E300C78E40 /* UserSettings.swift in Sources */,
 				DAEBAE4F2DF2909E00082B1C /* Closure.swift in Sources */,
 				DA5D71362E3DE82A00C78E40 /* Account.swift in Sources */,
+				DA5D71902E3FBA7400C78E40 /* UserDetail.swift in Sources */,
 				DA5D71342E3DE65500C78E40 /* Home.swift in Sources */,
 				DA5D71202E3D185F00C78E40 /* ScreenCoordinator.swift in Sources */,
 				DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */,
@@ -469,6 +545,7 @@
 				DA5164302E3BCD2500642709 /* NavigationStackBootcamp.swift in Sources */,
 				DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */,
 				DA5D71432E3E4BF700C78E40 /* BackButton.swift in Sources */,
+				DA5D71892E3FB05100C78E40 /* UserRowView.swift in Sources */,
 				DA5D713A2E3E000D00C78E40 /* Security.swift in Sources */,
 				DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */,
 				DA5C98BC2E3924AA007AC9E9 /* TodoDetailView.swift in Sources */,
@@ -482,6 +559,7 @@
 				DA415E952DE5E707009F515E /* ImagesBootcamp.swift in Sources */,
 				DA5C98B62E391F4B007AC9E9 /* TodoAppView.swift in Sources */,
 				DA5D71382E3DFBA000C78E40 /* ChangePassword.swift in Sources */,
+				DA5D71962E3FBC9100C78E40 /* GitHubAPIEndpoint.swift in Sources */,
 				DAA930402E33C99C000FE238 /* ButtonModifier.swift in Sources */,
 				DA5C98BA2E39237C007AC9E9 /* TodoRowView.swift in Sources */,
 			);
@@ -625,7 +703,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -659,7 +737,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -699,6 +777,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DA5D71912E3FBB7C00C78E40 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA5D71922E3FBB7C00C78E40 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA5D71912E3FBB7C00C78E40 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DA415E472DE5BF26009F515E /* Project object */;
 }

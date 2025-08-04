@@ -75,7 +75,6 @@ struct PlaceholderView: View {
             Image(systemName: "hammer")
                 .resizable()
                 .scaledToFit()
-                .symbolEffect(.wiggle)
                 .frame(width: 80, height: 80)
 
             if let newTitle = newTitle {
