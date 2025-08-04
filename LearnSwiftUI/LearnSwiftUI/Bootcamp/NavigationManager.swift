@@ -169,7 +169,7 @@ struct NavigationManagerBootcamp: View {
 struct DetailView: View {
     @EnvironmentObject private var navManager: NavigationManager
     let id: Int
-    
+    @State private var popCount: String = ""
     var body: some View {
         ZStack {
             Color.green
@@ -197,6 +197,24 @@ struct DetailView: View {
                 Button("Back") {
                     navManager.pop() // Go back
                 }
+                
+                
+                VStack {
+                    HStack {
+                        TextField("Enter number to pop", text: $popCount).padding()
+                            .font(.headline)
+                            .frame(width: 200)
+                            .background(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .foregroundStyle(Color.white)
+                            )
+                        Button("Back") {
+                            navManager.pop(count: Int(popCount) ?? 1) // Go back
+                        }.buttonStyle(.borderedProminent)
+                    }
+                }.padding(.horizontal)
+                
+               
                 
                 Button("Back to Home") {
                     navManager.popToRoot() // Return to root
@@ -293,4 +311,7 @@ struct ProfileView: View {
 
 #Preview {
     NavigationManagerBootcamp()
+}
+#Preview {
+    DetailView(id: 100)
 }
