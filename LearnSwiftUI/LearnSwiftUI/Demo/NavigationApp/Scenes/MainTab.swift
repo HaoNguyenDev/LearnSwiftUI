@@ -166,7 +166,6 @@ struct MainTabControllerView: View {
                 .fontWeight(.semibold)
                 .symbolRenderingMode(.monochrome)
             //                .symbolEffect(.wiggle, options: .repeat(.bitWidth))
-                .symbolEffect(.bounce.up.wholeSymbol, options: .nonRepeating)
                 .foregroundStyle(.white)
             //            .resizable()
             //            .frame(width: 24, height: 24)

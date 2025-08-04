@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Task: Identifiable, Equatable {
+struct ToDoTask: Identifiable, Equatable {
     let id = UUID()
     var title: String
     var subtitle: String
@@ -16,24 +16,24 @@ struct Task: Identifiable, Equatable {
 }
 
 class TaskListViewModel: ObservableObject {
-    @Published var tasks: [Task]
+    @Published var tasks: [ToDoTask]
     
     init() {
         self.tasks = []
     }
     
     func addTask(title: String, subtitle: String) {
-        let newTask = Task(title: title, subtitle: subtitle, isCompleted: false)
+        let newTask = ToDoTask(title: title, subtitle: subtitle, isCompleted: false)
         tasks.append(newTask)
     }
     
-    func deleteTask(for task: Task) {
+    func deleteTask(for task: ToDoTask) {
         if let index = tasks.firstIndex(of: task) {
             tasks.remove(at: index)
         }
     }
     
-    func toggleCompletion(for task: Task) {
+    func toggleCompletion(for task: ToDoTask) {
         if let index = tasks.firstIndex(of: task) {
             tasks[index].isCompleted.toggle()
         }
@@ -53,11 +53,11 @@ class TaskListViewModel: ObservableObject {
 
 
 #Preview {
-    TaskHStackView(task: Task(title: "Title", subtitle: "Subtitle", isCompleted: true), isCompleted: {})
+    TaskHStackView(task: ToDoTask(title: "Title", subtitle: "Subtitle", isCompleted: true), isCompleted: {})
 }
 
 struct TaskHStackView: View {
-    var task: Task
+    var task: ToDoTask
     var isCompleted: (() -> Void)?
     var delete: (() -> Void)?
     var body: some View {
@@ -106,11 +106,11 @@ struct TaskHStackView: View {
 }
 
 struct AddTaskView: View {
-    @State private var task: Task
-    var onAdd: ((Task) -> Void)?
+    @State private var task: ToDoTask
+    var onAdd: ((ToDoTask) -> Void)?
     
-    init(onAdd: ((Task) -> Void)?) {
-        self.task = Task(title: "", subtitle: "", isCompleted: false)
+    init(onAdd: ((ToDoTask) -> Void)?) {
+        self.task = ToDoTask(title: "", subtitle: "", isCompleted: false)
         self.onAdd = onAdd
     }
     
