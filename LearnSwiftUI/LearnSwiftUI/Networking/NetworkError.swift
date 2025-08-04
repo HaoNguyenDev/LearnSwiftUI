@@ -39,3 +39,8 @@ enum NetworkError: Error {
         }
     }
 }
+
+enum AppError: Error {
+    case generic(String)
+    case custom(Error)
+}

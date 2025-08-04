@@ -55,6 +55,7 @@
 		DA5D71982E3FBCBA00C78E40 /* GitHubNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71972E3FBCBA00C78E40 /* GitHubNetworkService.swift */; };
 		DA5D719B2E3FC03D00C78E40 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D719A2E3FC03D00C78E40 /* AlertHandler.swift */; };
 		DA5D719E2E40940400C78E40 /* GithubUserListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D719D2E40940400C78E40 /* GithubUserListVM.swift */; };
+		DA5D71A02E40CC8300C78E40 /* AsyncAwaitBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D719F2E40CC8300C78E40 /* AsyncAwaitBootcamp.swift */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
 		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
 		DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D32E3A65110051F62F /* SharedModel.swift */; };
@@ -131,6 +132,7 @@
 		DA5D71972E3FBCBA00C78E40 /* GitHubNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubNetworkService.swift; sourceTree = "<group>"; };
 		DA5D719A2E3FC03D00C78E40 /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 		DA5D719D2E40940400C78E40 /* GithubUserListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserListVM.swift; sourceTree = "<group>"; };
+		DA5D719F2E40CC8300C78E40 /* AsyncAwaitBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitBootcamp.swift; sourceTree = "<group>"; };
 		DA65B7342E37D34600BF8A59 /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAA3B8D32E3A65110051F62F /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */,
 				DA5164312E3CB57600642709 /* NavigationManager.swift */,
 				DA5D71442E3F43B100C78E40 /* ObservablePattern.swift */,
+				DA5D719F2E40CC8300C78E40 /* AsyncAwaitBootcamp.swift */,
 			);
 			path = Bootcamp;
 			sourceTree = "<group>";
@@ -335,9 +338,9 @@
 		DA5D71872E3FB01C00C78E40 /* GithubUsers */ = {
 			isa = PBXGroup;
 			children = (
-				DA5D719C2E4093CB00C78E40 /* ViewModel */,
-				DA5D718C2E3FBA6100C78E40 /* Model */,
 				DA5D71942E3FBC8700C78E40 /* GithubNetworkService */,
+				DA5D718C2E3FBA6100C78E40 /* Model */,
+				DA5D719C2E4093CB00C78E40 /* ViewModel */,
 				DA5D71992E3FBCF500C78E40 /* Views */,
 			);
 			path = GithubUsers;
@@ -544,6 +547,7 @@
 				DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */,
 				DA5164302E3BCD2500642709 /* NavigationStackBootcamp.swift in Sources */,
 				DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */,
+				DA5D71A02E40CC8300C78E40 /* AsyncAwaitBootcamp.swift in Sources */,
 				DA5D71432E3E4BF700C78E40 /* BackButton.swift in Sources */,
 				DA5D71892E3FB05100C78E40 /* UserRowView.swift in Sources */,
 				DA5D713A2E3E000D00C78E40 /* Security.swift in Sources */,
