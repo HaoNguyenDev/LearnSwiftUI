@@ -56,6 +56,7 @@
 		DA5D719B2E3FC03D00C78E40 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D719A2E3FC03D00C78E40 /* AlertHandler.swift */; };
 		DA5D719E2E40940400C78E40 /* GithubUserListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D719D2E40940400C78E40 /* GithubUserListVM.swift */; };
 		DA5D71A02E40CC8300C78E40 /* AsyncAwaitBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D719F2E40CC8300C78E40 /* AsyncAwaitBootcamp.swift */; };
+		DA5D71A22E41EEDA00C78E40 /* ChangePasswordSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71A12E41EEDA00C78E40 /* ChangePasswordSuccess.swift */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
 		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
 		DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D32E3A65110051F62F /* SharedModel.swift */; };
@@ -133,6 +134,7 @@
 		DA5D719A2E3FC03D00C78E40 /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 		DA5D719D2E40940400C78E40 /* GithubUserListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserListVM.swift; sourceTree = "<group>"; };
 		DA5D719F2E40CC8300C78E40 /* AsyncAwaitBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitBootcamp.swift; sourceTree = "<group>"; };
+		DA5D71A12E41EEDA00C78E40 /* ChangePasswordSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordSuccess.swift; sourceTree = "<group>"; };
 		DA65B7342E37D34600BF8A59 /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAA3B8D32E3A65110051F62F /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 				DA5D71352E3DE82A00C78E40 /* Account.swift */,
 				DA5D71392E3E000D00C78E40 /* Security.swift */,
 				DA5D71372E3DFBA000C78E40 /* ChangePassword.swift */,
+				DA5D71A12E41EEDA00C78E40 /* ChangePasswordSuccess.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				DA5C98BC2E3924AA007AC9E9 /* TodoDetailView.swift in Sources */,
 				DAED67802E21089A00309382 /* ObservedObjectBootcamp.swift in Sources */,
 				DA5C98B82E391F91007AC9E9 /* TodoListView.swift in Sources */,
+				DA5D71A22E41EEDA00C78E40 /* ChangePasswordSuccess.swift in Sources */,
 				DAEBAE3C2DEB07A500082B1C /* SpacerBootcamp.swift in Sources */,
 				DAEBAE442DECC2D100082B1C /* GridBootcamp.swift in Sources */,
 				DA5164322E3CB57600642709 /* NavigationManager.swift in Sources */,
