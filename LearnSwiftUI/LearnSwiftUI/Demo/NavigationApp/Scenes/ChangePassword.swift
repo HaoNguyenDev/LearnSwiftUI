@@ -41,9 +41,7 @@ struct ChangePasswordCoordinator: View, ScreenCoordinator {
     private func changePasswordView() -> some View {
         ChangePasswordView(model: loginModel, changePasswordResult: { result in
             if result {
-                navRouter.pop(to: Router.Splash.home, animate: true)
-                //                navRouter.pop(animate: true)
-                //                navRouter.push(ScreenRouter.changePasswordSuccess, animate: true)
+                navRouter.push(ScreenRouter.changePasswordSuccess, animate: true)
             }
         })
         //        .toolbar(.hidden, for: .navigationBar)
@@ -59,9 +57,7 @@ struct ChangePasswordCoordinator: View, ScreenCoordinator {
     func viewForRouter(router: ScreenRouter) -> some View {
         switch router {
         case .changePasswordSuccess:
-            Text("Change Password Successfully")
-                .font(.largeTitle)
-                .fontWeight(.bold)
+            ChangePasswordSuccessCoordinator(navRouter: navRouter)
         }
     }
 }
