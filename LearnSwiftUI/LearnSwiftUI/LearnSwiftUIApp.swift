@@ -25,18 +25,20 @@ struct LearnSwiftUIApp: App {
 //            SheetBootcamp()
 //            SateBootcamp()
 //            StateObjectBootcamp()
+            
 //            TodoAppView()
-//                .environmentObject(sharedModel)
+//                .environment(sharedModel)
 //                .environmentObject(todoStore)
+            
 //            EnvironmentBootcamp()
 //                .environment(\.colorScheme, .dark)
 //                .environment(sharedModel)
 //            NavigationStackBootcamp()
 //            NavigationManagerBootcamp()
-            AppCoordinator().environment(UserSettings.shared)
+//            AppCoordinator().environment(UserSettings.shared)
 //            EnvironmentSettingView().environment(EnvironmentSettings())
-//            GithubUserListView()
-//                .environmentObject(GithubUserListVM())
+            GithubUserListView()
+                .environmentObject(GithubUserListVM())
 //            AsyncAwaitBootcampView()
         }
     }
