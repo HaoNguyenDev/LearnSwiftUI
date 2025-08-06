@@ -47,12 +47,18 @@ struct TodoListView: View {
             
             //Todo Items
             Section {
-                ForEach(todoStore.filteredTodos) { todo in
-                    NavigationLink(destination: TodoDetailView(todo: todo)) {
-                        TodoRowView(todo: todo)
+                if todoStore.filteredTodos.isEmpty {
+                    Text("No todo yet")
+                        .font(.headline)
+                        .bold()
+                } else {
+                    ForEach(todoStore.filteredTodos) { todo in
+                        NavigationLink(destination: TodoDetailView(todo: todo)) {
+                            TodoRowView(todo: todo)
+                        }
                     }
+                    .onDelete(perform: deleteTodo)
                 }
-                .onDelete(perform: deleteTodo)
             }
             
         }

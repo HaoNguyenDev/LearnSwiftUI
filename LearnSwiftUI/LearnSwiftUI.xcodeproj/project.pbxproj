@@ -212,7 +212,7 @@
 				DA415E722DE5C307009F515E /* Extension */,
 				DAA3B8D22E3A64FC0051F62F /* Models */,
 				DA5D717C2E3FA56900C78E40 /* Networking */,
-				DA65B7322E37D31200BF8A59 /* Demo */,
+				DA65B7322E37D31200BF8A59 /* AppDemo */,
 				DA415E6A2DE5BFAF009F515E /* Bootcamp */,
 			);
 			path = LearnSwiftUI;
@@ -384,14 +384,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		DA65B7322E37D31200BF8A59 /* Demo */ = {
+		DA65B7322E37D31200BF8A59 /* AppDemo */ = {
 			isa = PBXGroup;
 			children = (
 				DA5D71872E3FB01C00C78E40 /* GithubUsers */,
 				DA5D71042E3CD1EB00C78E40 /* NavigationApp */,
 				DA65B7332E37D31B00BF8A59 /* TodoApp */,
 			);
-			path = Demo;
+			path = AppDemo;
 			sourceTree = "<group>";
 		};
 		DA65B7332E37D31B00BF8A59 /* TodoApp */ = {
