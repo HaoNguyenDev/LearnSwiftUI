@@ -112,3 +112,44 @@ struct InteractiveImageView: View {
 #Preview {
     InteractiveImageView()
 }
+
+struct SequencedGestureView: View {
+    @State private var isTapped = false
+
+    var body: some View {
+        Text(isTapped ? "Unlocked, long press to lock" : "Long press to unlock")
+            .padding()
+            .background(isTapped ? Color.red : Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+            .gesture(
+                LongPressGesture(minimumDuration: 1)
+                    .sequenced(before: TapGesture())
+                    .onEnded { value in
+                        self.isTapped.toggle()
+//                        switch value {
+//                        case .first(true):
+//                            print("Long press detected, now waiting for tap...")
+//                        case .second(true, nil):
+//                            print("Long press ended, but no tap detected yet.")
+//                        case .second(true, nil):
+//                            withAnimation {
+//                                self.isTapped.toggle()
+//                            }
+//                            print("Long press + Tap detected!")
+//                        case .second(true, nil):
+//                            withAnimation {
+//                                self.isTapped.toggle()
+//                            }
+//                            print("Long press + Tap detected!")
+//                        default:
+//                            break
+//                        }
+                    }
+            )
+    }
+}
+
+#Preview {
+    SequencedGestureView()
+}
