@@ -37,8 +37,8 @@ struct LearnSwiftUIApp: App {
 //            NavigationManagerBootcamp()
 //            AppCoordinator().environment(UserSettings.shared)
 //            EnvironmentSettingView().environment(EnvironmentSettings())
-            GithubUserListView()
-                .environmentObject(GithubUserListVM())
+//            GithubUserListView()
+//                .environmentObject(GithubUserListVM())
 //            AsyncAwaitBootcampView()
         }
     }
