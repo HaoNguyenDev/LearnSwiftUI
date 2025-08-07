@@ -54,7 +54,9 @@ protocol NavigationManagerProtocol {
     // Full-screen cover presentation state and scene
     var isFullScreenCoverPresented = false
     var fullScreenCoverScene: Scenes?
-    
+}
+
+extension NavigationManager {
     // Push a new scene to the navigation stack
     func push(_ scene: Scenes) {
         navPath.append(scene)
