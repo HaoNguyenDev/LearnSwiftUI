@@ -34,6 +34,7 @@ struct LearnSwiftUIApp: App {
 //                .environment(\.colorScheme, .dark)
 //                .environment(sharedModel)
 //            NavigationStackBootcamp()
+            NavigationStackCustomItemView()
 //            NavigationManagerBootcamp()
 //            AppCoordinator().environment(UserSettings.shared)
 //            EnvironmentSettingView().environment(EnvironmentSettings())

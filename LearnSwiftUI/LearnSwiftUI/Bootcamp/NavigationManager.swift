@@ -25,18 +25,35 @@ enum Scenes: Hashable {
     }
 }
 
+protocol NavigationManagerProtocol {
+    var navPath: NavigationPath { get set }
+    var isSheetPresented: Bool { get set }
+    var sheetScene: Scenes? { get set }
+    var isFullScreenCoverPresented: Bool { get set }
+    var fullScreenCoverScene: Scenes? { get set }
+    
+    func push(_ scene: Scenes)
+    func pop()
+    func pop(count: Int)
+    func popToRoot()
+    func replace(with scene: Scenes)
+    func showSheet(_ scene: Scenes)
+    func dismissSheet()
+    func showFullScreenCover(_ scene: Scenes)
+    func dismissFullScreenCover()
+}
 // Class to manage navigation, sheets, and full-screen covers
-class NavigationManager: ObservableObject {
+@Observable class NavigationManager: NavigationManagerProtocol {
     // Navigation path for NavigationStack
-    @Published var navPath = NavigationPath()
+    var navPath = NavigationPath()
     
     // Sheet presentation state and scene
-    @Published var isSheetPresented = false
-    @Published var sheetScene: Scenes?
+    var isSheetPresented = false
+    var sheetScene: Scenes?
     
     // Full-screen cover presentation state and scene
-    @Published var isFullScreenCoverPresented = false
-    @Published var fullScreenCoverScene: Scenes?
+    var isFullScreenCoverPresented = false
+    var fullScreenCoverScene: Scenes?
     
     // Push a new scene to the navigation stack
     func push(_ scene: Scenes) {
@@ -93,7 +110,7 @@ class NavigationManager: ObservableObject {
 
 // Root view of the app
 struct NavigationManagerBootcamp: View {
-    @StateObject private var navManager = NavigationManager() // Initialize NavigationManager
+    @State private var navManager = NavigationManager() // Initialize NavigationManager
     
     var body: some View {
         NavigationStack(path: $navManager.navPath) {
@@ -128,11 +145,11 @@ struct NavigationManagerBootcamp: View {
             .navigationDestination(for: Scenes.self) { scene in
                 switch scene {
                 case .detailView(let id):
-                    DetailView(id: id)
+                    DetailView(id: id).environment(navManager)
                 case .settingView:
-                    SettingView()
+                    SettingView().environment(navManager)
                 case .profileView:
-                    ProfileView()
+                    ProfileView().environment(navManager)
                 }
             }
             // Present sheet based on NavigationManager state
@@ -148,7 +165,7 @@ struct NavigationManagerBootcamp: View {
                 }
             }
         }
-        .environmentObject(navManager) // Share NavigationManager with child views
+        .environment(navManager) // Share NavigationManager with child views
     }
     
     // Helper function to map Scenes to views
@@ -156,18 +173,18 @@ struct NavigationManagerBootcamp: View {
     private func destinationView(for scene: Scenes) -> some View {
         switch scene {
         case .detailView(let id):
-            DetailView(id: id)
+            DetailView(id: id).environment(navManager)
         case .settingView:
-            SettingView()
+            SettingView().environment(navManager)
         case .profileView:
-            ProfileView()
+            ProfileView().environment(navManager)
         }
     }
 }
 
 // Detail view
 struct DetailView: View {
-    @EnvironmentObject private var navManager: NavigationManager
+    @Environment(NavigationManager.self) private var navManager
     let id: Int
     @State private var popCount: String = ""
     var body: some View {
@@ -243,7 +260,7 @@ struct DetailView: View {
 
 // Settings view
 struct SettingView: View {
-    @EnvironmentObject private var navManager: NavigationManager
+    @Environment(NavigationManager.self) private var navManager
     
     var body: some View {
         ZStack {
@@ -277,7 +294,7 @@ struct SettingView: View {
 
 // Profile view
 struct ProfileView: View {
-    @EnvironmentObject private var navManager: NavigationManager
+    @Environment(NavigationManager.self) private var navManager
     
     var body: some View {
         ZStack {
