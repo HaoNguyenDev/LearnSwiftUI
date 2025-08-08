@@ -22,12 +22,28 @@ struct GridBootcamp: View {
 //                               GridItem(.flexible(minimum: 100), spacing: nil, alignment: .center),
 //                               GridItem(.flexible(minimum: 100, maximum: 200), spacing: nil, alignment: .center)]
     
-    let rows: [GridItem] = [GridItem(.fixed(100))]
+    let rows: [GridItem] = [GridItem(.fixed(100)), GridItem(.flexible())]
     
     private let alphabet: [Character] = Array("abcdefghijklmnopqrstuvwxyz")
     
     var body: some View {
         ScrollView() {
+            VStack {
+                Grid(alignment: .leading, horizontalSpacing: 20, verticalSpacing: 20) {
+                    GridRow(alignment: .center) {
+                        Text("Username:")
+                        TextField("Enter username", text: .constant("") )
+                    }
+                    
+                    GridRow(alignment: .center) {
+                        Text("Password:")
+                        TextField("Enter password", text: .constant("") )
+                    }
+                    
+                }
+            }
+            .padding()
+            
             VStack {
                 LazyVGrid(columns: columns) {
                     ForEach(alphabet, id: \.self) { word in
@@ -93,7 +109,6 @@ struct GridBootcamp: View {
                         .font(.headline)
                         .fontWeight(.bold)
                 }
-                .background(Color.yellow)
                 
                 Section {
                     ForEach(0..<100) { word in
@@ -112,7 +127,6 @@ struct GridBootcamp: View {
                         .font(.headline)
                         .fontWeight(.bold)
                 }
-                .background(Color.green)
             }
             
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 50))], alignment: .leading, spacing: 10, pinnedViews: [.sectionFooters]) {
