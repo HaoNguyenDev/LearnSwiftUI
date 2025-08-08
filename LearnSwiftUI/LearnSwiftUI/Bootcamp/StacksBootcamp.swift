@@ -12,63 +12,68 @@ struct StacksBootcamp: View {
     private var columnCount = 3
     var body: some View {
         ScrollView {
-            GeometryReader { geometry in
-                VStack(spacing: 20) {
-                    VStack(alignment: .leading, spacing: 5) {
-                        Rectangle().fill(Color.red)
-                            .frame(width: 100, height: 50)
-                        
-                        Rectangle().fill(Color.green)
-                            .frame(width: 80, height: 50)
-                        
-                        Rectangle().fill(Color.yellow)
-                            .frame(width: 70, height: 50)
-                        
-                    }
-                    .frame(width: 100, height: 200, alignment: .center)
+    
+            VStack(spacing: 30) {
+                VStack(alignment: .leading, spacing: 5) {
+                    Rectangle().fill(Color.red)
+                        .frame(width: 100, height: 50)
                     
-                    HStack(alignment: .center, spacing: 10) {
-                        ForEach (0..<3) { index in
-                            RoundedRectangle(cornerRadius: 10).fill(Color.blue)
-                                .frame(width: (screenWidth - 20)/3, height: (screenWidth - 20)/3)
-                                .overlay(
-                                    Text("\(index)")
-                                        .font(.title)
-                                        .fontWeight(.bold)
-                                        .foregroundStyle(.white)
-                                )
-                        }
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: 200)
+                    Rectangle().fill(Color.green)
+                        .frame(width: 80, height: 50)
                     
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(Color.white)
-                            .frame(width: 200, height: 100)
-                            
-                            .shadow(radius: 10, x: 0.0, y: 10)
+                    Rectangle().fill(Color.yellow)
+                        .frame(width: 70, height: 50)
+                    
+                }
+                .frame(width: 100, height: 200, alignment: .center)
+                
+                HStack(alignment: .center, spacing: 10) {
+                    ForEach (0..<3) { index in
+                        RoundedRectangle(cornerRadius: 10).fill(Color.blue)
+                            .frame(width: 100, height: 100)
                             .overlay(
-                                Text("Hello, World!")
-                                    .font(.headline)
-                                    .foregroundColor(.black)
-                                    .underline()
+                                Text("\(index)")
+                                    .font(.title)
+                                    .fontWeight(.bold)
+                                    .foregroundStyle(.white)
                             )
-                        
                     }
-                    
-                    HorizontalScrollView()
-                    
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-                .onAppear {
-                    screenWidth = geometry.size.width
                 }
                 
-
                 
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.white)
+                        .frame(width: 200, height: 100)
+                        
+                        .shadow(radius: 10, x: 0.0, y: 10)
+                        .overlay(
+                            Text("Hello, World!")
+                                .font(.headline)
+                                .foregroundColor(.black)
+                                .underline()
+                        )
+                    
+                }
+                
+                ZStack(alignment: .topTrailing) {
+                    Image(.cat)
+                        .resizable()
+                        .frame(width: 200, height: 200)
+                        .clipShape(Circle())
+                    
+                    Circle()
+                        .fill(Color.blue)
+                        .frame(width: 50, height: 50)
+                        .overlay {
+                            Text("10")
+                                .font(.headline)
+                                .foregroundStyle(.white)
+                        }
+                }
+                
+                HorizontalScrollView()
             }
-            
-            
         }
     }
 }
@@ -82,19 +87,24 @@ struct HorizontalScrollView: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 20) {
                 ForEach (0..<10) { index in
-                    Circle()
-                        .fill(Color.blue)
-                        .frame(width: 100, height: 100)
-                        .overlay(content: {
-                            Text("\(index)")
-                                .font(.title)
-                                .fontWeight(.bold)
-                                .foregroundStyle(.white)
-                                .padding()
-                        })
+                    ZStack(alignment: .topTrailing) {
+                        Image(.cat)
+                            .resizable()
+                            .frame(width: 100, height: 100)
+                            .clipShape(Circle())
+                        
+                        Circle()
+                            .fill(Color.blue)
+                            .frame(width: 30, height: 30)
+                            .overlay {
+                                Text("10")
+                                    .font(.headline)
+                                    .foregroundStyle(.white)
+                            }
+                    }
                 }
             }
-            .frame(height: 150)
+            .frame(height: 200)
         }
     }
 }
