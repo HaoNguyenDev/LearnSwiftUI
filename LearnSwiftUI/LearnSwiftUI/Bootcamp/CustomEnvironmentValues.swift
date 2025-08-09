@@ -8,6 +8,35 @@
 import Foundation
 import SwiftUI
 
+struct HSpacing {
+    let paddingText: CGFloat = 5
+    
+}
+
+struct HColor {
+    let textColor = Color("CustomTextColor")
+    let backgroundColor = Color("CustomBackgroundColor")
+}
+
+struct HCustomDesign {
+    let color = HColor()
+    let spacing = HSpacing()
+}
+
+//Step 1: Define the environment key
+struct CustomDesignKey: EnvironmentKey {
+    static let defaultValue = HCustomDesign()
+}
+
+//Step 2: Extend EnvironmentValues
+extension EnvironmentValues {
+    var hCustomDesign: HCustomDesign {
+        get { self[CustomDesignKey.self] }
+        set { self[CustomDesignKey.self] = newValue }
+    }
+}
+
+//-------------//---------------//
 struct CustomColor {
     let textColor = Color("CustomTextColor")
     let backgroundColor = Color("CustomBackgroundColor")
@@ -56,6 +85,7 @@ struct EnvironmentKeyContentView: View {
             .environment(\.apiPoint, "https://api.example.com/debug")
             .environment(\.isDebugMode, true)
             .environment(\.colorEnv, CustomColor())
+            .environment(\.hCustomDesign, HCustomDesign())
     }
 }
 
@@ -63,6 +93,7 @@ struct UseEnvironmentView: View {
     @Environment(\.apiPoint)    private var apiPoint
     @Environment(\.isDebugMode) private var isDebugMode
     @Environment(\.colorEnv) private var customColor
+    @Environment(\.hCustomDesign) private var hCustomDesign
     
     var body: some View {
         Text("apiPoint: \(apiPoint)")
@@ -70,6 +101,18 @@ struct UseEnvironmentView: View {
             .foregroundStyle(customColor.textColor)
         Circle()
             .fill(customColor.backgroundColor)
+        
+        Button {
+            
+        } label: {
+            Text("Button")
+                .font(.headline)
+                .foregroundStyle(hCustomDesign.color.textColor)
+                .padding(hCustomDesign.spacing.paddingText)
+                
+        }
+        .buttonStyle(.bordered)
+
     }
 }
 
