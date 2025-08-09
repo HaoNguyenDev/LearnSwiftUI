@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 
 struct CustomColor {
-    let customBackgroundColor = Color("CustomBackgroundColor")
+    let textColor = Color("CustomTextColor")
+    let backgroundColor = Color("CustomBackgroundColor")
 }
 
 //Step 1: Define the environment key
@@ -19,7 +20,7 @@ struct CustomColorKey: EnvironmentKey {
 
 //Step 2: Extend EnvironmentValues
 extension EnvironmentValues {
-    var customColor: CustomColor {
+    var colorEnv: CustomColor {
         get { self[CustomColorKey.self] }
         set { self[CustomColorKey.self] = newValue }
     }
@@ -54,19 +55,21 @@ struct EnvironmentKeyContentView: View {
         UseEnvironmentView() // Inject environment to view
             .environment(\.apiPoint, "https://api.example.com/debug")
             .environment(\.isDebugMode, true)
-            .environment(\.customColor, CustomColor())
+            .environment(\.colorEnv, CustomColor())
     }
 }
 
 struct UseEnvironmentView: View {
     @Environment(\.apiPoint)    private var apiPoint
     @Environment(\.isDebugMode) private var isDebugMode
-    @Environment(\.customColor) private var customColor
+    @Environment(\.colorEnv) private var customColor
     
     var body: some View {
         Text("apiPoint: \(apiPoint)")
         Text("isDebugMode: \(isDebugMode)")
-            .foregroundStyle(customColor.customBackgroundColor)
+            .foregroundStyle(customColor.textColor)
+        Circle()
+            .fill(customColor.backgroundColor)
     }
 }
 
