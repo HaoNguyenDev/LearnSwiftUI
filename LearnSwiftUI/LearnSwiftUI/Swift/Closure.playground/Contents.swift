@@ -3,24 +3,25 @@ import Foundation
 
 //MARK: Closure
 /*
- Closure trong Swift là gì?
- * Closure trong Swift là một khối mã độc lập có thể được truyền và sử dụng lại trong code.
- Closure có thể nhận tham số, trả về giá trị, và có khả năng capture (giữ lại) các biến,
- hằng số từ phạm vi xung quanh nó.
- 
- Closure trong Swift có thể được coi như hàm ẩn danh (anonymous function) vì nó không cần khai báo tên giống như function thông thường.
- 
- So sánh với function:
- Không có tên, có thể gán với biến, hoặc truyền như tham số
- Có thể capture biến bên ngoài
- 
- 📌 Lợi ích của [weak self]
- ✅ Nếu self bị giải phóng, closure sẽ không giữ lại nó, tránh retain cycle.
- ✅ self trong closure sẽ thành nil nếu đối tượng đã bị xóa.
- 
- Function
- Được gọi trực tiếp theo tên
- Không thể capture biến bên ngoài trừ khi sử dụng @escaping
+What is Closure in Swift?
+* Closure in Swift is a self-contained block of code that can be passed around and reused in code.
+
+Closure can take parameters, return values, and can capture variables,
+constants from the scope around it.
+
+Closure in Swift can be considered an anonymous function because it does not need to declare a name like a normal function.
+
+Compared to function:
+No name, can be assigned to a variable, or passed as a parameter
+Can capture external variables
+
+📌 Benefits of [weak self]
+✅ If self is released, the closure will not retain it, avoiding retain cycles.
+✅ self in the closure will become nil if the object has been deleted.
+
+Function
+Called directly by name
+Cannot capture external variables unless using @escaping
 */
 /*
  { (parameters) -> ReturnType in
@@ -41,46 +42,46 @@ var myClosure3 : (Int, Int) -> Int = { (a,b) -> Int in
     return a+b
 }
 
-//MARK: Cách sử dụng Closure
-//MARK: Truyền closure như một tham số vào hàm:
+//MARK: Usage Closure
+//MARK: Make closure as function parameter:
 
-var congThucTinhTong2So: (Int, Int) -> String = { (a, b) -> String in
+var sumTwoNumberFormular: (Int, Int) -> String = { (a, b) -> String in
     return "\(a + b)"
 }
 
 func tong(_ a: Int, _ b: Int, operation: (Int, Int) -> String) -> String {
-    return "Tong la: \(operation(a, b))"
+    return "Total: \(operation(a, b))"
 }
 
-let tinhTong = tong(10, 20, operation: congThucTinhTong2So)
+let tinhTong = tong(10, 20, operation: sumTwoNumberFormular)
 
 
 
-//MARK: Sử dụng closure với các hàm có sẵn như map, filter, reduce:
+//MARK: Use closure with map, filter, reduce:
 let numbers: [Int?] = [1, 2, nil, 3, 4, 5, nil, 6, 8, 10, nil]
 
-let closureSoChan:  (Int) -> Bool = { number in
+let evenNumberClosure:  (Int) -> Bool = { number in
     return number % 2 == 0
 }
 
 let compactMapNumber = numbers
-    .compactMap { $0 } // Loai bỏ những phần từ bị nil
-    .filter(closureSoChan) // Sau đó lấy số chẵn
+    .compactMap { $0 } // Remove nil element
+    .filter(evenNumberClosure) // Take even number only
 
-let soChan = compactMapNumber.filter { $0 % 2 == 0 } // Lọc phần tử thỏa mãn điều kiện
+let evenNumber1 = compactMapNumber.filter { $0 % 2 == 0 } // Filter elements that satisfy the condition
 
-let soChan2 = compactMapNumber.filter(closureSoChan) // Lọc phần tử thỏa mãn điều kiện closure
+let evenNumber2 = compactMapNumber.filter(evenNumberClosure) // Filter elements that satisfy the condition closure
 
-let tongCuaCac = compactMapNumber.reduce(0, +) // Gộp các phần tử thành một giá trị
+let oneValue = compactMapNumber.reduce(0, +) // Combine elements into one value
 
-let mapSo = compactMapNumber.map { $0 + 1 } // Biến đổi từng phần tử
+let transformEachElement = compactMapNumber.map { $0 + 1 } // Transform each element
 
-let xapXepTangDan = compactMapNumber.sorted { $0 > $1 } // Sắp xếp mảng
+let xapXepTangDan = compactMapNumber.sorted { $0 > $1 } // Sort array
 
-compactMapNumber.forEach { print($0) } // Lặp qua từng phần tử
+compactMapNumber.forEach { print($0) } // Loop through each element
 
 //MARK: Escaping Closure
-//Closure có thể được lưu trữ và gọi sau này bằng @escaping:
+//Closures can be stored and called later using @escaping:
 
 var scheduledTasks: [(String) -> Void] = []
 
@@ -88,33 +89,33 @@ var scheduledTasks: [(String) -> Void] = []
     scheduledTasks.append(task)
 }
 
-// Thêm các công việc vào danh sách
+// Add to to list
 scheduleTask { taskName in
-    print("Chạy tác vụ: \(taskName)")
+    print("Run task: \(taskName)")
 }
 
 scheduleTask { taskName in
-    print("Ghi log: \(taskName) đã hoàn thành")
+    print("Log: \(taskName) completed")
 }
 
-// Khi đến thời gian thực hiện công việc
+// When it comes time to do the work
 @MainActor func runScheduledTasks() {
-    print("Thực thi tất cả các tác vụ:")
+    print("Excuting scheduled tasks:")
     for task in scheduledTasks {
-        task("Backup dữ liệu")
+        task("Backup data")
     }
 }
 
-// Giả lập chạy tất cả công việc đã lên lịch
+// Simulate running all scheduled jobs
 runScheduledTasks()
 
 
 
-print("Closure Capture List có thể Capture biến từ phạm vi xung quanh nó")
-// MARK: Closure Closure có thể Capture biến từ phạm vi xung quanh nó
+print("Closure Capture List can Capture variables from its surrounding scope")
+// MARK: Closure can Capture variables from its surrounding scope
 
 @MainActor func increaseCounter(numberParam: Int) -> (Int) -> Int {
-    // Clousure sẽ capture biến number để thực hiện cho lần tiếp theo
+    // Clousure capture number variable to excute for next time
     var number = numberParam
     return { input in
         print("input: \(input)")
@@ -144,8 +145,8 @@ print(countUp1(1))
 
 print("Trailing Closure")
 //MARK: Trailing Closure:
-// Cú pháp sẽ ngắn gọn hơn khi clousure là tham số cuối cùng của function
-// Ví dụ như những API sort, filter
+// The syntax will be more concise when the closure is the last parameter of the function
+// For example, sort and filter APIs
 func doSomething(completion: (Bool) -> String) -> String {
     completion(true)
 }
@@ -156,28 +157,28 @@ doSomething { isCompletion in
 }
 
 
-let timSoChan: (Int) -> Bool
-timSoChan = { number in
+let findEvenNumber: (Int) -> Bool
+findEvenNumber = { number in
     number % 2 == 0
 }
 
-let xapXepSoTangDan: (Int, Int) -> Bool
-xapXepSoTangDan = { a, b in
+let ascendingOrder: (Int, Int) -> Bool
+ascendingOrder = { a, b in
     a < b
 }
 
-//xapXepSoTangDan = { $0 < $1 }
+//ascendingOrder = { $0 < $1 }
 
 let soNgauNhien: [Int?]  = [nil, 11, 12, 15, nil, 18, 20, 0, nil, 2, 3, 4, nil, 5, 6, 7, 8, 9, 10]
 
 let daySoUnwrap = soNgauNhien.compactMap { $0 }
-let daySoChan1 = daySoUnwrap.filter(timSoChan)
-let soTangDan = daySoChan1.sorted(by: xapXepSoTangDan)
+let daySoChan1 = daySoUnwrap.filter(findEvenNumber)
+let soTangDan = daySoChan1.sorted(by: ascendingOrder)
 let soTangDan2 = daySoUnwrap.sorted { $0 < $1 }
-let compacMap = soNgauNhien.compactMap { $0 } // Loại bỏ nil
+let compacMap = soNgauNhien.compactMap { $0 } // Remove nil element
 
 let inSo: (Int) -> Void = { number in
-    print("\(number % 2 == 0 ? "Số chẵn \(number)" : "Số lẻ \(number)")")
+    print("\(number % 2 == 0 ? "Even number\(number)" : "Odd number \(number)")")
 }
 daySoUnwrap.forEach(inSo)
 
