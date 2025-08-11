@@ -37,8 +37,8 @@ class SerialTest {
 }
 
 let serialTest = SerialTest()
-//serialTest.testSync()
-//serialTest.testAsync()
+//serialTest.testSync() // Tasks are executed sequentially. The calling thread is blocked.
+//serialTest.testAsync() // Tasks are executed sequentially. The calling thread is not blocked.
 
 class ConcurrentTest {
     let concurrentQueue = DispatchQueue(label: "example.concurrentQueue", qos: .userInteractive, attributes: .concurrent)
@@ -67,8 +67,8 @@ class ConcurrentTest {
             print("task 1")
         }
         
-        concurrentQueue.async(flags: .barrier) {
-            Thread.sleep(forTimeInterval: 1)
+        concurrentQueue.async {
+            Thread.sleep(forTimeInterval: 2)
             print("task 2")
         }
         
@@ -77,44 +77,83 @@ class ConcurrentTest {
             print("task 3")
         }
         
+        concurrentQueue.async(flags: .barrier) { // (flags: .barrier)
+            Thread.sleep(forTimeInterval: 1)
+            print("task 4")
+        }
+        
         print("testAsync >>> End")
     }
 }
 
 let testConcurrent = ConcurrentTest()
-//testConcurrent.testSync()
-//testConcurrent.testAsync()
+//testConcurrent.testSync() // The task is executed immediately. The calling thread is blocked until the task completes.
+//testConcurrent.testAsync() // Tasks are executed concurrently (multiple tasks at the same time). The calling thread is not blocked, it continues to do its work.
 
-//the way of serial.sync and concurrent.sync excute task the same way
+//the way of serial.sync and concurrent.sync excute task the same way, the calling thread is blocked until the task completes
 
-let group = DispatchGroup()
-let queue = DispatchQueue.global()
+// Avoid race condition with Serial queue
 
-func testAsyncGroup(_ task: @escaping () -> Void) {
-    group.enter()
-    queue.async {
-        Thread.sleep(forTimeInterval: 1)
-        print("Excuted task 1")
-        group.leave()
-    }
 
-    group.enter()
-    queue.async {
-        Thread.sleep(forTimeInterval: 2)
-        print("Excuted task 2")
-        group.leave()
-    }
+class TestRaceCondition {
+    var counter = 0
+    let concurrentQueue = DispatchQueue(label: "com.example.concurrent", attributes: .concurrent)
+    let serialQueue = DispatchQueue(label: "com.example.concurrent", attributes: .concurrent)
+//    func increment() {
+//        for _ in 0..<100 {
+//            concurrentQueue.async { [weak self] in
+//                self?.counter += 1 // Race condition occurs here!
+//                print(self?.counter)
+//            }
+//        }
+//        // With ConcurentQueue the final counter value may not be 100.
+//    }
     
-    task()
+//    func increment() {
+//        for _ in 0..<100 {
+//            DispatchQueue.global().async {
+//                self.serialQueue.async {
+//                    self.counter += 1
+//                    print(self.counter)
+//                }
+//            }
+//        }
+//    }
+    
 }
 
-//group.notify(queue: .main) {
+//let testRaceCondition = TestRaceCondition()
+//testRaceCondition.increment()
+//testRaceCondition.increment2()
+
+//let dispatchGroup = DispatchGroup() //DispatchGroup keeps track of the number of tasks through the enter() and leave() method pair.
+//let queue = DispatchQueue.global()
+//
+//func testAsyncGroup(_ task: @escaping () -> Void) {
+//    dispatchGroup.enter()
+//    queue.async {
+//        Thread.sleep(forTimeInterval: 1)
+//        print("Excuted task 1")
+//        dispatchGroup.leave()
+//    }
+//
+//    dispatchGroup.enter()
+//    queue.async {
+//        Thread.sleep(forTimeInterval: 3)
+//        print("Excuted task 2")
+//        dispatchGroup.leave()
+//    }
+//    
+//    task()
+//}
+//
+//dispatchGroup.notify(queue: .main) {
 //    print("Task finished!")
 //}
 //
 //testAsyncGroup {
 //    print("Waiting for tasks...")
-//    let result = group.wait(timeout: .now() + 3) // maximum wait time in 5 seconds
+//    let result = dispatchGroup.wait(timeout: .now() + 3) // maximum wait time in 3 seconds
 //    if result == .timedOut {
 //        print("Timeout")
 //        return
@@ -124,41 +163,13 @@ func testAsyncGroup(_ task: @escaping () -> Void) {
 //    print("All tasks finished!")
 //}
 
-let workItem1 = DispatchWorkItem {
-    print("Hello, World!")
-}
-
-@MainActor func excuteWorkItem() {
-    queue.async(execute: workItem1)
-}
-workItem1.cancel()
-//excuteWorkItem()
-
-
-//MARK: Avoid Race Condition
-//With DispathGroup enter and leave
-//@MainActor
-//func testMainActor() {
-//    
-//    let concurrentQueue2 = DispatchQueue(label: "com.example.concurrent", attributes: .concurrent)
-//    let group2 = DispatchGroup()
-//
-//    var sharedArray = [Int]()
-//
-//    for i in 1...3 {
-//        group2.enter()
-//        concurrentQueue2.async {
-//            print("Read: \(sharedArray)")
-//            group2.leave()
-//        }
-//    }
-//
-//    group.notify(queue: concurrentQueue2) {
-//        concurrentQueue2.async(flags: .barrier) {
-//            sharedArray.append(42) // Wtite when all read task finished
-//            print("Write: \(sharedArray)")
-//        }
-//    }
-//
+//let queue = DispatchQueue.global()
+//let workItem1 = DispatchWorkItem {
+//    print("Hello, World!")
 //}
-//testMainActor()
+//
+//@MainActor func excuteWorkItem() {
+//    queue.async(execute: workItem1)
+//}
+////workItem1.cancel()
+//excuteWorkItem()
