@@ -61,16 +61,57 @@ class OperationQueueTest {
 //        block1.addDependency(block2)
 //        block3.addDependency(block4)
         
-        operationQueue.addOperations([block1, block2, block3, block4], waitUntilFinished: true)
+        operationQueue.addOperations([block1, block2, block3, block4], waitUntilFinished: false)
         /* waitUntilFinished will block the call thread until the call thread are finish */
         
         print(">>> End")
     }
     
+    func testRunManyQueue() {
+        operationQueue.maxConcurrentOperationCount = 2
+       
+        for i in 0...10 {
+            let operation = BlockOperation {
+                Thread.sleep(forTimeInterval: 1)
+                print("Excute Task \(i)")
+            }
+            operation.completionBlock = {
+                print("\(i) task completed")
+            }
+            operationQueue.addOperation(operation)
+        }
+    }
+    
+    //MARK: Priority
+    func testPriorityOfOperation() {
+        let highPriorityOperation = BlockOperation {
+            print("hight priority task executed")
+        }
+        highPriorityOperation.queuePriority = .veryHigh
+
+        let lowPriorityOperation = BlockOperation {
+            print("low priority task executed")
+        }
+        lowPriorityOperation.queuePriority = .low
+        
+        //highPriorityOperation.addDependency(lowPriorityOperation)
+        /* if we set dependency of operation then priority attribute not avaliable */
+        operationQueue.addOperations([lowPriorityOperation, highPriorityOperation], waitUntilFinished: false)
+    }
+    
+    //MARK: QualityOfService
+    /* qualityOfService helps the system prioritize resources for important tasks, such as user-initiated tasks. */
+    func testQualityOfService() {
+        let operation = BlockOperation {
+            print("QualityOfService task executed")
+        }
+        operation.qualityOfService = .userInitiated
+        operationQueue.addOperation(operation)
+    }
 
 }
 
 let testOperationQueue = OperationQueueTest()
-testOperationQueue.test()
+//testOperationQueue.test()
 //testOperationQueue.testRunManyQueue()
-//testOperationQueue.testPriorityOfOperation()
+testOperationQueue.testPriorityOfOperation()
