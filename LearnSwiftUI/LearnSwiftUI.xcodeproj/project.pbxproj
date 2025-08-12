@@ -58,6 +58,7 @@
 		DA5D71A02E40CC8300C78E40 /* AsyncAwaitBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D719F2E40CC8300C78E40 /* AsyncAwaitBootcamp.swift */; };
 		DA5D71A22E41EEDA00C78E40 /* ChangePasswordSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71A12E41EEDA00C78E40 /* ChangePasswordSuccess.swift */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
+		DA6E0D6F2E4B9CAD009B3778 /* DownloadManagerBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E0D6E2E4B9CAD009B3778 /* DownloadManagerBootcamp.swift */; };
 		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
 		DA8991382E47671F00C2BD27 /* HButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991372E47671F00C2BD27 /* HButton.swift */; };
 		DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D32E3A65110051F62F /* SharedModel.swift */; };
@@ -142,6 +143,7 @@
 		DA65B7342E37D34600BF8A59 /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 		DA6E0BBB2E4A32D0009B3778 /* OperationQueueTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OperationQueueTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA6E0BBC2E4A4BA5009B3778 /* RaceConditionAvoid.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RaceConditionAvoid.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DA6E0D6E2E4B9CAD009B3778 /* DownloadManagerBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManagerBootcamp.swift; sourceTree = "<group>"; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DA8991372E47671F00C2BD27 /* HButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HButton.swift; sourceTree = "<group>"; };
 		DA89A7CF2E48DF73007BF882 /* Closure.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Closure.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -224,6 +226,7 @@
 				DA415E6B2DE5BFBD009F515E /* Resource */,
 				DA415E722DE5C307009F515E /* Extension */,
 				DAA3B8D22E3A64FC0051F62F /* Models */,
+				DA6E0D6D2E4B9C8A009B3778 /* DownloadManager */,
 				DA5D717C2E3FA56900C78E40 /* Networking */,
 				DA65B7322E37D31200BF8A59 /* AppDemo */,
 				DAAE8CBB2E45024800FCBA4E /* Architecture */,
@@ -423,6 +426,14 @@
 			path = TodoApp;
 			sourceTree = "<group>";
 		};
+		DA6E0D6D2E4B9C8A009B3778 /* DownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+				DA6E0D6E2E4B9CAD009B3778 /* DownloadManagerBootcamp.swift */,
+			);
+			path = DownloadManager;
+			sourceTree = "<group>";
+		};
 		DA8991362E47670600C2BD27 /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -601,6 +612,7 @@
 				DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */,
 				DA5D71A02E40CC8300C78E40 /* AsyncAwaitBootcamp.swift in Sources */,
 				DA5D71432E3E4BF700C78E40 /* BackButton.swift in Sources */,
+				DA6E0D6F2E4B9CAD009B3778 /* DownloadManagerBootcamp.swift in Sources */,
 				DA5D71892E3FB05100C78E40 /* UserRowView.swift in Sources */,
 				DA5D713A2E3E000D00C78E40 /* Security.swift in Sources */,
 				DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */,
