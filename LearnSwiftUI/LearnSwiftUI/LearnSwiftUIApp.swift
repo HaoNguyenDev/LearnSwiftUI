@@ -34,12 +34,11 @@ struct LearnSwiftUIApp: App {
 //                .environment(\.colorScheme, .dark)
 //                .environment(sharedModel)
 //            NavigationStackBootcamp()
-            NavigationStackCustomItemView()
+//            NavigationStackCustomItemView()
 //            NavigationManagerBootcamp()
 //            AppCoordinator().environment(UserSettings.shared)
 //            EnvironmentSettingView().environment(EnvironmentSettings())
-//            GithubUserListView()
-//                .environmentObject(GithubUserListVM())
+            GithubUserListView()
 //            AsyncAwaitBootcampView()
         }
     }

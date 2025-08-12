@@ -9,20 +9,15 @@ import Foundation
 import SwiftUI
 
 struct GithubUserListView: View {
-    @StateObject private var viewModel = GithubUserListVM()
+    @State private var viewModel = GithubUserListVM()
     @State private var showErrorAlert: Bool = false
     
     var body: some View {
         NavigationStack {
-            ScrollView {
-                LazyVStack {
-                    ForEach(viewModel.users) { user in
-                        UserRowView(user: user)
-                            .padding()
-                            .onAppear {
-                                processLoadMore(currentUser: user)
-                            }
-                    }
+            VStack {
+                userList()
+                if viewModel.isLoading {
+                    loadingView
                 }
             }
             .navigationBarTitle("GitHub Users \(viewModel.users.count)")
@@ -30,11 +25,16 @@ struct GithubUserListView: View {
         .task {
             await viewModel.fetchUsers()
         }
-        .onReceive(viewModel.$error) { error in
+//        .onReceive(viewModel.$error) { error in
+//            if error != nil {
+//                showErrorAlert = true
+//            }
+//        }
+        .onChange(of: viewModel.error as? NetworkError, { _, error in
             if error != nil {
                 showErrorAlert = true
             }
-        }
+        })
         .modifier(AlertHandler(showAlert: $showErrorAlert, error: viewModel.error, onDismiss: {
             showErrorAlert = false
         }))
@@ -45,8 +45,30 @@ struct GithubUserListView: View {
             await viewModel.loadMoreUser(currentUser: user)
         }
     }
+    
+    @ViewBuilder
+    private func userList() -> some View {
+        ScrollView {
+            LazyVStack {
+                ForEach(viewModel.users) { user in
+                    UserRowView(user: user)
+                        .padding()
+                        .onAppear {
+                            processLoadMore(currentUser: user)
+                        }
+                }
+            }
+        }
+    }
+    
+    private var loadingView: some View {
+        ProgressView()
+            .frame(maxWidth: .infinity)
+            .padding()
+    }
 }
 
 #Preview {
     GithubUserListView()
 }
+
