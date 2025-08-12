@@ -22,10 +22,10 @@ protocol GithubUserListVMProtocol {
     func updatePagination(from users: [GithubUser])
 }
 
-class GithubUserListVM: ObservableObject, GithubUserListVMProtocol {
-    @Published private(set) var users: [GithubUser] = []
-    @Published private(set) var isLoading: Bool = false
-    @Published private(set) var error: Error?
+@Observable class GithubUserListVM: GithubUserListVMProtocol {
+    private(set) var users: [GithubUser] = []
+    private(set) var isLoading: Bool = false
+    private(set) var error: Error?
     private let networkService: GitHubServiceProtocol
     private var paginationConfig: PaginationConfig
     
