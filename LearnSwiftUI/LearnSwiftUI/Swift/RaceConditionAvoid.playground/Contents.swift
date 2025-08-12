@@ -91,3 +91,73 @@ let demoNSLock = DemoNSLock()
 demoNSLock.run()
 
 
+class RaceConditionAvoidDemo {
+    @MainActor static let shared = RaceConditionAvoidDemo()
+    var counter: Int = 0
+    let serialQueue = DispatchQueue(label: "com.example.serialQueue")
+    let nsLock = NSLock()
+    let dispatchSmaphore = DispatchSemaphore(value: 1)
+    
+    func incrementSerialQueue() {
+        serialQueue.sync {
+            counter += 1
+        }
+    }
+    
+    func decrementSerialQueue() {
+        serialQueue.sync {
+            counter -= 1
+        }
+    }
+    
+    func incrementNSLock() {
+        nsLock.lock()
+        defer {
+            nsLock.unlock()
+        }
+        counter += 1
+    }
+    
+    func decrementNSLock() {
+        nsLock.lock()
+        defer {
+            nsLock.unlock()
+        }
+        counter -= 1
+    }
+    
+    func incrementDispatchSemaphore() {
+        dispatchSmaphore.wait()
+        defer {
+            dispatchSmaphore.signal()
+        }
+        counter += 1
+    }
+    
+    func decrementDispatchSemaphore() {
+        dispatchSmaphore.wait()
+        defer {
+            dispatchSmaphore.signal()
+        }
+        counter -= 1
+    }
+}
+
+actor ActorCounter {
+    private var value: Int = 0
+    
+    func increment() {
+        value += 1
+    }
+    
+    func decrement() {
+        value -= 1
+    }
+    
+    func getValue() -> Int {
+        value
+    }
+}
+
+let counter = Counter()
+counter.increment()
