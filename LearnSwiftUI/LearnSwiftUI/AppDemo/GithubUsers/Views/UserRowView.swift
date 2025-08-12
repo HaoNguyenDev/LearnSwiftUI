@@ -41,28 +41,28 @@ extension UserRowView {
                     .fontWeight(.bold)
             }
             
-            AsyncImage(url: URL(string: user.avatarUrl ?? "")) { phase in
-                switch phase {
-                case .success(let image):
-                    image
-                        .resizable()
-                        .scaledToFit()
-                case .failure, .empty:
-                    Image(systemName: "man-user-circle-icon")
-                        .resizable()
-                        .scaledToFit()
-                @unknown default:
-                    Image(systemName: "man-user-circle-icon")
-                        .resizable()
-                        .scaledToFit()
-                }
-            }
-            .cornerRadius(10)
+//            AsyncImage(url: URL(string: user.avatarUrl ?? "")) { phase in
+//                switch phase {
+//                case .success(let image):
+//                    image
+//                        .resizable()
+//                        .scaledToFit()
+//                case .failure, .empty:
+//                    Image(systemName: "man-user-circle-icon")
+//                        .resizable()
+//                        .scaledToFit()
+//                @unknown default:
+//                    Image(systemName: "man-user-circle-icon")
+//                        .resizable()
+//                        .scaledToFit()
+//                }
+//            }
+//            .cornerRadius(10)
             
-//            WebImage(url: URL(string: user.avatarUrl ?? ""))
-//                .resizable()
-//                .scaledToFit()
-//                .cornerRadius(10)
+            WebImage(url: URL(string: user.avatarUrl ?? ""))
+                .resizable()
+                .scaledToFit()
+                .cornerRadius(10)
         }
         .frame(maxWidth: 100, maxHeight: 100)
         .background(Color.gray.opacity(0.1))
