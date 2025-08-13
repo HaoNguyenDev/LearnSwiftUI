@@ -144,6 +144,7 @@
 		DA6E0BBB2E4A32D0009B3778 /* OperationQueueTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OperationQueueTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA6E0BBC2E4A4BA5009B3778 /* RaceConditionAvoid.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RaceConditionAvoid.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA6E0D6E2E4B9CAD009B3778 /* DownloadManagerBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManagerBootcamp.swift; sourceTree = "<group>"; };
+		DA6E0D702E4CEE68009B3778 /* StackQueueAndHeap.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StackQueueAndHeap.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DA8991372E47671F00C2BD27 /* HButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HButton.swift; sourceTree = "<group>"; };
 		DA89A7CF2E48DF73007BF882 /* Closure.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Closure.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -446,6 +447,7 @@
 		DA8991392E48C7A000C2BD27 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				DA6E0D702E4CEE68009B3778 /* StackQueueAndHeap.playground */,
 				DA89A7CF2E48DF73007BF882 /* Closure.playground */,
 				DA89A7D12E48FEAE007BF882 /* RefreshTokenExample.playground */,
 				DA89A7D22E490391007BF882 /* GCDTest.playground */,
