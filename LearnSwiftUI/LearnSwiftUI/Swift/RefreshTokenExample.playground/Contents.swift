@@ -114,7 +114,7 @@ class APIClient {
             self.refreshToken = newRefreshToken
             self.keychain.save(newRefreshToken, forKey: "refresh_token")
             
-            print("✅ Receive new access token: \(newAccessToken)")
+            print("✅ Receive new access token: \(newAccessToken) and refresh token: \(newRefreshToken)")
             completion(.success(()))
         } else {
             completion(.failure(NSError(domain: "Refresh token failed", code: 401, userInfo: [NSLocalizedDescriptionKey: "Refresh token failed"])))
@@ -147,3 +147,21 @@ for url in urls {
         }
     }
 }
+
+/*
+ This class is designed to handle API calls, specifically automatically handling authentication errors (401 Unauthorized) by refreshing the access token.
+ How it works
+ Token storage: APIClient uses a KeychainSimulator class to securely store the access token and refresh token.
+ API calls: When the callAPI method is called, it retrieves the access token from the Keychain. It simulates the API call and, if a 401 error is encountered, triggers the token refresh mechanism.
+ 401 error handling:
+ Checking the refresh status: It uses an isRefreshing flag to ensure that only one token refresh request is sent at a time.
+ Request queue: All API requests with 401 errors are added to a waitingRequests array.
+ Start refresh: If isRefreshing is false, it sets this flag to true and starts calling the API to refresh the token.
+ Refresh Token:
+ The refreshAccessToken method simulates calling a token refresh API using the refresh token.
+ It pauses for 1 second to simulate network latency.
+ After a successful refresh, it saves the access token and the new refresh token to the Keychain.
+ Post-refresh processing:
+ If the refresh is successful, it iterates through the waitingRequests array and calls all the paused API requests with the new access token.
+ If the refresh fails, it returns an error for all requests in the queue.
+ */
