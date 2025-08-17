@@ -21,6 +21,7 @@ struct SateBootcamp: View {
     @State private var isToggled = false
     @State private var selectedColor: Color = .blue
     @State private var everyoneName = [User(name: "Hao"), User(name: "Loan")]
+    @FocusState private var enterNameFocused: Bool
     
     var body: some View {
         
@@ -51,13 +52,17 @@ struct SateBootcamp: View {
             
             //Text State
             TextField("Please enter a name", text: $newName)
+                .focused($enterNameFocused)
                 .padding()
                 .background(RoundedRectangle(cornerRadius: 10).fill(Color.gray.opacity(0.2)))
             Text(newName == "" ? "..." : "Hello 👋 \(newName)")
             
             // Array State
             Button {
+                if newName == "" { return }
                 everyoneName.append(User(name: newName))
+                enterNameFocused = false
+                newName = ""
             } label: {
                 Text("Add")
                     .foregroundStyle(.white)
