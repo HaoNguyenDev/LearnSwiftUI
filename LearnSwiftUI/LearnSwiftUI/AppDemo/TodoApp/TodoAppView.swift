@@ -18,8 +18,9 @@ struct TodoAppView: View {
                 TodoListView()
             }
             .tabItem {
-                Image(systemName: "list.bullet")
-                Text("Todo")
+//                Image(systemName: "list.bullet")
+//                Text("Todo")
+                Label("Todo", systemImage: "list.bullet")
             }
             
             // Tab 2: Statistics
@@ -27,8 +28,9 @@ struct TodoAppView: View {
                 Text("Statistics")
             }
             .tabItem {
-                Image(systemName: "chart.bar")
-                Text("Statistics")
+//                Image(systemName: "chart.bar")
+//                Text("Statistics")
+                Label("Statistics", systemImage: "chart.bar")
             }
         }
         .environmentObject(todoStore)
