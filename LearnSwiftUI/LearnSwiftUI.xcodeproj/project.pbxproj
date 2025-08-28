@@ -23,6 +23,7 @@
 		DA415E952DE5E707009F515E /* ImagesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E942DE5E707009F515E /* ImagesBootcamp.swift */; };
 		DA5164302E3BCD2500642709 /* NavigationStackBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */; };
 		DA5164322E3CB57600642709 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5164312E3CB57600642709 /* NavigationManager.swift */; };
+		DA53B73A2E6086DE001EFC52 /* ListBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53B7392E6086DE001EFC52 /* ListBootcamp.swift */; };
 		DA5C98B62E391F4B007AC9E9 /* TodoAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B52E391F4B007AC9E9 /* TodoAppView.swift */; };
 		DA5C98B82E391F91007AC9E9 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B72E391F91007AC9E9 /* TodoListView.swift */; };
 		DA5C98BA2E39237C007AC9E9 /* TodoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B92E39237C007AC9E9 /* TodoRowView.swift */; };
@@ -109,6 +110,7 @@
 		DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackBootcamp.swift; sourceTree = "<group>"; };
 		DA5164312E3CB57600642709 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		DA53B7372E5F4EE6001EFC52 /* WeakAndUnowned.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = WeakAndUnowned.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DA53B7392E6086DE001EFC52 /* ListBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBootcamp.swift; sourceTree = "<group>"; };
 		DA5C98B52E391F4B007AC9E9 /* TodoAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppView.swift; sourceTree = "<group>"; };
 		DA5C98B72E391F91007AC9E9 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		DA5C98B92E39237C007AC9E9 /* TodoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRowView.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				DA5D719F2E40CC8300C78E40 /* AsyncAwaitBootcamp.swift */,
 				DAAE8CB72E43B46800FCBA4E /* GestureBootcamp.swift */,
 				DAAE8CB92E44BDFF00FCBA4E /* FormView.swift */,
+				DA53B7392E6086DE001EFC52 /* ListBootcamp.swift */,
 			);
 			path = Bootcamp;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				DA5D71302E3D205400C78E40 /* MainTab.swift in Sources */,
 				DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */,
 				DA5164302E3BCD2500642709 /* NavigationStackBootcamp.swift in Sources */,
+				DA53B73A2E6086DE001EFC52 /* ListBootcamp.swift in Sources */,
 				DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */,
 				DA5D71A02E40CC8300C78E40 /* AsyncAwaitBootcamp.swift in Sources */,
 				DA5D71432E3E4BF700C78E40 /* BackButton.swift in Sources */,

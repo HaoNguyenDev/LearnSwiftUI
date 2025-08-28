@@ -26,9 +26,9 @@ struct LearnSwiftUIApp: App {
 //            SateBootcamp()
 //            StateObjectBootcamp()
             
-            TodoAppView()
-                .environment(sharedModel)
-                .environmentObject(todoStore)
+//            TodoAppView()
+//                .environment(sharedModel)
+//                .environmentObject(todoStore)
             
 //            EnvironmentBootcamp()
 //                .environment(\.colorScheme, .dark)
@@ -41,6 +41,8 @@ struct LearnSwiftUIApp: App {
 //            GithubUserListView()
 //            AsyncAwaitBootcampView()
 //            FocusStateBootcamp()
+            
+            ListBootcamp()
         }
     }
 }
