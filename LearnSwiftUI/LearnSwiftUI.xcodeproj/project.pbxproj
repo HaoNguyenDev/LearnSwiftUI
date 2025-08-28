@@ -108,6 +108,7 @@
 		DA415E942DE5E707009F515E /* ImagesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesBootcamp.swift; sourceTree = "<group>"; };
 		DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackBootcamp.swift; sourceTree = "<group>"; };
 		DA5164312E3CB57600642709 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		DA53B7372E5F4EE6001EFC52 /* WeakAndUnowned.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = WeakAndUnowned.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA5C98B52E391F4B007AC9E9 /* TodoAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppView.swift; sourceTree = "<group>"; };
 		DA5C98B72E391F91007AC9E9 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		DA5C98B92E39237C007AC9E9 /* TodoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRowView.swift; sourceTree = "<group>"; };
@@ -456,6 +457,7 @@
 				DA89A7D22E490391007BF882 /* GCDTest.playground */,
 				DA6E0BBB2E4A32D0009B3778 /* OperationQueueTest.playground */,
 				DA6E0BBC2E4A4BA5009B3778 /* RaceConditionAvoid.playground */,
+				DA53B7372E5F4EE6001EFC52 /* WeakAndUnowned.playground */,
 			);
 			path = Swift;
 			sourceTree = "<group>";

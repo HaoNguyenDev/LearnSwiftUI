@@ -31,7 +31,7 @@ struct TodoListView: View {
                         Text("Add")
                     }.buttonStyle(.borderedProminent)
                     .disabled(newTodoTitle.isEmpty)
-
+                    
                 }
             }
             
@@ -81,4 +81,9 @@ struct TodoListView: View {
             todoStore.deleteTodo(todoToDelete)
         }
     }
+}
+
+#Preview {
+    TodoListView()
+        .environmentObject(TodoStore())
 }
