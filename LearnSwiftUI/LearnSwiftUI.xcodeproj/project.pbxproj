@@ -189,6 +189,7 @@
 		DAED677D2E20E45C00309382 /* StateObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAED677F2E21089A00309382 /* ObservedObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAEEFB752E366D2F00E78DA2 /* ObservableObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObjectBootcamp.swift; sourceTree = "<group>"; };
+		DAFCDF682E62052500B97C00 /* SOLID.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SOLID.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -476,6 +477,7 @@
 				DAAA67292E61E55F004075B7 /* DelegatePattern.playground */,
 				DA2745842E61E8D0000B436D /* SingletonPattern.playground */,
 				DA2745852E61FB2C000B436D /* Final.playground */,
+				DAFCDF682E62052500B97C00 /* SOLID.playground */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
