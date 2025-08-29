@@ -42,7 +42,8 @@ struct LearnSwiftUIApp: App {
 //            AsyncAwaitBootcampView()
 //            FocusStateBootcamp()
 //            ListBootcamp()
-            TextFieldBootcamp()
+//            TextFieldBootcamp()
+            PickerBootcamp()
         }
     }
 }
