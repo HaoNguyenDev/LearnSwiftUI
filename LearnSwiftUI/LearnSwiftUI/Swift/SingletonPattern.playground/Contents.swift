@@ -3,17 +3,13 @@ import Foundation
 // Sinleton pattern
 /*
  Advantages:
- Single instance control: Ensures there is only one instance, useful for shared resources such as networking, configuration, or caching.
- Global access point: Easy access from anywhere in the application without passing the instance through multiple classes.
- Thread-safe in Swift: Static variables are safely initialized in Swift, eliminating the need for additional manual locking mechanisms for instance initialization.
- Resource saving: Avoid creating multiple instances for the same purpose.
+ Easy to access, centralized resource management and data consistency.
  
  Disadvantages:
- Difficult to test: Since Singleton is global state, it can be difficult to write unit tests, especially when mocking or resetting the state.
- Hidden dependencies: Classes using Singleton can become dependent on it without being aware of it, reducing code transparency.
- Singleton abuse: Can be easily abused to store global state, leading to code that is difficult to maintain (similar to using global variables).
- Difficult to extend: If you need to change the logic or add new instances, Singleton can be difficult because of its rigid design.
+ Memory consuming (not freed), difficult to test (due to global state),
+ difficult to scale and potential race condition risk when accessing from multiple threads.
  */
+
 final class SingletonPattern {
     nonisolated(unsafe) static let shared = SingletonPattern()
     private init() {}
