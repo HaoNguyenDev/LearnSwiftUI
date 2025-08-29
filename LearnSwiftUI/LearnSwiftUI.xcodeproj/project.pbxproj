@@ -67,6 +67,8 @@
 		DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */; };
 		DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */; };
 		DAA930402E33C99C000FE238 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9303F2E33C995000FE238 /* ButtonModifier.swift */; };
+		DAAA67222E616D8C004075B7 /* TextFieldBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAA67212E616D8C004075B7 /* TextFieldBootcamp.swift */; };
+		DAAA67242E617101004075B7 /* ViewAndAdditional.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAA67232E617101004075B7 /* ViewAndAdditional.swift */; };
 		DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE8CB72E43B46800FCBA4E /* GestureBootcamp.swift */; };
 		DAAE8CBA2E44BDFF00FCBA4E /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE8CB92E44BDFF00FCBA4E /* FormView.swift */; };
 		DAAE8CBD2E45028300FCBA4E /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE8CBC2E45028300FCBA4E /* CounterState.swift */; };
@@ -159,6 +161,8 @@
 		DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentBootcamp.swift; sourceTree = "<group>"; };
 		DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableBootcamp.swift; sourceTree = "<group>"; };
 		DAA9303F2E33C995000FE238 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
+		DAAA67212E616D8C004075B7 /* TextFieldBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBootcamp.swift; sourceTree = "<group>"; };
+		DAAA67232E617101004075B7 /* ViewAndAdditional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAndAdditional.swift; sourceTree = "<group>"; };
 		DAAE8CB72E43B46800FCBA4E /* GestureBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureBootcamp.swift; sourceTree = "<group>"; };
 		DAAE8CB92E44BDFF00FCBA4E /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		DAAE8CBC2E45028300FCBA4E /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
@@ -280,6 +284,7 @@
 				DAAE8CB72E43B46800FCBA4E /* GestureBootcamp.swift */,
 				DAAE8CB92E44BDFF00FCBA4E /* FormView.swift */,
 				DA53B7392E6086DE001EFC52 /* ListBootcamp.swift */,
+				DAAA67212E616D8C004075B7 /* TextFieldBootcamp.swift */,
 			);
 			path = Bootcamp;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 				DAA9303F2E33C995000FE238 /* ButtonModifier.swift */,
 				DA415E732DE5C31F009F515E /* Font.swift */,
 				DA415E8E2DE5DCC0009F515E /* Color.swift */,
+				DAAA67232E617101004075B7 /* ViewAndAdditional.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -578,6 +584,7 @@
 				DAEBAE4A2DF28E1E00082B1C /* SubviewBootcamp.swift in Sources */,
 				DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */,
 				DA5D712A2E3D19A000C78E40 /* Logger.swift in Sources */,
+				DAAA67242E617101004075B7 /* ViewAndAdditional.swift in Sources */,
 				DA5D71822E3FA59900C78E40 /* NetworkError.swift in Sources */,
 				DAEBAE422DECB55B00082B1C /* ScrollViewBootcamp.swift in Sources */,
 				DA5D71862E3FA5B400C78E40 /* NetworkManager.swift in Sources */,
@@ -629,6 +636,7 @@
 				DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */,
 				DA5C98BC2E3924AA007AC9E9 /* TodoDetailView.swift in Sources */,
 				DAED67802E21089A00309382 /* ObservedObjectBootcamp.swift in Sources */,
+				DAAA67222E616D8C004075B7 /* TextFieldBootcamp.swift in Sources */,
 				DA5C98B82E391F91007AC9E9 /* TodoListView.swift in Sources */,
 				DA5D71A22E41EEDA00C78E40 /* ChangePasswordSuccess.swift in Sources */,
 				DAEBAE3C2DEB07A500082B1C /* SpacerBootcamp.swift in Sources */,
