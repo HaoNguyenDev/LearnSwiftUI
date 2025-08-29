@@ -165,6 +165,7 @@
 		DAAA67212E616D8C004075B7 /* TextFieldBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBootcamp.swift; sourceTree = "<group>"; };
 		DAAA67232E617101004075B7 /* ViewAndAdditional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAndAdditional.swift; sourceTree = "<group>"; };
 		DAAA67252E6173FD004075B7 /* PickerBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerBootcamp.swift; sourceTree = "<group>"; };
+		DAAA67292E61E55F004075B7 /* DelegatePattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DelegatePattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAAE8CB72E43B46800FCBA4E /* GestureBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureBootcamp.swift; sourceTree = "<group>"; };
 		DAAE8CB92E44BDFF00FCBA4E /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		DAAE8CBC2E45028300FCBA4E /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
@@ -470,6 +471,7 @@
 				DA6E0BBB2E4A32D0009B3778 /* OperationQueueTest.playground */,
 				DA6E0BBC2E4A4BA5009B3778 /* RaceConditionAvoid.playground */,
 				DA53B7372E5F4EE6001EFC52 /* WeakAndUnowned.playground */,
+				DAAA67292E61E55F004075B7 /* DelegatePattern.playground */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
