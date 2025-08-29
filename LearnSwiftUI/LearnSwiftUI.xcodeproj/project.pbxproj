@@ -69,6 +69,7 @@
 		DAA930402E33C99C000FE238 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9303F2E33C995000FE238 /* ButtonModifier.swift */; };
 		DAAA67222E616D8C004075B7 /* TextFieldBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAA67212E616D8C004075B7 /* TextFieldBootcamp.swift */; };
 		DAAA67242E617101004075B7 /* ViewAndAdditional.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAA67232E617101004075B7 /* ViewAndAdditional.swift */; };
+		DAAA67262E6173FD004075B7 /* PickerBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAA67252E6173FD004075B7 /* PickerBootcamp.swift */; };
 		DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE8CB72E43B46800FCBA4E /* GestureBootcamp.swift */; };
 		DAAE8CBA2E44BDFF00FCBA4E /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE8CB92E44BDFF00FCBA4E /* FormView.swift */; };
 		DAAE8CBD2E45028300FCBA4E /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE8CBC2E45028300FCBA4E /* CounterState.swift */; };
@@ -163,6 +164,7 @@
 		DAA9303F2E33C995000FE238 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		DAAA67212E616D8C004075B7 /* TextFieldBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBootcamp.swift; sourceTree = "<group>"; };
 		DAAA67232E617101004075B7 /* ViewAndAdditional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAndAdditional.swift; sourceTree = "<group>"; };
+		DAAA67252E6173FD004075B7 /* PickerBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerBootcamp.swift; sourceTree = "<group>"; };
 		DAAE8CB72E43B46800FCBA4E /* GestureBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureBootcamp.swift; sourceTree = "<group>"; };
 		DAAE8CB92E44BDFF00FCBA4E /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		DAAE8CBC2E45028300FCBA4E /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				DAAE8CB92E44BDFF00FCBA4E /* FormView.swift */,
 				DA53B7392E6086DE001EFC52 /* ListBootcamp.swift */,
 				DAAA67212E616D8C004075B7 /* TextFieldBootcamp.swift */,
+				DAAA67252E6173FD004075B7 /* PickerBootcamp.swift */,
 			);
 			path = Bootcamp;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				DA8991382E47671F00C2BD27 /* HButton.swift in Sources */,
 				DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */,
 				DA5D71272E3D18E300C78E40 /* UserSettings.swift in Sources */,
+				DAAA67262E6173FD004075B7 /* PickerBootcamp.swift in Sources */,
 				DAEBAE4F2DF2909E00082B1C /* Closure.swift in Sources */,
 				DA5D71362E3DE82A00C78E40 /* Account.swift in Sources */,
 				DA5D71902E3FBA7400C78E40 /* UserDetail.swift in Sources */,
