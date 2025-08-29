@@ -97,6 +97,7 @@
 		DA0C4B5C2E52218A00D64C7C /* FocusStateBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusStateBootcamp.swift; sourceTree = "<group>"; };
 		DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewBootcamp.swift; sourceTree = "<group>"; };
 		DA2745842E61E8D0000B436D /* SingletonPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SingletonPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DA2745852E61FB2C000B436D /* Final.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Final.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA415E4F2DE5BF26009F515E /* LearnSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA415E602DE5BFAB009F515E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA415E622DE5BFAB009F515E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -474,6 +475,7 @@
 				DA53B7372E5F4EE6001EFC52 /* WeakAndUnowned.playground */,
 				DAAA67292E61E55F004075B7 /* DelegatePattern.playground */,
 				DA2745842E61E8D0000B436D /* SingletonPattern.playground */,
+				DA2745852E61FB2C000B436D /* Final.playground */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
