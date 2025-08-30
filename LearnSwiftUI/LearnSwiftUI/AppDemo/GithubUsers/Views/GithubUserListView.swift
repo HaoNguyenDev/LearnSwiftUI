@@ -10,10 +10,9 @@ import SwiftUI
 
 struct GithubUserListView: View {
     @State private var viewModel = GithubUserListVM()
-    @State private var showErrorAlert: Bool = false
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             VStack {
                 userList()
                 if viewModel.isLoading {
@@ -22,22 +21,17 @@ struct GithubUserListView: View {
             }
             .navigationBarTitle("GitHub Users \(viewModel.users.count)")
         }
-        .task {
-            await viewModel.fetchUsers()
-        }
-//        .onReceive(viewModel.$error) { error in
-//            if error != nil {
-//                showErrorAlert = true
-//            }
-//        }
-        .onChange(of: viewModel.error as? NetworkError, { _, error in
-            if error != nil {
-                showErrorAlert = true
+        .task { await viewModel.fetchUsers() }
+        .refreshable { await viewModel.fetchUsers() }
+        .overlay(alignment: .bottom) {
+            if let error = viewModel.error {
+                ErrorBanner(error: error) {
+                    Task { await viewModel.fetchUsers() }
+                }
+                .transition(.move(edge: .bottom).combined(with: .opacity))
+                .padding()
             }
-        })
-        .modifier(AlertHandler(showAlert: $showErrorAlert, error: viewModel.error, onDismiss: {
-            showErrorAlert = false
-        }))
+        }
     }
     
     private func processLoadMore(currentUser user: GithubUser) {
@@ -59,6 +53,7 @@ struct GithubUserListView: View {
                 }
             }
         }
+        .animation(.default, value: viewModel.users)
     }
     
     private var loadingView: some View {

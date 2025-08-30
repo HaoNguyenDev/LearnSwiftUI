@@ -91,6 +91,7 @@
 		DAED677E2E20E45C00309382 /* StateObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED677D2E20E45C00309382 /* StateObjectBootcamp.swift */; };
 		DAED67802E21089A00309382 /* ObservedObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED677F2E21089A00309382 /* ObservedObjectBootcamp.swift */; };
 		DAEEFB762E366D4000E78DA2 /* ObservableObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEEFB752E366D2F00E78DA2 /* ObservableObjectBootcamp.swift */; };
+		DAFCDF6A2E630B2C00B97C00 /* ErrorBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCDF692E630B2C00B97C00 /* ErrorBanner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -190,6 +191,7 @@
 		DAED677F2E21089A00309382 /* ObservedObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAEEFB752E366D2F00E78DA2 /* ObservableObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAFCDF682E62052500B97C00 /* SOLID.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SOLID.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DAFCDF692E630B2C00B97C00 /* ErrorBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -413,6 +415,7 @@
 			children = (
 				DA5D71882E3FB05100C78E40 /* UserRowView.swift */,
 				DA5D718A2E3FB25700C78E40 /* GithubUserListView.swift */,
+				DAFCDF692E630B2C00B97C00 /* ErrorBanner.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -645,6 +648,7 @@
 				DA6E0D6F2E4B9CAD009B3778 /* DownloadManagerBootcamp.swift in Sources */,
 				DA5D71892E3FB05100C78E40 /* UserRowView.swift in Sources */,
 				DA5D713A2E3E000D00C78E40 /* Security.swift in Sources */,
+				DAFCDF6A2E630B2C00B97C00 /* ErrorBanner.swift in Sources */,
 				DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */,
 				DA5C98BC2E3924AA007AC9E9 /* TodoDetailView.swift in Sources */,
 				DAED67802E21089A00309382 /* ObservedObjectBootcamp.swift in Sources */,
