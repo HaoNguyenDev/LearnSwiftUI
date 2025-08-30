@@ -42,8 +42,8 @@ extension GithubUserListVM {
             do {
                 var newUsers: [GithubUser] = []
                 newUsers = try await networkService.fetchUsers(perPage: paginationConfig.perPage,
-                                                               since: paginationConfig.since)
-                updateUsers(newUsers)
+                                                               since: 0)
+                await updateUsers(newUsers)
                 updatePagination(from: newUsers)
             } catch {
                 await MainActor.run {
@@ -64,7 +64,7 @@ extension GithubUserListVM {
             do {
                 let newUsers = try await networkService.fetchUsers(perPage: paginationConfig.perPage,
                                                                    since: paginationConfig.since)
-                appendUsers(newUsers)
+                await appendUsers(newUsers)
                 updatePagination(from: newUsers)
             } catch {
                 await MainActor.run {
@@ -96,14 +96,14 @@ extension GithubUserListVM {
         }
     }
     
-    private func updateUsers(_ newUsers: [GithubUser]) {
-        DispatchQueue.main.async { [weak self] in
+    private func updateUsers(_ newUsers: [GithubUser]) async {
+        await MainActor.run { [weak self] in
             self?.users = newUsers
         }
     }
     
-    private func appendUsers(_ newUsers: [GithubUser]) {
-        DispatchQueue.main.async { [weak self] in
+    private func appendUsers(_ newUsers: [GithubUser]) async {
+        await MainActor.run { [weak self] in
             self?.users.append(contentsOf: newUsers)
         }
     }

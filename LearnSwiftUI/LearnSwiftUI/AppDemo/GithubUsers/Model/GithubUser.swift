@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GithubUser: Decodable, Identifiable {
+struct GithubUser: Decodable, Identifiable, Equatable {
     var id: Int?
     var login: String?
     var avatarUrl: String?

@@ -65,7 +65,6 @@ extension UserRowView {
 //                .cornerRadius(10)
         }
         .frame(maxWidth: 100, maxHeight: 100)
-        .background(Color.gray.opacity(0.1))
         
         .padding([.leading, .top, .bottom], 10)
     }
