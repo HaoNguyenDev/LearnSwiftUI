@@ -92,6 +92,8 @@
 		DAED67802E21089A00309382 /* ObservedObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED677F2E21089A00309382 /* ObservedObjectBootcamp.swift */; };
 		DAEEFB762E366D4000E78DA2 /* ObservableObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEEFB752E366D2F00E78DA2 /* ObservableObjectBootcamp.swift */; };
 		DAFCDF6A2E630B2C00B97C00 /* ErrorBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCDF692E630B2C00B97C00 /* ErrorBanner.swift */; };
+		DAFCDF6D2E63485000B97C00 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCDF6C2E63485000B97C00 /* AppTheme.swift */; };
+		DAFCDF6F2E63490F00B97C00 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCDF6E2E63490F00B97C00 /* ThemeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -192,6 +194,8 @@
 		DAEEFB752E366D2F00E78DA2 /* ObservableObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAFCDF682E62052500B97C00 /* SOLID.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SOLID.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAFCDF692E630B2C00B97C00 /* ErrorBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBanner.swift; sourceTree = "<group>"; };
+		DAFCDF6C2E63485000B97C00 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		DAFCDF6E2E63490F00B97C00 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +237,7 @@
 		DA415E652DE5BFAB009F515E /* LearnSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				DAFCDF6B2E63480B00B97C00 /* AppTheme */,
 				DA415E712DE5C00D009F515E /* Info.plist */,
 				DA415E612DE5BFAB009F515E /* Preview Content */,
 				DA415E622DE5BFAB009F515E /* Assets.xcassets */,
@@ -509,6 +514,15 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		DAFCDF6B2E63480B00B97C00 /* AppTheme */ = {
+			isa = PBXGroup;
+			children = (
+				DAFCDF6C2E63485000B97C00 /* AppTheme.swift */,
+				DAFCDF6E2E63490F00B97C00 /* ThemeManager.swift */,
+			);
+			path = AppTheme;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -600,6 +614,7 @@
 				DA5D712A2E3D19A000C78E40 /* Logger.swift in Sources */,
 				DAAA67242E617101004075B7 /* ViewAndAdditional.swift in Sources */,
 				DA5D71822E3FA59900C78E40 /* NetworkError.swift in Sources */,
+				DAFCDF6F2E63490F00B97C00 /* ThemeManager.swift in Sources */,
 				DAEBAE422DECB55B00082B1C /* ScrollViewBootcamp.swift in Sources */,
 				DA5D71862E3FA5B400C78E40 /* NetworkManager.swift in Sources */,
 				DA5D719B2E3FC03D00C78E40 /* AlertHandler.swift in Sources */,
@@ -636,6 +651,7 @@
 				DAED677E2E20E45C00309382 /* StateObjectBootcamp.swift in Sources */,
 				DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */,
 				DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */,
+				DAFCDF6D2E63485000B97C00 /* AppTheme.swift in Sources */,
 				DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */,
 				DAEBAE3A2DEAF92400082B1C /* StacksBootcamp.swift in Sources */,
 				DA5D71302E3D205400C78E40 /* MainTab.swift in Sources */,
