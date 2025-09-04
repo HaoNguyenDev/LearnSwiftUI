@@ -90,7 +90,7 @@ struct EnvironmentSubView: View {
 
 //---------------------//---------------------//---------------------//
 
-class AppTheme: ObservableObject {
+class AppThemeCustom: ObservableObject {
     @Published var isDarkMode = false
     @Published var primaryColor = Color.blue
     @Published var secondaryColor = Color.green
@@ -103,7 +103,7 @@ struct EnvironmentInfoView: View {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @Environment(\.verticalSizeClass) var verticalSizeClass
     @Environment(\.openURL) var openURL
-    @EnvironmentObject var appTheme: AppTheme
+    @EnvironmentObject var appTheme: AppThemeCustom
 
     @State private var showSheet = false
     
@@ -194,7 +194,7 @@ struct ModalView: View {
 
 #Preview(body: {
     EnvironmentInfoView()
-        .environmentObject(AppTheme())
+        .environmentObject(AppThemeCustom())
 })
 
 //---------------------//---------------------//---------------------//
