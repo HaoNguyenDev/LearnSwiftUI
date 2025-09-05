@@ -48,11 +48,19 @@ struct LearnSwiftUIApp: App {
 //                .environment(\.theme, themeVM.currentTheme)
 //                .environment(themeVM)
             
+//            NavigationStack {
+//              WeatherListView()
+//                .navigationTitle("Weather")
+//                .environment(WeatherServiceWrapper())
+//            }
+            
+            let vm = WeatherListMVVMViewModel(weatherService: WeatherServiceWrapper())
             NavigationStack {
-              WeatherListView()
-                .navigationTitle("Weather")
-                .environment(WeatherServiceWrapper())
+                WeatherListMVVMVView(vm: vm)
+                    .navigationTitle("Weather")
             }
+            .environment(WeatherServiceWrapper())
+
         }
     }
 }
