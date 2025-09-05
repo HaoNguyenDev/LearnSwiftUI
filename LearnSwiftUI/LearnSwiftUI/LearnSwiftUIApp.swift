@@ -47,6 +47,12 @@ struct LearnSwiftUIApp: App {
 //            ThemedTextView()
 //                .environment(\.theme, themeVM.currentTheme)
 //                .environment(themeVM)
+            
+            NavigationStack {
+              WeatherListView()
+                .navigationTitle("Weather")
+                .environment(WeatherServiceWrapper())
+            }
         }
     }
 }
