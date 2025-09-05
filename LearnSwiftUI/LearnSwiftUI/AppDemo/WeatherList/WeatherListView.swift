@@ -10,10 +10,6 @@ import SwiftUI
 import WeatherKit
 import CoreLocation
 
-class WeatherListViewModel {
-    
-}
-
 struct WeatherListView: View {
     @Environment(WeatherServiceWrapper.self) var weatherService
     @State private var viewState: WeatherRenderingView.ViewState = .loading
