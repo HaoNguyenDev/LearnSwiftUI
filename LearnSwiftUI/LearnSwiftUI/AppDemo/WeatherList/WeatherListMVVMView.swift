@@ -10,11 +10,17 @@ import SwiftUI
 import WeatherKit
 import CoreLocation
 
+enum WeatherListViewState {
+    case loading
+    case success([WeatherItem])
+    case failure(Error)
+}
+
 @Observable
 @MainActor
 class WeatherListMVVMViewModel {
     
-    var viewState = WeatherRenderingMVVMVView.ViewState.loading
+    var viewState = WeatherListViewState.loading
     let weatherService: WeatherServiceWrapper
     
     init (weatherService: WeatherServiceWrapper) {
@@ -43,13 +49,7 @@ struct WeatherListMVVMVView: View {
     }
 }
 struct WeatherRenderingMVVMVView: View {
-    var viewState: ViewState
-    
-    enum ViewState {
-        case loading
-        case success([WeatherItem])
-        case failure(Error)
-    }
+    var viewState: WeatherListViewState
     
     var body: some View {
         ZStack {
