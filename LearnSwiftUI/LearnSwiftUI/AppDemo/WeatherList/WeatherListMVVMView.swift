@@ -10,30 +10,39 @@ import SwiftUI
 import WeatherKit
 import CoreLocation
 
-class WeatherListViewModel {
+@Observable
+@MainActor
+class WeatherListMVVMViewModel {
+    
+    var viewState = WeatherRenderingMVVMVView.ViewState.loading
+    let weatherService: WeatherServiceWrapper
+    
+    init (weatherService: WeatherServiceWrapper) {
+        self.weatherService = weatherService
+    }
+    
+    func fetchWeather() async {
+        do {
+            let items = try await weatherService.mockWeatherList()
+            viewState = .success(items)
+        } catch {
+            viewState = .failure(error)
+        }
+    }
     
 }
 
-struct WeatherListView: View {
-    @Environment(WeatherServiceWrapper.self) var weatherService
-    @State private var viewState: WeatherRenderingView.ViewState = .loading
-    
+struct WeatherListMVVMVView: View {
+    @State var vm: WeatherListMVVMViewModel
+   
     var body: some View {
-        WeatherRenderingView(viewState: viewState)
+        WeatherRenderingMVVMVView(viewState: vm.viewState)
             .task {
-                do {
-                    let items = try await weatherService.mockWeatherList()
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-                        viewState = .success(items)
-                    })
-                } catch {
-                    viewState = .failure(error)
-                }
+                await vm.fetchWeather()
             }
     }
 }
-struct WeatherRenderingView: View {
-    
+struct WeatherRenderingMVVMVView: View {
     var viewState: ViewState
     
     enum ViewState {
@@ -59,8 +68,9 @@ struct WeatherRenderingView: View {
 }
 
 #Preview {
+    let vm = WeatherListMVVMViewModel(weatherService: WeatherServiceWrapper())
     NavigationStack {
-        WeatherListView()
+        WeatherListMVVMVView(vm: vm)
             .navigationTitle("Weather")
     }
     .environment(WeatherServiceWrapper())
