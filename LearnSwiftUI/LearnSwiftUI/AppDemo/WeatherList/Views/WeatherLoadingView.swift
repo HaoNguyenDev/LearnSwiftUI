@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct LoadingView: View {
+struct WeatherLoadingView: View {
   var body: some View {
     VStack(spacing: 20) {
       ProgressView()

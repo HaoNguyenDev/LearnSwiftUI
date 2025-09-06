@@ -5,12 +5,9 @@
 //  Created by Hao Nguyen on 5/9/25.
 //
 
-
 import SwiftUI
-import WeatherKit
-import CoreLocation
 
-enum WeatherListViewState {
+enum WeatherListState {
     case loading
     case success([WeatherItem])
     case failure(Error)
@@ -18,16 +15,16 @@ enum WeatherListViewState {
 
 @Observable
 @MainActor
-class WeatherListMVVMViewModel {
+class WeatherListViewModel {
+    var weatherService: WeatherServiceWrapper
+    var viewState: WeatherListState = .loading
     
-    var viewState = WeatherListViewState.loading
-    let weatherService: WeatherServiceWrapper
-    
-    init (weatherService: WeatherServiceWrapper) {
+    init(weatherService: WeatherServiceWrapper) {
         self.weatherService = weatherService
     }
     
     func fetchWeather() async {
+        viewState = .loading
         do {
             let items = try await weatherService.mockWeatherList()
             viewState = .success(items)
@@ -35,21 +32,25 @@ class WeatherListMVVMViewModel {
             viewState = .failure(error)
         }
     }
-    
 }
 
-struct WeatherListMVVMVView: View {
-    @State var vm: WeatherListMVVMViewModel
-   
+struct WeatherMainView: View {
+    @State private var vm: WeatherListViewModel
+    
+    init(vm: WeatherListViewModel) {
+        self._vm = State(initialValue: vm)
+    }
+    
     var body: some View {
-        WeatherRenderingMVVMVView(viewState: vm.viewState)
+        WeatherListRenderingView(viewState: vm.viewState)
             .task {
-                await vm.fetchWeather()
-            }
+            await vm.fetchWeather()
+        }
     }
 }
-struct WeatherRenderingMVVMVView: View {
-    var viewState: WeatherListViewState
+
+struct WeatherListRenderingView: View {
+    var viewState: WeatherListState
     
     var body: some View {
         ZStack {
@@ -57,21 +58,19 @@ struct WeatherRenderingMVVMVView: View {
             
             switch viewState {
             case .loading:
-                LoadingView()
+                WeatherLoadingView()
             case .success(let items):
-                WeatherListSuccessView(items: items)
+                WeatherListView(items: items)
             case .failure(let error):
-                ErrorView(message: error.localizedDescription)
+                WeatherErrorView(message: error.localizedDescription)
             }
         }
     }
 }
 
 #Preview {
-    let vm = WeatherListMVVMViewModel(weatherService: WeatherServiceWrapper())
     NavigationStack {
-        WeatherListMVVMVView(vm: vm)
+        WeatherMainView(vm: WeatherListViewModel(weatherService: WeatherServiceWrapper()))
             .navigationTitle("Weather")
     }
-    .environment(WeatherServiceWrapper())
 }
