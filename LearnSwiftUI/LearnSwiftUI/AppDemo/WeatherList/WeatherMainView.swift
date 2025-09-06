@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+enum WeatherError: Error {
+    case networkError(Error)
+    case decodingError(Error)
+    case invalidResponse(String)
+    case unknown
+}
+
 enum WeatherListState {
     case loading
     case success([WeatherItem])
@@ -43,9 +50,16 @@ struct WeatherMainView: View {
     
     var body: some View {
         WeatherListRenderingView(viewState: vm.viewState)
+            .refreshable {
+                await fetchWeather()
+            }
             .task {
-            await vm.fetchWeather()
-        }
+                await fetchWeather()
+            }
+    }
+    
+    private func fetchWeather() async {
+        await vm.fetchWeather()
     }
 }
 
@@ -55,15 +69,16 @@ struct WeatherListRenderingView: View {
     var body: some View {
         ZStack {
             GradientBackgroundAnimation()
-            
+        
             switch viewState {
             case .loading:
                 WeatherLoadingView()
             case .success(let items):
                 WeatherListView(items: items)
             case .failure(let error):
-                WeatherErrorView(message: error.localizedDescription)
+                WeatherErrorView(error: error)
             }
+            
         }
     }
 }

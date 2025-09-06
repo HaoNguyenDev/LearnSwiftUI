@@ -146,7 +146,15 @@ extension WeatherServiceWrapper {
                 humidity: 0.75
             )
         ]
+        
+        // Mock calling api time
         try await Task.sleep(for: .seconds(2))
-        return items
+        
+        if Bool.random() {
+            return items
+        } else {
+            throw WeatherError.invalidResponse("No response")
+        }
+       
     }
 }
