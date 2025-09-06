@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct WeatherListSuccessView: View {
+struct WeatherListView: View {
   let items: [WeatherItem]
   
   var body: some View {

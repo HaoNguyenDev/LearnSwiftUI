@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ErrorView: View {
+struct WeatherErrorView: View {
   
   let message: String
   
