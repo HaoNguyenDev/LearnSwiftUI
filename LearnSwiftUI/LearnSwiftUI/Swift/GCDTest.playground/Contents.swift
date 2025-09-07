@@ -1,5 +1,23 @@
 import Foundation
 
+/*
+ Main Queue (is a special serial queue that runs on the main thread (main thread) UI run on main queue, use main queue when working with UI).
+ 
+ Global Queue (is a concurrent queue provided by the system, work with hard work).
+ 
+ Custom DispatchQueue (serial queue, concurent queue).
+ 
+ Serial Queue: Its nature is that Only one task is run at a time, and the next task waits for the previous task to complete.
+ 
+ serial.sync: Blocks the current thread: The calling thread waits for the task to complete. Causes deadlock if called on the main queue from the main thread.
+ 
+ serial.async: The current thread (usually the main thread) continues immediately after adding the task. But still runs sequentially according to its nature. Guaranteed in the order of addition (FIFO).
+
+ Concurrent Queue:
+ sync: Blocks the current thread: The calling thread waits for the task to complete, even though the concurrent queue can run multiple tasks at the same time. Causes deadlock if called on the main queue from the main thread.
+ async: Tasks can be executed concurrently on multiple threads, depending on CPU resources. Tasks do not need to wait for each other, and the order of completion is not guaranteed.
+ */
+
 class SerialTest {
     let serialQueue = DispatchQueue(label: "example.serialQueue")
     
