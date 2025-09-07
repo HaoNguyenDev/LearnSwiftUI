@@ -211,7 +211,6 @@
 		DAED677D2E20E45C00309382 /* StateObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAED677F2E21089A00309382 /* ObservedObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAEEFB752E366D2F00E78DA2 /* ObservableObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObjectBootcamp.swift; sourceTree = "<group>"; };
-		DAF19C592E6DD7AA0002806B /* AccessControl.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AccessControl.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAFCDF682E62052500B97C00 /* SOLID.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SOLID.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAFCDF692E630B2C00B97C00 /* ErrorBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBanner.swift; sourceTree = "<group>"; };
 		DAFCDF6C2E63485000B97C00 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
@@ -540,7 +539,6 @@
 				DA2745852E61FB2C000B436D /* Final.playground */,
 				DAFCDF682E62052500B97C00 /* SOLID.playground */,
 				DA4127202E6961DE000ED05B /* FactoryMethod.playground */,
-				DAF19C592E6DD7AA0002806B /* AccessControl.playground */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
