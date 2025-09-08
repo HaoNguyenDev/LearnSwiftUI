@@ -107,6 +107,7 @@
 
 /* Begin PBXFileReference section */
 		DA0C4B5C2E52218A00D64C7C /* FocusStateBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusStateBootcamp.swift; sourceTree = "<group>"; };
+		DA1D32272E6F050F007BDEA2 /* DownloadOperation.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DownloadOperation.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewBootcamp.swift; sourceTree = "<group>"; };
 		DA2745842E61E8D0000B436D /* SingletonPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SingletonPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA2745852E61FB2C000B436D /* Final.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Final.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -539,6 +540,7 @@
 				DA2745852E61FB2C000B436D /* Final.playground */,
 				DAFCDF682E62052500B97C00 /* SOLID.playground */,
 				DA4127202E6961DE000ED05B /* FactoryMethod.playground */,
+				DA1D32272E6F050F007BDEA2 /* DownloadOperation.playground */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
