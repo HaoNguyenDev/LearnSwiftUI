@@ -1,21 +1,68 @@
 import Foundation
 
 /*
- Main Queue (is a special serial queue that runs on the main thread (main thread) UI run on main queue, use main queue when working with UI).
+ 1. MainQueue
+ Operations: This is a unique and special queue that runs on the main thread of the application.
+ Properties: MainQueue is a SerialQueue. This means that it will execute tasks in sequential order, one task at a time.
+ Usage: All UI related tasks such as updating Labels, displaying Alerts or manipulating UIViewController must be executed on the MainQueue. Running UI tasks on another thread will cause errors or unexpected behavior.
  
- Global Queue (is a concurrent queue provided by the system, work with hard work).
+ // Execute task on MainQueue
+ DispatchQueue.main.async {
+    // Update UI here
+    self.myLabel.text = "Hello, world!"
+ }
  
- Custom DispatchQueue (serial queue, concurent queue).
+ Note:
+ Never run heavy (time-consuming) tasks on the MainQueue. This will freeze the UI and negatively affect the user experience.
+ If a heavy task is running, the app will not be able to handle user events (like taps, swipes) until the task is completed.
  
- Serial Queue: Its nature is that Only one task is run at a time, and the next task waits for the previous task to complete.
  
- serial.sync: Blocks the current thread: The calling thread waits for the task to complete. Causes deadlock if called on the main queue from the main thread.
  
- serial.async: The current thread (usually the main thread) continues immediately after adding the task. But still runs sequentially according to its nature. Guaranteed in the order of addition (FIFO).
+ 2. SerialQueue
+ Working: A SerialQueue has only one thread to process tasks.
+ Properties: Tasks added to the queue will be executed sequentially, in first-in-first-out (FIFO) order. The second task will only start when the first task is complete.
+ Uses:
+ When you need to ensure that tasks are executed in a specific order.
+ When you want to protect a resource (such as a shared variable) from being accessed by multiple threads at the same time, avoiding race conditions. By placing read/write operations on a SerialQueue, you ensure that only one thread is allowed to access it at a time.
+ Swift
+    // Initialize a private SerialQueue
+    let mySerialQueue = DispatchQueue(label: "com.example.myqueue")
 
- Concurrent Queue:
- sync: Blocks the current thread: The calling thread waits for the task to complete, even though the concurrent queue can run multiple tasks at the same time. Causes deadlock if called on the main queue from the main thread.
- async: Tasks can be executed concurrently on multiple threads, depending on CPU resources. Tasks do not need to wait for each other, and the order of completion is not guaranteed.
+    // Execute tasks
+    mySerialQueue.async {
+        // Task 1: write data
+    }
+
+    mySerialQueue.async {
+        // Task 2: read data
+    }
+    // Task 2 will run after Task 1 completes
+ 
+ Note:
+ SerialQueue is useful for synchronization.
+ Although tasks are processed sequentially, they still run on a background thread, so they don't freeze the UI.
+ 
+ 
+ 
+ 3. ConcurrentQueue
+ Working: A ConcurrentQueue has multiple threads to process tasks.
+ Properties: Tasks added to the queue can be executed concurrently.
+ Uses:
+ When you have multiple independent tasks and want them to run at the same time to save time. For example, downloading multiple images from the network, processing multiple files, or performing complex calculations.
+ System-available ConcurrentQueues: DispatchQueue.global().
+ Swift
+ // Using a Global ConcurrentQueue
+ DispatchQueue.global().async {
+ // Heavy Task 1: Loading Images
+ }
+
+ DispatchQueue.global().async {
+ // Heavy Task 2: Processing Data
+ }
+ // Tasks 1 and 2 can run concurrently
+ Note:
+ Be careful with Race Conditions: Since multiple tasks can access the shared resource at the same time, you must use synchronization mechanisms like DispatchQueue.sync or DispatchSemaphore to protect the resource if needed.
+ Execution Order Not Guaranteed: Although tasks are added to the queue in a certain order, they may complete at different times.
  */
 
 class SerialTest {
@@ -127,20 +174,20 @@ class TestRaceCondition {
 //        // With ConcurentQueue the final counter value may not be 100.
 //    }
     
-//    func increment() {
+//    func increment2() {
 //        for _ in 0..<100 {
-//            DispatchQueue.global().async {
-//                self.serialQueue.async {
+////            DispatchQueue.global().async {
+//                self.serialQueue.sync {
 //                    self.counter += 1
 //                    print(self.counter)
 //                }
-//            }
+////            }
 //        }
 //    }
     
 }
 
-//let testRaceCondition = TestRaceCondition()
+let testRaceCondition = TestRaceCondition()
 //testRaceCondition.increment()
 //testRaceCondition.increment2()
 

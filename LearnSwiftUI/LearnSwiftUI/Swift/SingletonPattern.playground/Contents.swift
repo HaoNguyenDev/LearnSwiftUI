@@ -11,29 +11,42 @@ import Foundation
  */
 
 final class SingletonPattern {
+    // Shared instance, thread-safe access
     nonisolated(unsafe) static let shared = SingletonPattern()
+    
+    // Private initializer to prevent external instantiation
     private init() {}
     
-    let serialQueue = DispatchQueue(label: "com.yourapp.singletonpattern.queue")
+    // Private serial queue for synchronized access to _counter
+    private let queue = DispatchQueue(label: "com.yourapp.singletonpattern.queue")
+    private let concurrentQueue = DispatchQueue(label: "com.yourapp.singletonpattern.queue", attributes: .concurrent)
     
-    private var counter: Int = 0
+    // The shared resource protected by the queue
+    private var _counter: Int = 0
     
-    func increaseCounter() {
-        serialQueue.sync {
-            counter += 1
-        }
-    }
+//    // Method to safely increment the counter
+//    func increment() {
+//        queue.async {
+//            Thread.sleep(forTimeInterval: 0.001) // Simulate a long-running task
+//            self._counter += 1
+//        }
+//    }
+//    
+//    // Method to safely decrement the counter
+//    func decrement() {
+//        queue.async {
+//            Thread.sleep(forTimeInterval: 0.001) // Simulate a long-running task
+//            self._counter -= 1
+//        }
+//    }
     
-    func decreaseCounter() {
-        serialQueue.sync {
-            counter -= 1
-        }
-    }
-    
+    // Method to safely get the current counter value
     func getCounter() -> Int {
-        return serialQueue.sync {
-            return counter
+        var result = 0
+        queue.sync {
+            result = self._counter
         }
+        return result
     }
 }
 
@@ -49,11 +62,11 @@ func simulateMultiThreads() {
 //    for i in 1...1000 {
 //        group.enter()
 //        concurrentQueue.async {
-//            singleton.increaseCounter()
-//            print("Thread number \(i): Incrememt counter -> Current value: \(singleton.getCounter())")
+//            singleton.increment()
+////            print("Thread number \(i): Incrememt counter -> Current value: \(singleton.getCounter())")
 //            
-//            singleton.decreaseCounter()
-//            print("Thread number \(i): Decrememt counter -> Current value: \(singleton.getCounter())")
+//            singleton.decrement()
+////            print("Thread number \(i): Decrememt counter -> Current value: \(singleton.getCounter())")
 //            group.leave()
 //        }
 //    }

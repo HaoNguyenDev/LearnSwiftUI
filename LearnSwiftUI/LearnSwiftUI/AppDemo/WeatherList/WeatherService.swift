@@ -148,13 +148,7 @@ extension WeatherServiceWrapper {
         ]
         
         // Mock calling api time
-        try await Task.sleep(for: .seconds(2))
-        
-        if Bool.random() {
-            return items
-        } else {
-            throw WeatherError.invalidResponse("No response")
-        }
-       
+        try await Task.sleep(for: .seconds(1))
+        return items
     }
 }
