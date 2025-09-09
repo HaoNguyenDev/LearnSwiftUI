@@ -54,10 +54,12 @@ struct LearnSwiftUIApp: App {
 //                .environment(WeatherServiceWrapper())
 //            }
             
-            NavigationStack {
-                WeatherMainView(vm: WeatherListViewModel(weatherService: WeatherServiceWrapper()))
-                    .navigationTitle("Weather")
-            }
+//            NavigationStack {
+//                WeatherMainView(vm: WeatherListViewModel(weatherService: WeatherServiceWrapper()))
+//                    .navigationTitle("Weather")
+//            }
+            
+            DownloadView()
 
         }
     }
