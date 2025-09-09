@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA0B4AE72E6FC9A400628E53 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */; };
+		DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */; };
+		DA0B4AEB2E6FCBB700628E53 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */; };
 		DA0C4B5D2E52218A00D64C7C /* FocusStateBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0C4B5C2E52218A00D64C7C /* FocusStateBootcamp.swift */; };
 		DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */; };
 		DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E632DE5BFAB009F515E /* ContentView.swift */; };
@@ -60,7 +63,6 @@
 		DA5D71A02E40CC8300C78E40 /* AsyncAwaitBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D719F2E40CC8300C78E40 /* AsyncAwaitBootcamp.swift */; };
 		DA5D71A22E41EEDA00C78E40 /* ChangePasswordSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71A12E41EEDA00C78E40 /* ChangePasswordSuccess.swift */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
-		DA6E0D6F2E4B9CAD009B3778 /* DownloadManagerBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E0D6E2E4B9CAD009B3778 /* DownloadManagerBootcamp.swift */; };
 		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
 		DA8748872E6AFBC900B189F3 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8748862E6AFBC100B189F3 /* WeatherService.swift */; };
 		DA87488A2E6AFC6A00B189F3 /* WeatherItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8748892E6AFC6300B189F3 /* WeatherItem.swift */; };
@@ -82,6 +84,7 @@
 		DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE8CB72E43B46800FCBA4E /* GestureBootcamp.swift */; };
 		DAAE8CBA2E44BDFF00FCBA4E /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE8CB92E44BDFF00FCBA4E /* FormView.swift */; };
 		DAAE8CBD2E45028300FCBA4E /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE8CBC2E45028300FCBA4E /* CounterState.swift */; };
+		DABDF7B42E70466B00DEC7C6 /* DownloadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDF7B32E70466B00DEC7C6 /* DownloadTask.swift */; };
 		DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */; };
 		DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */; };
 		DAE2EACA2DF5DE280083E733 /* SheetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC92DF5DE280083E733 /* SheetBootcamp.swift */; };
@@ -106,6 +109,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
+		DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
 		DA0C4B5C2E52218A00D64C7C /* FocusStateBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusStateBootcamp.swift; sourceTree = "<group>"; };
 		DA1D32272E6F050F007BDEA2 /* DownloadOperation.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DownloadOperation.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewBootcamp.swift; sourceTree = "<group>"; };
@@ -167,7 +173,6 @@
 		DA65B7342E37D34600BF8A59 /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 		DA6E0BBB2E4A32D0009B3778 /* OperationQueueTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OperationQueueTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA6E0BBC2E4A4BA5009B3778 /* RaceConditionAvoid.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RaceConditionAvoid.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DA6E0D6E2E4B9CAD009B3778 /* DownloadManagerBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManagerBootcamp.swift; sourceTree = "<group>"; };
 		DA6E0D702E4CEE68009B3778 /* StackQueueAndHeap.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StackQueueAndHeap.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DA8748862E6AFBC100B189F3 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
@@ -194,6 +199,7 @@
 		DAAE8CB72E43B46800FCBA4E /* GestureBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureBootcamp.swift; sourceTree = "<group>"; };
 		DAAE8CB92E44BDFF00FCBA4E /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		DAAE8CBC2E45028300FCBA4E /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
+		DABDF7B32E70466B00DEC7C6 /* DownloadTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadTask.swift; sourceTree = "<group>"; };
 		DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBootcamp.swift; sourceTree = "<group>"; };
 		DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBootcamp.swift; sourceTree = "<group>"; };
 		DAE2EAC92DF5DE280083E733 /* SheetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetBootcamp.swift; sourceTree = "<group>"; };
@@ -230,6 +236,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA0B4AE52E6FC96800628E53 /* MultiDownloadApp */ = {
+			isa = PBXGroup;
+			children = (
+				DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */,
+				DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */,
+				DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */,
+				DABDF7B32E70466B00DEC7C6 /* DownloadTask.swift */,
+			);
+			path = MultiDownloadApp;
+			sourceTree = "<group>";
+		};
 		DA415E462DE5BF26009F515E = {
 			isa = PBXGroup;
 			children = (
@@ -269,7 +286,6 @@
 				DA415E6B2DE5BFBD009F515E /* Resource */,
 				DA415E722DE5C307009F515E /* Extension */,
 				DAA3B8D22E3A64FC0051F62F /* Models */,
-				DA6E0D6D2E4B9C8A009B3778 /* DownloadManager */,
 				DA5D717C2E3FA56900C78E40 /* Networking */,
 				DA65B7322E37D31200BF8A59 /* AppDemo */,
 				DAAE8CBB2E45024800FCBA4E /* Architecture */,
@@ -456,6 +472,7 @@
 		DA65B7322E37D31200BF8A59 /* AppDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DA0B4AE52E6FC96800628E53 /* MultiDownloadApp */,
 				DA8748852E6AFBB000B189F3 /* WeatherList */,
 				DA5D71872E3FB01C00C78E40 /* GithubUsers */,
 				DA5D71042E3CD1EB00C78E40 /* NavigationApp */,
@@ -474,14 +491,6 @@
 				DA5C98BB2E3924AA007AC9E9 /* TodoDetailView.swift */,
 			);
 			path = TodoApp;
-			sourceTree = "<group>";
-		};
-		DA6E0D6D2E4B9C8A009B3778 /* DownloadManager */ = {
-			isa = PBXGroup;
-			children = (
-				DA6E0D6E2E4B9CAD009B3778 /* DownloadManagerBootcamp.swift */,
-			);
-			path = DownloadManager;
 			sourceTree = "<group>";
 		};
 		DA8748852E6AFBB000B189F3 /* WeatherList */ = {
@@ -675,6 +684,7 @@
 				DA5D71862E3FA5B400C78E40 /* NetworkManager.swift in Sources */,
 				DA5D719B2E3FC03D00C78E40 /* AlertHandler.swift in Sources */,
 				DAE2EACA2DF5DE280083E733 /* SheetBootcamp.swift in Sources */,
+				DA0B4AE72E6FC9A400628E53 /* DownloadManager.swift in Sources */,
 				DA415E8F2DE5DCC0009F515E /* Color.swift in Sources */,
 				DA5D71452E3F43B100C78E40 /* ObservablePattern.swift in Sources */,
 				DAEBAE462DF11C7300082B1C /* ButtonBootcamp.swift in Sources */,
@@ -690,6 +700,7 @@
 				DAEBAE3E2DEB149C00082B1C /* InitializerBootcamp.swift in Sources */,
 				DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */,
 				DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */,
+				DABDF7B42E70466B00DEC7C6 /* DownloadTask.swift in Sources */,
 				DA8991382E47671F00C2BD27 /* HButton.swift in Sources */,
 				DA8748912E6B005800B189F3 /* WeatherErrorView.swift in Sources */,
 				DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */,
@@ -699,6 +710,7 @@
 				DA87488A2E6AFC6A00B189F3 /* WeatherItem.swift in Sources */,
 				DA5D71362E3DE82A00C78E40 /* Account.swift in Sources */,
 				DA5D71902E3FBA7400C78E40 /* UserDetail.swift in Sources */,
+				DA0B4AEB2E6FCBB700628E53 /* DownloadView.swift in Sources */,
 				DA5D71342E3DE65500C78E40 /* Home.swift in Sources */,
 				DA5D71202E3D185F00C78E40 /* ScreenCoordinator.swift in Sources */,
 				DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */,
@@ -714,6 +726,7 @@
 				DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */,
 				DAFCDF6D2E63485000B97C00 /* AppTheme.swift in Sources */,
 				DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */,
+				DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */,
 				DAEBAE3A2DEAF92400082B1C /* StacksBootcamp.swift in Sources */,
 				DA5D71302E3D205400C78E40 /* MainTab.swift in Sources */,
 				DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */,
@@ -723,7 +736,6 @@
 				DA8748952E6B006A00B189F3 /* WeatherLoadingView.swift in Sources */,
 				DA5D71A02E40CC8300C78E40 /* AsyncAwaitBootcamp.swift in Sources */,
 				DA5D71432E3E4BF700C78E40 /* BackButton.swift in Sources */,
-				DA6E0D6F2E4B9CAD009B3778 /* DownloadManagerBootcamp.swift in Sources */,
 				DA5D71892E3FB05100C78E40 /* UserRowView.swift in Sources */,
 				DA5D713A2E3E000D00C78E40 /* Security.swift in Sources */,
 				DAFCDF6A2E630B2C00B97C00 /* ErrorBanner.swift in Sources */,
