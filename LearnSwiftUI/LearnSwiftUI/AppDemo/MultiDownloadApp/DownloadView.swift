@@ -14,6 +14,8 @@ struct DownloadView: View {
     
     @StateObject private var viewModel = DownloadViewModel()
     @State private var urlString = ""
+    @State private var showInvalidURLAlert = false
+    @State private var taskToDelete: DownloadTask? // Để xác nhận xóa
     
     var body: some View {
         NavigationView {
@@ -24,25 +26,58 @@ struct DownloadView: View {
                         .padding(.horizontal)
                     
                     Button("Tải") {
-                        viewModel.startDownload(urlString: urlString)
-                        urlString = ""
+                        if URL(string: urlString) != nil {
+                            viewModel.startDownload(urlString: urlString)
+                            urlString = ""
+                        } else {
+                            showInvalidURLAlert = true
+                        }
                     }
                     .padding(.horizontal)
                     .buttonStyle(.borderedProminent)
                 }
                 .padding(.top)
                 
-                List {
-                    ForEach(viewModel.downloadTasks.reversed()) { task in
-                        DownloadRow(task: task)
+                if viewModel.downloadTasks.isEmpty {
+                    Text("Không có tác vụ tải xuống nào.")
+                        .foregroundColor(.secondary)
+                        .padding()
+                } else {
+                    List {
+                        ForEach(viewModel.downloadTasks.reversed()) { task in
+                            DownloadRow(task: task, onDelete: {
+                                taskToDelete = task
+                            })
                             .environmentObject(viewModel)
+                        }
                     }
+                    .listStyle(.insetGrouped)
                 }
-                .listStyle(.insetGrouped)
             }
             .navigationTitle("Quản lý Tải xuống")
+            .alert("URL không hợp lệ", isPresented: $showInvalidURLAlert) {
+                Button("OK", role: .cancel) { }
+            } message: {
+                Text("Vui lòng nhập một URL hợp lệ để tải xuống.")
+            }
+            .confirmationDialog("Xác nhận xóa", isPresented: Binding(
+                get: { taskToDelete != nil },
+                set: { if !$0 { taskToDelete = nil } }
+            )) {
+                Button("Xóa", role: .destructive) {
+                    if let task = taskToDelete {
+                        viewModel.deleteDownload(for: task)
+                    }
+                    taskToDelete = nil
+                }
+                Button("Hủy", role: .cancel) {
+                    taskToDelete = nil
+                }
+            } message: {
+                Text("Bạn có chắc chắn muốn xóa tác vụ này?")
+            }
             .onAppear {
-                viewModel.loadTasks()
+                // Không cần loadTasks vì DownloadManager đã load trong init
             }
         }
     }
@@ -54,6 +89,7 @@ struct DownloadView: View {
 struct DownloadRow: View {
     @ObservedObject var task: DownloadTask
     @EnvironmentObject var viewModel: DownloadViewModel
+    let onDelete: () -> Void // Callback để trigger confirmationDialog
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -150,7 +186,7 @@ struct DownloadRow: View {
                 .buttonStyle(.bordered)
             } else if task.state == .completed || task.state == .cancelled {
                 Button(action: {
-                    viewModel.deleteDownload(for: task)
+                    onDelete()
                 }) {
                     Text("Xóa")
                         .font(.caption)
@@ -160,7 +196,7 @@ struct DownloadRow: View {
                 .buttonStyle(.bordered)
             } else if task.state == .failed {
                 Button(action: {
-                    viewModel.resumeDownload(for: task) // Retry bằng resume nếu có data, else start new
+                    viewModel.resumeDownload(for: task)
                 }) {
                     Text("Thử lại")
                         .font(.caption)
@@ -169,7 +205,7 @@ struct DownloadRow: View {
                 .buttonStyle(.bordered)
                 
                 Button(action: {
-                    viewModel.deleteDownload(for: task)
+                    onDelete()
                 }) {
                     Text("Xóa")
                         .font(.caption)
