@@ -93,7 +93,7 @@ struct DownloadRow: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(task.url.lastPathComponent)
+            Text(task.fileName)
                 .font(.headline)
                 .fontWeight(.medium)
             
