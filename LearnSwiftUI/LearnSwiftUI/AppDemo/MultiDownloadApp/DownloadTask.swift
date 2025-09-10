@@ -9,46 +9,46 @@ import Foundation
 
 // MARK: - DownloadState
 
-/// Enum đại diện cho các trạng thái tải xuống.
+/// Enum representing download states.
 public enum DownloadState: String, Codable {
-    case pending = "Đang chờ"
-    case downloading = "Đang tải"
-    case paused = "Tạm dừng"
-    case completed = "Đã hoàn thành"
-    case failed = "Thất bại"
-    case cancelled = "Đã hủy"
+    case pending = "Pending"
+    case downloading = "Downloading"
+    case paused = "Paused"
+    case completed = "Completed"
+    case failed = "Failed"
+    case cancelled = "Cancelled"
 }
 
 // MARK: - DownloadTask
 
-/// Lớp đại diện cho một tác vụ tải xuống.
+/// Class representing a download task.
 public class DownloadTask: NSObject, ObservableObject, Codable, Identifiable {
     
     public let id = UUID()
     public let url: URL
-    public let destinationURL: URL
+    public let fileName: String // Replaced destinationURL with fileName to avoid storing absolute path
     
     @Published public var state: DownloadState = .pending
     @Published public var progress: Float = 0.0
     @Published public var downloadedBytes: Int64 = 0
     @Published public var totalBytes: Int64 = 0
     @Published public var startTime: Date?
-    @Published public var resumeData: Data? // Thêm để persist resume data
+    @Published public var resumeData: Data?
     
     enum CodingKeys: String, CodingKey {
-        case url, destinationURL, state, progress, downloadedBytes, totalBytes, startTime, resumeData
+        case url, fileName, state, progress, downloadedBytes, totalBytes, startTime, resumeData
     }
     
-    public init(url: URL, destinationURL: URL) {
+    public init(url: URL, fileName: String) {
         self.url = url
-        self.destinationURL = destinationURL
+        self.fileName = fileName
         super.init()
     }
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         url = try container.decode(URL.self, forKey: .url)
-        destinationURL = try container.decode(URL.self, forKey: .destinationURL)
+        fileName = try container.decode(String.self, forKey: .fileName)
         state = try container.decode(DownloadState.self, forKey: .state)
         progress = try container.decode(Float.self, forKey: .progress)
         downloadedBytes = try container.decode(Int64.self, forKey: .downloadedBytes)
@@ -61,7 +61,7 @@ public class DownloadTask: NSObject, ObservableObject, Codable, Identifiable {
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(url, forKey: .url)
-        try container.encode(destinationURL, forKey: .destinationURL)
+        try container.encode(fileName, forKey: .fileName)
         try container.encode(state, forKey: .state)
         try container.encode(progress, forKey: .progress)
         try container.encode(downloadedBytes, forKey: .downloadedBytes)
@@ -70,20 +70,26 @@ public class DownloadTask: NSObject, ObservableObject, Codable, Identifiable {
         try container.encodeIfPresent(resumeData, forKey: .resumeData)
     }
     
-    // MARK: - Thuộc tính Tính toán
+    // Computed property to dynamically recreate destinationURL
+    public var destinationURL: URL {
+        let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        return documents.appendingPathComponent(fileName)
+    }
     
-    /// Định dạng bytes đã tải và tổng bytes thành một chuỗi dễ đọc.
+    // MARK: - Computed Properties
+    
+    /// Formats downloaded bytes and total bytes into a human-readable string.
     public var downloadedProgressFormatted: String {
         let downloaded = ByteCountFormatter.string(fromByteCount: downloadedBytes, countStyle: .file)
         if totalBytes > 0 {
             let total = ByteCountFormatter.string(fromByteCount: totalBytes, countStyle: .file)
             return "\(downloaded) / \(total)"
         } else {
-            return downloaded // Nếu total unknown (totalBytes = -1 hoặc 0)
+            return downloaded // If total is unknown
         }
     }
     
-    /// Định dạng tổng bytes thành một chuỗi dễ đọc (dùng totalBytes nếu completed).
+    /// Formats total bytes into a human-readable string.
     public var fileSizeFormatted: String {
         let bytes = (state == .completed && totalBytes > 0) ? totalBytes : downloadedBytes
         return ByteCountFormatter.string(fromByteCount: bytes, countStyle: .file)
