@@ -48,7 +48,7 @@ public class DownloadViewModel: NSObject, ObservableObject, DownloadManagerDeleg
     
     /// Deletes a downloaded file.
     public func deleteDownload(for task: DownloadTask) {
-        downloadManager.deleteDownload(for: task.url)
+        downloadManager.deleteDownload(for: task)
     }
     
     // MARK: - DownloadManagerDelegate

@@ -82,8 +82,11 @@ public class DownloadManager: NSObject, ObservableObject {
         let config = URLSessionConfiguration.background(withIdentifier: "com.myapp.backgroundsession")
         config.isDiscretionary = false
         config.sessionSendsLaunchEvents = true
+        config.httpMaximumConnectionsPerHost = 5 // Limit connection
         return URLSession(configuration: config, delegate: self, delegateQueue: downloadQueue)
     }()
+    
+    public var backgroundCompletionHandler: (() -> Void)?
     
     private override init() {
         super.init()
@@ -99,73 +102,70 @@ public class DownloadManager: NSObject, ObservableObject {
             return
         }
         
-        // Create fileName and destinationURL
-        let fileName = url.lastPathComponent
-        let destinationURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent(fileName)
+        // Log number of active tasks
+        print("Starting download for \(url). Active downloads: \(activeDownloads.count)")
         
-        // Check if task already exists
-        if let existingTask = downloadTasks.first(where: { $0.url == url }) {
-            guard existingTask.state != .completed else {
-                print("Download for \(url) is already completed.")
-                return
-            }
-            if existingTask.state == .paused && existingTask.resumeData != nil {
-                resumeDownload(for: url, withResumeData: existingTask.resumeData)
-                return
-            }
-            // Reset task if not completed or resumable
-            existingTask.state = .pending
-            existingTask.progress = 0.0
-            existingTask.downloadedBytes = 0
-            existingTask.totalBytes = 0
-            existingTask.resumeData = nil
-            existingTask.startTime = Date()
-        } else {
-            // Check if file exists
-            if FileManager.default.fileExists(atPath: destinationURL.path) {
-                print("File already exists at destination: \(destinationURL.path). Skipping.")
-                return
-            }
-            let newTask = DownloadTask(url: url, fileName: fileName)
-            newTask.state = .pending
-            newTask.startTime = Date()
-            downloadTasks.append(newTask)
+        // Create unique fileName to avoid conflicts
+        let baseFileName = url.lastPathComponent
+        var uniqueFileName = baseFileName
+        var destinationURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent(uniqueFileName)
+        var index = 1
+        
+        // Check for existing file in Documents directory or in downloadTasks
+        while FileManager.default.fileExists(atPath: destinationURL.path) || downloadTasks.contains(where: { $0.fileName == uniqueFileName }) {
+            let name = baseFileName.replacingOccurrences(of: ".\(url.pathExtension)", with: "")
+            uniqueFileName = "\(name)(\(index)).\(url.pathExtension)"
+            destinationURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent(uniqueFileName)
+            index += 1
         }
         
-        guard activeDownloads[url] == nil else {
-            print("Download for \(url) is already active or queued.")
-            return
-        }
+        // Create new task
+        let newTask = DownloadTask(url: url, fileName: uniqueFileName)
+        newTask.state = .pending
+        newTask.startTime = Date()
+        downloadTasks.append(newTask)
         
-        let download = Download(url: url, fileName: fileName)
+        // Allow multiple downloads for the same URL with unique keys
+        let download = Download(url: url, fileName: uniqueFileName)
         download.task = session.downloadTask(with: url)
         download.task?.resume()
-        activeDownloads[url] = download
+        let uniqueKey = URL(string: "\(url.absoluteString)-\(UUID().uuidString)")!
+        activeDownloads[uniqueKey] = download
+        print("Download started for \(url) with file \(uniqueFileName)")
         delegate?.downloadManager(self, didStartTaskWithURL: url)
         saveTasks()
     }
     
     /// Pauses a download task.
     public func pauseDownload(for url: URL) {
-        guard let download = activeDownloads[url] else { return }
+        guard let downloadEntry = activeDownloads.first(where: { $0.value.url == url }) else { return }
+        let download = downloadEntry.value
+        let uniqueKey = downloadEntry.key
         download.task?.cancel(byProducingResumeData: { data in
             download.resumeData = data
             self.delegate?.downloadManager(self, didUpdateResumeDataForTaskWithURL: url, resumeData: data)
             self.delegate?.downloadManager(self, didChangeState: .paused, forTaskWithURL: url)
-            if let task = self.downloadTasks.first(where: { $0.url == url }) {
-                task.state = .paused
-                task.resumeData = data
+            
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                if let task = self.downloadTasks.first(where: { $0.url == url && $0.fileName == download.fileName }) {
+                    task.state = .paused
+                    task.resumeData = data
+                }
+                self.activeDownloads.removeValue(forKey: uniqueKey)
+                self.saveTasks()
             }
-            self.saveTasks()
         })
     }
     
     /// Resumes a download task.
     public func resumeDownload(for url: URL, withResumeData externalResumeData: Data? = nil) {
-        guard let download = activeDownloads[url] else {
+        guard let downloadEntry = activeDownloads.first(where: { $0.value.url == url }) else {
             print("No active download for \(url).")
             return
         }
+        let download = downloadEntry.value
+        let uniqueKey = downloadEntry.key
         
         let resumeData = externalResumeData ?? download.resumeData
         guard let resumeData = resumeData else {
@@ -179,20 +179,23 @@ public class DownloadManager: NSObject, ObservableObject {
         download.resumeData = nil
         delegate?.downloadManager(self, didUpdateResumeDataForTaskWithURL: url, resumeData: nil)
         delegate?.downloadManager(self, didChangeState: .downloading, forTaskWithURL: url)
-        if let task = downloadTasks.first(where: { $0.url == url }) {
+        if let task = downloadTasks.first(where: { $0.url == url && $0.fileName == download.fileName }) {
             task.state = .downloading
             task.resumeData = nil
         }
+        activeDownloads[uniqueKey] = download
         saveTasks()
     }
     
     /// Cancels a download task.
     public func cancelDownload(for url: URL) {
-        guard let download = activeDownloads[url] else { return }
+        guard let downloadEntry = activeDownloads.first(where: { $0.value.url == url }) else { return }
+        let download = downloadEntry.value
+        let uniqueKey = downloadEntry.key
         download.task?.cancel()
         download.resumeData = nil
-        activeDownloads.removeValue(forKey: url)
-        if let task = downloadTasks.first(where: { $0.url == url }) {
+        activeDownloads.removeValue(forKey: uniqueKey)
+        if let task = downloadTasks.first(where: { $0.url == url && $0.fileName == download.fileName }) {
             task.state = .cancelled
             task.resumeData = nil
         }
@@ -202,12 +205,18 @@ public class DownloadManager: NSObject, ObservableObject {
     }
     
     /// Deletes a download task and its associated file.
-    public func deleteDownload(for url: URL) {
+    public func deleteDownload(for task: DownloadTask) {
         // Cancel task if active
-        cancelDownload(for: url)
+        if let downloadEntry = activeDownloads.first(where: { $0.value.url == task.url && $0.value.fileName == task.fileName }) {
+            let download = downloadEntry.value
+            let uniqueKey = downloadEntry.key
+            download.task?.cancel()
+            download.resumeData = nil
+            activeDownloads.removeValue(forKey: uniqueKey)
+        }
         
         // Delete file at destinationURL if it exists
-        if let task = downloadTasks.first(where: { $0.url == url }) {
+        if let task = downloadTasks.first(where: { $0.url == task.url && $0.fileName == task.fileName }) {
             let filePath = task.destinationURL.path
             if FileManager.default.fileExists(atPath: filePath) {
                 do {
@@ -219,23 +228,23 @@ public class DownloadManager: NSObject, ObservableObject {
             } else {
                 print("File does not exist at: \(filePath)")
             }
-            // Always remove task from list, even if file doesn't exist
-            if let index = downloadTasks.firstIndex(where: { $0.url == url }) {
+            // Remove task from list
+            if let index = downloadTasks.firstIndex(where: { $0.url == task.url && $0.fileName == task.fileName }) {
                 downloadTasks.remove(at: index)
             }
         } else {
-            print("No task found for URL: \(url)")
+            print("No task found for URL: \(task.url) fileName: \(task.fileName)")
         }
         saveTasks()
     }
     
     /// Cancels all download tasks.
     public func cancelAllDownloads() {
-        for download in activeDownloads.values {
+        for (_, download) in activeDownloads {
             download.task?.cancel()
             download.resumeData = nil
             delegate?.downloadManager(self, didUpdateResumeDataForTaskWithURL: download.url, resumeData: nil)
-            if let task = downloadTasks.first(where: { $0.url == download.url }) {
+            if let task = downloadTasks.first(where: { $0.url == download.url && $0.fileName == download.fileName }) {
                 task.state = .cancelled
                 task.resumeData = nil
             }
@@ -251,7 +260,7 @@ public class DownloadManager: NSObject, ObservableObject {
     
     /// Retrieves a specific download task.
     public func getDownload(for url: URL) -> Download? {
-        return activeDownloads[url]
+        return activeDownloads.first(where: { $0.value.url == url })?.value
     }
     
     // MARK: - Save and Load Data
@@ -306,7 +315,8 @@ public class DownloadManager: NSObject, ObservableObject {
                     download.resumeData = task.resumeData
                     download.downloadedBytes = task.downloadedBytes
                     download.totalBytes = task.totalBytes
-                    activeDownloads[task.url] = download
+                    let uniqueKey = URL(string: "\(task.url.absoluteString)-\(UUID().uuidString)")!
+                    activeDownloads[uniqueKey] = download
                 }
             }
             
@@ -327,7 +337,10 @@ public class DownloadManager: NSObject, ObservableObject {
 extension DownloadManager: URLSessionDownloadDelegate {
     
     public func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-        guard let sourceURL = downloadTask.originalRequest?.url, let download = activeDownloads[sourceURL] else { return }
+        guard let sourceURL = downloadTask.originalRequest?.url,
+              let downloadEntry = activeDownloads.first(where: { $0.value.url == sourceURL }) else { return }
+        let download = downloadEntry.value
+        let uniqueKey = downloadEntry.key
         
         do {
             // Move downloaded file to destination
@@ -342,20 +355,20 @@ extension DownloadManager: URLSessionDownloadDelegate {
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
                 // Update task state
-                if let task = downloadTasks.first(where: { $0.url == sourceURL }) {
+                if let task = downloadTasks.first(where: { $0.url == sourceURL && $0.fileName == download.fileName }) {
                     task.state = .completed
                     task.resumeData = nil
                 }
                 
                 delegate?.downloadManager(self, didCompleteTaskWithURL: sourceURL, atLocation: download.destinationURL)
-                activeDownloads.removeValue(forKey: sourceURL)
+                activeDownloads.removeValue(forKey: uniqueKey)
                 saveTasks()
+                self.backgroundCompletionHandler?()
             }
-            
         } catch {
             // Notify error
             delegate?.downloadManager(self, didFailTaskWithURL: sourceURL, withError: error)
-            if let task = downloadTasks.first(where: { $0.url == sourceURL }) {
+            if let task = downloadTasks.first(where: { $0.url == sourceURL && $0.fileName == download.fileName }) {
                 task.state = .failed
                 task.resumeData = download.resumeData
             }
@@ -364,7 +377,9 @@ extension DownloadManager: URLSessionDownloadDelegate {
     }
     
     public func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
-        guard let sourceURL = downloadTask.originalRequest?.url, let download = activeDownloads[sourceURL] else { return }
+        guard let sourceURL = downloadTask.originalRequest?.url,
+              let downloadEntry = activeDownloads.first(where: { $0.value.url == sourceURL }) else { return }
+        let download = downloadEntry.value
         
         download.downloadedBytes = totalBytesWritten
         download.totalBytes = totalBytesExpectedToWrite > 0 ? totalBytesExpectedToWrite : 0
@@ -379,7 +394,7 @@ extension DownloadManager: URLSessionDownloadDelegate {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             // Update task
-            if let task = self.downloadTasks.first(where: { $0.url == sourceURL }) {
+            if let task = self.downloadTasks.first(where: { $0.url == sourceURL && $0.fileName == download.fileName }) {
                 task.progress = progress
                 task.downloadedBytes = totalBytesWritten
                 task.totalBytes = totalBytesExpectedToWrite > 0 ? totalBytesExpectedToWrite : 0
@@ -392,25 +407,32 @@ extension DownloadManager: URLSessionDownloadDelegate {
     }
     
     public func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
-        guard let sourceURL = task.originalRequest?.url, let download = activeDownloads[sourceURL] else { return }
+        guard let sourceURL = task.originalRequest?.url,
+              let downloadEntry = activeDownloads.first(where: { $0.value.url == sourceURL }) else { return }
+        let download = downloadEntry.value
+        let uniqueKey = downloadEntry.key
         
         if let error = error {
             if (error as NSError).code == NSURLErrorCancelled {
                 // Task was paused
                 download.resumeData = (error as NSError).userInfo[NSURLSessionDownloadTaskResumeData] as? Data
                 delegate?.downloadManager(self, didUpdateResumeDataForTaskWithURL: sourceURL, resumeData: download.resumeData)
-                if let task = downloadTasks.first(where: { $0.url == sourceURL }) {
-                    task.state = .paused
-                    task.resumeData = download.resumeData
+                
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else { return }
+                    if let task = downloadTasks.first(where: { $0.url == sourceURL && $0.fileName == download.fileName }) {
+                        task.state = .paused
+                        task.resumeData = download.resumeData
+                    }
                 }
             } else {
                 // Other error
                 delegate?.downloadManager(self, didFailTaskWithURL: sourceURL, withError: error)
-                if let task = downloadTasks.first(where: { $0.url == sourceURL }) {
+                if let task = downloadTasks.first(where: { $0.url == sourceURL && $0.fileName == download.fileName }) {
                     task.state = .failed
                     task.resumeData = download.resumeData
                 }
-                activeDownloads.removeValue(forKey: sourceURL)
+                activeDownloads.removeValue(forKey: uniqueKey)
             }
             saveTasks()
         }
