@@ -6,16 +6,15 @@
 //
 
 import Foundation
-import Combine
 
 // MARK: - DownloadViewModel
 
-/// ViewModel để quản lý logic tải xuống và cung cấp dữ liệu cho View.
+/// ViewModel for managing download logic and providing data to the View.
 public class DownloadViewModel: NSObject, ObservableObject, DownloadManagerDelegate {
     
     private let downloadManager = DownloadManager.shared
     
-    // Bind với downloadTasks từ DownloadManager
+    /// Binds to downloadTasks from DownloadManager.
     public var downloadTasks: [DownloadTask] {
         downloadManager.downloadTasks
     }
@@ -25,67 +24,62 @@ public class DownloadViewModel: NSObject, ObservableObject, DownloadManagerDeleg
         downloadManager.delegate = self
     }
     
-    // MARK: - Quản lý Tác vụ
+    // MARK: - Task Management
     
-    /// Thêm một tác vụ tải xuống mới.
+    /// Starts a new download task.
     public func startDownload(urlString: String) {
-        guard let url = URL(string: urlString) else {
-            print("Invalid URL")
-            return
-        }
-        
-        let fileName = url.lastPathComponent
-        guard let destinationURL = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(fileName) else {
-            print("Failed to create destination URL")
-            return
-        }
-        
-        downloadManager.startDownload(url: url, destinationURL: destinationURL)
+        downloadManager.startDownload(urlString: urlString)
     }
     
-    /// Tạm dừng một tác vụ tải xuống.
+    /// Pauses a download task.
     public func pauseDownload(for task: DownloadTask) {
         downloadManager.pauseDownload(for: task.url)
     }
     
-    /// Tiếp tục một tác vụ tải xuống đã tạm dừng.
+    /// Resumes a paused download task.
     public func resumeDownload(for task: DownloadTask) {
         downloadManager.resumeDownload(for: task.url, withResumeData: task.resumeData)
     }
     
-    /// Hủy một tác vụ tải xuống.
+    /// Cancels a download task.
     public func cancelDownload(for task: DownloadTask) {
         downloadManager.cancelDownload(for: task.url)
     }
     
-    /// Xóa một tệp đã tải xuống.
+    /// Deletes a downloaded file.
     public func deleteDownload(for task: DownloadTask) {
         downloadManager.deleteDownload(for: task.url)
     }
     
     // MARK: - DownloadManagerDelegate
     
+    /// Updates the download progress for a task.
     public func downloadManager(_ manager: DownloadManager, didUpdateProgress progress: Float, forTaskWithURL url: URL) {
-        // Không cần xử lý vì UI bind trực tiếp với downloadTasks
+        // No handling needed as UI binds directly to downloadTasks.
     }
     
+    /// Handles when a download task fails.
     public func downloadManager(_ manager: DownloadManager, didFailTaskWithURL url: URL, withError error: Error) {
-        // Không cần xử lý vì state được cập nhật trong DownloadManager
+        // No handling needed as state is updated in DownloadManager.
     }
     
+    /// Handles when a download task completes.
     public func downloadManager(_ manager: DownloadManager, didCompleteTaskWithURL url: URL, atLocation location: URL) {
-        // Không cần xử lý vì state được cập nhật trong DownloadManager
+        // No handling needed as state is updated in DownloadManager.
     }
     
+    /// Handles when a download task starts.
     public func downloadManager(_ manager: DownloadManager, didStartTaskWithURL url: URL) {
-        // Không cần xử lý vì state được cập nhật trong DownloadManager
+        // No handling needed as state is updated in DownloadManager.
     }
     
+    /// Handles when the state of a task changes.
     public func downloadManager(_ manager: DownloadManager, didChangeState state: DownloadState, forTaskWithURL url: URL) {
-        // Không cần xử lý vì state được cập nhật trong DownloadManager
+        // No handling needed as state is updated in DownloadManager.
     }
     
+    /// Handles when the resume data of a task is updated.
     public func downloadManager(_ manager: DownloadManager, didUpdateResumeDataForTaskWithURL url: URL, resumeData: Data?) {
-        // Không cần xử lý vì resumeData được cập nhật trong DownloadManager
+        // No handling needed as resumeData is updated in DownloadManager.
     }
 }

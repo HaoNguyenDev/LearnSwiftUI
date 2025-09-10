@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-/// Delegate để thông báo về trạng thái của các tác vụ tải xuống.
+/// Delegate to notify about download task states.
 public protocol DownloadManagerDelegate: AnyObject {
     func downloadManager(_ manager: DownloadManager, didUpdateProgress progress: Float, forTaskWithURL url: URL)
     func downloadManager(_ manager: DownloadManager, didCompleteTaskWithURL url: URL, atLocation location: URL)
@@ -20,46 +20,53 @@ public protocol DownloadManagerDelegate: AnyObject {
 
 // MARK: - Download
 
-/// Lớp đại diện cho một tác vụ tải xuống.
+/// Class representing a download task.
 public class Download: NSObject {
     public let url: URL
-    public let destinationURL: URL
+    public let fileName: String // Replaced destinationURL with fileName for consistency
     public var task: URLSessionDownloadTask?
     public var resumeData: Data?
     public var downloadedBytes: Int64 = 0
     public var totalBytes: Int64 = 0
     
-    public init(url: URL, destinationURL: URL) {
+    public init(url: URL, fileName: String) {
         self.url = url
-        self.destinationURL = destinationURL
+        self.fileName = fileName
+        super.init()
+    }
+    
+    // Computed property to dynamically recreate destinationURL
+    public var destinationURL: URL {
+        let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        return documents.appendingPathComponent(fileName)
     }
 }
 
 // MARK: - DownloadManager
 
-/// Một lớp quản lý các tác vụ tải xuống có thể tái sử dụng.
+/// A reusable class for managing download tasks.
 public class DownloadManager: NSObject, ObservableObject {
     
     public static let shared = DownloadManager()
     
     public weak var delegate: DownloadManagerDelegate?
     
-    @Published public var downloadTasks: [DownloadTask] = [] // Lưu trữ danh sách tasks
+    @Published public var downloadTasks: [DownloadTask] = [] // Stores the list of tasks
     
     private let tasksSaveURL: URL = {
         let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         return documents.appendingPathComponent("downloadTasks.json")
     }()
     
-    /// Hàng đợi cho các tác vụ tải xuống.
+    /// Queue for managing download tasks.
     private lazy var downloadQueue: OperationQueue = {
         let queue = OperationQueue()
         queue.name = "com.myapp.downloadQueue"
-        queue.maxConcurrentOperationCount = 5 // Mặc định 5
+        queue.maxConcurrentOperationCount = 5 // Default is 5
         return queue
     }()
     
-    /// Hàng đợi để quản lý các tác vụ tải xuống.
+    /// Dictionary to manage active download tasks.
     public var activeDownloads = [URL: Download]()
     
     public var maxConcurrentDownloads: Int {
@@ -80,19 +87,23 @@ public class DownloadManager: NSObject, ObservableObject {
     
     private override init() {
         super.init()
-        loadTasks() // Tải tasks khi init
+        loadTasks() // Load tasks on initialization
     }
     
-    // MARK: - Quản lý Tác vụ
+    // MARK: - Task Management
     
-    /// Bắt đầu một tác vụ tải xuống mới.
-    public func startDownload(url: URL, destinationURL: URL) {
-        guard activeDownloads[url] == nil else {
-            print("Download for \(url) is already active or queued.")
+    /// Starts a new download task.
+    public func startDownload(urlString: String) {
+        guard let url = URL(string: urlString) else {
+            print("Invalid URL: \(urlString)")
             return
         }
         
-        // Kiểm tra nếu task đã tồn tại
+        // Create fileName and destinationURL
+        let fileName = url.lastPathComponent
+        let destinationURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent(fileName)
+        
+        // Check if task already exists
         if let existingTask = downloadTasks.first(where: { $0.url == url }) {
             guard existingTask.state != .completed else {
                 print("Download for \(url) is already completed.")
@@ -102,7 +113,7 @@ public class DownloadManager: NSObject, ObservableObject {
                 resumeDownload(for: url, withResumeData: existingTask.resumeData)
                 return
             }
-            // Reset task nếu không completed hoặc không resume được
+            // Reset task if not completed or resumable
             existingTask.state = .pending
             existingTask.progress = 0.0
             existingTask.downloadedBytes = 0
@@ -110,18 +121,23 @@ public class DownloadManager: NSObject, ObservableObject {
             existingTask.resumeData = nil
             existingTask.startTime = Date()
         } else {
-            // Kiểm tra file tồn tại
+            // Check if file exists
             if FileManager.default.fileExists(atPath: destinationURL.path) {
-                print("File already exists at destination. Skipping.")
+                print("File already exists at destination: \(destinationURL.path). Skipping.")
                 return
             }
-            let newTask = DownloadTask(url: url, destinationURL: destinationURL)
+            let newTask = DownloadTask(url: url, fileName: fileName)
             newTask.state = .pending
             newTask.startTime = Date()
             downloadTasks.append(newTask)
         }
         
-        let download = Download(url: url, destinationURL: destinationURL)
+        guard activeDownloads[url] == nil else {
+            print("Download for \(url) is already active or queued.")
+            return
+        }
+        
+        let download = Download(url: url, fileName: fileName)
         download.task = session.downloadTask(with: url)
         download.task?.resume()
         activeDownloads[url] = download
@@ -129,25 +145,22 @@ public class DownloadManager: NSObject, ObservableObject {
         saveTasks()
     }
     
-    /// Tạm dừng một tác vụ tải xuống.
+    /// Pauses a download task.
     public func pauseDownload(for url: URL) {
         guard let download = activeDownloads[url] else { return }
         download.task?.cancel(byProducingResumeData: { data in
             download.resumeData = data
             self.delegate?.downloadManager(self, didUpdateResumeDataForTaskWithURL: url, resumeData: data)
             self.delegate?.downloadManager(self, didChangeState: .paused, forTaskWithURL: url)
-            DispatchQueue.main.async { [weak self] in
-                guard let self else { return }
-                if let task = self.downloadTasks.first(where: { $0.url == url }) {
-                    task.state = .paused
-                    task.resumeData = data
-                }
+            if let task = self.downloadTasks.first(where: { $0.url == url }) {
+                task.state = .paused
+                task.resumeData = data
             }
             self.saveTasks()
         })
     }
     
-    /// Tiếp tục một tác vụ tải xuống.
+    /// Resumes a download task.
     public func resumeDownload(for url: URL, withResumeData externalResumeData: Data? = nil) {
         guard let download = activeDownloads[url] else {
             print("No active download for \(url).")
@@ -156,8 +169,8 @@ public class DownloadManager: NSObject, ObservableObject {
         
         let resumeData = externalResumeData ?? download.resumeData
         guard let resumeData = resumeData else {
-            // Không có resumeData, start new
-            startDownload(url: url, destinationURL: download.destinationURL)
+            // No resumeData, start new
+            startDownload(urlString: url.absoluteString)
             return
         }
         
@@ -173,7 +186,7 @@ public class DownloadManager: NSObject, ObservableObject {
         saveTasks()
     }
     
-    /// Hủy một tác vụ tải xuống.
+    /// Cancels a download task.
     public func cancelDownload(for url: URL) {
         guard let download = activeDownloads[url] else { return }
         download.task?.cancel()
@@ -188,30 +201,35 @@ public class DownloadManager: NSObject, ObservableObject {
         saveTasks()
     }
     
-    /// Xóa một tác vụ và file tải xuống.
+    /// Deletes a download task and its associated file.
     public func deleteDownload(for url: URL) {
-        // Hủy task nếu đang active
+        // Cancel task if active
         cancelDownload(for: url)
         
-        // Xóa file tại destinationURL nếu tồn tại
+        // Delete file at destinationURL if it exists
         if let task = downloadTasks.first(where: { $0.url == url }) {
-            if FileManager.default.fileExists(atPath: task.destinationURL.path) {
+            let filePath = task.destinationURL.path
+            if FileManager.default.fileExists(atPath: filePath) {
                 do {
                     try FileManager.default.removeItem(at: task.destinationURL)
-                    print("File deleted at: \(task.destinationURL.path)")
+                    print("File deleted successfully at: \(filePath)")
                 } catch {
-                    print("Error deleting file: \(error.localizedDescription)")
+                    print("Error deleting file at \(filePath): \(error.localizedDescription)")
                 }
+            } else {
+                print("File does not exist at: \(filePath)")
             }
-            // Xóa task khỏi danh sách
+            // Always remove task from list, even if file doesn't exist
             if let index = downloadTasks.firstIndex(where: { $0.url == url }) {
                 downloadTasks.remove(at: index)
             }
+        } else {
+            print("No task found for URL: \(url)")
         }
         saveTasks()
     }
     
-    /// Hủy tất cả các tác vụ tải xuống.
+    /// Cancels all download tasks.
     public func cancelAllDownloads() {
         for download in activeDownloads.values {
             download.task?.cancel()
@@ -226,59 +244,79 @@ public class DownloadManager: NSObject, ObservableObject {
         saveTasks()
     }
     
-    /// Lấy danh sách các tác vụ đang hoạt động.
+    /// Retrieves the list of active downloads.
     public func getActiveDownloads() -> [Download] {
         return Array(activeDownloads.values)
     }
     
-    /// Lấy một tác vụ tải xuống cụ thể.
+    /// Retrieves a specific download task.
     public func getDownload(for url: URL) -> Download? {
         return activeDownloads[url]
     }
     
-    // MARK: - Lưu và Tải Dữ liệu
+    // MARK: - Save and Load Data
     
-    /// Lưu danh sách các tác vụ tải xuống vào tệp JSON.
+    /// Saves the list of download tasks to a JSON file.
     private func saveTasks() {
         do {
             let data = try JSONEncoder().encode(downloadTasks)
             try data.write(to: tasksSaveURL)
+            #if DEBUG
+            print("Tasks saved to: \(tasksSaveURL.path)")
+            #endif
         } catch {
             print("Failed to save tasks: \(error.localizedDescription)")
         }
     }
     
-    /// Tải danh sách các tác vụ đã lưu từ tệp JSON.
+    /// Loads the list of saved tasks from a JSON file.
     private func loadTasks() {
-        guard FileManager.default.fileExists(atPath: tasksSaveURL.path) else { return }
+        guard FileManager.default.fileExists(atPath: tasksSaveURL.path) else {
+            print("No tasks file found at: \(tasksSaveURL.path)")
+            return
+        }
         
         do {
             let data = try Data(contentsOf: tasksSaveURL)
             let decoder = JSONDecoder()
             downloadTasks = try decoder.decode([DownloadTask].self, from: data)
             
-            // Cập nhật trạng thái của các tác vụ nếu cần
+            // Update task states if needed
+            var tasksToRemove: [DownloadTask] = []
             for task in downloadTasks {
                 if task.state == .downloading {
-                    // Nếu app crash khi downloading, set paused nếu có resumeData, else cancelled
                     if task.resumeData != nil {
                         task.state = .paused
                     } else {
                         task.state = .cancelled
                     }
                 } else if task.state == .pending {
-                    task.state = .cancelled // Pending không persist tốt
+                    task.state = .cancelled
+                } else if task.state == .completed {
+                    // Check if file exists at recreated destinationURL
+                    if !FileManager.default.fileExists(atPath: task.destinationURL.path) {
+                        print("File missing for completed task: \(task.fileName). Marking as failed.")
+                        task.state = .failed
+                        tasksToRemove.append(task)
+                    }
                 }
-                // Sync với activeDownloads
+                // Sync with activeDownloads
                 if task.state == .paused && task.resumeData != nil {
-                    let download = Download(url: task.url, destinationURL: task.destinationURL)
+                    let download = Download(url: task.url, fileName: task.fileName)
                     download.resumeData = task.resumeData
                     download.downloadedBytes = task.downloadedBytes
                     download.totalBytes = task.totalBytes
                     activeDownloads[task.url] = download
                 }
             }
+            
+            // Remove invalid tasks
+            downloadTasks.removeAll { tasksToRemove.contains($0) }
+            
             saveTasks()
+            #if DEBUG
+            print("Loaded \(downloadTasks.count) tasks from: \(tasksSaveURL.path)")
+            #endif
         } catch {
             print("Failed to load tasks: \(error.localizedDescription)")
         }
@@ -292,36 +330,34 @@ extension DownloadManager: URLSessionDownloadDelegate {
         guard let sourceURL = downloadTask.originalRequest?.url, let download = activeDownloads[sourceURL] else { return }
         
         do {
-            // Di chuyển tệp đã tải xuống đến đích
+            // Move downloaded file to destination
             if FileManager.default.fileExists(atPath: download.destinationURL.path) {
                 try FileManager.default.removeItem(at: download.destinationURL)
             }
-#if DEBUG
+            #if DEBUG
             print("Moving file to: \(download.destinationURL.path)")
-#endif
+            #endif
             try FileManager.default.moveItem(at: location, to: download.destinationURL)
             
-            // Cập nhật task state
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
-                if let task = self.downloadTasks.first(where: { $0.url == sourceURL }) {
+                // Update task state
+                if let task = downloadTasks.first(where: { $0.url == sourceURL }) {
                     task.state = .completed
                     task.resumeData = nil
                 }
+                
+                delegate?.downloadManager(self, didCompleteTaskWithURL: sourceURL, atLocation: download.destinationURL)
+                activeDownloads.removeValue(forKey: sourceURL)
+                saveTasks()
             }
-            delegate?.downloadManager(self, didCompleteTaskWithURL: sourceURL, atLocation: download.destinationURL)
-            activeDownloads.removeValue(forKey: sourceURL)
-            saveTasks()
             
         } catch {
-            // Thông báo lỗi
+            // Notify error
             delegate?.downloadManager(self, didFailTaskWithURL: sourceURL, withError: error)
-            DispatchQueue.main.async { [weak self] in
-                guard let self = self else { return }
-                if let task = self.downloadTasks.first(where: { $0.url == sourceURL }) {
-                    task.state = .failed
-                    task.resumeData = download.resumeData
-                }
+            if let task = downloadTasks.first(where: { $0.url == sourceURL }) {
+                task.state = .failed
+                task.resumeData = download.resumeData
             }
             saveTasks()
         }
@@ -340,9 +376,9 @@ extension DownloadManager: URLSessionDownloadDelegate {
             progress = 0.0 // Unknown size
         }
         
-        // Cập nhật task
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
+            // Update task
             if let task = self.downloadTasks.first(where: { $0.url == sourceURL }) {
                 task.progress = progress
                 task.downloadedBytes = totalBytesWritten
@@ -360,18 +396,15 @@ extension DownloadManager: URLSessionDownloadDelegate {
         
         if let error = error {
             if (error as NSError).code == NSURLErrorCancelled {
-                // Tác vụ đã bị tạm dừng
+                // Task was paused
                 download.resumeData = (error as NSError).userInfo[NSURLSessionDownloadTaskResumeData] as? Data
                 delegate?.downloadManager(self, didUpdateResumeDataForTaskWithURL: sourceURL, resumeData: download.resumeData)
-                DispatchQueue.main.async { [weak self] in
-                    guard let self else { return }
-                    if let task = self.downloadTasks.first(where: { $0.url == sourceURL }) {
-                        task.state = .paused
-                        task.resumeData = download.resumeData
-                    }
+                if let task = downloadTasks.first(where: { $0.url == sourceURL }) {
+                    task.state = .paused
+                    task.resumeData = download.resumeData
                 }
             } else {
-                // Lỗi khác
+                // Other error
                 delegate?.downloadManager(self, didFailTaskWithURL: sourceURL, withError: error)
                 if let task = downloadTasks.first(where: { $0.url == sourceURL }) {
                     task.state = .failed

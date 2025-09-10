@@ -9,23 +9,23 @@ import SwiftUI
 
 // MARK: - DownloadView
 
-/// Giao diện người dùng SwiftUI để hiển thị danh sách tải xuống.
+/// SwiftUI user interface for displaying the list of downloads.
 struct DownloadView: View {
     
     @StateObject private var viewModel = DownloadViewModel()
     @State private var urlString = ""
     @State private var showInvalidURLAlert = false
-    @State private var taskToDelete: DownloadTask? // Để xác nhận xóa
+    @State private var taskToDelete: DownloadTask? // To confirm deletion
     
     var body: some View {
         NavigationView {
             VStack {
                 HStack {
-                    TextField("Nhập URL để tải xuống", text: $urlString)
+                    TextField("Enter URL to download", text: $urlString)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding(.horizontal)
                     
-                    Button("Tải") {
+                    Button("Download") {
                         if URL(string: urlString) != nil {
                             viewModel.startDownload(urlString: urlString)
                             urlString = ""
@@ -39,7 +39,7 @@ struct DownloadView: View {
                 .padding(.top)
                 
                 if viewModel.downloadTasks.isEmpty {
-                    Text("Không có tác vụ tải xuống nào.")
+                    Text("No download tasks available.")
                         .foregroundColor(.secondary)
                         .padding()
                 } else {
@@ -54,30 +54,30 @@ struct DownloadView: View {
                     .listStyle(.insetGrouped)
                 }
             }
-            .navigationTitle("Quản lý Tải xuống")
-            .alert("URL không hợp lệ", isPresented: $showInvalidURLAlert) {
+            .navigationTitle("Download Manager")
+            .alert("Invalid URL", isPresented: $showInvalidURLAlert) {
                 Button("OK", role: .cancel) { }
             } message: {
-                Text("Vui lòng nhập một URL hợp lệ để tải xuống.")
+                Text("Please enter a valid URL to download.")
             }
-            .confirmationDialog("Xác nhận xóa", isPresented: Binding(
+            .confirmationDialog("Confirm Deletion", isPresented: Binding(
                 get: { taskToDelete != nil },
                 set: { if !$0 { taskToDelete = nil } }
             )) {
-                Button("Xóa", role: .destructive) {
+                Button("Delete", role: .destructive) {
                     if let task = taskToDelete {
                         viewModel.deleteDownload(for: task)
                     }
                     taskToDelete = nil
                 }
-                Button("Hủy", role: .cancel) {
+                Button("Cancel", role: .cancel) {
                     taskToDelete = nil
                 }
             } message: {
-                Text("Bạn có chắc chắn muốn xóa tác vụ này?")
+                Text("Are you sure you want to delete this task?")
             }
             .onAppear {
-                // Không cần loadTasks vì DownloadManager đã load trong init
+                // No need to loadTasks as DownloadManager loads them in init
             }
         }
     }
@@ -85,26 +85,17 @@ struct DownloadView: View {
 
 // MARK: - DownloadRow
 
-/// Một hàng riêng lẻ trong danh sách tải xuống.
+/// A single row in the download list.
 struct DownloadRow: View {
     @ObservedObject var task: DownloadTask
     @EnvironmentObject var viewModel: DownloadViewModel
-    let onDelete: () -> Void // Callback để trigger confirmationDialog
+    let onDelete: () -> Void // Callback to trigger confirmationDialog
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(task.url.lastPathComponent)
                 .font(.headline)
-            
-            if task.state == .downloading || task.state == .paused || task.state == .pending {
-                HStack {
-                    ProgressView(value: min(max(task.progress, 0), 1))
-                        .progressViewStyle(.linear)
-                    Text(String(format: "%.0f%%", min(max(task.progress, 0), 1) * 100))
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                }
-            }
+                .fontWeight(.medium)
             
             HStack {
                 Text(task.state.rawValue)
@@ -121,7 +112,7 @@ struct DownloadRow: View {
                     Text(task.fileSizeFormatted)
                         .font(.caption)
                         .foregroundColor(.secondary)
-                } else if task.totalBytes <= 0 {
+                } else if task.downloadedBytes <= 0 {
                     Text("Unknown size")
                         .font(.caption)
                         .foregroundColor(.secondary)
@@ -140,7 +131,7 @@ struct DownloadRow: View {
                 Button(action: {
                     viewModel.pauseDownload(for: task)
                 }) {
-                    Text("Tạm dừng")
+                    Text("Pause")
                         .font(.caption)
                         .frame(maxWidth: .infinity)
                 }
@@ -149,7 +140,7 @@ struct DownloadRow: View {
                 Button(action: {
                     viewModel.cancelDownload(for: task)
                 }) {
-                    Text("Hủy")
+                    Text("Cancel")
                         .font(.caption)
                         .foregroundColor(.red)
                         .frame(maxWidth: .infinity)
@@ -159,7 +150,7 @@ struct DownloadRow: View {
                 Button(action: {
                     viewModel.resumeDownload(for: task)
                 }) {
-                    Text("Tiếp tục")
+                    Text("Resume")
                         .font(.caption)
                         .frame(maxWidth: .infinity)
                 }
@@ -168,7 +159,7 @@ struct DownloadRow: View {
                 Button(action: {
                     viewModel.cancelDownload(for: task)
                 }) {
-                    Text("Hủy")
+                    Text("Cancel")
                         .font(.caption)
                         .foregroundColor(.red)
                         .frame(maxWidth: .infinity)
@@ -178,7 +169,7 @@ struct DownloadRow: View {
                 Button(action: {
                     viewModel.cancelDownload(for: task)
                 }) {
-                    Text("Hủy")
+                    Text("Cancel")
                         .font(.caption)
                         .foregroundColor(.red)
                         .frame(maxWidth: .infinity)
@@ -188,7 +179,7 @@ struct DownloadRow: View {
                 Button(action: {
                     onDelete()
                 }) {
-                    Text("Xóa")
+                    Text("Delete")
                         .font(.caption)
                         .foregroundColor(.purple)
                         .frame(maxWidth: .infinity)
@@ -198,7 +189,7 @@ struct DownloadRow: View {
                 Button(action: {
                     viewModel.resumeDownload(for: task)
                 }) {
-                    Text("Thử lại")
+                    Text("Retry")
                         .font(.caption)
                         .frame(maxWidth: .infinity)
                 }
@@ -207,7 +198,7 @@ struct DownloadRow: View {
                 Button(action: {
                     onDelete()
                 }) {
-                    Text("Xóa")
+                    Text("Delete")
                         .font(.caption)
                         .foregroundColor(.purple)
                         .frame(maxWidth: .infinity)
