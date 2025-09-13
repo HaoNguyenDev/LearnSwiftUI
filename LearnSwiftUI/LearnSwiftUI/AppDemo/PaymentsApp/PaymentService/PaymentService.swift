@@ -10,8 +10,8 @@
 import Foundation
 
 protocol PaymentService {
-    func deposit(amount: Decimal, completion: @escaping (Result<String, Error>) -> Void)
-    func transfer(toRecipient: String, amount: Decimal, completion: @escaping (Result<String, Error>) -> Void)
-    func withdraw(amount: Decimal, completion: @escaping (Result<String, Error>) -> Void)
-    func cancelTransaction(_ transactionID: String, completion: @escaping (Result<Bool, Error>) -> Void)
+    func deposit(_ amount: Double, completion: @escaping (Result<TransactionResult, Error>) -> Void)
+    func transfer(_ toRecipient: String,_ amount: Double, completion: @escaping (Result<TransactionResult, Error>) -> Void)
+    func withdraw(_ amount: Double, completion: @escaping (Result<TransactionResult, Error>) -> Void)
+    func cancelTransaction(_ transactionID: String, completion: @escaping (Result<TransactionResult, Error>) -> Void)
 }

@@ -22,9 +22,9 @@ class PaymentFactory {
         case "TH":
             return ThaiPaymentService()
         case "US", "GB": // PayPal for other country
-            return PayPalPaymentService()
+            return VisaPaymentService()
         default:
-            return PayPalPaymentService() // Fallback
+            return VisaPaymentService() // Fallback
         }
     }
 }
