@@ -9,16 +9,16 @@
 class MomoSDK {
     static let shared = MomoSDK()
     
-    func deposit(amount: NSDecimalNumber, completion: @escaping (String?, Error?) -> Void) {
-        completion("123456789", nil)
+    func deposit(amount: Double, completion: @escaping (String?, Error?) -> Void) {
+        completion("Deposit successfully", nil)
     }
     
-    func transfer(toRecipient: String, amount: NSDecimalNumber, completion: @escaping (String?, Error?) -> Void) {
-        completion("987654321", nil)
+    func transfer(toRecipient: String, amount: Double, completion: @escaping (String?, Error?) -> Void) {
+        completion("Transfer successfully", nil)
     }
     
-    func withdraw(amount: NSDecimalNumber, completion: @escaping (String?, Error?) -> Void) {
-        completion("456123789", nil)
+    func withdraw(amount: Double, completion: @escaping (String?, Error?) -> Void) {
+        completion(nil, NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Withdrawal failed"]))
     }
     
     func cancelTransaction(_ transactionID: String, completion: @escaping (Bool, Error?) -> Void) {
@@ -36,36 +36,42 @@ class MomoPaymentService: PaymentService {
         self.momoSDK = MomoSDK.shared
     }
     
-    func deposit(amount: Decimal, completion: @escaping (Result<String, Error>) -> Void) {
+    func deposit(_ amount: Double, completion: @escaping (Result<TransactionResult, Error>) -> Void) {
         // Call Momo deposit API/SDK
-        momoSDK.deposit(amount: NSDecimalNumber(decimal: amount)) { transactionID, error in
+        momoSDK.deposit(amount: amount) { message, error in
             if let error = error {
                 completion(.failure(error))
             } else {
-                completion(.success(transactionID ?? ""))
+                completion(.success(TransactionResult(transactionId: UUID().uuidString,
+                                                      transactionType: "deposit",
+                                                      amount: amount,
+                                                      currency: "VND",
+                                                      status: true,
+                                                      message: message,
+                                                      error: nil,
+                                                      createdAt: Date(),
+                                                      updatedAt: Date(),
+                                                      expiration: nil,
+                                                      metadata: nil)))
             }
         }
     }
     
-    func transfer(toRecipient: String, amount: Decimal, completion: @escaping (Result<String, Error>) -> Void) {
-        momoSDK.transfer(toRecipient: toRecipient, amount: NSDecimalNumber(decimal: amount)) { transactionID, error in
+    func transfer(_ toRecipient: String, _ amount: Double, completion: @escaping (Result<TransactionResult, Error>) -> Void) {
+        momoSDK.transfer(toRecipient: toRecipient, amount: amount) { transactionID, error in
             // Handle completion
         }
     }
     
-    func withdraw(amount: Decimal, completion: @escaping (Result<String, Error>) -> Void) {
-        momoSDK.withdraw(amount: NSDecimalNumber(decimal: amount)) { transactionID, error in
+    func withdraw(_ amount: Double, completion: @escaping (Result<TransactionResult, Error>) -> Void) {
+        momoSDK.withdraw(amount: amount) { transactionID, error in
             // Handle completion
         }
     }
     
-    func cancelTransaction(_ transactionID: String, completion: @escaping (Result<Bool, Error>) -> Void) {
+    func cancelTransaction(_ transactionID: String, completion: @escaping (Result<TransactionResult, any Error>) -> Void) {
         momoSDK.cancelTransaction(transactionID) { success, error in
-            if let error = error {
-                completion(.failure(error))
-            } else {
-                completion(.success(success))
-            }
+            // Handle completion
         }
     }
 }
