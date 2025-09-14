@@ -18,10 +18,22 @@ struct TransactionResult {
     let updatedAt: Date?
     let expiration: Date?
     let metadata: [String: Any]?
+    let provider: String?
 }
 
 enum TransactionError: Error {
     case invalidAmount(Double)
     case insufficientFunds(Double)
     case unknown
+    
+    var localizedDescription: String {
+        switch self {
+        case .invalidAmount(let amount):
+            return "Invalid amount: \(amount)"
+        case .insufficientFunds(let amount):
+            return "Insufficient funds: \(amount)"
+        case .unknown:
+            return "Unknown error"
+        }
+    }
 }

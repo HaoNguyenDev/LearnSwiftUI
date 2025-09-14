@@ -78,12 +78,12 @@
 		DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */; };
 		DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */; };
 		DAA7090B2E75D29E006F8E70 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7090A2E75D29E006F8E70 /* LocationManager.swift */; };
-		DAA7090F2E75D3CE006F8E70 /* PaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7090E2E75D3CE006F8E70 /* PaymentService.swift */; };
+		DAA7090F2E75D3CE006F8E70 /* PaymentServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7090E2E75D3CE006F8E70 /* PaymentServiceProtocol.swift */; };
 		DAA709122E75D447006F8E70 /* MomoPaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA709112E75D447006F8E70 /* MomoPaymentService.swift */; };
 		DAA709142E75D553006F8E70 /* ThaiPaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA709132E75D553006F8E70 /* ThaiPaymentService.swift */; };
 		DAA709162E75D60C006F8E70 /* VisaPaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA709152E75D60C006F8E70 /* VisaPaymentService.swift */; };
 		DAA709192E75D6F5006F8E70 /* PaymentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA709182E75D6F5006F8E70 /* PaymentProvider.swift */; };
-		DAA7091C2E75D85F006F8E70 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7091B2E75D85F006F8E70 /* PaymentViewController.swift */; };
+		DAA7091C2E75D85F006F8E70 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7091B2E75D85F006F8E70 /* PaymentView.swift */; };
 		DAA7091F2E75E2CC006F8E70 /* ResultAndError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7091E2E75E2BE006F8E70 /* ResultAndError.swift */; };
 		DAA930402E33C99C000FE238 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9303F2E33C995000FE238 /* ButtonModifier.swift */; };
 		DAAA67222E616D8C004075B7 /* TextFieldBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAA67212E616D8C004075B7 /* TextFieldBootcamp.swift */; };
@@ -200,12 +200,12 @@
 		DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentBootcamp.swift; sourceTree = "<group>"; };
 		DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableBootcamp.swift; sourceTree = "<group>"; };
 		DAA7090A2E75D29E006F8E70 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		DAA7090E2E75D3CE006F8E70 /* PaymentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentService.swift; sourceTree = "<group>"; };
+		DAA7090E2E75D3CE006F8E70 /* PaymentServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentServiceProtocol.swift; sourceTree = "<group>"; };
 		DAA709112E75D447006F8E70 /* MomoPaymentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomoPaymentService.swift; sourceTree = "<group>"; };
 		DAA709132E75D553006F8E70 /* ThaiPaymentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThaiPaymentService.swift; sourceTree = "<group>"; };
 		DAA709152E75D60C006F8E70 /* VisaPaymentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisaPaymentService.swift; sourceTree = "<group>"; };
 		DAA709182E75D6F5006F8E70 /* PaymentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProvider.swift; sourceTree = "<group>"; };
-		DAA7091B2E75D85F006F8E70 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		DAA7091B2E75D85F006F8E70 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		DAA7091E2E75E2BE006F8E70 /* ResultAndError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultAndError.swift; sourceTree = "<group>"; };
 		DAA9303F2E33C995000FE238 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		DAAA67212E616D8C004075B7 /* TextFieldBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBootcamp.swift; sourceTree = "<group>"; };
@@ -603,7 +603,7 @@
 		DAA7090D2E75D3C7006F8E70 /* PaymentService */ = {
 			isa = PBXGroup;
 			children = (
-				DAA7090E2E75D3CE006F8E70 /* PaymentService.swift */,
+				DAA7090E2E75D3CE006F8E70 /* PaymentServiceProtocol.swift */,
 			);
 			path = PaymentService;
 			sourceTree = "<group>";
@@ -629,7 +629,7 @@
 		DAA7091A2E75D855006F8E70 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DAA7091B2E75D85F006F8E70 /* PaymentViewController.swift */,
+				DAA7091B2E75D85F006F8E70 /* PaymentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -753,7 +753,7 @@
 				DA5D718E2E3FBA6A00C78E40 /* GithubUser.swift in Sources */,
 				DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */,
 				DAEEFB762E366D4000E78DA2 /* ObservableObjectBootcamp.swift in Sources */,
-				DAA7091C2E75D85F006F8E70 /* PaymentViewController.swift in Sources */,
+				DAA7091C2E75D85F006F8E70 /* PaymentView.swift in Sources */,
 				DA8748992E6B007700B189F3 /* WeatherDataPill.swift in Sources */,
 				DA5D71252E3D189100C78E40 /* Splash.swift in Sources */,
 				DAEBAE4A2DF28E1E00082B1C /* SubviewBootcamp.swift in Sources */,
@@ -820,7 +820,7 @@
 				DAA709122E75D447006F8E70 /* MomoPaymentService.swift in Sources */,
 				DAA7090B2E75D29E006F8E70 /* LocationManager.swift in Sources */,
 				DA8748952E6B006A00B189F3 /* WeatherLoadingView.swift in Sources */,
-				DAA7090F2E75D3CE006F8E70 /* PaymentService.swift in Sources */,
+				DAA7090F2E75D3CE006F8E70 /* PaymentServiceProtocol.swift in Sources */,
 				DA5D71A02E40CC8300C78E40 /* AsyncAwaitBootcamp.swift in Sources */,
 				DA5D71432E3E4BF700C78E40 /* BackButton.swift in Sources */,
 				DA5D71892E3FB05100C78E40 /* UserRowView.swift in Sources */,

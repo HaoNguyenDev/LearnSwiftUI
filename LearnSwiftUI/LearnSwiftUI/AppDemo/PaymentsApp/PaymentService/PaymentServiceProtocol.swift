@@ -9,7 +9,7 @@
 // Protocol Definition (Abstraction According to DIP and ISP)
 import Foundation
 
-protocol PaymentService {
+protocol PaymentServiceProtocol {
     func deposit(_ amount: Double, completion: @escaping (Result<TransactionResult, Error>) -> Void)
     func transfer(_ toRecipient: String,_ amount: Double, completion: @escaping (Result<TransactionResult, Error>) -> Void)
     func withdraw(_ amount: Double, completion: @escaping (Result<TransactionResult, Error>) -> Void)

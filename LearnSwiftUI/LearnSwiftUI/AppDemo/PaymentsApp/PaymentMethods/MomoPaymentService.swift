@@ -14,7 +14,7 @@ class MomoSDK {
     }
     
     func transfer(toRecipient: String, amount: Double, completion: @escaping (String?, Error?) -> Void) {
-        completion("Transfer successfully", nil)
+        completion(nil, NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Transfer failed"]))
     }
     
     func withdraw(amount: Double, completion: @escaping (String?, Error?) -> Void) {
@@ -29,7 +29,7 @@ class MomoSDK {
 // import MomoSDK
 import Foundation
 
-class MomoPaymentService: PaymentService {
+class MomoPaymentService: PaymentServiceProtocol {
     private let momoSDK: MomoSDK // Inject dependency if need
     
     init() {
@@ -52,26 +52,47 @@ class MomoPaymentService: PaymentService {
                                                       createdAt: Date(),
                                                       updatedAt: Date(),
                                                       expiration: nil,
-                                                      metadata: nil)))
+                                                      metadata: nil,
+                                                      provider: "Momo")))
             }
         }
     }
     
     func transfer(_ toRecipient: String, _ amount: Double, completion: @escaping (Result<TransactionResult, Error>) -> Void) {
         momoSDK.transfer(toRecipient: toRecipient, amount: amount) { transactionID, error in
-            // Handle completion
+            if error != nil {
+                completion(.failure(TransactionError.invalidAmount(amount)))
+            }
         }
     }
     
     func withdraw(_ amount: Double, completion: @escaping (Result<TransactionResult, Error>) -> Void) {
         momoSDK.withdraw(amount: amount) { transactionID, error in
-            // Handle completion
+            if error != nil {
+                completion(.failure(TransactionError.insufficientFunds(amount)))
+            }
         }
     }
     
     func cancelTransaction(_ transactionID: String, completion: @escaping (Result<TransactionResult, any Error>) -> Void) {
         momoSDK.cancelTransaction(transactionID) { success, error in
-            // Handle completion
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                completion(.success(TransactionResult(transactionId: transactionID,
+                                                      transactionType: "cancel",
+                                                      amount: 100.0,
+                                                      currency: "VND",
+                                                      status: true,
+                                                      message: success ? "Success" : "Fail",
+                                                      error: nil,
+                                                      createdAt: Date(),
+                                                      updatedAt: Date(),
+                                                      expiration: nil,
+                                                      metadata: nil,
+                                                      provider: "Momo")))
+                
+            }
         }
     }
 }

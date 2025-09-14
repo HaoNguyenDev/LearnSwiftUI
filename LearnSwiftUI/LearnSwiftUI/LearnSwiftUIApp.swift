@@ -59,7 +59,14 @@ struct LearnSwiftUIApp: App {
 //                    .navigationTitle("Weather")
 //            }
             
-            DownloadView()
+//            DownloadView()
+          
+            let countryCode = getCurrentCountryCode()
+            let paymentService = PaymentFactory.createPaymentService(for: countryCode)
+            NavigationStack {
+                PaymentView(vm: PaymentVM(paymentService: paymentService))
+                    .navigationBarTitle("Payment View")
+            }
 
         }
     }
