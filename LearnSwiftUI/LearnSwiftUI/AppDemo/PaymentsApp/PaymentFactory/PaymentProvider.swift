@@ -15,16 +15,27 @@ enum PaymentProvider {
 }
 
 class PaymentFactory {
-    static func createPaymentService(for countryCode: String) -> PaymentService {
-        switch countryCode.uppercased() {
-        case "VN":
-            return MomoPaymentService()
-        case "TH":
-            return ThaiPaymentService()
-        case "US", "GB": // PayPal for other country
-            return VisaPaymentService()
-        default:
-            return VisaPaymentService() // Fallback
+    private static var cachePaymentService: [String: PaymentServiceProtocol] = [:]
+    private init() {}
+    static func createPaymentService(for countryCode: String) -> PaymentServiceProtocol {
+        if let existingPaymentService = PaymentFactory.cachePaymentService[countryCode] {
+            return existingPaymentService
+        } else {
+            switch countryCode.uppercased() {
+            case "VN":
+                cachePaymentService["VN"] = MomoPaymentService()
+                return MomoPaymentService()
+            case "TH":
+                cachePaymentService["TH"] = ThaiPaymentService()
+                return ThaiPaymentService()
+            case "US", "GB": // Visa for other country
+                cachePaymentService["US"] = VisaPaymentService()
+                cachePaymentService["GB"] = VisaPaymentService()
+                return VisaPaymentService()
+            default:
+                return VisaPaymentService() // Fallback
+            }
         }
+       
     }
 }

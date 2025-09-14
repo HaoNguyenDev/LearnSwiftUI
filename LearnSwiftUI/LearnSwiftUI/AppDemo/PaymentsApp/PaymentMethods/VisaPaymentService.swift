@@ -16,13 +16,25 @@ class VisaSDK {
     }
     
     // Transfer
+    func transfer(_ amount: Double, to recipient: String, completion: @escaping (Result<String, Error>) -> Void) {
+        Thread.sleep(forTimeInterval: 1)
+        completion(.success("Transfer successful for \(amount) to \(recipient)!"))
+    }
     
     // Withdraw
+    func withdraw(_ amount: Double, completion: @escaping (Result<String, Error>) -> Void) {
+        Thread.sleep(forTimeInterval: 1)
+        completion(.success("Withdrawal successful for \(amount)!"))
+    }
     
     // Cancel transaction
+    func cancelTransaction(_ transactionId: String, completion: @escaping (Result<String, Error>) -> Void) {
+        Thread.sleep(forTimeInterval: 1)
+        completion(.success("Transaction \(transactionId) cancelled!"))
+    }
 }
 
-class VisaPaymentService: PaymentService {
+class VisaPaymentService: PaymentServiceProtocol {
     // Integrate Visa SDK
     private let visaSDK: VisaSDK
     
@@ -32,8 +44,7 @@ class VisaPaymentService: PaymentService {
     
     func deposit(_ amount: Double, completion: @escaping (Result<TransactionResult, Error>) -> Void) {
         // call Visa deposit flow
-        visaSDK.deposit(amount) { [weak self] result in
-            guard let self else { return }
+        visaSDK.deposit(amount) { result in
             switch result {
             case .success(let msg):
                 completion(.success(TransactionResult(transactionId: UUID().uuidString,
@@ -46,7 +57,8 @@ class VisaPaymentService: PaymentService {
                                                       createdAt: Date(),
                                                       updatedAt: Date(),
                                                       expiration: nil,
-                                                      metadata: nil)))
+                                                      metadata: nil,
+                                                      provider: "Visa")))
             case .failure(let error):
                 completion(.failure(error))
             }
@@ -54,12 +66,31 @@ class VisaPaymentService: PaymentService {
     }
     
     func transfer(_ toRecipient: String, _ amount: Double, completion: @escaping (Result<TransactionResult, any Error>) -> Void) {
-        completion(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey:"Transfer to \(toRecipient) failed!"])))
+        visaSDK.transfer(amount, to: toRecipient) { result in
+            switch result {
+            case .success(let msg):
+                completion(.success(TransactionResult(transactionId: UUID().uuidString,
+                                                      transactionType: "transfer",
+                                                      amount: amount,
+                                                      currency: "USD",
+                                                      status: true,
+                                                      message: msg,
+                                                      error: nil,
+                                                      createdAt: Date(),
+                                                      updatedAt: Date(),
+                                                      expiration: nil,
+                                                      metadata: nil,
+                                                      provider: "Visa")))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+        
     }
     
     func withdraw(_ amount: Double, completion: @escaping (Result<TransactionResult, any Error>) -> Void) {
         let transactionResult = TransactionResult(transactionId: UUID().uuidString,
-                                                  transactionType: "deposit",
+                                                  transactionType: "withdraw",
                                                   amount: amount,
                                                   currency: "USD",
                                                   status: true,
@@ -68,7 +99,8 @@ class VisaPaymentService: PaymentService {
                                                   createdAt: Date(),
                                                   updatedAt: nil,
                                                   expiration: nil,
-                                                  metadata: nil)
+                                                  metadata: nil,
+                                                  provider: "Visa")
         completion(.success(transactionResult))
     }
     
