@@ -85,6 +85,8 @@
 		DAA709192E75D6F5006F8E70 /* PaymentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA709182E75D6F5006F8E70 /* PaymentProvider.swift */; };
 		DAA7091C2E75D85F006F8E70 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7091B2E75D85F006F8E70 /* PaymentView.swift */; };
 		DAA7091F2E75E2CC006F8E70 /* ResultAndError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7091E2E75E2BE006F8E70 /* ResultAndError.swift */; };
+		DAA709222E787C42006F8E70 /* PaymentVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA709212E787C42006F8E70 /* PaymentVM.swift */; };
+		DAA709252E787C52006F8E70 /* TransactionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA709242E787C52006F8E70 /* TransactionResult.swift */; };
 		DAA930402E33C99C000FE238 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9303F2E33C995000FE238 /* ButtonModifier.swift */; };
 		DAAA67222E616D8C004075B7 /* TextFieldBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAA67212E616D8C004075B7 /* TextFieldBootcamp.swift */; };
 		DAAA67242E617101004075B7 /* ViewAndAdditional.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAA67232E617101004075B7 /* ViewAndAdditional.swift */; };
@@ -207,6 +209,8 @@
 		DAA709182E75D6F5006F8E70 /* PaymentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProvider.swift; sourceTree = "<group>"; };
 		DAA7091B2E75D85F006F8E70 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		DAA7091E2E75E2BE006F8E70 /* ResultAndError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultAndError.swift; sourceTree = "<group>"; };
+		DAA709212E787C42006F8E70 /* PaymentVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentVM.swift; sourceTree = "<group>"; };
+		DAA709242E787C52006F8E70 /* TransactionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResult.swift; sourceTree = "<group>"; };
 		DAA9303F2E33C995000FE238 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		DAAA67212E616D8C004075B7 /* TextFieldBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBootcamp.swift; sourceTree = "<group>"; };
 		DAAA67232E617101004075B7 /* ViewAndAdditional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAndAdditional.swift; sourceTree = "<group>"; };
@@ -587,6 +591,8 @@
 				DAA7090D2E75D3C7006F8E70 /* PaymentService */,
 				DAA709102E75D43F006F8E70 /* PaymentMethods */,
 				DAA709172E75D6F0006F8E70 /* PaymentFactory */,
+				DAA709232E787C50006F8E70 /* Model */,
+				DAA709202E787C3B006F8E70 /* ViewModel */,
 				DAA7091A2E75D855006F8E70 /* Views */,
 			);
 			path = PaymentsApp;
@@ -640,6 +646,22 @@
 				DAA7091E2E75E2BE006F8E70 /* ResultAndError.swift */,
 			);
 			path = "Result&Error";
+			sourceTree = "<group>";
+		};
+		DAA709202E787C3B006F8E70 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DAA709212E787C42006F8E70 /* PaymentVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DAA709232E787C50006F8E70 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DAA709242E787C52006F8E70 /* TransactionResult.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		DAAE8CBB2E45024800FCBA4E /* Architecture */ = {
@@ -818,6 +840,7 @@
 				DA53B73A2E6086DE001EFC52 /* ListBootcamp.swift in Sources */,
 				DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */,
 				DAA709122E75D447006F8E70 /* MomoPaymentService.swift in Sources */,
+				DAA709252E787C52006F8E70 /* TransactionResult.swift in Sources */,
 				DAA7090B2E75D29E006F8E70 /* LocationManager.swift in Sources */,
 				DA8748952E6B006A00B189F3 /* WeatherLoadingView.swift in Sources */,
 				DAA7090F2E75D3CE006F8E70 /* PaymentServiceProtocol.swift in Sources */,
@@ -836,6 +859,7 @@
 				DAEBAE442DECC2D100082B1C /* GridBootcamp.swift in Sources */,
 				DA5164322E3CB57600642709 /* NavigationManager.swift in Sources */,
 				DA87489E2E6B16B500B189F3 /* WeatherMainView.swift in Sources */,
+				DAA709222E787C42006F8E70 /* PaymentVM.swift in Sources */,
 				DA5D711E2E3D185500C78E40 /* NavRouter.swift in Sources */,
 				DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */,
 				DAAE8CBD2E45028300FCBA4E /* CounterState.swift in Sources */,
