@@ -5,67 +5,6 @@
 //  Created by Hao Nguyen on 13/9/25.
 //
 
-@Observable class PaymentVM {
-    
-    var result: String?
-    var error: Error?
-    
-    private let paymentService: PaymentServiceProtocol
-    
-    init(paymentService: PaymentServiceProtocol) {
-        self.paymentService = paymentService
-    }
-    
-    func deposit(amount: Double) {
-        paymentService.deposit(amount) { [weak self] result in
-            guard let self else { return }
-            switch result {
-            case .success(let result):
-                self.result = "Deposit success with \(result)"
-            case .failure(let error):
-                self.error = error
-            }
-        }
-    }
-    
-    func transfer(toRecipient: String, amount: Double) {
-        paymentService.transfer(toRecipient, amount) { [weak self] result in
-            guard let self else { return }
-            switch result {
-            case .success(let result):
-                self.result = result.message
-            case .failure(let error):
-                self.error = error
-            }
-        }
-    }
-    
-    func withdraw(amount: Double) {
-        paymentService.withdraw(amount) { [weak self] result in
-            guard let self else { return }
-            switch result {
-            case .success(let result):
-                self.result = result.message
-            case .failure(let error):
-                self.error = error
-            }
-        }
-    }
-    
-    func cancelTransaction(transactionID: String) {
-        paymentService.cancelTransaction(transactionID) { [weak self] result in
-            guard let self else { return }
-            switch result {
-            case .success(let state):
-                self.result = "Canceled transactionID: \(transactionID) with state: \(state)"
-            case .failure(let error):
-                self.error = error
-            }
-        }
-    }
-}
-
-
 import SwiftUI
 
 struct PaymentView: View {
@@ -85,7 +24,6 @@ struct PaymentView: View {
             // MARK: Deposit
             Button {
                 deposit(amount: amountString)
-                
             } label: {
                 Text("Deposit")
             }
@@ -116,7 +54,16 @@ struct PaymentView: View {
             .buttonStyle(.borderedProminent)
             
             Text("Payment result info")
-            Text(vm.result ?? "")
+            
+            
+            
+            if vm.error != nil, let transactionError = vm.error as? TransactionError {
+                let errorMessage = transactionError.localizedDescription
+                Text("Error info: \(errorMessage)")
+            } else {
+                Text(vm.result ?? "")
+            }
+            
         }
         .padding()
     }
