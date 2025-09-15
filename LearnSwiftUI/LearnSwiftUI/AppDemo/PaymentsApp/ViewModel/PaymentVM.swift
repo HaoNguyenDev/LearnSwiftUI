@@ -4,7 +4,7 @@
 //
 //  Created by Hao Nguyen on 15/9/25.
 //
-import SwiftUIg
+import SwiftUI
 
 @Observable class PaymentVM {
     
