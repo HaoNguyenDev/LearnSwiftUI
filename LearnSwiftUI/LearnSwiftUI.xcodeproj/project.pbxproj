@@ -211,6 +211,7 @@
 		DAA7091E2E75E2BE006F8E70 /* ResultAndError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultAndError.swift; sourceTree = "<group>"; };
 		DAA709212E787C42006F8E70 /* PaymentVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentVM.swift; sourceTree = "<group>"; };
 		DAA709242E787C52006F8E70 /* TransactionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResult.swift; sourceTree = "<group>"; };
+		DAA7092D2E79CB4D006F8E70 /* SwiftConcurrency.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftConcurrency.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAA9303F2E33C995000FE238 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		DAAA67212E616D8C004075B7 /* TextFieldBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBootcamp.swift; sourceTree = "<group>"; };
 		DAAA67232E617101004075B7 /* ViewAndAdditional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAndAdditional.swift; sourceTree = "<group>"; };
@@ -571,6 +572,7 @@
 				DAFCDF682E62052500B97C00 /* SOLID.playground */,
 				DA4127202E6961DE000ED05B /* FactoryMethod.playground */,
 				DA1D32272E6F050F007BDEA2 /* DownloadOperation.playground */,
+				DAA7092D2E79CB4D006F8E70 /* SwiftConcurrency.playground */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
