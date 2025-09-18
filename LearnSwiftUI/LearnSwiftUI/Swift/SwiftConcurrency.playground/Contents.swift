@@ -65,19 +65,19 @@ Task {
 /*
  
  func fetchUserDataAndPhotos() async throws {
- // fetchUser và fetchPhotos are async throws function also
- let user = try await fetchUser()
- let photos = try await fetchPhotos(for: user)
- // ...
+    // fetchUser and fetchPhotos are async throws function also
+    let user = try await fetchUser()
+    let photos = try await fetchPhotos(for: user)
+    // ...
  }
  
  // Call fetchUserDataAndPhotos function
  Task {
- do {
- try await fetchUserDataAndPhotos()
- } catch {
- // Handle all error from fetchUser() and fetchPhotos() right here.
- }
+    do {
+        try await fetchUserDataAndPhotos()
+    } catch {
+        // Handle all error from fetchUser() and fetchPhotos() right here.
+    }
  }
  
  */
@@ -87,12 +87,12 @@ Task {
  This ensures that all data is ready before you continue. */
 /*
  func downloadAndProcessData() async throws {
- // Both of these tasks will run in parallel.
- async let data1 = fetchData(from: url1)
- async let data2 = fetchData(from: url2)
+    // Both of these tasks will run in parallel.
+    async let data1 = fetchData(from: url1)
+    async let data2 = fetchData(from: url2)
  
- let processedData1 = try await process(data: data1)
- let processedData2 = try await process(data: data2)
+    let processedData1 = try await process(data: data1)
+    let processedData2 = try await process(data: data2)
  }
  */
 
@@ -112,6 +112,14 @@ let imageUrls = [
 
 func downloadImages(urls: [URL]) async throws -> [UIImage] {
     var images = [UIImage]()
+    
+    if Task.isCancelled {
+        return []
+    }
+    
+    // Task.checkCancellation() will return CancellationError
+    try Task.checkCancellation()
+    
     
     // Create a Task Group to run download tasks in parallel
     try await withThrowingTaskGroup(of: UIImage?.self) { group in
@@ -135,13 +143,16 @@ func downloadImages(urls: [URL]) async throws -> [UIImage] {
             }
         }
         
-        // Loop through subtasks to get results as they complete
+        // Use a `for await` loop to get results from child tasks as they complete.
+        // This loop will pause until a child task completes and returns a result.
         for try await image in group {
             if let image = image {
                 images.append(image)
             }
         }
     }
+    
+    try Task.checkCancellation()
     
     return images
 }
