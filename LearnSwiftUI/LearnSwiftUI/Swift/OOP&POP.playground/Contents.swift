@@ -26,4 +26,96 @@
  Extension         More difficult when changing parent classes.                         Easier to extend by adding protocols or protocol extensions.
  Polymorphism      Achieved through class inheritance.                                  Achieved through protocol conformity.
  Suitable for      Problems with clear "is-a" relationships (e.g., Car is a Vehicle).   Problems with "can do" relationships (e.g., FlyingCar can do Flyable and Drivable).
+ 
+ Which one should you use?
+ Use OOP when you have a natural and tight hierarchy where objects have a clear “is-a” relationship.
+ Using POP is the recommended approach in Swift. It helps you write more readable, maintainable, and flexible code by focusing on behaviors instead of classes.
+ 
+ For example:
+ OOP: If you have a Vehicle class and subclasses Car, Truck. Car is a Vehicle.
+ POP: If you have protocols Drivable, Flyable. A FlyingCar object can conform to both protocols Drivable and Flyable.
+ In Swift, you don’t have to choose one or the other. The best philosophy is to combine the two by using classes where inheritance is needed and using protocols as the backbone of your application’s behaviors.
  */
+
+// MARK: OOP combine with POP
+/// The best philosophy is to combine the two by using classes where inheritance is needed and using protocols as the backbone of your application’s behaviors.
+class Verhical {
+    var verhicalName: String
+    
+    init(verhicalName: String) {
+        self.verhicalName = verhicalName
+    }
+    
+    func numberOfWheel() -> String {
+        return "4 wheels"
+    }
+}
+
+class Bus: Verhical {
+    override func numberOfWheel() -> String {
+        return "6 wheels"
+    }
+}
+
+class Bicycle: Verhical {
+    override func numberOfWheel() -> String {
+        return "2 wheels"
+    }
+}
+
+let bus = Bus(verhicalName: "Bus")
+print("\(bus.verhicalName) has \(bus.numberOfWheel())")
+
+let bicycle = Bicycle(verhicalName: "Bicycle")
+print("\(bicycle.verhicalName) has \(bicycle.numberOfWheel())")
+
+///Combine OOP and POP to create a flexible and maintainable design.
+protocol Drivable {
+    var isDriving: Bool { get }
+    func startDriving()
+}
+
+protocol Flyable {
+    var isFlying: Bool { get }
+    func startFlying()
+}
+
+class Airplane: Verhical, Flyable, Drivable {
+    /// POP
+    var isFlying: Bool
+    var isDriving: Bool
+    
+    init(verhicalName: String, isFlying: Bool, isDriving: Bool) {
+        self.isFlying = isFlying
+        self.isDriving = isDriving
+        super.init(verhicalName: verhicalName)
+    }
+    
+    /// POP
+    func startFlying() {
+        isFlying = true
+        isDriving = false
+    }
+    
+    func startDriving() {
+        isFlying = false
+        isDriving = true
+    }
+    
+    /// OOP
+    override func numberOfWheel() -> String {
+        return "20 wheels"
+    }
+    
+}
+
+let airplane = Airplane(verhicalName: "Boing 747", isFlying: false, isDriving: false)
+print("The name of airplane is \(airplane.verhicalName)")
+print("Airplane has \(airplane.numberOfWheel())")
+print("\(airplane.verhicalName) is \(airplane.isFlying ? "flying" : "not flying") and \(airplane.isDriving ? "driving" : "not driving")")
+print("Airplane start to drive...")
+airplane.startDriving()
+print("\(airplane.verhicalName) is \(airplane.isFlying ? "flying" : "not flying") and \(airplane.isDriving ? "driving" : "not driving")")
+print("Airplane start to flying...")
+airplane.startFlying()
+print("\(airplane.verhicalName) is \(airplane.isFlying ? "flying" : "not flying") and \(airplane.isDriving ? "driving" : "not driving")")
