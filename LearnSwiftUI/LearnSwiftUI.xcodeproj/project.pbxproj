@@ -64,13 +64,19 @@
 		DA5D71A22E41EEDA00C78E40 /* ChangePasswordSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71A12E41EEDA00C78E40 /* ChangePasswordSuccess.swift */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
 		DA7BE09E2E805F4B006821CE /* VIPER-Architecture.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA7BE09D2E805F4B006821CE /* VIPER-Architecture.txt */; };
-		DA7BE0A02E805F95006821CE /* ViperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE09F2E805F95006821CE /* ViperProtocol.swift */; };
+		DA7BE0A02E805F95006821CE /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE09F2E805F95006821CE /* LoginProtocol.swift */; };
 		DA7BE0A22E805FEE006821CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0A12E805FEE006821CE /* LoginViewController.swift */; };
 		DA7BE0A42E806032006821CE /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0A32E806032006821CE /* LoginPresenter.swift */; };
 		DA7BE0A62E806040006821CE /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0A52E806040006821CE /* LoginInteractor.swift */; };
 		DA7BE0A82E806048006821CE /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0A72E806048006821CE /* LoginRouter.swift */; };
 		DA7BE0AC2E8060A8006821CE /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0AB2E8060A3006821CE /* LoginEntity.swift */; };
 		DA7BE0AE2E8061D1006821CE /* LoginModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0AD2E8061D1006821CE /* LoginModuleBuilder.swift */; };
+		DA7BE0B22E80630A006821CE /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0B12E80630A006821CE /* HomeViewProtocol.swift */; };
+		DA7BE0B42E806329006821CE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0B32E806329006821CE /* HomeViewController.swift */; };
+		DA7BE0B62E806344006821CE /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0B52E806344006821CE /* HomePresenter.swift */; };
+		DA7BE0B82E806362006821CE /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0B72E806362006821CE /* HomeInteractor.swift */; };
+		DA7BE0BA2E80637F006821CE /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0B92E80637F006821CE /* HomeRouter.swift */; };
+		DA7BE0BC2E8063AD006821CE /* HomeModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0BB2E8063AD006821CE /* HomeModuleBuilder.swift */; };
 		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
 		DA8748872E6AFBC900B189F3 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8748862E6AFBC100B189F3 /* WeatherService.swift */; };
 		DA87488A2E6AFC6A00B189F3 /* WeatherItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8748892E6AFC6300B189F3 /* WeatherItem.swift */; };
@@ -195,13 +201,19 @@
 		DA7BE0982E7F0883006821CE /* SwiftAccessLevel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftAccessLevel.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA7BE0992E7F0E14006821CE /* SwiftTypeModifiers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftTypeModifiers.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA7BE09D2E805F4B006821CE /* VIPER-Architecture.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "VIPER-Architecture.txt"; sourceTree = "<group>"; };
-		DA7BE09F2E805F95006821CE /* ViperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperProtocol.swift; sourceTree = "<group>"; };
+		DA7BE09F2E805F95006821CE /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
 		DA7BE0A12E805FEE006821CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DA7BE0A32E806032006821CE /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		DA7BE0A52E806040006821CE /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		DA7BE0A72E806048006821CE /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		DA7BE0AB2E8060A3006821CE /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
 		DA7BE0AD2E8061D1006821CE /* LoginModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleBuilder.swift; sourceTree = "<group>"; };
+		DA7BE0B12E80630A006821CE /* HomeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewProtocol.swift; sourceTree = "<group>"; };
+		DA7BE0B32E806329006821CE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DA7BE0B52E806344006821CE /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		DA7BE0B72E806362006821CE /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		DA7BE0B92E80637F006821CE /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		DA7BE0BB2E8063AD006821CE /* HomeModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleBuilder.swift; sourceTree = "<group>"; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DA8748862E6AFBC100B189F3 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		DA8748892E6AFC6300B189F3 /* WeatherItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherItem.swift; sourceTree = "<group>"; };
@@ -538,7 +550,16 @@
 			isa = PBXGroup;
 			children = (
 				DA7BE09D2E805F4B006821CE /* VIPER-Architecture.txt */,
-				DA7BE09F2E805F95006821CE /* ViperProtocol.swift */,
+				DA7BE0AF2E8062EE006821CE /* Login */,
+				DA7BE0B02E8062FE006821CE /* Home */,
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
+		DA7BE0AF2E8062EE006821CE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DA7BE09F2E805F95006821CE /* LoginProtocol.swift */,
 				DA7BE0A12E805FEE006821CE /* LoginViewController.swift */,
 				DA7BE0A32E806032006821CE /* LoginPresenter.swift */,
 				DA7BE0A52E806040006821CE /* LoginInteractor.swift */,
@@ -546,7 +567,20 @@
 				DA7BE0AD2E8061D1006821CE /* LoginModuleBuilder.swift */,
 				DA7BE0AB2E8060A3006821CE /* LoginEntity.swift */,
 			);
-			path = VIPER;
+			path = Login;
+			sourceTree = "<group>";
+		};
+		DA7BE0B02E8062FE006821CE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DA7BE0B12E80630A006821CE /* HomeViewProtocol.swift */,
+				DA7BE0B32E806329006821CE /* HomeViewController.swift */,
+				DA7BE0B52E806344006821CE /* HomePresenter.swift */,
+				DA7BE0B72E806362006821CE /* HomeInteractor.swift */,
+				DA7BE0B92E80637F006821CE /* HomeRouter.swift */,
+				DA7BE0BB2E8063AD006821CE /* HomeModuleBuilder.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		DA8748852E6AFBB000B189F3 /* WeatherList */ = {
@@ -847,6 +881,7 @@
 				DA5D71982E3FBCBA00C78E40 /* GitHubNetworkService.swift in Sources */,
 				DAEBAE3E2DEB149C00082B1C /* InitializerBootcamp.swift in Sources */,
 				DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */,
+				DA7BE0B82E806362006821CE /* HomeInteractor.swift in Sources */,
 				DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */,
 				DABDF7B42E70466B00DEC7C6 /* DownloadTask.swift in Sources */,
 				DA8991382E47671F00C2BD27 /* HButton.swift in Sources */,
@@ -854,7 +889,9 @@
 				DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */,
 				DA5D71272E3D18E300C78E40 /* UserSettings.swift in Sources */,
 				DAAA67262E6173FD004075B7 /* PickerBootcamp.swift in Sources */,
+				DA7BE0B22E80630A006821CE /* HomeViewProtocol.swift in Sources */,
 				DAEBAE4F2DF2909E00082B1C /* Closure.swift in Sources */,
+				DA7BE0B62E806344006821CE /* HomePresenter.swift in Sources */,
 				DA87488A2E6AFC6A00B189F3 /* WeatherItem.swift in Sources */,
 				DA5D71362E3DE82A00C78E40 /* Account.swift in Sources */,
 				DA5D71902E3FBA7400C78E40 /* UserDetail.swift in Sources */,
@@ -865,7 +902,8 @@
 				DA5D71322E3D20F100C78E40 /* Placeholder.swift in Sources */,
 				DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */,
 				DA5D717E2E3FA57800C78E40 /* NetworkProtocols.swift in Sources */,
-				DA7BE0A02E805F95006821CE /* ViperProtocol.swift in Sources */,
+				DA7BE0A02E805F95006821CE /* LoginProtocol.swift in Sources */,
+				DA7BE0B42E806329006821CE /* HomeViewController.swift in Sources */,
 				DA5D71472E3F589A00C78E40 /* CustomEnvironmentValues.swift in Sources */,
 				DA8748932E6B006000B189F3 /* GradientBackgroundAnimation.swift in Sources */,
 				DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */,
@@ -898,9 +936,11 @@
 				DA5C98BC2E3924AA007AC9E9 /* TodoDetailView.swift in Sources */,
 				DAED67802E21089A00309382 /* ObservedObjectBootcamp.swift in Sources */,
 				DAAA67222E616D8C004075B7 /* TextFieldBootcamp.swift in Sources */,
+				DA7BE0BC2E8063AD006821CE /* HomeModuleBuilder.swift in Sources */,
 				DA5C98B82E391F91007AC9E9 /* TodoListView.swift in Sources */,
 				DA5D71A22E41EEDA00C78E40 /* ChangePasswordSuccess.swift in Sources */,
 				DAEBAE3C2DEB07A500082B1C /* SpacerBootcamp.swift in Sources */,
+				DA7BE0BA2E80637F006821CE /* HomeRouter.swift in Sources */,
 				DAEBAE442DECC2D100082B1C /* GridBootcamp.swift in Sources */,
 				DA5164322E3CB57600642709 /* NavigationManager.swift in Sources */,
 				DA87489E2E6B16B500B189F3 /* WeatherMainView.swift in Sources */,
