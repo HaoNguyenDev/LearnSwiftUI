@@ -1,0 +1,5 @@
+View (UIView/UIViewController): Responsible for displaying the interface and receiving interactions from the user. It is a passive component and only forwards events to the Presenter.
+Presenter: Contains the display logic for the View. It receives data from the Interactor and converts it into a format that the View can display. It also handles user interactions.
+Interactor: Contains the core business logic of the application, such as calling the login API, storing tokens.
+Entity: Basic data objects (Model), such as User, LoginCredentials. They do not contain logic.
+Router (Wireframe): Responsible for navigating from one screen to another. It is the bridge between VIPER modules.

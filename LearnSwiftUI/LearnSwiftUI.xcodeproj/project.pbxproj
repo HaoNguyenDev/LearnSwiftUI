@@ -63,6 +63,14 @@
 		DA5D71A02E40CC8300C78E40 /* AsyncAwaitBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D719F2E40CC8300C78E40 /* AsyncAwaitBootcamp.swift */; };
 		DA5D71A22E41EEDA00C78E40 /* ChangePasswordSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71A12E41EEDA00C78E40 /* ChangePasswordSuccess.swift */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
+		DA7BE09E2E805F4B006821CE /* VIPER-Architecture.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA7BE09D2E805F4B006821CE /* VIPER-Architecture.txt */; };
+		DA7BE0A02E805F95006821CE /* ViperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE09F2E805F95006821CE /* ViperProtocol.swift */; };
+		DA7BE0A22E805FEE006821CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0A12E805FEE006821CE /* LoginViewController.swift */; };
+		DA7BE0A42E806032006821CE /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0A32E806032006821CE /* LoginPresenter.swift */; };
+		DA7BE0A62E806040006821CE /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0A52E806040006821CE /* LoginInteractor.swift */; };
+		DA7BE0A82E806048006821CE /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0A72E806048006821CE /* LoginRouter.swift */; };
+		DA7BE0AC2E8060A8006821CE /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0AB2E8060A3006821CE /* LoginEntity.swift */; };
+		DA7BE0AE2E8061D1006821CE /* LoginModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0AD2E8061D1006821CE /* LoginModuleBuilder.swift */; };
 		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
 		DA8748872E6AFBC900B189F3 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8748862E6AFBC100B189F3 /* WeatherService.swift */; };
 		DA87488A2E6AFC6A00B189F3 /* WeatherItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8748892E6AFC6300B189F3 /* WeatherItem.swift */; };
@@ -186,6 +194,14 @@
 		DA6E0D702E4CEE68009B3778 /* StackQueueAndHeap.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StackQueueAndHeap.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA7BE0982E7F0883006821CE /* SwiftAccessLevel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftAccessLevel.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA7BE0992E7F0E14006821CE /* SwiftTypeModifiers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftTypeModifiers.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DA7BE09D2E805F4B006821CE /* VIPER-Architecture.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "VIPER-Architecture.txt"; sourceTree = "<group>"; };
+		DA7BE09F2E805F95006821CE /* ViperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperProtocol.swift; sourceTree = "<group>"; };
+		DA7BE0A12E805FEE006821CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DA7BE0A32E806032006821CE /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		DA7BE0A52E806040006821CE /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		DA7BE0A72E806048006821CE /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		DA7BE0AB2E8060A3006821CE /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
+		DA7BE0AD2E8061D1006821CE /* LoginModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleBuilder.swift; sourceTree = "<group>"; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DA8748862E6AFBC100B189F3 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		DA8748892E6AFC6300B189F3 /* WeatherItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherItem.swift; sourceTree = "<group>"; };
@@ -518,6 +534,21 @@
 			path = TodoApp;
 			sourceTree = "<group>";
 		};
+		DA7BE09A2E805F33006821CE /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				DA7BE09D2E805F4B006821CE /* VIPER-Architecture.txt */,
+				DA7BE09F2E805F95006821CE /* ViperProtocol.swift */,
+				DA7BE0A12E805FEE006821CE /* LoginViewController.swift */,
+				DA7BE0A32E806032006821CE /* LoginPresenter.swift */,
+				DA7BE0A52E806040006821CE /* LoginInteractor.swift */,
+				DA7BE0A72E806048006821CE /* LoginRouter.swift */,
+				DA7BE0AD2E8061D1006821CE /* LoginModuleBuilder.swift */,
+				DA7BE0AB2E8060A3006821CE /* LoginEntity.swift */,
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
 		DA8748852E6AFBB000B189F3 /* WeatherList */ = {
 			isa = PBXGroup;
 			children = (
@@ -675,6 +706,7 @@
 		DAAE8CBB2E45024800FCBA4E /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				DA7BE09A2E805F33006821CE /* VIPER */,
 				DAAE8CBC2E45028300FCBA4E /* CounterState.swift */,
 			);
 			path = Architecture;
@@ -764,6 +796,7 @@
 			files = (
 				DA415E682DE5BFAB009F515E /* Preview Assets.xcassets in Resources */,
 				DA415E692DE5BFAB009F515E /* Assets.xcassets in Resources */,
+				DA7BE09E2E805F4B006821CE /* VIPER-Architecture.txt in Resources */,
 				DA415E702DE5BFF9009F515E /* Dosis-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -777,16 +810,19 @@
 			files = (
 				DA5D712C2E3D1A8800C78E40 /* Login.swift in Sources */,
 				DA415E8D2DE5CD41009F515E /* ColorsBootcamp.swift in Sources */,
+				DA7BE0AC2E8060A8006821CE /* LoginEntity.swift in Sources */,
 				DA5D712E2E3D1D7900C78E40 /* AppCoordinator.swift in Sources */,
 				DAA7091F2E75E2CC006F8E70 /* ResultAndError.swift in Sources */,
 				DA415E8B2DE5C845009F515E /* ShapesBootcamp.swift in Sources */,
 				DA5D718E2E3FBA6A00C78E40 /* GithubUser.swift in Sources */,
 				DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */,
 				DAEEFB762E366D4000E78DA2 /* ObservableObjectBootcamp.swift in Sources */,
+				DA7BE0A82E806048006821CE /* LoginRouter.swift in Sources */,
 				DAA7091C2E75D85F006F8E70 /* PaymentView.swift in Sources */,
 				DA8748992E6B007700B189F3 /* WeatherDataPill.swift in Sources */,
 				DA5D71252E3D189100C78E40 /* Splash.swift in Sources */,
 				DAEBAE4A2DF28E1E00082B1C /* SubviewBootcamp.swift in Sources */,
+				DA7BE0A42E806032006821CE /* LoginPresenter.swift in Sources */,
 				DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */,
 				DA5D712A2E3D19A000C78E40 /* Logger.swift in Sources */,
 				DAAA67242E617101004075B7 /* ViewAndAdditional.swift in Sources */,
@@ -829,6 +865,7 @@
 				DA5D71322E3D20F100C78E40 /* Placeholder.swift in Sources */,
 				DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */,
 				DA5D717E2E3FA57800C78E40 /* NetworkProtocols.swift in Sources */,
+				DA7BE0A02E805F95006821CE /* ViperProtocol.swift in Sources */,
 				DA5D71472E3F589A00C78E40 /* CustomEnvironmentValues.swift in Sources */,
 				DA8748932E6B006000B189F3 /* GradientBackgroundAnimation.swift in Sources */,
 				DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */,
@@ -870,13 +907,16 @@
 				DAA709222E787C42006F8E70 /* PaymentVM.swift in Sources */,
 				DA5D711E2E3D185500C78E40 /* NavRouter.swift in Sources */,
 				DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */,
+				DA7BE0A62E806040006821CE /* LoginInteractor.swift in Sources */,
 				DAAE8CBD2E45028300FCBA4E /* CounterState.swift in Sources */,
 				DA8748872E6AFBC900B189F3 /* WeatherService.swift in Sources */,
 				DA415E952DE5E707009F515E /* ImagesBootcamp.swift in Sources */,
 				DA5C98B62E391F4B007AC9E9 /* TodoAppView.swift in Sources */,
 				DA5D71382E3DFBA000C78E40 /* ChangePassword.swift in Sources */,
+				DA7BE0AE2E8061D1006821CE /* LoginModuleBuilder.swift in Sources */,
 				DAA709162E75D60C006F8E70 /* VisaPaymentService.swift in Sources */,
 				DA5D71962E3FBC9100C78E40 /* GitHubAPIEndpoint.swift in Sources */,
+				DA7BE0A22E805FEE006821CE /* LoginViewController.swift in Sources */,
 				DA0C4B5D2E52218A00D64C7C /* FocusStateBootcamp.swift in Sources */,
 				DAA930402E33C99C000FE238 /* ButtonModifier.swift in Sources */,
 				DA5C98BA2E39237C007AC9E9 /* TodoRowView.swift in Sources */,
