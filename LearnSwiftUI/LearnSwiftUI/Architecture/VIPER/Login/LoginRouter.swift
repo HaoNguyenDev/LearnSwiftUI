@@ -12,11 +12,11 @@ class LoginRouter: LoginRouterProtocol {
 
     func navigateToHomeScreen() {
 //        // Create Home screen
-//        let homeVC = HomeModule.createModule()
-//
-//        // Perform screen switching
-//        if let navigationController = viewController?.navigationController {
-//            navigationController.pushViewController(homeVC, animated: true)
-//        }
+        let homeVC = HomeModuleBuilder.createModule()
+
+        // Perform screen switching
+        if let navigationController = viewController?.navigationController {
+            navigationController.pushViewController(homeVC, animated: true)
+        }
     }
 }
