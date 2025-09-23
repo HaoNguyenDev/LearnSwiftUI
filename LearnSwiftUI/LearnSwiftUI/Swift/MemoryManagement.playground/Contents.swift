@@ -14,7 +14,6 @@
  - Use appropriate Data Structures: Instead of using classes, consider using structs when you need to store simple data. Structs are value types, which help avoid reference counting problems and save memory.
    Don't use classes if you don't need inheritance to reduce the stress on ARC. ARC has to constantly scan to check and count references.
  
- 
  * Optimize performance:
  
  UI/UX Optimization:
@@ -25,4 +24,13 @@
  Data Optimization:
  - Lazy Loading: Only load data when really needed, especially large data such as images or videos. Use lazy HStack, lazy VStack for SwiftUI
  - Caching: Use caching to store previously loaded data, helping to reduce the number of reloads from the internet.
+ 
+ Code Optimization:
+ - Use GCD (Grand Central Dispatch) or Operation Queues to perform heavy tasks (e.g., data loading, image processing) on ​​background threads, to prevent UI freezing.
+ - Prefer using structs and enums instead of classes when possible, as they are value types and more memory efficient.
+ - Avoid nested loops or complex algorithms when processing large amounts of data. Look for more efficient algorithms.
+
+ Performance Testing and Monitoring:
+ - Use Instruments in Xcode to analyze performance, detect memory leaks, and check CPU/GPU usage.
+ - Always test your app on real devices, not just the simulator.
  */
