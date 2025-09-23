@@ -214,6 +214,7 @@
 		DA7BE0B72E806362006821CE /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		DA7BE0B92E80637F006821CE /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		DA7BE0BB2E8063AD006821CE /* HomeModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleBuilder.swift; sourceTree = "<group>"; };
+		DA7BE0BD2E82DCFE006821CE /* MemoryManagement.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MemoryManagement.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DA8748862E6AFBC100B189F3 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		DA8748892E6AFC6300B189F3 /* WeatherItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherItem.swift; sourceTree = "<group>"; };
@@ -644,6 +645,7 @@
 				DAA7092E2E7DB868006F8E70 /* OOP&POP.playground */,
 				DA7BE0982E7F0883006821CE /* SwiftAccessLevel.playground */,
 				DA7BE0992E7F0E14006821CE /* SwiftTypeModifiers.playground */,
+				DA7BE0BD2E82DCFE006821CE /* MemoryManagement.playground */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
