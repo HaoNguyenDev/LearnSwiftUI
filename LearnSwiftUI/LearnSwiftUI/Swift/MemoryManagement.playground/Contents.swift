@@ -41,4 +41,23 @@
  - Choose the right Data Structure:
     Array: Good for index access, but inserting/deleting at the top of the array is slow.
     Dictionary and Set: Best for searching, inserting, and deleting individual elements.
+ 
+ Networking and Data Optimization:
+ - Reduce Network Requests: Instead of calling multiple small APIs, combine related requests into one larger request.This reduces latency and saves battery.
+ Use Caching: Store frequently used data (like images, JSON) on the device. This reduces network calls, speeds up loading, and reduces server load.
+ Prefetching: Predict user behavior and preload data that is likely to be used next. For example, in a news app, you can preload the next article while the user is reading the current one.
+ 
+ UI/Rendering Optimization:
+ - Reduce View Hierarchy Complexity: A complex view hierarchy with many nested layers will slow down rendering performance. Simplify your view structure as much as possible.
+ - Use Opaque Views: For non-transparent views, make sure their opaque property is set to true. This makes them more efficient to render because transparency doesn't need to be calculated.
+ Optimize Images:
+ - Reduce image size and weight to the minimum necessary. A 5000x5000px image will consume memory and slow down performance if it is only displayed in a 100x100px frame.
+ - Use modern, optimized image formats.
+ 
+ Using Pro Tools
+ - Instruments: This is an indispensable tool in Xcode for performance analysis. You can use Instruments to:
+ - Time Profiler: Find CPU bottlenecks.
+ - Allocations: Monitor memory usage and detect memory leaks.
+ - Energy Log: Check your app's energy consumption.
+ - Asynchronous Programming (Async/Await): With Swift 5.5 and above, use async/await to manage complex asynchronous tasks (like network calls) in a more efficient and readable way, ensuring the main thread is always freed to update the UI.
  */
