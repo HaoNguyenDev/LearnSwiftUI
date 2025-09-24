@@ -33,4 +33,12 @@
  Performance Testing and Monitoring:
  - Use Instruments in Xcode to analyze performance, detect memory leaks, and check CPU/GPU usage.
  - Always test your app on real devices, not just the simulator.
+ 
+ Code and Compiler Optimization:
+ - Reduce Dynamic Dispatch: In Swift, class methods are often called using dynamic dispatch, which costs more than static dispatch. To optimize, use the final keyword for class or func to tell the compiler that this method will not be overridden, thereby allowing the use of static dispatch. Similarly, using the private or fileprivate keywords also helps the compiler optimize.
+ 
+ - Use Value Type (Struct/Enum): struct and enum are value types, which help avoid the memory management cost of reference types (classes). Prefer to use them for simple data.
+ - Choose the right Data Structure:
+    Array: Good for index access, but inserting/deleting at the top of the array is slow.
+    Dictionary and Set: Best for searching, inserting, and deleting individual elements.
  */
