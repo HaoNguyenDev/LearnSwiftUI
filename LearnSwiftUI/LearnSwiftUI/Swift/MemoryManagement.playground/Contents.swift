@@ -26,6 +26,7 @@
  - Caching: Use caching to store previously loaded data, helping to reduce the number of reloads from the internet.
  
  Code Optimization:
+ - The golden rule is to never load data or do heavy processing on the main thread. Always do tasks like fetching images from the network, processing JSON, or saving data to disk on a background thread using GCD or async/await.
  - Use GCD (Grand Central Dispatch) or Operation Queues to perform heavy tasks (e.g., data loading, image processing) on ​​background threads, to prevent UI freezing.
  - Prefer using structs and enums instead of classes when possible, as they are value types and more memory efficient.
  - Avoid nested loops or complex algorithms when processing large amounts of data. Look for more efficient algorithms.
