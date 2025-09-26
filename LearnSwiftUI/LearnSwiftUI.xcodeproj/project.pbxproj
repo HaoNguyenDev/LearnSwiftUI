@@ -229,6 +229,7 @@
 		DA89A7CF2E48DF73007BF882 /* Closure.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Closure.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA89A7D12E48FEAE007BF882 /* RefreshTokenExample.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RefreshTokenExample.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA89A7D22E490391007BF882 /* GCDTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GCDTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DA8F789E2E86FB1700826FB2 /* StructAndSwiftUI.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StructAndSwiftUI.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAA3B8D32E3A65110051F62F /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
 		DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentBootcamp.swift; sourceTree = "<group>"; };
 		DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableBootcamp.swift; sourceTree = "<group>"; };
@@ -646,6 +647,7 @@
 				DA7BE0982E7F0883006821CE /* SwiftAccessLevel.playground */,
 				DA7BE0992E7F0E14006821CE /* SwiftTypeModifiers.playground */,
 				DA7BE0BD2E82DCFE006821CE /* MemoryManagement.playground */,
+				DA8F789E2E86FB1700826FB2 /* StructAndSwiftUI.playground */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
