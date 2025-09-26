@@ -15,4 +15,11 @@
  
  4. Simplified Memory Management
     - Since they are value types, structs do not suffer from complex memory management issues like Retain Cycle (strong reference cycle) that often occur with classes (reference types).
+ 
+ Advantages                 Explanation
+ Immutability               Ensures View state is encapsulated and only changes through the State/Binding mechanism, making code easier to understand and maintain.
+ High performance           Stack allocation speed and fast creation/copying ability, allowing SwiftUI to update the interface efficiently.
+ Thread safety              Minimizes the risk of working in a multi-threaded environment thanks to immutability, avoiding unintended shared state.
+ Easy memory management     Eliminates the risk of Retain Cycle.
+ Encouraging Composition    Struct does not support inheritance, encourages the use of composition (combining small Views) to create complex Views, leading to better modular and reusable code.
  */
