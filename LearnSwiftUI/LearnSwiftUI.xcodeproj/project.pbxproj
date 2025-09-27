@@ -88,6 +88,7 @@
 		DA87489B2E6B007D00B189F3 /* WeatherListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87489A2E6B007D00B189F3 /* WeatherListView.swift */; };
 		DA87489E2E6B16B500B189F3 /* WeatherMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87489D2E6B16B500B189F3 /* WeatherMainView.swift */; };
 		DA8991382E47671F00C2BD27 /* HButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991372E47671F00C2BD27 /* HButton.swift */; };
+		DA8F78A22E883F0300826FB2 /* SwiftUI.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA8F78A12E883F0300826FB2 /* SwiftUI.txt */; };
 		DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D32E3A65110051F62F /* SharedModel.swift */; };
 		DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */; };
 		DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */; };
@@ -230,6 +231,7 @@
 		DA89A7D12E48FEAE007BF882 /* RefreshTokenExample.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RefreshTokenExample.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA89A7D22E490391007BF882 /* GCDTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GCDTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA8F789E2E86FB1700826FB2 /* StructAndSwiftUI.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StructAndSwiftUI.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DA8F78A12E883F0300826FB2 /* SwiftUI.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwiftUI.txt; sourceTree = "<group>"; };
 		DAA3B8D32E3A65110051F62F /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
 		DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentBootcamp.swift; sourceTree = "<group>"; };
 		DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableBootcamp.swift; sourceTree = "<group>"; };
@@ -629,6 +631,7 @@
 		DA8991392E48C7A000C2BD27 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				DA8F78A12E883F0300826FB2 /* SwiftUI.txt */,
 				DA6E0D702E4CEE68009B3778 /* StackQueueAndHeap.playground */,
 				DA89A7CF2E48DF73007BF882 /* Closure.playground */,
 				DA89A7D12E48FEAE007BF882 /* RefreshTokenExample.playground */,
@@ -833,6 +836,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA415E682DE5BFAB009F515E /* Preview Assets.xcassets in Resources */,
+				DA8F78A22E883F0300826FB2 /* SwiftUI.txt in Resources */,
 				DA415E692DE5BFAB009F515E /* Assets.xcassets in Resources */,
 				DA7BE09E2E805F4B006821CE /* VIPER-Architecture.txt in Resources */,
 				DA415E702DE5BFF9009F515E /* Dosis-VariableFont_wght.ttf in Resources */,
