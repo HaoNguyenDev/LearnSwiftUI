@@ -49,6 +49,7 @@
  Prefetching: Predict user behavior and preload data that is likely to be used next. For example, in a news app, you can preload the next article while the user is reading the current one.
  
  UI/Rendering Optimization:
+ - Avoid AnyView: Avoid using AnyView unless absolutely necessary. AnyView erases View type information, making SwiftUI difficult to optimize and slowing down performance. Instead, use Group or @ViewBuilder for conditional logic.
  - Reduce View Hierarchy Complexity: A complex view hierarchy with many nested layers will slow down rendering performance. Simplify your view structure as much as possible.
  - Use Opaque Views: For non-transparent views, make sure their opaque property is set to true. This makes them more efficient to render because transparency doesn't need to be calculated.
  Optimize Images:
