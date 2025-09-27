@@ -57,3 +57,12 @@ Text("Hello").modifier(CardStyle())
 
 Composition instead of Inheritance:
 Since View is a struct and has no inheritance, focus on composing Views and Modifiers to build the interface.
+
+4. Performance Optimization
+Although SwiftUI is fast, writing incorrect code can still cause lagging or memory waste.
+Use Lazy Stacks (LazyVStack, LazyHStack, List):
+For long scrollable content (e.g., a list of 1000 items), always use List or LazyVStack (inside a ScrollView) instead of a regular VStack. Lazy only loads View items as they appear on screen, saving memory and improving scrolling speed.
+Minimize unnecessary View redraws:
+Only pass the necessary data to the child View. If the child View doesn't need the entire large Model object, just pass the base value or @Binding of the specific property.
+Separate complex Views: If your View has one dynamic element (changing state frequently) and one static element (very complex and expensive to draw), separate them into two separate Views so that SwiftUI only redraws the dynamic element.
+Avoid AnyView: Avoid using AnyView unless absolutely necessary. AnyView erases View type information, making SwiftUI difficult to optimize and slowing down performance. Instead, use Group or @ViewBuilder for conditional logic.
