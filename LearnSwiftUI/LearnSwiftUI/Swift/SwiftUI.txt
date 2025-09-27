@@ -1,0 +1,59 @@
+Using SwiftUI effectively requires you to change your mindset from traditional Imperative programming (like UIKit) to Declarative programming.
+
+Here are the core principles and best practices when working with SwiftUI.
+
+1. Core Principle: UI is a Function of State (UI = f(State))
+This is the most important principle. In SwiftUI, you don't tell the interface to change (e.g., button.isHidden = true or label.text = "New value"), you just declare how your interface should look based on the current state of the data.
+Declare, don't Control: Think of your View as a function: when the input data (state) changes, the output View will automatically redraw.
+Avoid Manual Changes: Don't try to change interface properties directly in a function or action. Instead, change the data (state) and let SwiftUI take care of the rest.
+
+2. Standard State Management
+Choosing the right Property Wrapper is key to making SwiftUI work well. Using the wrong one can lead to bugs and poor performance.
+
+Property Wrapper
+
+@State
+Manages the local state of a View.
+Used for simple data (such as Int, Bool, String) that is only used in that View.
+
+@Binding
+Creates a link to a @State data source or other data source.
+Used to pass read and write permissions from a parent View to a child View.
+
+@StateObject
+Initializes and owns a class Model object (ObservableObject).
+Used in a parent View to create a single source of data for child Views.
+
+@ObservedObject
+References an existing ObservableObject object.
+Used in a child View to receive a Model object that has been created elsewhere (usually the parent View).
+
+@EnvironmentObject
+Shares a global Model object across multiple Views in a hierarchy without passing it down.
+Used for common data such as user information, application settings.
+
+Single Source of Truth Principle:
+Each piece of data should be owned by only one Property Wrapper (e.g., only @State or only @StateObject).
+Other Views should only access it via @Binding or @ObservedObject.
+
+3. Modularization and Reusability
+SwiftUI works best when you build interfaces by combining small, simple Views (small structs).
+Split Views: Split a large View into smaller, focused child Views (e.g., HeaderView, ProfilePicture, FollowButton). This makes the code cleaner, easier to maintain, and speeds up rendering/updating (only the small View that changes is redrawn).
+Use ViewModifiers: Instead of repeating modifiers like .padding().foregroundColor(.blue).font(.headline) for multiple Views, encapsulate them in a custom ViewModifier.
+
+// Encapsulate custom logic
+struct CardStyle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding()
+            .background(.white)
+            .cornerRadius(10)
+            .shadow(radius: 2)
+    }
+}
+
+// Use
+Text("Hello").modifier(CardStyle())
+
+Composition instead of Inheritance:
+Since View is a struct and has no inheritance, focus on composing Views and Modifiers to build the interface.
