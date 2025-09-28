@@ -1,4 +1,5 @@
 1. Define the core components in MVVM
+
 MVVM divides the application into three main layers, each with a clear role:
 
 A. Model (M - Data Layer)
@@ -18,3 +19,84 @@ This layer is the bridge between the Model and the View. It contains the logic t
 Contains: Logic about interface state (e.g., isLoading, errorMessage), data conversion logic (e.g., date formatting, value calculation), and logic to handle input from the View.
 Responsibilities: Call the Model to get/save data. Provide data to the View through Data Binding.
 Does Not Contains: Any references to View-specific interface components (e.g., UILabel or Text).
+
+
+2. Standard application steps
+
+Step 1: Set up Data Binding
+This is the most important step for ViewModel to communicate with View effectively, especially in a declarative environment like SwiftUI.
+
+Apply in SwiftUI (Using ObservableObject)
+ViewModel: Declare ViewModel as a class and conform to ObservableObject protocol.
+Observable Data: Mark data properties that View needs to monitor with @Published. Any changes to @Published properties will automatically notify View.
+View: In View, declare ViewModel with @StateObject (to own ViewModel) or @ObservedObject (to reference ViewModel from parent View).
+
+// ViewModel
+class UserViewModel: ObservableObject {
+    @Published var userName: String = "" // Changes will be notified to View
+    @Published var isLoading: Bool = false
+    
+    // Business logic: call Model
+    func fetchUser() {
+        isLoading = true
+        // ... Call APIService (Model)
+        self.userName = "Alice"
+        isLoading = false
+    }
+}
+
+// View
+struct UserProfileView: View {
+    @StateObject var viewModel = UserViewModel() // View owns ViewModel
+
+    var body: some View {
+        VStack {
+            if viewModel.isLoading {
+                ProgressView()
+            } else {
+                Text(viewModel.userName) // Automatically update when viewModel.userName changes
+            }
+            Button("Load User") {
+                viewModel.fetchUser() // Sending actions to ViewModel
+            }
+        }
+    }
+}
+
+Implementing in UIKit (Using Combine/Closures)
+In UIKit, you use Combine (or Closures/Delegates) for binding. The ViewModel usually has a Publisher (or closure) that the View will register.
+
+Step 2: Separate Business Logic (Model)
+Ensure that business logic (e.g. how to get data, how to store it) must be completely in the Model layer (or Service Layer).
+Create protocols for services (UserServiceProtocol, NetworkServiceProtocol) so that ViewModel only communicates via Protocol. This makes it easy to create mock objects (Mock Objects) to test (Unit Testing) ViewModel.
+
+Step 3: Ensure Testability
+The biggest advantage of MVVM is testability.
+Test ViewModel: ViewModel is the easiest component to test because it is just a pure Swift class, not dependent on UIKit/SwiftUI. You can test all state logic and data transformation logic without the need for UI.
+Dependency Injection (DI): Always pass Model/Service to ViewModel through initializer instead of letting ViewModel create them
+
+// ViewModel is highly testable
+class UserViewModel: ObservableObject {
+    private let userService: UserServiceProtocol // Dependency Injection
+
+    init(userService: UserServiceProtocol) {
+        self.userService = userService
+    }
+    // ...
+}
+
+// When initializing in View
+// View: @StateObject var viewModel = UserViewModel(userService: APIService())
+
+
+3. Best Practices
+Keep Views Dumb: Views should only contain layout and display logic. Any decisions about data or conditions (e.g., when to show a ProgressView, what error message to show) should be made by the ViewModel.
+Keep ViewModels Pure:
+ViewModels should never import UIKit or SwiftUI (unless they are Combine or Observation).
+ViewModels should not know about UI objects like UIViewController, UILabel, or Text.
+Use structs for Views and classes for ViewModels:
+Views should be structs (value types) to take advantage of SwiftUI's performance and automatic updating mechanism.
+ViewModels should be classes (reference types, conforming to ObservableObject) to be shared between Views and maintain persistent state.
+Clearly distinguish State from Action:
+ViewModel exposes State through @Published properties (e.g. products: [Product]).
+View sends Events to ViewModel through functions (e.g. viewModel.didTapPurchaseButton()).
