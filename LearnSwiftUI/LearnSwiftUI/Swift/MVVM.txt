@@ -1,0 +1,20 @@
+1. Define the core components in MVVM
+MVVM divides the application into three main layers, each with a clear role:
+
+A. Model (M - Data Layer)
+This layer represents the data and business logic.
+Contains: The application's data structures (struct or class), network services (API calls), database operations (Database), and any logic for how data is stored, retrieved, or processed.
+Does Not Contain: Any reference to a View or ViewModel.
+Examples: User, Product, APIService, DatabaseManager.
+
+B. View (V - UI Layer)
+This layer is responsible for displaying the user interface and only dispatching user actions to the ViewModel.
+Contains: The user interface (built using SwiftUI or UIKit).
+Responsibilities: Observe (subscribe) the ViewModel to receive updates and display that data on the screen. Send events (like button presses) to the ViewModel.
+Does Not Contain: Business logic or logic about how the data is prepared for display.
+
+C. ViewModel (VM - Presentation Layer)
+This layer is the bridge between the Model and the View. It contains the logic to transform the Model data into a format that the View can easily display.
+Contains: Logic about interface state (e.g., isLoading, errorMessage), data conversion logic (e.g., date formatting, value calculation), and logic to handle input from the View.
+Responsibilities: Call the Model to get/save data. Provide data to the View through Data Binding.
+Does Not Contains: Any references to View-specific interface components (e.g., UILabel or Text).
