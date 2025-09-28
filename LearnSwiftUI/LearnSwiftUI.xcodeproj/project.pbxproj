@@ -11,6 +11,7 @@
 		DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */; };
 		DA0B4AEB2E6FCBB700628E53 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */; };
 		DA0C4B5D2E52218A00D64C7C /* FocusStateBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0C4B5C2E52218A00D64C7C /* FocusStateBootcamp.swift */; };
+		DA13CE212E89999B005B6D2D /* MVVM.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA13CE202E89999B005B6D2D /* MVVM.txt */; };
 		DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */; };
 		DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E632DE5BFAB009F515E /* ContentView.swift */; };
 		DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */; };
@@ -138,6 +139,7 @@
 		DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
 		DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
 		DA0C4B5C2E52218A00D64C7C /* FocusStateBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusStateBootcamp.swift; sourceTree = "<group>"; };
+		DA13CE202E89999B005B6D2D /* MVVM.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MVVM.txt; sourceTree = "<group>"; };
 		DA1D32272E6F050F007BDEA2 /* DownloadOperation.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DownloadOperation.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewBootcamp.swift; sourceTree = "<group>"; };
 		DA2745842E61E8D0000B436D /* SingletonPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SingletonPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -631,6 +633,7 @@
 		DA8991392E48C7A000C2BD27 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				DA13CE202E89999B005B6D2D /* MVVM.txt */,
 				DA8F78A12E883F0300826FB2 /* SwiftUI.txt */,
 				DA6E0D702E4CEE68009B3778 /* StackQueueAndHeap.playground */,
 				DA89A7CF2E48DF73007BF882 /* Closure.playground */,
@@ -837,6 +840,7 @@
 			files = (
 				DA415E682DE5BFAB009F515E /* Preview Assets.xcassets in Resources */,
 				DA8F78A22E883F0300826FB2 /* SwiftUI.txt in Resources */,
+				DA13CE212E89999B005B6D2D /* MVVM.txt in Resources */,
 				DA415E692DE5BFAB009F515E /* Assets.xcassets in Resources */,
 				DA7BE09E2E805F4B006821CE /* VIPER-Architecture.txt in Resources */,
 				DA415E702DE5BFF9009F515E /* Dosis-VariableFont_wght.ttf in Resources */,
