@@ -1,3 +1,16 @@
+The main benefit of SwiftUI over UIKit is that it shifts the user interface development model from Imperative to Declarative, which brings many outstanding advantages in performance, productivity, and maintainability.Observe an ObservableObject owned elsewhere
+
+1. Declarative UI
+Here are the biggest differences and advantages:
+
+SwiftUI (Declarative)
+You declare how the View should look based on its current state (UI = f(State)).
+Pros: Automate UI updates. When the data state changes, SwiftUI automatically redraws the necessary interface, making the code shorter and less error-prone.
+
+UIKit (Event-Driven/Imperative)
+You tell the system to change the View step by step (e.g. create a View, add Subviews, update Frame/Constraints, hide the View).
+Cons: Easily leads to out-of-sync interfaces because you have to manage all changes manually.
+
 Using SwiftUI effectively requires you to change your mindset from traditional Imperative programming (like UIKit) to Declarative programming.
 
 Here are the core principles and best practices when working with SwiftUI.
