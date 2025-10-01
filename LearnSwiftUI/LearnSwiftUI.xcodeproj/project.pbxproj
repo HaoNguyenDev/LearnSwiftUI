@@ -21,6 +21,7 @@
 		DA37F9952E8D8E3E0001599E /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DA37F9942E8D8E3E0001599E /* CombineCocoa */; };
 		DA37F9972E8D8FBB0001599E /* CbLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA37F9962E8D8FBB0001599E /* CbLoginViewController.xib */; };
 		DA37F9992E8D91F30001599E /* CbDemoViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F9982E8D91F30001599E /* CbDemoViewWrapper.swift */; };
+		DA37F99D2E8D93F60001599E /* CbDemoContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F99C2E8D93F60001599E /* CbDemoContentView.swift */; };
 		DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E632DE5BFAB009F515E /* ContentView.swift */; };
 		DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */; };
 		DA415E682DE5BFAB009F515E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA415E602DE5BFAB009F515E /* Preview Assets.xcassets */; };
@@ -159,6 +160,7 @@
 		DA37F9912E8D8E100001599E /* CbLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CbLoginViewController.swift; sourceTree = "<group>"; };
 		DA37F9962E8D8FBB0001599E /* CbLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CbLoginViewController.xib; sourceTree = "<group>"; };
 		DA37F9982E8D91F30001599E /* CbDemoViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CbDemoViewWrapper.swift; sourceTree = "<group>"; };
+		DA37F99C2E8D93F60001599E /* CbDemoContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CbDemoContentView.swift; sourceTree = "<group>"; };
 		DA4127202E6961DE000ED05B /* FactoryMethod.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FactoryMethod.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA415E4F2DE5BF26009F515E /* LearnSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA415E602DE5BFAB009F515E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 		DA37F97E2E8D85CF0001599E /* CombineAndUIKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DA37F99C2E8D93F60001599E /* CbDemoContentView.swift */,
 				DA37F9982E8D91F30001599E /* CbDemoViewWrapper.swift */,
 				DA37F9902E8D8DFC0001599E /* MVVM */,
 				DA37F98C2E8D8BC50001599E /* TransformableProtocol */,
@@ -983,6 +986,7 @@
 				DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */,
 				DABDF7B42E70466B00DEC7C6 /* DownloadTask.swift in Sources */,
 				DA8991382E47671F00C2BD27 /* HButton.swift in Sources */,
+				DA37F99D2E8D93F60001599E /* CbDemoContentView.swift in Sources */,
 				DA37F9872E8D898B0001599E /* CbLoginResult.swift in Sources */,
 				DA8748912E6B005800B189F3 /* WeatherErrorView.swift in Sources */,
 				DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */,

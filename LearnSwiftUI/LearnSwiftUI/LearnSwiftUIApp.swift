@@ -61,12 +61,14 @@ struct LearnSwiftUIApp: App {
             
 //            DownloadView()
           
-            let countryCode = getCurrentCountryCode()
-            let paymentService = PaymentFactory.createPaymentService(for: countryCode)
-            NavigationStack {
-                PaymentView(vm: PaymentVM(paymentService: paymentService))
-                    .navigationBarTitle("Payment View")
-            }
+//            let countryCode = getCurrentCountryCode()
+//            let paymentService = PaymentFactory.createPaymentService(for: countryCode)
+//            NavigationStack {
+//                PaymentView(vm: PaymentVM(paymentService: paymentService))
+//                    .navigationBarTitle("Payment View")
+//            }
+            
+            CbDemoContentView()
 
         }
     }
