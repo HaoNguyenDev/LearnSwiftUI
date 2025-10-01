@@ -1,5 +1,5 @@
 //
-//  CombineViewModel.swift
+//  CbLoginViewModel.swift
 //  LearnSwiftUI
 //
 //  Created by Hao Nguyen on 1/10/25.
@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 // MARK: - ViewModel
-final class CombineViewModel: ViewModelTransformableProtocol {
+final class CbLoginViewModel: ViewModelTransformableProtocol {
     private var cancellables = Set<AnyCancellable>()
     
     struct Input {
@@ -20,14 +20,14 @@ final class CombineViewModel: ViewModelTransformableProtocol {
     
     struct Output {
         let isLoading: AnyPublisher<Bool, Never>
-        let isEnableLoggInButton: AnyPublisher<Bool, Never>
-        let loginResult: AnyPublisher<CBLogginResult?, Never>
+        let isEnableLoginButton: AnyPublisher<Bool, Never>
+        let loginResult: AnyPublisher<CbLoginResult?, Never>
         let error: AnyPublisher<Error?, Never>
     }
     
     // Internal Subjects
     private let isLoadingSubject = PassthroughSubject<Bool, Never>()
-    private let isLoginResultSubject = PassthroughSubject<CBLogginResult?, Never>()
+    private let isLoginResultSubject = PassthroughSubject<CbLoginResult?, Never>()
     private let errorSubject = PassthroughSubject<Error?, Never>()
     
     init() {}
@@ -52,7 +52,7 @@ final class CombineViewModel: ViewModelTransformableProtocol {
             }
             .share()
             .eraseToAnyPublisher()
-
+        
         // Validate password stream
         let passwordValidation = input.password
             .debounce(for: .milliseconds(100), scheduler: RunLoop.main)
@@ -72,13 +72,13 @@ final class CombineViewModel: ViewModelTransformableProtocol {
             }
             .share()
             .eraseToAnyPublisher()
-
+        
         // Combine email + password validity
         let isEnableLogin = emailValidation
             .combineLatest(passwordValidation)
             .map { $0 && $1 }
             .eraseToAnyPublisher()
-
+        
         // Handle login trigger
         input.loginButtonTrigger
             .withLatestFrom(isEnableLogin)
@@ -94,69 +94,69 @@ final class CombineViewModel: ViewModelTransformableProtocol {
                             self.errorSubject.send(error)
                         }
                     } receiveValue: { [weak self] result in
-                    guard let self else { return }
-                    self.isLoginResultSubject.send(result)
-                }
-                .store(in: &cancellables)
-
+                        guard let self else { return }
+                        self.isLoginResultSubject.send(result)
+                    }
+                    .store(in: &cancellables)
+                
             }
             .store(in: &cancellables)
-
+        
         return Output(
             isLoading: isLoadingSubject.eraseToAnyPublisher(),
-            isEnableLoggInButton: isEnableLogin,
+            isEnableLoginButton: isEnableLogin,
             loginResult: isLoginResultSubject.eraseToAnyPublisher(),
             error: errorSubject.eraseToAnyPublisher()
         )
     }
-
+    
     // MARK: - Login Simulation
-
-    private func login() -> AnyPublisher<CBLogginResult?, Error> {
+    
+    private func login() -> AnyPublisher<CbLoginResult?, Error> {
         Deferred {
             Future { [weak self] promise in
-            guard let self else { return }
-            self.isLoadingSubject.send(true)
-            let success = Bool.random()
-            DispatchQueue.global().asyncAfter(deadline: .now() + 1.0, execute: {
-                if success {
-                    let result = CBLogginResult(isSuccess: true, error: nil, token: "hjfvdshjfvdsjkhfa")
-                    promise(.success(result))
-                } else {
-                    promise(.failure(CBLogginError.failed))
-                }
-            })
-        }
+                guard let self else { return }
+                self.isLoadingSubject.send(true)
+                let success = Bool.random()
+                DispatchQueue.global().asyncAfter(deadline: .now() + 1.0, execute: {
+                    if success {
+                        let result = CbLoginResult(isSuccess: true, error: nil, token: "hjfvdshjfvdsjkhfa")
+                        promise(.success(result))
+                    } else {
+                        promise(.failure(CbLoginError.failed))
+                    }
+                })
+            }
         }
         .receive(on: DispatchQueue.main)
         .eraseToAnyPublisher()
     }
-
+    
     // MARK: - Validators
-
+    
     private func validEmail(with email: String) -> AnyPublisher<Bool, Error> {
         if email.isEmpty {
-            return Fail(error: CBLogginEmailError.empty).eraseToAnyPublisher()
+            return Fail(error: CbLoginEmailError.empty).eraseToAnyPublisher()
         }
         let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         guard email.range(of: regex, options: .regularExpression) != nil else {
-            return Fail(error: CBLogginEmailError.incorrectFormat).eraseToAnyPublisher()
+            return Fail(error: CbLoginEmailError.incorrectFormat).eraseToAnyPublisher()
         }
         return Just(true)
             .setFailureType(to: Error.self)
             .eraseToAnyPublisher()
     }
-
+    
     private func validPassword(with password: String) -> AnyPublisher<Bool, Error> {
         if password.isEmpty {
-            return Fail(error: CBLogginPasswordError.empty).eraseToAnyPublisher()
+            return Fail(error: CbLoginPasswordError.empty).eraseToAnyPublisher()
         }
         if password.count < 6 {
-            return Fail(error: CBLogginPasswordError.wrongLength).eraseToAnyPublisher()
+            return Fail(error: CbLoginPasswordError.wrongLength).eraseToAnyPublisher()
         }
         let regex = "^(?=.*[a-zA-Z])(?=.*\\d).{6,}$"
         guard password.range(of: regex, options: .regularExpression) != nil else {
-            return Fail(error: CBLogginPasswordError.incorrect).eraseToAnyPublisher()
+            return Fail(error: CbLoginPasswordError.incorrect).eraseToAnyPublisher()
         }
         return Just(true)
             .setFailureType(to: Error.self)

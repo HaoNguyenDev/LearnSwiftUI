@@ -1,5 +1,5 @@
 //
-//  CBLogginErrors.swift
+//  CbLogginErrors.swift
 //  LearnSwiftUI
 //
 //  Created by Hao Nguyen on 1/10/25.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum CBLogginPasswordError: Error {
+enum CbLoginPasswordError: Error {
     case incorrect
     case empty
     case wrongLength
@@ -24,7 +24,7 @@ enum CBLogginPasswordError: Error {
     }
 }
 
-enum CBLogginEmailError: Error {
+enum CbLoginEmailError: Error {
     case incorrectFormat
     case empty
     
@@ -38,7 +38,7 @@ enum CBLogginEmailError: Error {
     }
 }
 
-enum CBLogginError: Error {
+enum CbLoginError: Error {
     case failed
     case success
     case custom(String)
