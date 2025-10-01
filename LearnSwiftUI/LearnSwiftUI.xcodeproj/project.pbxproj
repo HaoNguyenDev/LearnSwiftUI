@@ -13,6 +13,10 @@
 		DA0C4B5D2E52218A00D64C7C /* FocusStateBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0C4B5C2E52218A00D64C7C /* FocusStateBootcamp.swift */; };
 		DA13CE212E89999B005B6D2D /* MVVM.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA13CE202E89999B005B6D2D /* MVVM.txt */; };
 		DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */; };
+		DA37F9802E8D860D0001599E /* CBLogginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F97F2E8D860D0001599E /* CBLogginViewModel.swift */; };
+		DA37F9822E8D88FE0001599E /* CBLoginErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F9812E8D88FE0001599E /* CBLoginErrors.swift */; };
+		DA37F9872E8D898B0001599E /* CBLogginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F9862E8D898B0001599E /* CBLogginResult.swift */; };
+		DA37F98E2E8D8BE00001599E /* ViewModelTransformableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F98D2E8D8BE00001599E /* ViewModelTransformableProtocol.swift */; };
 		DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E632DE5BFAB009F515E /* ContentView.swift */; };
 		DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */; };
 		DA415E682DE5BFAB009F515E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA415E602DE5BFAB009F515E /* Preview Assets.xcassets */; };
@@ -144,6 +148,10 @@
 		DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewBootcamp.swift; sourceTree = "<group>"; };
 		DA2745842E61E8D0000B436D /* SingletonPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SingletonPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA2745852E61FB2C000B436D /* Final.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Final.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DA37F97F2E8D860D0001599E /* CBLogginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBLogginViewModel.swift; sourceTree = "<group>"; };
+		DA37F9812E8D88FE0001599E /* CBLoginErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBLoginErrors.swift; sourceTree = "<group>"; };
+		DA37F9862E8D898B0001599E /* CBLogginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBLogginResult.swift; sourceTree = "<group>"; };
+		DA37F98D2E8D8BE00001599E /* ViewModelTransformableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTransformableProtocol.swift; sourceTree = "<group>"; };
 		DA4127202E6961DE000ED05B /* FactoryMethod.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FactoryMethod.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA415E4F2DE5BF26009F515E /* LearnSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA415E602DE5BFAB009F515E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -303,6 +311,49 @@
 				DABDF7B32E70466B00DEC7C6 /* DownloadTask.swift */,
 			);
 			path = MultiDownloadApp;
+			sourceTree = "<group>";
+		};
+		DA37F97E2E8D85CF0001599E /* CombineAndUIKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DA37F98C2E8D8BC50001599E /* TransformableProtocol */,
+				DA37F9882E8D8A610001599E /* VỉewModel */,
+				DA37F9852E8D896C0001599E /* Model */,
+				DA37F9892E8D8A6D0001599E /* Errors */,
+			);
+			path = CombineAndUIKitDemo;
+			sourceTree = "<group>";
+		};
+		DA37F9852E8D896C0001599E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA37F9862E8D898B0001599E /* CBLogginResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA37F9882E8D8A610001599E /* VỉewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA37F97F2E8D860D0001599E /* CBLogginViewModel.swift */,
+			);
+			path = "VỉewModel";
+			sourceTree = "<group>";
+		};
+		DA37F9892E8D8A6D0001599E /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				DA37F9812E8D88FE0001599E /* CBLoginErrors.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		DA37F98C2E8D8BC50001599E /* TransformableProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				DA37F98D2E8D8BE00001599E /* ViewModelTransformableProtocol.swift */,
+			);
+			path = TransformableProtocol;
 			sourceTree = "<group>";
 		};
 		DA415E462DE5BF26009F515E = {
@@ -530,6 +581,7 @@
 		DA65B7322E37D31200BF8A59 /* AppDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DA37F97E2E8D85CF0001599E /* CombineAndUIKitDemo */,
 				DAA709092E75D282006F8E70 /* PaymentsApp */,
 				DA0B4AE52E6FC96800628E53 /* MultiDownloadApp */,
 				DA8748852E6AFBB000B189F3 /* WeatherList */,
@@ -863,6 +915,7 @@
 				DA5D718E2E3FBA6A00C78E40 /* GithubUser.swift in Sources */,
 				DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */,
 				DAEEFB762E366D4000E78DA2 /* ObservableObjectBootcamp.swift in Sources */,
+				DA37F9822E8D88FE0001599E /* CBLoginErrors.swift in Sources */,
 				DA7BE0A82E806048006821CE /* LoginRouter.swift in Sources */,
 				DAA7091C2E75D85F006F8E70 /* PaymentView.swift in Sources */,
 				DA8748992E6B007700B189F3 /* WeatherDataPill.swift in Sources */,
@@ -878,8 +931,10 @@
 				DA5D71862E3FA5B400C78E40 /* NetworkManager.swift in Sources */,
 				DA5D719B2E3FC03D00C78E40 /* AlertHandler.swift in Sources */,
 				DAE2EACA2DF5DE280083E733 /* SheetBootcamp.swift in Sources */,
+				DA37F9802E8D860D0001599E /* CBLogginViewModel.swift in Sources */,
 				DA0B4AE72E6FC9A400628E53 /* DownloadManager.swift in Sources */,
 				DA415E8F2DE5DCC0009F515E /* Color.swift in Sources */,
+				DA37F98E2E8D8BE00001599E /* ViewModelTransformableProtocol.swift in Sources */,
 				DA5D71452E3F43B100C78E40 /* ObservablePattern.swift in Sources */,
 				DAEBAE462DF11C7300082B1C /* ButtonBootcamp.swift in Sources */,
 				DA5D711C2E3D184500C78E40 /* Router.swift in Sources */,
@@ -897,6 +952,7 @@
 				DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */,
 				DABDF7B42E70466B00DEC7C6 /* DownloadTask.swift in Sources */,
 				DA8991382E47671F00C2BD27 /* HButton.swift in Sources */,
+				DA37F9872E8D898B0001599E /* CBLogginResult.swift in Sources */,
 				DA8748912E6B005800B189F3 /* WeatherErrorView.swift in Sources */,
 				DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */,
 				DA5D71272E3D18E300C78E40 /* UserSettings.swift in Sources */,
