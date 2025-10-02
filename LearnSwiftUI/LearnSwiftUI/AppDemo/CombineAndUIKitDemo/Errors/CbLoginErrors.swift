@@ -17,7 +17,7 @@ enum CbLoginPasswordError: Error {
         case .incorrect:
             return "Incorrect password format"
         case .empty:
-            return "Password is empty"
+            return "Password can't be empty"
         case .wrongLength:
             return "Password must be at least 6 characters long"
         }
@@ -33,7 +33,7 @@ enum CbLoginEmailError: Error {
         case .incorrectFormat:
             return "Invalid email format"
         case .empty:
-            return "Email is empty"
+            return "Email can't be empty"
         }
     }
 }
