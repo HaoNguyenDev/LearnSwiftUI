@@ -40,15 +40,12 @@ class CombineDefinitionHomeVC: UIViewController {
         viewModel.$selectedItem
             .sink { [weak self] item in
                 guard let item = item else { return }
-                self?.pushToExplaintScreenWithType(with: item)
-                
+                DispatchQueue.main.async { [weak self] in
+                    let vc = CombineItemDetailVC(item: item)
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                }
             }
             .store(in: &cancellables)
-    }
-    
-    private func pushToExplaintScreenWithType(with item: CombineItem) {
-        let vc = CombineItemDetailVC(item: item)
-        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
