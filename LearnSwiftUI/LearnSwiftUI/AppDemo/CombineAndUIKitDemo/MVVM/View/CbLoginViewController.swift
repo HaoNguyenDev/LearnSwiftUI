@@ -73,13 +73,17 @@ class CbLoginViewController: UIViewController {
                 } else {
                     print("Done")
                 }
-                self.loginButton.isEnabled = !isLoading
+                DispatchQueue.main.async {
+                    self.loginButton.isEnabled = !isLoading
+                }
             }.store(in: &cancellables)
         
         output.isEnableLoginButton
             .sink { [weak self] isEnable in
                 guard let self else { return }
-                self.loginButton.isEnabled = isEnable
+                DispatchQueue.main.async {
+                    self.loginButton.isEnabled = isEnable
+                }
             }.store(in: &cancellables)
         
         
@@ -97,13 +101,6 @@ class CbLoginViewController: UIViewController {
                 guard let self else { return }
                 self.handleError(with: error)
             }.store(in: &cancellables)
-        
-        emailTrigger
-            .map { str in
-                return "string \(str)"
-            }
-            .assign(to: \.text, on: resultMessage)
-            .store(in: &cancellables)
     }
     
     deinit {

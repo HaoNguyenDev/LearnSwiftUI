@@ -120,7 +120,7 @@ final class CbLoginViewModel: ViewModelTransformableProtocol {
                 let success = Bool.random()
                 DispatchQueue.global().asyncAfter(deadline: .now() + 1.0, execute: {
                     if success {
-                        let result = CbLoginResult(isSuccess: true, error: nil, token: "hjfvdshjfvdsjkhfa")
+                        let result = CbLoginResult(isSuccess: true, error: nil, token: "tokenAda34532m2345fas")
                         promise(.success(result))
                     } else {
                         promise(.failure(CbLoginError.failed))
