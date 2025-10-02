@@ -26,6 +26,8 @@
 		DA37F9A22E8EE4C30001599E /* CombineDefinitionHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F9A12E8EE4C30001599E /* CombineDefinitionHomeVC.swift */; };
 		DA37F9A42E8EE50F0001599E /* CombineDefinitionHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F9A32E8EE50F0001599E /* CombineDefinitionHomeViewModel.swift */; };
 		DA37F9A62E8EE5570001599E /* CombineItemDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F9A52E8EE5570001599E /* CombineItemDetailVC.swift */; };
+		DA37F9B12E8EE8C30001599E /* CombineDefinitionViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F9B02E8EE8C30001599E /* CombineDefinitionViewWrapper.swift */; };
+		DA37F9B32E8EE8CA0001599E /* CombineDefinitionContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F9B22E8EE8CA0001599E /* CombineDefinitionContentView.swift */; };
 		DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E632DE5BFAB009F515E /* ContentView.swift */; };
 		DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */; };
 		DA415E682DE5BFAB009F515E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA415E602DE5BFAB009F515E /* Preview Assets.xcassets */; };
@@ -169,6 +171,8 @@
 		DA37F9A12E8EE4C30001599E /* CombineDefinitionHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineDefinitionHomeVC.swift; sourceTree = "<group>"; };
 		DA37F9A32E8EE50F0001599E /* CombineDefinitionHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineDefinitionHomeViewModel.swift; sourceTree = "<group>"; };
 		DA37F9A52E8EE5570001599E /* CombineItemDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineItemDetailVC.swift; sourceTree = "<group>"; };
+		DA37F9B02E8EE8C30001599E /* CombineDefinitionViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineDefinitionViewWrapper.swift; sourceTree = "<group>"; };
+		DA37F9B22E8EE8CA0001599E /* CombineDefinitionContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineDefinitionContentView.swift; sourceTree = "<group>"; };
 		DA4127202E6961DE000ED05B /* FactoryMethod.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FactoryMethod.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA415E4F2DE5BF26009F515E /* LearnSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA415E602DE5BFAB009F515E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -397,6 +401,7 @@
 		DA37F99E2E8EE3540001599E /* CombineFrameworkDefinition */ = {
 			isa = PBXGroup;
 			children = (
+				DA37F9AF2E8EE8B40001599E /* SwifUIViewWrapper */,
 				DA37F9AC2E8EE7C60001599E /* CombineType */,
 				DA37F9AD2E8EE7DD0001599E /* Home */,
 				DA37F9AE2E8EE7F30001599E /* Detail */,
@@ -427,6 +432,15 @@
 				DA37F9A52E8EE5570001599E /* CombineItemDetailVC.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		DA37F9AF2E8EE8B40001599E /* SwifUIViewWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				DA37F9B22E8EE8CA0001599E /* CombineDefinitionContentView.swift */,
+				DA37F9B02E8EE8C30001599E /* CombineDefinitionViewWrapper.swift */,
+			);
+			path = SwifUIViewWrapper;
 			sourceTree = "<group>";
 		};
 		DA415E462DE5BF26009F515E = {
@@ -1033,6 +1047,7 @@
 				DA8991382E47671F00C2BD27 /* HButton.swift in Sources */,
 				DA37F99D2E8D93F60001599E /* CbDemoContentView.swift in Sources */,
 				DA37F9872E8D898B0001599E /* CbLoginResult.swift in Sources */,
+				DA37F9B32E8EE8CA0001599E /* CombineDefinitionContentView.swift in Sources */,
 				DA8748912E6B005800B189F3 /* WeatherErrorView.swift in Sources */,
 				DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */,
 				DA5D71272E3D18E300C78E40 /* UserSettings.swift in Sources */,
@@ -1110,6 +1125,7 @@
 				DA5D71962E3FBC9100C78E40 /* GitHubAPIEndpoint.swift in Sources */,
 				DA7BE0A22E805FEE006821CE /* LoginViewController.swift in Sources */,
 				DA0C4B5D2E52218A00D64C7C /* FocusStateBootcamp.swift in Sources */,
+				DA37F9B12E8EE8C30001599E /* CombineDefinitionViewWrapper.swift in Sources */,
 				DAA930402E33C99C000FE238 /* ButtonModifier.swift in Sources */,
 				DA5C98BA2E39237C007AC9E9 /* TodoRowView.swift in Sources */,
 			);
