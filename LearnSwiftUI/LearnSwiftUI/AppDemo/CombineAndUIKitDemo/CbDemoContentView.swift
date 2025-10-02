@@ -12,7 +12,7 @@ struct CbDemoContentView: View {
         VStack {
             
             CbDemoViewWrapper()
-                .frame(height: 500)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
 }
