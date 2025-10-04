@@ -290,6 +290,7 @@
 		DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBootcamp.swift; sourceTree = "<group>"; };
 		DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBootcamp.swift; sourceTree = "<group>"; };
 		DAE2EAC92DF5DE280083E733 /* SheetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetBootcamp.swift; sourceTree = "<group>"; };
+		DAE676E42E914AFE00F3D956 /* CombineFramework.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombineFramework.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAEBAE052DE9C2F800082B1C /* FrameBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE072DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAndOverlayBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE392DEAF92400082B1C /* StacksBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StacksBootcamp.swift; sourceTree = "<group>"; };
@@ -794,6 +795,7 @@
 				DA7BE0992E7F0E14006821CE /* SwiftTypeModifiers.playground */,
 				DA7BE0BD2E82DCFE006821CE /* MemoryManagement.playground */,
 				DA8F789E2E86FB1700826FB2 /* StructAndSwiftUI.playground */,
+				DAE676E42E914AFE00F3D956 /* CombineFramework.playground */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
