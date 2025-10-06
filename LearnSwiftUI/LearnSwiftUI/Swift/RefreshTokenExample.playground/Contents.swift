@@ -28,6 +28,7 @@ class APIClient {
     private var isRefreshing = false // Refresh state flag
     private var waitingRequests: [(String, (Result<String, Error>) -> Void)] = [] // List of waiting request
     private var fake401 = true
+    private var nsLock = NSLock()
     
     init() {
         // Initial
@@ -55,39 +56,54 @@ class APIClient {
     }
     
     private func handle401Error(url: String, completion: @escaping (Result<String, Error>) -> Void) {
+        // 1. Fast locking to protect state and waiting array
+        nsLock.lock()
+        
         print("📄 Add request \(url) to waiting array...")
-        // Add requests to waiting array
         waitingRequests.append((url, completion))
         
-        // If refeshing, continue waiting
+        // 2. Check flag: If refreshing, unlock and exit.
         if isRefreshing {
             print("⏳ Refreshing token, the request \(url) wait...")
+            nsLock.unlock() // Release the lock immediately so as not to block the thread
             return
         }
         
-        // Start call refresh token api
+        // 3. Set flag: This thread is selected to start token refresh.
         isRefreshing = true
+        
+        // 4. Unlock: Must unlock before calling asynchronous function.
+        nsLock.unlock()
+        
+        print("🚨 Starting token refresh...")
+        
+        // Start calling refresh token (Asynchronous)
         refreshAccessToken { [weak self] result in
             guard let self = self else { return }
             
-            // Refresh token success, get waiting request
-            let requests = self.waitingRequests
+            // 5. Lock to process the waiting array and reset the flag
+            self.nsLock.lock()
+            let requestsToRetry = self.waitingRequests // Get the request list
             self.waitingRequests.removeAll()
-            self.isRefreshing = false
+            self.isRefreshing = false // Reset state to allow next refresh
+            self.nsLock.unlock() // Release the lock after cleaning
             
             switch result {
             case .success:
-                print("🎉 Refresh token success, call all waiting requests...")
-                fake401 = false
+                print("🎉 Refresh token success, recalling \(requestsToRetry.count) waiting requests...")
+                self.fake401 = false // Disable 401 simulation after successful refresh
+                
                 // Recall all requests with new access token
-                for (url, completion) in requests {
-                    self.callAPI(url, completion: completion)
+                for (retryURL, retryCompletion) in requestsToRetry {
+                    // It is recommended to call the API again on another thread to avoid blocking the current thread.
+                    callAPI(retryURL, completion: retryCompletion)
                 }
             case .failure(let error):
                 print("❌ Refresh token failed: \(error.localizedDescription)")
+                
                 // Set error for all requests
-                for (_, completion) in requests {
-                    completion(.failure(error))
+                for (_, retryCompletion) in requestsToRetry {
+                    retryCompletion(.failure(error))
                 }
             }
         }
@@ -102,7 +118,6 @@ class APIClient {
         print("🔄 Call API refresh token with refresh token: \(refreshToken)")
         
         // Simulate calling API refresh token (wait 1 second)
-        Thread.sleep(forTimeInterval: 1)
         if Bool.random() {
             // Simulate server returns new token
             let newAccessToken = "new_access_token_\(Int.random(in: 1000...2000))"
@@ -128,22 +143,42 @@ class APIClient {
 }
 
 
-let client = APIClient()
+
 
 // Simulate multiple API calls simultaneously
-let urls = [
+let urls1 = [
     "https://api.example.com/posts",
     "https://api.example.com/profile",
     "https://api.example.com/notifications"
 ]
 
-for url in urls {
-    client.callAPI(url) { result in
-        switch result {
-        case .success(let data):
-            print("🎉 Result from \(url): \(data)")
-        case .failure(let error):
-            print("❌ Error from \(url): \(error.localizedDescription)")
+let urls2 = [
+    "https://api.example.com/promotions",
+    "https://api.example.com/settings",
+    "https://api.example.com/configs"
+]
+
+DispatchQueue.global(qos: .userInitiated).async {
+    let client = APIClient()
+    for url in urls1 {
+        client.callAPI(url) { result in
+            switch result {
+            case .success(let data):
+                print("🎉 Result from \(url): \(data)")
+            case .failure(let error):
+                print("❌ Error from \(url): \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    for url in urls2 {
+        client.callAPI(url) { result in
+            switch result {
+            case .success(let data):
+                print("🎉 Result from \(url): \(data)")
+            case .failure(let error):
+                print("❌ Error from \(url): \(error.localizedDescription)")
+            }
         }
     }
 }
