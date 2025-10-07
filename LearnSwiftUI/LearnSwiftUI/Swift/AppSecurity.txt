@@ -1,0 +1,4 @@
+App Transport Security (ATS) là một tính năng bảo mật mặc định trên iOS, buộc ứng dụng phải kết nối với các máy chủ web thông qua giao thức bảo mật HTTPS và tuân thủ các tiêu chuẩn bảo mật tối thiểu của Apple.
+* Tầm quan trọng: ATS đảm bảo dữ liệu khi truyền tải được mã hóa bằng TLS (Transport Layer Security). Nó ngăn chặn các cuộc tấn công nghe lén (eavesdropping) và Man-in-the-Middle (MITM).
+* Tiêu chuẩn: ATS yêu cầu kết nối phải sử dụng TLS phiên bản 1.2 trở lên, các bộ mã hóa mạnh mẽ và chứng chỉ hợp lệ.
+* Trường hợp ngoại lệ: Nếu bắt buộc phải kết nối với một domain HTTP không an toàn, tôi sẽ chỉ thêm các ngoại lệ ATS (sử dụng NSAllowsExceptionDomains) cho các domain cụ thể đó và đưa ra lý do rõ ràng, thay vì vô hiệu hóa hoàn toàn ATS (NSAllowsArbitraryLoads = YES).
