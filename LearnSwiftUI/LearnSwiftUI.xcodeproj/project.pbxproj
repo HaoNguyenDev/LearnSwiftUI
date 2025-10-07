@@ -129,6 +129,7 @@
 		DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */; };
 		DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */; };
 		DAE2EACA2DF5DE280083E733 /* SheetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC92DF5DE280083E733 /* SheetBootcamp.swift */; };
+		DAE676E82E9552D900F3D956 /* AppSecurity.txt in Resources */ = {isa = PBXBuildFile; fileRef = DAE676E72E9552D900F3D956 /* AppSecurity.txt */; };
 		DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE052DE9C2F800082B1C /* FrameBootcamp.swift */; };
 		DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE072DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift */; };
 		DAEBAE3A2DEAF92400082B1C /* StacksBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE392DEAF92400082B1C /* StacksBootcamp.swift */; };
@@ -291,6 +292,7 @@
 		DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBootcamp.swift; sourceTree = "<group>"; };
 		DAE2EAC92DF5DE280083E733 /* SheetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetBootcamp.swift; sourceTree = "<group>"; };
 		DAE676E42E914AFE00F3D956 /* CombineFramework.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombineFramework.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DAE676E72E9552D900F3D956 /* AppSecurity.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppSecurity.txt; sourceTree = "<group>"; };
 		DAEBAE052DE9C2F800082B1C /* FrameBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE072DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAndOverlayBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE392DEAF92400082B1C /* StacksBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StacksBootcamp.swift; sourceTree = "<group>"; };
@@ -774,6 +776,7 @@
 		DA8991392E48C7A000C2BD27 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				DAE676E72E9552D900F3D956 /* AppSecurity.txt */,
 				DA13CE202E89999B005B6D2D /* MVVM.txt */,
 				DA8F78A12E883F0300826FB2 /* SwiftUI.txt */,
 				DA6E0D702E4CEE68009B3778 /* StackQueueAndHeap.playground */,
@@ -988,6 +991,7 @@
 				DA415E692DE5BFAB009F515E /* Assets.xcassets in Resources */,
 				DA37F9972E8D8FBB0001599E /* CbLoginViewController.xib in Resources */,
 				DA7BE09E2E805F4B006821CE /* VIPER-Architecture.txt in Resources */,
+				DAE676E82E9552D900F3D956 /* AppSecurity.txt in Resources */,
 				DA415E702DE5BFF9009F515E /* Dosis-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
