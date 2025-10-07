@@ -1,4 +1,32 @@
-App Transport Security (ATS) là một tính năng bảo mật mặc định trên iOS, buộc ứng dụng phải kết nối với các máy chủ web thông qua giao thức bảo mật HTTPS và tuân thủ các tiêu chuẩn bảo mật tối thiểu của Apple.
-* Tầm quan trọng: ATS đảm bảo dữ liệu khi truyền tải được mã hóa bằng TLS (Transport Layer Security). Nó ngăn chặn các cuộc tấn công nghe lén (eavesdropping) và Man-in-the-Middle (MITM).
-* Tiêu chuẩn: ATS yêu cầu kết nối phải sử dụng TLS phiên bản 1.2 trở lên, các bộ mã hóa mạnh mẽ và chứng chỉ hợp lệ.
-* Trường hợp ngoại lệ: Nếu bắt buộc phải kết nối với một domain HTTP không an toàn, tôi sẽ chỉ thêm các ngoại lệ ATS (sử dụng NSAllowsExceptionDomains) cho các domain cụ thể đó và đưa ra lý do rõ ràng, thay vì vô hiệu hóa hoàn toàn ATS (NSAllowsArbitraryLoads = YES).
+Security in iOS Apps (Client-Side)
+
+For iOS Developer apps, these practices involve handling passwords on the user's device:
+Use KeyChain:
+Never store passwords on UserDefaults or in a file.
+Use iOS KeyChain to store authentication tokens or any other sensitive information. The KeyChain is protected by system-level encryption and is only accessible by your app.
+Secure Communication (HTTPS/TLS):
+Ensure passwords are always transmitted over an HTTPS connection with strong TLS protocol (Use App Transport Security - ATS by default).
+This prevents passwords from being stolen while they are being transmitted from the phone to the server.
+
+App Transport Security (ATS) is a default security feature on iOS that forces apps to connect to web servers over HTTPS and adhere to Apple's minimum security standards.
+* Importance: ATS ensures that data in transit is encrypted using TLS (Transport Layer Security). It prevents eavesdropping and Man-in-the-Middle (MITM) attacks.
+* Standards: ATS requires connections to use TLS version 1.2 or higher, strong cipher suites, and valid certificates.
+* Exceptions: If I absolutely must connect to an insecure HTTP domain, I would only add ATS exceptions (using NSAllowsExceptionDomains) for those specific domains and provide a clear reason, instead of disabling ATS entirely (NSAllowsArbitraryLoads = YES).
+
+What is SSL Pinning (or Certificate Pinning)? When would you use it?
+SSL Pinning (or Certificate Pinning) is an additional security technique to prevent sophisticated MITM attacks.
+* Mechanism: Instead of relying solely on the usual CA (Certificate Authority) chain of trust, Pinning embeds a copy of the server's certificate or public key into the application.
+* Authentication process: When the application connects to the server, it compares the server's certificate with the pinned copy. If they do not match (e.g., because the attacker used a forged certificate), the application will refuse to connect even if the certificate is signed by a valid CA.
+* When to use: I would deploy SSL Pinning for applications that handle highly sensitive data (e.g., financial, healthcare, PCI-DSS applications) to enhance the security of the TLS layer.
+
+What is Code Signing in iOS and why is it important?
+Code Signing is the process by which Apple ensures that the application code has not been altered since it was signed by the developer.
+* Importance: It protects users from malicious or tampered applications. Every application must be signed with a valid development certificate.
+* Mechanism: When a user installs or runs an application, iOS checks the signature. If the signature is invalid (or the application has been modified after signing), iOS refuses to run the application.
+* Ensuring trust: Code Signing is the foundation of the App Sandbox and the App Store distribution process, ensuring the integrity and provenance of the application.
+
+Where would you store user tokens, API keys, and passwords in an iOS app?
+Let use iOS Keychain.
+* Keychain is a secure, system-level encrypted storage mechanism, protected by the device's Secure Enclave. It is designed to store sensitive information such as passwords, authentication tokens (access/refresh tokens), and encryption keys.
+* Strengths: Keychain uses AES-256 encryption and can only be accessed by the app that owns the item, or apps in the same access group with the user's consent.
+* Absolutely avoid: I would never store this information in UserDefaults, Core Data, or local storage files as they are unencrypted by default and are vulnerable to extraction if the device is rooted/jailbroken.
