@@ -30,3 +30,38 @@ Let use iOS Keychain.
 * Keychain is a secure, system-level encrypted storage mechanism, protected by the device's Secure Enclave. It is designed to store sensitive information such as passwords, authentication tokens (access/refresh tokens), and encryption keys.
 * Strengths: Keychain uses AES-256 encryption and can only be accessed by the app that owns the item, or apps in the same access group with the user's consent.
 * Absolutely avoid: I would never store this information in UserDefaults, Core Data, or local storage files as they are unencrypted by default and are vulnerable to extraction if the device is rooted/jailbroken.
+
+
+What is PCI-DSS?
+PCI-DSS stands for Payment Card Industry Data Security Standard 💳.
+This is a set of global information security standards established by the PCI Security Standards Council (PCI SSC), which includes major card brands such as Visa, MasterCard, American Express, Discover, and JCB.
+
+Primary Purpose
+The purpose of PCI DSS is to protect cardholder data (such as credit card numbers, expiration dates, CVV/CVC security codes, etc.) and related information, thereby:
+Preventing data breaches, identity theft, and financial fraud.
+Maintaining a secure environment for processing, storing, and transmitting card data
+
+Scope of application
+PCI DSS is mandatory for all organizations participating in the payment ecosystem, including:
+Merchants: Businesses that accept card payments.
+Service Providers: Entities that collect, process, store, or transmit card data (e.g., payment gateways, hosting providers, payment services).
+
+12 Core Requirements
+The PCI DSS consists of 12 requirements grouped into six key objectives to establish and maintain a robust security system. Some typical requirements include:
+Install and maintain a secure firewall configuration to protect cardholder data.
+Do not use vendor default passwords/parameters.
+Protect stored cardholder data (e.g., encryption).
+Encrypt cardholder data when transmitted over public networks.
+Protect systems from malware and keep anti-virus software up to date.
+Develop and maintain secure systems and applications.
+Restrict access to cardholder data using a “need to know” principle.
+Assign unique IDs to each user with access and use strong authentication.
+Restrict physical access to cardholder data.
+Track and monitor all access to network resources and cardholder data.
+Regularly review security systems and procedures.
+Maintain information security policies for all employees.
+
+Examples of PCI-DSS requirements relevant to mobile applications:
+Protect Cardholder Data (CHD) when stored and transmitted.
+Never store sensitive data such as CVV or PIN codes.
+Use strong encryption for card data transmitted over public networks.
