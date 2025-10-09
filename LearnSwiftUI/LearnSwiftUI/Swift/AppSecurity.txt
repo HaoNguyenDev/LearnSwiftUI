@@ -65,3 +65,18 @@ Examples of PCI-DSS requirements relevant to mobile applications:
 Protect Cardholder Data (CHD) when stored and transmitted.
 Never store sensitive data such as CVV or PIN codes.
 Use strong encryption for card data transmitted over public networks.
+
+Core Requirements for Mobile Apps
+PCI DSS requirements for mobile apps include security measures on both the front-end and back-end.
+
+A. About Application Development
+Secure Coding:
+Implement secure programming practices to avoid common security vulnerabilities (e.g., SQL Injection, XSS).
+Regularly update, patch, and apply security patches to all system and software components.
+App Hardening:
+Employ measures against code tampering or reverse engineering of the app.
+Do not store any card data on the mobile device.
+
+B. Data Protection (Requirements 3 & 4)
+Protection of data at rest: If PAN must be stored, it must be heavily encrypted or masked/tokenized, and sensitive authentication data such as CVV/CVC, PIN, or magnetic stripe data must never be stored.
+Transport encryption: All card data transmitted from the application to the server and back must be heavily encrypted using modern security protocols (e.g., TLS 1.2 or higher).
