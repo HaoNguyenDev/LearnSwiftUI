@@ -48,16 +48,10 @@ struct LearnSwiftUIApp: App {
 //                .environment(\.theme, themeVM.currentTheme)
 //                .environment(themeVM)
             
-//            NavigationStack {
-//              WeatherListView()
-//                .navigationTitle("Weather")
-//                .environment(WeatherServiceWrapper())
-//            }
-            
-//            NavigationStack {
-//                WeatherMainView(vm: WeatherListViewModel(weatherService: WeatherServiceWrapper()))
-//                    .navigationTitle("Weather")
-//            }
+            NavigationStack {
+                WeatherMainView(vm: WeatherListViewModel(weatherService: WeatherServiceWrapper()))
+                    .navigationTitle("Weather")
+            }
             
 //            DownloadView()
           
@@ -70,7 +64,7 @@ struct LearnSwiftUIApp: App {
             
 //            CbDemoContentView()
             
-            CombineDefinitionContentView()
+//            CombineDefinitionContentView()
 
         }
     }
