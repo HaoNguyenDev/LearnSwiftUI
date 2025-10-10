@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ColorsBootcamp: View {
+    @Environment(\.theme) var theme
     var body: some View {
         ZStack {
             Rectangle()
@@ -16,7 +17,7 @@ struct ColorsBootcamp: View {
             
             VStack {
                 Text("Helloooooo")
-                    .font(.dosis(fontStyle: .body, fontweight: .bold, size: 20.0))
+                    .font(theme.font.bold(ofSize: 20))
                     .foregroundColor(.customTextColor)
                     .padding()
                 
