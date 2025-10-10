@@ -11,4 +11,5 @@ import SwiftUI
 struct DefaultThemeAssets: ThemeAssetsProtocol {
     var userAvatar: UIImage { R.image.manUserCircleIcon() ?? UIImage() }
     var catImage: UIImage { R.image.cat() ?? UIImage() }
+    var ic_close: UIImage { R.image.ic_close() ?? UIImage() }
 }
