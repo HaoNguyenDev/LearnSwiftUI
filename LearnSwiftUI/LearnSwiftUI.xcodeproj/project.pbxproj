@@ -34,7 +34,6 @@
 		DA415E692DE5BFAB009F515E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA415E622DE5BFAB009F515E /* Assets.xcassets */; };
 		DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E6D2DE5BFDD009F515E /* TextBootcamp.swift */; };
 		DA415E702DE5BFF9009F515E /* Dosis-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA415E6F2DE5BFF9009F515E /* Dosis-VariableFont_wght.ttf */; };
-		DA415E742DE5C31F009F515E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E732DE5C31F009F515E /* Font.swift */; };
 		DA415E8B2DE5C845009F515E /* ShapesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E8A2DE5C845009F515E /* ShapesBootcamp.swift */; };
 		DA415E8D2DE5CD41009F515E /* ColorsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E8C2DE5CD41009F515E /* ColorsBootcamp.swift */; };
 		DA415E8F2DE5DCC0009F515E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E8E2DE5DCC0009F515E /* Color.swift */; };
@@ -93,6 +92,33 @@
 		DA7BE0B82E806362006821CE /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0B72E806362006821CE /* HomeInteractor.swift */; };
 		DA7BE0BA2E80637F006821CE /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0B92E80637F006821CE /* HomeRouter.swift */; };
 		DA7BE0BC2E8063AD006821CE /* HomeModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0BB2E8063AD006821CE /* HomeModuleBuilder.swift */; };
+		DA7BF5C92E98EC2000224BCF /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF5C82E98EC2000224BCF /* ThemeProtocol.swift */; };
+		DA7BF5CC2E98EC4100224BCF /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF5CB2E98EC4100224BCF /* ThemeManager.swift */; };
+		DA7BF5CF2E98ED0300224BCF /* ThemeColorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF5CE2E98ED0300224BCF /* ThemeColorProtocol.swift */; };
+		DA7BF5D12E98ED0D00224BCF /* ThemeFontProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF5D02E98ED0D00224BCF /* ThemeFontProtocol.swift */; };
+		DA7BF5D32E98ED1400224BCF /* ThemeAssetsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF5D22E98ED1400224BCF /* ThemeAssetsProtocol.swift */; };
+		DA7BF5D72E98ED4000224BCF /* DefaultTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF5D62E98ED4000224BCF /* DefaultTheme.swift */; };
+		DA7BF5D92E98ED4700224BCF /* DefaultThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF5D82E98ED4700224BCF /* DefaultThemeColor.swift */; };
+		DA7BF5DB2E98ED6D00224BCF /* DefaultThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF5DA2E98ED6C00224BCF /* DefaultThemeFont.swift */; };
+		DA7BF5DD2E98ED7300224BCF /* DefaultThemeAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF5DC2E98ED7300224BCF /* DefaultThemeAssets.swift */; };
+		DA7BF5DF2E98EEA900224BCF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7BF5DE2E98EEA900224BCF /* Colors.xcassets */; };
+		DA7BF5E22E98F1FB00224BCF /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = DA7BF5E12E98F1FB00224BCF /* RswiftLibrary */; };
+		DA7BF5E62E98F2B400224BCF /* RswiftResources+ImageResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF5E52E98F2B400224BCF /* RswiftResources+ImageResource.swift */; };
+		DA7BF5E82E98F2C900224BCF /* RswiftResources+ColorResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF5E72E98F2C900224BCF /* RswiftResources+ColorResource.swift */; };
+		DA7BF5EA2E98F2DA00224BCF /* RswiftResources+FontResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF5E92E98F2DA00224BCF /* RswiftResources+FontResource.swift */; };
+		DA7BF6002E99003A00224BCF /* TT Hoves Pro Trial Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA7BF5FA2E99003A00224BCF /* TT Hoves Pro Trial Hairline.ttf */; };
+		DA7BF6012E99003A00224BCF /* TT Hoves Pro Trial Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA7BF5FD2E99003A00224BCF /* TT Hoves Pro Trial Regular.ttf */; };
+		DA7BF6022E99003A00224BCF /* TT Hoves Pro Trial Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA7BF5FE2E99003A00224BCF /* TT Hoves Pro Trial Thin.ttf */; };
+		DA7BF6032E99003A00224BCF /* TT Hoves Pro Trial Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA7BF5F52E99003A00224BCF /* TT Hoves Pro Trial Black.ttf */; };
+		DA7BF6042E99003A00224BCF /* TT Hoves Pro Trial Variable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA7BF5FF2E99003A00224BCF /* TT Hoves Pro Trial Variable.ttf */; };
+		DA7BF6052E99003A00224BCF /* TT Hoves Pro Trial Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA7BF5FC2E99003A00224BCF /* TT Hoves Pro Trial Medium.ttf */; };
+		DA7BF6062E99003A00224BCF /* TT Hoves Pro Trial Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA7BF5F62E99003A00224BCF /* TT Hoves Pro Trial Bold.ttf */; };
+		DA7BF6072E99003A00224BCF /* TT Hoves Pro Trial Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA7BF5FB2E99003A00224BCF /* TT Hoves Pro Trial Light.ttf */; };
+		DA7BF6082E99003A00224BCF /* TT Hoves Pro Trial ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA7BF5F82E99003A00224BCF /* TT Hoves Pro Trial ExtraBold.ttf */; };
+		DA7BF6092E99003A00224BCF /* TT Hoves Pro Trial ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA7BF5F92E99003A00224BCF /* TT Hoves Pro Trial ExtraLight.ttf */; };
+		DA7BF60A2E99003A00224BCF /* TT Hoves Pro Trial DemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA7BF5F72E99003A00224BCF /* TT Hoves Pro Trial DemiBold.ttf */; };
+		DA7BF61C2E99036200224BCF /* View+Themed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF61B2E99036200224BCF /* View+Themed.swift */; };
+		DA7BF6212E99038300224BCF /* Environment+ThemeKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF6202E99038300224BCF /* Environment+ThemeKeys.swift */; };
 		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
 		DA8748872E6AFBC900B189F3 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8748862E6AFBC100B189F3 /* WeatherService.swift */; };
 		DA87488A2E6AFC6A00B189F3 /* WeatherItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8748892E6AFC6300B189F3 /* WeatherItem.swift */; };
@@ -103,7 +129,6 @@
 		DA8748992E6B007700B189F3 /* WeatherDataPill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8748982E6B007700B189F3 /* WeatherDataPill.swift */; };
 		DA87489B2E6B007D00B189F3 /* WeatherListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87489A2E6B007D00B189F3 /* WeatherListView.swift */; };
 		DA87489E2E6B16B500B189F3 /* WeatherMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87489D2E6B16B500B189F3 /* WeatherMainView.swift */; };
-		DA8991382E47671F00C2BD27 /* HButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8991372E47671F00C2BD27 /* HButton.swift */; };
 		DA8F78A22E883F0300826FB2 /* SwiftUI.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA8F78A12E883F0300826FB2 /* SwiftUI.txt */; };
 		DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D32E3A65110051F62F /* SharedModel.swift */; };
 		DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */; };
@@ -146,8 +171,6 @@
 		DAED67802E21089A00309382 /* ObservedObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED677F2E21089A00309382 /* ObservedObjectBootcamp.swift */; };
 		DAEEFB762E366D4000E78DA2 /* ObservableObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEEFB752E366D2F00E78DA2 /* ObservableObjectBootcamp.swift */; };
 		DAFCDF6A2E630B2C00B97C00 /* ErrorBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCDF692E630B2C00B97C00 /* ErrorBanner.swift */; };
-		DAFCDF6D2E63485000B97C00 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCDF6C2E63485000B97C00 /* AppTheme.swift */; };
-		DAFCDF6F2E63490F00B97C00 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCDF6E2E63490F00B97C00 /* ThemeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -182,8 +205,6 @@
 		DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnSwiftUIApp.swift; sourceTree = "<group>"; };
 		DA415E6D2DE5BFDD009F515E /* TextBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBootcamp.swift; sourceTree = "<group>"; };
 		DA415E6F2DE5BFF9009F515E /* Dosis-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-VariableFont_wght.ttf"; sourceTree = "<group>"; };
-		DA415E712DE5C00D009F515E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		DA415E732DE5C31F009F515E /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		DA415E8A2DE5C845009F515E /* ShapesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesBootcamp.swift; sourceTree = "<group>"; };
 		DA415E8C2DE5CD41009F515E /* ColorsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsBootcamp.swift; sourceTree = "<group>"; };
 		DA415E8E2DE5DCC0009F515E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -248,6 +269,32 @@
 		DA7BE0B92E80637F006821CE /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		DA7BE0BB2E8063AD006821CE /* HomeModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleBuilder.swift; sourceTree = "<group>"; };
 		DA7BE0BD2E82DCFE006821CE /* MemoryManagement.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MemoryManagement.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DA7BF5C82E98EC2000224BCF /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
+		DA7BF5CB2E98EC4100224BCF /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		DA7BF5CE2E98ED0300224BCF /* ThemeColorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColorProtocol.swift; sourceTree = "<group>"; };
+		DA7BF5D02E98ED0D00224BCF /* ThemeFontProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFontProtocol.swift; sourceTree = "<group>"; };
+		DA7BF5D22E98ED1400224BCF /* ThemeAssetsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeAssetsProtocol.swift; sourceTree = "<group>"; };
+		DA7BF5D62E98ED4000224BCF /* DefaultTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTheme.swift; sourceTree = "<group>"; };
+		DA7BF5D82E98ED4700224BCF /* DefaultThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultThemeColor.swift; sourceTree = "<group>"; };
+		DA7BF5DA2E98ED6C00224BCF /* DefaultThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultThemeFont.swift; sourceTree = "<group>"; };
+		DA7BF5DC2E98ED7300224BCF /* DefaultThemeAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultThemeAssets.swift; sourceTree = "<group>"; };
+		DA7BF5DE2E98EEA900224BCF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		DA7BF5E52E98F2B400224BCF /* RswiftResources+ImageResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RswiftResources+ImageResource.swift"; sourceTree = "<group>"; };
+		DA7BF5E72E98F2C900224BCF /* RswiftResources+ColorResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RswiftResources+ColorResource.swift"; sourceTree = "<group>"; };
+		DA7BF5E92E98F2DA00224BCF /* RswiftResources+FontResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RswiftResources+FontResource.swift"; sourceTree = "<group>"; };
+		DA7BF5F52E99003A00224BCF /* TT Hoves Pro Trial Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Hoves Pro Trial Black.ttf"; sourceTree = "<group>"; };
+		DA7BF5F62E99003A00224BCF /* TT Hoves Pro Trial Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Hoves Pro Trial Bold.ttf"; sourceTree = "<group>"; };
+		DA7BF5F72E99003A00224BCF /* TT Hoves Pro Trial DemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Hoves Pro Trial DemiBold.ttf"; sourceTree = "<group>"; };
+		DA7BF5F82E99003A00224BCF /* TT Hoves Pro Trial ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Hoves Pro Trial ExtraBold.ttf"; sourceTree = "<group>"; };
+		DA7BF5F92E99003A00224BCF /* TT Hoves Pro Trial ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Hoves Pro Trial ExtraLight.ttf"; sourceTree = "<group>"; };
+		DA7BF5FA2E99003A00224BCF /* TT Hoves Pro Trial Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Hoves Pro Trial Hairline.ttf"; sourceTree = "<group>"; };
+		DA7BF5FB2E99003A00224BCF /* TT Hoves Pro Trial Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Hoves Pro Trial Light.ttf"; sourceTree = "<group>"; };
+		DA7BF5FC2E99003A00224BCF /* TT Hoves Pro Trial Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Hoves Pro Trial Medium.ttf"; sourceTree = "<group>"; };
+		DA7BF5FD2E99003A00224BCF /* TT Hoves Pro Trial Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Hoves Pro Trial Regular.ttf"; sourceTree = "<group>"; };
+		DA7BF5FE2E99003A00224BCF /* TT Hoves Pro Trial Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Hoves Pro Trial Thin.ttf"; sourceTree = "<group>"; };
+		DA7BF5FF2E99003A00224BCF /* TT Hoves Pro Trial Variable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Hoves Pro Trial Variable.ttf"; sourceTree = "<group>"; };
+		DA7BF61B2E99036200224BCF /* View+Themed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Themed.swift"; sourceTree = "<group>"; };
+		DA7BF6202E99038300224BCF /* Environment+ThemeKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+ThemeKeys.swift"; sourceTree = "<group>"; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DA8748862E6AFBC100B189F3 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		DA8748892E6AFC6300B189F3 /* WeatherItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherItem.swift; sourceTree = "<group>"; };
@@ -258,7 +305,6 @@
 		DA8748982E6B007700B189F3 /* WeatherDataPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataPill.swift; sourceTree = "<group>"; };
 		DA87489A2E6B007D00B189F3 /* WeatherListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListView.swift; sourceTree = "<group>"; };
 		DA87489D2E6B16B500B189F3 /* WeatherMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMainView.swift; sourceTree = "<group>"; };
-		DA8991372E47671F00C2BD27 /* HButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HButton.swift; sourceTree = "<group>"; };
 		DA89A7CF2E48DF73007BF882 /* Closure.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Closure.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA89A7D12E48FEAE007BF882 /* RefreshTokenExample.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RefreshTokenExample.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA89A7D22E490391007BF882 /* GCDTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GCDTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -310,8 +356,6 @@
 		DAEEFB752E366D2F00E78DA2 /* ObservableObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAFCDF682E62052500B97C00 /* SOLID.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SOLID.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAFCDF692E630B2C00B97C00 /* ErrorBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBanner.swift; sourceTree = "<group>"; };
-		DAFCDF6C2E63485000B97C00 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
-		DAFCDF6E2E63490F00B97C00 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +365,7 @@
 			files = (
 				DA37F9952E8D8E3E0001599E /* CombineCocoa in Frameworks */,
 				DA5D71932E3FBB7C00C78E40 /* SDWebImageSwiftUI in Frameworks */,
+				DA7BF5E22E98F1FB00224BCF /* RswiftLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,10 +518,7 @@
 		DA415E652DE5BFAB009F515E /* LearnSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				DAFCDF6B2E63480B00B97C00 /* AppTheme */,
-				DA415E712DE5C00D009F515E /* Info.plist */,
 				DA415E612DE5BFAB009F515E /* Preview Content */,
-				DA415E622DE5BFAB009F515E /* Assets.xcassets */,
 				DA415E632DE5BFAB009F515E /* ContentView.swift */,
 				DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */,
 				DAEBAE4B2DF2907900082B1C /* Base */,
@@ -541,6 +583,8 @@
 		DA415E6B2DE5BFBD009F515E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				DA7BF5DE2E98EEA900224BCF /* Colors.xcassets */,
+				DA415E622DE5BFAB009F515E /* Assets.xcassets */,
 				DA415E6C2DE5BFC6009F515E /* Fonts */,
 			);
 			path = Resource;
@@ -549,6 +593,17 @@
 		DA415E6C2DE5BFC6009F515E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				DA7BF5F52E99003A00224BCF /* TT Hoves Pro Trial Black.ttf */,
+				DA7BF5F62E99003A00224BCF /* TT Hoves Pro Trial Bold.ttf */,
+				DA7BF5F72E99003A00224BCF /* TT Hoves Pro Trial DemiBold.ttf */,
+				DA7BF5F82E99003A00224BCF /* TT Hoves Pro Trial ExtraBold.ttf */,
+				DA7BF5F92E99003A00224BCF /* TT Hoves Pro Trial ExtraLight.ttf */,
+				DA7BF5FA2E99003A00224BCF /* TT Hoves Pro Trial Hairline.ttf */,
+				DA7BF5FB2E99003A00224BCF /* TT Hoves Pro Trial Light.ttf */,
+				DA7BF5FC2E99003A00224BCF /* TT Hoves Pro Trial Medium.ttf */,
+				DA7BF5FD2E99003A00224BCF /* TT Hoves Pro Trial Regular.ttf */,
+				DA7BF5FE2E99003A00224BCF /* TT Hoves Pro Trial Thin.ttf */,
+				DA7BF5FF2E99003A00224BCF /* TT Hoves Pro Trial Variable.ttf */,
 				DA415E6F2DE5BFF9009F515E /* Dosis-VariableFont_wght.ttf */,
 			);
 			path = Fonts;
@@ -558,7 +613,6 @@
 			isa = PBXGroup;
 			children = (
 				DAA9303F2E33C995000FE238 /* ButtonModifier.swift */,
-				DA415E732DE5C31F009F515E /* Font.swift */,
 				DA415E8E2DE5DCC0009F515E /* Color.swift */,
 				DAAA67232E617101004075B7 /* ViewAndAdditional.swift */,
 			);
@@ -605,6 +659,7 @@
 		DA5D71412E3E4BF100C78E40 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				DA7BF5C32E98DF1B00224BCF /* TextField */,
 				DA5D719A2E3FC03D00C78E40 /* AlertHandler.swift */,
 				DA8991362E47670600C2BD27 /* Button */,
 			);
@@ -732,6 +787,81 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		DA7BF5C32E98DF1B00224BCF /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		DA7BF5C72E98EC0300224BCF /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				DA7BF5D42E98ED2A00224BCF /* Themes */,
+				DA7BF5CD2E98EC4700224BCF /* Protocol */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		DA7BF5CA2E98EC3C00224BCF /* ThemeManager */ = {
+			isa = PBXGroup;
+			children = (
+				DA7BF5CB2E98EC4100224BCF /* ThemeManager.swift */,
+			);
+			path = ThemeManager;
+			sourceTree = "<group>";
+		};
+		DA7BF5CD2E98EC4700224BCF /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				DA7BF5C82E98EC2000224BCF /* ThemeProtocol.swift */,
+				DA7BF5CE2E98ED0300224BCF /* ThemeColorProtocol.swift */,
+				DA7BF5D02E98ED0D00224BCF /* ThemeFontProtocol.swift */,
+				DA7BF5D22E98ED1400224BCF /* ThemeAssetsProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		DA7BF5D42E98ED2A00224BCF /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				DA7BF5CA2E98EC3C00224BCF /* ThemeManager */,
+				DA7BF5D52E98ED3800224BCF /* DefaultTheme */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		DA7BF5D52E98ED3800224BCF /* DefaultTheme */ = {
+			isa = PBXGroup;
+			children = (
+				DA7BF5D62E98ED4000224BCF /* DefaultTheme.swift */,
+				DA7BF5DC2E98ED7300224BCF /* DefaultThemeAssets.swift */,
+				DA7BF5DA2E98ED6C00224BCF /* DefaultThemeFont.swift */,
+				DA7BF5D82E98ED4700224BCF /* DefaultThemeColor.swift */,
+			);
+			path = DefaultTheme;
+			sourceTree = "<group>";
+		};
+		DA7BF5E32E98F29E00224BCF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DA7BF6202E99038300224BCF /* Environment+ThemeKeys.swift */,
+				DA7BF61B2E99036200224BCF /* View+Themed.swift */,
+				DA7BF5E42E98F2AB00224BCF /* Rswift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DA7BF5E42E98F2AB00224BCF /* Rswift */ = {
+			isa = PBXGroup;
+			children = (
+				DA7BF5E92E98F2DA00224BCF /* RswiftResources+FontResource.swift */,
+				DA7BF5E72E98F2C900224BCF /* RswiftResources+ColorResource.swift */,
+				DA7BF5E52E98F2B400224BCF /* RswiftResources+ImageResource.swift */,
+			);
+			path = Rswift;
+			sourceTree = "<group>";
+		};
 		DA8748852E6AFBB000B189F3 /* WeatherList */ = {
 			isa = PBXGroup;
 			children = (
@@ -768,7 +898,6 @@
 			isa = PBXGroup;
 			children = (
 				DA5D71422E3E4BF700C78E40 /* BackButton.swift */,
-				DA8991372E47671F00C2BD27 /* HButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -904,18 +1033,11 @@
 		DAEBAE4B2DF2907900082B1C /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				DA7BF5C72E98EC0300224BCF /* Theme */,
+				DA7BF5E32E98F29E00224BCF /* Extensions */,
 				DAEBAE4E2DF2909E00082B1C /* Closure.swift */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		DAFCDF6B2E63480B00B97C00 /* AppTheme */ = {
-			isa = PBXGroup;
-			children = (
-				DAFCDF6C2E63485000B97C00 /* AppTheme.swift */,
-				DAFCDF6E2E63490F00B97C00 /* ThemeManager.swift */,
-			);
-			path = AppTheme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -932,11 +1054,13 @@
 			buildRules = (
 			);
 			dependencies = (
+				DA7BF5EC2E98F40800224BCF /* PBXTargetDependency */,
 			);
 			name = LearnSwiftUI;
 			packageProductDependencies = (
 				DA5D71922E3FBB7C00C78E40 /* SDWebImageSwiftUI */,
 				DA37F9942E8D8E3E0001599E /* CombineCocoa */,
+				DA7BF5E12E98F1FB00224BCF /* RswiftLibrary */,
 			);
 			productName = LearnSwiftUI;
 			productReference = DA415E4F2DE5BF26009F515E /* LearnSwiftUI.app */;
@@ -969,6 +1093,7 @@
 			packageReferences = (
 				DA5D71912E3FBB7C00C78E40 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				DA37F9932E8D8E3E0001599E /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+				DA7BF5E02E98F1FB00224BCF /* XCRemoteSwiftPackageReference "R.swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DA415E502DE5BF26009F515E /* Products */;
@@ -985,6 +1110,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7BF5DF2E98EEA900224BCF /* Colors.xcassets in Resources */,
+				DA7BF6002E99003A00224BCF /* TT Hoves Pro Trial Hairline.ttf in Resources */,
+				DA7BF6012E99003A00224BCF /* TT Hoves Pro Trial Regular.ttf in Resources */,
+				DA7BF6022E99003A00224BCF /* TT Hoves Pro Trial Thin.ttf in Resources */,
+				DA7BF6032E99003A00224BCF /* TT Hoves Pro Trial Black.ttf in Resources */,
+				DA7BF6042E99003A00224BCF /* TT Hoves Pro Trial Variable.ttf in Resources */,
+				DA7BF6052E99003A00224BCF /* TT Hoves Pro Trial Medium.ttf in Resources */,
+				DA7BF6062E99003A00224BCF /* TT Hoves Pro Trial Bold.ttf in Resources */,
+				DA7BF6072E99003A00224BCF /* TT Hoves Pro Trial Light.ttf in Resources */,
+				DA7BF6082E99003A00224BCF /* TT Hoves Pro Trial ExtraBold.ttf in Resources */,
+				DA7BF6092E99003A00224BCF /* TT Hoves Pro Trial ExtraLight.ttf in Resources */,
+				DA7BF60A2E99003A00224BCF /* TT Hoves Pro Trial DemiBold.ttf in Resources */,
 				DA415E682DE5BFAB009F515E /* Preview Assets.xcassets in Resources */,
 				DA8F78A22E883F0300826FB2 /* SwiftUI.txt in Resources */,
 				DA13CE212E89999B005B6D2D /* MVVM.txt in Resources */,
@@ -1003,6 +1140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7BF5D72E98ED4000224BCF /* DefaultTheme.swift in Sources */,
+				DA7BF5D92E98ED4700224BCF /* DefaultThemeColor.swift in Sources */,
 				DA5D712C2E3D1A8800C78E40 /* Login.swift in Sources */,
 				DA415E8D2DE5CD41009F515E /* ColorsBootcamp.swift in Sources */,
 				DA7BE0AC2E8060A8006821CE /* LoginEntity.swift in Sources */,
@@ -1018,13 +1157,14 @@
 				DA37F9922E8D8E100001599E /* CbLoginViewController.swift in Sources */,
 				DA8748992E6B007700B189F3 /* WeatherDataPill.swift in Sources */,
 				DA5D71252E3D189100C78E40 /* Splash.swift in Sources */,
+				DA7BF5C92E98EC2000224BCF /* ThemeProtocol.swift in Sources */,
 				DAEBAE4A2DF28E1E00082B1C /* SubviewBootcamp.swift in Sources */,
 				DA7BE0A42E806032006821CE /* LoginPresenter.swift in Sources */,
 				DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */,
 				DA5D712A2E3D19A000C78E40 /* Logger.swift in Sources */,
+				DA7BF5EA2E98F2DA00224BCF /* RswiftResources+FontResource.swift in Sources */,
 				DAAA67242E617101004075B7 /* ViewAndAdditional.swift in Sources */,
 				DA5D71822E3FA59900C78E40 /* NetworkError.swift in Sources */,
-				DAFCDF6F2E63490F00B97C00 /* ThemeManager.swift in Sources */,
 				DAEBAE422DECB55B00082B1C /* ScrollViewBootcamp.swift in Sources */,
 				DA5D71862E3FA5B400C78E40 /* NetworkManager.swift in Sources */,
 				DA5D719B2E3FC03D00C78E40 /* AlertHandler.swift in Sources */,
@@ -1034,9 +1174,10 @@
 				DA415E8F2DE5DCC0009F515E /* Color.swift in Sources */,
 				DA37F98E2E8D8BE00001599E /* ViewModelTransformableProtocol.swift in Sources */,
 				DA5D71452E3F43B100C78E40 /* ObservablePattern.swift in Sources */,
+				DA7BF5CF2E98ED0300224BCF /* ThemeColorProtocol.swift in Sources */,
 				DAEBAE462DF11C7300082B1C /* ButtonBootcamp.swift in Sources */,
 				DA5D711C2E3D184500C78E40 /* Router.swift in Sources */,
-				DA415E742DE5C31F009F515E /* Font.swift in Sources */,
+				DA7BF5CC2E98EC4100224BCF /* ThemeManager.swift in Sources */,
 				DA5D719E2E40940400C78E40 /* GithubUserListVM.swift in Sources */,
 				DA415E912DE5DF63009F515E /* GradientsColorBootcamp.swift in Sources */,
 				DA5D718B2E3FB25700C78E40 /* GithubUserListView.swift in Sources */,
@@ -1050,10 +1191,10 @@
 				DA7BE0B82E806362006821CE /* HomeInteractor.swift in Sources */,
 				DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */,
 				DABDF7B42E70466B00DEC7C6 /* DownloadTask.swift in Sources */,
-				DA8991382E47671F00C2BD27 /* HButton.swift in Sources */,
 				DA37F99D2E8D93F60001599E /* CbDemoContentView.swift in Sources */,
 				DA37F9872E8D898B0001599E /* CbLoginResult.swift in Sources */,
 				DA37F9B32E8EE8CA0001599E /* CombineDefinitionContentView.swift in Sources */,
+				DA7BF61C2E99036200224BCF /* View+Themed.swift in Sources */,
 				DA8748912E6B005800B189F3 /* WeatherErrorView.swift in Sources */,
 				DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */,
 				DA5D71272E3D18E300C78E40 /* UserSettings.swift in Sources */,
@@ -1061,14 +1202,18 @@
 				DA7BE0B22E80630A006821CE /* HomeViewProtocol.swift in Sources */,
 				DAEBAE4F2DF2909E00082B1C /* Closure.swift in Sources */,
 				DA7BE0B62E806344006821CE /* HomePresenter.swift in Sources */,
+				DA7BF5D32E98ED1400224BCF /* ThemeAssetsProtocol.swift in Sources */,
 				DA87488A2E6AFC6A00B189F3 /* WeatherItem.swift in Sources */,
 				DA5D71362E3DE82A00C78E40 /* Account.swift in Sources */,
+				DA7BF5E82E98F2C900224BCF /* RswiftResources+ColorResource.swift in Sources */,
 				DA37F9A02E8EE3AC0001599E /* CombineItemType.swift in Sources */,
+				DA7BF5DD2E98ED7300224BCF /* DefaultThemeAssets.swift in Sources */,
 				DA5D71902E3FBA7400C78E40 /* UserDetail.swift in Sources */,
 				DA0B4AEB2E6FCBB700628E53 /* DownloadView.swift in Sources */,
 				DA5D71342E3DE65500C78E40 /* Home.swift in Sources */,
 				DA5D71202E3D185F00C78E40 /* ScreenCoordinator.swift in Sources */,
 				DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */,
+				DA7BF6212E99038300224BCF /* Environment+ThemeKeys.swift in Sources */,
 				DA5D71322E3D20F100C78E40 /* Placeholder.swift in Sources */,
 				DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */,
 				DA5D717E2E3FA57800C78E40 /* NetworkProtocols.swift in Sources */,
@@ -1079,17 +1224,19 @@
 				DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */,
 				DAED677E2E20E45C00309382 /* StateObjectBootcamp.swift in Sources */,
 				DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */,
+				DA7BF5E62E98F2B400224BCF /* RswiftResources+ImageResource.swift in Sources */,
 				DAA709142E75D553006F8E70 /* ThaiPaymentService.swift in Sources */,
 				DAA709192E75D6F5006F8E70 /* PaymentProvider.swift in Sources */,
 				DA87489B2E6B007D00B189F3 /* WeatherListView.swift in Sources */,
 				DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */,
-				DAFCDF6D2E63485000B97C00 /* AppTheme.swift in Sources */,
 				DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */,
 				DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */,
+				DA7BF5DB2E98ED6D00224BCF /* DefaultThemeFont.swift in Sources */,
 				DAEBAE3A2DEAF92400082B1C /* StacksBootcamp.swift in Sources */,
 				DA5D71302E3D205400C78E40 /* MainTab.swift in Sources */,
 				DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */,
 				DA5164302E3BCD2500642709 /* NavigationStackBootcamp.swift in Sources */,
+				DA7BF5D12E98ED0D00224BCF /* ThemeFontProtocol.swift in Sources */,
 				DA53B73A2E6086DE001EFC52 /* ListBootcamp.swift in Sources */,
 				DA37F9A22E8EE4C30001599E /* CombineDefinitionHomeVC.swift in Sources */,
 				DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */,
@@ -1138,6 +1285,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA7BF5EC2E98F40800224BCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = DA7BF5EB2E98F40800224BCF /* RswiftGenerateInternalResources */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		DA415E5B2DE5BF27009F515E /* Debug */ = {
@@ -1272,6 +1426,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LearnSwiftUI/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1308,6 +1463,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LearnSwiftUI/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1371,6 +1527,14 @@
 				minimumVersion = 3.1.3;
 			};
 		};
+		DA7BF5E02E98F1FB00224BCF /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.8.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1383,6 +1547,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DA5D71912E3FBB7C00C78E40 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		DA7BF5E12E98F1FB00224BCF /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA7BF5E02E98F1FB00224BCF /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = RswiftLibrary;
+		};
+		DA7BF5EB2E98F40800224BCF /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA7BF5E02E98F1FB00224BCF /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = "plugin:RswiftGenerateInternalResources";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

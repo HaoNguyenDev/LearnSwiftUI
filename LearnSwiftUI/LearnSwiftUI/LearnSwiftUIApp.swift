@@ -11,7 +11,6 @@ import SwiftUI
 struct LearnSwiftUIApp: App {
     @State private var sharedModel = SharedModel()
     @StateObject private var todoStore = TodoStore()
-    @State private var themeVM = ThemeViewModel()
     var body: some Scene {
         WindowGroup {
 //            TextBootCamp()

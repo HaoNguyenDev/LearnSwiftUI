@@ -36,7 +36,7 @@ struct BindingBootcamp: View {
 }
 
 struct InputView: View {
-    
+    @Environment(\.theme) var theme
     @Binding var name: String
     @Binding var age: String
     @Binding var message: String
@@ -81,7 +81,7 @@ struct InputView: View {
             .padding(.horizontal, 10)
             
             Text("Message: \(message)")
-                .font(.dosis(fontweight: .bold,size: 20))
+                .font(theme.font.bold(ofSize: 20))
                 .foregroundStyle(.white)
                 .padding()
         }

@@ -9,12 +9,13 @@
 import SwiftUI
 
 struct TextBootcamp: View {
+    @Environment(\.theme) var theme
     var body: some View {
         Text("Hello! This is a text, and we can style it, color it, and make it look pretty! And we can even make it look like a link!")
 //            .font(.title)
 //            .fontWeight(.semibold)
 //            .font(.system(size: 18.0, weight: .bold, design: .serif))
-            .font(.dosis(fontweight: .bold, size: 18.0)) //Custom font in from Font folder
+            .font(theme.font.bold(ofSize: 18.0)) 
             .foregroundColor(Color.blue)
             .multilineTextAlignment(.center)
             .baselineOffset(20.0)

@@ -4,7 +4,18 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Dosis-VariableFont_wght.ttf</string>
+		<string>Dosis-VariableFont_wght</string>
+		<string>TT Hoves Pro Trial Variable.ttf</string>
+		<string>TT Hoves Pro Trial Regular.ttf</string>
+		<string>TT Hoves Pro Trial Medium.ttf</string>
+		<string>TT Hoves Pro Trial Hairline.ttf</string>
+		<string>TT Hoves Pro Trial Light.ttf</string>
+		<string>TT Hoves Pro Trial ExtraLight.ttf</string>
+		<string>TT Hoves Pro Trial Bold.ttf</string>
+		<string>TT Hoves Pro Trial ExtraBold.ttf</string>
+		<string>TT Hoves Pro Trial DemiBold.ttf</string>
+		<string>TT Hoves Pro Trial Black.ttf</string>
+		<string>TT Hoves Pro Trial Thin.ttf</string>
 	</array>
 </dict>
 </plist>
