@@ -19,7 +19,6 @@ struct HButton: ButtonStyle {
     let customTitleColor: Color?
     let customBackgroundColor: Color?
     let customSelectedBackgroundColor: Color?
-    
     init(size: ButtonSize,
          type: ButtonType,
          customTitleHorizontalPadding: CGFloat? = nil,
@@ -143,7 +142,7 @@ extension HButton {
 
 // MARK: - ButtonStyle
 extension ButtonStyle where Self == HButton {
-    static var primary: HButton {
+    static var primaryHButton: HButton {
         HButton(size: .large, type: .primary)
     }
     
@@ -155,7 +154,7 @@ extension ButtonStyle where Self == HButton {
         HButton(size: .large, type: .primary, customBackgroundColor: color)
     }
     
-    static var secondary: HButton {
+    static var secondaryHButton: HButton {
         HButton(size: .large, type: .secondary)
     }
     
@@ -167,7 +166,7 @@ extension ButtonStyle where Self == HButton {
         HButton(size: size, type: .secondary)
     }
     
-    static var tertiary: HButton {
+    static var tertiaryHButton: HButton {
         HButton(size: .large, type: .tertiary)
     }
     
@@ -179,10 +178,10 @@ extension ButtonStyle where Self == HButton {
 #Preview("Size=Large, Style=Primary") {
     VStack(spacing: 20) {
         Button("Continue") {}
-            .buttonStyle(.primary)
+            .buttonStyle(.primaryHButton)
         
         Button("Continue") {}
-            .buttonStyle(.primary)
+            .buttonStyle(.primaryHButton)
             .disabled(true)
     }
     .padding()
@@ -191,10 +190,10 @@ extension ButtonStyle where Self == HButton {
 #Preview("Size=Large, Style=Secondary") {
     VStack(spacing: 20) {
         Button("Continue") {}
-            .buttonStyle(.secondary)
+            .buttonStyle(.secondaryHButton)
         
         Button("Continue") {}
-            .buttonStyle(.secondary)
+            .buttonStyle(.secondaryHButton)
             .disabled(true)
     }
     .padding()
@@ -203,9 +202,10 @@ extension ButtonStyle where Self == HButton {
 #Preview("Size=Large, Style=Tertiary") {
     VStack(spacing: 20) {
         Button("Continue") {}
-            .buttonStyle(.tertiary)
+            .buttonStyle(.tertiaryHButton)
         
         Button("Continue") {}
+            .buttonStyle(.tertiaryHButton)
             .disabled(true)
     }
     .padding()
