@@ -14,20 +14,23 @@ struct HTextField: View {
     
     let title: String?
     let placeholder: String
-    let leftIcon: Image?
+    let keyboardType: UIKeyboardType
+    let leftImage: Image?
     @Binding var text: String
     @Binding var errorMessage: String?
     var onTap: VoidResult? = nil
     
     init(title: String?,
          placeholder: String,
-         leftIcon: Image?,
+         keyboardType: UIKeyboardType = .default,
+         leftImage: Image? = nil,
          text: Binding<String>,
          errorMessage: Binding<String?> = .constant(nil),
          onTap: VoidResult? = nil) {
         self.title = title
         self.placeholder = placeholder
-        self.leftIcon = leftIcon
+        self.keyboardType = keyboardType
+        self.leftImage = leftImage
         self._text = text
         self._errorMessage = errorMessage
         self.onTap = onTap
@@ -36,6 +39,8 @@ struct HTextField: View {
         VStack(alignment: .leading, spacing: 0) {
             titleText()
             textField()
+            errorText()
+                .padding(.top, 4)
         }
         .onTapGesture {
             isFocused = true
@@ -62,9 +67,8 @@ fileprivate extension HTextField {
     @ViewBuilder
     func textField() -> some View {
         HStack(alignment: .center, spacing: 8) {
+            leftImageView()
             ZStack(alignment: .leading) {
-                leftIcon
-                    .foregroundColor(theme.color.textPrimary)
                 if text.isEmpty {
                     Text(placeholder)
                         .font(theme.font.regular(ofSize: 14))
@@ -78,6 +82,7 @@ fileprivate extension HTextField {
                     .font(theme.font.regular(ofSize: 14))
                     .frame(maxHeight: isFocused || !text.isEmpty ? .infinity : 0)
                     .tint(theme.color.primariesDefault)
+                    .keyboardType(keyboardType)
             }
             
             clearTextButton()
@@ -100,11 +105,12 @@ fileprivate extension HTextField {
     
     @ViewBuilder
     func leftImageView() -> some View {
-        if let leftIcon {
-            leftIcon
+        if let leftImage {
+            leftImage
                 .resizable()
                 .scaledToFit()
-                .frame(width: 22, height: 22)
+                .frame(width: 30, height: 30)
+                .foregroundColor(theme.color.textPrimary)
         }
     }
     
@@ -142,14 +148,43 @@ fileprivate extension HTextField {
 
 struct HTextField_Previews : View {
     @State var text: String = ""
-    
+    @State var phoneNumber: String = "0977 123 456"
+    @State var email: String = "example@example.com"
     var body: some View {
         ScrollView {
-            Group {
-                HTextField(title: "Title",
+            VStack(spacing: 30) {
+                HTextField(title: "Default",
                            placeholder: "Enter your text",
-                           leftIcon: nil,
+                           leftImage: nil,
                            text: $text)
+                
+                HTextField(title: "Error",
+                           placeholder: "Enter your text",
+                           leftImage: nil,
+                           text: $text,
+                           errorMessage: .constant("Error message appears here"))
+                
+                HTextField(title: "Phone Field",
+                           placeholder: "Enter your phone number",
+                           keyboardType: .phonePad,
+                           leftImage: R.image.ic_help_phone.image,
+                           text: $phoneNumber,
+                           errorMessage: .constant(nil))
+                
+                
+                HTextField(title: "Email Field",
+                           placeholder: "Enter your phone number",
+                           keyboardType: .emailAddress,
+                           leftImage: R.image.ic_help_email.image,
+                           text: $email,
+                           errorMessage: .constant(nil))
+                
+                HTextField(title: "Disable Field",
+                           placeholder: "Enter something...",
+                           keyboardType: .default,
+                           text: .constant(""),
+                           errorMessage: .constant(nil))
+                .disabled(true)
             }
         }
         .padding()
