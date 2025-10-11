@@ -40,6 +40,7 @@
 		DA415E912DE5DF63009F515E /* GradientsColorBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E902DE5DF63009F515E /* GradientsColorBootcamp.swift */; };
 		DA415E952DE5E707009F515E /* ImagesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E942DE5E707009F515E /* ImagesBootcamp.swift */; };
 		DA4F7EF12E9A6B6D001CB7B2 /* HButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F7EF02E9A6B6D001CB7B2 /* HButton.swift */; };
+		DA4F7F1C2E9A954D001CB7B2 /* LoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F7F1B2E9A954D001CB7B2 /* LoginButtonView.swift */; };
 		DA5164302E3BCD2500642709 /* NavigationStackBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */; };
 		DA5164322E3CB57600642709 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5164312E3CB57600642709 /* NavigationManager.swift */; };
 		DA53B73A2E6086DE001EFC52 /* ListBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53B7392E6086DE001EFC52 /* ListBootcamp.swift */; };
@@ -214,6 +215,7 @@
 		DA415E902DE5DF63009F515E /* GradientsColorBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientsColorBootcamp.swift; sourceTree = "<group>"; };
 		DA415E942DE5E707009F515E /* ImagesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesBootcamp.swift; sourceTree = "<group>"; };
 		DA4F7EF02E9A6B6D001CB7B2 /* HButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HButton.swift; sourceTree = "<group>"; };
+		DA4F7F1B2E9A954D001CB7B2 /* LoginButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonView.swift; sourceTree = "<group>"; };
 		DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackBootcamp.swift; sourceTree = "<group>"; };
 		DA5164312E3CB57600642709 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		DA53B7372E5F4EE6001EFC52 /* WeakAndUnowned.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = WeakAndUnowned.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -907,6 +909,7 @@
 			children = (
 				DA4F7EF02E9A6B6D001CB7B2 /* HButton.swift */,
 				DA5D71422E3E4BF700C78E40 /* BackButton.swift */,
+				DA4F7F1B2E9A954D001CB7B2 /* LoginButtonView.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -1203,6 +1206,7 @@
 				DA37F99D2E8D93F60001599E /* CbDemoContentView.swift in Sources */,
 				DA37F9872E8D898B0001599E /* CbLoginResult.swift in Sources */,
 				DA37F9B32E8EE8CA0001599E /* CombineDefinitionContentView.swift in Sources */,
+				DA4F7F1C2E9A954D001CB7B2 /* LoginButtonView.swift in Sources */,
 				DA7BF61C2E99036200224BCF /* View+Themed.swift in Sources */,
 				DA8748912E6B005800B189F3 /* WeatherErrorView.swift in Sources */,
 				DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */,
