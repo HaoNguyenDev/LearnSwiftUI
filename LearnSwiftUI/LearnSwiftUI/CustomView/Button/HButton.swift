@@ -176,7 +176,7 @@ extension ButtonStyle where Self == HButton {
     }
 }
 
-#Preview("Size=Large, Type=Primary") {
+#Preview("Size=Large, Style=Primary") {
     VStack(spacing: 20) {
         Button("Continue") {}
             .buttonStyle(.primary)
@@ -184,6 +184,140 @@ extension ButtonStyle where Self == HButton {
         Button("Continue") {}
             .buttonStyle(.primary)
             .disabled(true)
+    }
+    .padding()
+}
+
+#Preview("Size=Large, Style=Secondary") {
+    VStack(spacing: 20) {
+        Button("Continue") {}
+            .buttonStyle(.secondary)
+        
+        Button("Continue") {}
+            .buttonStyle(.secondary)
+            .disabled(true)
+    }
+    .padding()
+}
+
+#Preview("Size=Large, Style=Tertiary") {
+    VStack(spacing: 20) {
+        Button("Continue") {}
+            .buttonStyle(.tertiary)
+        
+        Button("Continue") {}
+            .disabled(true)
+    }
+    .padding()
+}
+
+#Preview("Size=Medium, Style=Primary") {
+    VStack(spacing: 20) {
+        Button("Continue") {}
+            .buttonStyle(HButton(size: .medium, type: .primary))
+        
+        Button("Continue") {}
+            .buttonStyle(HButton(size: .medium, type: .primary))
+            .disabled(true)
+    }
+    .padding()
+}
+
+#Preview("Size=Medium, Style=Secondary") {
+    VStack(spacing: 20) {
+        Button("Continue") {}
+            .buttonStyle(HButton(size: .medium, type: .secondary))
+        
+        Button("Continue") {}
+            .buttonStyle(HButton(size: .medium, type: .secondary))
+            .disabled(true)
+    }
+    .padding()
+}
+
+#Preview("Size=Medium, Style=Tertiary") {
+    VStack(spacing: 20) {
+        Button("Continue") {}
+            .buttonStyle(HButton(size: .medium, type: .tertiary))
+        
+        Button("Continue") {}
+            .buttonStyle(HButton(size: .medium, type: .tertiary))
+            .disabled(true)
+    }
+    .padding()
+}
+
+#Preview("Size=Small, Style=Primary") {
+    VStack(spacing: 20) {
+        Button("Continue") {}
+            .buttonStyle(HButton(size: .small, type: .primary))
+        
+        Button("Continue") {}
+            .buttonStyle(HButton(size: .small, type: .primary))
+            .disabled(true)
+    }
+    .padding()
+}
+
+#Preview("Size=Small, Style=Secondary") {
+    VStack(spacing: 20) {
+        Button("Continue") {}
+            .buttonStyle(HButton(size: .small, type: .secondary))
+        
+        Button("Continue") {}
+            .buttonStyle(HButton(size: .small, type: .secondary))
+            .disabled(true)
+    }
+    .padding()
+}
+
+#Preview("Size=Small, Style=Tertiary") {
+    VStack(spacing: 20) {
+        Button("Continue") {}
+            .buttonStyle(HButton(size: .small, type: .tertiary))
+        
+        Button("Continue") {}
+            .buttonStyle(HButton(size: .small, type: .tertiary))
+            .disabled(true)
+    }
+    .padding()
+}
+
+#Preview("Custom Buttons") {
+    VStack(spacing: 20) {
+        Button("Login") {}
+            .buttonStyle(
+                HButton(
+                    size: .large,
+                    type: .primary,
+                    customTitleColor: Color.textPrimary,
+                    customBackgroundColor: Color.backgroundLight
+                )
+            )
+        
+        Button("Register") {}
+            .buttonStyle(
+                HButton(
+                    size: .large,
+                    type: .primary,
+                    customTitleColor: Color.textWhite,
+                    customBackgroundColor: Color.semanticsSuccessFull,
+                    customSelectedBackgroundColor: Color.semanticsSuccessSelected
+                )
+            )
+            .disabled(false)
+        
+        Button("Delete") {}
+            .buttonStyle(
+                HButton(
+                    size: .large,
+                    type: .primary,
+                    customTitleColor: Color.textWhite,
+                    customBackgroundColor: Color.semanticsErrorFull,
+                    customSelectedBackgroundColor: Color.semanticsErrorSelected
+                )
+            )
+            .disabled(false)
     }
     .padding()
 }
