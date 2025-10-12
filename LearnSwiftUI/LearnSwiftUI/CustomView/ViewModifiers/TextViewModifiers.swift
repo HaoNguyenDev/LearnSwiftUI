@@ -7,32 +7,64 @@
 
 import SwiftUI
 
-struct TitleTextStyle: ViewModifier {
-    @Environment(\.theme) var theme
+struct TextStyle: ViewModifier {
+    
+    var font: Font?
     var size: CGFloat = 24
     var color: Color = .primary
+    var textAlignment: TextAlignment = .leading
+    var alignment: Alignment = .center
     
     func body(content: Content) -> some View {
         content
-            .font(theme.font.bold(ofSize: size))
+            .font(font ?? .system(size: size))
+            .multilineTextAlignment(textAlignment)
+            .frame(maxWidth: .infinity, alignment: alignment)
             .foregroundColor(color)
+            .padding()
     }
 }
 
+// Combine view modifier with extension of view for quick call
 extension View {
-    func titleTextStyle(_ style: TitleTextStyle) -> some View {
-        modifier(style)
+    func titleTextStyle(font: Font?,
+                        size: CGFloat = 24,
+                        color: Color = .primary,
+                        textAlignment: TextAlignment = .center,
+                        alignment: Alignment = .center) -> some View {
+        modifier(TextStyle(font: font,
+                           size: size,
+                           color: color,
+                           textAlignment: textAlignment,
+                           alignment: alignment))
     }
 }
 
 #Preview("Title TextStyle") {
+    @Previewable @Environment(\.theme) var theme
+    
     VStack(spacing: 30) {
         Text("Hello, World!")
             .modifier(
-                TitleTextStyle(size: 30, color: .primariesSelected)
+                TextStyle(font: theme.font.bold(ofSize: 34),
+                          color: .backgroundDark,
+                          textAlignment: .leading,
+                          alignment: .leading)
             )
         
         Text("Hello, World!")
-            .titleTextStyle(.init(size: 30, color: .backgroundDark))
+            .titleTextStyle(font: theme.font.bold(ofSize: 24),
+                            color: .primariesSelected,
+                            textAlignment: .center,
+                            alignment: .center)
+        
+        Text("Hello, World!")
+            .titleTextStyle(font: theme.font.bold(ofSize: 14),
+                            color: .blueText,
+                            textAlignment: .trailing,
+                            alignment: .trailing)
+        
+        Text("Hello, World!")
+            .titleTextStyle(font: .system(size: 18))
     }
 }
