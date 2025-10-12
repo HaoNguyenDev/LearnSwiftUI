@@ -29,6 +29,7 @@
 		DA37F9B12E8EE8C30001599E /* CombineDefinitionViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F9B02E8EE8C30001599E /* CombineDefinitionViewWrapper.swift */; };
 		DA37F9B32E8EE8CA0001599E /* CombineDefinitionContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F9B22E8EE8CA0001599E /* CombineDefinitionContentView.swift */; };
 		DA3979102E9BBC1200838584 /* TextViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39790F2E9BBC1200838584 /* TextViewModifiers.swift */; };
+		DA39793F2E9BE5BD00838584 /* ImageViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39793E2E9BE5BD00838584 /* ImageViewModifiers.swift */; };
 		DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E632DE5BFAB009F515E /* ContentView.swift */; };
 		DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */; };
 		DA415E682DE5BFAB009F515E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA415E602DE5BFAB009F515E /* Preview Assets.xcassets */; };
@@ -203,6 +204,7 @@
 		DA37F9B02E8EE8C30001599E /* CombineDefinitionViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineDefinitionViewWrapper.swift; sourceTree = "<group>"; };
 		DA37F9B22E8EE8CA0001599E /* CombineDefinitionContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineDefinitionContentView.swift; sourceTree = "<group>"; };
 		DA39790F2E9BBC1200838584 /* TextViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewModifiers.swift; sourceTree = "<group>"; };
+		DA39793E2E9BE5BD00838584 /* ImageViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModifiers.swift; sourceTree = "<group>"; };
 		DA4127202E6961DE000ED05B /* FactoryMethod.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FactoryMethod.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA415E4F2DE5BF26009F515E /* LearnSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA415E602DE5BFAB009F515E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -505,6 +507,7 @@
 			isa = PBXGroup;
 			children = (
 				DA39790F2E9BBC1200838584 /* TextViewModifiers.swift */,
+				DA39793E2E9BE5BD00838584 /* ImageViewModifiers.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -1214,6 +1217,7 @@
 				DA5D718B2E3FB25700C78E40 /* GithubUserListView.swift in Sources */,
 				DAAE8CBA2E44BDFF00FCBA4E /* FormView.swift in Sources */,
 				DAEBAE402DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift in Sources */,
+				DA39793F2E9BE5BD00838584 /* ImageViewModifiers.swift in Sources */,
 				DA8748972E6B007100B189F3 /* WeatherCard.swift in Sources */,
 				DA5D71982E3FBCBA00C78E40 /* GitHubNetworkService.swift in Sources */,
 				DAEBAE3E2DEB149C00082B1C /* InitializerBootcamp.swift in Sources */,
