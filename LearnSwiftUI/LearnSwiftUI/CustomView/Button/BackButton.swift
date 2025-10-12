@@ -12,7 +12,7 @@ struct BackButton: View {
     
     var body: some View {
         HStack {
-            Image(systemName: "arrowshape.left.fill")
+            Image(R.image.ic_back)
                 .frame(width: 25, height: 25)
         }
         .foregroundColor(theme.color.textBlack)
