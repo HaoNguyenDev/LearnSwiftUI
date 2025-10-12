@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct TextStyle: ViewModifier {
+struct TextStylingModifier: ViewModifier {
     
     var font: Font?
-    var size: CGFloat = 24
+    var size: CGFloat = 16
     var color: Color = .primary
     var textAlignment: TextAlignment = .leading
     var alignment: Alignment = .center
@@ -27,12 +27,12 @@ struct TextStyle: ViewModifier {
 
 // Combine view modifier with extension of view for quick call
 extension View {
-    func titleTextStyle(font: Font?,
-                        size: CGFloat = 24,
+    func textStyle(font: Font? = nil,
+                        size: CGFloat = 16,
                         color: Color = .primary,
                         textAlignment: TextAlignment = .center,
                         alignment: Alignment = .center) -> some View {
-        modifier(TextStyle(font: font,
+        modifier(TextStylingModifier(font: font,
                            size: size,
                            color: color,
                            textAlignment: textAlignment,
@@ -46,25 +46,28 @@ extension View {
     VStack(spacing: 30) {
         Text("Hello, World!")
             .modifier(
-                TextStyle(font: theme.font.bold(ofSize: 34),
+                TextStylingModifier(font: theme.font.bold(ofSize: 34),
                           color: .backgroundDark,
                           textAlignment: .leading,
                           alignment: .leading)
             )
         
         Text("Hello, World!")
-            .titleTextStyle(font: theme.font.bold(ofSize: 24),
+            .textStyle(font: theme.font.bold(ofSize: 24),
                             color: .primariesSelected,
                             textAlignment: .center,
                             alignment: .center)
         
         Text("Hello, World!")
-            .titleTextStyle(font: theme.font.bold(ofSize: 14),
+            .textStyle(font: theme.font.bold(ofSize: 14),
                             color: .blueText,
                             textAlignment: .trailing,
                             alignment: .trailing)
         
         Text("Hello, World!")
-            .titleTextStyle(font: .system(size: 18))
+            .textStyle(font: .system(size: 20))
+        
+        Text("Hello, World!")
+            .textStyle()
     }
 }
