@@ -19,7 +19,7 @@ struct LoginButtonView : View {
             onTapped?()
         }
         .buttonStyle(
-            HButton(size: .large, type: .primary)
+            HButtonStyle(size: .large, type: .primary)
         )
         .disabled(isValid == false)
         .cornerRadius(4)

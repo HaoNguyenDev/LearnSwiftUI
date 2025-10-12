@@ -28,6 +28,7 @@
 		DA37F9A62E8EE5570001599E /* CombineItemDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F9A52E8EE5570001599E /* CombineItemDetailVC.swift */; };
 		DA37F9B12E8EE8C30001599E /* CombineDefinitionViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F9B02E8EE8C30001599E /* CombineDefinitionViewWrapper.swift */; };
 		DA37F9B32E8EE8CA0001599E /* CombineDefinitionContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F9B22E8EE8CA0001599E /* CombineDefinitionContentView.swift */; };
+		DA3979102E9BBC1200838584 /* TextViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39790F2E9BBC1200838584 /* TextViewModifiers.swift */; };
 		DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E632DE5BFAB009F515E /* ContentView.swift */; };
 		DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */; };
 		DA415E682DE5BFAB009F515E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA415E602DE5BFAB009F515E /* Preview Assets.xcassets */; };
@@ -39,7 +40,7 @@
 		DA415E8F2DE5DCC0009F515E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E8E2DE5DCC0009F515E /* Color.swift */; };
 		DA415E912DE5DF63009F515E /* GradientsColorBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E902DE5DF63009F515E /* GradientsColorBootcamp.swift */; };
 		DA415E952DE5E707009F515E /* ImagesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E942DE5E707009F515E /* ImagesBootcamp.swift */; };
-		DA4F7EF12E9A6B6D001CB7B2 /* HButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F7EF02E9A6B6D001CB7B2 /* HButton.swift */; };
+		DA4F7EF12E9A6B6D001CB7B2 /* HButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F7EF02E9A6B6D001CB7B2 /* HButtonStyle.swift */; };
 		DA4F7F1C2E9A954D001CB7B2 /* LoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F7F1B2E9A954D001CB7B2 /* LoginButtonView.swift */; };
 		DA5164302E3BCD2500642709 /* NavigationStackBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */; };
 		DA5164322E3CB57600642709 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5164312E3CB57600642709 /* NavigationManager.swift */; };
@@ -201,6 +202,7 @@
 		DA37F9A52E8EE5570001599E /* CombineItemDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineItemDetailVC.swift; sourceTree = "<group>"; };
 		DA37F9B02E8EE8C30001599E /* CombineDefinitionViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineDefinitionViewWrapper.swift; sourceTree = "<group>"; };
 		DA37F9B22E8EE8CA0001599E /* CombineDefinitionContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineDefinitionContentView.swift; sourceTree = "<group>"; };
+		DA39790F2E9BBC1200838584 /* TextViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewModifiers.swift; sourceTree = "<group>"; };
 		DA4127202E6961DE000ED05B /* FactoryMethod.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FactoryMethod.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA415E4F2DE5BF26009F515E /* LearnSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA415E602DE5BFAB009F515E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -214,7 +216,7 @@
 		DA415E8E2DE5DCC0009F515E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		DA415E902DE5DF63009F515E /* GradientsColorBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientsColorBootcamp.swift; sourceTree = "<group>"; };
 		DA415E942DE5E707009F515E /* ImagesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesBootcamp.swift; sourceTree = "<group>"; };
-		DA4F7EF02E9A6B6D001CB7B2 /* HButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HButton.swift; sourceTree = "<group>"; };
+		DA4F7EF02E9A6B6D001CB7B2 /* HButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HButtonStyle.swift; sourceTree = "<group>"; };
 		DA4F7F1B2E9A954D001CB7B2 /* LoginButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonView.swift; sourceTree = "<group>"; };
 		DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackBootcamp.swift; sourceTree = "<group>"; };
 		DA5164312E3CB57600642709 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
@@ -499,6 +501,22 @@
 			path = SwifUIViewWrapper;
 			sourceTree = "<group>";
 		};
+		DA3978F72E9BB44800838584 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				DA39790F2E9BBC1200838584 /* TextViewModifiers.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		DA3979042E9BB4EB00838584 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				DA5D719A2E3FC03D00C78E40 /* AlertHandler.swift */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
 		DA415E462DE5BF26009F515E = {
 			isa = PBXGroup;
 			children = (
@@ -668,7 +686,8 @@
 		DA5D71412E3E4BF100C78E40 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				DA5D719A2E3FC03D00C78E40 /* AlertHandler.swift */,
+				DA3978F72E9BB44800838584 /* ViewModifiers */,
+				DA3979042E9BB4EB00838584 /* AlertView */,
 				DA7BF5C32E98DF1B00224BCF /* TextField */,
 				DA8991362E47670600C2BD27 /* Button */,
 			);
@@ -907,7 +926,7 @@
 		DA8991362E47670600C2BD27 /* Button */ = {
 			isa = PBXGroup;
 			children = (
-				DA4F7EF02E9A6B6D001CB7B2 /* HButton.swift */,
+				DA4F7EF02E9A6B6D001CB7B2 /* HButtonStyle.swift */,
 				DA5D71422E3E4BF700C78E40 /* BackButton.swift */,
 				DA4F7F1B2E9A954D001CB7B2 /* LoginButtonView.swift */,
 			);
@@ -1266,6 +1285,7 @@
 				DA5D713A2E3E000D00C78E40 /* Security.swift in Sources */,
 				DAFCDF6A2E630B2C00B97C00 /* ErrorBanner.swift in Sources */,
 				DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */,
+				DA3979102E9BBC1200838584 /* TextViewModifiers.swift in Sources */,
 				DA5C98BC2E3924AA007AC9E9 /* TodoDetailView.swift in Sources */,
 				DAED67802E21089A00309382 /* ObservedObjectBootcamp.swift in Sources */,
 				DAAA67222E616D8C004075B7 /* TextFieldBootcamp.swift in Sources */,
@@ -1277,7 +1297,7 @@
 				DA7BE0BA2E80637F006821CE /* HomeRouter.swift in Sources */,
 				DAEBAE442DECC2D100082B1C /* GridBootcamp.swift in Sources */,
 				DA5164322E3CB57600642709 /* NavigationManager.swift in Sources */,
-				DA4F7EF12E9A6B6D001CB7B2 /* HButton.swift in Sources */,
+				DA4F7EF12E9A6B6D001CB7B2 /* HButtonStyle.swift in Sources */,
 				DA87489E2E6B16B500B189F3 /* WeatherMainView.swift in Sources */,
 				DAA709222E787C42006F8E70 /* PaymentVM.swift in Sources */,
 				DA5D711E2E3D185500C78E40 /* NavRouter.swift in Sources */,

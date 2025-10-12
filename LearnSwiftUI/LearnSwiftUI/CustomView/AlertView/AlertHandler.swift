@@ -11,7 +11,7 @@ import SwiftUI
 struct AlertHandler: ViewModifier {
     @Binding var showAlert: Bool
     let error: Error?
-    let onDismiss: () -> Void?
+    let onDismiss: VoidResult?
     
     func body(content: Content) -> some View {
         content
@@ -26,7 +26,7 @@ struct AlertHandler: ViewModifier {
                     title: Text("Error"),
                     message: Text(errorMessage),
                     dismissButton: .default(Text("OK")) {
-                        onDismiss()
+                        onDismiss?()
                     }
                 )
             }

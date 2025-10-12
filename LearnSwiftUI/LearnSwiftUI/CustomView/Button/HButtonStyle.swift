@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HButton: ButtonStyle {
+struct HButtonStyle: ButtonStyle {
     @Environment(\.theme) var theme
     @Environment(\.theme.color) var color
     @Environment(\.isEnabled) var isEnabled
@@ -19,6 +19,7 @@ struct HButton: ButtonStyle {
     let customTitleColor: Color?
     let customBackgroundColor: Color?
     let customSelectedBackgroundColor: Color?
+    
     init(size: ButtonSize,
          type: ButtonType,
          customTitleHorizontalPadding: CGFloat? = nil,
@@ -58,7 +59,7 @@ struct HButton: ButtonStyle {
 }
 
 // MARK: - Enums
-extension HButton {
+extension HButtonStyle {
     enum ButtonSize {
         case large
         case medium
@@ -73,7 +74,7 @@ extension HButton {
 }
 
 //MARK: - Getters
-extension HButton {
+extension HButtonStyle {
     var strokeWeight: CGFloat { type == .secondary ? 1 : 0 }
     var maxWidth: CGFloat? { size == .large ? .infinity : nil }
     var minHeight: CGFloat? { size == .small ? 0 : 44 }
@@ -141,37 +142,37 @@ extension HButton {
 }
 
 // MARK: - ButtonStyle
-extension ButtonStyle where Self == HButton {
-    static var primaryHButton: HButton {
-        HButton(size: .large, type: .primary)
+extension ButtonStyle where Self == HButtonStyle {
+    static var primaryHButton: HButtonStyle {
+        HButtonStyle(size: .large, type: .primary)
     }
     
-    static func primary(size: HButton.ButtonSize) -> HButton {
-        HButton(size: size, type: .primary)
+    static func primary(size: HButtonStyle.ButtonSize) -> HButtonStyle {
+        HButtonStyle(size: size, type: .primary)
     }
     
-    static func primary(color: Color? = nil) -> HButton {
-        HButton(size: .large, type: .primary, customBackgroundColor: color)
+    static func primary(color: Color? = nil) -> HButtonStyle {
+        HButtonStyle(size: .large, type: .primary, customBackgroundColor: color)
     }
     
-    static var secondaryHButton: HButton {
-        HButton(size: .large, type: .secondary)
+    static var secondaryHButton: HButtonStyle {
+        HButtonStyle(size: .large, type: .secondary)
     }
     
-    static func secondary(color: Color? = nil) -> HButton {
-        HButton(size: .large, type: .secondary, customTitleColor: color)
+    static func secondary(color: Color? = nil) -> HButtonStyle {
+        HButtonStyle(size: .large, type: .secondary, customTitleColor: color)
     }
     
-    static func secondary(size: HButton.ButtonSize) -> HButton {
-        HButton(size: size, type: .secondary)
+    static func secondary(size: HButtonStyle.ButtonSize) -> HButtonStyle {
+        HButtonStyle(size: size, type: .secondary)
     }
     
-    static var tertiaryHButton: HButton {
-        HButton(size: .large, type: .tertiary)
+    static var tertiaryHButton: HButtonStyle {
+        HButtonStyle(size: .large, type: .tertiary)
     }
     
-    static func tertiary(size: HButton.ButtonSize) -> HButton {
-        HButton(size: size, type: .tertiary)
+    static func tertiary(size: HButtonStyle.ButtonSize) -> HButtonStyle {
+        HButtonStyle(size: size, type: .tertiary)
     }
 }
 
@@ -214,10 +215,10 @@ extension ButtonStyle where Self == HButton {
 #Preview("Size=Medium, Style=Primary") {
     VStack(spacing: 20) {
         Button("Continue") {}
-            .buttonStyle(HButton(size: .medium, type: .primary))
+            .buttonStyle(HButtonStyle(size: .medium, type: .primary))
         
         Button("Continue") {}
-            .buttonStyle(HButton(size: .medium, type: .primary))
+            .buttonStyle(HButtonStyle(size: .medium, type: .primary))
             .disabled(true)
     }
     .padding()
@@ -226,10 +227,10 @@ extension ButtonStyle where Self == HButton {
 #Preview("Size=Medium, Style=Secondary") {
     VStack(spacing: 20) {
         Button("Continue") {}
-            .buttonStyle(HButton(size: .medium, type: .secondary))
+            .buttonStyle(HButtonStyle(size: .medium, type: .secondary))
         
         Button("Continue") {}
-            .buttonStyle(HButton(size: .medium, type: .secondary))
+            .buttonStyle(HButtonStyle(size: .medium, type: .secondary))
             .disabled(true)
     }
     .padding()
@@ -238,10 +239,10 @@ extension ButtonStyle where Self == HButton {
 #Preview("Size=Medium, Style=Tertiary") {
     VStack(spacing: 20) {
         Button("Continue") {}
-            .buttonStyle(HButton(size: .medium, type: .tertiary))
+            .buttonStyle(HButtonStyle(size: .medium, type: .tertiary))
         
         Button("Continue") {}
-            .buttonStyle(HButton(size: .medium, type: .tertiary))
+            .buttonStyle(HButtonStyle(size: .medium, type: .tertiary))
             .disabled(true)
     }
     .padding()
@@ -250,10 +251,10 @@ extension ButtonStyle where Self == HButton {
 #Preview("Size=Small, Style=Primary") {
     VStack(spacing: 20) {
         Button("Continue") {}
-            .buttonStyle(HButton(size: .small, type: .primary))
+            .buttonStyle(HButtonStyle(size: .small, type: .primary))
         
         Button("Continue") {}
-            .buttonStyle(HButton(size: .small, type: .primary))
+            .buttonStyle(HButtonStyle(size: .small, type: .primary))
             .disabled(true)
     }
     .padding()
@@ -262,10 +263,10 @@ extension ButtonStyle where Self == HButton {
 #Preview("Size=Small, Style=Secondary") {
     VStack(spacing: 20) {
         Button("Continue") {}
-            .buttonStyle(HButton(size: .small, type: .secondary))
+            .buttonStyle(HButtonStyle(size: .small, type: .secondary))
         
         Button("Continue") {}
-            .buttonStyle(HButton(size: .small, type: .secondary))
+            .buttonStyle(HButtonStyle(size: .small, type: .secondary))
             .disabled(true)
     }
     .padding()
@@ -274,10 +275,10 @@ extension ButtonStyle where Self == HButton {
 #Preview("Size=Small, Style=Tertiary") {
     VStack(spacing: 20) {
         Button("Continue") {}
-            .buttonStyle(HButton(size: .small, type: .tertiary))
+            .buttonStyle(HButtonStyle(size: .small, type: .tertiary))
         
         Button("Continue") {}
-            .buttonStyle(HButton(size: .small, type: .tertiary))
+            .buttonStyle(HButtonStyle(size: .small, type: .tertiary))
             .disabled(true)
     }
     .padding()
@@ -287,7 +288,7 @@ extension ButtonStyle where Self == HButton {
     VStack(spacing: 20) {
         Button("Login") {}
             .buttonStyle(
-                HButton(
+                HButtonStyle(
                     size: .large,
                     type: .primary,
                     customTitleColor: Color.textPrimary,
@@ -297,7 +298,7 @@ extension ButtonStyle where Self == HButton {
         
         Button("Register") {}
             .buttonStyle(
-                HButton(
+                HButtonStyle(
                     size: .large,
                     type: .primary,
                     customTitleColor: Color.textWhite,
@@ -309,7 +310,7 @@ extension ButtonStyle where Self == HButton {
         
         Button("Delete") {}
             .buttonStyle(
-                HButton(
+                HButtonStyle(
                     size: .large,
                     type: .primary,
                     customTitleColor: Color.textWhite,
