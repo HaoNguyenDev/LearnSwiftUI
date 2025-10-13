@@ -6,13 +6,17 @@
 //
 
 import Foundation
+import KeychainAccess
 
 extension UserSettings {
     // MARK: - Keys
     private enum UserSettingKeys {
-        static let token = "token"
         static let languageCode = "languageCode"
         static let isDarkMode = "isDarkMode"
+    }
+    
+    private enum KeychainAccessKeys {
+        static let token = "token"
     }
 }
 
@@ -27,16 +31,22 @@ extension UserSettings {
     }
     
     private let defaults = UserDefaults.standard
+    let keychainAccess = Keychain(service: Bundle.main.bundleIdentifier ?? "")
     
     var hasLoggedIn: Bool {
         get {
-            return token != nil && token != ""
+            guard let token = token else { return false }
+            return token != ""
         }
     }
     
     var token: String? {
-        didSet {
-            defaults.set(token, forKey: UserSettingKeys.token)
+        get {
+            keychainAccess[KeychainAccessKeys.token]
+        }
+        set {
+            keychainAccess[KeychainAccessKeys.token] = newValue
+            Logger.shared.info("Login success with token: \(newValue ?? "")")
         }
     }
     
