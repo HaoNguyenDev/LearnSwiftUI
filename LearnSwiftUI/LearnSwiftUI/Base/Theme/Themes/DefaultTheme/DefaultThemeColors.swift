@@ -5,11 +5,10 @@
 //  Created by Hao Nguyen on 10/10/25.
 //
 
-import Foundation
 import UIKit
 import SwiftUI
 
-struct DefaultThemeColor: ThemeColorProtocol {
+struct DefaultThemeColors: ThemeColorProtocol {
     // Primary
     let primariesDefault: Color = R.color.primariesDefault.color
     let primariesShade1: Color = R.color.primariesShade1.color

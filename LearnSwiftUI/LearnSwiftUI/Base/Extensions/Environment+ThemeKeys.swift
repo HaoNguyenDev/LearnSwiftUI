@@ -8,14 +8,13 @@
 import Foundation
 import SwiftUI
 
-extension EnvironmentValues {
-    var theme: any ThemeProtocol {
-        get { self[ThemeKey.self] }
-        set { self[ThemeKey.self] = newValue }
-    }
-    
-    struct ThemeKey: EnvironmentKey {
-        static var defaultValue: any ThemeProtocol = ThemeManager.shared.activeTheme
-    }
+private struct ThemeEnvironmentKey: EnvironmentKey {
+    static let defaultValue: any ThemeProtocol = DefaultTheme()
 }
 
+extension EnvironmentValues {
+    var theme: any ThemeProtocol {
+        get { self[ThemeEnvironmentKey.self] }
+        set { self[ThemeEnvironmentKey.self] = newValue }
+    }
+}

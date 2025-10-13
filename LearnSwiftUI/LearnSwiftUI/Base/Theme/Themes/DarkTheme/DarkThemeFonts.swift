@@ -1,18 +1,17 @@
 //
-//  DefaultThemeFont.swift
+//  DarkThemeFonts.swift
 //  LearnSwiftUI
 //
-//  Created by Hao Nguyen on 10/10/25.
+//  Created by Hao Nguyen on 13/10/25.
 //
 
-import Foundation
 import SwiftUI
 
 // MARK: - Primary
 //
 // Primary fonts are fonts that are most used by the app, usually on body text, forms, buttons, etc.
 
-struct DefaultThemeFont: ThemeFontProtocol {
+struct DarkThemeFonts: ThemeFontProtocol {
     func bold(ofSize size: CGFloat) -> Font {
         R.font.ttHovesProTrialBd.font(size: size)
     }
@@ -50,7 +49,7 @@ struct DefaultThemeFont: ThemeFontProtocol {
 //
 // Secondary fonts are fonts that have different typeface from your primary, usually applied to titles, headers, etc.
 
-extension DefaultThemeFont {
+extension DarkThemeFonts {
     func boldSecondary(ofSize size: CGFloat) -> Font {
         R.font.ttHovesProTrialBd.font(size: size)
     }

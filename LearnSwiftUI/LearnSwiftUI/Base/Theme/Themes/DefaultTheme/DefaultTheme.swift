@@ -8,7 +8,7 @@
 import Foundation
 
 struct DefaultTheme: ThemeProtocol {
-    var color: ThemeColorProtocol = DefaultThemeColor()
-    var font: ThemeFontProtocol = DefaultThemeFont()
+    var color: ThemeColorProtocol = DefaultThemeColors()
+    var font: ThemeFontProtocol = DefaultThemeFonts()
     var assets: ThemeAssetsProtocol = DefaultThemeAssets()
 }
