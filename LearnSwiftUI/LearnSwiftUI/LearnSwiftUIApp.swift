@@ -38,7 +38,9 @@ struct LearnSwiftUIApp: App {
 //            NavigationStackBootcamp()
 //            NavigationStackCustomItemView()
 //            NavigationManagerBootcamp()
-//            AppCoordinator().environment(appSettings)
+            AppCoordinator()
+                .environment(appSettings)
+                .environment(userSettings)
 //            EnvironmentSettingView().environment(EnvironmentSettings())
 //            GithubUserListView()
 //            AsyncAwaitBootcampView()
@@ -68,9 +70,9 @@ struct LearnSwiftUIApp: App {
             
 //            CombineDefinitionContentView()
 
-            ContentView()
-                .environmentTheme(manager: themeManager)
-                .environment(userSettings)
+//            ContentView()
+//                .environmentTheme(manager: themeManager)
+//                .environment(userSettings)
         }
     }
 }

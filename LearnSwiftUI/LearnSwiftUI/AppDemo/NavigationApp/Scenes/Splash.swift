@@ -53,7 +53,7 @@ struct SplashCoordinator: View, ScreenCoordinator {
             //TESTING Show sheet
 //            navRouter.showSheet(RouterView.init(routable: ScreenRouter.home))
 //            navRouter.showFullScreenCover(RouterView.init(routable: ScreenRouter.login))
-            navRouter.showSheet(RouterView.init(routable: Router.Security.changePassword))
+//            navRouter.showSheet(RouterView.init(routable: Router.Security.changePassword))
         }
     }
     
