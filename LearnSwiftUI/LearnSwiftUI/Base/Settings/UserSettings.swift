@@ -17,6 +17,7 @@ extension UserSettings {
     
     private enum KeychainAccessKeys {
         static let token = "token"
+        static let username = "username"
     }
 }
 
@@ -46,13 +47,23 @@ extension UserSettings {
         }
         set {
             keychainAccess[KeychainAccessKeys.token] = newValue
-            Logger.shared.info("Login success with token: \(newValue ?? "")")
+            Logger.shared.debug("Login success with token: \(newValue ?? "")")
+        }
+    }
+    
+    var username: String? {
+        get {
+            keychainAccess[KeychainAccessKeys.username]
+        }
+        
+        set {
+            keychainAccess[KeychainAccessKeys.username] = newValue
         }
     }
     
     var languageCode: String? {
         didSet {
-            Logger.shared.info("languageCode set to: \(languageCode ?? "nil")")
+            Logger.shared.debug("languageCode set to: \(languageCode ?? "nil")")
             defaults.set(languageCode, forKey: UserSettingKeys.languageCode)
         }
     }
@@ -70,5 +81,6 @@ extension UserSettings {
 extension UserSettings {
     func clearUserDatas() {
         token = nil
+        username = nil
     }
 }

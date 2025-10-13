@@ -44,6 +44,7 @@ struct LoginCoordinator: View, ScreenCoordinator {
     func getView() -> some View {
         LoginView(loginModel: loginModel, loginSuccess: {
             Logger.shared.debug("Login success")
+            userSettings.username = "haonguyen123"
             userSettings.token = "token 123"
             Logger.shared.debug("\(String(describing: userSettings.token))")
             navRouter.push(Router.homeRouter, animate: true)
