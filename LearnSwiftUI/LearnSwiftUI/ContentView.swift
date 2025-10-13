@@ -42,6 +42,12 @@ struct ContentView: View {
             }
             .padding(.horizontal)
             
+            Toggle(isOn: $themeManager.isDarkEnabled) {
+                Text("Dark Mode")
+                    .foregroundStyle(theme.color.buttonCommonText)
+            }
+            .padding()
+            
             HStack {
                 Circle()
                     .fill(theme.color.semanticsSuccessFull)
@@ -58,4 +64,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environmentTheme(manager: ThemeManager.shared)
 }

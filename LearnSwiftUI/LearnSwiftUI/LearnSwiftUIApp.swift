@@ -11,6 +11,7 @@ import SwiftUI
 struct LearnSwiftUIApp: App {
     @State private var sharedModel = SharedModel()
     @StateObject private var todoStore = TodoStore()
+    @StateObject var themeManager = ThemeManager.shared
     var body: some Scene {
         WindowGroup {
 //            TextBootCamp()
@@ -47,10 +48,10 @@ struct LearnSwiftUIApp: App {
 //                .environment(\.theme, themeVM.currentTheme)
 //                .environment(themeVM)
             
-            NavigationStack {
-                WeatherMainView(vm: WeatherListViewModel(weatherService: WeatherServiceWrapper()))
-                    .navigationTitle("Weather")
-            }
+//            NavigationStack {
+//                WeatherMainView(vm: WeatherListViewModel(weatherService: WeatherServiceWrapper()))
+//                    .navigationTitle("Weather")
+//            }
             
 //            DownloadView()
           
@@ -65,6 +66,8 @@ struct LearnSwiftUIApp: App {
             
 //            CombineDefinitionContentView()
 
+            ContentView()
+                .environmentTheme(manager: themeManager)
         }
     }
 }

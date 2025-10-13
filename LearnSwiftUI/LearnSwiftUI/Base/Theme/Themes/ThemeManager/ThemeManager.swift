@@ -10,6 +10,14 @@ import Foundation
 class ThemeManager: ObservableObject {
     @Published var activeTheme: any ThemeProtocol = DefaultTheme()
     
+    @Published var isDarkEnabled: Bool = false {
+        didSet {
+            activeTheme = isDarkEnabled ? DarkTheme() : DefaultTheme()
+        }
+    }
+    
     static var shared = ThemeManager()
-    private init() { }
+    private init() {
+        self.isDarkEnabled = activeTheme is DarkTheme
+    }
 }
