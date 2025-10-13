@@ -24,6 +24,7 @@ extension Router {
 }
 
 struct LoginCoordinator: View, ScreenCoordinator {
+    @Environment(UserSettings.self) var userSettings
     typealias ScreenRouter = Router.Login
     var navRouter: any NavRouterProtocol
     @State private var loginModel = LoginModel()
@@ -43,7 +44,7 @@ struct LoginCoordinator: View, ScreenCoordinator {
     func getView() -> some View {
         LoginView(loginModel: loginModel, loginSuccess: {
             Logger.shared.debug("Login success")
-            UserSettings.shared.hasLoggedIn = true
+            userSettings.token = "token 123"
             navRouter.push(Router.homeRouter, animate: true)
         }, forgotPassword: {
             navRouter.push(ScreenRouter.forgotPassword, animate: true)

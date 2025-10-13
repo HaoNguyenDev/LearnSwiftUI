@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct AppCoordinator: View {
-    @Environment(UserSettings.self) private var settings
+    @Environment(AppSettings.self) private var appSettings
     @State var rootRouter = NavRouter()
     @State private var isShowBlockingView: Bool = false
     
@@ -45,7 +45,7 @@ struct AppCoordinator: View {
     @ViewBuilder
     var contentView: some View {
         ZStack {
-            if settings.isMaintenance {
+            if appSettings.isMaintenance {
                 maintenanceView
             } else {
                 NavigationStack(path: $rootRouter.path) {

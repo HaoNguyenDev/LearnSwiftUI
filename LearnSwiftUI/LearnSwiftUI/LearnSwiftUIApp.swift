@@ -11,7 +11,9 @@ import SwiftUI
 struct LearnSwiftUIApp: App {
     @State private var sharedModel = SharedModel()
     @StateObject private var todoStore = TodoStore()
-    @StateObject var themeManager = ThemeManager.shared
+    @State private var themeManager = ThemeManager.shared
+    @State private var userSettings = UserSettings.shared
+    @State private var appSettings = AppSettings.shared
     var body: some Scene {
         WindowGroup {
 //            TextBootCamp()
@@ -36,7 +38,7 @@ struct LearnSwiftUIApp: App {
 //            NavigationStackBootcamp()
 //            NavigationStackCustomItemView()
 //            NavigationManagerBootcamp()
-//            AppCoordinator().environment(UserSettings.shared)
+//            AppCoordinator().environment(appSettings)
 //            EnvironmentSettingView().environment(EnvironmentSettings())
 //            GithubUserListView()
 //            AsyncAwaitBootcampView()
@@ -68,6 +70,7 @@ struct LearnSwiftUIApp: App {
 
             ContentView()
                 .environmentTheme(manager: themeManager)
+                .environment(userSettings)
         }
     }
 }
