@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ThemeModifier: ViewModifier {
-    @ObservedObject var themeManager: ThemeManager
+    @State var themeManager: ThemeManager
     
     func body(content: Content) -> some View {
         content

@@ -5,19 +5,19 @@
 //  Created by Hao Nguyen on 10/10/25.
 //
 
-import Foundation
+import SwiftUI
 
-class ThemeManager: ObservableObject {
-    @Published var activeTheme: any ThemeProtocol = DefaultTheme()
+@Observable class ThemeManager {
+    static var shared = ThemeManager()
     
-    @Published var isDarkEnabled: Bool = false {
+    var activeTheme: any ThemeProtocol = DefaultTheme()
+    
+    var isDarkEnabled: Bool = false {
         didSet {
             activeTheme = isDarkEnabled ? DarkTheme() : DefaultTheme()
+             Logger.shared.debug("ThemeManager activeTheme updated: \(activeTheme)")
         }
     }
     
-    static var shared = ThemeManager()
-    private init() {
-        self.isDarkEnabled = activeTheme is DarkTheme
-    }
+    private init() {}
 }

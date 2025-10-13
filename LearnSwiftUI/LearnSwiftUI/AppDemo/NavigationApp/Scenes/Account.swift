@@ -22,6 +22,7 @@ extension Router {
 }
 
 struct AccountCoordinator: View, ScreenCoordinator {
+    @Environment(UserSettings.self) var userSettings
     typealias ScreenRouter = Router.Account
     var navRouter: any NavRouterProtocol
     @StateObject private var loginModel = AccountViewModel()
@@ -40,7 +41,7 @@ struct AccountCoordinator: View, ScreenCoordinator {
     @ViewBuilder
     private func accountView() -> some View {
         AccountView(model: loginModel, logout: {
-            UserSettings.shared.hasLoggedIn = false
+            userSettings.clearUserDatas()
             navRouter.push(Router.Splash.login, animate: false)
         }, gotoSecurity: {
             navRouter.push(Router.MainTab.security, animate: true)

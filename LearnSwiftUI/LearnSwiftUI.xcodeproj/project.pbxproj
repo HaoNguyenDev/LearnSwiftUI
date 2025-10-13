@@ -54,7 +54,6 @@
 		DA5D711E2E3D185500C78E40 /* NavRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D711D2E3D185500C78E40 /* NavRouter.swift */; };
 		DA5D71202E3D185F00C78E40 /* ScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D711F2E3D185F00C78E40 /* ScreenCoordinator.swift */; };
 		DA5D71252E3D189100C78E40 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71242E3D189100C78E40 /* Splash.swift */; };
-		DA5D71272E3D18E300C78E40 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71262E3D18E300C78E40 /* UserSettings.swift */; };
 		DA5D712A2E3D19A000C78E40 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71292E3D19A000C78E40 /* Logger.swift */; };
 		DA5D712C2E3D1A8800C78E40 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D712B2E3D1A8500C78E40 /* Login.swift */; };
 		DA5D712E2E3D1D7900C78E40 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D712D2E3D1D7900C78E40 /* AppCoordinator.swift */; };
@@ -164,6 +163,8 @@
 		DAE365BD2E9CC288005EF803 /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE365B72E9CC288005EF803 /* DarkTheme.swift */; };
 		DAE365BE2E9CC288005EF803 /* DarkThemeAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE365B82E9CC288005EF803 /* DarkThemeAssets.swift */; };
 		DAE365BF2E9CC288005EF803 /* DarkThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE365B92E9CC288005EF803 /* DarkThemeColors.swift */; };
+		DAE365DB2E9CE2EE005EF803 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE365DA2E9CE2EE005EF803 /* UserSettings.swift */; };
+		DAE366252E9D1047005EF803 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE366242E9D1047005EF803 /* AppSettings.swift */; };
 		DAE676E82E9552D900F3D956 /* AppSecurity.txt in Resources */ = {isa = PBXBuildFile; fileRef = DAE676E72E9552D900F3D956 /* AppSecurity.txt */; };
 		DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE052DE9C2F800082B1C /* FrameBootcamp.swift */; };
 		DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE072DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift */; };
@@ -236,7 +237,6 @@
 		DA5D711D2E3D185500C78E40 /* NavRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavRouter.swift; sourceTree = "<group>"; };
 		DA5D711F2E3D185F00C78E40 /* ScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCoordinator.swift; sourceTree = "<group>"; };
 		DA5D71242E3D189100C78E40 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
-		DA5D71262E3D18E300C78E40 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		DA5D71292E3D19A000C78E40 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		DA5D712B2E3D1A8500C78E40 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		DA5D712D2E3D1D7900C78E40 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -357,6 +357,8 @@
 		DAE365B82E9CC288005EF803 /* DarkThemeAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkThemeAssets.swift; sourceTree = "<group>"; };
 		DAE365B92E9CC288005EF803 /* DarkThemeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkThemeColors.swift; sourceTree = "<group>"; };
 		DAE365BA2E9CC288005EF803 /* DarkThemeFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkThemeFonts.swift; sourceTree = "<group>"; };
+		DAE365DA2E9CE2EE005EF803 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		DAE366242E9D1047005EF803 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		DAE676E42E914AFE00F3D956 /* CombineFramework.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombineFramework.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAE676E72E9552D900F3D956 /* AppSecurity.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppSecurity.txt; sourceTree = "<group>"; };
 		DAEBAE052DE9C2F800082B1C /* FrameBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameBootcamp.swift; sourceTree = "<group>"; };
@@ -664,7 +666,6 @@
 				DA5D711F2E3D185F00C78E40 /* ScreenCoordinator.swift */,
 				DA5D711B2E3D184500C78E40 /* Router.swift */,
 				DA5D712D2E3D1D7900C78E40 /* AppCoordinator.swift */,
-				DA5D71262E3D18E300C78E40 /* UserSettings.swift */,
 				DA5D71232E3D188C00C78E40 /* Scenes */,
 			);
 			path = NavigationApp;
@@ -1084,9 +1085,19 @@
 			path = DarkTheme;
 			sourceTree = "<group>";
 		};
+		DAE365D92E9CE2DC005EF803 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DAE365DA2E9CE2EE005EF803 /* UserSettings.swift */,
+				DAE366242E9D1047005EF803 /* AppSettings.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		DAEBAE4B2DF2907900082B1C /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				DAE365D92E9CE2DC005EF803 /* Settings */,
 				DA7BF5C72E98EC0300224BCF /* Theme */,
 				DA7BF5E32E98F29E00224BCF /* Extensions */,
 				DAEBAE4E2DF2909E00082B1C /* Closure.swift */,
@@ -1252,7 +1263,6 @@
 				DA7BF61C2E99036200224BCF /* View+Themed.swift in Sources */,
 				DA8748912E6B005800B189F3 /* WeatherErrorView.swift in Sources */,
 				DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */,
-				DA5D71272E3D18E300C78E40 /* UserSettings.swift in Sources */,
 				DAAA67262E6173FD004075B7 /* PickerBootcamp.swift in Sources */,
 				DA7BE0B22E80630A006821CE /* HomeViewProtocol.swift in Sources */,
 				DAEBAE4F2DF2909E00082B1C /* Closure.swift in Sources */,
@@ -1279,6 +1289,7 @@
 				DA8748932E6B006000B189F3 /* GradientBackgroundAnimation.swift in Sources */,
 				DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */,
 				DAED677E2E20E45C00309382 /* StateObjectBootcamp.swift in Sources */,
+				DAE365DB2E9CE2EE005EF803 /* UserSettings.swift in Sources */,
 				DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */,
 				DA7BF5E62E98F2B400224BCF /* RswiftResources+ImageResource.swift in Sources */,
 				DAA709142E75D553006F8E70 /* ThaiPaymentService.swift in Sources */,
@@ -1328,6 +1339,7 @@
 				DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */,
 				DA7BE0A62E806040006821CE /* LoginInteractor.swift in Sources */,
 				DAAE8CBD2E45028300FCBA4E /* CounterState.swift in Sources */,
+				DAE366252E9D1047005EF803 /* AppSettings.swift in Sources */,
 				DA8748872E6AFBC900B189F3 /* WeatherService.swift in Sources */,
 				DA415E952DE5E707009F515E /* ImagesBootcamp.swift in Sources */,
 				DA5C98B62E391F4B007AC9E9 /* TodoAppView.swift in Sources */,
