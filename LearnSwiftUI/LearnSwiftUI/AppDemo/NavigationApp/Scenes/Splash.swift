@@ -42,7 +42,7 @@ struct SplashCoordinator: View, ScreenCoordinator {
     @ViewBuilder
     func getView() -> some View {
         SplashView(onSkipUpdate: {
-            if userSettings.hasLoggedIn {
+            if hasLoggedIn() {
                 navRouter.push(ScreenRouter.login, animate: false)
                 navRouter.push(ScreenRouter.home, animate: true)
             } else {
@@ -55,6 +55,11 @@ struct SplashCoordinator: View, ScreenCoordinator {
 //            navRouter.showFullScreenCover(RouterView.init(routable: ScreenRouter.login))
 //            navRouter.showSheet(RouterView.init(routable: Router.Security.changePassword))
         }
+    }
+    
+    private func hasLoggedIn() -> Bool {
+        Logger.shared.debug("\(userSettings.token ?? "")")
+        return userSettings.hasLoggedIn
     }
     
     @ViewBuilder

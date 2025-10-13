@@ -16,7 +16,7 @@ struct BackButton: View {
                 .frame(width: 25, height: 25)
         }
         .foregroundColor(theme.color.textBlack)
-        .padding(.leading, 10)
+        .padding(.leading, 0)
     }
 }
 

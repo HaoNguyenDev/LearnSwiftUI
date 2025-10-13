@@ -45,6 +45,7 @@ struct LoginCoordinator: View, ScreenCoordinator {
         LoginView(loginModel: loginModel, loginSuccess: {
             Logger.shared.debug("Login success")
             userSettings.token = "token 123"
+            Logger.shared.debug("\(String(describing: userSettings.token))")
             navRouter.push(Router.homeRouter, animate: true)
         }, forgotPassword: {
             navRouter.push(ScreenRouter.forgotPassword, animate: true)

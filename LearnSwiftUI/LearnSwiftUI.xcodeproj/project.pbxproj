@@ -12,6 +12,7 @@
 		DA0B4AEB2E6FCBB700628E53 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */; };
 		DA0C4B5D2E52218A00D64C7C /* FocusStateBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0C4B5C2E52218A00D64C7C /* FocusStateBootcamp.swift */; };
 		DA13CE212E89999B005B6D2D /* MVVM.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA13CE202E89999B005B6D2D /* MVVM.txt */; };
+		DA1D081B2E9D282100B76DFD /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = DA1D081A2E9D282100B76DFD /* KeychainAccess */; };
 		DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */; };
 		DA37F9802E8D860D0001599E /* CbLogginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F97F2E8D860D0001599E /* CbLogginViewModel.swift */; };
 		DA37F9822E8D88FE0001599E /* CbLoginErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F9812E8D88FE0001599E /* CbLoginErrors.swift */; };
@@ -385,6 +386,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA1D081B2E9D282100B76DFD /* KeychainAccess in Frameworks */,
 				DA37F9952E8D8E3E0001599E /* CombineCocoa in Frameworks */,
 				DA5D71932E3FBB7C00C78E40 /* SDWebImageSwiftUI in Frameworks */,
 				DA7BF5E22E98F1FB00224BCF /* RswiftLibrary in Frameworks */,
@@ -1126,6 +1128,7 @@
 				DA5D71922E3FBB7C00C78E40 /* SDWebImageSwiftUI */,
 				DA37F9942E8D8E3E0001599E /* CombineCocoa */,
 				DA7BF5E12E98F1FB00224BCF /* RswiftLibrary */,
+				DA1D081A2E9D282100B76DFD /* KeychainAccess */,
 			);
 			productName = LearnSwiftUI;
 			productReference = DA415E4F2DE5BF26009F515E /* LearnSwiftUI.app */;
@@ -1159,6 +1162,7 @@
 				DA5D71912E3FBB7C00C78E40 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				DA37F9932E8D8E3E0001599E /* XCRemoteSwiftPackageReference "CombineCocoa" */,
 				DA7BF5E02E98F1FB00224BCF /* XCRemoteSwiftPackageReference "R.swift" */,
+				DA1D08192E9D282100B76DFD /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DA415E502DE5BF26009F515E /* Products */;
@@ -1587,6 +1591,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DA1D08192E9D282100B76DFD /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		DA37F9932E8D8E3E0001599E /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa";
@@ -1614,6 +1626,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DA1D081A2E9D282100B76DFD /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA1D08192E9D282100B76DFD /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
 		DA37F9942E8D8E3E0001599E /* CombineCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DA37F9932E8D8E3E0001599E /* XCRemoteSwiftPackageReference "CombineCocoa" */;
