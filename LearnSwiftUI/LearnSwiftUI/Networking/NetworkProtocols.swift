@@ -23,7 +23,7 @@ protocol Endpoint {
     var method: HTTPMethod { get }
     var headers: [String: String]? { get }
     
-    // Query for GET và Body for POST/PUT
+    // Query for GET and Body for POST/PUT
     var queryItems: [URLQueryItem]? { get } // (queryParameters -> queryItems)
     var body: Data? { get } // Body for POST/PUT/PATCH
 }

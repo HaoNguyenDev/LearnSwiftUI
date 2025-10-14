@@ -1,5 +1,5 @@
 //
-//  UserDetail.swift
+//  GithubUserDetail.swift
 //  LearnSwiftUI
 //
 //  Created by Hao Nguyen on 3/8/25.
@@ -7,8 +7,10 @@
 
 import Foundation
 
+import Foundation
+
 // MARK: - UserDetailModel
-struct UserDetail: Codable {
+struct GithubUserDetail: Codable, Equatable, Hashable {
     let login : String?
     let name: String?
     let id : Int?
