@@ -7,51 +7,50 @@
 
 import Foundation
 
-// MARK: - Custom NetworkError
-enum NetworkError: Error, Equatable {
+// MARK: - NetworkError
+enum NetworkError: Error, LocalizedError, Equatable {
     case invalidURL
     case invalidData
+    case networkError(error: Error) // Include URLError (timeout, no connection)
     case invalidResponse(statusCode: Int)
-    case decodingError(error: Error)
-    case networkError(error: Error)
     case clientError(statusCode: Int)
     case serverError(statusCode: Int)
+    case decodingError(error: Error)
     case unknownError(statusCode: Int)
     
-    var errorDescription: String {
+    // errorDescription of LocalizedError
+    var errorDescription: String? {
         switch self {
         case .invalidURL:
-            return "Invalid URL"
+            return "Invalid URL provided."
         case .invalidData:
             return "Invalid Data"
+        case .networkError(let error):
+            return "Network connection failed: \(error.localizedDescription)"
         case .invalidResponse(let statusCode):
-            return "Invalid Response: \(statusCode)"
+            return "Invalid HTTP Response received. Status code: \(statusCode)"
         case .clientError(let statusCode):
-            return "Client Error: \(statusCode)"
+            return "Client error (4xx). Status code: \(statusCode)"
         case .serverError(let statusCode):
-            return "Server Error: \(statusCode)"
-        case .decodingError(error: let error):
-            return "Decoding Error: \(error.localizedDescription)"
-        case .networkError(error: let error):
-            return "Network Error: \(error.localizedDescription)"
+            return "Server error (5xx). Status code: \(statusCode)"
+        case .decodingError(let error):
+            return "Data decoding failed: \(error.localizedDescription)"
         case .unknownError(let statusCode):
-            return "Unknown Error Code: \(statusCode)"
+            return "An unknown error occurred. Status code: \(statusCode)"
         }
     }
     
     static func == (lhs: NetworkError, rhs: NetworkError) -> Bool {
         switch (lhs, rhs) {
-        case (.invalidURL, .invalidURL),
-             (.invalidData, .invalidData):
-            return false
-        case let (.invalidResponse(lhsCode), .invalidResponse(rhsCode)),
-             let (.clientError(lhsCode), .clientError(rhsCode)),
-             let (.serverError(lhsCode), .serverError(rhsCode)),
-             let (.unknownError(lhsCode), .unknownError(rhsCode)):
+        case (.invalidURL, .invalidURL): return true
+        case (.invalidResponse(let lhsCode), .invalidResponse(let rhsCode)),
+             (.clientError(let lhsCode), .clientError(let rhsCode)),
+             (.serverError(let lhsCode), .serverError(let rhsCode)),
+             (.unknownError(let lhsCode), .unknownError(let rhsCode)):
             return lhsCode == rhsCode
-        case let (.decodingError(lhsError), .decodingError(rhsError)),
-             let (.networkError(lhsError), .networkError(rhsError)):
-            return lhsError.localizedDescription == rhsError.localizedDescription
+        case (.networkError, .networkError),
+             (.decodingError, .decodingError):
+            return true
         default:
             return false
         }
