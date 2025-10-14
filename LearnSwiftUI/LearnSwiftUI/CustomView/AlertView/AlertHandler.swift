@@ -18,7 +18,7 @@ struct AlertHandler: ViewModifier {
             .alert(isPresented: $showAlert) {
                 var errorMessage: String
                 if let networkError = error as? NetworkError {
-                    errorMessage = networkError.errorDescription
+                    errorMessage = networkError.errorDescription.orEmpty
                 } else {
                     errorMessage = error?.localizedDescription ?? "Unknown error"
                 }
