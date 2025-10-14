@@ -48,11 +48,11 @@ extension UserRowView {
                         .resizable()
                         .scaledToFit()
                 case .failure, .empty:
-                    Image(systemName: "man-user-circle-icon")
+                    Image(R.image.manUserCircleIcon)
                         .resizable()
                         .scaledToFit()
                 @unknown default:
-                    Image(systemName: "man-user-circle-icon")
+                    Image(R.image.manUserCircleIcon)
                         .resizable()
                         .scaledToFit()
                 }

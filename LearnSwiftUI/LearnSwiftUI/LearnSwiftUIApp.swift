@@ -42,7 +42,9 @@ struct LearnSwiftUIApp: App {
 //                .environment(appSettings)
 //                .environment(userSettings)
 //            EnvironmentSettingView().environment(EnvironmentSettings())
-            GithubUserListView()
+            GithubUserListView(viewModel: GithubUserListVM()) { userDetail in
+               
+            }
 //            AsyncAwaitBootcampView()
 //            FocusStateBootcamp()
 //            ListBootcamp()

@@ -10,7 +10,7 @@ import Combine
 // MARK: - GitHubServiceProtocol
 protocol GitHubServiceProtocol {
     func fetchUsers(perPage: Int, since: Int) async throws -> [GithubUser]
-    func fetchUserDetail(by username: String) async throws -> UserDetail
+    func fetchUserDetail(by username: String) async throws -> GithubUserDetail
 }
 
 // MARK: - GitHubNetworkService
@@ -26,7 +26,7 @@ class GitHubNetworkService: GitHubServiceProtocol {
         return try await networkManager.requestAsync(endpoint: endpoint)
     }
     
-    func fetchUserDetail(by username: String) async throws -> UserDetail {
+    func fetchUserDetail(by username: String) async throws -> GithubUserDetail {
         let endpoint = GitHubAPIEndpoint.getUserDetailEndpoint(username: username)
         return try await networkManager.requestAsync(endpoint: endpoint)
     }
