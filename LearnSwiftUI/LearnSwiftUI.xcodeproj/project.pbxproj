@@ -48,6 +48,7 @@
 		DA5164322E3CB57600642709 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5164312E3CB57600642709 /* NavigationManager.swift */; };
 		DA53B73A2E6086DE001EFC52 /* ListBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53B7392E6086DE001EFC52 /* ListBootcamp.swift */; };
 		DA58DD8E2E9E35630042D1AD /* NetworkingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58DD8D2E9E35630042D1AD /* NetworkingBootcamp.swift */; };
+		DA58DD9C2E9E5FF90042D1AD /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58DD9B2E9E5FF90042D1AD /* String+Extensions.swift */; };
 		DA5C98B62E391F4B007AC9E9 /* TodoAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B52E391F4B007AC9E9 /* TodoAppView.swift */; };
 		DA5C98B82E391F91007AC9E9 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B72E391F91007AC9E9 /* TodoListView.swift */; };
 		DA5C98BA2E39237C007AC9E9 /* TodoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B92E39237C007AC9E9 /* TodoRowView.swift */; };
@@ -232,6 +233,7 @@
 		DA53B7372E5F4EE6001EFC52 /* WeakAndUnowned.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = WeakAndUnowned.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA53B7392E6086DE001EFC52 /* ListBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBootcamp.swift; sourceTree = "<group>"; };
 		DA58DD8D2E9E35630042D1AD /* NetworkingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingBootcamp.swift; sourceTree = "<group>"; };
+		DA58DD9B2E9E5FF90042D1AD /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		DA5C98B52E391F4B007AC9E9 /* TodoAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppView.swift; sourceTree = "<group>"; };
 		DA5C98B72E391F91007AC9E9 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		DA5C98B92E39237C007AC9E9 /* TodoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRowView.swift; sourceTree = "<group>"; };
@@ -660,6 +662,7 @@
 				DA415E8E2DE5DCC0009F515E /* Color.swift */,
 				DAAA67232E617101004075B7 /* ViewAndAdditional.swift */,
 				DA7BF68F2E995FAC00224BCF /* View+Extensions.swift */,
+				DA58DD9B2E9E5FF90042D1AD /* String+Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1290,6 +1293,7 @@
 				DA5D71322E3D20F100C78E40 /* Placeholder.swift in Sources */,
 				DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */,
 				DA5D717E2E3FA57800C78E40 /* NetworkProtocols.swift in Sources */,
+				DA58DD9C2E9E5FF90042D1AD /* String+Extensions.swift in Sources */,
 				DA7BE0A02E805F95006821CE /* LoginProtocol.swift in Sources */,
 				DA7BE0B42E806329006821CE /* HomeViewController.swift in Sources */,
 				DA5D71472E3F589A00C78E40 /* CustomEnvironmentValues.swift in Sources */,

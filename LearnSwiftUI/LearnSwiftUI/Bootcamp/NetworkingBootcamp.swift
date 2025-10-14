@@ -142,7 +142,7 @@ final class NetworkingBootcamp: NetworkingBootcampProtocol {
                 let statusCode = httpResponse.statusCode
             
                 do {
-                    try self.handleStatusCode(httpResponse.statusCode)
+                    try self.handleStatusCode(statusCode)
                 } catch {
                     // If Status Code is an error (4xx, 5xx), throw the specific network error
                     throw error

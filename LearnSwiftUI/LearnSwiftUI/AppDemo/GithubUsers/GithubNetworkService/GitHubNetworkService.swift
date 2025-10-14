@@ -15,30 +15,30 @@ protocol GitHubServiceProtocol {
 
 // MARK: - GitHubNetworkService
 class GitHubNetworkService: GitHubServiceProtocol {
-    private let networkManager: NetworkService
+    private let networkManager: NetworkServiceProtocol
     
-    init(networkManager: NetworkService = NetworkManager()) {
+    init(networkManager: NetworkServiceProtocol = NetworkManager()) {
         self.networkManager = networkManager
     }
     
     func fetchUsers(perPage: Int, since: Int) async throws -> [GithubUser] {
         let endpoint = GitHubAPIEndpoint.getUsersEndpoint(perPage: perPage, since: since)
-        return try await networkManager.fetchData(endpoint: endpoint, responseType: [GithubUser].self)
+        return try await networkManager.requestAsync(endpoint: endpoint)
     }
     
     func fetchUserDetail(by username: String) async throws -> UserDetail {
         let endpoint = GitHubAPIEndpoint.getUserDetailEndpoint(username: username)
-        return try await networkManager.fetchData(endpoint: endpoint, responseType: UserDetail.self)
+        return try await networkManager.requestAsync(endpoint: endpoint)
     }
     
     //MARK: Test with other way
     func fetchWithCompletionHandler(perPage: Int, since: Int, completion: @escaping (Result<[GithubUser], Error>) -> Void) {
         let endpoint = GitHubAPIEndpoint.getUsersEndpoint(perPage: perPage, since: since)
-        return networkManager.fetchData(endpoint: endpoint, responseType: [GithubUser].self, completion: completion)
+        return networkManager.requestCallback(endpoint: endpoint, completion: completion)
     }
     
     func fetchUserWithPublisher(perPage: Int, since: Int) -> AnyPublisher<[GithubUser], Error> {
         let endpoint = GitHubAPIEndpoint.getUsersEndpoint(perPage: perPage, since: since)
-        return networkManager.fetchData(endpoint: endpoint, responseType: [GithubUser].self)
+        return networkManager.requestPublisher(endpoint: endpoint)
     }
 }

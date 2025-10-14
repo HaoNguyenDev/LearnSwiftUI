@@ -13,7 +13,7 @@ struct ErrorBanner: View {
     var body: some View {
         HStack {
             if let networkError = error as? NetworkError {
-                Text(networkError.errorDescription).font(.footnote)
+                Text(networkError.errorDescription.orEmpty).font(.footnote)
             } else {
                 Text(error?.localizedDescription ?? "Unknown error").font(.footnote)
             }
