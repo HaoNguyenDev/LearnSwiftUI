@@ -49,11 +49,11 @@ var sumTwoNumberFormular: (Int, Int) -> String = { (a, b) -> String in
     return "\(a + b)"
 }
 
-func tong(_ a: Int, _ b: Int, operation: (Int, Int) -> String) -> String {
+func total(_ a: Int, _ b: Int, operation: (Int, Int) -> String) -> String {
     return "Total: \(operation(a, b))"
 }
 
-let tinhTong = tong(10, 20, operation: sumTwoNumberFormular)
+let totalValue = total(10, 20, operation: sumTwoNumberFormular)
 
 
 
@@ -174,11 +174,12 @@ let soNgauNhien: [Int?]  = [nil, 11, 12, 15, nil, 18, 20, 0, nil, 2, 3, 4, nil, 
 let daySoUnwrap = soNgauNhien.compactMap { $0 }
 let daySoChan1 = daySoUnwrap.filter(findEvenNumber)
 let soTangDan = daySoChan1.sorted(by: ascendingOrder)
-let soTangDan2 = daySoUnwrap.sorted { $0 < $1 }
+let soTangDan2 = daySoUnwrap.sorted { s1, s2 in s1 < s2 }
+let soTangDan3 = daySoUnwrap.sorted { $0 < $1 }
+let soTangDan4 = daySoUnwrap.sorted(by: <)
 let compacMap = soNgauNhien.compactMap { $0 } // Remove nil element
 
 let inSo: (Int) -> Void = { number in
     print("\(number % 2 == 0 ? "Even number\(number)" : "Odd number \(number)")")
 }
 daySoUnwrap.forEach(inSo)
-

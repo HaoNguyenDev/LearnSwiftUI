@@ -10,6 +10,14 @@ import SwiftUI
 @Observable final class AppSettings {
     static let shared = AppSettings()
     
+    private init() {
+        enableLogger = Logger.shared.isEnabled
+    }
+    
     let isMaintenance = false
-    private init() {}
+    var enableLogger: Bool {
+        didSet {
+            Logger.shared.isEnabled = enableLogger
+        }
+    }
 }
