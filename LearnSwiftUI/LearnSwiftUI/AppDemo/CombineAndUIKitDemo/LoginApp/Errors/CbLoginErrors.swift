@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum CbLoginPasswordError: Error {
+enum CbLoginPasswordError: Error, LocalizedError {
     case incorrect
     case empty
     case wrongLength
     
-    var localizedDescription: String {
+    var errorDescription: String? {
         switch self {
         case .incorrect:
             return "Incorrect password format"
@@ -24,11 +24,11 @@ enum CbLoginPasswordError: Error {
     }
 }
 
-enum CbLoginEmailError: Error {
+enum CbLoginEmailError: Error, LocalizedError {
     case incorrectFormat
     case empty
     
-    var localizedDescription: String {
+    var errorDescription: String? {
         switch self {
         case .incorrectFormat:
             return "Invalid email format"
@@ -38,11 +38,12 @@ enum CbLoginEmailError: Error {
     }
 }
 
-enum CbLoginError: Error {
+enum CbLoginError: Error, LocalizedError {
     case failed
     case success
     case custom(String)
-    var localizedDescription: String {
+    
+    var errorDescription: String? {
         switch self {
         case .failed:
             return "Login failed"
