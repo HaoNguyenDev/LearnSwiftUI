@@ -11,6 +11,7 @@ import Combine
 protocol GitHubServiceProtocol {
     func fetchUsers(perPage: Int, since: Int) async throws -> [GithubUser]
     func fetchUserDetail(by username: String) async throws -> GithubUserDetail
+    func fetchUserWithPublisher(perPage: Int, since: Int) -> AnyPublisher<[GithubUser], Error>
 }
 
 // MARK: - GitHubNetworkService
