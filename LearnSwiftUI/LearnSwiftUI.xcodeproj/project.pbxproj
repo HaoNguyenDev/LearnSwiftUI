@@ -164,6 +164,7 @@
 		DAC35B022E9F8E8F0019021D /* UserListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC35B012E9F8E8F0019021D /* UserListContentView.swift */; };
 		DAC35B102E9F91520019021D /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC35B0F2E9F91520019021D /* UserListViewController.swift */; };
 		DAC35B162E9FCCDA0019021D /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC35B152E9FCCDA0019021D /* Array+Extensions.swift */; };
+		DAC35B3F2E9FED3F0019021D /* TextFieldModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC35B3E2E9FED3F0019021D /* TextFieldModifiers.swift */; };
 		DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */; };
 		DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */; };
 		DAE2EACA2DF5DE280083E733 /* SheetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC92DF5DE280083E733 /* SheetBootcamp.swift */; };
@@ -367,6 +368,7 @@
 		DAC35B012E9F8E8F0019021D /* UserListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListContentView.swift; sourceTree = "<group>"; };
 		DAC35B0F2E9F91520019021D /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		DAC35B152E9FCCDA0019021D /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		DAC35B3E2E9FED3F0019021D /* TextFieldModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifiers.swift; sourceTree = "<group>"; };
 		DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBootcamp.swift; sourceTree = "<group>"; };
 		DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBootcamp.swift; sourceTree = "<group>"; };
 		DAE2EAC92DF5DE280083E733 /* SheetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetBootcamp.swift; sourceTree = "<group>"; };
@@ -537,6 +539,7 @@
 				DA39790F2E9BBC1200838584 /* TextViewModifiers.swift */,
 				DA39793E2E9BE5BD00838584 /* ImageStylingModifier.swift */,
 				DA58DDAC2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift */,
+				DAC35B3E2E9FED3F0019021D /* TextFieldModifiers.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -1336,6 +1339,7 @@
 				DA4F7F1C2E9A954D001CB7B2 /* LoginButtonView.swift in Sources */,
 				DA7BF61C2E99036200224BCF /* View+Themed.swift in Sources */,
 				DA8748912E6B005800B189F3 /* WeatherErrorView.swift in Sources */,
+				DAC35B3F2E9FED3F0019021D /* TextFieldModifiers.swift in Sources */,
 				DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */,
 				DAAA67262E6173FD004075B7 /* PickerBootcamp.swift in Sources */,
 				DA7BE0B22E80630A006821CE /* HomeViewProtocol.swift in Sources */,

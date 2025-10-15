@@ -6,6 +6,28 @@
 //
 
 import SwiftUI
+import Combine
+
+class TextViewModel: ObservableObject {
+    private var cancellables = Set<AnyCancellable>()
+    
+    @Published var textString = ""
+    @Published var isEnableButton = false
+    
+    init() {
+       binding()
+    }
+    
+    private func binding() {
+        $textString
+            .map({ text in
+                return text.isEmpty
+            })
+            .sink { [weak self] bool in
+                self?.isEnableButton = bool
+            }.store(in: &cancellables)
+    }
+}
 
 struct TextFieldBootcamp: View {
     @State private var username = ""
@@ -15,22 +37,40 @@ struct TextFieldBootcamp: View {
     
     @FocusState private var focusedField: FocusField?
     
+    @StateObject private var vm = TextViewModel()
+    
     enum FocusField {
         case username, email, password, phonenumber
     }
     
     var body: some View {
         NavigationView {
-            Form {
-                TextField("Enter your name", text: $username)
-                    .textInputAutocapitalization(.never)
-                    .focused($focusedField, equals: .username)
-                    .submitLabel(SubmitLabel.next)
-                    .onSubmit {
-                        focusedField = .email
+            VStack(spacing: 30) {
+                VStack(spacing: 0) {
+                    TextField("Enter your name", text: $vm.textString)
+                        .defaultTf()
+                        .textInputAutocapitalization(.never)
+                        .focused($focusedField, equals: .username)
+                        .submitLabel(SubmitLabel.next)
+                        .onSubmit {
+                            focusedField = .email
+                        }
+                    
+                    Button {
+                        
+                    } label: {
+                        Text("Type to enable this button")
                     }
+    //                .buttonStyle(HButtonStyle(size: .large, type: .primary))
+                    .buttonStyle(.primaryHButton)
+                    .padding(.horizontal)
+                    .padding(.top)
+                    .disabled(vm.isEnableButton)
+                }
+                
                 
                 TextField("Enter your email", text: $email)
+                    .defaultTf()
                     .textInputAutocapitalization(.never)
                     .focused($focusedField, equals: .email)
                     .submitLabel(SubmitLabel.next)
@@ -39,6 +79,7 @@ struct TextFieldBootcamp: View {
                     }
                 
                 SecureField("Enter your password", text: $password)
+                    .defaultTf()
                     .focused($focusedField, equals: .password)
                     .submitLabel(SubmitLabel.next)
                     .onSubmit {
@@ -46,6 +87,7 @@ struct TextFieldBootcamp: View {
                     }
                 
                 TextField("Enter your phone number", text: $phonenumber)
+                    .defaultTf()
                     .keyboardType(.phonePad)
                     .focused($focusedField, equals: .phonenumber)
                     .submitLabel(SubmitLabel.next)
@@ -53,6 +95,7 @@ struct TextFieldBootcamp: View {
                         focusedField = .phonenumber
                     }
             }
+    
             .navigationTitle(Text("TextField Bootcamp"))
             .onTapGesture {
                 hideKeyboard()
@@ -63,5 +106,5 @@ struct TextFieldBootcamp: View {
 
 #Preview {
     TextFieldBootcamp()
-        .preferredColorScheme(.dark)
+        .preferredColorScheme(.light)
 }
