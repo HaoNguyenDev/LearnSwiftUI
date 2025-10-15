@@ -51,7 +51,7 @@ class GithubUserListVM: ObservableObject, GithubUserListVMProtocol {
     private var paginationConfig: PaginationConfig
     
     init(networkService: GitHubServiceProtocol = GitHubNetworkService(),
-         paginationConfig: PaginationConfig = PaginationConfig(perPage: 30, since: 0)) {
+         paginationConfig: PaginationConfig = PaginationConfig(perPage: 20, since: 0)) {
         self.networkService = networkService
         self.paginationConfig = paginationConfig
     }
@@ -65,7 +65,7 @@ extension GithubUserListVM {
         
         do {
             let newUsers = try await networkService.fetchUsers(perPage: paginationConfig.perPage, since: 0)
-            
+            Logger.shared.debug("Since: \(paginationConfig.since)")
             viewState = .loaded
             await MainActor.run {
                 userList = newUsers
@@ -80,10 +80,7 @@ extension GithubUserListVM {
     func loadMoreUser(currentUser: GithubUser) async {
         guard let lastUser = userList.last, currentUser.id == lastUser.id else { return }
         guard case .loaded = viewState else { return }
-        
-#if DEBUG
-        print(">>> Load more data from user withID \(String(describing: currentUser.id))")
-#endif
+        Logger.shared.debug(">>> Load more data from user withID \(String(describing: currentUser.id))")
 //        viewState = .loading
         do {
             let newUsers = try await networkService.fetchUsers(perPage: paginationConfig.perPage,

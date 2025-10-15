@@ -32,8 +32,9 @@ extension UserSettings {
     }
     
     private let defaults = UserDefaults.standard
-    let keychainAccess = Keychain(service: Bundle.main.bundleIdentifier ?? "")
+    private let keychainAccess = Keychain(service: Bundle.main.bundleIdentifier ?? "")
     
+    var debugLog = false
     var hasLoggedIn: Bool {
         get {
             guard let token = token else { return false }
