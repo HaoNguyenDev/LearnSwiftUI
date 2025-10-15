@@ -22,23 +22,23 @@ class GitHubNetworkService: GitHubServiceProtocol {
     }
     
     func fetchUsers(perPage: Int, since: Int) async throws -> [GithubUser] {
-        let endpoint = GitHubAPIEndpoint.getUsersEndpoint(perPage: perPage, since: since)
+        let endpoint = GithubAPIEndpoint.getUsersEndpoint(perPage: perPage, since: since)
         return try await networkManager.requestAsync(endpoint: endpoint)
     }
     
     func fetchUserDetail(by username: String) async throws -> GithubUserDetail {
-        let endpoint = GitHubAPIEndpoint.getUserDetailEndpoint(username: username)
+        let endpoint = GithubAPIEndpoint.getUserDetailEndpoint(username: username)
         return try await networkManager.requestAsync(endpoint: endpoint)
     }
     
     //MARK: Test with other way
     func fetchWithCompletionHandler(perPage: Int, since: Int, completion: @escaping (Result<[GithubUser], Error>) -> Void) {
-        let endpoint = GitHubAPIEndpoint.getUsersEndpoint(perPage: perPage, since: since)
+        let endpoint = GithubAPIEndpoint.getUsersEndpoint(perPage: perPage, since: since)
         return networkManager.requestCallback(endpoint: endpoint, completion: completion)
     }
     
     func fetchUserWithPublisher(perPage: Int, since: Int) -> AnyPublisher<[GithubUser], Error> {
-        let endpoint = GitHubAPIEndpoint.getUsersEndpoint(perPage: perPage, since: since)
+        let endpoint = GithubAPIEndpoint.getUsersEndpoint(perPage: perPage, since: since)
         return networkManager.requestPublisher(endpoint: endpoint)
     }
 }

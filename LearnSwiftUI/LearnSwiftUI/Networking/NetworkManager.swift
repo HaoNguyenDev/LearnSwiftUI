@@ -155,7 +155,7 @@ extension NetworkManager {
     private func decodeData<T: Decodable>(_ data: Data, to: T.Type) throws -> T {
         do {
             let result = try JSONDecoder().decode(T.self, from: data)
-            Logger.shared.debug("Data received: \(String(data: data, encoding: .utf8) ?? "No data")")
+//            Logger.shared.debug("Data received: \(String(data: data, encoding: .utf8) ?? "No data")")
             return result
         } catch {
             throw NetworkError.decodingError(error: error)
