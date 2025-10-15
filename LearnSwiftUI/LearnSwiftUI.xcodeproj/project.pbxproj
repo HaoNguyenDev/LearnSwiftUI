@@ -158,6 +158,11 @@
 		DAAE8CBA2E44BDFF00FCBA4E /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE8CB92E44BDFF00FCBA4E /* FormView.swift */; };
 		DAAE8CBD2E45028300FCBA4E /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE8CBC2E45028300FCBA4E /* CounterState.swift */; };
 		DABDF7B42E70466B00DEC7C6 /* DownloadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDF7B32E70466B00DEC7C6 /* DownloadTask.swift */; };
+		DAC35AE72E9F87230019021D /* GitHubAPIEndpointEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC35AE62E9F87230019021D /* GitHubAPIEndpointEnum.swift */; };
+		DAC35AF32E9F88FA0019021D /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC35AF22E9F88FA0019021D /* UserListViewModel.swift */; };
+		DAC35AFC2E9F8E010019021D /* UserListViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC35AFB2E9F8E010019021D /* UserListViewWrapper.swift */; };
+		DAC35B022E9F8E8F0019021D /* UserListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC35B012E9F8E8F0019021D /* UserListContentView.swift */; };
+		DAC35B102E9F91520019021D /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC35B0F2E9F91520019021D /* UserListViewController.swift */; };
 		DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */; };
 		DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */; };
 		DAE2EACA2DF5DE280083E733 /* SheetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC92DF5DE280083E733 /* SheetBootcamp.swift */; };
@@ -355,6 +360,11 @@
 		DAAE8CB92E44BDFF00FCBA4E /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		DAAE8CBC2E45028300FCBA4E /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
 		DABDF7B32E70466B00DEC7C6 /* DownloadTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadTask.swift; sourceTree = "<group>"; };
+		DAC35AE62E9F87230019021D /* GitHubAPIEndpointEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIEndpointEnum.swift; sourceTree = "<group>"; };
+		DAC35AF22E9F88FA0019021D /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		DAC35AFB2E9F8E010019021D /* UserListViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewWrapper.swift; sourceTree = "<group>"; };
+		DAC35B012E9F8E8F0019021D /* UserListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListContentView.swift; sourceTree = "<group>"; };
+		DAC35B0F2E9F91520019021D /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBootcamp.swift; sourceTree = "<group>"; };
 		DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBootcamp.swift; sourceTree = "<group>"; };
 		DAE2EAC92DF5DE280083E733 /* SheetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetBootcamp.swift; sourceTree = "<group>"; };
@@ -416,6 +426,8 @@
 		DA37F97E2E8D85CF0001599E /* CombineAndUIKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DA37F98C2E8D8BC50001599E /* TransformableProtocol */,
+				DAC35AE32E9F86D90019021D /* GithubUserList */,
 				DAC35ACC2E9F83070019021D /* LoginApp */,
 			);
 			path = CombineAndUIKitDemo;
@@ -1087,10 +1099,45 @@
 				DA37F99C2E8D93F60001599E /* CbDemoContentView.swift */,
 				DA37F9982E8D91F30001599E /* CbDemoViewWrapper.swift */,
 				DA37F9902E8D8DFC0001599E /* MVVM */,
-				DA37F98C2E8D8BC50001599E /* TransformableProtocol */,
 				DA37F9892E8D8A6D0001599E /* Errors */,
 			);
 			path = LoginApp;
+			sourceTree = "<group>";
+		};
+		DAC35AE32E9F86D90019021D /* GithubUserList */ = {
+			isa = PBXGroup;
+			children = (
+				DAC35AFA2E9F8DDE0019021D /* ViewWrapper */,
+				DAC35AF12E9F88E90019021D /* MVVM */,
+				DAC35AE52E9F870A0019021D /* GithubNetworkService */,
+			);
+			path = GithubUserList;
+			sourceTree = "<group>";
+		};
+		DAC35AE52E9F870A0019021D /* GithubNetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				DAC35AE62E9F87230019021D /* GitHubAPIEndpointEnum.swift */,
+			);
+			path = GithubNetworkService;
+			sourceTree = "<group>";
+		};
+		DAC35AF12E9F88E90019021D /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				DAC35B0F2E9F91520019021D /* UserListViewController.swift */,
+				DAC35AF22E9F88FA0019021D /* UserListViewModel.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		DAC35AFA2E9F8DDE0019021D /* ViewWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				DAC35AFB2E9F8E010019021D /* UserListViewWrapper.swift */,
+				DAC35B012E9F8E8F0019021D /* UserListContentView.swift */,
+			);
+			path = ViewWrapper;
 			sourceTree = "<group>";
 		};
 		DAE365BB2E9CC288005EF803 /* DarkTheme */ = {
@@ -1262,6 +1309,7 @@
 				DA7BF5CF2E98ED0300224BCF /* ThemeColorProtocol.swift in Sources */,
 				DAEBAE462DF11C7300082B1C /* ButtonBootcamp.swift in Sources */,
 				DA5D711C2E3D184500C78E40 /* Router.swift in Sources */,
+				DAC35AE72E9F87230019021D /* GitHubAPIEndpointEnum.swift in Sources */,
 				DA7BF5CC2E98EC4100224BCF /* ThemeManager.swift in Sources */,
 				DA5D719E2E40940400C78E40 /* GithubUserListVM.swift in Sources */,
 				DA415E912DE5DF63009F515E /* GradientsColorBootcamp.swift in Sources */,
@@ -1291,6 +1339,7 @@
 				DA7BE0B62E806344006821CE /* HomePresenter.swift in Sources */,
 				DA7BF6902E995FAC00224BCF /* View+Extensions.swift in Sources */,
 				DA7BF5D32E98ED1400224BCF /* ThemeAssetsProtocol.swift in Sources */,
+				DAC35AFC2E9F8E010019021D /* UserListViewWrapper.swift in Sources */,
 				DA87488A2E6AFC6A00B189F3 /* WeatherItem.swift in Sources */,
 				DA5D71362E3DE82A00C78E40 /* Account.swift in Sources */,
 				DA7BF5E82E98F2C900224BCF /* RswiftResources+ColorResource.swift in Sources */,
@@ -1337,6 +1386,7 @@
 				DAA7090B2E75D29E006F8E70 /* LocationManager.swift in Sources */,
 				DA8748952E6B006A00B189F3 /* WeatherLoadingView.swift in Sources */,
 				DAA7090F2E75D3CE006F8E70 /* PaymentServiceProtocol.swift in Sources */,
+				DAC35AF32E9F88FA0019021D /* UserListViewModel.swift in Sources */,
 				DA5D71A02E40CC8300C78E40 /* AsyncAwaitBootcamp.swift in Sources */,
 				DA5D71432E3E4BF700C78E40 /* BackButton.swift in Sources */,
 				DA5D71892E3FB05100C78E40 /* UserRowView.swift in Sources */,
@@ -1345,6 +1395,7 @@
 				DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */,
 				DA3979102E9BBC1200838584 /* TextViewModifiers.swift in Sources */,
 				DA5C98BC2E3924AA007AC9E9 /* TodoDetailView.swift in Sources */,
+				DAC35B022E9F8E8F0019021D /* UserListContentView.swift in Sources */,
 				DAED67802E21089A00309382 /* ObservedObjectBootcamp.swift in Sources */,
 				DAAA67222E616D8C004075B7 /* TextFieldBootcamp.swift in Sources */,
 				DA7BE0BC2E8063AD006821CE /* HomeModuleBuilder.swift in Sources */,
@@ -1367,6 +1418,7 @@
 				DA415E952DE5E707009F515E /* ImagesBootcamp.swift in Sources */,
 				DA5C98B62E391F4B007AC9E9 /* TodoAppView.swift in Sources */,
 				DA5D71382E3DFBA000C78E40 /* ChangePassword.swift in Sources */,
+				DAC35B102E9F91520019021D /* UserListViewController.swift in Sources */,
 				DA7BE0AE2E8061D1006821CE /* LoginModuleBuilder.swift in Sources */,
 				DAA709162E75D60C006F8E70 /* VisaPaymentService.swift in Sources */,
 				DAE365BC2E9CC288005EF803 /* DarkThemeFonts.swift in Sources */,
