@@ -112,11 +112,11 @@ extension CbLoginViewController {
     private func handleError(with error: Error?) {
         switch error {
         case let error as CbLoginEmailError:
-            resultMessage.text = error.localizedDescription
+            resultMessage.text = error.errorDescription
         case let error as CbLoginPasswordError:
-            resultMessage.text = error.localizedDescription
+            resultMessage.text = error.errorDescription
         case let error as CbLoginError:
-            resultMessage.text = error.localizedDescription
+            resultMessage.text = error.errorDescription
         default:
             resultMessage.text = nil
         }

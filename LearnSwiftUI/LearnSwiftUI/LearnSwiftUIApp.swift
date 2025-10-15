@@ -42,9 +42,9 @@ struct LearnSwiftUIApp: App {
 //                .environment(appSettings)
 //                .environment(userSettings)
 //            EnvironmentSettingView().environment(EnvironmentSettings())
-            GithubUserListView(viewModel: GithubUserListVM()) { userDetail in
-               
-            }
+//            GithubUserListView(viewModel: GithubUserListVM()) { userDetail in
+//               
+//            }
 //            AsyncAwaitBootcampView()
 //            FocusStateBootcamp()
 //            ListBootcamp()
@@ -68,7 +68,7 @@ struct LearnSwiftUIApp: App {
 //                    .navigationBarTitle("Payment View")
 //            }
             
-//            CbDemoContentView()
+            CbDemoContentView()
             
 //            CombineDefinitionContentView()
 
