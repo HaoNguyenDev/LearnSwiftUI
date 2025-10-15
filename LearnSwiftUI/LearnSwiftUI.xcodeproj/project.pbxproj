@@ -163,6 +163,7 @@
 		DAC35AFC2E9F8E010019021D /* UserListViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC35AFB2E9F8E010019021D /* UserListViewWrapper.swift */; };
 		DAC35B022E9F8E8F0019021D /* UserListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC35B012E9F8E8F0019021D /* UserListContentView.swift */; };
 		DAC35B102E9F91520019021D /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC35B0F2E9F91520019021D /* UserListViewController.swift */; };
+		DAC35B162E9FCCDA0019021D /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC35B152E9FCCDA0019021D /* Array+Extensions.swift */; };
 		DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */; };
 		DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */; };
 		DAE2EACA2DF5DE280083E733 /* SheetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC92DF5DE280083E733 /* SheetBootcamp.swift */; };
@@ -365,6 +366,7 @@
 		DAC35AFB2E9F8E010019021D /* UserListViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewWrapper.swift; sourceTree = "<group>"; };
 		DAC35B012E9F8E8F0019021D /* UserListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListContentView.swift; sourceTree = "<group>"; };
 		DAC35B0F2E9F91520019021D /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		DAC35B152E9FCCDA0019021D /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBootcamp.swift; sourceTree = "<group>"; };
 		DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBootcamp.swift; sourceTree = "<group>"; };
 		DAE2EAC92DF5DE280083E733 /* SheetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetBootcamp.swift; sourceTree = "<group>"; };
@@ -674,6 +676,7 @@
 				DAAA67232E617101004075B7 /* ViewAndAdditional.swift */,
 				DA7BF68F2E995FAC00224BCF /* View+Extensions.swift */,
 				DA58DD9B2E9E5FF90042D1AD /* String+Extensions.swift */,
+				DAC35B152E9FCCDA0019021D /* Array+Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1290,6 +1293,7 @@
 				DA8748992E6B007700B189F3 /* WeatherDataPill.swift in Sources */,
 				DA5D71252E3D189100C78E40 /* Splash.swift in Sources */,
 				DA7BF5C92E98EC2000224BCF /* ThemeProtocol.swift in Sources */,
+				DAC35B162E9FCCDA0019021D /* Array+Extensions.swift in Sources */,
 				DAEBAE4A2DF28E1E00082B1C /* SubviewBootcamp.swift in Sources */,
 				DA7BE0A42E806032006821CE /* LoginPresenter.swift in Sources */,
 				DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */,
