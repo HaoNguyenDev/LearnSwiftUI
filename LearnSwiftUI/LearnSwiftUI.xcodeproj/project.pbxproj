@@ -150,6 +150,7 @@
 		DAA7091F2E75E2CC006F8E70 /* ResultAndError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7091E2E75E2BE006F8E70 /* ResultAndError.swift */; };
 		DAA709222E787C42006F8E70 /* PaymentVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA709212E787C42006F8E70 /* PaymentVM.swift */; };
 		DAA709252E787C52006F8E70 /* TransactionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA709242E787C52006F8E70 /* TransactionResult.swift */; };
+		DAA8E2182EA0D89800CDBDC1 /* TimerPublisherBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA8E2172EA0D89800CDBDC1 /* TimerPublisherBootcamp.swift */; };
 		DAA930402E33C99C000FE238 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA9303F2E33C995000FE238 /* ButtonModifier.swift */; };
 		DAAA67222E616D8C004075B7 /* TextFieldBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAA67212E616D8C004075B7 /* TextFieldBootcamp.swift */; };
 		DAAA67242E617101004075B7 /* ViewAndAdditional.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAA67232E617101004075B7 /* ViewAndAdditional.swift */; };
@@ -353,6 +354,7 @@
 		DAA709242E787C52006F8E70 /* TransactionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResult.swift; sourceTree = "<group>"; };
 		DAA7092D2E79CB4D006F8E70 /* SwiftConcurrency.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftConcurrency.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAA7092E2E7DB868006F8E70 /* OOP&POP.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "OOP&POP.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DAA8E2172EA0D89800CDBDC1 /* TimerPublisherBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPublisherBootcamp.swift; sourceTree = "<group>"; };
 		DAA9303F2E33C995000FE238 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		DAAA67212E616D8C004075B7 /* TextFieldBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBootcamp.swift; sourceTree = "<group>"; };
 		DAAA67232E617101004075B7 /* ViewAndAdditional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAndAdditional.swift; sourceTree = "<group>"; };
@@ -638,6 +640,7 @@
 				DAAA67212E616D8C004075B7 /* TextFieldBootcamp.swift */,
 				DAAA67252E6173FD004075B7 /* PickerBootcamp.swift */,
 				DA58DD8D2E9E35630042D1AD /* NetworkingBootcamp.swift */,
+				DAA8E2172EA0D89800CDBDC1 /* TimerPublisherBootcamp.swift */,
 			);
 			path = Bootcamp;
 			sourceTree = "<group>";
@@ -1366,6 +1369,7 @@
 				DA7BE0A02E805F95006821CE /* LoginProtocol.swift in Sources */,
 				DA7BE0B42E806329006821CE /* HomeViewController.swift in Sources */,
 				DA5D71472E3F589A00C78E40 /* CustomEnvironmentValues.swift in Sources */,
+				DAA8E2182EA0D89800CDBDC1 /* TimerPublisherBootcamp.swift in Sources */,
 				DA8748932E6B006000B189F3 /* GradientBackgroundAnimation.swift in Sources */,
 				DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */,
 				DAED677E2E20E45C00309382 /* StateObjectBootcamp.swift in Sources */,
