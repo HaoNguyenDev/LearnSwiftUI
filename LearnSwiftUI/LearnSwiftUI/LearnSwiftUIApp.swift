@@ -70,12 +70,15 @@ struct LearnSwiftUIApp: App {
             
             /// Combine
 //            CbDemoContentView()
-            UserListContentView()
+//            UserListContentView()
 //            CombineDefinitionContentView()
 
 //            ContentView()
 //                .environmentTheme(manager: themeManager)
 //                .environment(userSettings)
+            
+            /// Timer
+            TimerPublisherBootcamp(totalDuration: 90)
         }
     }
 }
