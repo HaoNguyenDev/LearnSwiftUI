@@ -38,14 +38,16 @@ struct LearnSwiftUIApp: App {
 //            NavigationStackBootcamp()
 //            NavigationStackCustomItemView()
 //            NavigationManagerBootcamp()
-//            AppCoordinator()
-//                .environment(appSettings)
-//                .environment(userSettings)
+            
+            AppCoordinator()
+                .environment(appSettings)
+                .environment(userSettings)
+            
 //            EnvironmentSettingView().environment(EnvironmentSettings())
             
-            GithubUserListView(viewModel: GithubUserListVM()) { userDetail in
-               
-            }
+//            GithubUserListView(viewModel: GithubUserListVM()) { userDetail in
+//               
+//            }
             
 //            AsyncAwaitBootcampView()
 //            FocusStateBootcamp()

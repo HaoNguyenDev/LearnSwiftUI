@@ -15,9 +15,10 @@ extension UserSettings {
         static let isDarkMode = "isDarkMode"
     }
     
-    private enum KeychainAccessKeys {
-        static let token = "token"
-        static let username = "username"
+    private enum KeychainKeys: String, CaseIterable {
+        case username = "haonguyen.LearnSwiftUI.key.username"
+        case password = "haonguyen.LearnSwiftUI.key.password"
+        case token = "haonguyen.LearnSwiftUI.key.token"
     }
 }
 
@@ -32,7 +33,7 @@ extension UserSettings {
     }
     
     private let defaults = UserDefaults.standard
-    private let keychainAccess = Keychain(service: Bundle.main.bundleIdentifier ?? "")
+    private let keychainAccess = Keychain(service: Bundle.main.bundleIdentifier ?? "haonguyen.LearnSwiftUI")
     
     var debugLog = false
     var hasLoggedIn: Bool {
@@ -44,21 +45,20 @@ extension UserSettings {
     
     var token: String? {
         get {
-            keychainAccess[KeychainAccessKeys.token]
+            loadValueFromKeychain(for: .token)
         }
         set {
-            keychainAccess[KeychainAccessKeys.token] = newValue
+            saveValueToKeychain(newValue, for: .token)
             Logger.shared.debug("Login success with token: \(newValue ?? "")")
         }
     }
     
     var username: String? {
         get {
-            keychainAccess[KeychainAccessKeys.username]
+            loadValueFromKeychain(for: .username)
         }
-        
         set {
-            keychainAccess[KeychainAccessKeys.username] = newValue
+            saveValueToKeychain(newValue, for: .username)
         }
     }
     
@@ -77,6 +77,16 @@ extension UserSettings {
         }
     }
     
+}
+
+extension UserSettings {
+    private func loadValueFromKeychain(for key: KeychainKeys) -> String? {
+        return keychainAccess[key.rawValue]
+    }
+    
+    private func saveValueToKeychain(_ value: String?, for key: KeychainKeys) {
+        keychainAccess[key.rawValue] = value
+    }
 }
 
 extension UserSettings {
