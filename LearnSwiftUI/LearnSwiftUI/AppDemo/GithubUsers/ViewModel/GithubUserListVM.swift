@@ -62,7 +62,6 @@ extension GithubUserListVM {
     @MainActor
     func fetchUsers() async {
         viewState = .loading
-        
         do {
             let newUsers = try await networkService.fetchUsers(perPage: paginationConfig.perPage, since: 0)
             Logger.shared.debug("Since: \(paginationConfig.since)")
@@ -74,6 +73,18 @@ extension GithubUserListVM {
         } catch {
             viewState = .error(error)
         }
+        
+//        do {
+//            guard let url = URL(string: "https://api.github.com/users") else { return }
+//            let (data, _) = try await URLSession.shared.data(from: url)
+//            try await MainActor.run {
+//                let jsonDecoder = JSONDecoder()
+//                let users = try jsonDecoder.decode([GithubUser].self, from: data)
+//                Logger.shared.debug("Fetched \(users.count) users")
+//            }
+//        } catch {
+//            viewState = .error(error)
+//        }
     }
     
     @MainActor
