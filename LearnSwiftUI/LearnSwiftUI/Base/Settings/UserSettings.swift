@@ -14,16 +14,12 @@ extension UserSettings {
         static let languageCode = "languageCode"
         static let isDarkMode = "isDarkMode"
     }
-    
-    private enum KeychainKeys: String, CaseIterable {
-        case username = "haonguyen.LearnSwiftUI.key.username"
-        case password = "haonguyen.LearnSwiftUI.key.password"
-        case token = "haonguyen.LearnSwiftUI.key.token"
-    }
 }
 
 @Observable final class UserSettings {
     static let shared = UserSettings()
+    
+    let keychain = KeychainManager.shared
     
     private init() {
         let initialIsDarkMode = defaults.value(forKey: UserSettingKeys.isDarkMode) as? Bool ?? false
@@ -33,7 +29,6 @@ extension UserSettings {
     }
     
     private let defaults = UserDefaults.standard
-    private let keychainAccess = Keychain(service: Bundle.main.bundleIdentifier ?? "haonguyen.LearnSwiftUI")
     
     var debugLog = false
     var hasLoggedIn: Bool {
@@ -48,8 +43,8 @@ extension UserSettings {
             loadValueFromKeychain(for: .token)
         }
         set {
+            guard let newValue = newValue else { return }
             saveValueToKeychain(newValue, for: .token)
-            Logger.shared.debug("Login success with token: \(newValue ?? "")")
         }
     }
     
@@ -58,13 +53,13 @@ extension UserSettings {
             loadValueFromKeychain(for: .username)
         }
         set {
+            guard let newValue = newValue else { return }
             saveValueToKeychain(newValue, for: .username)
         }
     }
     
     var languageCode: String? {
         didSet {
-            Logger.shared.debug("languageCode set to: \(languageCode ?? "nil")")
             defaults.set(languageCode, forKey: UserSettingKeys.languageCode)
         }
     }
@@ -73,19 +68,28 @@ extension UserSettings {
         didSet {
             defaults.set(isDarkMode, forKey: UserSettingKeys.isDarkMode)
             ThemeManager.shared.isDarkEnabled = isDarkMode
-            Logger.shared.debug("isDarkEnabled: \(isDarkMode)")
         }
     }
     
 }
 
 extension UserSettings {
-    private func loadValueFromKeychain(for key: KeychainKeys) -> String? {
-        return keychainAccess[key.rawValue]
+    private func loadValueFromKeychain(for key: KeychainManager.KeychainKeys) -> String? {
+        var result: String?
+        do {
+            result = try keychain.loadValueFromKeychain(for: key)
+        } catch {
+            Logger.shared.debug("Error when load value from keychain: \(error.localizedDescription)")
+        }
+        return result
     }
     
-    private func saveValueToKeychain(_ value: String?, for key: KeychainKeys) {
-        keychainAccess[key.rawValue] = value
+    private func saveValueToKeychain(_ value: String, for key: KeychainManager.KeychainKeys) {
+        do {
+            try keychain.saveValueToKeychain(value, for: key)
+        } catch {
+            Logger.shared.debug("Error when save value to keychain: \(error.localizedDescription)")
+        }
     }
 }
 
