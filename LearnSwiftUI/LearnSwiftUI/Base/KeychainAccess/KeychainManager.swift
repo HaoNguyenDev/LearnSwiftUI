@@ -8,7 +8,8 @@
 import KeychainAccess
 import Foundation
 
-final class KeychainManager {
+actor KeychainManager {
+    
     static let shared = KeychainManager()
     private let keychain: Keychain
     
