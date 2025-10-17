@@ -18,19 +18,25 @@ extension UserSettings {
 
 @Observable final class UserSettings {
     static let shared = UserSettings()
-    
-    let keychain = KeychainManager.shared
+    private let defaults = UserDefaults.standard
+    private let keychain = KeychainManager.shared
+    private var _token: String? = nil
+    private var _username: String? = nil
     
     private init() {
-        let initialIsDarkMode = defaults.value(forKey: UserSettingKeys.isDarkMode) as? Bool ?? false
-        isDarkMode = initialIsDarkMode
+        let initialIsDarkMode = defaults.value(forKey: UserSettingKeys.isDarkMode) as? Bool
+        isDarkMode = initialIsDarkMode ?? false
         // Sync theme value with ThemeManager
-        ThemeManager.shared.isDarkEnabled = initialIsDarkMode
+        ThemeManager.shared.isDarkEnabled = initialIsDarkMode ?? false
+        
+        Task {
+            _token = await loadValueFromKeychain(for: .token)
+            _username = await loadValueFromKeychain(for: .username)
+        }
     }
     
-    private let defaults = UserDefaults.standard
-    
     var debugLog = false
+    
     var hasLoggedIn: Bool {
         get {
             guard let token = token else { return false }
@@ -40,21 +46,23 @@ extension UserSettings {
     
     var token: String? {
         get {
-            loadValueFromKeychain(for: .token)
+            return _token
         }
         set {
-            guard let newValue = newValue else { return }
-            saveValueToKeychain(newValue, for: .token)
+            Task {
+                await saveValueToKeychain(newValue, for: .token)
+            }
         }
     }
     
     var username: String? {
         get {
-            loadValueFromKeychain(for: .username)
+            return _username
         }
         set {
-            guard let newValue = newValue else { return }
-            saveValueToKeychain(newValue, for: .username)
+            Task {
+                await saveValueToKeychain(newValue, for: .username)
+            }
         }
     }
     
@@ -74,21 +82,37 @@ extension UserSettings {
 }
 
 extension UserSettings {
+    @MainActor
     private func loadValueFromKeychain(for key: KeychainManager.KeychainKeys) -> String? {
         var result: String?
-        do {
-            result = try keychain.loadValueFromKeychain(for: key)
-        } catch {
-            Logger.shared.debug("Error when load value from keychain: \(error.localizedDescription)")
+        Task {
+            do {
+                result = try await keychain.loadValueFromKeychain(for: key)
+            } catch {
+                Logger.shared.debug("Error when load value from keychain: \(error.localizedDescription)")
+            }
         }
         return result
     }
     
-    private func saveValueToKeychain(_ value: String, for key: KeychainManager.KeychainKeys) {
-        do {
-            try keychain.saveValueToKeychain(value, for: key)
-        } catch {
-            Logger.shared.debug("Error when save value to keychain: \(error.localizedDescription)")
+    @MainActor
+    private func saveValueToKeychain(_ value: String?, for key: KeychainManager.KeychainKeys) {
+        Task {
+            // Delete if value are nil
+            guard let value = value else {
+                do {
+                    try await keychain.deleteValueFromKeychain(for: key)
+                } catch {
+                    Logger.shared.debug("Error when load value from keychain: \(error.localizedDescription)")
+                }
+                return
+            }
+            
+            do {
+                try await keychain.saveValueToKeychain(value, for: key)
+            } catch {
+                Logger.shared.debug("Error when save value to keychain: \(error.localizedDescription)")
+            }
         }
     }
 }
