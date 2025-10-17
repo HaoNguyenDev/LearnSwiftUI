@@ -178,6 +178,7 @@
 		DAE365DB2E9CE2EE005EF803 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE365DA2E9CE2EE005EF803 /* UserSettings.swift */; };
 		DAE366252E9D1047005EF803 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE366242E9D1047005EF803 /* AppSettings.swift */; };
 		DAE676E82E9552D900F3D956 /* AppSecurity.txt in Resources */ = {isa = PBXBuildFile; fileRef = DAE676E72E9552D900F3D956 /* AppSecurity.txt */; };
+		DAEA78AA2EA27FC4001C1F26 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA78A92EA27FC4001C1F26 /* KeychainManager.swift */; };
 		DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE052DE9C2F800082B1C /* FrameBootcamp.swift */; };
 		DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE072DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift */; };
 		DAEBAE3A2DEAF92400082B1C /* StacksBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE392DEAF92400082B1C /* StacksBootcamp.swift */; };
@@ -384,6 +385,7 @@
 		DAE366242E9D1047005EF803 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		DAE676E42E914AFE00F3D956 /* CombineFramework.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombineFramework.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAE676E72E9552D900F3D956 /* AppSecurity.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppSecurity.txt; sourceTree = "<group>"; };
+		DAEA78A92EA27FC4001C1F26 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		DAEBAE052DE9C2F800082B1C /* FrameBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE072DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAndOverlayBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE392DEAF92400082B1C /* StacksBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StacksBootcamp.swift; sourceTree = "<group>"; };
@@ -1169,9 +1171,18 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		DAEA78A82EA27FA5001C1F26 /* KeychainAccess */ = {
+			isa = PBXGroup;
+			children = (
+				DAEA78A92EA27FC4001C1F26 /* KeychainManager.swift */,
+			);
+			path = KeychainAccess;
+			sourceTree = "<group>";
+		};
 		DAEBAE4B2DF2907900082B1C /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				DAEA78A82EA27FA5001C1F26 /* KeychainAccess */,
 				DAE365D92E9CE2DC005EF803 /* Settings */,
 				DA7BF5C72E98EC0300224BCF /* Theme */,
 				DA7BF5E32E98F29E00224BCF /* Extensions */,
@@ -1445,6 +1456,7 @@
 				DA37F9B12E8EE8C30001599E /* CombineDefinitionViewWrapper.swift in Sources */,
 				DAA930402E33C99C000FE238 /* ButtonModifier.swift in Sources */,
 				DA5C98BA2E39237C007AC9E9 /* TodoRowView.swift in Sources */,
+				DAEA78AA2EA27FC4001C1F26 /* KeychainManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
