@@ -58,7 +58,7 @@ struct SplashCoordinator: View, ScreenCoordinator {
     }
     
     private func hasLoggedIn() -> Bool {
-        Logger.shared.debug("\(userSettings.token ?? "")")
+        Logger.shared.debug("user token: \(userSettings.token ?? "")")
         return userSettings.hasLoggedIn
     }
     

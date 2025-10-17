@@ -82,41 +82,35 @@ extension UserSettings {
 }
 
 extension UserSettings {
-    @MainActor
-    private func loadValueFromKeychain(for key: KeychainManager.KeychainKeys) -> String? {
-        var result: String?
-        Task {
-            do {
-                result = try await keychain.loadValueFromKeychain(for: key)
-            } catch {
-                Logger.shared.debug("Error when load value from keychain: \(error.localizedDescription)")
-            }
-        }
-        return result
-    }
     
     @MainActor
-    private func saveValueToKeychain(_ value: String?, for key: KeychainManager.KeychainKeys) {
-        Task {
-            // Delete if value are nil
-            guard let value = value else {
-                do {
-                    try await keychain.deleteValueFromKeychain(for: key)
-                } catch {
-                    Logger.shared.debug("Error when load value from keychain: \(error.localizedDescription)")
-                }
-                return
-            }
-            
+    private func loadValueFromKeychain(for key: KeychainManager.KeychainKeys) async -> String? {
+        do {
+            return try await keychain.loadValueFromKeychain(for: key)
+        } catch {
+            Logger.shared.debug("Error when load value from keychain: \(error.localizedDescription)")
+            return nil
+        }
+    }
+
+    @MainActor
+    private func saveValueToKeychain(_ value: String?, for key: KeychainManager.KeychainKeys) async {
+        guard let value = value else {
             do {
-                try await keychain.saveValueToKeychain(value, for: key)
+                try await keychain.deleteValueFromKeychain(for: key)
             } catch {
-                Logger.shared.debug("Error when save value to keychain: \(error.localizedDescription)")
+                Logger.shared.debug("Error when delete value from keychain: \(error.localizedDescription)")
             }
+            return
+        }
+        
+        do {
+            try await keychain.saveValueToKeychain(value, for: key)
+        } catch {
+            Logger.shared.debug("Error when save value to keychain: \(error.localizedDescription)")
         }
     }
 }
-
 extension UserSettings {
     func clearUserDatas() {
         token = nil
