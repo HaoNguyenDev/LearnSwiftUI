@@ -89,6 +89,7 @@ extension HomeView {
                 .font(.largeTitle)
                 .fontWeight(.bold)
             
+            Text("Hi, \(settings.username.orEmpty)")
             Spacer()
                 .frame(height: 100)
             
