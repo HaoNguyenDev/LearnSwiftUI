@@ -21,7 +21,7 @@ class HomeViewController: UIViewController, HomeViewProtocol {
     
     @IBAction func logoutButtonTapped(_ sender: Any) {
         // Forward the event to Presenter
-        presenter?.logoutButtonTapped()
+        presenter?.backToLogin()
     }
     
     // Method to display data

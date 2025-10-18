@@ -5,6 +5,7 @@
 //  Created by Hao Nguyen on 21/9/25.
 //
 
+import Foundation
 
 class LoginInteractor: LoginInteractorProtocol {
     // Can have a reference to an API service
@@ -15,10 +16,12 @@ class LoginInteractor: LoginInteractorProtocol {
         // Example: LoginService.login(credentials) { result in ... }
         
         // Suppose the API returns successfully:
-        let dummyUser = User(name: "John Doe")
-        presenter?.loginDidSucceed(user: dummyUser)
-        
-        // Suppose the API returns a failure:
-        // presenter?.loginDidFail(error: someError)
+        if Bool.random() {
+            let dummyUser = User(name: "John Doe")
+            presenter?.loginDidSucceed(user: dummyUser)
+        } else {
+            // Suppose the API returns a failure:
+            presenter?.loginDidFail(error: NSError(domain: "Failed", code: 401, userInfo: [NSLocalizedDescriptionKey: "Something wrong! Login failed"]))
+        }
     }
 }
