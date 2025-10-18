@@ -84,6 +84,8 @@
 		DA5D719E2E40940400C78E40 /* GithubUserListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D719D2E40940400C78E40 /* GithubUserListVM.swift */; };
 		DA5D71A02E40CC8300C78E40 /* AsyncAwaitBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D719F2E40CC8300C78E40 /* AsyncAwaitBootcamp.swift */; };
 		DA5D71A22E41EEDA00C78E40 /* ChangePasswordSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71A12E41EEDA00C78E40 /* ChangePasswordSuccess.swift */; };
+		DA6027992EA3D91D00271E00 /* MVVMDemoUIKit_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6027982EA3D91D00271E00 /* MVVMDemoUIKit_View.swift */; };
+		DA60279D2EA3D9A400271E00 /* MVVMDemoUIKit_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA60279C2EA3D9A400271E00 /* MVVMDemoUIKit_ViewModel.swift */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
 		DA7BE09E2E805F4B006821CE /* VIPER-Architecture.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA7BE09D2E805F4B006821CE /* VIPER-Architecture.txt */; };
 		DA7BE0A02E805F95006821CE /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE09F2E805F95006821CE /* LoginProtocol.swift */; };
@@ -280,6 +282,8 @@
 		DA5D719D2E40940400C78E40 /* GithubUserListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserListVM.swift; sourceTree = "<group>"; };
 		DA5D719F2E40CC8300C78E40 /* AsyncAwaitBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitBootcamp.swift; sourceTree = "<group>"; };
 		DA5D71A12E41EEDA00C78E40 /* ChangePasswordSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordSuccess.swift; sourceTree = "<group>"; };
+		DA6027982EA3D91D00271E00 /* MVVMDemoUIKit_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMDemoUIKit_View.swift; sourceTree = "<group>"; };
+		DA60279C2EA3D9A400271E00 /* MVVMDemoUIKit_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMDemoUIKit_ViewModel.swift; sourceTree = "<group>"; };
 		DA65B7342E37D34600BF8A59 /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 		DA6E0BBB2E4A32D0009B3778 /* OperationQueueTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OperationQueueTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA6E0BBC2E4A4BA5009B3778 /* RaceConditionAvoid.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RaceConditionAvoid.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -799,6 +803,23 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		DA6027952EA3D88800271E00 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				DA6027962EA3D89600271E00 /* UIKIT */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		DA6027962EA3D89600271E00 /* UIKIT */ = {
+			isa = PBXGroup;
+			children = (
+				DA6027982EA3D91D00271E00 /* MVVMDemoUIKit_View.swift */,
+				DA60279C2EA3D9A400271E00 /* MVVMDemoUIKit_ViewModel.swift */,
+			);
+			path = UIKIT;
+			sourceTree = "<group>";
+		};
 		DA65B7322E37D31200BF8A59 /* AppDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -1104,6 +1125,7 @@
 		DAAE8CBB2E45024800FCBA4E /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				DA6027952EA3D88800271E00 /* MVVM */,
 				DA7BE09A2E805F33006821CE /* VIPER */,
 				DAAE8CBC2E45028300FCBA4E /* CounterState.swift */,
 			);
@@ -1388,6 +1410,7 @@
 				DA7BE0A02E805F95006821CE /* LoginProtocol.swift in Sources */,
 				DA7BE0B42E806329006821CE /* HomeViewController.swift in Sources */,
 				DA5D71472E3F589A00C78E40 /* CustomEnvironmentValues.swift in Sources */,
+				DA6027992EA3D91D00271E00 /* MVVMDemoUIKit_View.swift in Sources */,
 				DAA8E2182EA0D89800CDBDC1 /* TimerPublisherBootcamp.swift in Sources */,
 				DA8748932E6B006000B189F3 /* GradientBackgroundAnimation.swift in Sources */,
 				DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */,
@@ -1446,6 +1469,7 @@
 				DAAE8CBD2E45028300FCBA4E /* CounterState.swift in Sources */,
 				DAE366252E9D1047005EF803 /* AppSettings.swift in Sources */,
 				DA8748872E6AFBC900B189F3 /* WeatherService.swift in Sources */,
+				DA60279D2EA3D9A400271E00 /* MVVMDemoUIKit_ViewModel.swift in Sources */,
 				DA415E952DE5E707009F515E /* ImagesBootcamp.swift in Sources */,
 				DA5C98B62E391F4B007AC9E9 /* TodoAppView.swift in Sources */,
 				DA5D71382E3DFBA000C78E40 /* ChangePassword.swift in Sources */,
