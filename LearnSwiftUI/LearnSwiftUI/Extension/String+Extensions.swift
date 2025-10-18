@@ -12,3 +12,22 @@ extension Optional where Wrapped == String {
         return self ?? ""
     }
 }
+
+extension String {
+    var doubleValue: Double? {
+        let formatter = NumberFormatter()
+        if let number = formatter.number(from: self) {
+            return number.doubleValue
+        }
+        formatter.locale = Locale(identifier: "en_US")
+        if let number = formatter.number(from: self) {
+            return number.doubleValue
+        }
+        
+        formatter.locale = Locale(identifier: "vi_VN")
+        if let number = formatter.number(from: self) {
+            return number.doubleValue
+        }
+        return nil
+    }
+}

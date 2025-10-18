@@ -167,6 +167,7 @@
 		DAC35B162E9FCCDA0019021D /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC35B152E9FCCDA0019021D /* Array+Extensions.swift */; };
 		DAC35B3F2E9FED3F0019021D /* TextFieldModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC35B3E2E9FED3F0019021D /* TextFieldModifiers.swift */; };
 		DAC97DE72EA3960500F8A22F /* ActorBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC97DE62EA3960500F8A22F /* ActorBootcamp.swift */; };
+		DAC97E282EA3C22700F8A22F /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC97E272EA3C22700F8A22F /* Double+Extensions.swift */; };
 		DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */; };
 		DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */; };
 		DAE2EACA2DF5DE280083E733 /* SheetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC92DF5DE280083E733 /* SheetBootcamp.swift */; };
@@ -374,6 +375,7 @@
 		DAC35B152E9FCCDA0019021D /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		DAC35B3E2E9FED3F0019021D /* TextFieldModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifiers.swift; sourceTree = "<group>"; };
 		DAC97DE62EA3960500F8A22F /* ActorBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorBootcamp.swift; sourceTree = "<group>"; };
+		DAC97E272EA3C22700F8A22F /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBootcamp.swift; sourceTree = "<group>"; };
 		DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBootcamp.swift; sourceTree = "<group>"; };
 		DAE2EAC92DF5DE280083E733 /* SheetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetBootcamp.swift; sourceTree = "<group>"; };
@@ -688,6 +690,7 @@
 				DA7BF68F2E995FAC00224BCF /* View+Extensions.swift */,
 				DA58DD9B2E9E5FF90042D1AD /* String+Extensions.swift */,
 				DAC35B152E9FCCDA0019021D /* Array+Extensions.swift */,
+				DAC97E272EA3C22700F8A22F /* Double+Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1372,6 +1375,7 @@
 				DA37F9A02E8EE3AC0001599E /* CombineItemType.swift in Sources */,
 				DA7BF5DD2E98ED7300224BCF /* DefaultThemeAssets.swift in Sources */,
 				DA5D71902E3FBA7400C78E40 /* GithubUserDetail.swift in Sources */,
+				DAC97E282EA3C22700F8A22F /* Double+Extensions.swift in Sources */,
 				DA0B4AEB2E6FCBB700628E53 /* DownloadView.swift in Sources */,
 				DA5D71342E3DE65500C78E40 /* Home.swift in Sources */,
 				DA5D71202E3D185F00C78E40 /* ScreenCoordinator.swift in Sources */,

@@ -11,7 +11,7 @@ import SwiftUI
 struct DefaultTextFieldModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .padding(.leading)
+            .padding(.horizontal)
             .frame(height: 50)
             .background(Color.gray.opacity(0.1))
             .cornerRadius(10)
