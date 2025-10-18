@@ -39,9 +39,9 @@ struct LearnSwiftUIApp: App {
 //            NavigationStackCustomItemView()
 //            NavigationManagerBootcamp()
             
-            AppCoordinator()
-                .environment(appSettings)
-                .environment(userSettings)
+//            AppCoordinator()
+//                .environment(appSettings)
+//                .environment(userSettings)
             
 //            EnvironmentSettingView().environment(EnvironmentSettings())
             
@@ -83,6 +83,9 @@ struct LearnSwiftUIApp: App {
             
             /// Timer
 //            TimerPublisherBootcamp(totalDuration: 90)
+            
+            /// Actor
+            BankAccountView()
         }
     }
 }
