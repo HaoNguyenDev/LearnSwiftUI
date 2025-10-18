@@ -44,8 +44,10 @@ struct LoginCoordinator: View, ScreenCoordinator {
     func getView() -> some View {
         LoginView(loginModel: loginModel, loginSuccess: {
             Logger.shared.debug("Login success")
-            userSettings.username = "haonguyen123"
-            userSettings.token = "token 123"
+            let randomToken = ["token1", "token2", "token3"].randomElement()
+            let randomUsername = ["username1", "username2", "username3"].randomElement()
+            userSettings.username = randomUsername
+            userSettings.token = randomToken
             Logger.shared.debug("\(String(describing: userSettings.token))")
             navRouter.push(Router.homeRouter, animate: true)
         }, forgotPassword: {

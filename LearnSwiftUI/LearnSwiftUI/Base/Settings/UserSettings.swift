@@ -49,6 +49,7 @@ extension UserSettings {
             return _token
         }
         set {
+            _token = newValue
             Task {
                 await saveValueToKeychain(newValue, for: .token)
             }
@@ -60,6 +61,7 @@ extension UserSettings {
             return _username
         }
         set {
+            _username = newValue
             Task {
                 await saveValueToKeychain(newValue, for: .username)
             }
