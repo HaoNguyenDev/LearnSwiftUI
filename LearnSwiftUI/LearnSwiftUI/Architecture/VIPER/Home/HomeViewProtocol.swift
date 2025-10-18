@@ -17,7 +17,7 @@ protocol HomeViewProtocol: AnyObject {
 // Protocol for Presenter (receive events from View and Interactor)
 protocol HomePresenterProtocol: AnyObject {
     func viewDidLoad()
-    func logoutButtonTapped()
+    func backToLogin()
     func userDidReceive(_ user: User)
 }
 

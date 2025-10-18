@@ -16,7 +16,7 @@ class HomePresenter: HomePresenterProtocol {
         interactor?.fetchUserData()
     }
     
-    func logoutButtonTapped() {
+    func backToLogin() {
         // Ask the Router to navigate
         router?.navigateToLoginScreen()
     }

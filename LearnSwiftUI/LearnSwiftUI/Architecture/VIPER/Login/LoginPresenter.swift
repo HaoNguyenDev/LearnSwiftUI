@@ -17,7 +17,7 @@ class LoginPresenter: LoginPresenterProtocol {
             view?.displayError("Please enter complete information.")
             return
         }
-        
+        view?.showLoadingIndicator()
         // Send business request to Interactor
         let credentials = LoginCredentials(username: username, password: password)
         interactor?.performLogin(with: credentials)
@@ -26,11 +26,13 @@ class LoginPresenter: LoginPresenterProtocol {
     // Method from Interactor (after Interactor finished processing)
     func loginDidSucceed(user: User) {
         // Request Router to change screen
+        view?.hideLoadingIndicator()
         router?.navigateToHomeScreen()
     }
     
     func loginDidFail(error: Error) {
         // Request View to display error
+        view?.hideLoadingIndicator()
         view?.displayError(error.localizedDescription)
     }
 }
