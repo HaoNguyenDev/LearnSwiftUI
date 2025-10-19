@@ -15,7 +15,7 @@ protocol GithubServiceProtocol {
 }
 
 // MARK: - GitHubNetworkService
-class GitHubNetworkService: GithubServiceProtocol {
+class GithubNetworkService: GithubServiceProtocol {
     private let networkManager: NetworkServiceProtocol
     
     init(networkManager: NetworkServiceProtocol = NetworkManager()) {

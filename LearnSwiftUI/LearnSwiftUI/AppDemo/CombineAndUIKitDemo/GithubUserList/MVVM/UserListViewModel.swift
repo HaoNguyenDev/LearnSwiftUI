@@ -33,7 +33,7 @@ class UserListViewModel: ViewModelTransformableProtocol {
     private let errorSubject = PassthroughSubject<Error?, Never>()
     private let usersSubject = CurrentValueSubject<[GithubUser]?, Never>(nil)
     
-    init(githubNetworkService: GithubServiceProtocol = GitHubNetworkService()) {
+    init(githubNetworkService: GithubServiceProtocol = GithubNetworkService()) {
         self.githubNetworkService = githubNetworkService
     }
     

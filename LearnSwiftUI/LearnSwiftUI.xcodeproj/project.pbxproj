@@ -79,7 +79,7 @@
 		DA5D71902E3FBA7400C78E40 /* GithubUserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D718F2E3FBA7400C78E40 /* GithubUserDetail.swift */; };
 		DA5D71932E3FBB7C00C78E40 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = DA5D71922E3FBB7C00C78E40 /* SDWebImageSwiftUI */; };
 		DA5D71962E3FBC9100C78E40 /* GitHubAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71952E3FBC9100C78E40 /* GitHubAPIEndpoint.swift */; };
-		DA5D71982E3FBCBA00C78E40 /* GitHubNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71972E3FBCBA00C78E40 /* GitHubNetworkService.swift */; };
+		DA5D71982E3FBCBA00C78E40 /* GithubNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71972E3FBCBA00C78E40 /* GithubNetworkService.swift */; };
 		DA5D719B2E3FC03D00C78E40 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D719A2E3FC03D00C78E40 /* AlertHandler.swift */; };
 		DA5D719E2E40940400C78E40 /* GithubUserListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D719D2E40940400C78E40 /* GithubUserListVM.swift */; };
 		DA5D71A02E40CC8300C78E40 /* AsyncAwaitBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D719F2E40CC8300C78E40 /* AsyncAwaitBootcamp.swift */; };
@@ -280,7 +280,7 @@
 		DA5D718D2E3FBA6A00C78E40 /* GithubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUser.swift; sourceTree = "<group>"; };
 		DA5D718F2E3FBA7400C78E40 /* GithubUserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserDetail.swift; sourceTree = "<group>"; };
 		DA5D71952E3FBC9100C78E40 /* GitHubAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIEndpoint.swift; sourceTree = "<group>"; };
-		DA5D71972E3FBCBA00C78E40 /* GitHubNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubNetworkService.swift; sourceTree = "<group>"; };
+		DA5D71972E3FBCBA00C78E40 /* GithubNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubNetworkService.swift; sourceTree = "<group>"; };
 		DA5D719A2E3FC03D00C78E40 /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 		DA5D719D2E40940400C78E40 /* GithubUserListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserListVM.swift; sourceTree = "<group>"; };
 		DA5D719F2E40CC8300C78E40 /* AsyncAwaitBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitBootcamp.swift; sourceTree = "<group>"; };
@@ -786,7 +786,7 @@
 			isa = PBXGroup;
 			children = (
 				DA5D71952E3FBC9100C78E40 /* GitHubAPIEndpoint.swift */,
-				DA5D71972E3FBCBA00C78E40 /* GitHubNetworkService.swift */,
+				DA5D71972E3FBCBA00C78E40 /* GithubNetworkService.swift */,
 			);
 			path = GithubNetworkService;
 			sourceTree = "<group>";
@@ -1396,7 +1396,7 @@
 				DAC97DE72EA3960500F8A22F /* ActorBootcamp.swift in Sources */,
 				DA39793F2E9BE5BD00838584 /* ImageStylingModifier.swift in Sources */,
 				DA8748972E6B007100B189F3 /* WeatherCard.swift in Sources */,
-				DA5D71982E3FBCBA00C78E40 /* GitHubNetworkService.swift in Sources */,
+				DA5D71982E3FBCBA00C78E40 /* GithubNetworkService.swift in Sources */,
 				DAEBAE3E2DEB149C00082B1C /* InitializerBootcamp.swift in Sources */,
 				DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */,
 				DA37F9A62E8EE5570001599E /* CombineItemDetailVC.swift in Sources */,

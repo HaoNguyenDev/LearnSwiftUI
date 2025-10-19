@@ -50,7 +50,7 @@ class GithubUserListVM: ObservableObject, GithubUserListVMProtocol {
     private let networkService: GithubServiceProtocol
     private var paginationConfig: PaginationConfig
     
-    init(networkService: GithubServiceProtocol = GitHubNetworkService(),
+    init(networkService: GithubServiceProtocol = GithubNetworkService(),
          paginationConfig: PaginationConfig = PaginationConfig(perPage: 20, since: 0)) {
         self.networkService = networkService
         self.paginationConfig = paginationConfig
