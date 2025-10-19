@@ -15,7 +15,7 @@ class MVVMDemoUIKit_ViewModel: ViewModelTransformableProtocol {
     // MARK: - Input/Output Structs
     struct Input {
         let inputString: AnyPublisher<String?, Never>
-        let fetchUsersTrigger: AnyPublisher<Void, Never>
+        let viewDidloadTrigger: AnyPublisher<Void, Never>
     }
     
     struct Output {
@@ -40,7 +40,7 @@ class MVVMDemoUIKit_ViewModel: ViewModelTransformableProtocol {
             }).store(in: &cancellables)
            
         
-        let userListPublisher = input.fetchUsersTrigger
+        let userListPublisher = input.viewDidloadTrigger
             .flatMap { [weak self] _ -> AnyPublisher<[GithubUser], Error> in
                 guard let self else {
                     return Empty(completeImmediately: true).eraseToAnyPublisher()
@@ -54,6 +54,7 @@ class MVVMDemoUIKit_ViewModel: ViewModelTransformableProtocol {
             .eraseToAnyPublisher()
         
         userListPublisher
+            .receive(on: DispatchQueue.main)
             .sink { [weak self] users in
                 self?.userListSubject.send(users)
             }

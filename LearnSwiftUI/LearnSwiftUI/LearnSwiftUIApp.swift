@@ -85,7 +85,11 @@ struct LearnSwiftUIApp: App {
 //            TimerPublisherBootcamp(totalDuration: 90)
             
             /// Actor
-            BankAccountView()
+//            BankAccountView()
+            
+            /// Architecture
+            /// MVVM
+            MVVMDemoUIKitContentView()
         }
     }
 }
