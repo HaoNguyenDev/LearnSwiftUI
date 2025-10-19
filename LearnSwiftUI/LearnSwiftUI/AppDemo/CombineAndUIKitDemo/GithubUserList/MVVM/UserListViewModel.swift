@@ -16,7 +16,7 @@ class UserListViewModel: ViewModelTransformableProtocol {
     private var lastUserID: Int = 0
     private let perPageLimit = 30
     private var cancellables = Set<AnyCancellable>() // Store subscription
-    private let githubNetworkService: GitHubServiceProtocol
+    private let githubNetworkService: GithubServiceProtocol
     
     // MARK: - Input/Output Structs
     struct Input {
@@ -33,7 +33,7 @@ class UserListViewModel: ViewModelTransformableProtocol {
     private let errorSubject = PassthroughSubject<Error?, Never>()
     private let usersSubject = CurrentValueSubject<[GithubUser]?, Never>(nil)
     
-    init(githubNetworkService: GitHubServiceProtocol = GitHubNetworkService()) {
+    init(githubNetworkService: GithubServiceProtocol = GitHubNetworkService()) {
         self.githubNetworkService = githubNetworkService
     }
     

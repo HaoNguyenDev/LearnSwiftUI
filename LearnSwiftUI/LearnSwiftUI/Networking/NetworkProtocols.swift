@@ -28,11 +28,11 @@ protocol Endpoint {
     var body: Data? { get } // Body for POST/PUT/PATCH
 }
 
-extension Endpoint {
-    var queryItems: [URLQueryItem]? { nil }
-    var headers: [String: String]? { nil }
-    var body: Data? { nil }
-}
+//extension Endpoint {
+//    var queryItems: [URLQueryItem]? { nil }
+//    var headers: [String: String]? { nil }
+//    var body: Data? { nil }
+//}
 
 // MARK: - NetworkService Protocol
 protocol NetworkServiceProtocol: AnyObject { // AnyObject for Reference Type (weak referrence)

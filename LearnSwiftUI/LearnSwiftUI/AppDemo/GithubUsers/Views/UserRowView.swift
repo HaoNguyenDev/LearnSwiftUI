@@ -11,6 +11,7 @@ import SDWebImageSwiftUI
 
 struct UserRowView: View {
     var user: GithubUser
+    var showDetailFor: SingleResult<String?>
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -27,6 +28,9 @@ struct UserRowView: View {
         .cornerRadius(10)
         .shadow(color: .black.opacity(0.15), radius: 5, x: 0, y: 5)
         .padding(.horizontal, 20)
+        .onTapGesture {
+            showDetailFor(user.login)
+        }
     }
 }
 
@@ -96,5 +100,5 @@ extension UserRowView {
 }
 
 #Preview {
-    UserRowView(user: GithubUser(id: 1, login: "Hao", avatarUrl: "avatarUrl", url: "url" ))
+    UserRowView(user: GithubUser(id: 1, login: "Hao", avatarUrl: "avatarUrl", url: "url" ), showDetailFor: { _ in })
 }

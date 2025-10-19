@@ -13,7 +13,7 @@ struct GithubUserListView: View {
     @State private var navigate = false
     
     var body: some View {
-        contentView()
+        contentForState(viewModel.viewState)
             .padding([.top, .bottom])
             .setDefaultBackground()
     }
@@ -21,19 +21,19 @@ struct GithubUserListView: View {
 
 extension GithubUserListView {
     @ViewBuilder
-    func contentView() -> some View {
-        ZStack {
+    private func contentForState(_ state: GHListViewState) -> some View {
+        GHUserList(users: viewModel.userList, didTapUser: { user in
+            fetchUserDetail(for: user)
+        }, loadMoreFrom: { user in
+            processLoadMore(currentUser: user)
+        }).overlay {
             switch viewModel.viewState {
             case .initial:
                 Color.clear
             case .loading:
                 loadingView
             case .loaded:
-                GHUserList(users: viewModel.userList, didTapUser: { user in
-                    fetchUserDetail(for: user)
-                }, loadMoreFrom: { user in
-                    processLoadMore(currentUser: user)
-                })
+                EmptyView()
             case .error(let error):
                 ErrorBanner(error: error) {
                     Task {
@@ -45,16 +45,10 @@ extension GithubUserListView {
             }
         }
         .onAppear() {
-            if case .initial = viewModel.viewState {
-                Task {
-                    await viewModel.fetchUsers()
-                }
-            }
+            fetchUser(viewModel.viewState)
         }
         .refreshable {
-            Task {
-                await viewModel.fetchUsers()
-            }
+            fetchUser(viewModel.viewState)
         }
         .onChange(of: viewModel.shouldNavigateToDetail) { oldValue, newDetail in
             if let userDetail = newDetail {
@@ -65,14 +59,26 @@ extension GithubUserListView {
     }
     
     private var loadingView: some View {
-        ProgressView()
-            .frame(maxWidth: .infinity)
-            .padding()
+        ZStack {
+            Color.black.opacity(0.1).ignoresSafeArea()
+            ProgressView("Loading...")
+                .padding()
+                .background(Color.white)
+                .cornerRadius(10)
+        }
     }
 }
 
 
 extension GithubUserListView {
+    private func fetchUser(_ viewState: GHListViewState) {
+        if case .initial = viewState {
+            Task {
+                await viewModel.fetchUsers()
+            }
+        }
+    }
+    
     private func processLoadMore(currentUser user: GithubUser) {
         Task {
             await viewModel.loadMoreUser(currentUser: user)
@@ -93,20 +99,16 @@ extension GithubUserListView {
 
 struct GHUserList: View {
     var users: [GithubUser]
-    var didTapUser: SingleResult<String?>?
-    var loadMoreFrom: SingleResult<GithubUser>?
+    var didTapUser: SingleResult<String?>
+    var loadMoreFrom: SingleResult<GithubUser>
     
     var body: some View {
         ScrollView {
             LazyVStack {
                 ForEach(users) { user in
-                    UserRowView(user: user)
-                        .padding()
+                    UserRowView(user: user, showDetailFor: didTapUser)
                         .onAppear {
-                            loadMoreFrom?(user)
-                        }
-                        .onTapGesture {
-                            didTapUser?(user.login)
+                            loadMoreFrom(user)
                         }
                 }
             }

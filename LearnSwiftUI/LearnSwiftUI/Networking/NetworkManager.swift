@@ -10,9 +10,7 @@ import Combine
 
 // MARK: - NetworkManager
 class NetworkManager: NetworkServiceProtocol {
-    
     private let session: URLSession
-    
     public init(session: URLSession = .shared) {
         self.session = session
     }
@@ -128,6 +126,7 @@ extension NetworkManager {
         // Add body cho POST/PUT
         request.httpBody = endpoint.body
         
+        Logger.shared.debug("\(String(describing: request.url?.absoluteString))")
         return request
     }
     
