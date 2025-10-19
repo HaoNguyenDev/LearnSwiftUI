@@ -79,7 +79,6 @@ class UserListViewModel: ViewModelTransformableProtocol {
                 guard let self = self else { return }
                 
                 if let lastUser = newUsers.last {
-                    // Giả định lastUser.id là Int và không optional
                     self.lastUserID = lastUser.id ?? 0
                 }
 

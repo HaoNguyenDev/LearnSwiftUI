@@ -15,7 +15,6 @@ import SwiftUI
     var isDarkEnabled: Bool = false {
         didSet {
             activeTheme = isDarkEnabled ? DarkTheme() : DefaultTheme()
-             Logger.shared.debug("ThemeManager activeTheme updated: \(activeTheme)")
         }
     }
     
