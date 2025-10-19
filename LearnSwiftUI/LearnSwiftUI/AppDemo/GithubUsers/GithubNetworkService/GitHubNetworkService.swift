@@ -8,14 +8,14 @@
 import Combine
 
 // MARK: - GitHubServiceProtocol
-protocol GitHubServiceProtocol {
+protocol GithubServiceProtocol {
     func fetchUsers(perPage: Int, since: Int) async throws -> [GithubUser]
     func fetchUserDetail(by username: String) async throws -> GithubUserDetail
     func fetchUserWithPublisher(perPage: Int, since: Int) -> AnyPublisher<[GithubUser], Error>
 }
 
 // MARK: - GitHubNetworkService
-class GitHubNetworkService: GitHubServiceProtocol {
+class GitHubNetworkService: GithubServiceProtocol {
     private let networkManager: NetworkServiceProtocol
     
     init(networkManager: NetworkServiceProtocol = NetworkManager()) {

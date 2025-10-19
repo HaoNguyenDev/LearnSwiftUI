@@ -88,6 +88,7 @@
 		DA60279D2EA3D9A400271E00 /* MVVMDemoUIKit_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA60279C2EA3D9A400271E00 /* MVVMDemoUIKit_ViewModel.swift */; };
 		DA6027A72EA4A42C00271E00 /* MVVMDemoUIKitViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6027A62EA4A42C00271E00 /* MVVMDemoUIKitViewWrapper.swift */; };
 		DA6027AB2EA4A45E00271E00 /* MVVMDemoUIKitContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6027AA2EA4A45E00271E00 /* MVVMDemoUIKitContentView.swift */; };
+		DA6027DF2EA5367B00271E00 /* MVVM_SwiftUI_Note.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA6027DE2EA5367B00271E00 /* MVVM_SwiftUI_Note.txt */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
 		DA7BE09E2E805F4B006821CE /* VIPER-Architecture.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA7BE09D2E805F4B006821CE /* VIPER-Architecture.txt */; };
 		DA7BE0A02E805F95006821CE /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE09F2E805F95006821CE /* LoginProtocol.swift */; };
@@ -288,6 +289,7 @@
 		DA60279C2EA3D9A400271E00 /* MVVMDemoUIKit_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMDemoUIKit_ViewModel.swift; sourceTree = "<group>"; };
 		DA6027A62EA4A42C00271E00 /* MVVMDemoUIKitViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMDemoUIKitViewWrapper.swift; sourceTree = "<group>"; };
 		DA6027AA2EA4A45E00271E00 /* MVVMDemoUIKitContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMDemoUIKitContentView.swift; sourceTree = "<group>"; };
+		DA6027DE2EA5367B00271E00 /* MVVM_SwiftUI_Note.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MVVM_SwiftUI_Note.txt; sourceTree = "<group>"; };
 		DA65B7342E37D34600BF8A59 /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 		DA6E0BBB2E4A32D0009B3778 /* OperationQueueTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OperationQueueTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA6E0BBC2E4A4BA5009B3778 /* RaceConditionAvoid.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RaceConditionAvoid.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -810,6 +812,7 @@
 		DA6027952EA3D88800271E00 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				DA6027BA2EA4B01000271E00 /* SwiftUI */,
 				DA6027962EA3D89600271E00 /* UIKIT */,
 			);
 			path = MVVM;
@@ -832,6 +835,14 @@
 				DA6027A62EA4A42C00271E00 /* MVVMDemoUIKitViewWrapper.swift */,
 			);
 			path = ViewWrapper;
+			sourceTree = "<group>";
+		};
+		DA6027BA2EA4B01000271E00 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				DA6027DE2EA5367B00271E00 /* MVVM_SwiftUI_Note.txt */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		DA65B7322E37D31200BF8A59 /* AppDemo */ = {
@@ -1325,6 +1336,7 @@
 				DA7BE09E2E805F4B006821CE /* VIPER-Architecture.txt in Resources */,
 				DAE676E82E9552D900F3D956 /* AppSecurity.txt in Resources */,
 				DA415E702DE5BFF9009F515E /* Dosis-VariableFont_wght.ttf in Resources */,
+				DA6027DF2EA5367B00271E00 /* MVVM_SwiftUI_Note.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

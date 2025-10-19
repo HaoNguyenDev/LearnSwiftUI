@@ -45,9 +45,9 @@ struct LearnSwiftUIApp: App {
             
 //            EnvironmentSettingView().environment(EnvironmentSettings())
             
-//            GithubUserListView(viewModel: GithubUserListVM()) { userDetail in
-//               
-//            }
+            GithubUserListView(viewModel: GithubUserListVM()) { userDetail in
+               
+            }
             
 //            AsyncAwaitBootcampView()
 //            FocusStateBootcamp()
@@ -89,7 +89,7 @@ struct LearnSwiftUIApp: App {
             
             /// Architecture
             /// MVVM
-            MVVMDemoUIKitContentView()
+//            MVVMDemoUIKitContentView()
         }
     }
 }
