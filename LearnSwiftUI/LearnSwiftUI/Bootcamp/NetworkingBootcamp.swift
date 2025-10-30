@@ -209,12 +209,12 @@ struct PostModel: Decodable {
 
 // Example of calling:
 let networker = NetworkingBootcamp()
-let url = "https://jsonplaceholder.typicode.com/posts/1"
+let jsonPlaceholderUrl = "https://jsonplaceholder.typicode.com/posts/1"
 
 func loadData() async {
     do {
         // Specify the desired return type: Post.self
-        let post = try await networker.fetchData(from: url, as: PostModel.self)
+        let post = try await networker.fetchData(from: jsonPlaceholderUrl, as: PostModel.self)
         print("Fetched Post Title: \(post.title)")
     } catch {
         if let networkError = error as? NetworkError {

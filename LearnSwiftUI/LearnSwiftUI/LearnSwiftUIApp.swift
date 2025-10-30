@@ -70,7 +70,7 @@ struct LearnSwiftUIApp: App {
             
             /// Combine
 //            CbDemoContentView()
-            UserListContentView()
+//            UserListContentView()
 //            CombineDefinitionContentView()
 
 //            ContentView()
@@ -90,6 +90,7 @@ struct LearnSwiftUIApp: App {
 //
 //            }
             
+            ViewToTestClass()
         }
     }
 }
