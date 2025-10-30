@@ -1,5 +1,5 @@
 //
-//  KeychainManager.swift
+//  KeychainService.swift
 //  LearnSwiftUI
 //
 //  Created by Hao Nguyen on 17/10/25.
@@ -8,9 +8,9 @@
 import KeychainAccess
 import Foundation
 
-actor KeychainManager {
+actor KeychainService {
     
-    static let shared = KeychainManager()
+    static let shared = KeychainService()
     private let keychain: Keychain
     
     private init() {
@@ -34,10 +34,18 @@ actor KeychainManager {
     }
 }
 
-extension KeychainManager {
+
+extension KeychainService {
+    func getAccessToken() -> String? {
+        keychain[KeychainKeys.token.rawValue]
+    }
+}
+
+extension KeychainService {
     enum KeychainKeys: String, CaseIterable {
         case username = "haonguyen.LearnSwiftUI.key.username"
         case password = "haonguyen.LearnSwiftUI.key.password"
         case token = "haonguyen.LearnSwiftUI.key.token"
+        case refreshToken = "haonguyen.LearnSwiftUI.key.refreshToken"
     }
 }

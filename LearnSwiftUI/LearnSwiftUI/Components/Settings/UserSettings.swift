@@ -19,7 +19,7 @@ extension UserSettings {
 @Observable final class UserSettings {
     static let shared = UserSettings()
     private let defaults = UserDefaults.standard
-    private let keychain = KeychainManager.shared
+    private let keychain = KeychainService.shared
     private var _token: String? = nil
     private var _username: String? = nil
     
@@ -86,7 +86,7 @@ extension UserSettings {
 extension UserSettings {
     
     @MainActor
-    private func loadValueFromKeychain(for key: KeychainManager.KeychainKeys) async -> String? {
+    private func loadValueFromKeychain(for key: KeychainService.KeychainKeys) async -> String? {
         do {
             return try await keychain.loadValueFromKeychain(for: key)
         } catch {
@@ -96,7 +96,7 @@ extension UserSettings {
     }
 
     @MainActor
-    private func saveValueToKeychain(_ value: String?, for key: KeychainManager.KeychainKeys) async {
+    private func saveValueToKeychain(_ value: String?, for key: KeychainService.KeychainKeys) async {
         guard let value = value else {
             do {
                 try await keychain.deleteValueFromKeychain(for: key)

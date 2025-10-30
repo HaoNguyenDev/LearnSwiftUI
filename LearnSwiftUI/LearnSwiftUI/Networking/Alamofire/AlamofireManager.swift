@@ -72,5 +72,31 @@ class AlamofireManager {
         
         return post
     }
+    
+    func customConfiguration() {
+        let urlString = "\(baseURL)/posts/1)"
+        
+        let configuration = URLSessionConfiguration.default
+        configuration.urlCache = nil
+        configuration.timeoutIntervalForRequest = 60
+        
+        let session = Session(configuration: configuration, interceptor: AuthInterceptor())
+        session.request(urlString).response { response in
+            switch response.result {
+            case .success(let data):
+                guard let data = data else {
+                    return
+                }
+                
+                do {
+                    let result = try JSONDecoder().decode(Post.self, from: data)
+                } catch {
+                    debugPrint(error)
+                }
+            case .failure(let error):
+                debugPrint("Error: \(error)")
+            }
+        }
+    }
 
 }
