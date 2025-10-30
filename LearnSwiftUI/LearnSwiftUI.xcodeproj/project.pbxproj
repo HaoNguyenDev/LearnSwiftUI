@@ -49,6 +49,7 @@
 		DA5164302E3BCD2500642709 /* NavigationStackBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */; };
 		DA5164322E3CB57600642709 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5164312E3CB57600642709 /* NavigationManager.swift */; };
 		DA53B73A2E6086DE001EFC52 /* ListBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53B7392E6086DE001EFC52 /* ListBootcamp.swift */; };
+		DA5476622EB233A7005C8868 /* SwiftAlgorithms.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA5476612EB233A7005C8868 /* SwiftAlgorithms.txt */; };
 		DA58DD8E2E9E35630042D1AD /* NetworkingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58DD8D2E9E35630042D1AD /* NetworkingBootcamp.swift */; };
 		DA58DD9C2E9E5FF90042D1AD /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58DD9B2E9E5FF90042D1AD /* String+Extensions.swift */; };
 		DA58DDAD2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58DDAC2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift */; };
@@ -252,6 +253,8 @@
 		DA5164312E3CB57600642709 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		DA53B7372E5F4EE6001EFC52 /* WeakAndUnowned.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = WeakAndUnowned.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA53B7392E6086DE001EFC52 /* ListBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBootcamp.swift; sourceTree = "<group>"; };
+		DA5476612EB233A7005C8868 /* SwiftAlgorithms.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwiftAlgorithms.txt; sourceTree = "<group>"; };
+		DA5476692EB234AF005C8868 /* Unique.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Unique.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA58DD8D2E9E35630042D1AD /* NetworkingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingBootcamp.swift; sourceTree = "<group>"; };
 		DA58DD9B2E9E5FF90042D1AD /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		DA58DDAC2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewModifiers.swift; sourceTree = "<group>"; };
@@ -599,6 +602,7 @@
 		DA415E652DE5BFAB009F515E /* LearnSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				DA5476602EB23363005C8868 /* Swift Algorithms */,
 				DA415E612DE5BFAB009F515E /* Preview Content */,
 				DA415E632DE5BFAB009F515E /* ContentView.swift */,
 				DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */,
@@ -705,6 +709,15 @@
 				DAC97E272EA3C22700F8A22F /* Double+Extensions.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		DA5476602EB23363005C8868 /* Swift Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				DA5476612EB233A7005C8868 /* SwiftAlgorithms.txt */,
+				DA5476692EB234AF005C8868 /* Unique.playground */,
+			);
+			path = "Swift Algorithms";
 			sourceTree = "<group>";
 		};
 		DA5D71042E3CD1EB00C78E40 /* NavigationApp */ = {
@@ -1339,6 +1352,7 @@
 				DA7BE09E2E805F4B006821CE /* VIPER-Architecture.txt in Resources */,
 				DAE676E82E9552D900F3D956 /* AppSecurity.txt in Resources */,
 				DA415E702DE5BFF9009F515E /* Dosis-VariableFont_wght.ttf in Resources */,
+				DA5476622EB233A7005C8868 /* SwiftAlgorithms.txt in Resources */,
 				DA6027DF2EA5367B00271E00 /* MVVM_SwiftUI_Note.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
