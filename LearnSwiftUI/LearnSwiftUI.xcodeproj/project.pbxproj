@@ -50,6 +50,8 @@
 		DA5164322E3CB57600642709 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5164312E3CB57600642709 /* NavigationManager.swift */; };
 		DA53B73A2E6086DE001EFC52 /* ListBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53B7392E6086DE001EFC52 /* ListBootcamp.swift */; };
 		DA5476622EB233A7005C8868 /* SwiftAlgorithms.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA5476612EB233A7005C8868 /* SwiftAlgorithms.txt */; };
+		DA5476822EB33E88005C8868 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DA5476812EB33E88005C8868 /* Alamofire */; };
+		DA54769E2EB34A47005C8868 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54769D2EB34A47005C8868 /* Encodable.swift */; };
 		DA58DD8E2E9E35630042D1AD /* NetworkingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58DD8D2E9E35630042D1AD /* NetworkingBootcamp.swift */; };
 		DA58DD9C2E9E5FF90042D1AD /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58DD9B2E9E5FF90042D1AD /* String+Extensions.swift */; };
 		DA58DDAD2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58DDAC2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift */; };
@@ -206,6 +208,19 @@
 		DAFCDF6A2E630B2C00B97C00 /* ErrorBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCDF692E630B2C00B97C00 /* ErrorBanner.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DA5476952EB342B1005C8868 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
@@ -255,6 +270,8 @@
 		DA53B7392E6086DE001EFC52 /* ListBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBootcamp.swift; sourceTree = "<group>"; };
 		DA5476612EB233A7005C8868 /* SwiftAlgorithms.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwiftAlgorithms.txt; sourceTree = "<group>"; };
 		DA5476692EB234AF005C8868 /* Unique.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Unique.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DA54769D2EB34A47005C8868 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		DA5476A22EB34B72005C8868 /* CodableProtocol.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CodableProtocol.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA58DD8D2E9E35630042D1AD /* NetworkingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingBootcamp.swift; sourceTree = "<group>"; };
 		DA58DD9B2E9E5FF90042D1AD /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		DA58DDAC2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewModifiers.swift; sourceTree = "<group>"; };
@@ -429,6 +446,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA5476822EB33E88005C8868 /* Alamofire in Frameworks */,
 				DA1D081B2E9D282100B76DFD /* KeychainAccess in Frameworks */,
 				DA37F9952E8D8E3E0001599E /* CombineCocoa in Frameworks */,
 				DA5D71932E3FBB7C00C78E40 /* SDWebImageSwiftUI in Frameworks */,
@@ -700,6 +718,7 @@
 		DA415E722DE5C307009F515E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				DA54769D2EB34A47005C8868 /* Encodable.swift */,
 				DAA9303F2E33C995000FE238 /* ButtonModifier.swift */,
 				DA415E8E2DE5DCC0009F515E /* Color.swift */,
 				DAAA67232E617101004075B7 /* ViewAndAdditional.swift */,
@@ -1071,6 +1090,7 @@
 				DA7BE0BD2E82DCFE006821CE /* MemoryManagement.playground */,
 				DA8F789E2E86FB1700826FB2 /* StructAndSwiftUI.playground */,
 				DAE676E42E914AFE00F3D956 /* CombineFramework.playground */,
+				DA5476A22EB34B72005C8868 /* CodableProtocol.playground */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -1270,6 +1290,7 @@
 				DA415E4B2DE5BF26009F515E /* Sources */,
 				DA415E4C2DE5BF26009F515E /* Frameworks */,
 				DA415E4D2DE5BF26009F515E /* Resources */,
+				DA5476952EB342B1005C8868 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1282,6 +1303,7 @@
 				DA37F9942E8D8E3E0001599E /* CombineCocoa */,
 				DA7BF5E12E98F1FB00224BCF /* RswiftLibrary */,
 				DA1D081A2E9D282100B76DFD /* KeychainAccess */,
+				DA5476812EB33E88005C8868 /* Alamofire */,
 			);
 			productName = LearnSwiftUI;
 			productReference = DA415E4F2DE5BF26009F515E /* LearnSwiftUI.app */;
@@ -1316,6 +1338,7 @@
 				DA37F9932E8D8E3E0001599E /* XCRemoteSwiftPackageReference "CombineCocoa" */,
 				DA7BF5E02E98F1FB00224BCF /* XCRemoteSwiftPackageReference "R.swift" */,
 				DA1D08192E9D282100B76DFD /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				DA5476802EB33E88005C8868 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DA415E502DE5BF26009F515E /* Products */;
@@ -1401,6 +1424,7 @@
 				DA37F98E2E8D8BE00001599E /* ViewModelTransformableProtocol.swift in Sources */,
 				DA5D71452E3F43B100C78E40 /* ObservablePattern.swift in Sources */,
 				DA7BF5CF2E98ED0300224BCF /* ThemeColorProtocol.swift in Sources */,
+				DA54769E2EB34A47005C8868 /* Encodable.swift in Sources */,
 				DAEBAE462DF11C7300082B1C /* ButtonBootcamp.swift in Sources */,
 				DA5D711C2E3D184500C78E40 /* Router.swift in Sources */,
 				DAC35AE72E9F87230019021D /* GitHubAPIEndpointEnum.swift in Sources */,
@@ -1600,7 +1624,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1657,7 +1681,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -1673,7 +1697,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LearnSwiftUI/LearnSwiftUI.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LearnSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
@@ -1686,7 +1710,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1694,6 +1718,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = haonguyen.LearnSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1710,7 +1735,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LearnSwiftUI/LearnSwiftUI.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LearnSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
@@ -1723,7 +1748,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1731,6 +1756,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = haonguyen.LearnSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1781,6 +1807,14 @@
 				minimumVersion = 0.4.1;
 			};
 		};
+		DA5476802EB33E88005C8868 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
 		DA5D71912E3FBB7C00C78E40 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
@@ -1809,6 +1843,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DA37F9932E8D8E3E0001599E /* XCRemoteSwiftPackageReference "CombineCocoa" */;
 			productName = CombineCocoa;
+		};
+		DA5476812EB33E88005C8868 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA5476802EB33E88005C8868 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 		DA5D71922E3FBB7C00C78E40 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
