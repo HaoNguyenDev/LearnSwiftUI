@@ -52,6 +52,8 @@
 		DA5476622EB233A7005C8868 /* SwiftAlgorithms.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA5476612EB233A7005C8868 /* SwiftAlgorithms.txt */; };
 		DA5476822EB33E88005C8868 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DA5476812EB33E88005C8868 /* Alamofire */; };
 		DA54769E2EB34A47005C8868 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54769D2EB34A47005C8868 /* Encodable.swift */; };
+		DA5476E42EB39FCD005C8868 /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5476E32EB39FCD005C8868 /* AlamofireManager.swift */; };
+		DA5476E72EB3A4A8005C8868 /* ViewToTestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5476E62EB3A4A8005C8868 /* ViewToTestClass.swift */; };
 		DA58DD8E2E9E35630042D1AD /* NetworkingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58DD8D2E9E35630042D1AD /* NetworkingBootcamp.swift */; };
 		DA58DD9C2E9E5FF90042D1AD /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58DD9B2E9E5FF90042D1AD /* String+Extensions.swift */; };
 		DA58DDAD2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58DDAC2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift */; };
@@ -272,6 +274,8 @@
 		DA5476692EB234AF005C8868 /* Unique.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Unique.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA54769D2EB34A47005C8868 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		DA5476A22EB34B72005C8868 /* CodableProtocol.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CodableProtocol.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DA5476E32EB39FCD005C8868 /* AlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
+		DA5476E62EB3A4A8005C8868 /* ViewToTestClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewToTestClass.swift; sourceTree = "<group>"; };
 		DA58DD8D2E9E35630042D1AD /* NetworkingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingBootcamp.swift; sourceTree = "<group>"; };
 		DA58DD9B2E9E5FF90042D1AD /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		DA58DDAC2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewModifiers.swift; sourceTree = "<group>"; };
@@ -622,6 +626,7 @@
 			children = (
 				DA5476602EB23363005C8868 /* Swift Algorithms */,
 				DA415E612DE5BFAB009F515E /* Preview Content */,
+				DA5476E62EB3A4A8005C8868 /* ViewToTestClass.swift */,
 				DA415E632DE5BFAB009F515E /* ContentView.swift */,
 				DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */,
 				DAEBAE4B2DF2907900082B1C /* Components */,
@@ -739,6 +744,24 @@
 			path = "Swift Algorithms";
 			sourceTree = "<group>";
 		};
+		DA5476DE2EB39F71005C8868 /* URLSession */ = {
+			isa = PBXGroup;
+			children = (
+				DA5D71812E3FA59900C78E40 /* NetworkError.swift */,
+				DA5D717D2E3FA57800C78E40 /* NetworkProtocols.swift */,
+				DA5D71852E3FA5B400C78E40 /* NetworkManager.swift */,
+			);
+			path = URLSession;
+			sourceTree = "<group>";
+		};
+		DA5476E02EB39F82005C8868 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				DA5476E32EB39FCD005C8868 /* AlamofireManager.swift */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
 		DA5D71042E3CD1EB00C78E40 /* NavigationApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -791,9 +814,8 @@
 		DA5D717C2E3FA56900C78E40 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				DA5D71812E3FA59900C78E40 /* NetworkError.swift */,
-				DA5D717D2E3FA57800C78E40 /* NetworkProtocols.swift */,
-				DA5D71852E3FA5B400C78E40 /* NetworkManager.swift */,
+				DA5476E02EB39F82005C8868 /* Alamofire */,
+				DA5476DE2EB39F71005C8868 /* URLSession */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -1471,6 +1493,7 @@
 				DA5D71202E3D185F00C78E40 /* ScreenCoordinator.swift in Sources */,
 				DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */,
 				DA7BF6212E99038300224BCF /* Environment+ThemeKeys.swift in Sources */,
+				DA5476E72EB3A4A8005C8868 /* ViewToTestClass.swift in Sources */,
 				DA5D71322E3D20F100C78E40 /* Placeholder.swift in Sources */,
 				DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */,
 				DA5D717E2E3FA57800C78E40 /* NetworkProtocols.swift in Sources */,
@@ -1535,6 +1558,7 @@
 				DA5D711E2E3D185500C78E40 /* NavRouter.swift in Sources */,
 				DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */,
 				DA7BE0A62E806040006821CE /* LoginInteractor.swift in Sources */,
+				DA5476E42EB39FCD005C8868 /* AlamofireManager.swift in Sources */,
 				DAAE8CBD2E45028300FCBA4E /* CounterState.swift in Sources */,
 				DAE366252E9D1047005EF803 /* AppSettings.swift in Sources */,
 				DA8748872E6AFBC900B189F3 /* WeatherService.swift in Sources */,
