@@ -63,24 +63,25 @@ class AlamofireManager {
         }
     }
     
-    func fetchAndDecodePost(postNumber: String) async throws -> Post {
-        let urlString = "\(baseURL)/posts/\(postNumber)"
+    func fetchAndDecodePost() async throws -> [Post] {
+        let urlString = "\(baseURL)/posts"
         
         let post = try await AF.request(urlString)
-            .serializingDecodable(Post.self)
+            .serializingDecodable([Post].self)
             .value
         
         return post
     }
     
     func customConfiguration() {
-        let urlString = "\(baseURL)/posts/1)"
+        let urlString = "\(baseURL)/posts)"
         
         let configuration = URLSessionConfiguration.default
         configuration.urlCache = nil
         configuration.timeoutIntervalForRequest = 60
         
-        let session = Session(configuration: configuration, interceptor: AuthInterceptor())
+        let session = Session(configuration: configuration, interceptor: CustomInterceptor())
+        
         session.request(urlString).response { response in
             switch response.result {
             case .success(let data):
@@ -89,7 +90,7 @@ class AlamofireManager {
                 }
                 
                 do {
-                    let result = try JSONDecoder().decode(Post.self, from: data)
+                    let result = try JSONDecoder().decode([Post].self, from: data)
                 } catch {
                     debugPrint(error)
                 }

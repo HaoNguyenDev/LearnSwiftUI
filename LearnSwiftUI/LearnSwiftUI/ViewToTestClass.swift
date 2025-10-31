@@ -49,7 +49,7 @@ extension ViewToTestClass {
     private func fetchPostDecodable() {
         Task {
             do {
-                let post = try await alamofireManager.fetchAndDecodePost(postNumber: "1")
+                let post = try await alamofireManager.fetchAndDecodePost()
                 debugPrint(post)
             }
             catch {
