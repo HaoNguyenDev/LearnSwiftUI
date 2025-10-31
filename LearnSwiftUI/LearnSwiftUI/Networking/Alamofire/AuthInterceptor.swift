@@ -12,10 +12,12 @@ import Foundation
 @preconcurrency
 import KeychainAccess
 
-final class CustomInterceptor: RequestInterceptor {
+final class AuthInterceptor: RequestInterceptor {
+    private let tokenRefresher: AuthTokenRefresher
     let keychain: Keychain
     
-    init() {
+    init(tokenRefresher: AuthTokenRefresher) {
+        self.tokenRefresher = tokenRefresher
         self.keychain = Keychain(service: Bundle.main.bundleIdentifier ?? "haonguyen.LearnSwiftUI")
     }
     
@@ -45,18 +47,19 @@ final class CustomInterceptor: RequestInterceptor {
             
             // **Important:** This refreshToken function must be defined in your class/struct
             // and must call the API to refresh the token.
-            refreshToken { isSuccess in
-                if isSuccess {
+            tokenRefresher.refreshAccessToken { result in
+                switch result {
+                case .success(_):
                     // Token refresh successful -> Request will be retried.
+                    // keychain[KeychainKeys.token] = data.token
+                    // keychain[KeychainKeys.refreshToken] = data.token
                     // The adapt function will automatically add the new token to the request.
                     completion(.retry)
-                } else {
-                    // Token refresh failed -> Do not retry and report error.
-                    // Usually leads to logging out the user.
+                case .failure:
                     completion(.doNotRetryWithError(error))
                 }
             }
-            // End the function here after handling 401
+            // End the function here after handling 401 || 403
             return
         }
         
@@ -84,17 +87,5 @@ final class CustomInterceptor: RequestInterceptor {
         // we do not retry because it is usually a logic error or the server cannot fix it itself.
         debugPrint("[\(self)] 🛑 Other error, cannot retry. Error code: \(request.response?.statusCode ?? -1)")
         completion(.doNotRetry)
-    }
-    
-    // MARK: - Refresh Token
-    private func refreshToken(completion: @escaping (Bool) -> Void) {
-        // ... refresh token logic ...
-        // Alamofire.request(...)
-        // completion(true/false)
-        
-        // Mock result with always success
-        DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
-            completion(true)
-        }
     }
 }
