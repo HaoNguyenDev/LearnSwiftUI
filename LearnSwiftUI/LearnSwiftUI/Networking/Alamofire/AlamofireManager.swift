@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import KeychainAccess
 
 struct Post: Decodable {
     let userId: Int
@@ -80,7 +81,10 @@ class AlamofireManager {
         configuration.urlCache = nil
         configuration.timeoutIntervalForRequest = 60
         
-        let session = Session(configuration: configuration, interceptor: CustomInterceptor())
+
+        let keychain = Keychain(service: Bundle.main.bundleIdentifier ?? "haonguyen.LearnSwiftUI")
+        let authService = AuthService(keychain: keychain)
+        let session = Session(configuration: configuration, interceptor: AuthInterceptor(tokenRefresher: authService))
         
         session.request(urlString).response { response in
             switch response.result {
@@ -90,7 +94,7 @@ class AlamofireManager {
                 }
                 
                 do {
-                    let result = try JSONDecoder().decode([Post].self, from: data)
+                    _ = try JSONDecoder().decode([Post].self, from: data)
                 } catch {
                     debugPrint(error)
                 }
