@@ -53,18 +53,24 @@ class AlamofireNetworking {
             throw error
         }
     }
-    
-    /// Specific method to fetch a list of products
-    func getProducts() async throws -> [Product] {
-        debugPrint("Networking: Calling /products")
-        let url = "https://api.escuelajs.co/api/v1/products"
-        return try await request(url: url, method: .get)
-    }
-    
+}
+
+protocol APIListProtocol {
+    func getProfile() async throws -> Profile
+    func getProducts() async throws -> [Product]
+}
+
+extension AlamofireNetworking: APIListProtocol {
     // (example for an endpoint requiring Auth).
     func getProfile() async throws -> Profile {
         debugPrint("Networking: Calling /auth/profile")
         let url = "https://api.escuelajs.co/api/v1/auth/profile"
+        return try await request(url: url, method: .get)
+    }
+    
+    func getProducts() async throws -> [Product] {
+        debugPrint("Networking: Calling /products")
+        let url = "https://api.escuelajs.co/api/v1/products"
         return try await request(url: url, method: .get)
     }
 }

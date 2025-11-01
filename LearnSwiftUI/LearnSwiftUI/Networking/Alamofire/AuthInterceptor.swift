@@ -73,7 +73,8 @@ final class AuthInterceptor: RequestInterceptor, @unchecked Sendable {
                     let _ = try await authService.refreshToken()
                     
                     // If refresh is successful, retry the original request.
-                    // Adapt will automatically insert the new token before retrying. print("✅ Interceptor: Refresh successful. Retrying the original request.")
+                    // Adapt will automatically insert the new token before retrying.
+                    debugPrint("✅ Interceptor: Refresh successful. Retrying the original request.")
                     completion(.retry)
                 } catch {
                     // If refresh fails, do not retry
