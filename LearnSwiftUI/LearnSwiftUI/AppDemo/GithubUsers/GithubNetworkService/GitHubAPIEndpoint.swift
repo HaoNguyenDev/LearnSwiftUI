@@ -11,12 +11,12 @@ import Foundation
 struct GithubAPIEndpoint: Endpoint {
     var baseURL: String = "https://api.github.com"
     var path: String
-    var method: HTTPMethod
+    var method: _HTTPMethod
     var headers: [String : String]?
     var queryItems: [URLQueryItem]?
     var body: Data?
     
-    init(path: String, method: HTTPMethod, headers: [String: String]? = nil, queryItems: [URLQueryItem]? = nil, body: Data? = nil) {
+    init(path: String, method: _HTTPMethod, headers: [String: String]? = nil, queryItems: [URLQueryItem]? = nil, body: Data? = nil) {
         self.path = path
         self.method = method
         self.headers = headers

@@ -27,7 +27,7 @@ enum GitHubAPIEndpointEnum: Endpoint {
         }
     }
     
-    var method: HTTPMethod {
+    var method: _HTTPMethod {
         return .get
     }
     

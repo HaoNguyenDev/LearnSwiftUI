@@ -16,7 +16,7 @@ struct Post: Decodable {
     let body: String
 }
 
-class AlamofireManager {
+class AlamofireSampleAPISyntax {
     private var baseURL: String
     
     init() {
@@ -81,10 +81,8 @@ class AlamofireManager {
         configuration.urlCache = nil
         configuration.timeoutIntervalForRequest = 60
         
-
-        let keychain = Keychain(service: Bundle.main.bundleIdentifier ?? "haonguyen.LearnSwiftUI")
-        let authService = AuthService(keychain: keychain)
-        let session = Session(configuration: configuration, interceptor: AuthInterceptor(tokenRefresher: authService))
+        let authService = AuthService()
+        let session = Session(configuration: configuration, interceptor: AuthInterceptor(authService: authService))
         
         session.request(urlString).response { response in
             switch response.result {

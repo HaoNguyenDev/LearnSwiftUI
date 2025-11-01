@@ -52,10 +52,19 @@
 		DA5476622EB233A7005C8868 /* SwiftAlgorithms.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA5476612EB233A7005C8868 /* SwiftAlgorithms.txt */; };
 		DA5476822EB33E88005C8868 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DA5476812EB33E88005C8868 /* Alamofire */; };
 		DA54769E2EB34A47005C8868 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54769D2EB34A47005C8868 /* Encodable.swift */; };
-		DA5476E42EB39FCD005C8868 /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5476E32EB39FCD005C8868 /* AlamofireManager.swift */; };
+		DA5476E42EB39FCD005C8868 /* AlamofireSampleAPICallSyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5476E32EB39FCD005C8868 /* AlamofireSampleAPICallSyntax.swift */; };
 		DA5476E72EB3A4A8005C8868 /* ViewToTestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5476E62EB3A4A8005C8868 /* ViewToTestClass.swift */; };
 		DA5476F82EB3C292005C8868 /* AuthInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5476F72EB3C292005C8868 /* AuthInterceptor.swift */; };
 		DA5477012EB4EBA7005C8868 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5477002EB4EBA7005C8868 /* AuthService.swift */; };
+		DA54770B2EB63A37005C8868 /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54770A2EB63A37005C8868 /* TokenResponse.swift */; };
+		DA54770E2EB63A7E005C8868 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54770D2EB63A7E005C8868 /* LoginRequest.swift */; };
+		DA5477132EB63B11005C8868 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5477122EB63B11005C8868 /* KeychainStore.swift */; };
+		DA5477182EB63BAC005C8868 /* AuthServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5477172EB63BAC005C8868 /* AuthServiceError.swift */; };
+		DA5477332EB651AE005C8868 /* AlamofireNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5477322EB651AE005C8868 /* AlamofireNetworking.swift */; };
+		DA54773A2EB654A3005C8868 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5477392EB654A3005C8868 /* Category.swift */; };
+		DA54773D2EB654BC005C8868 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54773C2EB654BC005C8868 /* Product.swift */; };
+		DA5477492EB65729005C8868 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5477482EB65729005C8868 /* Profile.swift */; };
+		DA54774E2EB658E6005C8868 /* AlamofireTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54774D2EB658E6005C8868 /* AlamofireTestView.swift */; };
 		DA58DD8E2E9E35630042D1AD /* NetworkingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58DD8D2E9E35630042D1AD /* NetworkingBootcamp.swift */; };
 		DA58DD9C2E9E5FF90042D1AD /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58DD9B2E9E5FF90042D1AD /* String+Extensions.swift */; };
 		DA58DDAD2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58DDAC2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift */; };
@@ -276,10 +285,19 @@
 		DA5476692EB234AF005C8868 /* Unique.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Unique.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA54769D2EB34A47005C8868 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		DA5476A22EB34B72005C8868 /* CodableProtocol.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CodableProtocol.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DA5476E32EB39FCD005C8868 /* AlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
+		DA5476E32EB39FCD005C8868 /* AlamofireSampleAPICallSyntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireSampleAPICallSyntax.swift; sourceTree = "<group>"; };
 		DA5476E62EB3A4A8005C8868 /* ViewToTestClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewToTestClass.swift; sourceTree = "<group>"; };
 		DA5476F72EB3C292005C8868 /* AuthInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInterceptor.swift; sourceTree = "<group>"; };
 		DA5477002EB4EBA7005C8868 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		DA54770A2EB63A37005C8868 /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
+		DA54770D2EB63A7E005C8868 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		DA5477122EB63B11005C8868 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		DA5477172EB63BAC005C8868 /* AuthServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceError.swift; sourceTree = "<group>"; };
+		DA5477322EB651AE005C8868 /* AlamofireNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworking.swift; sourceTree = "<group>"; };
+		DA5477392EB654A3005C8868 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		DA54773C2EB654BC005C8868 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		DA5477482EB65729005C8868 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		DA54774D2EB658E6005C8868 /* AlamofireTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireTestView.swift; sourceTree = "<group>"; };
 		DA58DD8D2E9E35630042D1AD /* NetworkingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingBootcamp.swift; sourceTree = "<group>"; };
 		DA58DD9B2E9E5FF90042D1AD /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		DA58DDAC2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewModifiers.swift; sourceTree = "<group>"; };
@@ -761,11 +779,57 @@
 		DA5476E02EB39F82005C8868 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
+				DA54774C2EB658D7005C8868 /* Test */,
+				DA54772C2EB6510B005C8868 /* SampleSyntax */,
+				DA5477322EB651AE005C8868 /* AlamofireNetworking.swift */,
 				DA5477002EB4EBA7005C8868 /* AuthService.swift */,
 				DA5476F72EB3C292005C8868 /* AuthInterceptor.swift */,
-				DA5476E32EB39FCD005C8868 /* AlamofireManager.swift */,
 			);
 			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		DA5477092EB63A15005C8868 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA5477392EB654A3005C8868 /* Category.swift */,
+				DA54770A2EB63A37005C8868 /* TokenResponse.swift */,
+				DA54770D2EB63A7E005C8868 /* LoginRequest.swift */,
+				DA54773C2EB654BC005C8868 /* Product.swift */,
+				DA5477482EB65729005C8868 /* Profile.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DA5477112EB63AF8005C8868 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				DA5477122EB63B11005C8868 /* KeychainStore.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		DA5477162EB63BA7005C8868 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				DA5477172EB63BAC005C8868 /* AuthServiceError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		DA54772C2EB6510B005C8868 /* SampleSyntax */ = {
+			isa = PBXGroup;
+			children = (
+				DA5476E32EB39FCD005C8868 /* AlamofireSampleAPICallSyntax.swift */,
+			);
+			path = SampleSyntax;
+			sourceTree = "<group>";
+		};
+		DA54774C2EB658D7005C8868 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				DA54774D2EB658E6005C8868 /* AlamofireTestView.swift */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		DA5D71042E3CD1EB00C78E40 /* NavigationApp */ = {
@@ -820,6 +884,9 @@
 		DA5D717C2E3FA56900C78E40 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				DA5477162EB63BA7005C8868 /* Errors */,
+				DA5477112EB63AF8005C8868 /* Keychain */,
+				DA5477092EB63A15005C8868 /* Models */,
 				DA5476E02EB39F82005C8868 /* Alamofire */,
 				DA5476DE2EB39F71005C8868 /* URLSession */,
 			);
@@ -1436,6 +1503,7 @@
 				DAC35B162E9FCCDA0019021D /* Array+Extensions.swift in Sources */,
 				DAEBAE4A2DF28E1E00082B1C /* SubviewBootcamp.swift in Sources */,
 				DA7BE0A42E806032006821CE /* LoginPresenter.swift in Sources */,
+				DA54773D2EB654BC005C8868 /* Product.swift in Sources */,
 				DA6027AB2EA4A45E00271E00 /* MVVMDemoUIKitContentView.swift in Sources */,
 				DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */,
 				DA5D712A2E3D19A000C78E40 /* Logger.swift in Sources */,
@@ -1445,6 +1513,7 @@
 				DAEBAE422DECB55B00082B1C /* ScrollViewBootcamp.swift in Sources */,
 				DA5D71862E3FA5B400C78E40 /* NetworkManager.swift in Sources */,
 				DA5D719B2E3FC03D00C78E40 /* AlertHandler.swift in Sources */,
+				DA5477132EB63B11005C8868 /* KeychainStore.swift in Sources */,
 				DAE2EACA2DF5DE280083E733 /* SheetBootcamp.swift in Sources */,
 				DA37F9802E8D860D0001599E /* CbLogginViewModel.swift in Sources */,
 				DA0B4AE72E6FC9A400628E53 /* DownloadManager.swift in Sources */,
@@ -1452,6 +1521,7 @@
 				DA37F98E2E8D8BE00001599E /* ViewModelTransformableProtocol.swift in Sources */,
 				DA5D71452E3F43B100C78E40 /* ObservablePattern.swift in Sources */,
 				DA7BF5CF2E98ED0300224BCF /* ThemeColorProtocol.swift in Sources */,
+				DA54770E2EB63A7E005C8868 /* LoginRequest.swift in Sources */,
 				DA54769E2EB34A47005C8868 /* Encodable.swift in Sources */,
 				DAEBAE462DF11C7300082B1C /* ButtonBootcamp.swift in Sources */,
 				DA5D711C2E3D184500C78E40 /* Router.swift in Sources */,
@@ -1461,6 +1531,7 @@
 				DA415E912DE5DF63009F515E /* GradientsColorBootcamp.swift in Sources */,
 				DA5D718B2E3FB25700C78E40 /* UserListView.swift in Sources */,
 				DAAE8CBA2E44BDFF00FCBA4E /* FormView.swift in Sources */,
+				DA5477492EB65729005C8868 /* Profile.swift in Sources */,
 				DAEBAE402DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift in Sources */,
 				DAC97DE72EA3960500F8A22F /* ActorBootcamp.swift in Sources */,
 				DA39793F2E9BE5BD00838584 /* ImageStylingModifier.swift in Sources */,
@@ -1474,6 +1545,7 @@
 				DABDF7B42E70466B00DEC7C6 /* DownloadTask.swift in Sources */,
 				DA37F99D2E8D93F60001599E /* CbDemoContentView.swift in Sources */,
 				DA37F9872E8D898B0001599E /* CbLoginResult.swift in Sources */,
+				DA54774E2EB658E6005C8868 /* AlamofireTestView.swift in Sources */,
 				DA58DDAD2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift in Sources */,
 				DA37F9B32E8EE8CA0001599E /* CombineDefinitionContentView.swift in Sources */,
 				DA4F7F1C2E9A954D001CB7B2 /* LoginButtonView.swift in Sources */,
@@ -1490,6 +1562,7 @@
 				DA87488A2E6AFC6A00B189F3 /* WeatherItem.swift in Sources */,
 				DA5D71362E3DE82A00C78E40 /* Account.swift in Sources */,
 				DA7BF5E82E98F2C900224BCF /* RswiftResources+ColorResource.swift in Sources */,
+				DA5477332EB651AE005C8868 /* AlamofireNetworking.swift in Sources */,
 				DA37F9A02E8EE3AC0001599E /* CombineItemType.swift in Sources */,
 				DA7BF5DD2E98ED7300224BCF /* DefaultThemeAssets.swift in Sources */,
 				DA5D71902E3FBA7400C78E40 /* GithubUserDetail.swift in Sources */,
@@ -1519,6 +1592,7 @@
 				DAA709142E75D553006F8E70 /* ThaiPaymentService.swift in Sources */,
 				DAA709192E75D6F5006F8E70 /* PaymentProvider.swift in Sources */,
 				DA87489B2E6B007D00B189F3 /* WeatherListView.swift in Sources */,
+				DA54770B2EB63A37005C8868 /* TokenResponse.swift in Sources */,
 				DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */,
 				DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */,
 				DA7BF6722E992DEF00224BCF /* HTextField.swift in Sources */,
@@ -1550,6 +1624,8 @@
 				DAC35B022E9F8E8F0019021D /* UserListContentView.swift in Sources */,
 				DAED67802E21089A00309382 /* ObservedObjectBootcamp.swift in Sources */,
 				DAAA67222E616D8C004075B7 /* TextFieldBootcamp.swift in Sources */,
+				DA54773A2EB654A3005C8868 /* Category.swift in Sources */,
+				DA5477182EB63BAC005C8868 /* AuthServiceError.swift in Sources */,
 				DA7BE0BC2E8063AD006821CE /* HomeModuleBuilder.swift in Sources */,
 				DA37F9992E8D91F30001599E /* CbDemoViewWrapper.swift in Sources */,
 				DA5C98B82E391F91007AC9E9 /* TodoListView.swift in Sources */,
@@ -1565,7 +1641,7 @@
 				DA5D711E2E3D185500C78E40 /* NavRouter.swift in Sources */,
 				DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */,
 				DA7BE0A62E806040006821CE /* LoginInteractor.swift in Sources */,
-				DA5476E42EB39FCD005C8868 /* AlamofireManager.swift in Sources */,
+				DA5476E42EB39FCD005C8868 /* AlamofireSampleAPICallSyntax.swift in Sources */,
 				DAAE8CBD2E45028300FCBA4E /* CounterState.swift in Sources */,
 				DAE366252E9D1047005EF803 /* AppSettings.swift in Sources */,
 				DA8748872E6AFBC900B189F3 /* WeatherService.swift in Sources */,

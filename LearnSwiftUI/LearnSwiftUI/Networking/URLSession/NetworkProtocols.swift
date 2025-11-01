@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 // MARK: - Define HTTP
-enum HTTPMethod: String {
+enum _HTTPMethod: String {
     case get = "GET"
     case post = "POST"
     case put = "PUT"
@@ -20,7 +20,7 @@ enum HTTPMethod: String {
 protocol Endpoint {
     var baseURL: String { get }
     var path: String { get }
-    var method: HTTPMethod { get }
+    var method: _HTTPMethod { get }
     var headers: [String: String]? { get }
     
     // Query for GET and Body for POST/PUT
