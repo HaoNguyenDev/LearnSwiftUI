@@ -90,7 +90,8 @@ struct LearnSwiftUIApp: App {
 //
 //            }
             
-            ViewToTestClass()
+//            ViewToTestClass()
+            AlamofireTestView()
         }
     }
 }

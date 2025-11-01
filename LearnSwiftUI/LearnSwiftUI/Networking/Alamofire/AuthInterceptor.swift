@@ -9,83 +9,88 @@
 import Alamofire
 import Foundation
 
-@preconcurrency
-import KeychainAccess
-
-final class AuthInterceptor: RequestInterceptor {
-    private let tokenRefresher: AuthTokenRefresher
-    let keychain: Keychain
+/// Manages adding the Access Token to the header and handling 401/403 errors.
+final class AuthInterceptor: RequestInterceptor, @unchecked Sendable {
     
-    init(tokenRefresher: AuthTokenRefresher) {
-        self.tokenRefresher = tokenRefresher
-        self.keychain = Keychain(service: Bundle.main.bundleIdentifier ?? "haonguyen.LearnSwiftUI")
+    private let authService: AuthService
+    
+    init(authService: AuthService) {
+        self.authService = authService
     }
     
-    // MARK: - Adapt
+    // MARK: - Adapt (Add Access Token)
+    
+    /// Inserts the Access Token into the "Authorization" header for every request.
     func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
-        var urlRequest = urlRequest
-        // Set access token
-        if let accessToken = keychain[KeychainService.KeychainKeys.token.rawValue] {
-            // Add Authorization header to any request
-            urlRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
-        }
-        // completion with URLRequest adapted
-        completion(.success(urlRequest))
-    }
-    
-    // MARK: - Retry
-    func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
-        
-        // --- DECLARE NECESSARY PARAMETERS ---
-        let maxRetries = 3
-        
-        // --- 1. HANDLE AUTHENTICATION ERROR (401) FIRST ---
-        
-        // Get HTTP status code (if available)
-        if let response = request.response, response.statusCode == 401 || response.statusCode == 403 {
-            // Check for 401 || 403 error: Token expired/invalid
-            
-            // **Important:** This refreshToken function must be defined in your class/struct
-            // and must call the API to refresh the token.
-            tokenRefresher.refreshAccessToken { result in
-                switch result {
-                case .success(_):
-                    // Token refresh successful -> Request will be retried.
-                    // keychain[KeychainKeys.token] = data.token
-                    // keychain[KeychainKeys.refreshToken] = data.token
-                    // The adapt function will automatically add the new token to the request.
-                    completion(.retry)
-                case .failure:
-                    completion(.doNotRetryWithError(error))
-                }
-            }
-            // End the function here after handling 401 || 403
+        // currentAccessToken is nonisolated, so no await is needed
+        guard let accessToken = authService.currentAccessToken else {
+            // If there's no token, continue the request (possibly a public endpoint)
+            completion(.success(urlRequest))
             return
         }
         
-        // --- 2. HANDLE NETWORK ERRORS ---
+        var urlRequest = urlRequest
+        urlRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        debugPrint("➡️ Interceptor: Inserted Access Token into request: \(urlRequest.url?.lastPathComponent ?? "N/A")")
+        completion(.success(urlRequest))
+    }
+    
+    // MARK: - Retry (Handle 401/403 errors)
+    
+    /// Handles token refresh and retries the request when authentication errors occur.
+    func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
         
-        // Check for common network errors such as timeout or connection loss
-        if let urlError = error.asAFError?.underlyingError as? URLError,
-           urlError.code == .timedOut || urlError.code == .notConnectedToInternet {
-            
-            // Check the number of retries (applies to both 401 and network errors)
-            if request.retryCount < maxRetries {
-                // Retry after 2 seconds (Backoff Strategy)
-                print("[\(self)] ⚠️ Network error. Retrying attempt \(request.retryCount + 1)/\(maxRetries) after 2.0 seconds.")
-                return completion(.retryWithDelay(2.0))
+        guard let response = request.task?.response as? HTTPURLResponse else {
+            // For non-HTTP errors (e.g., network loss, timeout), retry if needed
+            let nsError = error as NSError
+            if nsError.domain == NSURLErrorDomain && nsError.code == NSURLErrorTimedOut {
+                debugPrint("⚠️ Interceptor: Timeout error, retrying request.")
+                completion(.retry) // Example: retry timeout errors
             } else {
-                // Maximum number of retries exceeded for network errors
-                print("[\(self)] ❌ Network error: Maximum retry limit reached (\(maxRetries) times).")
-                return completion(.doNotRetry)
+                debugPrint("❌ Interceptor: Non-HTTP error, not retrying: \(error.localizedDescription)")
+                completion(.doNotRetry)
             }
+            return
         }
         
-        // --- 3. HANDLING OTHER ERRORS ---
+        let statusCode = response.statusCode
         
-        // If the error is not 401 and not a network error (e.g., 400, 403, 500...),
-        // we do not retry because it is usually a logic error or the server cannot fix it itself.
-        debugPrint("[\(self)] 🛑 Other error, cannot retry. Error code: \(request.response?.statusCode ?? -1)")
-        completion(.doNotRetry)
+        // 1. Check for 401 or 403 errors (Unauthorized/Forbidden errors)
+        if 401...403 ~= statusCode {
+            debugPrint("🚨 Interceptor: Received error \(statusCode). Refresh Token needed.")
+            
+            // currentRefreshToken is non-isolated, so no await is needed
+            guard authService.currentRefreshToken != nil else {
+                debugPrint("🚫 Interceptor: Refresh Token does not exist. Re-login required.")
+                completion(.doNotRetry)
+                return
+            }
+            
+            // Call refreshToken function, using `Task` and **await** (because authService is an Actor)
+            Task {
+                do {
+                    // Try refreshing the token
+                    let _ = try await authService.refreshToken()
+                    
+                    // If refresh is successful, retry the original request.
+                    // Adapt will automatically insert the new token before retrying. print("✅ Interceptor: Refresh successful. Retrying the original request.")
+                    completion(.retry)
+                } catch {
+                    // If refresh fails, do not retry
+                    debugPrint("❌ Interceptor: Refresh failed. Request will not be retried.")
+                    completion(.doNotRetry)
+                }
+            }
+            
+        } else if statusCode == 500 {
+            // 2. Handle server errors (e.g., 500 error)
+            debugPrint("⚠️ Interceptor: Received 500 error (Internal Server Error). Retrying after 1 second.")
+            completion(.retryWithDelay(1.0)) // Example: retry server error after 1 second
+            
+        } else {
+            // 3. Other errors (e.g., 404, 400,...)
+            debugPrint("❌ Interceptor: Error \(statusCode) does not require retry.")
+            completion(.doNotRetry)
+        }
     }
 }
