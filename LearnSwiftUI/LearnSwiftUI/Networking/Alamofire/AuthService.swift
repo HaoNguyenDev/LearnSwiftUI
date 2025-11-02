@@ -9,7 +9,6 @@ import Alamofire
 import Foundation
 
 actor AuthService {
-    private let baseURL = "https://api.escuelajs.co/api/v1"
     static let shared = AuthService()
     private typealias RetryHandler = (Result<String, Error>) -> Void
     private var isRefreshing = false
@@ -29,10 +28,10 @@ actor AuthService {
     }
     
     func login(request: LoginRequest) async throws -> TokenResponse {
-        let url = "\(baseURL)/auth/login"
+        let urlRequest = FakeStoreAuthRequest.login(parameters: request.dictionary ?? [:])
         
         do {
-            let response = try await AF.request(url, method: .post, parameters: request, encoder: JSONParameterEncoder.default)
+            let response = try await AF.request(urlRequest)
                 .validate()
                 .serializingDecodable(TokenResponse.self)
                 .value
@@ -84,12 +83,11 @@ actor AuthService {
         }
         
         debugPrint("🔄 AuthService: Calling refresh token API...")
-        
-        let url = "\(baseURL)/auth/refresh-token"
-        let parameters = ["refreshToken": currentRefreshToken]
-        
+       
+        let refreshToken = currentRefreshToken
+        let urlRequest = FakeStoreAuthRequest.refreshToken(refreshToken: refreshToken)
         do {
-            let response = try await AF.request(url, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default)
+            let response = try await AF.request(urlRequest)
                 .validate()
                 .serializingDecodable(TokenResponse.self)
                 .value

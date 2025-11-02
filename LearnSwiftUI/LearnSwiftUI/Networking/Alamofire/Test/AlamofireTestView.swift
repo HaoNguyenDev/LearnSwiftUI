@@ -11,7 +11,11 @@ import SwiftUI
 struct AlamofireTestView: View {
     
     let authService = AuthService.shared
-    let networking = AlamofireNetworking.shared
+    let networking: NetworkingProtocol
+    
+    init() {
+        self.networking = AlamofireNetworking.shared
+    }
     
     var body: some View {
         Text("AlamofireTestView")

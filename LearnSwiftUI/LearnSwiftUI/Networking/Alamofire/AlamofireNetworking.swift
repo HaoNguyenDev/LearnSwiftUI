@@ -7,7 +7,12 @@
 
 import Alamofire
 
-class AlamofireNetworking {
+protocol NetworkingProtocol {
+    func getProfile() async throws -> Profile
+    func getProducts() async throws -> [Product]
+}
+
+class AlamofireNetworking: NetworkingProtocol {
     
     static let shared = AlamofireNetworking()
     
@@ -53,25 +58,41 @@ class AlamofireNetworking {
             throw error
         }
     }
+    
+    func request<T: Decodable>(_ request: URLRequestConvertible) async throws -> T {
+        debugPrint("\n⚡️ Networking: Starting API call: \(String(describing: request.urlRequest))")
+        
+        do {
+            let value = try await session.request(request)
+                .validate() // Validate HTTP status code (200-299)
+                .serializingDecodable(T.self)
+                .value
+            
+            debugPrint("✅ Networking: API \(String(describing: request.urlRequest)) call successful.")
+            return value
+            
+        } catch let afError as AFError {
+            // Handle Alamofire errors in more detail
+            debugPrint("❌ Networking: AFError in request: \(afError.localizedDescription)")
+            throw afError // Re-throw Alamofire error
+        } catch {
+            // Handle other errors
+            debugPrint("❌ Networking: General error in request: \(error.localizedDescription)")
+            throw error
+        }
+    }
 }
 
-protocol APIListProtocol {
-    func getProfile() async throws -> Profile
-    func getProducts() async throws -> [Product]
-}
-
-extension AlamofireNetworking: APIListProtocol {
+extension AlamofireNetworking {
     // (example for an endpoint requiring Auth).
     func getProfile() async throws -> Profile {
-        debugPrint("Networking: Calling /auth/profile")
-        let url = "https://api.escuelajs.co/api/v1/auth/profile"
-        return try await request(url: url, method: .get)
+        let getProfile = FakeStoreAuthRequest.getProfile
+        return try await request(getProfile)
     }
     
     func getProducts() async throws -> [Product] {
-        debugPrint("Networking: Calling /products")
-        let url = "https://api.escuelajs.co/api/v1/products"
-        return try await request(url: url, method: .get)
+        let getProducts = FakeStoreCommonRequest.getProduct
+        return try await request(getProducts)
     }
 }
 
