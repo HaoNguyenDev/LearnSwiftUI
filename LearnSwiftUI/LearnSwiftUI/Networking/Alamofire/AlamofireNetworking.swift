@@ -32,7 +32,7 @@ class AlamofireNetworking {
     ///   - parameters: Request parameters (if any).
     /// - Returns: Decoded data of type T.
     func request<T: Decodable>(url: String, method: HTTPMethod, parameters: [String: Any]? = nil) async throws -> T {
-        print("\n⚡️ Networking: Starting API call: \(url) (\(method.rawValue))")
+        debugPrint("\n⚡️ Networking: Starting API call: \(url) (\(method.rawValue))")
         
         do {
             let value = try await session.request(url, method: method, parameters: parameters)
@@ -40,16 +40,16 @@ class AlamofireNetworking {
                 .serializingDecodable(T.self)
                 .value
             
-            print("✅ Networking: API call successful.")
+            debugPrint("✅ Networking: API \(url) call successful.")
             return value
             
         } catch let afError as AFError {
             // Handle Alamofire errors in more detail
-            print("❌ Networking: AFError in request: \(afError.localizedDescription)")
+            debugPrint("❌ Networking: AFError in request: \(afError.localizedDescription)")
             throw afError // Re-throw Alamofire error
         } catch {
             // Handle other errors
-            print("❌ Networking: General error in request: \(error.localizedDescription)")
+            debugPrint("❌ Networking: General error in request: \(error.localizedDescription)")
             throw error
         }
     }
