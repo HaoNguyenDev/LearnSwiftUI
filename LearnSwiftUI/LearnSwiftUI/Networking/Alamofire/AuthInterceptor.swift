@@ -19,7 +19,6 @@ final class AuthInterceptor: RequestInterceptor, @unchecked Sendable {
     }
     
     // MARK: - Adapt (Add Access Token)
-    
     /// Inserts the Access Token into the "Authorization" header for every request.
     func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
         // currentAccessToken is nonisolated, so no await is needed
@@ -31,12 +30,11 @@ final class AuthInterceptor: RequestInterceptor, @unchecked Sendable {
         
         var urlRequest = urlRequest
         urlRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
-        debugPrint("➡️ Interceptor: Inserted Access Token into request: \(urlRequest.url?.lastPathComponent ?? "N/A")")
+        debugPrint("➡️ Interceptor: Inserted Access Token: \(accessToken) into request: /\(urlRequest.url?.lastPathComponent ?? "N/A")")
         completion(.success(urlRequest))
     }
     
     // MARK: - Retry (Handle 401/403 errors)
-    
     /// Handles token refresh and retries the request when authentication errors occur.
     func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
         
@@ -58,20 +56,17 @@ final class AuthInterceptor: RequestInterceptor, @unchecked Sendable {
         // 1. Check for 401 or 403 errors (Unauthorized/Forbidden errors)
         if 401...403 ~= statusCode {
             debugPrint("🚨 Interceptor: Received error \(statusCode). Refresh Token needed.")
-            
-            // currentRefreshToken is non-isolated, so no await is needed
             guard authService.currentRefreshToken != nil else {
                 debugPrint("🚫 Interceptor: Refresh Token does not exist. Re-login required.")
                 completion(.doNotRetry)
                 return
             }
             
-            // Call refreshToken function, using `Task` and **await** (because authService is an Actor)
             Task {
                 do {
                     // Try refreshing the token
-                    let _ = try await authService.refreshToken()
-                    
+                    let refreshTokenResult = try await authService.refreshToken()
+                    debugPrint(refreshTokenResult)
                     // If refresh is successful, retry the original request.
                     // Adapt will automatically insert the new token before retrying.
                     debugPrint("✅ Interceptor: Refresh successful. Retrying the original request.")

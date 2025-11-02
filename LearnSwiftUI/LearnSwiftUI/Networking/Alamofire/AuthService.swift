@@ -8,7 +8,7 @@
 import Alamofire
 import Foundation
 
-class AuthService {
+actor AuthService {
     private let baseURL = "https://api.escuelajs.co/api/v1"
     static let shared = AuthService()
     private typealias RetryHandler = (Result<String, Error>) -> Void
@@ -63,6 +63,7 @@ class AuthService {
                     switch result {
                     case .success(let token):
                         // Token successfully refreshed, return the new token
+                        debugPrint("Requests in [requestsToRetry] resolved with new token \(token).")
                         continuation.resume(returning: TokenResponse(accessToken: token, refreshToken: ""))
                     case .failure(let error):
                         // Refresh token failed, throw error
@@ -112,7 +113,7 @@ class AuthService {
             
         } catch {
             // Clear old tokens
-            KeychainStore.shared.clearToken()
+            KeychainStore.shared.clearAccessToken()
             debugPrint("❌ AuthService: Token refresh failed. Error: \(error.localizedDescription)")
             
             // Notify pending requests of failure requestsToRetry.forEach { $0(.failure(AuthServiceError.refreshTokenFailed)) }

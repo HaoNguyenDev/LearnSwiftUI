@@ -40,7 +40,7 @@ final class KeychainStore {
         keychain.allKeys().forEach { keychain[$0] = nil }
     }
     
-    func clearToken() {
+    func clearAccessToken() {
         keychain[KeychainKeys.accessToken.rawValue] = nil
     }
 }
