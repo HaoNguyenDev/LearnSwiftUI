@@ -1,0 +1,11 @@
+//
+//  Staging.xcconfig
+//  LearnSwiftUI
+//
+//  Created by Hao Nguyen on 2/11/25.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
+
+API_BASE_URL = https:/api.escuelajs.co/api/v2

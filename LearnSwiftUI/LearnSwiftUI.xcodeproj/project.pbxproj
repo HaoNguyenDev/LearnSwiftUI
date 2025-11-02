@@ -65,6 +65,8 @@
 		DA54773D2EB654BC005C8868 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54773C2EB654BC005C8868 /* Product.swift */; };
 		DA5477492EB65729005C8868 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5477482EB65729005C8868 /* Profile.swift */; };
 		DA54774E2EB658E6005C8868 /* AlamofireTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54774D2EB658E6005C8868 /* AlamofireTestView.swift */; };
+		DA54779D2EB7936F005C8868 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA54779C2EB7936F005C8868 /* Env.swift */; };
+		DA5477A22EB7983D005C8868 /* FakeStoreCommonRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5477A12EB7983D005C8868 /* FakeStoreCommonRequest.swift */; };
 		DA58DD8E2E9E35630042D1AD /* NetworkingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58DD8D2E9E35630042D1AD /* NetworkingBootcamp.swift */; };
 		DA58DD9C2E9E5FF90042D1AD /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58DD9B2E9E5FF90042D1AD /* String+Extensions.swift */; };
 		DA58DDAD2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58DDAC2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift */; };
@@ -159,6 +161,7 @@
 		DA8748992E6B007700B189F3 /* WeatherDataPill.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8748982E6B007700B189F3 /* WeatherDataPill.swift */; };
 		DA87489B2E6B007D00B189F3 /* WeatherListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87489A2E6B007D00B189F3 /* WeatherListView.swift */; };
 		DA87489E2E6B16B500B189F3 /* WeatherMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87489D2E6B16B500B189F3 /* WeatherMainView.swift */; };
+		DA87A2122EB7ACF500749349 /* FakeStoreAuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87A2112EB7ACF500749349 /* FakeStoreAuthRequest.swift */; };
 		DA8F78A22E883F0300826FB2 /* SwiftUI.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA8F78A12E883F0300826FB2 /* SwiftUI.txt */; };
 		DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D32E3A65110051F62F /* SharedModel.swift */; };
 		DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */; };
@@ -298,6 +301,11 @@
 		DA54773C2EB654BC005C8868 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		DA5477482EB65729005C8868 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		DA54774D2EB658E6005C8868 /* AlamofireTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireTestView.swift; sourceTree = "<group>"; };
+		DA5477772EB79175005C8868 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		DA54777A2EB79199005C8868 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
+		DA54777E2EB791A8005C8868 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		DA54779C2EB7936F005C8868 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
+		DA5477A12EB7983D005C8868 /* FakeStoreCommonRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeStoreCommonRequest.swift; sourceTree = "<group>"; };
 		DA58DD8D2E9E35630042D1AD /* NetworkingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingBootcamp.swift; sourceTree = "<group>"; };
 		DA58DD9B2E9E5FF90042D1AD /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		DA58DDAC2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewModifiers.swift; sourceTree = "<group>"; };
@@ -396,6 +404,7 @@
 		DA8748982E6B007700B189F3 /* WeatherDataPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataPill.swift; sourceTree = "<group>"; };
 		DA87489A2E6B007D00B189F3 /* WeatherListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListView.swift; sourceTree = "<group>"; };
 		DA87489D2E6B16B500B189F3 /* WeatherMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMainView.swift; sourceTree = "<group>"; };
+		DA87A2112EB7ACF500749349 /* FakeStoreAuthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeStoreAuthRequest.swift; sourceTree = "<group>"; };
 		DA89A7CF2E48DF73007BF882 /* Closure.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Closure.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA89A7D12E48FEAE007BF882 /* RefreshTokenExample.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RefreshTokenExample.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA89A7D22E490391007BF882 /* GCDTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GCDTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -646,6 +655,7 @@
 		DA415E652DE5BFAB009F515E /* LearnSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				DA5477762EB79133005C8868 /* Supporting */,
 				DA5476602EB23363005C8868 /* Swift Algorithms */,
 				DA415E612DE5BFAB009F515E /* Preview Content */,
 				DA5476E62EB3A4A8005C8868 /* ViewToTestClass.swift */,
@@ -781,6 +791,7 @@
 			children = (
 				DA54774C2EB658D7005C8868 /* Test */,
 				DA54772C2EB6510B005C8868 /* SampleSyntax */,
+				DA5477BF2EB7A6CB005C8868 /* ClientService */,
 				DA5477322EB651AE005C8868 /* AlamofireNetworking.swift */,
 				DA5477002EB4EBA7005C8868 /* AuthService.swift */,
 				DA5476F72EB3C292005C8868 /* AuthInterceptor.swift */,
@@ -830,6 +841,26 @@
 				DA54774D2EB658E6005C8868 /* AlamofireTestView.swift */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		DA5477762EB79133005C8868 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				DA54779C2EB7936F005C8868 /* Env.swift */,
+				DA5477772EB79175005C8868 /* Debug.xcconfig */,
+				DA54777A2EB79199005C8868 /* Staging.xcconfig */,
+				DA54777E2EB791A8005C8868 /* Release.xcconfig */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		DA5477BF2EB7A6CB005C8868 /* ClientService */ = {
+			isa = PBXGroup;
+			children = (
+				DA87A2112EB7ACF500749349 /* FakeStoreAuthRequest.swift */,
+				DA5477A12EB7983D005C8868 /* FakeStoreCommonRequest.swift */,
+			);
+			path = ClientService;
 			sourceTree = "<group>";
 		};
 		DA5D71042E3CD1EB00C78E40 /* NavigationApp */ = {
@@ -1412,7 +1443,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
-				LastUpgradeCheck = 1620;
+				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					DA415E4E2DE5BF26009F515E = {
 						CreatedOnToolsVersion = 16.2;
@@ -1501,6 +1532,7 @@
 				DA5D71252E3D189100C78E40 /* Splash.swift in Sources */,
 				DA7BF5C92E98EC2000224BCF /* ThemeProtocol.swift in Sources */,
 				DAC35B162E9FCCDA0019021D /* Array+Extensions.swift in Sources */,
+				DA54779D2EB7936F005C8868 /* Env.swift in Sources */,
 				DAEBAE4A2DF28E1E00082B1C /* SubviewBootcamp.swift in Sources */,
 				DA7BE0A42E806032006821CE /* LoginPresenter.swift in Sources */,
 				DA54773D2EB654BC005C8868 /* Product.swift in Sources */,
@@ -1609,6 +1641,7 @@
 				DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */,
 				DAA709122E75D447006F8E70 /* MomoPaymentService.swift in Sources */,
 				DAA709252E787C52006F8E70 /* TransactionResult.swift in Sources */,
+				DA5477A22EB7983D005C8868 /* FakeStoreCommonRequest.swift in Sources */,
 				DAA7090B2E75D29E006F8E70 /* LocationManager.swift in Sources */,
 				DA8748952E6B006A00B189F3 /* WeatherLoadingView.swift in Sources */,
 				DAA7090F2E75D3CE006F8E70 /* PaymentServiceProtocol.swift in Sources */,
@@ -1633,6 +1666,7 @@
 				DAEBAE3C2DEB07A500082B1C /* SpacerBootcamp.swift in Sources */,
 				DA7BE0BA2E80637F006821CE /* HomeRouter.swift in Sources */,
 				DAEBAE442DECC2D100082B1C /* GridBootcamp.swift in Sources */,
+				DA87A2122EB7ACF500749349 /* FakeStoreAuthRequest.swift in Sources */,
 				DA5164322E3CB57600642709 /* NavigationManager.swift in Sources */,
 				DA4726582EA7C31E000D596A /* AppTextStyleSize.swift in Sources */,
 				DA4F7EF12E9A6B6D001CB7B2 /* HButtonStyle.swift in Sources */,
@@ -1682,6 +1716,7 @@
 /* Begin XCBuildConfiguration section */
 		DA415E5B2DE5BF27009F515E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA5477772EB79175005C8868 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1745,6 +1780,7 @@
 		};
 		DA415E5C2DE5BF27009F515E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA54777E2EB791A8005C8868 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1875,6 +1911,101 @@
 			};
 			name = Release;
 		};
+		DA5477742EB790C9005C8868 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA54777A2EB79199005C8868 /* Staging.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Staging;
+		};
+		DA5477752EB790C9005C8868 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LearnSwiftUI/LearnSwiftUI.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LearnSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LearnSwiftUI/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = haonguyen.LearnSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Staging;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1883,6 +2014,7 @@
 			buildConfigurations = (
 				DA415E5B2DE5BF27009F515E /* Debug */,
 				DA415E5C2DE5BF27009F515E /* Release */,
+				DA5477742EB790C9005C8868 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1892,6 +2024,7 @@
 			buildConfigurations = (
 				DA415E5E2DE5BF27009F515E /* Debug */,
 				DA415E5F2DE5BF27009F515E /* Release */,
+				DA5477752EB790C9005C8868 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
