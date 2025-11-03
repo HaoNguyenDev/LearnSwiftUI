@@ -71,7 +71,7 @@ struct LearnSwiftUIApp: App {
             /// Combine
 //            CbDemoContentView()
 //            UserListContentView()
-//            CombineDefinitionContentView()
+            CombineDefinitionContentView()
 
 //            ContentView()
 //                .environmentTheme(manager: themeManager)
@@ -91,7 +91,7 @@ struct LearnSwiftUIApp: App {
 //            }
             
 //            ViewToTestClass()
-            AlamofireTestView()
+//            AlamofireTestView()
         }
     }
 }

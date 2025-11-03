@@ -10,10 +10,6 @@ import SwiftUI
 
 struct CombineDefinitionContentView: View {
     var body: some View {
-        VStack {
-            
-            CombineDefinitionViewWrapper()
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-        }
+        CombineDefinitionViewWrapper()
     }
 }
