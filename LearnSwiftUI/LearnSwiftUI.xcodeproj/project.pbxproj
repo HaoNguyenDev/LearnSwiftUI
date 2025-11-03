@@ -21,8 +21,8 @@
 		DA37F9922E8D8E100001599E /* CbLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F9912E8D8E100001599E /* CbLoginViewController.swift */; };
 		DA37F9952E8D8E3E0001599E /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DA37F9942E8D8E3E0001599E /* CombineCocoa */; };
 		DA37F9972E8D8FBB0001599E /* CbLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA37F9962E8D8FBB0001599E /* CbLoginViewController.xib */; };
-		DA37F9992E8D91F30001599E /* CbDemoViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F9982E8D91F30001599E /* CbDemoViewWrapper.swift */; };
-		DA37F99D2E8D93F60001599E /* CbDemoContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F99C2E8D93F60001599E /* CbDemoContentView.swift */; };
+		DA37F9992E8D91F30001599E /* CbDemoLoginViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F9982E8D91F30001599E /* CbDemoLoginViewWrapper.swift */; };
+		DA37F99D2E8D93F60001599E /* CbDemoLoginContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F99C2E8D93F60001599E /* CbDemoLoginContentView.swift */; };
 		DA37F9A02E8EE3AC0001599E /* CombineItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F99F2E8EE3AC0001599E /* CombineItemType.swift */; };
 		DA37F9A22E8EE4C30001599E /* CombineDefinitionHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F9A12E8EE4C30001599E /* CombineDefinitionHomeVC.swift */; };
 		DA37F9A42E8EE50F0001599E /* CombineDefinitionHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F9A32E8EE50F0001599E /* CombineDefinitionHomeViewModel.swift */; };
@@ -253,8 +253,8 @@
 		DA37F98D2E8D8BE00001599E /* ViewModelTransformableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTransformableProtocol.swift; sourceTree = "<group>"; };
 		DA37F9912E8D8E100001599E /* CbLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CbLoginViewController.swift; sourceTree = "<group>"; };
 		DA37F9962E8D8FBB0001599E /* CbLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CbLoginViewController.xib; sourceTree = "<group>"; };
-		DA37F9982E8D91F30001599E /* CbDemoViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CbDemoViewWrapper.swift; sourceTree = "<group>"; };
-		DA37F99C2E8D93F60001599E /* CbDemoContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CbDemoContentView.swift; sourceTree = "<group>"; };
+		DA37F9982E8D91F30001599E /* CbDemoLoginViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CbDemoLoginViewWrapper.swift; sourceTree = "<group>"; };
+		DA37F99C2E8D93F60001599E /* CbDemoLoginContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CbDemoLoginContentView.swift; sourceTree = "<group>"; };
 		DA37F99F2E8EE3AC0001599E /* CombineItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineItemType.swift; sourceTree = "<group>"; };
 		DA37F9A12E8EE4C30001599E /* CombineDefinitionHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineDefinitionHomeVC.swift; sourceTree = "<group>"; };
 		DA37F9A32E8EE50F0001599E /* CombineDefinitionHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineDefinitionHomeViewModel.swift; sourceTree = "<group>"; };
@@ -1323,8 +1323,8 @@
 		DAC35ACC2E9F83070019021D /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
-				DA37F99C2E8D93F60001599E /* CbDemoContentView.swift */,
-				DA37F9982E8D91F30001599E /* CbDemoViewWrapper.swift */,
+				DA37F99C2E8D93F60001599E /* CbDemoLoginContentView.swift */,
+				DA37F9982E8D91F30001599E /* CbDemoLoginViewWrapper.swift */,
 				DA37F9902E8D8DFC0001599E /* MVVM */,
 				DA37F9892E8D8A6D0001599E /* Errors */,
 			);
@@ -1575,7 +1575,7 @@
 				DA7BE0B82E806362006821CE /* HomeInteractor.swift in Sources */,
 				DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */,
 				DABDF7B42E70466B00DEC7C6 /* DownloadTask.swift in Sources */,
-				DA37F99D2E8D93F60001599E /* CbDemoContentView.swift in Sources */,
+				DA37F99D2E8D93F60001599E /* CbDemoLoginContentView.swift in Sources */,
 				DA37F9872E8D898B0001599E /* CbLoginResult.swift in Sources */,
 				DA54774E2EB658E6005C8868 /* AlamofireTestView.swift in Sources */,
 				DA58DDAD2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift in Sources */,
@@ -1660,7 +1660,7 @@
 				DA54773A2EB654A3005C8868 /* Category.swift in Sources */,
 				DA5477182EB63BAC005C8868 /* AuthServiceError.swift in Sources */,
 				DA7BE0BC2E8063AD006821CE /* HomeModuleBuilder.swift in Sources */,
-				DA37F9992E8D91F30001599E /* CbDemoViewWrapper.swift in Sources */,
+				DA37F9992E8D91F30001599E /* CbDemoLoginViewWrapper.swift in Sources */,
 				DA5C98B82E391F91007AC9E9 /* TodoListView.swift in Sources */,
 				DA5D71A22E41EEDA00C78E40 /* ChangePasswordSuccess.swift in Sources */,
 				DAEBAE3C2DEB07A500082B1C /* SpacerBootcamp.swift in Sources */,

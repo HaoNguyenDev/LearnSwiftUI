@@ -8,7 +8,7 @@
 import SwiftUI
 import UIKit
 
-struct CbDemoViewWrapper: UIViewControllerRepresentable {
+struct CbDemoLoginViewWrapper: UIViewControllerRepresentable {
     
     // Required: Defines the type of UIViewController this struct represents
     typealias UIViewControllerType = CbLoginViewController
