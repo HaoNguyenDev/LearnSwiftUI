@@ -1,5 +1,5 @@
 //
-//  CbDemoContentView.swift
+//  CbDemoLoginContentView.swift
 //  LearnSwiftUI
 //
 //  Created by Hao Nguyen on 1/10/25.
@@ -7,12 +7,9 @@
 
 import SwiftUI
 
-struct CbDemoContentView: View {
+struct CbDemoLoginContentView: View {
     var body: some View {
-        VStack {
-            
-            CbDemoViewWrapper()
+            CbDemoLoginViewWrapper()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-        }
     }
 }

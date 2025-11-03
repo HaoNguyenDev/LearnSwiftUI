@@ -69,9 +69,9 @@ struct LearnSwiftUIApp: App {
 //            }
             
             /// Combine
-//            CbDemoContentView()
+            CbDemoLoginContentView()
 //            UserListContentView()
-            CombineDefinitionContentView()
+//            CombineDefinitionContentView()
 
 //            ContentView()
 //                .environmentTheme(manager: themeManager)
