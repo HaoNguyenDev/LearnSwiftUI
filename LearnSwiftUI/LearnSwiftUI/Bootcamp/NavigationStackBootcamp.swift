@@ -46,7 +46,7 @@ struct NavigationStackBootcamp: View {
             // Destination manages changes from navigationPath to navigate to destination view
             .navigationDestination(for: Scenes.self) { view in
                 switch view {
-                case .detailView:
+                case .detailView(_):
                     DetailView2(navPath: $navPath, id: Int.random(in: 1...100))
                 case .settingView:
                     SettingView2(navPath: $navPath)
