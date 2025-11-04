@@ -1,5 +1,8 @@
+import Foundation
 import Combine
 
+import PlaygroundSupport
+PlaygroundPage.current.needsIndefiniteExecution = true
 /*
  What is the Combine Framework?
  Combine is a framework introduced by Apple to provide a declarative approach to handling asynchronous events over time.
@@ -88,3 +91,38 @@ import Combine
  Declarative: You declare what you want to do with the data, rather than doing it step by step (imperative).
  Good integration: Combine integrates very well with SwiftUI (Apple uses attributes like @Published to automatically create Publishers) and other asynchronous APIs like URLSession (to make network requests).
  */
+
+let cancellables = Set<AnyCancellable>()
+
+//if case .failure(let error) = completion
+
+// MARK: - Just
+/// Publishes an output to a subscriber just once, and then finishes.
+/// It's useful for immediately supplying a value to a downstream operator.
+/// The `Failure` type is always ``Never``.
+///
+/// ⚙️ When to Use?
+/// - When you need to create a simple Publisher to ``start a Combine chain`` with a fixed, known value.
+/// - In functions that return a Publisher, but you already have the value synchronously and need to wrap it to conform to the Combine API.
+///
+/// ⚠️ Notes:
+/// - `Just` is one of the simplest Publishers to initialize and test.
+/// - Because it emits the value and ``completes immediately``, it is often used to model a synchronous action within an asynchronous pipeline.
+
+class JustDemo {
+    var cancellables = Set<AnyCancellable>()
+
+    func runDemo() {
+        print("--- Demo Just Operator ---")
+
+        let publisher = Just(42)
+      
+        publisher
+            .sink(receiveValue: { value in
+                debugPrint("Just emitted: \(value)")
+            })
+            .store(in: &cancellables)
+    }
+}
+
+ JustDemo().runDemo()
