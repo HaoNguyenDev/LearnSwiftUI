@@ -7,7 +7,7 @@ var cancellables = Set<AnyCancellable>()
 /*
  What is the Combine Framework?
  Combine is a framework introduced by Apple to provide a declarative approach to handling asynchronous events over time.
-
+ 
  Simply put, Combine helps you manage the flow of data over time, such as:
  Network responses: When the application fetches data from the internet.
  User interactions: Pressing a button, changing text in an input field.
@@ -16,7 +16,7 @@ var cancellables = Set<AnyCancellable>()
  
  Combine Core Concepts
  Combine is based on three main components that interact with each other:
-
+ 
  1. Publisher
  What is it? A Publisher is an object that can emit values ​​over time.
  Emitted Values: Each Publisher has two types of Output values:
@@ -39,7 +39,7 @@ var cancellables = Set<AnyCancellable>()
  Publisher
  Publisher -> Operator 1 -> Operator 2 -> Subscriber
  */
- 
+
 /*
  Benefits of Combine
  Readable: Chaining makes it easy to track where data comes from and what steps it goes through.
@@ -51,7 +51,7 @@ var cancellables = Set<AnyCancellable>()
 // MARK: - Subjects
 
 // MARK: - PassthroughSubject
-/// In English: A Subject that broadcasts elements to its subscribers.
+/// A Subject that broadcasts elements to its subscribers.
 /// It does not have an ``initial value`` and only emits elements that are sent
 /// *after* a subscription is established.
 ///
@@ -108,7 +108,7 @@ class PassthroughSubjectDemo {
 //passthroughSubjectDemo.runDemo()
 
 // MARK: - CurrentValueSubject
-/// In English: A Subject that broadcasts elements to its subscribers, retaining the
+/// A Subject that broadcasts elements to its subscribers, retaining the
 /// ``most recently published element`` and emitting it immediately to new subscribers.
 /// It must be initialized with an initial value.
 ///
@@ -160,8 +160,52 @@ class CurrentValueSubjectDemo {
     }
 }
 
-let currentValueSubjectDemo = CurrentValueSubjectDemo()
-currentValueSubjectDemo.runDemo()
+//let currentValueSubjectDemo = CurrentValueSubjectDemo()
+//currentValueSubjectDemo.runDemo()
+
+// MARK: - @Published
+/// A property wrapper that automatically creates a ``Publisher`` for the property
+/// it wraps. When the property's value changes, the implicit Publisher emits the new value
+/// to all subscribers, behaving exactly like a CurrentValueSubject.
+///
+/// ⚙️ When to Use?
+/// - Primarily used within classes conforming to the ``ObservableObject`` protocol
+///   to define reactive properties in ViewModels.
+/// - When you want to update UI automatically in SwiftUI or UIKit whenever the model state changes.
+///
+/// ⚠️ Notes:
+/// - To access the Publisher, you must use the dollar sign (`$`) prefix (e.g., ``$username``).
+/// - The class containing the `@Published` property must conform to `ObservableObject`.
+
+class PublishedDemo: ObservableObject {
+    @Published var counter: Int
+    
+    init(counter: Int = 0) {
+        self.counter = counter
+    }
+    
+    @MainActor func runDemo() {
+        debugPrint("--- Demo @Published ---")
+        
+        let subcription = $counter
+            .sink { [weak self] value in
+                guard let self = self else { return }
+                debugPrint("Subcription received value: \(value)")
+            }
+        subcription.store(in: &cancellables)
+        
+        debugPrint("Update value of counter to 1...")
+        self.counter = 1
+        
+        debugPrint("Update value of counter to 5...")
+        self.counter = 5
+        
+        debugPrint("--- Demo End ---")
+    }
+}
+
+let publishedDemo = PublishedDemo()
+publishedDemo.runDemo()
 
 // MARK: - Just
 /// Publishes an output to a subscriber just once, and then finishes.
@@ -178,12 +222,12 @@ currentValueSubjectDemo.runDemo()
 
 class JustDemo {
     var cancellables = Set<AnyCancellable>()
-
+    
     func runDemo() {
         print("--- Demo Just Operator ---")
-
+        
         let publisher = Just(42)
-      
+        
         publisher
             .sink(receiveValue: { value in
                 debugPrint("Just emitted: \(value)")
@@ -238,11 +282,6 @@ class FutureDemo {
         // --- Test Successful case ---
         fetchData(shouldSucceed: true)
             .sink { completion in
-                print("1. Trạng thái: \(completion)")
-                                // Tắt execution sau khi nhận kết quả thành công
-                                if case .finished = completion {
-                                     PlaygroundPage.current.needsIndefiniteExecution = false
-                                }
             } receiveValue: { value in
                 debugPrint("Value received: \(value)")
             }
@@ -252,3 +291,4 @@ class FutureDemo {
 
 //let demo = FutureDemo()
 //demo.runDemo()
+
