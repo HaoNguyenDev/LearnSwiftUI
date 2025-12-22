@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol Routerable: Identifiable, Hashable {
+protocol Routable: Identifiable, Hashable {
     var id: String { get }
 }
 
 struct RouterView: Identifiable {
     let id = UUID()
-    let routerable: any Routerable
+    let routerable: any Routable
 }
 
 enum Router { }

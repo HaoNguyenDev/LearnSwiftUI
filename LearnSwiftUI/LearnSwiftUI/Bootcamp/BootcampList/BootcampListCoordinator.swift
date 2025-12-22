@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension Router {
-    enum BootcampList: Routerable {
+    enum BootcampList: Routable {
         case subview
         
         var id: String {
