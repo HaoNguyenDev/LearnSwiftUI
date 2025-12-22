@@ -16,6 +16,7 @@ struct LearnSwiftUIApp: App {
     @State private var appSettings = AppSettings.shared
     var body: some Scene {
         WindowGroup {
+            AppCoordinator()
 //            TextBootCamp()
 //            ShapesBootCamp()
 //            ColorsBootcamp()
@@ -69,7 +70,7 @@ struct LearnSwiftUIApp: App {
 //            }
             
             /// Combine
-            CbDemoLoginContentView()
+//            CbDemoLoginContentView()
 //            UserListContentView()
 //            CombineDefinitionContentView()
 
