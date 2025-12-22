@@ -74,19 +74,7 @@
 		DA5C98B82E391F91007AC9E9 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B72E391F91007AC9E9 /* TodoListView.swift */; };
 		DA5C98BA2E39237C007AC9E9 /* TodoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B92E39237C007AC9E9 /* TodoRowView.swift */; };
 		DA5C98BC2E3924AA007AC9E9 /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98BB2E3924AA007AC9E9 /* TodoDetailView.swift */; };
-		DA5D711C2E3D184500C78E40 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D711B2E3D184500C78E40 /* Router.swift */; };
-		DA5D711E2E3D185500C78E40 /* NavRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D711D2E3D185500C78E40 /* NavRouter.swift */; };
-		DA5D71202E3D185F00C78E40 /* ScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D711F2E3D185F00C78E40 /* ScreenCoordinator.swift */; };
-		DA5D71252E3D189100C78E40 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71242E3D189100C78E40 /* Splash.swift */; };
 		DA5D712A2E3D19A000C78E40 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71292E3D19A000C78E40 /* Logger.swift */; };
-		DA5D712C2E3D1A8800C78E40 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D712B2E3D1A8500C78E40 /* Login.swift */; };
-		DA5D712E2E3D1D7900C78E40 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D712D2E3D1D7900C78E40 /* AppCoordinator.swift */; };
-		DA5D71302E3D205400C78E40 /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D712F2E3D205000C78E40 /* MainTab.swift */; };
-		DA5D71322E3D20F100C78E40 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71312E3D20F100C78E40 /* Placeholder.swift */; };
-		DA5D71342E3DE65500C78E40 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71332E3DE65500C78E40 /* Home.swift */; };
-		DA5D71362E3DE82A00C78E40 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71352E3DE82A00C78E40 /* Account.swift */; };
-		DA5D71382E3DFBA000C78E40 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71372E3DFBA000C78E40 /* ChangePassword.swift */; };
-		DA5D713A2E3E000D00C78E40 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71392E3E000D00C78E40 /* Security.swift */; };
 		DA5D71432E3E4BF700C78E40 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71422E3E4BF700C78E40 /* BackButton.swift */; };
 		DA5D71452E3F43B100C78E40 /* ObservablePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71442E3F43B100C78E40 /* ObservablePattern.swift */; };
 		DA5D71472E3F589A00C78E40 /* CustomEnvironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71462E3F589A00C78E40 /* CustomEnvironmentValues.swift */; };
@@ -103,7 +91,6 @@
 		DA5D719B2E3FC03D00C78E40 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D719A2E3FC03D00C78E40 /* AlertHandler.swift */; };
 		DA5D719E2E40940400C78E40 /* GithubUserListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D719D2E40940400C78E40 /* GithubUserListVM.swift */; };
 		DA5D71A02E40CC8300C78E40 /* AsyncAwaitBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D719F2E40CC8300C78E40 /* AsyncAwaitBootcamp.swift */; };
-		DA5D71A22E41EEDA00C78E40 /* ChangePasswordSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5D71A12E41EEDA00C78E40 /* ChangePasswordSuccess.swift */; };
 		DA6027992EA3D91D00271E00 /* MVVMDemoUIKit_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6027982EA3D91D00271E00 /* MVVMDemoUIKit_ViewController.swift */; };
 		DA60279D2EA3D9A400271E00 /* MVVMDemoUIKit_ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA60279C2EA3D9A400271E00 /* MVVMDemoUIKit_ViewModel.swift */; };
 		DA6027A72EA4A42C00271E00 /* MVVMDemoUIKitViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6027A62EA4A42C00271E00 /* MVVMDemoUIKitViewWrapper.swift */; };
@@ -166,6 +153,13 @@
 		DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D32E3A65110051F62F /* SharedModel.swift */; };
 		DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */; };
 		DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */; };
+		DAA45E452EF931B700BC57E9 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E442EF931B700BC57E9 /* Router.swift */; };
+		DAA45E542EF933C400BC57E9 /* NavRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E532EF933C400BC57E9 /* NavRouter.swift */; };
+		DAA45E592EF9357D00BC57E9 /* ScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E582EF9357D00BC57E9 /* ScreenCoordinator.swift */; };
+		DAA45E6B2EF974A000BC57E9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E6A2EF974A000BC57E9 /* AppCoordinator.swift */; };
+		DAA45E712EF9759100BC57E9 /* BootcampListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E702EF9759100BC57E9 /* BootcampListCoordinator.swift */; };
+		DAA45E742EF976EA00BC57E9 /* BootcampListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E732EF976EA00BC57E9 /* BootcampListView.swift */; };
+		DAA45E772EF977B100BC57E9 /* BootcampEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E762EF977B100BC57E9 /* BootcampEnums.swift */; };
 		DAA7090B2E75D29E006F8E70 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7090A2E75D29E006F8E70 /* LocationManager.swift */; };
 		DAA7090F2E75D3CE006F8E70 /* PaymentServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7090E2E75D3CE006F8E70 /* PaymentServiceProtocol.swift */; };
 		DAA709122E75D447006F8E70 /* MomoPaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA709112E75D447006F8E70 /* MomoPaymentService.swift */; };
@@ -313,19 +307,7 @@
 		DA5C98B72E391F91007AC9E9 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		DA5C98B92E39237C007AC9E9 /* TodoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRowView.swift; sourceTree = "<group>"; };
 		DA5C98BB2E3924AA007AC9E9 /* TodoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
-		DA5D711B2E3D184500C78E40 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		DA5D711D2E3D185500C78E40 /* NavRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavRouter.swift; sourceTree = "<group>"; };
-		DA5D711F2E3D185F00C78E40 /* ScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCoordinator.swift; sourceTree = "<group>"; };
-		DA5D71242E3D189100C78E40 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		DA5D71292E3D19A000C78E40 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		DA5D712B2E3D1A8500C78E40 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		DA5D712D2E3D1D7900C78E40 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		DA5D712F2E3D205000C78E40 /* MainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
-		DA5D71312E3D20F100C78E40 /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
-		DA5D71332E3DE65500C78E40 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		DA5D71352E3DE82A00C78E40 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		DA5D71372E3DFBA000C78E40 /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
-		DA5D71392E3E000D00C78E40 /* Security.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
 		DA5D71422E3E4BF700C78E40 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		DA5D71442E3F43B100C78E40 /* ObservablePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservablePattern.swift; sourceTree = "<group>"; };
 		DA5D71462E3F589A00C78E40 /* CustomEnvironmentValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEnvironmentValues.swift; sourceTree = "<group>"; };
@@ -341,7 +323,6 @@
 		DA5D719A2E3FC03D00C78E40 /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 		DA5D719D2E40940400C78E40 /* GithubUserListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserListVM.swift; sourceTree = "<group>"; };
 		DA5D719F2E40CC8300C78E40 /* AsyncAwaitBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitBootcamp.swift; sourceTree = "<group>"; };
-		DA5D71A12E41EEDA00C78E40 /* ChangePasswordSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordSuccess.swift; sourceTree = "<group>"; };
 		DA6027982EA3D91D00271E00 /* MVVMDemoUIKit_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMDemoUIKit_ViewController.swift; sourceTree = "<group>"; };
 		DA60279C2EA3D9A400271E00 /* MVVMDemoUIKit_ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMDemoUIKit_ViewModel.swift; sourceTree = "<group>"; };
 		DA6027A62EA4A42C00271E00 /* MVVMDemoUIKitViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMDemoUIKitViewWrapper.swift; sourceTree = "<group>"; };
@@ -413,6 +394,13 @@
 		DAA3B8D32E3A65110051F62F /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
 		DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentBootcamp.swift; sourceTree = "<group>"; };
 		DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableBootcamp.swift; sourceTree = "<group>"; };
+		DAA45E442EF931B700BC57E9 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		DAA45E532EF933C400BC57E9 /* NavRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavRouter.swift; sourceTree = "<group>"; };
+		DAA45E582EF9357D00BC57E9 /* ScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCoordinator.swift; sourceTree = "<group>"; };
+		DAA45E6A2EF974A000BC57E9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		DAA45E702EF9759100BC57E9 /* BootcampListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampListCoordinator.swift; sourceTree = "<group>"; };
+		DAA45E732EF976EA00BC57E9 /* BootcampListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampListView.swift; sourceTree = "<group>"; };
+		DAA45E762EF977B100BC57E9 /* BootcampEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampEnums.swift; sourceTree = "<group>"; };
 		DAA7090A2E75D29E006F8E70 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		DAA7090E2E75D3CE006F8E70 /* PaymentServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentServiceProtocol.swift; sourceTree = "<group>"; };
 		DAA709112E75D447006F8E70 /* MomoPaymentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomoPaymentService.swift; sourceTree = "<group>"; };
@@ -655,6 +643,8 @@
 		DA415E652DE5BFAB009F515E /* LearnSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				DAA45E692EF9748B00BC57E9 /* App */,
+				DAA45E2D2EF92E8900BC57E9 /* Router */,
 				DA5477762EB79133005C8868 /* Supporting */,
 				DA5476602EB23363005C8868 /* Swift Algorithms */,
 				DA415E612DE5BFAB009F515E /* Preview Content */,
@@ -679,6 +669,7 @@
 		DA415E6A2DE5BFAF009F515E /* Bootcamp */ = {
 			isa = PBXGroup;
 			children = (
+				DAA45E6E2EF9756300BC57E9 /* BootcampList */,
 				DA415E6D2DE5BFDD009F515E /* TextBootcamp.swift */,
 				DA415E8A2DE5C845009F515E /* ShapesBootcamp.swift */,
 				DA415E8C2DE5CD41009F515E /* ColorsBootcamp.swift */,
@@ -863,34 +854,6 @@
 			path = ClientService;
 			sourceTree = "<group>";
 		};
-		DA5D71042E3CD1EB00C78E40 /* NavigationApp */ = {
-			isa = PBXGroup;
-			children = (
-				DA5D711D2E3D185500C78E40 /* NavRouter.swift */,
-				DA5D711F2E3D185F00C78E40 /* ScreenCoordinator.swift */,
-				DA5D711B2E3D184500C78E40 /* Router.swift */,
-				DA5D712D2E3D1D7900C78E40 /* AppCoordinator.swift */,
-				DA5D71232E3D188C00C78E40 /* Scenes */,
-			);
-			path = NavigationApp;
-			sourceTree = "<group>";
-		};
-		DA5D71232E3D188C00C78E40 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				DA5D71312E3D20F100C78E40 /* Placeholder.swift */,
-				DA5D712F2E3D205000C78E40 /* MainTab.swift */,
-				DA5D712B2E3D1A8500C78E40 /* Login.swift */,
-				DA5D71242E3D189100C78E40 /* Splash.swift */,
-				DA5D71332E3DE65500C78E40 /* Home.swift */,
-				DA5D71352E3DE82A00C78E40 /* Account.swift */,
-				DA5D71392E3E000D00C78E40 /* Security.swift */,
-				DA5D71372E3DFBA000C78E40 /* ChangePassword.swift */,
-				DA5D71A12E41EEDA00C78E40 /* ChangePasswordSuccess.swift */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
 		DA5D71282E3D198100C78E40 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -1016,7 +979,6 @@
 				DA0B4AE52E6FC96800628E53 /* MultiDownloadApp */,
 				DA8748852E6AFBB000B189F3 /* WeatherList */,
 				DA5D71872E3FB01C00C78E40 /* GithubUsers */,
-				DA5D71042E3CD1EB00C78E40 /* NavigationApp */,
 				DA65B7332E37D31B00BF8A59 /* TodoApp */,
 			);
 			path = AppDemo;
@@ -1227,6 +1189,34 @@
 				DAA3B8D32E3A65110051F62F /* SharedModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DAA45E2D2EF92E8900BC57E9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DAA45E442EF931B700BC57E9 /* Router.swift */,
+				DAA45E532EF933C400BC57E9 /* NavRouter.swift */,
+				DAA45E582EF9357D00BC57E9 /* ScreenCoordinator.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DAA45E692EF9748B00BC57E9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DAA45E6A2EF974A000BC57E9 /* AppCoordinator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DAA45E6E2EF9756300BC57E9 /* BootcampList */ = {
+			isa = PBXGroup;
+			children = (
+				DAA45E702EF9759100BC57E9 /* BootcampListCoordinator.swift */,
+				DAA45E732EF976EA00BC57E9 /* BootcampListView.swift */,
+				DAA45E762EF977B100BC57E9 /* BootcampEnums.swift */,
+			);
+			path = BootcampList;
 			sourceTree = "<group>";
 		};
 		DAA709092E75D282006F8E70 /* PaymentsApp */ = {
@@ -1514,10 +1504,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA7BF5D72E98ED4000224BCF /* DefaultTheme.swift in Sources */,
-				DA5D712C2E3D1A8800C78E40 /* Login.swift in Sources */,
 				DA415E8D2DE5CD41009F515E /* ColorsBootcamp.swift in Sources */,
+				DAA45E452EF931B700BC57E9 /* Router.swift in Sources */,
 				DA7BE0AC2E8060A8006821CE /* LoginEntity.swift in Sources */,
-				DA5D712E2E3D1D7900C78E40 /* AppCoordinator.swift in Sources */,
 				DAA7091F2E75E2CC006F8E70 /* ResultAndError.swift in Sources */,
 				DA415E8B2DE5C845009F515E /* ShapesBootcamp.swift in Sources */,
 				DA6027A72EA4A42C00271E00 /* MVVMDemoUIKitViewWrapper.swift in Sources */,
@@ -1529,9 +1518,9 @@
 				DAA7091C2E75D85F006F8E70 /* PaymentView.swift in Sources */,
 				DA37F9922E8D8E100001599E /* CbLoginViewController.swift in Sources */,
 				DA8748992E6B007700B189F3 /* WeatherDataPill.swift in Sources */,
-				DA5D71252E3D189100C78E40 /* Splash.swift in Sources */,
 				DA7BF5C92E98EC2000224BCF /* ThemeProtocol.swift in Sources */,
 				DAC35B162E9FCCDA0019021D /* Array+Extensions.swift in Sources */,
+				DAA45E592EF9357D00BC57E9 /* ScreenCoordinator.swift in Sources */,
 				DA54779D2EB7936F005C8868 /* Env.swift in Sources */,
 				DAEBAE4A2DF28E1E00082B1C /* SubviewBootcamp.swift in Sources */,
 				DA7BE0A42E806032006821CE /* LoginPresenter.swift in Sources */,
@@ -1554,9 +1543,9 @@
 				DA5D71452E3F43B100C78E40 /* ObservablePattern.swift in Sources */,
 				DA7BF5CF2E98ED0300224BCF /* ThemeColorProtocol.swift in Sources */,
 				DA54770E2EB63A7E005C8868 /* LoginRequest.swift in Sources */,
+				DAA45E6B2EF974A000BC57E9 /* AppCoordinator.swift in Sources */,
 				DA54769E2EB34A47005C8868 /* Encodable.swift in Sources */,
 				DAEBAE462DF11C7300082B1C /* ButtonBootcamp.swift in Sources */,
-				DA5D711C2E3D184500C78E40 /* Router.swift in Sources */,
 				DAC35AE72E9F87230019021D /* GitHubAPIEndpointEnum.swift in Sources */,
 				DA7BF5CC2E98EC4100224BCF /* ThemeManager.swift in Sources */,
 				DA5D719E2E40940400C78E40 /* GithubUserListVM.swift in Sources */,
@@ -1578,11 +1567,13 @@
 				DA37F99D2E8D93F60001599E /* CbDemoLoginContentView.swift in Sources */,
 				DA37F9872E8D898B0001599E /* CbLoginResult.swift in Sources */,
 				DA54774E2EB658E6005C8868 /* AlamofireTestView.swift in Sources */,
+				DAA45E742EF976EA00BC57E9 /* BootcampListView.swift in Sources */,
 				DA58DDAD2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift in Sources */,
 				DA37F9B32E8EE8CA0001599E /* CombineDefinitionContentView.swift in Sources */,
 				DA4F7F1C2E9A954D001CB7B2 /* LoginButtonView.swift in Sources */,
 				DA7BF61C2E99036200224BCF /* View+Themed.swift in Sources */,
 				DA8748912E6B005800B189F3 /* WeatherErrorView.swift in Sources */,
+				DAA45E712EF9759100BC57E9 /* BootcampListCoordinator.swift in Sources */,
 				DAC35B3F2E9FED3F0019021D /* TextFieldModifiers.swift in Sources */,
 				DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */,
 				DAAA67262E6173FD004075B7 /* PickerBootcamp.swift in Sources */,
@@ -1592,7 +1583,6 @@
 				DA7BF5D32E98ED1400224BCF /* ThemeAssetsProtocol.swift in Sources */,
 				DAC35AFC2E9F8E010019021D /* UserListViewWrapper.swift in Sources */,
 				DA87488A2E6AFC6A00B189F3 /* WeatherItem.swift in Sources */,
-				DA5D71362E3DE82A00C78E40 /* Account.swift in Sources */,
 				DA7BF5E82E98F2C900224BCF /* RswiftResources+ColorResource.swift in Sources */,
 				DA5477332EB651AE005C8868 /* AlamofireNetworking.swift in Sources */,
 				DA37F9A02E8EE3AC0001599E /* CombineItemType.swift in Sources */,
@@ -1600,12 +1590,9 @@
 				DA5D71902E3FBA7400C78E40 /* GithubUserDetail.swift in Sources */,
 				DAC97E282EA3C22700F8A22F /* Double+Extensions.swift in Sources */,
 				DA0B4AEB2E6FCBB700628E53 /* DownloadView.swift in Sources */,
-				DA5D71342E3DE65500C78E40 /* Home.swift in Sources */,
-				DA5D71202E3D185F00C78E40 /* ScreenCoordinator.swift in Sources */,
 				DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */,
 				DA7BF6212E99038300224BCF /* Environment+ThemeKeys.swift in Sources */,
 				DA5476E72EB3A4A8005C8868 /* ViewToTestClass.swift in Sources */,
-				DA5D71322E3D20F100C78E40 /* Placeholder.swift in Sources */,
 				DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */,
 				DA5D717E2E3FA57800C78E40 /* NetworkProtocols.swift in Sources */,
 				DA58DD9C2E9E5FF90042D1AD /* String+Extensions.swift in Sources */,
@@ -1619,18 +1606,19 @@
 				DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */,
 				DAED677E2E20E45C00309382 /* StateObjectBootcamp.swift in Sources */,
 				DAE365DB2E9CE2EE005EF803 /* UserSettings.swift in Sources */,
+				DAA45E772EF977B100BC57E9 /* BootcampEnums.swift in Sources */,
 				DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */,
 				DA7BF5E62E98F2B400224BCF /* RswiftResources+ImageResource.swift in Sources */,
 				DAA709142E75D553006F8E70 /* ThaiPaymentService.swift in Sources */,
 				DAA709192E75D6F5006F8E70 /* PaymentProvider.swift in Sources */,
 				DA87489B2E6B007D00B189F3 /* WeatherListView.swift in Sources */,
+				DAA45E542EF933C400BC57E9 /* NavRouter.swift in Sources */,
 				DA54770B2EB63A37005C8868 /* TokenResponse.swift in Sources */,
 				DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */,
 				DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */,
 				DA7BF6722E992DEF00224BCF /* HTextField.swift in Sources */,
 				DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */,
 				DAEBAE3A2DEAF92400082B1C /* StacksBootcamp.swift in Sources */,
-				DA5D71302E3D205400C78E40 /* MainTab.swift in Sources */,
 				DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */,
 				DA5164302E3BCD2500642709 /* NavigationStackBootcamp.swift in Sources */,
 				DA7BF5D12E98ED0D00224BCF /* ThemeFontProtocol.swift in Sources */,
@@ -1649,7 +1637,6 @@
 				DA5D71A02E40CC8300C78E40 /* AsyncAwaitBootcamp.swift in Sources */,
 				DA5D71432E3E4BF700C78E40 /* BackButton.swift in Sources */,
 				DA5D71892E3FB05100C78E40 /* UserRowView.swift in Sources */,
-				DA5D713A2E3E000D00C78E40 /* Security.swift in Sources */,
 				DAFCDF6A2E630B2C00B97C00 /* ErrorBanner.swift in Sources */,
 				DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */,
 				DA3979102E9BBC1200838584 /* TextViewModifiers.swift in Sources */,
@@ -1662,7 +1649,6 @@
 				DA7BE0BC2E8063AD006821CE /* HomeModuleBuilder.swift in Sources */,
 				DA37F9992E8D91F30001599E /* CbDemoLoginViewWrapper.swift in Sources */,
 				DA5C98B82E391F91007AC9E9 /* TodoListView.swift in Sources */,
-				DA5D71A22E41EEDA00C78E40 /* ChangePasswordSuccess.swift in Sources */,
 				DAEBAE3C2DEB07A500082B1C /* SpacerBootcamp.swift in Sources */,
 				DA7BE0BA2E80637F006821CE /* HomeRouter.swift in Sources */,
 				DAEBAE442DECC2D100082B1C /* GridBootcamp.swift in Sources */,
@@ -1672,7 +1658,6 @@
 				DA4F7EF12E9A6B6D001CB7B2 /* HButtonStyle.swift in Sources */,
 				DA87489E2E6B16B500B189F3 /* WeatherMainView.swift in Sources */,
 				DAA709222E787C42006F8E70 /* PaymentVM.swift in Sources */,
-				DA5D711E2E3D185500C78E40 /* NavRouter.swift in Sources */,
 				DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */,
 				DA7BE0A62E806040006821CE /* LoginInteractor.swift in Sources */,
 				DA5476E42EB39FCD005C8868 /* AlamofireSampleAPICallSyntax.swift in Sources */,
@@ -1682,7 +1667,6 @@
 				DA60279D2EA3D9A400271E00 /* MVVMDemoUIKit_ViewModel.swift in Sources */,
 				DA415E952DE5E707009F515E /* ImagesBootcamp.swift in Sources */,
 				DA5C98B62E391F4B007AC9E9 /* TodoAppView.swift in Sources */,
-				DA5D71382E3DFBA000C78E40 /* ChangePassword.swift in Sources */,
 				DAC35B102E9F91520019021D /* UserListViewController.swift in Sources */,
 				DA5477012EB4EBA7005C8868 /* AuthService.swift in Sources */,
 				DA7BE0AE2E8061D1006821CE /* LoginModuleBuilder.swift in Sources */,

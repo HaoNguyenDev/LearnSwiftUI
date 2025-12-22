@@ -1,0 +1,14 @@
+//
+//  BootcampEnums.swift
+//  LearnSwiftUI
+//
+//  Created by Hao Nguyen on 22/12/25.
+//
+
+import Foundation
+
+enum BootcampEnums: String, CaseIterable {
+    case text = "Text"
+    case shape = "Shape"
+    case color = "Color"
+}
