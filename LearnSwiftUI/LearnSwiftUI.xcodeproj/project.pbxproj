@@ -138,6 +138,7 @@
 		DA7BF6212E99038300224BCF /* Environment+ThemeKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF6202E99038300224BCF /* Environment+ThemeKeys.swift */; };
 		DA7BF6722E992DEF00224BCF /* HTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF6712E992DEF00224BCF /* HTextField.swift */; };
 		DA7BF6902E995FAC00224BCF /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF68F2E995FAC00224BCF /* View+Extensions.swift */; };
+		DA83D7392EFC08D20050EF92 /* TextBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D7382EFC08D20050EF92 /* TextBootcampCoordinator.swift */; };
 		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
 		DA8748872E6AFBC900B189F3 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8748862E6AFBC100B189F3 /* WeatherService.swift */; };
 		DA87488A2E6AFC6A00B189F3 /* WeatherItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8748892E6AFC6300B189F3 /* WeatherItem.swift */; };
@@ -375,6 +376,7 @@
 		DA7BF6202E99038300224BCF /* Environment+ThemeKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+ThemeKeys.swift"; sourceTree = "<group>"; };
 		DA7BF6712E992DEF00224BCF /* HTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTextField.swift; sourceTree = "<group>"; };
 		DA7BF68F2E995FAC00224BCF /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		DA83D7382EFC08D20050EF92 /* TextBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBootcampCoordinator.swift; sourceTree = "<group>"; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DA8748862E6AFBC100B189F3 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		DA8748892E6AFC6300B189F3 /* WeatherItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherItem.swift; sourceTree = "<group>"; };
@@ -670,7 +672,7 @@
 			isa = PBXGroup;
 			children = (
 				DAA45E6E2EF9756300BC57E9 /* BootcampList */,
-				DA415E6D2DE5BFDD009F515E /* TextBootcamp.swift */,
+				DA83D7352EFC08B40050EF92 /* Text */,
 				DA415E8A2DE5C845009F515E /* ShapesBootcamp.swift */,
 				DA415E8C2DE5CD41009F515E /* ColorsBootcamp.swift */,
 				DA415E902DE5DF63009F515E /* GradientsColorBootcamp.swift */,
@@ -1108,6 +1110,15 @@
 				DA7BF5E52E98F2B400224BCF /* RswiftResources+ImageResource.swift */,
 			);
 			path = RswiftExtensions;
+			sourceTree = "<group>";
+		};
+		DA83D7352EFC08B40050EF92 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				DA415E6D2DE5BFDD009F515E /* TextBootcamp.swift */,
+				DA83D7382EFC08D20050EF92 /* TextBootcampCoordinator.swift */,
+			);
+			path = Text;
 			sourceTree = "<group>";
 		};
 		DA8748852E6AFBB000B189F3 /* WeatherList */ = {
@@ -1671,6 +1682,7 @@
 				DA5477012EB4EBA7005C8868 /* AuthService.swift in Sources */,
 				DA7BE0AE2E8061D1006821CE /* LoginModuleBuilder.swift in Sources */,
 				DAA709162E75D60C006F8E70 /* VisaPaymentService.swift in Sources */,
+				DA83D7392EFC08D20050EF92 /* TextBootcampCoordinator.swift in Sources */,
 				DAE365BC2E9CC288005EF803 /* DarkThemeFonts.swift in Sources */,
 				DA4725302EA62DF7000D596A /* Closure.swift in Sources */,
 				DAE365BD2E9CC288005EF803 /* DarkTheme.swift in Sources */,

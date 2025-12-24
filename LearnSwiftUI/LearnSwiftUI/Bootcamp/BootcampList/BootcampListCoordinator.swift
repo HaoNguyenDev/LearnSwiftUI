@@ -9,11 +9,11 @@ import SwiftUI
 
 extension Router {
     enum BootcampList: Routable {
-        case subview
+        case textBootcamp
         
         var id: String {
             switch self {
-            case .subview: return "BootcampList.subview"
+            case .textBootcamp: return "BootcampList.textBootcamp"
             }
         }
     }
@@ -32,22 +32,33 @@ struct BootcampListCoordinator: View, ScreenCoordinator {
             .navigationDestination(for: ScreenRouter.self) { router in
                 viewForRouter(router: router)
             }
+            .toolbar(.hidden, for: .bottomBar)
+            .toolbar(.hidden, for: .tabBar)
+            .navigationBarBackButtonHidden(true)
     }
     
     @ViewBuilder
     func getView() -> some View {
         BootcampListView(bootcampOnTap: { bootcamp in
             debugPrint("\(bootcamp.rawValue)")
+            switch bootcamp {
+            case .text:
+                navRouter.push(ScreenRouter.textBootcamp, animate: true)
+            case .shape: break
+                // TODO:
+            case .color: break
+                // TODO:
+            }
+            
         })
-        // TODO: Handle goto another view with callback
     }
 }
 
 extension BootcampListCoordinator {
     func viewForRouter(router: Router.BootcampList) -> some View {
         switch router {
-        case .subview:
-            EmptyView()
+        case .textBootcamp:
+            TextBootcampCoordinator(navRouter: navRouter)
         }
     }
 }
