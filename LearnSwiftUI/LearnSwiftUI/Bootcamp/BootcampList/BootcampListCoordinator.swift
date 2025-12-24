@@ -36,7 +36,9 @@ struct BootcampListCoordinator: View, ScreenCoordinator {
     
     @ViewBuilder
     func getView() -> some View {
-        BootcampListView()
+        BootcampListView(bootcampOnTap: { bootcamp in
+            debugPrint("\(bootcamp.rawValue)")
+        })
         // TODO: Handle goto another view with callback
     }
 }
