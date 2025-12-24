@@ -11,13 +11,42 @@ import SwiftUI
 struct BootcampListView: View {
     @Environment(\.theme) var theme
     
+    var bootcampOnTap: SingleResult<BootcampEnums>?
+    
     var body: some View {
-        ForEach(BootcampEnums.allCases, id: \.self) { bootcamp in
-            VStack {
-                Text(bootcamp.rawValue)
-                    .font(theme.font.bold(ofSize: 18.0))
-                    .foregroundColor(Color.blue)
+        NavigationView {
+            bootcampList
+                .navigationBarTitle("Bootcamp List")
+        }
+    }
+    
+    var bootcampList: some View {
+        VStack {
+            List {
+                ForEach(BootcampEnums.allCases, id: \.self) { bootcamp in
+                    bootcampItem(bootcamp: bootcamp)
+                }
             }
         }
     }
+    
+    func bootcampItem(bootcamp: BootcampEnums) -> some View {
+        VStack {
+            Text(bootcamp.rawValue)
+                .font(theme.font.bold(ofSize: 18.0))
+                .foregroundColor(Color.blue)
+                .padding()
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+//        .background(Color.gray)
+        .contentShape(Rectangle()) /// Support for tap area with full VStack
+        .onTapGesture {
+            guard let bootcampOnTap else { return }
+            bootcampOnTap(bootcamp)
+        }
+    }
+}
+
+#Preview {
+    BootcampListView()
 }
