@@ -10,6 +10,12 @@ import SwiftUI
 struct BackButton: View {
     @Environment(\.theme) var theme
     
+    let action: VoidResult?
+    
+    init(action: VoidResult? = nil) {
+        self.action = action
+    }
+    
     var body: some View {
         HStack {
             Image(R.image.ic_back)
