@@ -97,13 +97,26 @@ struct TextBootcamp: View {
                     .frame(width: 200, height: 40, alignment: .center)
                     .background(Color.green)
                 
+                
+                Text("Tap with \n.contentShape(Rectangle()) ")
+                    .contentShape(Rectangle())
+                    .frame(maxWidth: .infinity, maxHeight: 100, alignment: .center)
+                    .background(Color.green)
+                    .onTapGesture {
+                        debugPrint("Tapped!")
+                    }
+                    .padding(.horizontal)
+
+                baselineOffsetText
                 textWithLeadingFrame
                 textWithBottomFrame
                 textWithTopLeftFrame
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding(.bottom, 20)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(.vertical, 10)
     }
     
     
@@ -111,7 +124,7 @@ struct TextBootcamp: View {
             Text("Base line offset text")
             .fontWeight(.regular)
             .foregroundStyle(.primary)
-            .frame(maxWidth: .infinity, maxHeight: 40, alignment: .center)
+            .frame(maxWidth: .infinity, maxHeight: 60, alignment: .center)
             .background(Color.gray)
             .baselineOffset(20.0)
             .padding(.horizontal)
