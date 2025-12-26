@@ -15,6 +15,27 @@ struct TextBootcamp: View {
         Spacer()
         ScrollView {
             VStack(spacing: 10) {
+                
+                var attributedHighlightSwiftUI: AttributedString {
+                    var attributedString = AttributedString("SwiftUI makes UI development simple")
+                    attributedString.font = .system(.subheadline, weight: .regular)
+                    attributedString.foregroundColor = .black
+                    
+                    if let range1 = attributedString.range(of: "SwiftUI") {
+                        attributedString[range1].font = .largeTitle
+                        attributedString[range1].foregroundColor = .green
+                    }
+                    
+                    if let range2 = attributedString.range(of: "simple") {
+                        attributedString[range2].font = .system(size: 20, weight: .bold)
+                        attributedString[range2].foregroundColor = .blue
+                        attributedString[range2].underlineStyle = .single
+                    }
+                    return attributedString
+                }
+                Text(attributedHighlightSwiftUI)
+                    
+                
                 Text("Title")
                     .font(.title)
                 
@@ -111,6 +132,7 @@ struct TextBootcamp: View {
                 textWithLeadingFrame
                 textWithBottomFrame
                 textWithTopLeftFrame
+                
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(.bottom, 20)
