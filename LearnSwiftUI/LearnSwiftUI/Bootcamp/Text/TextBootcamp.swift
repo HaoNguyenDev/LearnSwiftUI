@@ -14,111 +14,243 @@ struct TextBootcamp: View {
     var body: some View {
         Spacer()
         ScrollView {
-            VStack(spacing: 10) {
-                
-                var attributedHighlightSwiftUI: AttributedString {
-                    var attributedString = AttributedString("SwiftUI makes UI development simple")
-                    attributedString.font = .system(.subheadline, weight: .regular)
-                    attributedString.foregroundColor = .black
-                    
-                    if let range1 = attributedString.range(of: "SwiftUI") {
-                        attributedString[range1].font = .largeTitle
-                        attributedString[range1].foregroundColor = .green
-                    }
-                    
-                    if let range2 = attributedString.range(of: "simple") {
-                        attributedString[range2].font = .system(size: 20, weight: .bold)
-                        attributedString[range2].foregroundColor = .blue
-                        attributedString[range2].underlineStyle = .single
-                    }
-                    return attributedString
-                }
-                Text(attributedHighlightSwiftUI)
-                    
-                
+            //MARK: - AttributedString
+            CodePreviewContainer(
+                example: CodeExample(title: "AttributedString",
+                                     code:
+"""
+var attributedHighlightSwiftUI: AttributedString {
+    var attributedString = AttributedString("SwiftUI makdevelopmsimple")
+    attributedString.font = .system(.subheadline, weight: .regular)
+    attributedString.foregroundColor = .black
+             
+    if let range1 = attributedString.range(of: "SwiftUI") {
+        attributedString[range1].font = .largeTitle
+        attributedString[range1].foregroundColor = .green
+    }
+             
+    if let range2 = attributedString.range(of: "simple") {
+        attributedString[range2].font = .system(size: 20, weight: .bold)
+        attributedString[range2].foregroundColor = .blue
+        attributedString[range2].underlineStyle = .single
+    }
+    return attributedString
+}
+             
+Text(attributedHighlightSwiftUI)
+""", resultView: AnyView(
+    ResultBlockView(content: {
+        var attributedHighlightSwiftUI: AttributedString {
+            var attributedString = AttributedString("SwiftUI makes UI development simple")
+            attributedString.font = .system(.subheadline, weight: .regular)
+            attributedString.foregroundColor = .black
+            
+            if let range1 = attributedString.range(of: "SwiftUI") {
+                attributedString[range1].font = .largeTitle
+                attributedString[range1].foregroundColor = .green
+            }
+            
+            if let range2 = attributedString.range(of: "simple") {
+                attributedString[range2].font = .system(size: 20, weight: .bold)
+                attributedString[range2].foregroundColor = .blue
+                attributedString[range2].underlineStyle = .single
+            }
+            return attributedString
+        }
+        Text(attributedHighlightSwiftUI)
+    })))
+            )
+            
+            //MARK: - Title
+            CodePreviewContainer(example: CodeExample(title: "Title",
+                                                      code:
+"""
+Text("Title")
+    .font(.title)
+""", resultView: AnyView(ResultBlockView(content: {
                 Text("Title")
                     .font(.title)
-                
-                /*
-                 .largeTitle
-                 .title, .title2, .title3
-                 .headline
-                 .body
-                 .callout
-                 .caption, .caption2
-                 */
+            }))))
+            
+            //MARK: - Custom font
+            CodePreviewContainer(example: CodeExample(title: "Custom font", code:
+"""
+Text("Custom")
+    .font(.system(size: 18, weight: .bold, design: .rounded))
+    /*
+    .largeTitle
+    .title, .title2, .title3
+    .headline
+    .body
+    .callout
+    .caption, .caption2
+    */
 
-                Text("Custom")
+    Text("Bold")
+        .fontWeight(.bold)
+                
+    Text("Italic")
+        .italic()
+
+
+""", resultView: AnyView(ResultBlockView(content: {
+                Text("Custom font")
                     .font(.system(size: 18, weight: .bold, design: .rounded))
-
                 
+                Text("Bold")
+                    .fontWeight(.bold)
+                            
+                Text("Italic")
+                    .italic()
+            }))))
+            
+            //MARK: - foregroundColor
+            CodePreviewContainer(example: CodeExample(title: "foregroundColor", code:
+"""
+Text("Blue")
+    .foregroundColor(.blue)
+""", resultView: AnyView(ResultBlockView(content: {
                 Text("Blue")
                     .foregroundColor(.blue)
-                
+            }))))
+            
+            
+            //MARK: - Add multi text
+            CodePreviewContainer(example:
+                                    CodeExample(title: "Add multi text",
+                                                code:
+"""
+Text("Hello ")
+    .foregroundColor(.blue)
++ Text("SwiftUI")
+    .fontWeight(.bold)
+""", resultView: AnyView(ResultBlockView(content: {
                 Text("Hello ")
                     .foregroundColor(.blue)
                 + Text("SwiftUI")
                     .fontWeight(.bold)
-
-                var attributed: AttributedString {
-                    var text = AttributedString("Attributed String")
-                    text.foregroundColor = .blue
-                    text.font = .system(size: 20, weight: .bold)
-                    return text
-                }
-                Text(attributed)
-
-                var attributedHighlight: AttributedString {
-                    var text = AttributedString("Highlight Text")
-                    text.foregroundColor = .black
-                    text[text.range(of: "Text")!].foregroundColor = .red
-                    text.font = .system(size: 20, weight: .bold)
-                    return text
-                }
-                Text(attributedHighlight)
-                                
+            }))))
+            
+            //MARK: - Gradient text
+            CodePreviewContainer(example:
+                                    CodeExample(title: "Gradient text",
+                                                code:
+"""
+Text("Gradient")
+    .foregroundStyle(.linearGradient(
+        colors: [.red, .orange, .blue],
+        startPoint: .leading,
+        endPoint: .trailing
+    ))
+""", resultView: AnyView(ResultBlockView(content: {
                 Text("Gradient")
                     .foregroundStyle(.linearGradient(
-                        colors: [.red, .orange],
+                        colors: [.red, .orange, .blue],
                         startPoint: .leading,
                         endPoint: .trailing
                     ))
-
-                Text("Bold")
-                    .fontWeight(.bold)
-
-                Text("Italic")
-                    .italic()
-
+            }))))
+            
+            //MARK: - underline text
+            CodePreviewContainer(example:
+                                    CodeExample(title: "underline text",
+                                                code:
+"""
+Text("Underline")
+    .underline(true, pattern: .dashDot, color: .blue)
+""", resultView: AnyView(ResultBlockView(content: {
                 Text("Underline")
                     .underline(true, pattern: .dashDot, color: .blue)
-
+            }))))
+            
+            //MARK: - strikethrough text
+            CodePreviewContainer(example:
+                                    CodeExample(title: "strikethrough text",
+                                                code:
+"""
+Text("Strikethrough")
+    .strikethrough()
+""", resultView: AnyView(ResultBlockView(content: {
                 Text("Strikethrough")
                     .strikethrough()
-               
+            }))))
+            
+            //MARK: - kerning text
+            CodePreviewContainer(example:
+                                    CodeExample(title: "kerning text",
+                                                code:
+"""
+Text("Kerning")
+    .kerning(8.0)
+""", resultView: AnyView(ResultBlockView(content: {
                 Text("Kerning")
                     .kerning(8.0)
-                
-                Text("Hello SwiftUI")
-                    .multilineTextAlignment(.center)
-
+            }))))
+            
+            //MARK: - lineSpacing text
+            CodePreviewContainer(example:
+                                    CodeExample(title: "lineSpacing text",
+                                                code:
+"""
+Text("Line 1"\n"Line 2")
+    .lineSpacing(8)
+""", resultView: AnyView(ResultBlockView(content: {
                 Text("Line 1\nLine 2")
                     .lineSpacing(8)
-
+            }))))
+            
+            //MARK: - lineLimit text
+            CodePreviewContainer(example:
+                                    CodeExample(title: "lineLimit text",
+                                                code:
+"""
+Text("lineLimit lineLimit lineLimit lineLimit lineLimit lineLimit lineLimit lineLimit lineLimit")
+        .font(.system(size: 12, weight: .semibold, design: .rounded))
+        .lineLimit(2)
+        .frame(width: 120, height: 80, alignment: .center)
+        .padding()
+        .background(Color.green)
+""", resultView: AnyView(ResultBlockView(content: {
                 Text("lineLimit lineLimit lineLimit lineLimit lineLimit lineLimit lineLimit lineLimit lineLimit")
                     .font(.system(size: 12, weight: .semibold, design: .rounded))
                     .lineLimit(2)
                     .frame(width: 120, height: 80, alignment: .center)
                     .padding()
                     .background(Color.green)
-                
+            }))))
+            
+            //MARK: - truncationMode text
+            CodePreviewContainer(example:
+                                    CodeExample(title: "truncationMode text",
+                                                code:
+"""
+Text("truncationMode truncationMode truncationMode truncationMode")
+    .lineLimit(1)
+    .truncationMode(.middle) // .head / .middle
+    .frame(width: 200, height: 40, alignment: .center)
+    .background(Color.green)
+""", resultView: AnyView(ResultBlockView(content: {
                 Text("truncationMode truncationMode truncationMode truncationMode")
                     .lineLimit(1)
                     .truncationMode(.middle) // .head / .middle
                     .frame(width: 200, height: 40, alignment: .center)
                     .background(Color.green)
-                
-                
+            }))))
+            
+            //MARK: - contentShape text
+            CodePreviewContainer(example:
+                                    CodeExample(title: "contentShape text",
+                                                code:
+"""
+Text("Tap with \n.contentShape(Rectangle()) ")
+    .contentShape(Rectangle())
+    .frame(maxWidth: .infinity, maxHeight: 100, alignment: .center)
+    .background(Color.green)
+    .onTapGesture {
+        debugPrint("Tapped!")
+    }
+    .padding(.horizontal)
+""", resultView: AnyView(ResultBlockView(content: {
                 Text("Tap with \n.contentShape(Rectangle()) ")
                     .contentShape(Rectangle())
                     .frame(maxWidth: .infinity, maxHeight: 100, alignment: .center)
@@ -127,12 +259,13 @@ struct TextBootcamp: View {
                         debugPrint("Tapped!")
                     }
                     .padding(.horizontal)
-
+            }))))
+            
+            VStack(spacing: 10) {
                 baselineOffsetText
                 textWithLeadingFrame
                 textWithBottomFrame
                 textWithTopLeftFrame
-                
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(.bottom, 20)
@@ -143,7 +276,7 @@ struct TextBootcamp: View {
     
     
     private var baselineOffsetText: some View {
-            Text("Base line offset text")
+        Text("Base line offset text")
             .fontWeight(.regular)
             .foregroundStyle(.primary)
             .frame(maxWidth: .infinity, maxHeight: 60, alignment: .center)

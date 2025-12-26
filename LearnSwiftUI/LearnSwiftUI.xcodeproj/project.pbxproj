@@ -96,6 +96,10 @@
 		DA6027A72EA4A42C00271E00 /* MVVMDemoUIKitViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6027A62EA4A42C00271E00 /* MVVMDemoUIKitViewWrapper.swift */; };
 		DA6027AB2EA4A45E00271E00 /* MVVMDemoUIKitContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6027AA2EA4A45E00271E00 /* MVVMDemoUIKitContentView.swift */; };
 		DA6027DF2EA5367B00271E00 /* MVVM_SwiftUI_Note.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA6027DE2EA5367B00271E00 /* MVVM_SwiftUI_Note.txt */; };
+		DA6075112EFE99AB002907E4 /* CodePreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6075102EFE99AB002907E4 /* CodePreviewContainer.swift */; };
+		DA60751A2EFE99C2002907E4 /* CodeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6075192EFE99C2002907E4 /* CodeExample.swift */; };
+		DA60751D2EFE9A13002907E4 /* CodeBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA60751C2EFE9A13002907E4 /* CodeBlockView.swift */; };
+		DA6075272EFE9AC7002907E4 /* ResultBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6075262EFE9AC7002907E4 /* ResultBlockView.swift */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
 		DA7BE09E2E805F4B006821CE /* VIPER-Architecture.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA7BE09D2E805F4B006821CE /* VIPER-Architecture.txt */; };
 		DA7BE0A02E805F95006821CE /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE09F2E805F95006821CE /* LoginProtocol.swift */; };
@@ -329,6 +333,10 @@
 		DA6027A62EA4A42C00271E00 /* MVVMDemoUIKitViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMDemoUIKitViewWrapper.swift; sourceTree = "<group>"; };
 		DA6027AA2EA4A45E00271E00 /* MVVMDemoUIKitContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMDemoUIKitContentView.swift; sourceTree = "<group>"; };
 		DA6027DE2EA5367B00271E00 /* MVVM_SwiftUI_Note.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MVVM_SwiftUI_Note.txt; sourceTree = "<group>"; };
+		DA6075102EFE99AB002907E4 /* CodePreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePreviewContainer.swift; sourceTree = "<group>"; };
+		DA6075192EFE99C2002907E4 /* CodeExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeExample.swift; sourceTree = "<group>"; };
+		DA60751C2EFE9A13002907E4 /* CodeBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBlockView.swift; sourceTree = "<group>"; };
+		DA6075262EFE9AC7002907E4 /* ResultBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBlockView.swift; sourceTree = "<group>"; };
 		DA65B7342E37D34600BF8A59 /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 		DA6E0BBB2E4A32D0009B3778 /* OperationQueueTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OperationQueueTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA6E0BBC2E4A4BA5009B3778 /* RaceConditionAvoid.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RaceConditionAvoid.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -869,6 +877,7 @@
 		DA5D71412E3E4BF100C78E40 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				DA60750F2EFE99A2002907E4 /* CodePreviewContainer */,
 				DA3978F72E9BB44800838584 /* ViewModifiers */,
 				DA3979042E9BB4EB00838584 /* AlertView */,
 				DA7BF5C32E98DF1B00224BCF /* TextField */,
@@ -970,6 +979,17 @@
 				DA6027DE2EA5367B00271E00 /* MVVM_SwiftUI_Note.txt */,
 			);
 			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		DA60750F2EFE99A2002907E4 /* CodePreviewContainer */ = {
+			isa = PBXGroup;
+			children = (
+				DA6075102EFE99AB002907E4 /* CodePreviewContainer.swift */,
+				DA6075192EFE99C2002907E4 /* CodeExample.swift */,
+				DA60751C2EFE9A13002907E4 /* CodeBlockView.swift */,
+				DA6075262EFE9AC7002907E4 /* ResultBlockView.swift */,
+			);
+			path = CodePreviewContainer;
 			sourceTree = "<group>";
 		};
 		DA65B7322E37D31200BF8A59 /* AppDemo */ = {
@@ -1519,6 +1539,7 @@
 				DAA45E452EF931B700BC57E9 /* Router.swift in Sources */,
 				DA7BE0AC2E8060A8006821CE /* LoginEntity.swift in Sources */,
 				DAA7091F2E75E2CC006F8E70 /* ResultAndError.swift in Sources */,
+				DA6075112EFE99AB002907E4 /* CodePreviewContainer.swift in Sources */,
 				DA415E8B2DE5C845009F515E /* ShapesBootcamp.swift in Sources */,
 				DA6027A72EA4A42C00271E00 /* MVVMDemoUIKitViewWrapper.swift in Sources */,
 				DA5D718E2E3FBA6A00C78E40 /* GithubUser.swift in Sources */,
@@ -1566,6 +1587,7 @@
 				DA5477492EB65729005C8868 /* Profile.swift in Sources */,
 				DAEBAE402DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift in Sources */,
 				DAC97DE72EA3960500F8A22F /* ActorBootcamp.swift in Sources */,
+				DA60751A2EFE99C2002907E4 /* CodeExample.swift in Sources */,
 				DA39793F2E9BE5BD00838584 /* ImageStylingModifier.swift in Sources */,
 				DA8748972E6B007100B189F3 /* WeatherCard.swift in Sources */,
 				DA5D71982E3FBCBA00C78E40 /* GithubNetworkService.swift in Sources */,
@@ -1647,6 +1669,7 @@
 				DAC35AF32E9F88FA0019021D /* UserListViewModel.swift in Sources */,
 				DA5D71A02E40CC8300C78E40 /* AsyncAwaitBootcamp.swift in Sources */,
 				DA5D71432E3E4BF700C78E40 /* BackButton.swift in Sources */,
+				DA60751D2EFE9A13002907E4 /* CodeBlockView.swift in Sources */,
 				DA5D71892E3FB05100C78E40 /* UserRowView.swift in Sources */,
 				DAFCDF6A2E630B2C00B97C00 /* ErrorBanner.swift in Sources */,
 				DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */,
@@ -1670,6 +1693,7 @@
 				DA87489E2E6B16B500B189F3 /* WeatherMainView.swift in Sources */,
 				DAA709222E787C42006F8E70 /* PaymentVM.swift in Sources */,
 				DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */,
+				DA6075272EFE9AC7002907E4 /* ResultBlockView.swift in Sources */,
 				DA7BE0A62E806040006821CE /* LoginInteractor.swift in Sources */,
 				DA5476E42EB39FCD005C8868 /* AlamofireSampleAPICallSyntax.swift in Sources */,
 				DAAE8CBD2E45028300FCBA4E /* CounterState.swift in Sources */,

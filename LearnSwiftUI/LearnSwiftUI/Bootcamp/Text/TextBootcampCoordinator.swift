@@ -36,6 +36,7 @@ struct TextBootcampCoordinator: View, ScreenCoordinator {
     @ViewBuilder
     func getView() -> some View {
         TextBootcamp()
+            .navigationTitle("Text")
     }
 }
 
