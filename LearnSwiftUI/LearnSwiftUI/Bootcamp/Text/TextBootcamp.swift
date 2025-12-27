@@ -15,9 +15,8 @@ struct TextBootcamp: View {
         Spacer()
         ScrollView {
             //MARK: - AttributedString
-            CodePreviewContainer(
-                example: CodeExample(title: "AttributedString",
-                                     code:
+            CodePreviewContainer(title: "AttributedString",
+                                 code:
 """
 var attributedHighlightSwiftUI: AttributedString {
     var attributedString = AttributedString("SwiftUI makdevelopmsimple")
@@ -59,21 +58,21 @@ Text(attributedHighlightSwiftUI)
         }
         Text(attributedHighlightSwiftUI)
     })))
-            )
+            
             
             //MARK: - Title
-            CodePreviewContainer(example: CodeExample(title: "Title",
-                                                      code:
+            CodePreviewContainer(title: "Title",
+                                 code:
 """
 Text("Title")
     .font(.title)
-""", resultView: AnyView(ResultBlockView(content: {
+""", resultView: AnyView( ResultBlockView(content: {
                 Text("Title")
                     .font(.title)
-            }))))
+            })))
             
             //MARK: - Custom font
-            CodePreviewContainer(example: CodeExample(title: "Custom font", code:
+            CodePreviewContainer(title: "Custom font", code:
 """
 Text("Custom")
     .font(.system(size: 18, weight: .bold, design: .rounded))
@@ -102,22 +101,21 @@ Text("Custom")
                             
                 Text("Italic")
                     .italic()
-            }))))
+            })))
             
             //MARK: - foregroundColor
-            CodePreviewContainer(example: CodeExample(title: "foregroundColor", code:
+            CodePreviewContainer(title: "foregroundColor", code:
 """
 Text("Blue")
     .foregroundColor(.blue)
 """, resultView: AnyView(ResultBlockView(content: {
                 Text("Blue")
                     .foregroundColor(.blue)
-            }))))
+            })))
             
             
             //MARK: - Add multi text
-            CodePreviewContainer(example:
-                                    CodeExample(title: "Add multi text",
+            CodePreviewContainer(title: "Add multi text",
                                                 code:
 """
 Text("Hello ")
@@ -129,19 +127,17 @@ Text("Hello ")
                     .foregroundColor(.blue)
                 + Text("SwiftUI")
                     .fontWeight(.bold)
-            }))))
+            })))
             
             //MARK: - Gradient text
-            CodePreviewContainer(example:
-                                    CodeExample(title: "Gradient text",
+            CodePreviewContainer(title: "Gradient text",
                                                 code:
 """
 Text("Gradient")
     .foregroundStyle(.linearGradient(
         colors: [.red, .orange, .blue],
         startPoint: .leading,
-        endPoint: .trailing
-    ))
+        endPoint: .trailing))
 """, resultView: AnyView(ResultBlockView(content: {
                 Text("Gradient")
                     .foregroundStyle(.linearGradient(
@@ -149,11 +145,10 @@ Text("Gradient")
                         startPoint: .leading,
                         endPoint: .trailing
                     ))
-            }))))
+            })))
             
             //MARK: - underline text
-            CodePreviewContainer(example:
-                                    CodeExample(title: "underline text",
+            CodePreviewContainer(title: "underline text",
                                                 code:
 """
 Text("Underline")
@@ -161,11 +156,10 @@ Text("Underline")
 """, resultView: AnyView(ResultBlockView(content: {
                 Text("Underline")
                     .underline(true, pattern: .dashDot, color: .blue)
-            }))))
+            })))
             
             //MARK: - strikethrough text
-            CodePreviewContainer(example:
-                                    CodeExample(title: "strikethrough text",
+            CodePreviewContainer(title: "strikethrough text",
                                                 code:
 """
 Text("Strikethrough")
@@ -173,11 +167,10 @@ Text("Strikethrough")
 """, resultView: AnyView(ResultBlockView(content: {
                 Text("Strikethrough")
                     .strikethrough()
-            }))))
+            })))
             
             //MARK: - kerning text
-            CodePreviewContainer(example:
-                                    CodeExample(title: "kerning text",
+            CodePreviewContainer(title: "kerning text",
                                                 code:
 """
 Text("Kerning")
@@ -185,11 +178,10 @@ Text("Kerning")
 """, resultView: AnyView(ResultBlockView(content: {
                 Text("Kerning")
                     .kerning(8.0)
-            }))))
+            })))
             
             //MARK: - lineSpacing text
-            CodePreviewContainer(example:
-                                    CodeExample(title: "lineSpacing text",
+            CodePreviewContainer(title: "lineSpacing text",
                                                 code:
 """
 Text("Line 1"\n"Line 2")
@@ -197,11 +189,10 @@ Text("Line 1"\n"Line 2")
 """, resultView: AnyView(ResultBlockView(content: {
                 Text("Line 1\nLine 2")
                     .lineSpacing(8)
-            }))))
+            })))
             
             //MARK: - lineLimit text
-            CodePreviewContainer(example:
-                                    CodeExample(title: "lineLimit text",
+            CodePreviewContainer(title: "lineLimit text",
                                                 code:
 """
 Text("lineLimit lineLimit lineLimit lineLimit lineLimit lineLimit lineLimit lineLimit lineLimit")
@@ -217,11 +208,10 @@ Text("lineLimit lineLimit lineLimit lineLimit lineLimit lineLimit lineLimit line
                     .frame(width: 120, height: 80, alignment: .center)
                     .padding()
                     .background(Color.green)
-            }))))
+            })))
             
             //MARK: - truncationMode text
-            CodePreviewContainer(example:
-                                    CodeExample(title: "truncationMode text",
+            CodePreviewContainer(title: "truncationMode text",
                                                 code:
 """
 Text("truncationMode truncationMode truncationMode truncationMode")
@@ -235,11 +225,10 @@ Text("truncationMode truncationMode truncationMode truncationMode")
                     .truncationMode(.middle) // .head / .middle
                     .frame(width: 200, height: 40, alignment: .center)
                     .background(Color.green)
-            }))))
+            })))
             
             //MARK: - contentShape text
-            CodePreviewContainer(example:
-                                    CodeExample(title: "contentShape text",
+            CodePreviewContainer(title: "contentShape text",
                                                 code:
 """
 Text("Tap with \n.contentShape(Rectangle()) ")
@@ -259,7 +248,7 @@ Text("Tap with \n.contentShape(Rectangle()) ")
                         debugPrint("Tapped!")
                     }
                     .padding(.horizontal)
-            }))))
+            })))
             
             VStack(spacing: 10) {
                 baselineOffsetText
