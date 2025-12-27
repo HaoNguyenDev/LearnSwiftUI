@@ -14,11 +14,54 @@ struct TextBootcamp: View {
     var body: some View {
         Spacer()
         ScrollView {
+            // MARK: - The order of modifiers when working with text.
+            
+            CodePreviewContainer(title: "The order of modifiers when working with text.\n1️⃣ Content → 2️⃣ Text style → 3️⃣ Layout \n→ 4️⃣ Drawing → 5️⃣ Interaction", code: """
+    // 1️⃣ Content
+Text("Hello SwiftUI") 
+    // 2️⃣ Text style 
+    .font(.headline) 
+    .foregroundStyle(.blue) 
+    .lineLimit(2) 
+    .lineSpacing(6) 
+
+    // 3️⃣ Layout 
+    .padding() 
+    .frame(maxWidth: .infinity, alignment: .leading) 
+
+    // 4️⃣ Drawing 
+    .background(Color.yellow) 
+    .cornerRadius(8) 
+
+    // 5️⃣ Interaction 
+    .contentShape(Rectangle()) 
+    .onTapGesture { }
+""", resultView: AnyView(ResultBlockView(content: {
+                Text("Hello SwiftUI")
+                // 2️⃣ Text style
+                    .font(.headline)
+                    .foregroundStyle(.blue)
+                    .lineLimit(2)
+                    .lineSpacing(6)
+                
+                // 3️⃣ Layout
+                    .padding()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
+                // 4️⃣ Drawing
+                    .background(Color.yellow)
+                    .cornerRadius(8)
+                
+                // 5️⃣ Interaction
+                    .contentShape(Rectangle())
+                    .onTapGesture { }
+            })))
+            
             //MARK: - AttributedString
             CodePreviewContainer(title: "AttributedString",
                                  code:
 """
-var attributedHighlightSwiftUI: AttributedString {
+var attributedHighlight: AttributedString {
     var attributedString = AttributedString("SwiftUI makdevelopmsimple")
     attributedString.font = .system(.subheadline, weight: .regular)
     attributedString.foregroundColor = .black
@@ -36,10 +79,10 @@ var attributedHighlightSwiftUI: AttributedString {
     return attributedString
 }
              
-Text(attributedHighlightSwiftUI)
+Text(attributedHighlight)
 """, resultView: AnyView(
     ResultBlockView(content: {
-        var attributedHighlightSwiftUI: AttributedString {
+        var attributedHighlight: AttributedString {
             var attributedString = AttributedString("SwiftUI makes UI development simple")
             attributedString.font = .system(.subheadline, weight: .regular)
             attributedString.foregroundColor = .black
@@ -56,7 +99,7 @@ Text(attributedHighlightSwiftUI)
             }
             return attributedString
         }
-        Text(attributedHighlightSwiftUI)
+        Text(attributedHighlight)
     })))
             
             
@@ -98,7 +141,7 @@ Text("Custom")
                 
                 Text("Bold")
                     .fontWeight(.bold)
-                            
+                
                 Text("Italic")
                     .italic()
             })))
@@ -116,7 +159,7 @@ Text("Blue")
             
             //MARK: - Add multi text
             CodePreviewContainer(title: "Add multi text",
-                                                code:
+                                 code:
 """
 Text("Hello ")
     .foregroundColor(.blue)
@@ -131,7 +174,7 @@ Text("Hello ")
             
             //MARK: - Gradient text
             CodePreviewContainer(title: "Gradient text",
-                                                code:
+                                 code:
 """
 Text("Gradient")
     .foregroundStyle(.linearGradient(
@@ -149,7 +192,7 @@ Text("Gradient")
             
             //MARK: - underline text
             CodePreviewContainer(title: "underline text",
-                                                code:
+                                 code:
 """
 Text("Underline")
     .underline(true, pattern: .dashDot, color: .blue)
@@ -160,7 +203,7 @@ Text("Underline")
             
             //MARK: - strikethrough text
             CodePreviewContainer(title: "strikethrough text",
-                                                code:
+                                 code:
 """
 Text("Strikethrough")
     .strikethrough()
@@ -171,7 +214,7 @@ Text("Strikethrough")
             
             //MARK: - kerning text
             CodePreviewContainer(title: "kerning text",
-                                                code:
+                                 code:
 """
 Text("Kerning")
     .kerning(8.0)
@@ -182,7 +225,7 @@ Text("Kerning")
             
             //MARK: - lineSpacing text
             CodePreviewContainer(title: "lineSpacing text",
-                                                code:
+                                 code:
 """
 Text("Line 1"\n"Line 2")
     .lineSpacing(8)
@@ -193,7 +236,7 @@ Text("Line 1"\n"Line 2")
             
             //MARK: - lineLimit text
             CodePreviewContainer(title: "lineLimit text",
-                                                code:
+                                 code:
 """
 Text("lineLimit lineLimit lineLimit lineLimit lineLimit lineLimit lineLimit lineLimit lineLimit")
         .font(.system(size: 12, weight: .semibold, design: .rounded))
@@ -212,7 +255,7 @@ Text("lineLimit lineLimit lineLimit lineLimit lineLimit lineLimit lineLimit line
             
             //MARK: - truncationMode text
             CodePreviewContainer(title: "truncationMode text",
-                                                code:
+                                 code:
 """
 Text("truncationMode truncationMode truncationMode truncationMode")
     .lineLimit(1)
@@ -229,7 +272,7 @@ Text("truncationMode truncationMode truncationMode truncationMode")
             
             //MARK: - contentShape text
             CodePreviewContainer(title: "contentShape text",
-                                                code:
+                                 code:
 """
 Text("Tap with \n.contentShape(Rectangle()) ")
     .contentShape(Rectangle())
