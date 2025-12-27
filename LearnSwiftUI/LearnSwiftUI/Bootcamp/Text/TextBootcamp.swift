@@ -250,6 +250,70 @@ Text("Tap with \n.contentShape(Rectangle()) ")
                     .padding(.horizontal)
             })))
             
+            // MARK: - layoutPriority
+            CodePreviewContainer(title: "layoutPriority", code: """
+HStack {
+    Text("This is a very very long title")
+        .lineLimit(1)
+    Text("10:30 AM")
+}
+.frame(maxWidth: .infinity, maxHeight: 30, alignment: .leading)
+.padding(.horizontal, 50)
+.background(Rectangle().foregroundStyle(.green))
+
+HStack {
+    Text("This is a very very long title")
+        .lineLimit(1)
+        .layoutPriority(1)
+    Text("10:30 AM")
+}
+.frame(maxWidth: .infinity, maxHeight: 30, alignment: .leading)
+.padding(.horizontal, 50)
+.background(Rectangle().foregroundStyle(.green))
+
+""", resultView: AnyView(ResultBlockView(content: {
+                VStack {
+                    HStack {
+                        Text("This is a very very long title")
+                            .lineLimit(1)
+                        Text("10:30 AM")
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: 30, alignment: .leading)
+                    .padding(.horizontal, 50)
+                    .background(Rectangle().foregroundStyle(.green))
+                    
+                    HStack {
+                        Text("This is a very very long title")
+                            .lineLimit(1)
+                            .layoutPriority(1)
+                        Text("10:30 AM")
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: 30, alignment: .leading)
+                    .padding(.horizontal, 50)
+                    .background(Rectangle().foregroundStyle(.green))
+                }
+            })))
+            
+            // MARK: - fixedSize
+            CodePreviewContainer(title: "fixedSize", code: """
+Text("This is a very very long title")
+    .fixedSize()
+    .frame(maxWidth: 100, maxHeight: 30, alignment: .leading)
+    .background(RoundedRectangle(cornerRadius: 10).foregroundStyle(.green))
+
+    👉 Text:
+    No wrapping
+    No truncation
+    Layout may break
+""", resultView: AnyView(ResultBlockView(content: {
+                VStack {
+                    Text("This is a very very long title")
+                        .fixedSize()
+                        .frame(maxWidth: 100, maxHeight: 30, alignment: .leading)
+                        .background(RoundedRectangle(cornerRadius: 10).foregroundStyle(.green))
+                }
+            })))
+            
             // MARK: - The order of modifiers when working with text.
             CodePreviewContainer(title: "The order of modifiers when working with text.", code: """
 “Does SwiftUI require a specific modifier order?”
