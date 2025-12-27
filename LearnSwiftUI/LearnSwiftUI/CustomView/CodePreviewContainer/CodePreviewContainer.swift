@@ -31,7 +31,7 @@ struct CodePreviewContainer: View {
             example.resultView
                 .frame(maxWidth: .infinity)
         }
-        .padding()
+        .padding(8)
     }
 }
 
