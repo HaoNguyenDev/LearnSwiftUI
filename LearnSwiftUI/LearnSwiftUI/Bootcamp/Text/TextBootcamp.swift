@@ -297,9 +297,14 @@ HStack {
             // MARK: - fixedSize
             CodePreviewContainer(title: "fixedSize", code: """
 Text("This is a very very long title")
-    .fixedSize()
-    .frame(maxWidth: 100, maxHeight: 30, alignment: .leading)
-    .background(RoundedRectangle(cornerRadius: 10).foregroundStyle(.green))
+    .fixedSize(horizontal: true, vertical: false)
+    .background(RoundedRectangle(cornerRadius10).foregroundStyle(.green))
+
+HStack {
+    Text("This is a very very long title")
+        .fixedSize(horizontal: false, vertical: true
+    Image(systemName: "star")
+}
 
     👉 Text:
     No wrapping
@@ -308,9 +313,15 @@ Text("This is a very very long title")
 """, resultView: AnyView(ResultBlockView(content: {
                 VStack {
                     Text("This is a very very long title")
-                        .fixedSize()
-                        .frame(maxWidth: 100, maxHeight: 30, alignment: .leading)
+                        .fixedSize(horizontal: true, vertical: false)
                         .background(RoundedRectangle(cornerRadius: 10).foregroundStyle(.green))
+                    
+                    HStack {
+                        Text("This is a very very long title")
+                            .fixedSize(horizontal: false, vertical: true)
+
+                        Image(systemName: "star")
+                    }
                 }
             })))
             
@@ -439,14 +450,53 @@ SwiftUI renders using a pipeline:
                     .onTapGesture { }
             })))
             
-            VStack(spacing: 10) {
-                baselineOffsetText
-                textWithLeadingFrame
-                textWithBottomFrame
-                textWithTopLeftFrame
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .padding(.bottom, 20)
+            baselineOffsetText
+            textWithLeadingFrame
+            textWithBottomFrame
+            textWithTopLeftFrame
+            
+            // MARK: - Debug Text
+            CodePreviewContainer(title: "Debug Text", code: """
+/// Debug intrinsic size of Text
+Text("Hello")
+    .border(Color.red)
+ // or //
+Text("Hello")
+    .padding()
+    .border(Color.red)
+👉 You see the correct font size, not full width.
+
+/// Use backgrounds to debug wrap and spacing.
+Text("Hello SwiftUI")
+    .background(Color.yellow)
+👉 Debug:
+    Line height
+    Wrap
+    Alignment
+
+/// Debugging hit-testing (tap not responding)
+Text("Tap me")
+    .background(Color.blue.opacity(0.2))
+    .contentShape(Rectangle())
+    .onTapGesture { }
+👉 You can see the actual tap area.
+
+""", resultView: AnyView(ResultBlockView(content: {
+                VStack(alignment: .center) {
+                    Text("Hello")
+                        .padding()
+                        .border(Color.red)
+
+                    Text("Hello SwiftUI")
+                        .background(Color.yellow)
+
+                    Text("Tap me")
+                        .background(Color.blue.opacity(0.2))
+                        .contentShape(Rectangle())
+                        .onTapGesture { }
+                }
+            })))
+        
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(.vertical, 10)
