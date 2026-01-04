@@ -11,6 +11,8 @@ import SwiftUI
 struct TextBootcamp: View {
     @Environment(\.theme) var theme
     
+    @State private var isLarge = false
+    
     var body: some View {
         Spacer()
         ScrollView {
@@ -319,7 +321,7 @@ HStack {
                     HStack {
                         Text("This is a very very long title")
                             .fixedSize(horizontal: false, vertical: true)
-
+                        
                         Image(systemName: "star")
                     }
                 }
@@ -486,21 +488,73 @@ Text("Tap me")
                     Text("Hello")
                         .padding()
                         .border(Color.red)
-
+                    
                     Text("Hello SwiftUI")
                         .background(Color.yellow)
-
+                    
                     Text("Tap me")
                         .background(Color.blue.opacity(0.2))
                         .contentShape(Rectangle())
                         .onTapGesture { }
                 }
             })))
+            
+            
+            //MARK: - ANIMATION IN SWIFTUI
+            CodePreviewContainer(title: "Animation in Text", code: """
+🧠 Key mindset
+SwiftUI does not animate View,
+SwiftUI animates State changes.
+
+@State private var isLarge = false
+
+👉 When isLarge changes → SwiftUI:
+Diff view tree
+Animate difference
+
+IMPLICIT ANIMATION (most commonly used)
+2.1 Basic Syntax
+    Text("Hello SwiftUI")
+    .font(isLarge ? .largeTitle : .body)
+    .animation(.easeInOut, value: isLarge)
+    .onTapGesture {
+        isLarge.toggle()
+    }
+
+What are the benefits of text animation?
+   .foregroundStyle(.red)
+   .opacity(0.2)
+   .scaleEffect(1.2)
+   .offset(y: 20)
+""", resultView: AnyView(
+    VStack(alignment: .center, content: {
+        ResultBlockView(content: {
+            Text("Hello SwiftUI")
+                .font(isLarge ? .largeTitle : .body)
+                .animation(.easeInOut, value: isLarge)
+                .onTapGesture {
+                    isLarge.toggle()
+                }
+        })
         
+        ResultBlockView {
+            Text("Tap me")
+                .font(isLarge ? .largeTitle : .body)
+                .foregroundStyle(isLarge ? .red : .blue)
+                .opacity(isLarge ? 0.2 : 1)
+                .scaleEffect(isLarge ? 1.2 : 1)
+                .offset(y: isLarge ? 0 : -10)
+                .onTapGesture {
+                    isLarge.toggle()
+                }
+        }
+    })))
+            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(.vertical, 10)
     }
+    
     
     
     private var baselineOffsetText: some View {
