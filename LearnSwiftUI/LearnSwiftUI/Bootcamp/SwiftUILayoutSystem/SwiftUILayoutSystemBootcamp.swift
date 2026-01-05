@@ -74,6 +74,22 @@ VStack suggests a size for each Text element
 Text is sized to fit the content
 VStack arranges Text along the vertical axis
 📌 VStack size = sum of the sizes of the children
+
+4️⃣ Interview Trap #1
+Why isn't VStack in full screen?
+
+❌ Misconception:
+    VStack defaults to full screen.
+
+✅ True nature:
+    VStack only holds content
+    Parent (usually body root) does not force size
+
+👉 To use full size:
+    VStack {
+        Text("Hello")
+    }
+    .frame(maxWidth: .infinity, maxHeight: .infinity)    
 """, resultView: AnyView(ResultBlockView(content: {
                 VStack {
                     Text("Hello")
@@ -85,7 +101,35 @@ VStack arranges Text along the vertical axis
                 .background(Color.green)
             })))
 
-        }
+            
+            CodePreviewContainer(title: "Parent suggests .infinity", code: """
+5️⃣ Example 2 — Parent suggests .infinity
+
+    Text("Hello SwiftUI")
+        .frame(maxWidth: .infinity)
+        .background(Color.red)
+
+❓ Does the text have full width?
+
+👉 YES, but:
+    frame is `the new parent`
+    Frame suggests .infinity for the text
+    Text chooses the content size
+    Frame expands, text does not
+
+📌 This is why the text doesn't automatically expand
+
+6️⃣ Interview Trap #2
+❓ Why doesn't the text expand to full size even with maxWidth: .infinity?
+    Senior's Answer:
+        Because text always chooses intrinsic content size,
+    while the frame is just an expanded container.
+""", resultView: AnyView(ResultBlockView(content: {
+                Text("Hello SwiftUI")
+                    .frame(maxWidth: .infinity)
+                    .background(Color.red)
+            })))
+        } /// ScrollView
     }
 }
 
