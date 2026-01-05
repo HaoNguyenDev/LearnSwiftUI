@@ -12,7 +12,7 @@ struct CodePreviewContainer: View {
 
     init(title: String,
          code: String,
-         resultView: AnyView) {
+         resultView: AnyView?) {
         self.example = CodeExample(title: title,
                                    code: code,
                                    resultView: resultView)
@@ -24,14 +24,25 @@ struct CodePreviewContainer: View {
 
             CodeBlockView(code: example.code)
 
-            Text("Result")
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-
-            example.resultView
-                .frame(maxWidth: .infinity)
+            resultView()
         }
         .padding(8)
+    }
+    
+    @ViewBuilder
+    private func resultView() -> some View {
+        if example.resultView != nil {
+            VStack(alignment: .leading) {
+                Text("Result UI")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+
+                example.resultView
+                    .frame(maxWidth: .infinity)
+            }
+        } else {
+            EmptyView()
+        }
     }
 }
 

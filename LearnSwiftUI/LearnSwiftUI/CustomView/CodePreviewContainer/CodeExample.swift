@@ -10,5 +10,5 @@ import SwiftUI
 struct CodeExample {
     var title: String
     var code: String
-    var resultView: AnyView
+    var resultView: AnyView?
 }
