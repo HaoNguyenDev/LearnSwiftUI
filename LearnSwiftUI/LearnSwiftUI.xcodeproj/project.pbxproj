@@ -102,6 +102,8 @@
 		DA6075272EFE9AC7002907E4 /* ResultBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6075262EFE9AC7002907E4 /* ResultBlockView.swift */; };
 		DA61C5042F0BF21C00FD8181 /* SwiftUILayoutSystemCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61C5032F0BF21C00FD8181 /* SwiftUILayoutSystemCoordinator.swift */; };
 		DA61C5082F0BF31900FD8181 /* SwiftUILayoutSystemBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61C5072F0BF31900FD8181 /* SwiftUILayoutSystemBootcamp.swift */; };
+		DA61C5242F0C075C00FD8181 /* StackViewBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61C5232F0C075C00FD8181 /* StackViewBootcampCoordinator.swift */; };
+		DA61C5282F0C076B00FD8181 /* StackViewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61C5272F0C076B00FD8181 /* StackViewBootcamp.swift */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
 		DA7BE09E2E805F4B006821CE /* VIPER-Architecture.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA7BE09D2E805F4B006821CE /* VIPER-Architecture.txt */; };
 		DA7BE0A02E805F95006821CE /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE09F2E805F95006821CE /* LoginProtocol.swift */; };
@@ -341,6 +343,8 @@
 		DA6075262EFE9AC7002907E4 /* ResultBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBlockView.swift; sourceTree = "<group>"; };
 		DA61C5032F0BF21C00FD8181 /* SwiftUILayoutSystemCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILayoutSystemCoordinator.swift; sourceTree = "<group>"; };
 		DA61C5072F0BF31900FD8181 /* SwiftUILayoutSystemBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILayoutSystemBootcamp.swift; sourceTree = "<group>"; };
+		DA61C5232F0C075C00FD8181 /* StackViewBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewBootcampCoordinator.swift; sourceTree = "<group>"; };
+		DA61C5272F0C076B00FD8181 /* StackViewBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewBootcamp.swift; sourceTree = "<group>"; };
 		DA65B7342E37D34600BF8A59 /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 		DA6E0BBB2E4A32D0009B3778 /* OperationQueueTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OperationQueueTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA6E0BBC2E4A4BA5009B3778 /* RaceConditionAvoid.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RaceConditionAvoid.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -684,8 +688,9 @@
 			isa = PBXGroup;
 			children = (
 				DAA45E6E2EF9756300BC57E9 /* BootcampList */,
-				DA83D7352EFC08B40050EF92 /* Text */,
 				DA61C5002F0BF1FA00FD8181 /* SwiftUILayoutSystem */,
+				DA61C5212F0C073A00FD8181 /* StackView */,
+				DA83D7352EFC08B40050EF92 /* Text */,
 				DA415E8A2DE5C845009F515E /* ShapesBootcamp.swift */,
 				DA415E8C2DE5CD41009F515E /* ColorsBootcamp.swift */,
 				DA415E902DE5DF63009F515E /* GradientsColorBootcamp.swift */,
@@ -1004,6 +1009,15 @@
 				DA61C5072F0BF31900FD8181 /* SwiftUILayoutSystemBootcamp.swift */,
 			);
 			path = SwiftUILayoutSystem;
+			sourceTree = "<group>";
+		};
+		DA61C5212F0C073A00FD8181 /* StackView */ = {
+			isa = PBXGroup;
+			children = (
+				DA61C5232F0C075C00FD8181 /* StackViewBootcampCoordinator.swift */,
+				DA61C5272F0C076B00FD8181 /* StackViewBootcamp.swift */,
+			);
+			path = StackView;
 			sourceTree = "<group>";
 		};
 		DA65B7322E37D31200BF8A59 /* AppDemo */ = {
@@ -1651,6 +1665,7 @@
 				DAA8E2182EA0D89800CDBDC1 /* TimerPublisherBootcamp.swift in Sources */,
 				DA8748932E6B006000B189F3 /* GradientBackgroundAnimation.swift in Sources */,
 				DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */,
+				DA61C5242F0C075C00FD8181 /* StackViewBootcampCoordinator.swift in Sources */,
 				DAED677E2E20E45C00309382 /* StateObjectBootcamp.swift in Sources */,
 				DAE365DB2E9CE2EE005EF803 /* UserSettings.swift in Sources */,
 				DA61C5042F0BF21C00FD8181 /* SwiftUILayoutSystemCoordinator.swift in Sources */,
@@ -1723,6 +1738,7 @@
 				DA7BE0AE2E8061D1006821CE /* LoginModuleBuilder.swift in Sources */,
 				DAA709162E75D60C006F8E70 /* VisaPaymentService.swift in Sources */,
 				DA83D7392EFC08D20050EF92 /* TextBootcampCoordinator.swift in Sources */,
+				DA61C5282F0C076B00FD8181 /* StackViewBootcamp.swift in Sources */,
 				DAE365BC2E9CC288005EF803 /* DarkThemeFonts.swift in Sources */,
 				DA4725302EA62DF7000D596A /* Closure.swift in Sources */,
 				DAE365BD2E9CC288005EF803 /* DarkTheme.swift in Sources */,

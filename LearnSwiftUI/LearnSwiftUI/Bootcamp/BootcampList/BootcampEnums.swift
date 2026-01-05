@@ -9,6 +9,7 @@ import Foundation
 
 enum BootcampEnums: String, CaseIterable {
     case swiftuiLayoutSystem = "SwiftUI Layout System"
+    case stackView = "Stack View"
     case text = "Text"
     case shape = "Shape"
     case color = "Color"

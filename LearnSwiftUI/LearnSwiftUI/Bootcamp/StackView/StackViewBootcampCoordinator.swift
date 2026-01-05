@@ -1,5 +1,5 @@
 //
-//  SwiftUILayoutSystemCoordinator.swift
+//  StackViewBootcampCoordinator.swift
 //  LearnSwiftUI
 //
 //  Created by Hao Nguyen on 5/1/26.
@@ -8,20 +8,20 @@
 import SwiftUI
 
 extension Router {
-    enum SwiftUILayoutSystemRouter: Routable {
+    enum StackViewRouter: Routable {
         case subviewExample
         
         var id: String {
             switch self {
             case .subviewExample:
-                return "SwiftUILayoutSystem.subviewExample"
+                return "StackView.subviewExample"
             }
         }
     }
 }
 
-struct SwiftUILayoutSystemCoordinator: View, ScreenCoordinator {
-    typealias ScreenRouter = Router.SwiftUILayoutSystemRouter
+struct StackViewBootcampCoordinator: View, ScreenCoordinator {
+    typealias ScreenRouter = Router.StackViewRouter
     var navRouter: any NavRouterProtocol
     
     init(navRouter: any NavRouterProtocol) {
@@ -34,16 +34,19 @@ struct SwiftUILayoutSystemCoordinator: View, ScreenCoordinator {
     
     @ViewBuilder
     private func getView() -> some View {
-        SwiftUILayoutSystemBootcamp()
-            .navigationTitle("SwiftUI Layout System")
+        StackViewBootcamp()
+            .navigationTitle("Stack View")
     }
+    
 }
 
-extension SwiftUILayoutSystemCoordinator {
-    func viewForRouter(router: Router.SwiftUILayoutSystemRouter) -> some View {
+extension StackViewBootcampCoordinator {
+    func viewForRouter(router: Router.StackViewRouter) -> some View {
         switch router {
         case .subviewExample:
             EmptyView()
         }
     }
 }
+
+
