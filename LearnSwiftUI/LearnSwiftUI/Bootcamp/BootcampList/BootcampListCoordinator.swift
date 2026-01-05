@@ -10,12 +10,15 @@ import SwiftUI
 extension Router {
     enum BootcampList: Routable {
         case swiftuiLayoutSystem
+        case stackViewBootcamp
         case textBootcamp
         
         var id: String {
             switch self {
             case .swiftuiLayoutSystem:
                 return "BootcampList.swiftuiLayoutSystem"
+            case .stackViewBootcamp:
+                return "BootcampList.stackViewBootcamp"
             case .textBootcamp:
                 return "BootcampList.textBootcamp"
             }
@@ -48,6 +51,8 @@ struct BootcampListCoordinator: View, ScreenCoordinator {
             switch bootcamp {
             case .swiftuiLayoutSystem:
                 navRouter.push(ScreenRouter.swiftuiLayoutSystem, animate: true)
+            case .stackView:
+                navRouter.push(ScreenRouter.stackViewBootcamp, animate: true)
             case .text:
                 navRouter.push(ScreenRouter.textBootcamp, animate: true)
             case .shape: break
@@ -66,6 +71,8 @@ extension BootcampListCoordinator {
         switch router {
         case .swiftuiLayoutSystem:
             SwiftUILayoutSystemCoordinator(navRouter: navRouter)
+        case .stackViewBootcamp:
+            StackViewBootcampCoordinator(navRouter: navRouter)
         case .textBootcamp:
             TextBootcampCoordinator(navRouter: navRouter)
         }
