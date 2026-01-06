@@ -9,14 +9,14 @@ import SwiftUI
 
 extension Router {
     enum BootcampList: Routable {
-        case swiftuiLayoutSystem
+        case swiftuiLayoutEngine
         case stackViewBootcamp
         case textBootcamp
         
         var id: String {
             switch self {
-            case .swiftuiLayoutSystem:
-                return "BootcampList.swiftuiLayoutSystem"
+            case .swiftuiLayoutEngine:
+                return "BootcampList.swiftuiLayoutEngine"
             case .stackViewBootcamp:
                 return "BootcampList.stackViewBootcamp"
             case .textBootcamp:
@@ -50,7 +50,7 @@ struct BootcampListCoordinator: View, ScreenCoordinator {
             debugPrint("\(bootcamp.rawValue)")
             switch bootcamp {
             case .swiftuiLayoutSystem:
-                navRouter.push(ScreenRouter.swiftuiLayoutSystem, animate: true)
+                navRouter.push(ScreenRouter.swiftuiLayoutEngine, animate: true)
             case .stackView:
                 navRouter.push(ScreenRouter.stackViewBootcamp, animate: true)
             case .text:
@@ -69,8 +69,8 @@ extension BootcampListCoordinator {
     @ViewBuilder
     func viewForRouter(router: Router.BootcampList) -> some View {
         switch router {
-        case .swiftuiLayoutSystem:
-            SwiftUILayoutSystemCoordinator(navRouter: navRouter)
+        case .swiftuiLayoutEngine:
+            SwiftUILayoutEngineCoordinator(navRouter: navRouter)
         case .stackViewBootcamp:
             StackViewBootcampCoordinator(navRouter: navRouter)
         case .textBootcamp:
@@ -78,3 +78,4 @@ extension BootcampListCoordinator {
         }
     }
 }
+

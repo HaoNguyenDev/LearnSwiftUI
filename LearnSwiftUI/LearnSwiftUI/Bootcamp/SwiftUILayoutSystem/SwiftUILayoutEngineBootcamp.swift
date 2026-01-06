@@ -7,10 +7,15 @@
 
 import SwiftUI
 
-struct SwiftUILayoutSystemBootcamp: View {
+struct SwiftUILayoutEngineBootcamp: View {
     var body: some View {
         ScrollView {
-            CodePreviewContainer(title: "SwiftUI Layout System", code: """
+            CodePreviewContainer(title: "SWIFTUI LAYOUT ENGINE", code: """
+    
+    Before writing any layout code, you must understand:
+    ❗ SwiftUI doesn't layout views based on a "place view wherever you want" approach.
+    ❗ SwiftUI layout views using a "proposal" system.
+    
     Parent Proposes → Child Chooses → Parent Places
     
     1️⃣ Overview: SwiftUI layouts are NOT the same as Auto Layout
@@ -23,10 +28,16 @@ struct SwiftUILayoutSystemBootcamp: View {
         No constraints
         Layout is a dialogue between Parent and Child
     
-    2️⃣ 3 Immutable Steps of SwiftUI Layout
-        🔁 Step 1 — Parent proposes size
-        Parent proposes a size for the child:
-        “Son, this is the space you can use.”
+    2️⃣ SwiftUI Layout works across 3 phases.
+    
+    🔁 Step 1️⃣ Parent proposes size
+        Parent says to child:
+        “I have space X, how much do you want?”
+    
+        Examples:
+        VStack → proposes a fixed width
+        ScrollView → proposes infinite height
+        GeometryReader → proposes full size
     
     The proposal can be:
         Specific: width = 100
@@ -34,21 +45,34 @@ struct SwiftUILayoutSystemBootcamp: View {
         Undefined: nil
     ⚠️ A proposal is not a command
     
-    🔁 Step 2 — Child chooses size
+    🔁 Step 2️⃣ — Child chooses its size
     Child:
         Look at the proposal
         Based on intrinsic content size
         Based on modifiers (frame, fixedSize, layoutPriority)
         Decide on their own size
-    👉 Child has the right to reject the proposal
+        Child is NOT obligated to accept the size suggested by the parent.
     
-    🔁 Step 3 — Parent places child
+    Example:
+        Text("Hi") → only takes the size that fits the text
+        Spacer() → expands to the maximum
+        .frame(width: 200) → overrides the suggestion
+    
+    🔁 Step 3️⃣ — Parent places child
         After the child chooses the size:
         Parent places the child in position
     Based on:
+        where to place the child
+        left/center/right
         alignment
         stack direction
         spacing
+    
+    📌 Senior Interview
+    Is SwiftUI layout a push or pull system?
+
+    ✅ Pull-based (child chooses size)
+    👉 Child has the right to reject the proposal
     """, resultView: nil)
             
             CodePreviewContainer(title: "Visual example", code: """
@@ -222,5 +246,5 @@ Keeping the "less scalable" view stable, sacrificing the "scalable" view first
 }
 
 #Preview {
-    SwiftUILayoutSystemBootcamp()
+    SwiftUILayoutEngineBootcamp()
 }

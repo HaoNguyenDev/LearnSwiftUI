@@ -1,5 +1,5 @@
 //
-//  SwiftUILayoutSystemCoordinator.swift
+//  SwiftUILayoutEngineCoordinator.swift
 //  LearnSwiftUI
 //
 //  Created by Hao Nguyen on 5/1/26.
@@ -8,20 +8,20 @@
 import SwiftUI
 
 extension Router {
-    enum SwiftUILayoutSystemRouter: Routable {
+    enum SwiftUILayoutEngineRouter: Routable {
         case subviewExample
         
         var id: String {
             switch self {
             case .subviewExample:
-                return "SwiftUILayoutSystem.subviewExample"
+                return "SwiftUILayoutEngine.subviewExample"
             }
         }
     }
 }
 
-struct SwiftUILayoutSystemCoordinator: View, ScreenCoordinator {
-    typealias ScreenRouter = Router.SwiftUILayoutSystemRouter
+struct SwiftUILayoutEngineCoordinator: View, ScreenCoordinator {
+    typealias ScreenRouter = Router.SwiftUILayoutEngineRouter
     var navRouter: any NavRouterProtocol
     
     init(navRouter: any NavRouterProtocol) {
@@ -34,13 +34,13 @@ struct SwiftUILayoutSystemCoordinator: View, ScreenCoordinator {
     
     @ViewBuilder
     private func getView() -> some View {
-        SwiftUILayoutSystemBootcamp()
-            .navigationTitle("SwiftUI Layout System")
+        SwiftUILayoutEngineBootcamp()
+            .navigationTitle("SwiftUI Layout Engine")
     }
 }
 
-extension SwiftUILayoutSystemCoordinator {
-    func viewForRouter(router: Router.SwiftUILayoutSystemRouter) -> some View {
+extension SwiftUILayoutEngineCoordinator {
+    func viewForRouter(router: Router.SwiftUILayoutEngineRouter) -> some View {
         switch router {
         case .subviewExample:
             EmptyView()
