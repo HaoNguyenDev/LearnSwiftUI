@@ -9,7 +9,17 @@ import SwiftUI
 
 struct StackViewBootcamp: View {
     var body: some View {
-        CodePreviewContainer(title: "Stack View", code: """
-""", resultView: nil)
+        ScrollView {
+            VStack(spacing: 24) {
+                ForEach(StackViewLessons.all) { lesson in
+                    CodePreviewContainer(title: lesson.title, code: lesson.code, resultView: lesson.result?())
+                }
+            }
+            .padding()
+        }
     }
+}
+
+#Preview {
+    StackViewBootcamp()
 }
