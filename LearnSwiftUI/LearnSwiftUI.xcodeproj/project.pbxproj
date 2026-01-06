@@ -107,6 +107,7 @@
 		DA61C5592F0CCE8B00FD8181 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61C5582F0CCE8B00FD8181 /* Lesson.swift */; };
 		DA61C55C2F0CCF0500FD8181 /* SwiftUILayoutEngineLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61C55B2F0CCF0500FD8181 /* SwiftUILayoutEngineLessons.swift */; };
 		DA61C5662F0CD15E00FD8181 /* TextLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61C5652F0CD15E00FD8181 /* TextLessons.swift */; };
+		DA61C5B22F0D3A7100FD8181 /* StackViewLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61C5B12F0D3A7100FD8181 /* StackViewLessons.swift */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
 		DA7BE09E2E805F4B006821CE /* VIPER-Architecture.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA7BE09D2E805F4B006821CE /* VIPER-Architecture.txt */; };
 		DA7BE0A02E805F95006821CE /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE09F2E805F95006821CE /* LoginProtocol.swift */; };
@@ -351,6 +352,7 @@
 		DA61C5582F0CCE8B00FD8181 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		DA61C55B2F0CCF0500FD8181 /* SwiftUILayoutEngineLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILayoutEngineLessons.swift; sourceTree = "<group>"; };
 		DA61C5652F0CD15E00FD8181 /* TextLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLessons.swift; sourceTree = "<group>"; };
+		DA61C5B12F0D3A7100FD8181 /* StackViewLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewLessons.swift; sourceTree = "<group>"; };
 		DA65B7342E37D34600BF8A59 /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 		DA6E0BBB2E4A32D0009B3778 /* OperationQueueTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OperationQueueTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA6E0BBC2E4A4BA5009B3778 /* RaceConditionAvoid.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RaceConditionAvoid.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -693,8 +695,8 @@
 		DA415E6A2DE5BFAF009F515E /* Bootcamp */ = {
 			isa = PBXGroup;
 			children = (
-				DA61C5522F0CC38100FD8181 /* SwiftUILayoutEngine */,
 				DAA45E6E2EF9756300BC57E9 /* BootcampList */,
+				DA61C5522F0CC38100FD8181 /* SwiftUILayoutEngine */,
 				DA61C5212F0C073A00FD8181 /* StackView */,
 				DA83D7352EFC08B40050EF92 /* Text */,
 				DA415E8A2DE5C845009F515E /* ShapesBootcamp.swift */,
@@ -1014,6 +1016,7 @@
 			children = (
 				DA61C5232F0C075C00FD8181 /* StackViewBootcampCoordinator.swift */,
 				DA61C5272F0C076B00FD8181 /* StackViewBootcamp.swift */,
+				DA61C5B12F0D3A7100FD8181 /* StackViewLessons.swift */,
 			);
 			path = StackView;
 			sourceTree = "<group>";
@@ -1692,6 +1695,7 @@
 				DA54770B2EB63A37005C8868 /* TokenResponse.swift in Sources */,
 				DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */,
 				DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */,
+				DA61C5B22F0D3A7100FD8181 /* StackViewLessons.swift in Sources */,
 				DA7BF6722E992DEF00224BCF /* HTextField.swift in Sources */,
 				DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */,
 				DAEBAE3A2DEAF92400082B1C /* StacksBootcamp.swift in Sources */,
