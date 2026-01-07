@@ -496,6 +496,14 @@
 		DAFCDF692E630B2C00B97C00 /* ErrorBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DA8656982F0E75580092426E /* GeometryReader-coordinateSpace */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "GeometryReader-coordinateSpace";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		DA415E4C2DE5BF26009F515E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -705,6 +713,7 @@
 				DA61C5522F0CC38100FD8181 /* SwiftUILayoutEngine */,
 				DA61C5212F0C073A00FD8181 /* StackView */,
 				DA61C5DD2F0E17D300FD8181 /* Alignment-AlignmentGuide */,
+				DA8656982F0E75580092426E /* GeometryReader-coordinateSpace */,
 				DA83D7352EFC08B40050EF92 /* Text */,
 				DA415E8A2DE5C845009F515E /* ShapesBootcamp.swift */,
 				DA415E8C2DE5CD41009F515E /* ColorsBootcamp.swift */,
@@ -1500,6 +1509,9 @@
 			);
 			dependencies = (
 				DA7BF5EC2E98F40800224BCF /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DA8656982F0E75580092426E /* GeometryReader-coordinateSpace */,
 			);
 			name = LearnSwiftUI;
 			packageProductDependencies = (

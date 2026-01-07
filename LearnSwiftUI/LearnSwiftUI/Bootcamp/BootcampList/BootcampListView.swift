@@ -20,7 +20,7 @@ struct BootcampListView: View {
         }
     }
     
-    var bootcampList: some View {
+    private var bootcampList: some View {
         VStack {
             List {
                 ForEach(BootcampEnums.allCases, id: \.self) { bootcamp in
@@ -30,7 +30,7 @@ struct BootcampListView: View {
         }
     }
     
-    func bootcampItem(bootcamp: BootcampEnums) -> some View {
+    private func bootcampItem(bootcamp: BootcampEnums) -> some View {
         VStack {
             Text(bootcamp.rawValue)
                 .font(theme.font.bold(ofSize: 18.0))
@@ -39,7 +39,7 @@ struct BootcampListView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
 //        .background(Color.gray)
-        .contentShape(Rectangle()) /// Support for tap area with full VStack
+        .contentShape(Rectangle())
         .onTapGesture {
             guard let bootcampOnTap else { return }
             bootcampOnTap(bootcamp)
