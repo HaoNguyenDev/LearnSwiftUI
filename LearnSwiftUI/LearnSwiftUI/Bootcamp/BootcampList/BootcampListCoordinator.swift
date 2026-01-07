@@ -12,6 +12,7 @@ extension Router {
         case swiftuiLayoutEngine
         case stackViewBootcamp
         case alignmentAlignmentGuide
+        case geometryReaderCoordinateSpace
         case textBootcamp
         
         var id: String {
@@ -22,6 +23,8 @@ extension Router {
                 return "BootcampList.stackViewBootcamp"
             case .alignmentAlignmentGuide:
                 return "BootcampList.alignmentAlignmentGuide"
+            case .geometryReaderCoordinateSpace:
+                return "BootcampList.geometryReaderCoordinateSpace"
             case .textBootcamp:
                 return "BootcampList.textBootcamp"
             }
@@ -58,6 +61,8 @@ struct BootcampListCoordinator: View, ScreenCoordinator {
                 navRouter.push(ScreenRouter.stackViewBootcamp, animate: true)
             case .alignmentAlignmentGuide:
                 navRouter.push(ScreenRouter.alignmentAlignmentGuide, animate: true)
+            case .geometryReaderCoordinateSpace:
+                navRouter.push(ScreenRouter.geometryReaderCoordinateSpace, animate: true)
             case .text:
                 navRouter.push(ScreenRouter.textBootcamp, animate: true)
             case .shape: break
@@ -80,6 +85,8 @@ extension BootcampListCoordinator {
             StackViewBootcampCoordinator(navRouter: navRouter)
         case .alignmentAlignmentGuide:
             AlignmentBootcampCoordinator(navRouter: navRouter)
+        case .geometryReaderCoordinateSpace:
+            GeometryReaderCoordinateSpaceBootcampCoordinator(navRouter: navRouter)
         case .textBootcamp:
             TextBootcampCoordinator(navRouter: navRouter)
         }
