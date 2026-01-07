@@ -17,6 +17,10 @@ If you remember these two sentences, you can avoid 80% of mistakes.
 What is a GeometryReader (correct definition)?
 A GeometryReader is a View that always occupies the entire proposal given to it by the parent,
 and provides the geometric information of that space to the child.
+
+🔑 A key (and very memorable) statement:
+GeometryReader doesn't measure views —
+it measures the space it occupies.
 """, result: nil),
         
         Lesson(title: "Common mistakes (many developers make)", code: """
@@ -96,18 +100,22 @@ Layout Cycle with GeometryReader
         Lesson(title: "How to use GeometryReader correctly", code: """
 ✅ Method 1 — Wrap in a fixed frame
 
-    GeometryReader { geo in
-        Text("Hello")
-    }
-    .frame(height: 100)
+	GeometryReader { geo in
+	    Text("Hello")
+	        .background(.green)
+	}
+	.frame(height: 100)
+	.background(.gray)
 
 👉 GeometryReader only takes up height 100.
 """, result: {
     AnyView(ResultBlockView(content: {
         GeometryReader { geo in
             Text("Hello")
+                .background(.green)
         }
         .frame(height: 100)
+        .background(.gray)
     }))
 }),
         Lesson(title: "", code: """
@@ -160,6 +168,96 @@ Layout Cycle with GeometryReader
                 )
         }
     }))
-})
+}),
+        Lesson(title: "What is coordinateSpace?", code: """
+coordinateSpace defines the coordinate system for measuring position and frame.
+
+Three types:
+    .local
+    .global
+    .named("MySpace")
+
+""", result: nil),
+        Lesson(title: "Example: local vs global", code: """
+    GeometryReader { geo in
+        Text("Hello")
+            .onAppear {
+                print("local:", geo.frame(in: .local))
+                print("global:", geo.frame(in: .global))
+            }
+    }
+
+📌 .local → in GeometryReader
+📌 .global → full screen
+""", result: {
+    AnyView(ResultBlockView(content: {
+        GeometryReader { geo in
+            Text("Hello")
+                .onAppear {
+                    print("Hello local:", geo.frame(in: .local))
+                    print("Hello global:", geo.frame(in: .global))
+                }
+        }
+    }))
+}),
+        Lesson(title: "Named coordinatespace (very important)", code: """
+    ScrollView {
+        VStack {
+            Text("Item")
+        }
+    }
+    .coordinateSpace(name: "scroll")
+
+    GeometryReader { geo in
+        let y = geo.frame(in: .named("scroll")).minY
+        Text("(y)")
+    }
+
+👉 Used for:
+    Sticky header
+    Parallax
+    Scroll offset tracking
+""", result: {
+    AnyView(
+        ResultBlockView(content: {
+            ScrollView {
+                VStack {
+                    Text("Item")
+                }
+            }
+            .coordinateSpace(name: "scroll")
+
+            GeometryReader { geo in
+                let y = geo.frame(in: .named("scroll")).minY
+                Text("\(y)")
+            }
+
+        })
+    )
+}),
+        Lesson(title: "When should you NOT use GeometryReader?", code: """
+❌ To center
+❌ To change the spacer
+❌ For basic layout
+❌ When you don't understand the proposal
+""", result: nil),
+        
+        Lesson(title: "Debug GeometryReader", code: """
+Always add:
+    .background(Color.red.opacity(0.2))
+""", result: nil),
+        
+        Lesson(title: "Interview trap", code: """
+Interview Trap #1
+❓ Does GeometryReader have intrinsic size?
+❌ No
+✅ It always takes up the proposal space
+
+Interview Trap #2
+❓ Why is GeometryReader often placed in ZStack?
+✅ Because:
+ZStack allows overlay
+GeometryReader does not affect the flow
+""", result: nil)
     ]
 }
