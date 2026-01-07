@@ -11,6 +11,7 @@ extension Router {
     enum BootcampList: Routable {
         case swiftuiLayoutEngine
         case stackViewBootcamp
+        case alignmentAlignmentGuide
         case textBootcamp
         
         var id: String {
@@ -19,6 +20,8 @@ extension Router {
                 return "BootcampList.swiftuiLayoutEngine"
             case .stackViewBootcamp:
                 return "BootcampList.stackViewBootcamp"
+            case .alignmentAlignmentGuide:
+                return "BootcampList.alignmentAlignmentGuide"
             case .textBootcamp:
                 return "BootcampList.textBootcamp"
             }
@@ -53,6 +56,8 @@ struct BootcampListCoordinator: View, ScreenCoordinator {
                 navRouter.push(ScreenRouter.swiftuiLayoutEngine, animate: true)
             case .stackView:
                 navRouter.push(ScreenRouter.stackViewBootcamp, animate: true)
+            case .alignmentAlignmentGuide:
+                navRouter.push(ScreenRouter.alignmentAlignmentGuide, animate: true)
             case .text:
                 navRouter.push(ScreenRouter.textBootcamp, animate: true)
             case .shape: break
@@ -73,6 +78,8 @@ extension BootcampListCoordinator {
             SwiftUILayoutEngineCoordinator(navRouter: navRouter)
         case .stackViewBootcamp:
             StackViewBootcampCoordinator(navRouter: navRouter)
+        case .alignmentAlignmentGuide:
+            AlignmentBootcampCoordinator(navRouter: navRouter)
         case .textBootcamp:
             TextBootcampCoordinator(navRouter: navRouter)
         }
