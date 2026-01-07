@@ -108,6 +108,8 @@
 		DA61C55C2F0CCF0500FD8181 /* SwiftUILayoutEngineLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61C55B2F0CCF0500FD8181 /* SwiftUILayoutEngineLessons.swift */; };
 		DA61C5662F0CD15E00FD8181 /* TextLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61C5652F0CD15E00FD8181 /* TextLessons.swift */; };
 		DA61C5B22F0D3A7100FD8181 /* StackViewLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61C5B12F0D3A7100FD8181 /* StackViewLessons.swift */; };
+		DA61C5DF2F0E180400FD8181 /* AlignmentBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61C5DE2F0E180400FD8181 /* AlignmentBootcampCoordinator.swift */; };
+		DA61C5E52F0E192A00FD8181 /* AlignmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61C5E42F0E192A00FD8181 /* AlignmentBootcamp.swift */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
 		DA7BE09E2E805F4B006821CE /* VIPER-Architecture.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA7BE09D2E805F4B006821CE /* VIPER-Architecture.txt */; };
 		DA7BE0A02E805F95006821CE /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE09F2E805F95006821CE /* LoginProtocol.swift */; };
@@ -152,6 +154,7 @@
 		DA7BF6902E995FAC00224BCF /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF68F2E995FAC00224BCF /* View+Extensions.swift */; };
 		DA83D7392EFC08D20050EF92 /* TextBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D7382EFC08D20050EF92 /* TextBootcampCoordinator.swift */; };
 		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
+		DA86566F2F0E1AA50092426E /* AlignmentLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86566E2F0E1AA50092426E /* AlignmentLessons.swift */; };
 		DA8748872E6AFBC900B189F3 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8748862E6AFBC100B189F3 /* WeatherService.swift */; };
 		DA87488A2E6AFC6A00B189F3 /* WeatherItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8748892E6AFC6300B189F3 /* WeatherItem.swift */; };
 		DA8748912E6B005800B189F3 /* WeatherErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8748902E6B005800B189F3 /* WeatherErrorView.swift */; };
@@ -353,6 +356,8 @@
 		DA61C55B2F0CCF0500FD8181 /* SwiftUILayoutEngineLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILayoutEngineLessons.swift; sourceTree = "<group>"; };
 		DA61C5652F0CD15E00FD8181 /* TextLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLessons.swift; sourceTree = "<group>"; };
 		DA61C5B12F0D3A7100FD8181 /* StackViewLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewLessons.swift; sourceTree = "<group>"; };
+		DA61C5DE2F0E180400FD8181 /* AlignmentBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentBootcampCoordinator.swift; sourceTree = "<group>"; };
+		DA61C5E42F0E192A00FD8181 /* AlignmentBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentBootcamp.swift; sourceTree = "<group>"; };
 		DA65B7342E37D34600BF8A59 /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 		DA6E0BBB2E4A32D0009B3778 /* OperationQueueTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OperationQueueTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA6E0BBC2E4A4BA5009B3778 /* RaceConditionAvoid.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RaceConditionAvoid.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -402,6 +407,7 @@
 		DA7BF68F2E995FAC00224BCF /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		DA83D7382EFC08D20050EF92 /* TextBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBootcampCoordinator.swift; sourceTree = "<group>"; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
+		DA86566E2F0E1AA50092426E /* AlignmentLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentLessons.swift; sourceTree = "<group>"; };
 		DA8748862E6AFBC100B189F3 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		DA8748892E6AFC6300B189F3 /* WeatherItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherItem.swift; sourceTree = "<group>"; };
 		DA8748902E6B005800B189F3 /* WeatherErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherErrorView.swift; sourceTree = "<group>"; };
@@ -698,6 +704,7 @@
 				DAA45E6E2EF9756300BC57E9 /* BootcampList */,
 				DA61C5522F0CC38100FD8181 /* SwiftUILayoutEngine */,
 				DA61C5212F0C073A00FD8181 /* StackView */,
+				DA61C5DD2F0E17D300FD8181 /* Alignment-AlignmentGuide */,
 				DA83D7352EFC08B40050EF92 /* Text */,
 				DA415E8A2DE5C845009F515E /* ShapesBootcamp.swift */,
 				DA415E8C2DE5CD41009F515E /* ColorsBootcamp.swift */,
@@ -1029,6 +1036,16 @@
 				DA61C5512F0CC38100FD8181 /* SwiftUILayoutEngineCoordinator.swift */,
 			);
 			path = SwiftUILayoutEngine;
+			sourceTree = "<group>";
+		};
+		DA61C5DD2F0E17D300FD8181 /* Alignment-AlignmentGuide */ = {
+			isa = PBXGroup;
+			children = (
+				DA61C5DE2F0E180400FD8181 /* AlignmentBootcampCoordinator.swift */,
+				DA61C5E42F0E192A00FD8181 /* AlignmentBootcamp.swift */,
+				DA86566E2F0E1AA50092426E /* AlignmentLessons.swift */,
+			);
+			path = "Alignment-AlignmentGuide";
 			sourceTree = "<group>";
 		};
 		DA65B7322E37D31200BF8A59 /* AppDemo */ = {
@@ -1574,6 +1591,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA86566F2F0E1AA50092426E /* AlignmentLessons.swift in Sources */,
 				DA7BF5D72E98ED4000224BCF /* DefaultTheme.swift in Sources */,
 				DA415E8D2DE5CD41009F515E /* ColorsBootcamp.swift in Sources */,
 				DAA45E452EF931B700BC57E9 /* Router.swift in Sources */,
@@ -1611,6 +1629,7 @@
 				DAE2EACA2DF5DE280083E733 /* SheetBootcamp.swift in Sources */,
 				DA37F9802E8D860D0001599E /* CbLogginViewModel.swift in Sources */,
 				DA0B4AE72E6FC9A400628E53 /* DownloadManager.swift in Sources */,
+				DA61C5E52F0E192A00FD8181 /* AlignmentBootcamp.swift in Sources */,
 				DA415E8F2DE5DCC0009F515E /* Color.swift in Sources */,
 				DA37F98E2E8D8BE00001599E /* ViewModelTransformableProtocol.swift in Sources */,
 				DA5D71452E3F43B100C78E40 /* ObservablePattern.swift in Sources */,
@@ -1626,6 +1645,7 @@
 				DA5D718B2E3FB25700C78E40 /* UserListView.swift in Sources */,
 				DAAE8CBA2E44BDFF00FCBA4E /* FormView.swift in Sources */,
 				DA5477492EB65729005C8868 /* Profile.swift in Sources */,
+				DA61C5DF2F0E180400FD8181 /* AlignmentBootcampCoordinator.swift in Sources */,
 				DAEBAE402DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift in Sources */,
 				DAC97DE72EA3960500F8A22F /* ActorBootcamp.swift in Sources */,
 				DA60751A2EFE99C2002907E4 /* CodeExample.swift in Sources */,
