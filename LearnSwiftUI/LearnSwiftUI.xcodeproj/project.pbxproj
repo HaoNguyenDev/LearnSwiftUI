@@ -155,6 +155,12 @@
 		DA83D7392EFC08D20050EF92 /* TextBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D7382EFC08D20050EF92 /* TextBootcampCoordinator.swift */; };
 		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
 		DA86566F2F0E1AA50092426E /* AlignmentLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86566E2F0E1AA50092426E /* AlignmentLessons.swift */; };
+		DA8656C62F0F75750092426E /* GeometryReaderBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8656C22F0F75750092426E /* GeometryReaderBootcamp.swift */; };
+		DA8656C72F0F75750092426E /* GeometryReaderCoordinateSpaceBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8656C32F0F75750092426E /* GeometryReaderCoordinateSpaceBootcampCoordinator.swift */; };
+		DA8656C82F0F75750092426E /* GeometryReaderCoordinateSpaceLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8656C42F0F75750092426E /* GeometryReaderCoordinateSpaceLessons.swift */; };
+		DA8656D02F0F75A30092426E /* ScrollViewLazyContainersLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8656CF2F0F75A30092426E /* ScrollViewLazyContainersLessons.swift */; };
+		DA8656D32F0F75FA0092426E /* ScrollViewLazyContainersBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8656D22F0F75FA0092426E /* ScrollViewLazyContainersBootcamp.swift */; };
+		DA8656D72F0F76820092426E /* ScrollViewLazyContainersBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8656D62F0F76820092426E /* ScrollViewLazyContainersBootcampCoordinator.swift */; };
 		DA8748872E6AFBC900B189F3 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8748862E6AFBC100B189F3 /* WeatherService.swift */; };
 		DA87488A2E6AFC6A00B189F3 /* WeatherItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8748892E6AFC6300B189F3 /* WeatherItem.swift */; };
 		DA8748912E6B005800B189F3 /* WeatherErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8748902E6B005800B189F3 /* WeatherErrorView.swift */; };
@@ -408,6 +414,12 @@
 		DA83D7382EFC08D20050EF92 /* TextBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBootcampCoordinator.swift; sourceTree = "<group>"; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DA86566E2F0E1AA50092426E /* AlignmentLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentLessons.swift; sourceTree = "<group>"; };
+		DA8656C22F0F75750092426E /* GeometryReaderBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderBootcamp.swift; sourceTree = "<group>"; };
+		DA8656C32F0F75750092426E /* GeometryReaderCoordinateSpaceBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderCoordinateSpaceBootcampCoordinator.swift; sourceTree = "<group>"; };
+		DA8656C42F0F75750092426E /* GeometryReaderCoordinateSpaceLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderCoordinateSpaceLessons.swift; sourceTree = "<group>"; };
+		DA8656CF2F0F75A30092426E /* ScrollViewLazyContainersLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewLazyContainersLessons.swift; sourceTree = "<group>"; };
+		DA8656D22F0F75FA0092426E /* ScrollViewLazyContainersBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewLazyContainersBootcamp.swift; sourceTree = "<group>"; };
+		DA8656D62F0F76820092426E /* ScrollViewLazyContainersBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewLazyContainersBootcampCoordinator.swift; sourceTree = "<group>"; };
 		DA8748862E6AFBC100B189F3 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		DA8748892E6AFC6300B189F3 /* WeatherItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherItem.swift; sourceTree = "<group>"; };
 		DA8748902E6B005800B189F3 /* WeatherErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherErrorView.swift; sourceTree = "<group>"; };
@@ -495,14 +507,6 @@
 		DAFCDF682E62052500B97C00 /* SOLID.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SOLID.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAFCDF692E630B2C00B97C00 /* ErrorBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		DA8656982F0E75580092426E /* GeometryReader-coordinateSpace */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "GeometryReader-coordinateSpace";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DA415E4C2DE5BF26009F515E /* Frameworks */ = {
@@ -713,7 +717,8 @@
 				DA61C5522F0CC38100FD8181 /* SwiftUILayoutEngine */,
 				DA61C5212F0C073A00FD8181 /* StackView */,
 				DA61C5DD2F0E17D300FD8181 /* Alignment-AlignmentGuide */,
-				DA8656982F0E75580092426E /* GeometryReader-coordinateSpace */,
+				DA8656C52F0F75750092426E /* GeometryReader-coordinateSpace */,
+				DA8656CB2F0F757B0092426E /* ScrollView-LazyContainers */,
 				DA83D7352EFC08B40050EF92 /* Text */,
 				DA415E8A2DE5C845009F515E /* ShapesBootcamp.swift */,
 				DA415E8C2DE5CD41009F515E /* ColorsBootcamp.swift */,
@@ -1207,6 +1212,26 @@
 			path = Text;
 			sourceTree = "<group>";
 		};
+		DA8656C52F0F75750092426E /* GeometryReader-coordinateSpace */ = {
+			isa = PBXGroup;
+			children = (
+				DA8656C22F0F75750092426E /* GeometryReaderBootcamp.swift */,
+				DA8656C32F0F75750092426E /* GeometryReaderCoordinateSpaceBootcampCoordinator.swift */,
+				DA8656C42F0F75750092426E /* GeometryReaderCoordinateSpaceLessons.swift */,
+			);
+			path = "GeometryReader-coordinateSpace";
+			sourceTree = "<group>";
+		};
+		DA8656CB2F0F757B0092426E /* ScrollView-LazyContainers */ = {
+			isa = PBXGroup;
+			children = (
+				DA8656CF2F0F75A30092426E /* ScrollViewLazyContainersLessons.swift */,
+				DA8656D22F0F75FA0092426E /* ScrollViewLazyContainersBootcamp.swift */,
+				DA8656D62F0F76820092426E /* ScrollViewLazyContainersBootcampCoordinator.swift */,
+			);
+			path = "ScrollView-LazyContainers";
+			sourceTree = "<group>";
+		};
 		DA8748852E6AFBB000B189F3 /* WeatherList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1510,9 +1535,6 @@
 			dependencies = (
 				DA7BF5EC2E98F40800224BCF /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				DA8656982F0E75580092426E /* GeometryReader-coordinateSpace */,
-			);
 			name = LearnSwiftUI;
 			packageProductDependencies = (
 				DA5D71922E3FBB7C00C78E40 /* SDWebImageSwiftUI */,
@@ -1672,6 +1694,9 @@
 				DABDF7B42E70466B00DEC7C6 /* DownloadTask.swift in Sources */,
 				DA37F99D2E8D93F60001599E /* CbDemoLoginContentView.swift in Sources */,
 				DA37F9872E8D898B0001599E /* CbLoginResult.swift in Sources */,
+				DA8656C62F0F75750092426E /* GeometryReaderBootcamp.swift in Sources */,
+				DA8656C72F0F75750092426E /* GeometryReaderCoordinateSpaceBootcampCoordinator.swift in Sources */,
+				DA8656C82F0F75750092426E /* GeometryReaderCoordinateSpaceLessons.swift in Sources */,
 				DA54774E2EB658E6005C8868 /* AlamofireTestView.swift in Sources */,
 				DA61C55C2F0CCF0500FD8181 /* SwiftUILayoutEngineLessons.swift in Sources */,
 				DAA45E742EF976EA00BC57E9 /* BootcampListView.swift in Sources */,
@@ -1697,6 +1722,7 @@
 				DA61C5532F0CC38100FD8181 /* SwiftUILayoutEngineBootcamp.swift in Sources */,
 				DA61C5542F0CC38100FD8181 /* SwiftUILayoutEngineCoordinator.swift in Sources */,
 				DA5D71902E3FBA7400C78E40 /* GithubUserDetail.swift in Sources */,
+				DA8656D02F0F75A30092426E /* ScrollViewLazyContainersLessons.swift in Sources */,
 				DAC97E282EA3C22700F8A22F /* Double+Extensions.swift in Sources */,
 				DA0B4AEB2E6FCBB700628E53 /* DownloadView.swift in Sources */,
 				DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */,
@@ -1704,6 +1730,7 @@
 				DA5476E72EB3A4A8005C8868 /* ViewToTestClass.swift in Sources */,
 				DA61C5662F0CD15E00FD8181 /* TextLessons.swift in Sources */,
 				DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */,
+				DA8656D32F0F75FA0092426E /* ScrollViewLazyContainersBootcamp.swift in Sources */,
 				DA5D717E2E3FA57800C78E40 /* NetworkProtocols.swift in Sources */,
 				DA58DD9C2E9E5FF90042D1AD /* String+Extensions.swift in Sources */,
 				DA7BE0A02E805F95006821CE /* LoginProtocol.swift in Sources */,
@@ -1727,6 +1754,7 @@
 				DA54770B2EB63A37005C8868 /* TokenResponse.swift in Sources */,
 				DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */,
 				DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */,
+				DA8656D72F0F76820092426E /* ScrollViewLazyContainersBootcampCoordinator.swift in Sources */,
 				DA61C5B22F0D3A7100FD8181 /* StackViewLessons.swift in Sources */,
 				DA7BF6722E992DEF00224BCF /* HTextField.swift in Sources */,
 				DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */,
