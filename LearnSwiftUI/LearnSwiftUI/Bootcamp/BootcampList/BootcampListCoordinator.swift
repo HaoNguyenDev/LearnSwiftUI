@@ -13,6 +13,7 @@ extension Router {
         case stackViewBootcamp
         case alignmentAlignmentGuide
         case geometryReaderCoordinateSpace
+        case scrollViewLazyContainers
         case textBootcamp
         
         var id: String {
@@ -25,6 +26,8 @@ extension Router {
                 return "BootcampList.alignmentAlignmentGuide"
             case .geometryReaderCoordinateSpace:
                 return "BootcampList.geometryReaderCoordinateSpace"
+            case .scrollViewLazyContainers:
+                return "BootcampList.scrollViewLazyContainers"
             case .textBootcamp:
                 return "BootcampList.textBootcamp"
             }
@@ -63,6 +66,8 @@ struct BootcampListCoordinator: View, ScreenCoordinator {
                 navRouter.push(ScreenRouter.alignmentAlignmentGuide, animate: true)
             case .geometryReaderCoordinateSpace:
                 navRouter.push(ScreenRouter.geometryReaderCoordinateSpace, animate: true)
+            case .scrollViewLazyContainers:
+                navRouter.push(ScreenRouter.scrollViewLazyContainers, animate: true)
             case .text:
                 navRouter.push(ScreenRouter.textBootcamp, animate: true)
             case .shape: break
@@ -87,6 +92,8 @@ extension BootcampListCoordinator {
             AlignmentBootcampCoordinator(navRouter: navRouter)
         case .geometryReaderCoordinateSpace:
             GeometryReaderCoordinateSpaceBootcampCoordinator(navRouter: navRouter)
+        case .scrollViewLazyContainers:
+            ScrollViewLazyContainersBootcampCoordinator(navRouter: navRouter)
         case .textBootcamp:
             TextBootcampCoordinator(navRouter: navRouter)
         }

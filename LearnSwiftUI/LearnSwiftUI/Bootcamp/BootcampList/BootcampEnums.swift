@@ -12,6 +12,7 @@ enum BootcampEnums: String, CaseIterable {
     case stackView = "Stack View"
     case alignmentAlignmentGuide = "Alignment-AlignmentGuide"
     case geometryReaderCoordinateSpace = "GeometryReader-CoordinateSpace"
+    case scrollViewLazyContainers = "ScrollView-Lazy containers"
     case text = "Text"
     case shape = "Shape"
     case color = "Color"
