@@ -9,51 +9,80 @@ import SwiftUI
 
 struct ScrollViewLazyContainersLessons {
     static let all: [Lesson] = [
-        Lesson(title: "Layout, lifecycle & performance traps", code: """
-Opening statement (very important)
-❗ ScrollView does NOT know the size of its content
-❗ Lazy container does NOT create a view immediately      
+        
+        Lesson(title: "What exactly is ScrollView?", code: """
+Standard Definition (Senior):
+
+    ScrollView is a container that allows content to scroll infinitely along an axis,
+and does not provide a finite proposal for content along that axis.
+
+❗ ScrollView does NOT know the size of its content.
+❗ ScrollView does not force the size of content.
+📌 ScrollView:
+❌ Does not know the total height (vertical)
+❌ Does not know the total width (horizontal)
+❌ Does not divide spaces
+✅ Only allows overflow and scroll
 """, result: nil),
         
-        Lesson(title: "How does ScrollView work? (in essence)", code: """
+        Lesson(title: "ScrollView in layout cycle", code: """
+🔁 Parent → ScrollView
+Parent suggests size (usually full screen)
+
+🔁 ScrollView → Content
+Along the scroll axis:
+proposal = undefined / infinite
+Along the secondary axis:
+proposal = finite
+
+📌 With ScrollView(.vertical):
+Height: undefined
+Width: equal to parent
+
 Example:
 
-	ScrollView {
-	    VStack {
-	        Text("A")
-	            .background(.green)
-	        Text("B")
-	            .background(.blue)
-	    }
-	    .frame(width: 100)
-	    .background(.white)
-	}
-	.frame(width: 200)
-	.background(.secondary)
+        VStack {
+            ScrollView(.vertical, showsIndicators: true, content: {
+                VStack {
+                    Text("Text")
+                }
+                .background(.green)
+            })
+            .background(.gray)
+        }
+        .frame(height: 100)
+        .background(.blue)
 
-         
-Important things to remember:
-ScrollView:
-    ❌ Does not force height for content
-    ❌ Does not know the total height of the content
-    ✅ Only allows content to scroll infinitely along the axis
-📌 ScrollView always suggests an “undefined” size for content along the scroll axis.  
+Above example explanation: 
+🔁 Parent → ScrollView
+Parent suggests size for ScrollView with height = 100pt
+Then result UI showing a gray ScrollView with height = 100pt
+Becase blue VStack are them same size with ScrollView that why you will not see the blue VStack
+
+🔁 ScrollView → Content (VStack blue)
+Along the scroll axis:
+proposal = height 100pt
+Along the secondary axis:
+proposal = finite
+
 """, result: {
     AnyView(ResultBlockView(content: {
-        ScrollView {
-            VStack {
-                Text("A")
-                    .background(.green)
-                Text("B")
-                    .background(.blue)
-            }
-            .frame(width: 100)
-            .background(.white)
+        
+        VStack {
+            ScrollView(.vertical, showsIndicators: true, content: {
+                VStack {
+                    Text("Text")
+                }
+                .background(.green)
+            })
+            .background(.gray)
         }
-        .frame(width: 200)
-        .background(.secondary)
+        .frame(height: 100)
+        .background(.blue)
+        
     }))
 }),
+        
         Lesson(title: "Why does ScrollView + VStack often cause Spacer bugs?", code: """
 Example:
 
@@ -63,7 +92,6 @@ Example:
 	            .background(.green)
 	        Spacer()
 	    }
-	    .frame(width: 100)
 	    .background(.white)
 	}
 	.frame(width: 200)
@@ -81,17 +109,47 @@ That's mean Spacer(minLength: 8), set to 0 if you want
 👉 This is a very common interview trap.
 """, result: {
     AnyView(ResultBlockView(content: {
+        
         ScrollView {
             VStack {
                 Text("TOP")
                     .background(.green)
                 Spacer()
             }
-            .frame(width: 100)
             .background(.orange)
         }
         .frame(width: 200)
         .background(.secondary)
+        
+    }))
+}),
+        Lesson(title: "When can Spacers work in a ScrollView?", code: """
+Only when you create a finite height for the content:
+        
+            ScrollView {
+                VStack {
+                    Text("Top")
+                    Spacer()
+                    Text("Bottom")
+                }
+                .frame(minHeight: 100)
+            }
+        
+📌 At this point:
+VStack has a specific height
+Spacer has space to expand
+""", result: {
+    AnyView(ResultBlockView(content: {
+        
+            ScrollView {
+                VStack {
+                    Text("Top")
+                    Spacer()
+                    Text("Bottom")
+                }
+                .frame(minHeight: 100)
+            }
+        
     }))
 }),
         
@@ -99,13 +157,13 @@ That's mean Spacer(minLength: 8), set to 0 if you want
 Lazy containers only create views when needed.
 Example:
 
-	ScrollView(.horizontal, showsIndicators: true) {
-	    LazyHStack {
-	        ForEach(0..<100) {
-	            Text("Row ($0)")
-	        }
-	    }
-	}
+    ScrollView(.horizontal, showsIndicators: true) {
+        LazyHStack {
+            ForEach(0..<100) {
+                Text("Row ($0)")
+            }
+        }
+    }
 
 📌 View:
     Created only when scrolled to
@@ -136,9 +194,59 @@ Comparing VStack vs LazyVStack (must know this)
     }))
 }),
         
+        Lesson(title: "Layout, lifecycle & performance traps", code: """
+❗ ScrollView does NOT know the size of its content
+❗ Lazy container does NOT create a view immediately      
+""", result: nil),
+        
+        Lesson(title: "ScrollView + VStack vs LazyVStack (very important)", code: """
+❌ Common Mistake
+
+	ScrollView {
+	    VStack {
+	        ForEach(0..<1000) {
+	            Text("Row ($0)")
+	        }
+	    }
+	}
+
+ 👉 Creates 1000 views at once
+👉 Very high memory and layout cost
+
+✅ The correct way (production)
+
+	ScrollView {
+	    LazyVStack {
+	        ForEach(0..<1000) {
+	            Text("Row ($0)")
+	        }
+	    }
+	}
+
+📌 LazyVStack:
+Creates views only when needed
+Cancels views when exiting the viewport
+Optimizes memory and layout
+""", result: {
+    AnyView(ResultBlockView(content: {
+        
+        ScrollView {
+            VStack {
+                ForEach(0..<10) {
+                    Text("Row \($0)")
+                }
+            }
+        }
+
+    }))
+}),
+        
         Lesson(title: "The Big Trap: onAppear in LazyVStack", code: """
-           
-Example:
+
+LazyVStack — Understanding the Lifecycle Correctly    
+
+A common misconception among developers:       
+Common mistake:
 
         LazyVStack {
             Text("Item")
@@ -147,10 +255,16 @@ Example:
                 }
         }
 
-⚠️ onAppear:
+❗ onAppear:
     Can call multiple times
     Call again when scrolling up/down
-👉 DO NOT use onAppear to load data all at once
+❌ DO NOT use onAppear to load data all at once
+
+✅ Correct way
+    Load data in:
+    ViewModel
+    .task(id:)
+    .onAppear of the container, not the item
 """, result: nil),
         
         Lesson(title: "GeometryReader + ScrollView (a deadly trap)", code: """

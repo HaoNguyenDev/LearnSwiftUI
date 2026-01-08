@@ -181,7 +181,7 @@ coordinateSpace defines the coordinate system for measuring position and frame.
 Three types:
     .local
     .global
-    .named("MySpace")
+    .named("CustomSpace")
 
 """, result: nil),
         Lesson(title: "Example: local vs global", code: """
@@ -231,10 +231,10 @@ Three types:
                     Text("Item")
                 }
             }
-            .coordinateSpace(name: "scroll")
+            .coordinateSpace(name: "scrollItem")
 
             GeometryReader { geo in
-                let y = geo.frame(in: .named("scroll")).minY
+                let y = geo.frame(in: .named("scrollItem")).minY
                 Text("\(y)")
             }
 
@@ -250,7 +250,11 @@ Three types:
         
         Lesson(title: "Debug GeometryReader", code: """
 Always add:
+
     .background(Color.red.opacity(0.2))
+
+👉 Check how much space GeometryReader is using.
+If you see full screen → you're using it incorrectly.
 """, result: nil),
         
         Lesson(title: "Interview trap", code: """
