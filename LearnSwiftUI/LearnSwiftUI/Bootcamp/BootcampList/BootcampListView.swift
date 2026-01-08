@@ -16,7 +16,7 @@ struct BootcampListView: View {
     var body: some View {
         NavigationView {
             bootcampList
-                .navigationBarTitle("Bootcamp List")
+                .navigationBarTitle("SwiftUI Bootcamp List")
         }
     }
     
