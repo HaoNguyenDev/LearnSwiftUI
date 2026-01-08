@@ -55,7 +55,7 @@ it measures the space it occupies.
         .frame(width: 100, height: 80)
     }))
 }),
-        Lesson(title: "Layout cycle với GeometryReader", code: """
+        Lesson(title: "Layout cycle with GeometryReader", code: """
 Layout Cycle with GeometryReader
 🔁 Parent → GeometryReader
     Parent suggests size (usually full)
@@ -66,6 +66,7 @@ Layout Cycle with GeometryReader
     Child layout inside does not affect GeometryReader's size
 📌 GeometryReader blocks layout propagation
 """, result: nil),
+        
         Lesson(title: "Why does GeometryReader often \"ruin the layout\"?", code: """
     VStack {
         Text("Top")

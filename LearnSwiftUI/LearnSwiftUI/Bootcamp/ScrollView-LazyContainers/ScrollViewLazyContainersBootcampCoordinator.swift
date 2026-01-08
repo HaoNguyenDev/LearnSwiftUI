@@ -35,7 +35,7 @@ struct ScrollViewLazyContainersBootcampCoordinator: View, ScreenCoordinator {
     @ViewBuilder
     private func getView() -> some View {
         ScrollViewLazyContainersBootcamp()
-            .navigationTitle("ScrollView & Lazy containers")
+            .navigationTitle("ScrollView & Lazy Containers")
     }
 }
 
