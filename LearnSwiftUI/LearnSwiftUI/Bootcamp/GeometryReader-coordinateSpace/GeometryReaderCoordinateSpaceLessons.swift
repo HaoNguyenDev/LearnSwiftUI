@@ -9,25 +9,30 @@ import SwiftUI
 
 struct GeometryReaderCoordinateSpaceLessons {
     static let all: [Lesson] = [
-        Lesson(title: "The opening statement (to remember):", code: """
+        Lesson(title: "Geometry Reader?", code: """
+What exactly is a Geometry Reader?
+Standard Definition (Senior):
+
+    A GeometryReader is a View that always occupies the entire proposal given to it by its parent,
+and provides the child with geometric information (size, position) of that space.
+
 ❗ GeometryReader is NOT a size picker tool.
 ❗ It is a special layout container.
-If you remember these two sentences, you can avoid 80% of mistakes.
-
-What is a GeometryReader (correct definition)?
-A GeometryReader is a View that always occupies the entire proposal given to it by the parent,
-and provides the geometric information of that space to the child.
+📌 It doesn't measure the child
+📌 It measures the space it occupies
 
 🔑 A key (and very memorable) statement:
 GeometryReader doesn't measure views —
 it measures the space it occupies.
+
+If you remember these sentences, you can avoid 80% of mistakes.
 """, result: nil),
         
         Lesson(title: "Common mistakes (many developers make)", code: """
 	VStack {
 	    GeometryReader { geo in
 	        Text("Hello")
-	            .frame(width: geo.size.width)
+	            .frame(width: geo.size.width) // geo.size.width are VStack width
 	            .background(.green)
 	    }
 	}

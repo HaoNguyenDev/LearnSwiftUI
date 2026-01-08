@@ -151,11 +151,7 @@ Example:
     Can call multiple times
     Call again when scrolling up/down
 👉 DO NOT use onAppear to load data all at once
-""", result: {
-    AnyView(ResultBlockView(content: {
-        
-    }))
-}),
+""", result: nil),
         
         Lesson(title: "GeometryReader + ScrollView (a deadly trap)", code: """
 Example:
@@ -171,11 +167,19 @@ Why?
     GeometryReader occupies unlimited height
     ScrollView doesn't know content size
     Leads to incorrect layout / jumping / lag
-""", result: {
-    AnyView(ResultBlockView(content: {
+""", result: nil),
         
-    }))
-}),
+        Lesson(title: "Geometry Reader?", code: """
+What exactly is a Geometry Reader?
+Standard Definition (Senior):
+
+    A GeometryReader is a View that always occupies the entire proposal given to it by its parent,
+and provides the child with geometric information (size, position) of that space.
+
+📌 It doesn't measure the child
+📌 It measures the space it occupies
+""", result: nil),
+        
         Lesson(title: "How to use GeometryReader correctly in ScrollView", code: """
 
 ✅ Use background / overlay
