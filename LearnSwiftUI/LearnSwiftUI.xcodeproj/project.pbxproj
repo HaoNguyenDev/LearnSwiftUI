@@ -241,6 +241,8 @@
 		DAFC16722F11240C00D242D3 /* StickyHeaderViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC16712F11240C00D242D3 /* StickyHeaderViewDemo.swift */; };
 		DAFC16842F11362C00D242D3 /* ParallaxViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC16832F11362C00D242D3 /* ParallaxViewDemo.swift */; };
 		DAFC168B2F11385D00D242D3 /* CollapseToolbarViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC168A2F11385D00D242D3 /* CollapseToolbarViewDemo.swift */; };
+		DAFC16942F1139C500D242D3 /* ScrollAnimationViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC16932F1139C500D242D3 /* ScrollAnimationViewDemo.swift */; };
+		DAFC169A2F113AFA00D242D3 /* MeasureSizeViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC16992F113AFA00D242D3 /* MeasureSizeViewDemo.swift */; };
 		DAFCDF6A2E630B2C00B97C00 /* ErrorBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCDF692E630B2C00B97C00 /* ErrorBanner.swift */; };
 /* End PBXBuildFile section */
 
@@ -512,6 +514,8 @@
 		DAFC16712F11240C00D242D3 /* StickyHeaderViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderViewDemo.swift; sourceTree = "<group>"; };
 		DAFC16832F11362C00D242D3 /* ParallaxViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxViewDemo.swift; sourceTree = "<group>"; };
 		DAFC168A2F11385D00D242D3 /* CollapseToolbarViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapseToolbarViewDemo.swift; sourceTree = "<group>"; };
+		DAFC16932F1139C500D242D3 /* ScrollAnimationViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollAnimationViewDemo.swift; sourceTree = "<group>"; };
+		DAFC16992F113AFA00D242D3 /* MeasureSizeViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureSizeViewDemo.swift; sourceTree = "<group>"; };
 		DAFCDF682E62052500B97C00 /* SOLID.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SOLID.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAFCDF692E630B2C00B97C00 /* ErrorBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1531,6 +1535,8 @@
 		DAFC16702F11240700D242D3 /* Demos */ = {
 			isa = PBXGroup;
 			children = (
+				DAFC16992F113AFA00D242D3 /* MeasureSizeViewDemo.swift */,
+				DAFC16932F1139C500D242D3 /* ScrollAnimationViewDemo.swift */,
 				DAFC168A2F11385D00D242D3 /* CollapseToolbarViewDemo.swift */,
 				DAFC16832F11362C00D242D3 /* ParallaxViewDemo.swift */,
 				DAFC16712F11240C00D242D3 /* StickyHeaderViewDemo.swift */,
@@ -1652,6 +1658,7 @@
 				DA7BE0AC2E8060A8006821CE /* LoginEntity.swift in Sources */,
 				DAA7091F2E75E2CC006F8E70 /* ResultAndError.swift in Sources */,
 				DA6075112EFE99AB002907E4 /* CodePreviewContainer.swift in Sources */,
+				DAFC16942F1139C500D242D3 /* ScrollAnimationViewDemo.swift in Sources */,
 				DA415E8B2DE5C845009F515E /* ShapesBootcamp.swift in Sources */,
 				DA6027A72EA4A42C00271E00 /* MVVMDemoUIKitViewWrapper.swift in Sources */,
 				DA5D718E2E3FBA6A00C78E40 /* GithubUser.swift in Sources */,
@@ -1730,6 +1737,7 @@
 				DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */,
 				DAAA67262E6173FD004075B7 /* PickerBootcamp.swift in Sources */,
 				DA7BE0B22E80630A006821CE /* HomeViewProtocol.swift in Sources */,
+				DAFC169A2F113AFA00D242D3 /* MeasureSizeViewDemo.swift in Sources */,
 				DAFC16842F11362C00D242D3 /* ParallaxViewDemo.swift in Sources */,
 				DA7BE0B62E806344006821CE /* HomePresenter.swift in Sources */,
 				DA7BF6902E995FAC00224BCF /* View+Extensions.swift in Sources */,
