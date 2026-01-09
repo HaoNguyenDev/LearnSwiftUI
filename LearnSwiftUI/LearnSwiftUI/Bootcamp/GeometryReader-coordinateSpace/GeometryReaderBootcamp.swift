@@ -66,7 +66,18 @@ struct GeometryReaderBootcamp: View {
         switch demo {
         case .stickyHeader:
             StickyHeaderViewDemo()
-        default: EmptyView()
+        case .parallaxEffect:
+            ParallaxViewDemo()
+        case .collapseToolbar:
+            CollapseToolbarViewDemo()
+        case .scrollBasedAnimation:
+            ScrollAnimationViewDemo()
+        case .measureTheSize:
+            MeasureSizeViewDemo()
+        case .customPaging:
+            PagingViewDemo()
+        case .dragGesture:
+            DragViewDemo()
         }
     }
 }
