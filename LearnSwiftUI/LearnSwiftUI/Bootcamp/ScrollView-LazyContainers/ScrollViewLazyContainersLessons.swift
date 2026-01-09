@@ -19,9 +19,9 @@ and does not provide a finite proposal for content along that axis.
 ❗ ScrollView does NOT know the size of its content.
 ❗ ScrollView does not force the size of content.
 📌 ScrollView:
-❌ Does not know the total height (vertical)
-❌ Does not know the total width (horizontal)
-❌ Does not divide spaces
+    ❌ Does not know the total height (vertical)
+    ❌ Does not know the total width (horizontal)
+    ❌ Does not divide spaces
 ✅ Only allows overflow and scroll
 """, result: nil),
         
@@ -267,148 +267,30 @@ Common mistake:
     .onAppear of the container, not the item
 """, result: nil),
         
-        Lesson(title: "GeometryReader + ScrollView (a deadly trap)", code: """
-Example:
-    
-    ScrollView {
-        GeometryReader { geo in
-            Text("Hello")
-        }
-    }
+        Lesson(title: "Performance checklist (MUST MEMORIZE)", code: """
+❌ Avoid:
+    Large VStack + ForEach
+    GeometryReader in Lazy item
+    onAppear to load data
+    Animation in Lazy item
+    Heavy view in cell
 
-❌ EXTREMELY DANGEROUS
-Why?
-    GeometryReader occupies unlimited height
-    ScrollView doesn't know content size
-    Leads to incorrect layout / jumping / lag
+✅ Recommended:
+    LazyVStack / LazyHStack
+    List for large data
+    background/overlay GeometryReader
+    ViewModel to retain state
+    .drawingGroup() when needed
 """, result: nil),
         
-        Lesson(title: "Geometry Reader?", code: """
-What exactly is a Geometry Reader?
-Standard Definition (Senior):
-
-    A GeometryReader is a View that always occupies the entire proposal given to it by its parent,
-and provides the child with geometric information (size, position) of that space.
-
-📌 It doesn't measure the child
-📌 It measures the space it occupies
+        Lesson(title: "Debug ScrollView", code: """
+Always ask yourself:
+    1️⃣ What is the scroll axis?
+    2️⃣ Does content have a finite height?
+    3️⃣ Does the spacer have enough space?
+    4️⃣ Is GeometryReader greedy?
+    5️⃣ Does lazy generate too many views?
 """, result: nil),
-        
-        Lesson(title: "How to use GeometryReader correctly in ScrollView", code: """
-
-✅ Use background / overlay
-
-    Text("Item") 
-    .background( 
-        GeometryReader { geo in 
-            Color.clear 
-        } 
-    )
-
-👉 Measure size/position without destroying the scroll wheel.
-""", result: {
-    AnyView(ResultBlockView(content: {
-        Text("Item")
-        .background(
-            GeometryReader { geo in
-                Color.clear
-            }
-        )
-    }))
-}),
-        Lesson(title: "Sticky header", code: """
-         
-    ScrollView {
-        VStack {
-            GeometryReader { geo in
-                Text("Header")
-                    .offset(y: max(0, -geo.frame(in: .global).minY))
-            }
-            .frame(height: 50
-    
-            ForEach(0..<50) {
-                Text("Row ($0)")
-            }
-        }
-    }
-
-📌 Use:
-    GeometryReader
-    coordinateSpace
-    offset
-👉 This is a very good interview question.
-""", result: {
-    AnyView(ResultBlockView(content: {
-        ScrollView {
-            VStack {
-                GeometryReader { geo in
-                    Text("Header")
-                        .offset(y: max(0, -geo.frame(in: .global).minY))
-                }
-                .frame(height: 50)
-
-                ForEach(0..<50) {
-                    Text("Row \($0)")
-                }
-            }
-        }
-
-    }))
-}),
-        Lesson(title: "coordinateSpace in ScrollView (very important)", code: """
-
-    ScrollView {
-        VStack {
-            Text("Item")
-        }
-    }
-    .coordinateSpace(name: "scroll")
-
-    GeometryReader { geo in
-        let y = geo.frame(in: .named("scroll")).minY
-    }
-
-👉 Used for:
-    Tracking scroll offset
-    Parallax
-    Sticky UI
-
-""", result: {
-    AnyView(ResultBlockView(content: {
-        ScrollView {
-            VStack {
-                Text("Item")
-            }
-        }
-        .coordinateSpace(name: "scroll")
-        
-        GeometryReader { geo in
-            let y = geo.frame(in: .named("scroll")).minY
-        }
-    }))
-}),
-        
-        Lesson(title: "Performance rule (Senior must know)", code: """
-         
-Performance rules:
-❌ Do not place GeometryReader directly in the Lazy stack
-❌ Do not create animations in the onAppear of Lazy items
-❌ Do not load data in onAppear 
-✅ Use task(id:) or ViewModel
-      
-""", result: {
-    AnyView(ResultBlockView(content: {
-        
-    }))
-}),
-        Lesson(title: "", code: """
-               
-""", result: {
-    AnyView(ResultBlockView(content: {
-        
-    }))
-}),
         
     ]
 }
-
