@@ -237,6 +237,8 @@
 		DAED677E2E20E45C00309382 /* StateObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED677D2E20E45C00309382 /* StateObjectBootcamp.swift */; };
 		DAED67802E21089A00309382 /* ObservedObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED677F2E21089A00309382 /* ObservedObjectBootcamp.swift */; };
 		DAEEFB762E366D4000E78DA2 /* ObservableObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEEFB752E366D2F00E78DA2 /* ObservableObjectBootcamp.swift */; };
+		DAFC16602F11155200D242D3 /* GeometryReaderDemos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC165F2F11155200D242D3 /* GeometryReaderDemos.swift */; };
+		DAFC16722F11240C00D242D3 /* StickyHeaderViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC16712F11240C00D242D3 /* StickyHeaderViewDemo.swift */; };
 		DAFCDF6A2E630B2C00B97C00 /* ErrorBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCDF692E630B2C00B97C00 /* ErrorBanner.swift */; };
 /* End PBXBuildFile section */
 
@@ -504,6 +506,8 @@
 		DAED677D2E20E45C00309382 /* StateObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAED677F2E21089A00309382 /* ObservedObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAEEFB752E366D2F00E78DA2 /* ObservableObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObjectBootcamp.swift; sourceTree = "<group>"; };
+		DAFC165F2F11155200D242D3 /* GeometryReaderDemos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderDemos.swift; sourceTree = "<group>"; };
+		DAFC16712F11240C00D242D3 /* StickyHeaderViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderViewDemo.swift; sourceTree = "<group>"; };
 		DAFCDF682E62052500B97C00 /* SOLID.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SOLID.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAFCDF692E630B2C00B97C00 /* ErrorBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1215,9 +1219,11 @@
 		DA8656C52F0F75750092426E /* GeometryReader-coordinateSpace */ = {
 			isa = PBXGroup;
 			children = (
+				DAFC16702F11240700D242D3 /* Demos */,
 				DA8656C22F0F75750092426E /* GeometryReaderBootcamp.swift */,
 				DA8656C32F0F75750092426E /* GeometryReaderCoordinateSpaceBootcampCoordinator.swift */,
 				DA8656C42F0F75750092426E /* GeometryReaderCoordinateSpaceLessons.swift */,
+				DAFC165F2F11155200D242D3 /* GeometryReaderDemos.swift */,
 			);
 			path = "GeometryReader-coordinateSpace";
 			sourceTree = "<group>";
@@ -1518,6 +1524,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		DAFC16702F11240700D242D3 /* Demos */ = {
+			isa = PBXGroup;
+			children = (
+				DAFC16712F11240C00D242D3 /* StickyHeaderViewDemo.swift */,
+			);
+			path = Demos;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1717,6 +1731,7 @@
 				DA87488A2E6AFC6A00B189F3 /* WeatherItem.swift in Sources */,
 				DA7BF5E82E98F2C900224BCF /* RswiftResources+ColorResource.swift in Sources */,
 				DA5477332EB651AE005C8868 /* AlamofireNetworking.swift in Sources */,
+				DAFC16602F11155200D242D3 /* GeometryReaderDemos.swift in Sources */,
 				DA37F9A02E8EE3AC0001599E /* CombineItemType.swift in Sources */,
 				DA7BF5DD2E98ED7300224BCF /* DefaultThemeAssets.swift in Sources */,
 				DA61C5532F0CC38100FD8181 /* SwiftUILayoutEngineBootcamp.swift in Sources */,
@@ -1800,6 +1815,7 @@
 				DA87489E2E6B16B500B189F3 /* WeatherMainView.swift in Sources */,
 				DAA709222E787C42006F8E70 /* PaymentVM.swift in Sources */,
 				DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */,
+				DAFC16722F11240C00D242D3 /* StickyHeaderViewDemo.swift in Sources */,
 				DA6075272EFE9AC7002907E4 /* ResultBlockView.swift in Sources */,
 				DA7BE0A62E806040006821CE /* LoginInteractor.swift in Sources */,
 				DA5476E42EB39FCD005C8868 /* AlamofireSampleAPICallSyntax.swift in Sources */,
