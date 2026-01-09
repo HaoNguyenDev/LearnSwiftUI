@@ -243,6 +243,8 @@
 		DAFC168B2F11385D00D242D3 /* CollapseToolbarViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC168A2F11385D00D242D3 /* CollapseToolbarViewDemo.swift */; };
 		DAFC16942F1139C500D242D3 /* ScrollAnimationViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC16932F1139C500D242D3 /* ScrollAnimationViewDemo.swift */; };
 		DAFC169A2F113AFA00D242D3 /* MeasureSizeViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC16992F113AFA00D242D3 /* MeasureSizeViewDemo.swift */; };
+		DAFC16AC2F113EAA00D242D3 /* PagingViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC16AB2F113EAA00D242D3 /* PagingViewDemo.swift */; };
+		DAFC16B42F11400E00D242D3 /* DragViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC16B32F11400E00D242D3 /* DragViewDemo.swift */; };
 		DAFCDF6A2E630B2C00B97C00 /* ErrorBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCDF692E630B2C00B97C00 /* ErrorBanner.swift */; };
 /* End PBXBuildFile section */
 
@@ -516,6 +518,8 @@
 		DAFC168A2F11385D00D242D3 /* CollapseToolbarViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapseToolbarViewDemo.swift; sourceTree = "<group>"; };
 		DAFC16932F1139C500D242D3 /* ScrollAnimationViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollAnimationViewDemo.swift; sourceTree = "<group>"; };
 		DAFC16992F113AFA00D242D3 /* MeasureSizeViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureSizeViewDemo.swift; sourceTree = "<group>"; };
+		DAFC16AB2F113EAA00D242D3 /* PagingViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingViewDemo.swift; sourceTree = "<group>"; };
+		DAFC16B32F11400E00D242D3 /* DragViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragViewDemo.swift; sourceTree = "<group>"; };
 		DAFCDF682E62052500B97C00 /* SOLID.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SOLID.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAFCDF692E630B2C00B97C00 /* ErrorBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1535,6 +1539,8 @@
 		DAFC16702F11240700D242D3 /* Demos */ = {
 			isa = PBXGroup;
 			children = (
+				DAFC16B32F11400E00D242D3 /* DragViewDemo.swift */,
+				DAFC16AB2F113EAA00D242D3 /* PagingViewDemo.swift */,
 				DAFC16992F113AFA00D242D3 /* MeasureSizeViewDemo.swift */,
 				DAFC16932F1139C500D242D3 /* ScrollAnimationViewDemo.swift */,
 				DAFC168A2F11385D00D242D3 /* CollapseToolbarViewDemo.swift */,
@@ -1659,6 +1665,7 @@
 				DAA7091F2E75E2CC006F8E70 /* ResultAndError.swift in Sources */,
 				DA6075112EFE99AB002907E4 /* CodePreviewContainer.swift in Sources */,
 				DAFC16942F1139C500D242D3 /* ScrollAnimationViewDemo.swift in Sources */,
+				DAFC16AC2F113EAA00D242D3 /* PagingViewDemo.swift in Sources */,
 				DA415E8B2DE5C845009F515E /* ShapesBootcamp.swift in Sources */,
 				DA6027A72EA4A42C00271E00 /* MVVMDemoUIKitViewWrapper.swift in Sources */,
 				DA5D718E2E3FBA6A00C78E40 /* GithubUser.swift in Sources */,
@@ -1784,6 +1791,7 @@
 				DAA45E542EF933C400BC57E9 /* NavRouter.swift in Sources */,
 				DA54770B2EB63A37005C8868 /* TokenResponse.swift in Sources */,
 				DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */,
+				DAFC16B42F11400E00D242D3 /* DragViewDemo.swift in Sources */,
 				DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */,
 				DA8656D72F0F76820092426E /* ScrollViewLazyContainersBootcampCoordinator.swift in Sources */,
 				DA61C5B22F0D3A7100FD8181 /* StackViewLessons.swift in Sources */,
