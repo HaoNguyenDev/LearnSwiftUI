@@ -239,6 +239,8 @@
 		DAEEFB762E366D4000E78DA2 /* ObservableObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEEFB752E366D2F00E78DA2 /* ObservableObjectBootcamp.swift */; };
 		DAFC16602F11155200D242D3 /* GeometryReaderDemos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC165F2F11155200D242D3 /* GeometryReaderDemos.swift */; };
 		DAFC16722F11240C00D242D3 /* StickyHeaderViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC16712F11240C00D242D3 /* StickyHeaderViewDemo.swift */; };
+		DAFC16842F11362C00D242D3 /* ParallaxViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC16832F11362C00D242D3 /* ParallaxViewDemo.swift */; };
+		DAFC168B2F11385D00D242D3 /* CollapseToolbarViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC168A2F11385D00D242D3 /* CollapseToolbarViewDemo.swift */; };
 		DAFCDF6A2E630B2C00B97C00 /* ErrorBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCDF692E630B2C00B97C00 /* ErrorBanner.swift */; };
 /* End PBXBuildFile section */
 
@@ -508,6 +510,8 @@
 		DAEEFB752E366D2F00E78DA2 /* ObservableObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAFC165F2F11155200D242D3 /* GeometryReaderDemos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderDemos.swift; sourceTree = "<group>"; };
 		DAFC16712F11240C00D242D3 /* StickyHeaderViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderViewDemo.swift; sourceTree = "<group>"; };
+		DAFC16832F11362C00D242D3 /* ParallaxViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxViewDemo.swift; sourceTree = "<group>"; };
+		DAFC168A2F11385D00D242D3 /* CollapseToolbarViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapseToolbarViewDemo.swift; sourceTree = "<group>"; };
 		DAFCDF682E62052500B97C00 /* SOLID.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SOLID.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAFCDF692E630B2C00B97C00 /* ErrorBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1219,11 +1223,11 @@
 		DA8656C52F0F75750092426E /* GeometryReader-coordinateSpace */ = {
 			isa = PBXGroup;
 			children = (
-				DAFC16702F11240700D242D3 /* Demos */,
 				DA8656C22F0F75750092426E /* GeometryReaderBootcamp.swift */,
 				DA8656C32F0F75750092426E /* GeometryReaderCoordinateSpaceBootcampCoordinator.swift */,
 				DA8656C42F0F75750092426E /* GeometryReaderCoordinateSpaceLessons.swift */,
 				DAFC165F2F11155200D242D3 /* GeometryReaderDemos.swift */,
+				DAFC16702F11240700D242D3 /* Demos */,
 			);
 			path = "GeometryReader-coordinateSpace";
 			sourceTree = "<group>";
@@ -1527,6 +1531,8 @@
 		DAFC16702F11240700D242D3 /* Demos */ = {
 			isa = PBXGroup;
 			children = (
+				DAFC168A2F11385D00D242D3 /* CollapseToolbarViewDemo.swift */,
+				DAFC16832F11362C00D242D3 /* ParallaxViewDemo.swift */,
 				DAFC16712F11240C00D242D3 /* StickyHeaderViewDemo.swift */,
 			);
 			path = Demos;
@@ -1724,6 +1730,7 @@
 				DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */,
 				DAAA67262E6173FD004075B7 /* PickerBootcamp.swift in Sources */,
 				DA7BE0B22E80630A006821CE /* HomeViewProtocol.swift in Sources */,
+				DAFC16842F11362C00D242D3 /* ParallaxViewDemo.swift in Sources */,
 				DA7BE0B62E806344006821CE /* HomePresenter.swift in Sources */,
 				DA7BF6902E995FAC00224BCF /* View+Extensions.swift in Sources */,
 				DA7BF5D32E98ED1400224BCF /* ThemeAssetsProtocol.swift in Sources */,
@@ -1739,6 +1746,7 @@
 				DA5D71902E3FBA7400C78E40 /* GithubUserDetail.swift in Sources */,
 				DA8656D02F0F75A30092426E /* ScrollViewLazyContainersLessons.swift in Sources */,
 				DAC97E282EA3C22700F8A22F /* Double+Extensions.swift in Sources */,
+				DAFC168B2F11385D00D242D3 /* CollapseToolbarViewDemo.swift in Sources */,
 				DA0B4AEB2E6FCBB700628E53 /* DownloadView.swift in Sources */,
 				DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */,
 				DA7BF6212E99038300224BCF /* Environment+ThemeKeys.swift in Sources */,

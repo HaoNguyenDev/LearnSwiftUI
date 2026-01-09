@@ -11,16 +11,19 @@ struct StickyHeaderViewDemo: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
-                GeometryReader { geo in
-                    let y = geo.frame(in: .named("scroll")).minY
-
-                    Text("Sticky Header offset \(y)")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .frame(height: 60, alignment: .leading)
-                        .background(Color.blue)
-                        .offset(y: y < 0 ? -y : 0)
+                VStack {
+                    GeometryReader { geo in
+                        let y = geo.frame(in: .named("scroll")).minY
+                        
+                        Text("Sticky Header offset \(y)")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .frame(height: 60, alignment: .leading)
+                            .background(Color.blue)
+                            .offset(y: y < 0 ? -y : 0)
+                    }
                 }
                 .frame(height: 60)
+                .padding(.top, 80)
 
                 ForEach(0..<30) { i in
                     Text("Row \(i)")
