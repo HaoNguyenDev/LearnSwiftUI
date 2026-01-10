@@ -108,7 +108,9 @@ struct GHUserList: View {
                 ForEach(users) { user in
                     UserRowView(user: user, showDetailFor: didTapUser)
                         .onAppear {
-                            loadMoreFrom(user)
+                            if user.id == users.last?.id {
+                                loadMoreFrom(user)
+                            }
                         }
                 }
             }
