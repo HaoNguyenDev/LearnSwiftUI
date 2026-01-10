@@ -98,6 +98,11 @@ API Meaning
 
 📌 Background overflows
 📌 Content remains within the safe area
+
+    .ignoresSafeArea(.keyboard, edges: .bottom)
+
+prevents SwiftUI from automatically insetting the view when the keyboard is displayed,
+especially at the bottom edge, allowing you to manually control the layout/animation based on the keyboard.
 """, result: {
     AnyView(ResultBlockView(content: {
         ZStack {
