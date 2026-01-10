@@ -182,6 +182,9 @@
 		DAA45E712EF9759100BC57E9 /* BootcampListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E702EF9759100BC57E9 /* BootcampListCoordinator.swift */; };
 		DAA45E742EF976EA00BC57E9 /* BootcampListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E732EF976EA00BC57E9 /* BootcampListView.swift */; };
 		DAA45E772EF977B100BC57E9 /* BootcampEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E762EF977B100BC57E9 /* BootcampEnums.swift */; };
+		DAA609672F12328E00B625CE /* SafeAreaInsetsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA609662F12328E00B625CE /* SafeAreaInsetsBootcamp.swift */; };
+		DAA6096A2F1232D700B625CE /* SafeAreaInsetsLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA609692F1232D700B625CE /* SafeAreaInsetsLessons.swift */; };
+		DAA6096F2F12348000B625CE /* SafeAreaInsetsBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA6096E2F12348000B625CE /* SafeAreaInsetsBootcampCoordinator.swift */; };
 		DAA7090B2E75D29E006F8E70 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7090A2E75D29E006F8E70 /* LocationManager.swift */; };
 		DAA7090F2E75D3CE006F8E70 /* PaymentServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7090E2E75D3CE006F8E70 /* PaymentServiceProtocol.swift */; };
 		DAA709122E75D447006F8E70 /* MomoPaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA709112E75D447006F8E70 /* MomoPaymentService.swift */; };
@@ -453,6 +456,9 @@
 		DAA45E702EF9759100BC57E9 /* BootcampListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampListCoordinator.swift; sourceTree = "<group>"; };
 		DAA45E732EF976EA00BC57E9 /* BootcampListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampListView.swift; sourceTree = "<group>"; };
 		DAA45E762EF977B100BC57E9 /* BootcampEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampEnums.swift; sourceTree = "<group>"; };
+		DAA609662F12328E00B625CE /* SafeAreaInsetsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsetsBootcamp.swift; sourceTree = "<group>"; };
+		DAA609692F1232D700B625CE /* SafeAreaInsetsLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsetsLessons.swift; sourceTree = "<group>"; };
+		DAA6096E2F12348000B625CE /* SafeAreaInsetsBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsetsBootcampCoordinator.swift; sourceTree = "<group>"; };
 		DAA7090A2E75D29E006F8E70 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		DAA7090E2E75D3CE006F8E70 /* PaymentServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentServiceProtocol.swift; sourceTree = "<group>"; };
 		DAA709112E75D447006F8E70 /* MomoPaymentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomoPaymentService.swift; sourceTree = "<group>"; };
@@ -735,6 +741,7 @@
 				DA61C5DD2F0E17D300FD8181 /* Alignment-AlignmentGuide */,
 				DA8656C52F0F75750092426E /* GeometryReader-coordinateSpace */,
 				DA8656CB2F0F757B0092426E /* ScrollView-LazyContainers */,
+				DAA609632F12325D00B625CE /* SafeArea&Insets */,
 				DA83D7352EFC08B40050EF92 /* Text */,
 				DA415E8A2DE5C845009F515E /* ShapesBootcamp.swift */,
 				DA415E8C2DE5CD41009F515E /* ColorsBootcamp.swift */,
@@ -1359,6 +1366,16 @@
 			path = BootcampList;
 			sourceTree = "<group>";
 		};
+		DAA609632F12325D00B625CE /* SafeArea&Insets */ = {
+			isa = PBXGroup;
+			children = (
+				DAA609662F12328E00B625CE /* SafeAreaInsetsBootcamp.swift */,
+				DAA609692F1232D700B625CE /* SafeAreaInsetsLessons.swift */,
+				DAA6096E2F12348000B625CE /* SafeAreaInsetsBootcampCoordinator.swift */,
+			);
+			path = "SafeArea&Insets";
+			sourceTree = "<group>";
+		};
 		DAA709092E75D282006F8E70 /* PaymentsApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -1762,6 +1779,7 @@
 				DA8656D02F0F75A30092426E /* ScrollViewLazyContainersLessons.swift in Sources */,
 				DAC97E282EA3C22700F8A22F /* Double+Extensions.swift in Sources */,
 				DAFC168B2F11385D00D242D3 /* CollapseToolbarViewDemo.swift in Sources */,
+				DAA6096A2F1232D700B625CE /* SafeAreaInsetsLessons.swift in Sources */,
 				DA0B4AEB2E6FCBB700628E53 /* DownloadView.swift in Sources */,
 				DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */,
 				DA7BF6212E99038300224BCF /* Environment+ThemeKeys.swift in Sources */,
@@ -1772,6 +1790,7 @@
 				DA5D717E2E3FA57800C78E40 /* NetworkProtocols.swift in Sources */,
 				DA58DD9C2E9E5FF90042D1AD /* String+Extensions.swift in Sources */,
 				DA7BE0A02E805F95006821CE /* LoginProtocol.swift in Sources */,
+				DAA6096F2F12348000B625CE /* SafeAreaInsetsBootcampCoordinator.swift in Sources */,
 				DA7BE0B42E806329006821CE /* HomeViewController.swift in Sources */,
 				DA5D71472E3F589A00C78E40 /* CustomEnvironmentValues.swift in Sources */,
 				DA5476F82EB3C292005C8868 /* AuthInterceptor.swift in Sources */,
@@ -1841,6 +1860,7 @@
 				DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */,
 				DAFC16722F11240C00D242D3 /* StickyHeaderViewDemo.swift in Sources */,
 				DA6075272EFE9AC7002907E4 /* ResultBlockView.swift in Sources */,
+				DAA609672F12328E00B625CE /* SafeAreaInsetsBootcamp.swift in Sources */,
 				DA7BE0A62E806040006821CE /* LoginInteractor.swift in Sources */,
 				DA5476E42EB39FCD005C8868 /* AlamofireSampleAPICallSyntax.swift in Sources */,
 				DAAE8CBD2E45028300FCBA4E /* CounterState.swift in Sources */,
