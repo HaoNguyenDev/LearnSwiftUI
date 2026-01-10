@@ -185,6 +185,7 @@
 		DAA609672F12328E00B625CE /* SafeAreaInsetsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA609662F12328E00B625CE /* SafeAreaInsetsBootcamp.swift */; };
 		DAA6096A2F1232D700B625CE /* SafeAreaInsetsLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA609692F1232D700B625CE /* SafeAreaInsetsLessons.swift */; };
 		DAA6096F2F12348000B625CE /* SafeAreaInsetsBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA6096E2F12348000B625CE /* SafeAreaInsetsBootcampCoordinator.swift */; };
+		DAA609852F1265A400B625CE /* StickyBottomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA609842F1265A400B625CE /* StickyBottomButton.swift */; };
 		DAA7090B2E75D29E006F8E70 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7090A2E75D29E006F8E70 /* LocationManager.swift */; };
 		DAA7090F2E75D3CE006F8E70 /* PaymentServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7090E2E75D3CE006F8E70 /* PaymentServiceProtocol.swift */; };
 		DAA709122E75D447006F8E70 /* MomoPaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA709112E75D447006F8E70 /* MomoPaymentService.swift */; };
@@ -459,6 +460,7 @@
 		DAA609662F12328E00B625CE /* SafeAreaInsetsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsetsBootcamp.swift; sourceTree = "<group>"; };
 		DAA609692F1232D700B625CE /* SafeAreaInsetsLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsetsLessons.swift; sourceTree = "<group>"; };
 		DAA6096E2F12348000B625CE /* SafeAreaInsetsBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsetsBootcampCoordinator.swift; sourceTree = "<group>"; };
+		DAA609842F1265A400B625CE /* StickyBottomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyBottomButton.swift; sourceTree = "<group>"; };
 		DAA7090A2E75D29E006F8E70 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		DAA7090E2E75D3CE006F8E70 /* PaymentServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentServiceProtocol.swift; sourceTree = "<group>"; };
 		DAA709112E75D447006F8E70 /* MomoPaymentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomoPaymentService.swift; sourceTree = "<group>"; };
@@ -1369,11 +1371,20 @@
 		DAA609632F12325D00B625CE /* SafeArea&Insets */ = {
 			isa = PBXGroup;
 			children = (
-				DAA609662F12328E00B625CE /* SafeAreaInsetsBootcamp.swift */,
 				DAA609692F1232D700B625CE /* SafeAreaInsetsLessons.swift */,
+				DAA609662F12328E00B625CE /* SafeAreaInsetsBootcamp.swift */,
 				DAA6096E2F12348000B625CE /* SafeAreaInsetsBootcampCoordinator.swift */,
+				DAA609812F12657000B625CE /* Demos */,
 			);
 			path = "SafeArea&Insets";
+			sourceTree = "<group>";
+		};
+		DAA609812F12657000B625CE /* Demos */ = {
+			isa = PBXGroup;
+			children = (
+				DAA609842F1265A400B625CE /* StickyBottomButton.swift */,
+			);
+			path = Demos;
 			sourceTree = "<group>";
 		};
 		DAA709092E75D282006F8E70 /* PaymentsApp */ = {
@@ -1700,6 +1711,7 @@
 				DAEBAE4A2DF28E1E00082B1C /* SubviewBootcamp.swift in Sources */,
 				DA7BE0A42E806032006821CE /* LoginPresenter.swift in Sources */,
 				DA54773D2EB654BC005C8868 /* Product.swift in Sources */,
+				DAA609852F1265A400B625CE /* StickyBottomButton.swift in Sources */,
 				DA6027AB2EA4A45E00271E00 /* MVVMDemoUIKitContentView.swift in Sources */,
 				DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */,
 				DA5D712A2E3D19A000C78E40 /* Logger.swift in Sources */,
