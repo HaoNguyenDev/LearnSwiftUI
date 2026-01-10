@@ -8,12 +8,18 @@
 import SwiftUI
 enum SafeAreaInsetDemos: String, Identifiable, CaseIterable {
     case safeAreaInsetBottom
+    case loginViewSafeAreaInset
+    case chatViewSafeAreaInset
+    case formViewSafeAreaInset
     
     var id: String { self.rawValue }
     
     var title: String {
         switch self {
         case .safeAreaInsetBottom: "SafeAreaInsetBottom"
+        case .loginViewSafeAreaInset: "LoginViewSafeAreaInset"
+        case .chatViewSafeAreaInset: "ChatViewSafeAreaInset"
+        case .formViewSafeAreaInset: "FormViewSafeAreaInset"
         }
     }
 }
@@ -54,6 +60,12 @@ struct SafeAreaInsetsBootcamp: View {
         switch demo {
         case .safeAreaInsetBottom:
             StickyBottomButton()
+        case .loginViewSafeAreaInset:
+            LoginViewSafeAreaInset()
+        case .chatViewSafeAreaInset:
+            ChatViewSafeAreaInset()
+        case .formViewSafeAreaInset:
+            FormViewSafeAreaInset()
         }
     }
 }
