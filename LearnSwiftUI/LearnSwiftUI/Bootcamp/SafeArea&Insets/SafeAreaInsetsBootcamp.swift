@@ -6,8 +6,21 @@
 //
 
 import SwiftUI
+enum SafeAreaInsetDemos: String, Identifiable, CaseIterable {
+    case safeAreaInsetBottom
+    
+    var id: String { self.rawValue }
+    
+    var title: String {
+        switch self {
+        case .safeAreaInsetBottom: "SafeAreaInsetBottom"
+        }
+    }
+}
 
 struct SafeAreaInsetsBootcamp: View {
+    @State private var selectedDemo: SafeAreaInsetDemos?
+    
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 24.0) {
@@ -17,6 +30,30 @@ struct SafeAreaInsetsBootcamp: View {
                                          resultView: lesson.result?())
                 }
             }
+            LazyVStack {
+                ForEach(SafeAreaInsetDemos.allCases) { demo in
+                    Text(demo.title)
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity, minHeight: 50)
+                        .background(.green)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .padding(.horizontal)
+                        .onTapGesture {
+                            selectedDemo = demo
+                        }
+                }
+            }
+        }
+        .sheet(item: $selectedDemo) { demo in
+            destinationView(for: demo)
+        }
+    }
+    
+    @ViewBuilder
+    private func destinationView(for demo: SafeAreaInsetDemos) -> some View {
+        switch demo {
+        case .safeAreaInsetBottom:
+            StickyBottomButton()
         }
     }
 }
@@ -24,3 +61,5 @@ struct SafeAreaInsetsBootcamp: View {
 #Preview {
     SafeAreaInsetsBootcamp()
 }
+
+
