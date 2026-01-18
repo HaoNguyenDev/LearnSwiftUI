@@ -38,3 +38,7 @@ struct ChatViewSafeAreaInset: View {
         }
     }
 }
+
+#Preview {
+    ChatViewSafeAreaInset()
+}
