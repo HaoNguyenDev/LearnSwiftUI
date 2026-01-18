@@ -189,6 +189,9 @@
 		DAA609AD2F12765400B625CE /* LoginViewSafeAreaInset.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA609AC2F12765400B625CE /* LoginViewSafeAreaInset.swift */; };
 		DAA609B42F12785C00B625CE /* ChatViewSafeAreaInset.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA609B32F12785C00B625CE /* ChatViewSafeAreaInset.swift */; };
 		DAA609BB2F1278F400B625CE /* FormViewSafeAreaInset.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA609BA2F1278F400B625CE /* FormViewSafeAreaInset.swift */; };
+		DAA609CB2F129E7B00B625CE /* AnimationLayoutInteractionLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA609CA2F129E7B00B625CE /* AnimationLayoutInteractionLessons.swift */; };
+		DAA609CE2F129EDE00B625CE /* AnimationLayoutInteractionBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA609CD2F129EDE00B625CE /* AnimationLayoutInteractionBootcamp.swift */; };
+		DAA609D12F129F6900B625CE /* AnimationLayoutInteractionBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA609D02F129F6900B625CE /* AnimationLayoutInteractionBootcampCoordinator.swift */; };
 		DAA7090B2E75D29E006F8E70 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7090A2E75D29E006F8E70 /* LocationManager.swift */; };
 		DAA7090F2E75D3CE006F8E70 /* PaymentServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7090E2E75D3CE006F8E70 /* PaymentServiceProtocol.swift */; };
 		DAA709122E75D447006F8E70 /* MomoPaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA709112E75D447006F8E70 /* MomoPaymentService.swift */; };
@@ -236,7 +239,6 @@
 		DAEBAE3C2DEB07A500082B1C /* SpacerBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE3B2DEB07A500082B1C /* SpacerBootcamp.swift */; };
 		DAEBAE3E2DEB149C00082B1C /* InitializerBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE3D2DEB149C00082B1C /* InitializerBootcamp.swift */; };
 		DAEBAE402DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE3F2DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift */; };
-		DAEBAE422DECB55B00082B1C /* ScrollViewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE412DECB55B00082B1C /* ScrollViewBootcamp.swift */; };
 		DAEBAE442DECC2D100082B1C /* GridBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE432DECC2D100082B1C /* GridBootcamp.swift */; };
 		DAEBAE462DF11C7300082B1C /* ButtonBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE452DF11C7300082B1C /* ButtonBootcamp.swift */; };
 		DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE472DF2692E00082B1C /* SateBootcamp.swift */; };
@@ -467,6 +469,9 @@
 		DAA609AC2F12765400B625CE /* LoginViewSafeAreaInset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewSafeAreaInset.swift; sourceTree = "<group>"; };
 		DAA609B32F12785C00B625CE /* ChatViewSafeAreaInset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewSafeAreaInset.swift; sourceTree = "<group>"; };
 		DAA609BA2F1278F400B625CE /* FormViewSafeAreaInset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewSafeAreaInset.swift; sourceTree = "<group>"; };
+		DAA609CA2F129E7B00B625CE /* AnimationLayoutInteractionLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationLayoutInteractionLessons.swift; sourceTree = "<group>"; };
+		DAA609CD2F129EDE00B625CE /* AnimationLayoutInteractionBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationLayoutInteractionBootcamp.swift; sourceTree = "<group>"; };
+		DAA609D02F129F6900B625CE /* AnimationLayoutInteractionBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationLayoutInteractionBootcampCoordinator.swift; sourceTree = "<group>"; };
 		DAA7090A2E75D29E006F8E70 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		DAA7090E2E75D3CE006F8E70 /* PaymentServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentServiceProtocol.swift; sourceTree = "<group>"; };
 		DAA709112E75D447006F8E70 /* MomoPaymentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomoPaymentService.swift; sourceTree = "<group>"; };
@@ -518,7 +523,6 @@
 		DAEBAE3B2DEB07A500082B1C /* SpacerBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE3D2DEB149C00082B1C /* InitializerBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializerBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE3F2DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForEachAndLoopsBootcamp.swift; sourceTree = "<group>"; };
-		DAEBAE412DECB55B00082B1C /* ScrollViewBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE432DECC2D100082B1C /* GridBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE452DF11C7300082B1C /* ButtonBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE472DF2692E00082B1C /* SateBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SateBootcamp.swift; sourceTree = "<group>"; };
@@ -749,7 +753,8 @@
 				DA61C5DD2F0E17D300FD8181 /* Alignment-AlignmentGuide */,
 				DA8656C52F0F75750092426E /* GeometryReader-coordinateSpace */,
 				DA8656CB2F0F757B0092426E /* ScrollView-LazyContainers */,
-				DAA609632F12325D00B625CE /* SafeArea&Insets */,
+				DAA609632F12325D00B625CE /* SafeArea-Insets */,
+				DAA609C62F129E1E00B625CE /* Animation-LayoutInteraction */,
 				DA83D7352EFC08B40050EF92 /* Text */,
 				DA415E8A2DE5C845009F515E /* ShapesBootcamp.swift */,
 				DA415E8C2DE5CD41009F515E /* ColorsBootcamp.swift */,
@@ -761,7 +766,6 @@
 				DAEBAE3B2DEB07A500082B1C /* SpacerBootcamp.swift */,
 				DAEBAE3D2DEB149C00082B1C /* InitializerBootcamp.swift */,
 				DAEBAE3F2DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift */,
-				DAEBAE412DECB55B00082B1C /* ScrollViewBootcamp.swift */,
 				DAEBAE432DECC2D100082B1C /* GridBootcamp.swift */,
 				DAEBAE452DF11C7300082B1C /* ButtonBootcamp.swift */,
 				DAEBAE472DF2692E00082B1C /* SateBootcamp.swift */,
@@ -1374,7 +1378,7 @@
 			path = BootcampList;
 			sourceTree = "<group>";
 		};
-		DAA609632F12325D00B625CE /* SafeArea&Insets */ = {
+		DAA609632F12325D00B625CE /* SafeArea-Insets */ = {
 			isa = PBXGroup;
 			children = (
 				DAA609692F1232D700B625CE /* SafeAreaInsetsLessons.swift */,
@@ -1382,7 +1386,7 @@
 				DAA6096E2F12348000B625CE /* SafeAreaInsetsBootcampCoordinator.swift */,
 				DAA609812F12657000B625CE /* Demos */,
 			);
-			path = "SafeArea&Insets";
+			path = "SafeArea-Insets";
 			sourceTree = "<group>";
 		};
 		DAA609812F12657000B625CE /* Demos */ = {
@@ -1394,6 +1398,16 @@
 				DAA609842F1265A400B625CE /* StickyBottomButton.swift */,
 			);
 			path = Demos;
+			sourceTree = "<group>";
+		};
+		DAA609C62F129E1E00B625CE /* Animation-LayoutInteraction */ = {
+			isa = PBXGroup;
+			children = (
+				DAA609CA2F129E7B00B625CE /* AnimationLayoutInteractionLessons.swift */,
+				DAA609CD2F129EDE00B625CE /* AnimationLayoutInteractionBootcamp.swift */,
+				DAA609D02F129F6900B625CE /* AnimationLayoutInteractionBootcampCoordinator.swift */,
+			);
+			path = "Animation-LayoutInteraction";
 			sourceTree = "<group>";
 		};
 		DAA709092E75D282006F8E70 /* PaymentsApp */ = {
@@ -1729,7 +1743,6 @@
 				DA61C5592F0CCE8B00FD8181 /* Lesson.swift in Sources */,
 				DAAA67242E617101004075B7 /* ViewAndAdditional.swift in Sources */,
 				DA5D71822E3FA59900C78E40 /* NetworkError.swift in Sources */,
-				DAEBAE422DECB55B00082B1C /* ScrollViewBootcamp.swift in Sources */,
 				DA5D71862E3FA5B400C78E40 /* NetworkManager.swift in Sources */,
 				DA5D719B2E3FC03D00C78E40 /* AlertHandler.swift in Sources */,
 				DA5477132EB63B11005C8868 /* KeychainStore.swift in Sources */,
@@ -1830,6 +1843,7 @@
 				DAA709142E75D553006F8E70 /* ThaiPaymentService.swift in Sources */,
 				DAA709192E75D6F5006F8E70 /* PaymentProvider.swift in Sources */,
 				DA87489B2E6B007D00B189F3 /* WeatherListView.swift in Sources */,
+				DAA609D12F129F6900B625CE /* AnimationLayoutInteractionBootcampCoordinator.swift in Sources */,
 				DAA45E542EF933C400BC57E9 /* NavRouter.swift in Sources */,
 				DA54770B2EB63A37005C8868 /* TokenResponse.swift in Sources */,
 				DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */,
@@ -1901,6 +1915,8 @@
 				DA61C5282F0C076B00FD8181 /* StackViewBootcamp.swift in Sources */,
 				DAE365BC2E9CC288005EF803 /* DarkThemeFonts.swift in Sources */,
 				DA4725302EA62DF7000D596A /* Closure.swift in Sources */,
+				DAA609CE2F129EDE00B625CE /* AnimationLayoutInteractionBootcamp.swift in Sources */,
+				DAA609CB2F129E7B00B625CE /* AnimationLayoutInteractionLessons.swift in Sources */,
 				DAE365BD2E9CC288005EF803 /* DarkTheme.swift in Sources */,
 				DAE365BE2E9CC288005EF803 /* DarkThemeAssets.swift in Sources */,
 				DAE365BF2E9CC288005EF803 /* DarkThemeColors.swift in Sources */,
