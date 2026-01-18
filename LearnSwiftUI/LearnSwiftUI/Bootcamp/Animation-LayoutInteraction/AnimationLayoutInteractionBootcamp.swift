@@ -7,7 +7,24 @@
 
 import SwiftUI
 
+enum AnimationLayoutDemo: String, Identifiable, CaseIterable {
+    case expandCard
+    case accordion
+    case customTabBar
+    
+    var id: String { self.rawValue }
+    
+    var title: String {
+        switch self {
+        case .expandCard: "Expand Card"
+        case .accordion: "ACCORDION"
+        case .customTabBar: "CUSTOM TAB BAR"
+        }
+    }
+}
 struct AnimationLayoutInteractionBootcamp: View {
+    @State private var selectedDemo: AnimationLayoutDemo?
+    
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 24.0) {
@@ -15,6 +32,40 @@ struct AnimationLayoutInteractionBootcamp: View {
                     CodePreviewContainer(title: lesson.title, code: lesson.code, resultView: lesson.result?())
                 }
             }
+            
+            LazyVStack(spacing: 24.0) {
+                ForEach(AnimationLayoutDemo.allCases, id: \.id) { demo in
+                    demoTitle(demo: demo)
+                }
+            }
+        }
+        .sheet(item: $selectedDemo) { demo in
+            destinationView(for: demo)
         }
     }
+    
+    @ViewBuilder
+    private func demoTitle(demo: AnimationLayoutDemo) -> some View {
+        Text(demo.title)
+            .foregroundStyle(.white)
+            .frame(maxWidth: .infinity, minHeight: 50)
+            .background(.green)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .padding(.horizontal)
+            .onTapGesture {
+                selectedDemo = demo
+            }
+    }
+    
+    @ViewBuilder
+    private func destinationView(for demo: AnimationLayoutDemo) -> some View {
+        switch demo {
+        case .expandCard: ExpandCardAnimationDemo()
+        default: EmptyView()
+        }
+    }
+}
+
+#Preview {
+    AnimationLayoutInteractionBootcamp()
 }

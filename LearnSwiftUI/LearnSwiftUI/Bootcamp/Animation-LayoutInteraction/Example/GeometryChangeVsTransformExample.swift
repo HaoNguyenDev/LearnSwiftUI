@@ -24,26 +24,21 @@ struct GeometryChangeVsTransformExample: View {
             
             VStack {
                 Text("Title")
+                    .padding()
                 if expanded {
                     Text("Detail")
+                        .padding(.bottom)
                         .transition(.opacity)
                 }
             }
             .foregroundStyle(.white)
-            .frame(maxWidth: .infinity)
             .background(
                 RoundedRectangle(cornerRadius: 10)
                     .fill(.blue)
                 
             )
             .animation(.spring, value: expanded)
-            
-//            RoundedRectangle(cornerRadius: 10)
-//                .fill(.blue)
-//                .frame(maxWidth: .infinity, maxHeight: expanded ? 50 : 10)
-//                .animation(.smooth, value: expanded)
         }
-        .frame(maxWidth: .infinity)
         .padding(20)
     }
 }
