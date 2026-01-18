@@ -62,7 +62,7 @@ struct AnimationLayoutInteractionBootcamp: View {
         switch demo {
         case .expandCard: ExpandCardAnimationDemo()
         case .accordion: AccordionItemDemo()
-        default: EmptyView()
+        case .customTabBar: TabBarContainerAnimationDemo()
         }
     }
 }
