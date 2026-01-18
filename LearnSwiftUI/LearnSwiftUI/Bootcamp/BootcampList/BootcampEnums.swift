@@ -14,6 +14,7 @@ enum BootcampEnums: String, CaseIterable {
     case geometryReaderCoordinateSpace = "GeometryReader-CoordinateSpace"
     case scrollViewLazyContainers = "ScrollView-Lazy containers"
     case safeAreaInsets = "SafeArea & Insets"
+    case animationLayoutInteraction = "Animation-Layout Interaction"
     case text = "Text"
     case shape = "Shape"
     case color = "Color"

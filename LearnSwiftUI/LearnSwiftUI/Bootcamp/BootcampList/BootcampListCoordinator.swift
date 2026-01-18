@@ -8,38 +8,22 @@
 import SwiftUI
 
 extension Router {
-    enum BootcampList: Routable {
+    enum BootcampListRouter: String, Routable {
         case swiftuiLayoutEngine
         case stackViewBootcamp
         case alignmentAlignmentGuide
         case geometryReaderCoordinateSpace
         case scrollViewLazyContainers
         case safeAreaInsets
+        case animationLayoutInteraction
         case textBootcamp
         
-        var id: String {
-            switch self {
-            case .swiftuiLayoutEngine:
-                return "BootcampList.swiftuiLayoutEngine"
-            case .stackViewBootcamp:
-                return "BootcampList.stackViewBootcamp"
-            case .alignmentAlignmentGuide:
-                return "BootcampList.alignmentAlignmentGuide"
-            case .geometryReaderCoordinateSpace:
-                return "BootcampList.geometryReaderCoordinateSpace"
-            case .scrollViewLazyContainers:
-                return "BootcampList.scrollViewLazyContainers"
-            case .safeAreaInsets:
-                return "BootcampList.safeAreaInsets"
-            case .textBootcamp:
-                return "BootcampList.textBootcamp"
-            }
-        }
+        var id: String { self.rawValue }
     }
 }
 
 struct BootcampListCoordinator: View, ScreenCoordinator {
-    typealias ScreenRouter = Router.BootcampList
+    typealias ScreenRouter = Router.BootcampListRouter
     var navRouter: any NavRouterProtocol
     
     init(navRouter: any NavRouterProtocol) {
@@ -73,6 +57,8 @@ struct BootcampListCoordinator: View, ScreenCoordinator {
                 navRouter.push(ScreenRouter.scrollViewLazyContainers, animate: true)
             case .safeAreaInsets:
                 navRouter.push(ScreenRouter.safeAreaInsets, animate: true)
+            case .animationLayoutInteraction:
+                navRouter.push(ScreenRouter.animationLayoutInteraction, animate: true)
             case .text:
                 navRouter.push(ScreenRouter.textBootcamp, animate: true)
             case .shape: break
@@ -87,7 +73,7 @@ struct BootcampListCoordinator: View, ScreenCoordinator {
 
 extension BootcampListCoordinator {
     @ViewBuilder
-    func viewForRouter(router: Router.BootcampList) -> some View {
+    func viewForRouter(router: Router.BootcampListRouter) -> some View {
         switch router {
         case .swiftuiLayoutEngine:
             SwiftUILayoutEngineCoordinator(navRouter: navRouter)
@@ -101,6 +87,8 @@ extension BootcampListCoordinator {
             ScrollViewLazyContainersBootcampCoordinator(navRouter: navRouter)
         case .safeAreaInsets:
             SafeAreaInsetsBootcampCoordinator(navRouter: navRouter)
+        case .animationLayoutInteraction:
+            AnimationLayoutInteractionBootcampCoordinator(navRouter: navRouter)
         case .textBootcamp:
             TextBootcampCoordinator(navRouter: navRouter)
         }
