@@ -172,6 +172,11 @@
 		DA87489E2E6B16B500B189F3 /* WeatherMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87489D2E6B16B500B189F3 /* WeatherMainView.swift */; };
 		DA87A2122EB7ACF500749349 /* FakeStoreAuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87A2112EB7ACF500749349 /* FakeStoreAuthRequest.swift */; };
 		DA8F78A22E883F0300826FB2 /* SwiftUI.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA8F78A12E883F0300826FB2 /* SwiftUI.txt */; };
+		DA9614F82F1CABBD00AEEB25 /* ClassicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9614F72F1CABBC00AEEB25 /* ClassicAnimation.swift */; };
+		DA9614FE2F1CAD4C00AEEB25 /* JumpAnimationBehaviorExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9614FD2F1CAD4C00AEEB25 /* JumpAnimationBehaviorExample.swift */; };
+		DA9615052F1CAF2C00AEEB25 /* ImplicitvsExplicitAnimationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9615042F1CAF2C00AEEB25 /* ImplicitvsExplicitAnimationExample.swift */; };
+		DA96150C2F1CC70D00AEEB25 /* TransitionVsAnimationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96150B2F1CC70D00AEEB25 /* TransitionVsAnimationExample.swift */; };
+		DA9615402F1CF80E00AEEB25 /* GeometryChangeVsTransformExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96153F2F1CF80E00AEEB25 /* GeometryChangeVsTransformExample.swift */; };
 		DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D32E3A65110051F62F /* SharedModel.swift */; };
 		DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */; };
 		DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */; };
@@ -452,6 +457,11 @@
 		DA89A7D22E490391007BF882 /* GCDTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GCDTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA8F789E2E86FB1700826FB2 /* StructAndSwiftUI.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StructAndSwiftUI.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA8F78A12E883F0300826FB2 /* SwiftUI.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwiftUI.txt; sourceTree = "<group>"; };
+		DA9614F72F1CABBC00AEEB25 /* ClassicAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicAnimation.swift; sourceTree = "<group>"; };
+		DA9614FD2F1CAD4C00AEEB25 /* JumpAnimationBehaviorExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpAnimationBehaviorExample.swift; sourceTree = "<group>"; };
+		DA9615042F1CAF2C00AEEB25 /* ImplicitvsExplicitAnimationExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImplicitvsExplicitAnimationExample.swift; sourceTree = "<group>"; };
+		DA96150B2F1CC70D00AEEB25 /* TransitionVsAnimationExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionVsAnimationExample.swift; sourceTree = "<group>"; };
+		DA96153F2F1CF80E00AEEB25 /* GeometryChangeVsTransformExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryChangeVsTransformExample.swift; sourceTree = "<group>"; };
 		DAA3B8D32E3A65110051F62F /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
 		DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentBootcamp.swift; sourceTree = "<group>"; };
 		DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableBootcamp.swift; sourceTree = "<group>"; };
@@ -1342,6 +1352,18 @@
 			path = Swift;
 			sourceTree = "<group>";
 		};
+		DA9614F62F1CABB000AEEB25 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				DA9614F72F1CABBC00AEEB25 /* ClassicAnimation.swift */,
+				DA9614FD2F1CAD4C00AEEB25 /* JumpAnimationBehaviorExample.swift */,
+				DA9615042F1CAF2C00AEEB25 /* ImplicitvsExplicitAnimationExample.swift */,
+				DA96150B2F1CC70D00AEEB25 /* TransitionVsAnimationExample.swift */,
+				DA96153F2F1CF80E00AEEB25 /* GeometryChangeVsTransformExample.swift */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
 		DAA3B8D22E3A64FC0051F62F /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -1403,6 +1425,7 @@
 		DAA609C62F129E1E00B625CE /* Animation-LayoutInteraction */ = {
 			isa = PBXGroup;
 			children = (
+				DA9614F62F1CABB000AEEB25 /* Example */,
 				DAA609CA2F129E7B00B625CE /* AnimationLayoutInteractionLessons.swift */,
 				DAA609CD2F129EDE00B625CE /* AnimationLayoutInteractionBootcamp.swift */,
 				DAA609D02F129F6900B625CE /* AnimationLayoutInteractionBootcampCoordinator.swift */,
@@ -1728,6 +1751,7 @@
 				DA37F9922E8D8E100001599E /* CbLoginViewController.swift in Sources */,
 				DA8748992E6B007700B189F3 /* WeatherDataPill.swift in Sources */,
 				DA7BF5C92E98EC2000224BCF /* ThemeProtocol.swift in Sources */,
+				DA96150C2F1CC70D00AEEB25 /* TransitionVsAnimationExample.swift in Sources */,
 				DAC35B162E9FCCDA0019021D /* Array+Extensions.swift in Sources */,
 				DAA45E592EF9357D00BC57E9 /* ScreenCoordinator.swift in Sources */,
 				DAA609AD2F12765400B625CE /* LoginViewSafeAreaInset.swift in Sources */,
@@ -1759,6 +1783,7 @@
 				DA54769E2EB34A47005C8868 /* Encodable.swift in Sources */,
 				DAEBAE462DF11C7300082B1C /* ButtonBootcamp.swift in Sources */,
 				DAC35AE72E9F87230019021D /* GitHubAPIEndpointEnum.swift in Sources */,
+				DA9614FE2F1CAD4C00AEEB25 /* JumpAnimationBehaviorExample.swift in Sources */,
 				DA7BF5CC2E98EC4100224BCF /* ThemeManager.swift in Sources */,
 				DA5D719E2E40940400C78E40 /* GithubUserListVM.swift in Sources */,
 				DA415E912DE5DF63009F515E /* GradientsColorBootcamp.swift in Sources */,
@@ -1835,6 +1860,7 @@
 				DA8748932E6B006000B189F3 /* GradientBackgroundAnimation.swift in Sources */,
 				DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */,
 				DA61C5242F0C075C00FD8181 /* StackViewBootcampCoordinator.swift in Sources */,
+				DA9614F82F1CABBD00AEEB25 /* ClassicAnimation.swift in Sources */,
 				DAED677E2E20E45C00309382 /* StateObjectBootcamp.swift in Sources */,
 				DAE365DB2E9CE2EE005EF803 /* UserSettings.swift in Sources */,
 				DAA45E772EF977B100BC57E9 /* BootcampEnums.swift in Sources */,
@@ -1875,6 +1901,7 @@
 				DA60751D2EFE9A13002907E4 /* CodeBlockView.swift in Sources */,
 				DA5D71892E3FB05100C78E40 /* UserRowView.swift in Sources */,
 				DAFCDF6A2E630B2C00B97C00 /* ErrorBanner.swift in Sources */,
+				DA9615402F1CF80E00AEEB25 /* GeometryChangeVsTransformExample.swift in Sources */,
 				DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */,
 				DA3979102E9BBC1200838584 /* TextViewModifiers.swift in Sources */,
 				DA5C98BC2E3924AA007AC9E9 /* TodoDetailView.swift in Sources */,
@@ -1919,6 +1946,7 @@
 				DAA609CB2F129E7B00B625CE /* AnimationLayoutInteractionLessons.swift in Sources */,
 				DAE365BD2E9CC288005EF803 /* DarkTheme.swift in Sources */,
 				DAE365BE2E9CC288005EF803 /* DarkThemeAssets.swift in Sources */,
+				DA9615052F1CAF2C00AEEB25 /* ImplicitvsExplicitAnimationExample.swift in Sources */,
 				DAE365BF2E9CC288005EF803 /* DarkThemeColors.swift in Sources */,
 				DA37F9A42E8EE50F0001599E /* CombineDefinitionHomeViewModel.swift in Sources */,
 				DA5D71962E3FBC9100C78E40 /* GitHubAPIEndpoint.swift in Sources */,
