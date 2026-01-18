@@ -61,6 +61,7 @@ struct AnimationLayoutInteractionBootcamp: View {
     private func destinationView(for demo: AnimationLayoutDemo) -> some View {
         switch demo {
         case .expandCard: ExpandCardAnimationDemo()
+        case .accordion: AccordionItemDemo()
         default: EmptyView()
         }
     }
