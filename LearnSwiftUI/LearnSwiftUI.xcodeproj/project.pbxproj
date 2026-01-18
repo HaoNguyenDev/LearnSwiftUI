@@ -179,6 +179,7 @@
 		DA9615402F1CF80E00AEEB25 /* GeometryChangeVsTransformExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96153F2F1CF80E00AEEB25 /* GeometryChangeVsTransformExample.swift */; };
 		DA96155B2F1D18AE00AEEB25 /* ExpandCardAnimationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96155A2F1D18AE00AEEB25 /* ExpandCardAnimationDemo.swift */; };
 		DA9615692F1D23D400AEEB25 /* AccordionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9615682F1D23D400AEEB25 /* AccordionItem.swift */; };
+		DA9615772F1D273400AEEB25 /* CustomTabBarAnimationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9615762F1D273400AEEB25 /* CustomTabBarAnimationDemo.swift */; };
 		DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D32E3A65110051F62F /* SharedModel.swift */; };
 		DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */; };
 		DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */; };
@@ -466,6 +467,7 @@
 		DA96153F2F1CF80E00AEEB25 /* GeometryChangeVsTransformExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryChangeVsTransformExample.swift; sourceTree = "<group>"; };
 		DA96155A2F1D18AE00AEEB25 /* ExpandCardAnimationDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandCardAnimationDemo.swift; sourceTree = "<group>"; };
 		DA9615682F1D23D400AEEB25 /* AccordionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionItem.swift; sourceTree = "<group>"; };
+		DA9615762F1D273400AEEB25 /* CustomTabBarAnimationDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarAnimationDemo.swift; sourceTree = "<group>"; };
 		DAA3B8D32E3A65110051F62F /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
 		DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentBootcamp.swift; sourceTree = "<group>"; };
 		DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableBootcamp.swift; sourceTree = "<group>"; };
@@ -1373,6 +1375,7 @@
 			children = (
 				DA9615682F1D23D400AEEB25 /* AccordionItem.swift */,
 				DA96155A2F1D18AE00AEEB25 /* ExpandCardAnimationDemo.swift */,
+				DA9615762F1D273400AEEB25 /* CustomTabBarAnimationDemo.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -1834,6 +1837,7 @@
 				DA8748912E6B005800B189F3 /* WeatherErrorView.swift in Sources */,
 				DAA45E712EF9759100BC57E9 /* BootcampListCoordinator.swift in Sources */,
 				DAC35B3F2E9FED3F0019021D /* TextFieldModifiers.swift in Sources */,
+				DA9615772F1D273400AEEB25 /* CustomTabBarAnimationDemo.swift in Sources */,
 				DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */,
 				DAAA67262E6173FD004075B7 /* PickerBootcamp.swift in Sources */,
 				DA7BE0B22E80630A006821CE /* HomeViewProtocol.swift in Sources */,
