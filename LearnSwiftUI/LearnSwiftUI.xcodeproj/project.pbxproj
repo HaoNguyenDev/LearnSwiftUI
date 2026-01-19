@@ -860,14 +860,6 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		DA4A09B42F1E382C002C9FDF /* StickyHeader */ = {
-			isa = PBXGroup;
-			children = (
-				DA4A09E92F1E6492002C9FDF /* StickyListView.swift */,
-			);
-			path = StickyHeader;
-			sourceTree = "<group>";
-		};
 		DA5476602EB23363005C8868 /* Swift Algorithms */ = {
 			isa = PBXGroup;
 			children = (
@@ -1383,7 +1375,7 @@
 		DA9615592F1D188E00AEEB25 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				DA4A09B42F1E382C002C9FDF /* StickyHeader */,
+				DA4A09E92F1E6492002C9FDF /* StickyListView.swift */,
 				DA9615682F1D23D400AEEB25 /* AccordionItem.swift */,
 				DA96155A2F1D18AE00AEEB25 /* ExpandCardAnimationDemo.swift */,
 				DA9615762F1D273400AEEB25 /* CustomTabBarAnimationDemo.swift */,
