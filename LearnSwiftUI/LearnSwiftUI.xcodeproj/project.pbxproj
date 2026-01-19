@@ -44,6 +44,7 @@
 		DA415E952DE5E707009F515E /* ImagesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E942DE5E707009F515E /* ImagesBootcamp.swift */; };
 		DA4725302EA62DF7000D596A /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47252F2EA62DF7000D596A /* Closure.swift */; };
 		DA4726582EA7C31E000D596A /* AppTextStyleSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4726572EA7C31E000D596A /* AppTextStyleSize.swift */; };
+		DA4A09EA2F1E6492002C9FDF /* StickyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A09E92F1E6492002C9FDF /* StickyListView.swift */; };
 		DA4F7EF12E9A6B6D001CB7B2 /* HButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F7EF02E9A6B6D001CB7B2 /* HButtonStyle.swift */; };
 		DA4F7F1C2E9A954D001CB7B2 /* LoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F7F1B2E9A954D001CB7B2 /* LoginButtonView.swift */; };
 		DA5164302E3BCD2500642709 /* NavigationStackBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */; };
@@ -319,6 +320,7 @@
 		DA415E942DE5E707009F515E /* ImagesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesBootcamp.swift; sourceTree = "<group>"; };
 		DA47252F2EA62DF7000D596A /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
 		DA4726572EA7C31E000D596A /* AppTextStyleSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextStyleSize.swift; sourceTree = "<group>"; };
+		DA4A09E92F1E6492002C9FDF /* StickyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyListView.swift; sourceTree = "<group>"; };
 		DA4F7EF02E9A6B6D001CB7B2 /* HButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HButtonStyle.swift; sourceTree = "<group>"; };
 		DA4F7F1B2E9A954D001CB7B2 /* LoginButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonView.swift; sourceTree = "<group>"; };
 		DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackBootcamp.swift; sourceTree = "<group>"; };
@@ -858,6 +860,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		DA4A09B42F1E382C002C9FDF /* StickyHeader */ = {
+			isa = PBXGroup;
+			children = (
+				DA4A09E92F1E6492002C9FDF /* StickyListView.swift */,
+			);
+			path = StickyHeader;
+			sourceTree = "<group>";
+		};
 		DA5476602EB23363005C8868 /* Swift Algorithms */ = {
 			isa = PBXGroup;
 			children = (
@@ -1373,6 +1383,7 @@
 		DA9615592F1D188E00AEEB25 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				DA4A09B42F1E382C002C9FDF /* StickyHeader */,
 				DA9615682F1D23D400AEEB25 /* AccordionItem.swift */,
 				DA96155A2F1D18AE00AEEB25 /* ExpandCardAnimationDemo.swift */,
 				DA9615762F1D273400AEEB25 /* CustomTabBarAnimationDemo.swift */,
@@ -1793,6 +1804,7 @@
 				DA0B4AE72E6FC9A400628E53 /* DownloadManager.swift in Sources */,
 				DA61C5E52F0E192A00FD8181 /* AlignmentBootcamp.swift in Sources */,
 				DA415E8F2DE5DCC0009F515E /* Color.swift in Sources */,
+				DA4A09EA2F1E6492002C9FDF /* StickyListView.swift in Sources */,
 				DA37F98E2E8D8BE00001599E /* ViewModelTransformableProtocol.swift in Sources */,
 				DA5D71452E3F43B100C78E40 /* ObservablePattern.swift in Sources */,
 				DA7BF5CF2E98ED0300224BCF /* ThemeColorProtocol.swift in Sources */,
