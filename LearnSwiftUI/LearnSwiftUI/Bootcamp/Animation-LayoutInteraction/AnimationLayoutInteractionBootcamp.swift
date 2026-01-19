@@ -11,7 +11,7 @@ enum AnimationLayoutDemo: String, Identifiable, CaseIterable {
     case expandCard
     case accordion
     case customTabBar
-    
+    case stickySectionList
     var id: String { self.rawValue }
     
     var title: String {
@@ -19,6 +19,7 @@ enum AnimationLayoutDemo: String, Identifiable, CaseIterable {
         case .expandCard: "Expand Card"
         case .accordion: "ACCORDION"
         case .customTabBar: "CUSTOM TAB BAR"
+        case .stickySectionList: "Sticky Section List"
         }
     }
 }
@@ -63,6 +64,7 @@ struct AnimationLayoutInteractionBootcamp: View {
         case .expandCard: ExpandCardAnimationDemo()
         case .accordion: AccordionItemDemo()
         case .customTabBar: TabBarContainerAnimationDemo()
+        case .stickySectionList: StickyListView()
         }
     }
 }
