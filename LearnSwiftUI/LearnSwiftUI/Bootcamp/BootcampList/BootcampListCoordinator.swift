@@ -16,6 +16,7 @@ extension Router {
         case scrollViewLazyContainers
         case safeAreaInsets
         case animationLayoutInteraction
+        case viewIndentity
         case textBootcamp
         
         var id: String { self.rawValue }
@@ -59,6 +60,8 @@ struct BootcampListCoordinator: View, ScreenCoordinator {
                 navRouter.push(ScreenRouter.safeAreaInsets, animate: true)
             case .animationLayoutInteraction:
                 navRouter.push(ScreenRouter.animationLayoutInteraction, animate: true)
+            case .viewIdentity:
+                navRouter.push(ScreenRouter.viewIndentity, animate: true)
             case .text:
                 navRouter.push(ScreenRouter.textBootcamp, animate: true)
             case .shape: break
@@ -89,6 +92,8 @@ extension BootcampListCoordinator {
             SafeAreaInsetsBootcampCoordinator(navRouter: navRouter)
         case .animationLayoutInteraction:
             AnimationLayoutInteractionBootcampCoordinator(navRouter: navRouter)
+        case .viewIndentity:
+            ViewIdentityBootcampCoordinator(navRouter: navRouter)
         case .textBootcamp:
             TextBootcampCoordinator(navRouter: navRouter)
         }
