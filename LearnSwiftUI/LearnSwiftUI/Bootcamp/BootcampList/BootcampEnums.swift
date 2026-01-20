@@ -15,6 +15,7 @@ enum BootcampEnums: String, CaseIterable {
     case scrollViewLazyContainers = "ScrollView-Lazy containers"
     case safeAreaInsets = "SafeArea & Insets"
     case animationLayoutInteraction = "Animation-Layout Interaction"
+    case viewIdentity = "View Identity"
     case text = "Text"
     case shape = "Shape"
     case color = "Color"
