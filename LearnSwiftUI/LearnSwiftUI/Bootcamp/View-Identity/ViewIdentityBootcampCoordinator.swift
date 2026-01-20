@@ -29,7 +29,7 @@ struct ViewIdentityBootcampCoordinator: View, ScreenCoordinator {
     @ViewBuilder
     private func getView() -> some View {
         ViewIdentityBootcamp()
-            .navigationTitle("View Identity")
+            .navigationTitle("VIEW IDENTITY & DIFFING SYSTEM")
     }
 }
 
