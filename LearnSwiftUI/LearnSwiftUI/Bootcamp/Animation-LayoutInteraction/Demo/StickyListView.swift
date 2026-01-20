@@ -20,7 +20,6 @@ struct SectionModel: Identifiable {
 
 struct StickyHeaderView: View {
     let title: String
-    let geometry: GeometryProxy
     
     var body: some View {
         Text(title)
@@ -48,13 +47,20 @@ struct StickyListView: View {
             Item(title: "Cabbage"),
             Item(title: "Water Spinach")
         ]),
-        
         SectionModel(header: "Drinks", items: [
             Item(title: "Orange Juice"),
             Item(title: "Green Tea"),
             Item(title: "Coffee"),
             Item(title: "Fresh Milk"),
             Item(title: "Watermelon Juice")
+        ]),
+        SectionModel(header: "Beer", items: [
+            Item(title: "Tiger"),
+            Item(title: "Heniken"),
+            Item(title: "Quynhon"),
+            Item(title: "Saigon"),
+            Item(title: "Hanoi"),
+            Item(title: "333")
         ]),
         SectionModel(header: "Sweets", items: [
             Item(title: "Cookie"),
@@ -71,27 +77,14 @@ struct StickyListView: View {
                 ForEach(sections) { section in
                     Section {
                         ForEach(section.items) { item in
-                            GeometryReader { geo in
-                                HStack {
-                                    Text(item.title)
-                                        .padding()
-                                    Spacer()
-                                }
-                                .background(Color.white)
-                                .overlay(
-                                    Rectangle()
-                                        .frame(height: 1)
-                                        .foregroundColor(Color.gray.opacity(0.3)),
-                                    alignment: .bottom
-                                )
+                            HStack {
+                                Text(item.title)
+                                    .padding()
+                                Spacer()
                             }
-                            .frame(height: 50)
                         }
                     } header: {
-                        GeometryReader { geo in
-                            StickyHeaderView(title: section.header, geometry: geo)
-                        }
-                        .frame(height: 50)
+                        StickyHeaderView(title: section.header)
                     }
                 }
             }
