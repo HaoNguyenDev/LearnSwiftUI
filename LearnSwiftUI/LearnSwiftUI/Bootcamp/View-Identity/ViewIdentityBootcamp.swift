@@ -9,12 +9,14 @@ import SwiftUI
 
 enum ViewIdentityDemo: String, CaseIterable, Identifiable {
     case bodyRecompute
+    case viewRecreated
     
     var id: String { self.rawValue }
     
     var title: String {
         switch self {
         case .bodyRecompute: "Body recomputed demo"
+        case .viewRecreated: "When is a View recreated?"
         }
     }
 }
@@ -60,6 +62,8 @@ struct ViewIdentityBootcamp: View {
         switch demo {
         case .bodyRecompute:
             BodyRecomputeDemo()
+        case .viewRecreated:
+            ViewRecreatedDemo()
         }
     }
 }

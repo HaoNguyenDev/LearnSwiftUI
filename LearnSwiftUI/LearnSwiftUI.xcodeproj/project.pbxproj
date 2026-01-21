@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA03DEF42F20A8CA0080D104 /* BodyRecomputeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DEF32F20A8CA0080D104 /* BodyRecomputeDemo.swift */; };
+		DA03DEFE2F2116A30080D104 /* ViewRecreatedDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DEFD2F2116A30080D104 /* ViewRecreatedDemo.swift */; };
 		DA0B4AE72E6FC9A400628E53 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */; };
 		DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */; };
 		DA0B4AEB2E6FCBB700628E53 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */; };
@@ -285,6 +286,7 @@
 
 /* Begin PBXFileReference section */
 		DA03DEF32F20A8CA0080D104 /* BodyRecomputeDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyRecomputeDemo.swift; sourceTree = "<group>"; };
+		DA03DEFD2F2116A30080D104 /* ViewRecreatedDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRecreatedDemo.swift; sourceTree = "<group>"; };
 		DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
 		DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
@@ -587,6 +589,7 @@
 		DA03DEF12F20A8C60080D104 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				DA03DEFD2F2116A30080D104 /* ViewRecreatedDemo.swift */,
 				DA03DEF32F20A8CA0080D104 /* BodyRecomputeDemo.swift */,
 			);
 			path = Demo;
@@ -1853,6 +1856,7 @@
 				DAA609B42F12785C00B625CE /* ChatViewSafeAreaInset.swift in Sources */,
 				DA7BE0B82E806362006821CE /* HomeInteractor.swift in Sources */,
 				DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */,
+				DA03DEFE2F2116A30080D104 /* ViewRecreatedDemo.swift in Sources */,
 				DABDF7B42E70466B00DEC7C6 /* DownloadTask.swift in Sources */,
 				DA37F99D2E8D93F60001599E /* CbDemoLoginContentView.swift in Sources */,
 				DA37F9872E8D898B0001599E /* CbLoginResult.swift in Sources */,
