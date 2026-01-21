@@ -7,7 +7,20 @@
 
 import SwiftUI
 
+enum ViewIdentityDemo: String, CaseIterable, Identifiable {
+    case bodyRecompute
+    
+    var id: String { self.rawValue }
+    
+    var title: String {
+        switch self {
+        case .bodyRecompute: "Body recomputed demo"
+        }
+    }
+}
+
 struct ViewIdentityBootcamp: View {
+    @State private var selectedDemo: ViewIdentityDemo?
     
     var body: some View {
         ScrollView {
@@ -16,6 +29,37 @@ struct ViewIdentityBootcamp: View {
                     CodePreviewContainer(title: lesson.title, code: lesson.code, resultView: lesson.result?())
                 }
             }
+            
+            LazyVStack {
+                ForEach(ViewIdentityDemo.allCases, id: \.self) { demo in
+                    demoTitle(demo: demo)
+                }
+            }
+        }
+        
+        .sheet(item: $selectedDemo) { demo in
+            destinationView(for: demo)
+        }
+    }
+    
+    @ViewBuilder
+    private func demoTitle(demo: ViewIdentityDemo) -> some View {
+        Text(demo.title)
+            .foregroundStyle(.white)
+            .frame(maxWidth: .infinity, minHeight: 50)
+            .background(.green)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .padding(.horizontal)
+            .onTapGesture {
+                selectedDemo = demo
+            }
+    }
+    
+    @ViewBuilder
+    private func destinationView(for demo: ViewIdentityDemo) -> some View {
+        switch demo {
+        case .bodyRecompute:
+            BodyRecomputeDemo()
         }
     }
 }
