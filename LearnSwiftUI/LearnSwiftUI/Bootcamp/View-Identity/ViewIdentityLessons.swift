@@ -28,7 +28,10 @@ SwiftUI DOESN'T care about the View struct
 
 SwiftUI only cares about:
     👉 The identity of the node in the View Tree
-
+    ❗ SwiftUI doesn't update views
+    ❗ SwiftUI diffs view trees
+    ❗ States are based on identity, not structs
+    ❗ 90% of SwiftUI bugs = incorrect identity
 ✅ Standard Definition
 View Identity = how SwiftUI identifies “whether this is the same view” between two body runs
 
