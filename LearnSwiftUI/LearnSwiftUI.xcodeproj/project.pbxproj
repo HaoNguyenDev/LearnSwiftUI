@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA03DEF42F20A8CA0080D104 /* BodyRecomputeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DEF32F20A8CA0080D104 /* BodyRecomputeDemo.swift */; };
 		DA0B4AE72E6FC9A400628E53 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */; };
 		DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */; };
 		DA0B4AEB2E6FCBB700628E53 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */; };
@@ -283,6 +284,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DA03DEF32F20A8CA0080D104 /* BodyRecomputeDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyRecomputeDemo.swift; sourceTree = "<group>"; };
 		DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
 		DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
@@ -582,6 +584,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA03DEF12F20A8C60080D104 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				DA03DEF32F20A8CA0080D104 /* BodyRecomputeDemo.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
 		DA0B4AE52E6FC96800628E53 /* MultiDownloadApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -596,6 +606,7 @@
 		DA28F59D2F1F781B00079318 /* View-Identity */ = {
 			isa = PBXGroup;
 			children = (
+				DA03DEF12F20A8C60080D104 /* Demo */,
 				DA28F59E2F1F786000079318 /* ViewIdentityLessons.swift */,
 				DA28F5A42F1F78BE00079318 /* ViewIdentityBootcamp.swift */,
 				DA28F5A72F1F798700079318 /* ViewIdentityBootcampCoordinator.swift */,
@@ -1964,6 +1975,7 @@
 				DA4F7EF12E9A6B6D001CB7B2 /* HButtonStyle.swift in Sources */,
 				DA87489E2E6B16B500B189F3 /* WeatherMainView.swift in Sources */,
 				DAA709222E787C42006F8E70 /* PaymentVM.swift in Sources */,
+				DA03DEF42F20A8CA0080D104 /* BodyRecomputeDemo.swift in Sources */,
 				DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */,
 				DAFC16722F11240C00D242D3 /* StickyHeaderViewDemo.swift in Sources */,
 				DA6075272EFE9AC7002907E4 /* ResultBlockView.swift in Sources */,
