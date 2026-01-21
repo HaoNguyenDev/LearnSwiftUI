@@ -149,27 +149,45 @@ SwiftUI understands:
     “Ah, this is the same view moving”
 If identity changes → animation fails ❌
 """, result: nil),
-        Lesson(title: "", code: """
+        Lesson(title: "@State & @StateObject with diff view?", code: """
+@State:
+    @State is storage associated with the View's identity,
+    used for local mutable state,
+    destroyed when the view identity changes.
+    Lives according to view identity.
+    Does not have its own lifecycle.
+    Not used to own complex objects.
 
-""", result: nil),
-        Lesson(title: "", code: """
+@State private var isOn = false
 
-""", result: nil),
-        Lesson(title: "", code: """
+@StateObject:
+    @StateObject is used for the View to OWN an ObservableObject,
+    ensuring the object is only initialized once
+    during the view identity lifecycle.
+    Attached to view identity.
+    But the object is not recreated every time the body runs.
+    The View is the owner.
 
-""", result: nil),
-        Lesson(title: "", code: """
+@StateObject private var vm = ViewModel()
 
-""", result: nil),
-        Lesson(title: "", code: """
+Summary:
+@State stores the value,
+@StateObject stores the object,
+both live by the view's identity,
+but only @StateObject protects the object's lifecycle.
 
-""", result: nil),
-        Lesson(title: "", code: """
+@State is used for small, local UI state within the view.
+It is stored according to the view identity and is not reset every time the body runs,
+but will be destroyed when the view identity changes.
 
-""", result: nil),
-        Lesson(title: "", code: """
+@StateObject is used when the view owns an ObservableObject.
+SwiftUI ensures that the object is initialized only once,
+during the lifecycle of the view identity,
+and is not recreated every time the body recomputes.
 
-""", result: nil),
-        
+@ObservedObject is used when the ObservableObject is injected from outside.
+The view does not own the lifecycle of this object,
+it only observes and updates the UI when the object changes.
+""", result: nil)
     ]
 }
