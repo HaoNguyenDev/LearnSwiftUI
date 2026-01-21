@@ -188,6 +188,94 @@ and is not recreated every time the body recomputes.
 @ObservedObject is used when the ObservableObject is injected from outside.
 The view does not own the lifecycle of this object,
 it only observes and updates the UI when the object changes.
+""", result: nil),
+        Lesson(title: "ESSENCE: What is a \"body\" in SwiftUI?", code: """
+State / Input / Environment
+        ↓
+   View invalidated
+        ↓
+      body()
+        ↓
+     Diff Tree
+        ↓
+Update / Reuse / Destroy
+
+Body is NOT a UI renderer.
+
+A body is simply:
+    👉 A pure function that returns a new View Tree.
+SwiftUI will:
+    Call the body.
+    Get the new tree.
+    Diff with the old tree.
+    Decide to update/reuse/destroy.
+📌 Remember:
+If the body is rerun ≠ the view is recreated.
+If the body is rerun = SwiftUI is preparing to diff.
+
+The body restarts when the view is invalidated,
+which occurs when the state, input, or environment that the view depends on changes.
+SwiftUI then diffs the view tree to decide whether to update the UI.
+
+""", result: nil),
+        Lesson(title: "WHEN WILL MY BODY START RUNNING AGAIN?", code: """
+🔥 GROUP 1 — State Changes (MOST IMPORTANT)
+1️⃣ @State Changes
+@State var count = 0
+count += 1
+➡️ Invalidate view → body restarts
+
+2️⃣ @Binding Changes
+Toggle(isOn: $isOn)
+➡️ Parent state changes → child body restarts
+
+3️⃣ @ObservedObject / @StateObject
+When @Published emit:
+@Published var isLoading = false
+➡️ All views currently observing → body restarts
+
+4️⃣ @EnvironmentObject
+Object Changes
+All subtrees using that object are invalidated
+🔥 GROUP 2 — View Input Changes
+
+5️⃣ Property Passed to View Changes
+ChildView(title: "A") → ChildView(title: "B")
+➡️ ChildView Body Rerun
+📌 Even if the view doesn't have @State
+
+6️⃣ View depends on Environment
+@Environment(.colorScheme)
+@Environment(.locale)
+@Environment(.sizeCategory)
+➡️ Environment changes → body runs
+🔥 GROUP 3 — SwiftUI system trigger
+
+7️⃣ Animation / Transaction
+withAnimation {
+value += 1
+} ➡️ body runs to recompute animation frames
+
+8️⃣ TimelineView / PhaseAnimator
+System tick
+Time change
+Phase change
+➡️ body runs periodically
+
+9️⃣ Focus / Keyboard / Scene phase
+@FocusState
+@Environment(.scenePhase)
+➡️ Changes → body runs
+🔥 GROUP 4 — View indirect invalidation
+
+🔟 Geometry changes Change
+GeometryReader
+.onChange(of: geometry.size)
+➡️ Size/layout changes → body runs
+
+1️⃣1️⃣ PreferenceKey changes
+Child sets preference
+Parent reads preference ➡️ Parent body runs again
 """, result: nil)
     ]
 }
