@@ -16,6 +16,7 @@ enum BootcampEnums: String, CaseIterable {
     case safeAreaInsets = "SafeArea & Insets"
     case animationLayoutInteraction = "Animation-Layout Interaction"
     case viewIdentity = "View Identity & Diffing System"
+    case dataFlowAndArchitecture = "One-Way Data Flow and Architecture"
     case text = "Text"
     case shape = "Shape"
     case color = "Color"

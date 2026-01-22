@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct BootcampListView: View {
     @Environment(\.theme) var theme
     
