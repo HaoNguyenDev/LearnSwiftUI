@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		DA03DEF42F20A8CA0080D104 /* BodyRecomputeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DEF32F20A8CA0080D104 /* BodyRecomputeDemo.swift */; };
 		DA03DEFE2F2116A30080D104 /* ViewRecreatedDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DEFD2F2116A30080D104 /* ViewRecreatedDemo.swift */; };
+		DA03DF122F21FA9A0080D104 /* DataFlowAndArchitectureLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DF112F21FA9A0080D104 /* DataFlowAndArchitectureLesson.swift */; };
+		DA03DF152F21FB000080D104 /* DataFlowAndArchitectureBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DF142F21FB000080D104 /* DataFlowAndArchitectureBootcamp.swift */; };
+		DA03DF182F21FBB10080D104 /* DataFlowAndArchitectureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DF172F21FBB10080D104 /* DataFlowAndArchitectureCoordinator.swift */; };
 		DA0B4AE72E6FC9A400628E53 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */; };
 		DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */; };
 		DA0B4AEB2E6FCBB700628E53 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */; };
@@ -287,6 +290,9 @@
 /* Begin PBXFileReference section */
 		DA03DEF32F20A8CA0080D104 /* BodyRecomputeDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyRecomputeDemo.swift; sourceTree = "<group>"; };
 		DA03DEFD2F2116A30080D104 /* ViewRecreatedDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRecreatedDemo.swift; sourceTree = "<group>"; };
+		DA03DF112F21FA9A0080D104 /* DataFlowAndArchitectureLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFlowAndArchitectureLesson.swift; sourceTree = "<group>"; };
+		DA03DF142F21FB000080D104 /* DataFlowAndArchitectureBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFlowAndArchitectureBootcamp.swift; sourceTree = "<group>"; };
+		DA03DF172F21FBB10080D104 /* DataFlowAndArchitectureCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFlowAndArchitectureCoordinator.swift; sourceTree = "<group>"; };
 		DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
 		DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
@@ -595,6 +601,16 @@
 			path = Demo;
 			sourceTree = "<group>";
 		};
+		DA03DF102F21FA460080D104 /* OneWay-DataFlow-Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				DA03DF112F21FA9A0080D104 /* DataFlowAndArchitectureLesson.swift */,
+				DA03DF142F21FB000080D104 /* DataFlowAndArchitectureBootcamp.swift */,
+				DA03DF172F21FBB10080D104 /* DataFlowAndArchitectureCoordinator.swift */,
+			);
+			path = "OneWay-DataFlow-Architecture";
+			sourceTree = "<group>";
+		};
 		DA0B4AE52E6FC96800628E53 /* MultiDownloadApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -804,6 +820,7 @@
 				DAA609632F12325D00B625CE /* SafeArea-Insets */,
 				DAA609C62F129E1E00B625CE /* Animation-LayoutInteraction */,
 				DA28F59D2F1F781B00079318 /* View-Identity */,
+				DA03DF102F21FA460080D104 /* OneWay-DataFlow-Architecture */,
 				DA83D7352EFC08B40050EF92 /* Text */,
 				DA415E8A2DE5C845009F515E /* ShapesBootcamp.swift */,
 				DA415E8C2DE5CD41009F515E /* ColorsBootcamp.swift */,
@@ -1803,6 +1820,7 @@
 				DA8748992E6B007700B189F3 /* WeatherDataPill.swift in Sources */,
 				DA7BF5C92E98EC2000224BCF /* ThemeProtocol.swift in Sources */,
 				DA96150C2F1CC70D00AEEB25 /* TransitionVsAnimationExample.swift in Sources */,
+				DA03DF182F21FBB10080D104 /* DataFlowAndArchitectureCoordinator.swift in Sources */,
 				DAC35B162E9FCCDA0019021D /* Array+Extensions.swift in Sources */,
 				DAA45E592EF9357D00BC57E9 /* ScreenCoordinator.swift in Sources */,
 				DAA609AD2F12765400B625CE /* LoginViewSafeAreaInset.swift in Sources */,
@@ -1972,6 +1990,8 @@
 				DA5C98B82E391F91007AC9E9 /* TodoListView.swift in Sources */,
 				DAEBAE3C2DEB07A500082B1C /* SpacerBootcamp.swift in Sources */,
 				DA7BE0BA2E80637F006821CE /* HomeRouter.swift in Sources */,
+				DA03DF152F21FB000080D104 /* DataFlowAndArchitectureBootcamp.swift in Sources */,
+				DA03DF122F21FA9A0080D104 /* DataFlowAndArchitectureLesson.swift in Sources */,
 				DAEBAE442DECC2D100082B1C /* GridBootcamp.swift in Sources */,
 				DA87A2122EB7ACF500749349 /* FakeStoreAuthRequest.swift in Sources */,
 				DA5164322E3CB57600642709 /* NavigationManager.swift in Sources */,
