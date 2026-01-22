@@ -12,6 +12,7 @@
 		DA03DF122F21FA9A0080D104 /* DataFlowAndArchitectureLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DF112F21FA9A0080D104 /* DataFlowAndArchitectureLesson.swift */; };
 		DA03DF152F21FB000080D104 /* DataFlowAndArchitectureBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DF142F21FB000080D104 /* DataFlowAndArchitectureBootcamp.swift */; };
 		DA03DF182F21FBB10080D104 /* DataFlowAndArchitectureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DF172F21FBB10080D104 /* DataFlowAndArchitectureCoordinator.swift */; };
+		DA03DF212F2214F30080D104 /* MultiSelectRowListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DF202F2214F30080D104 /* MultiSelectRowListView.swift */; };
 		DA0B4AE72E6FC9A400628E53 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */; };
 		DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */; };
 		DA0B4AEB2E6FCBB700628E53 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */; };
@@ -293,6 +294,7 @@
 		DA03DF112F21FA9A0080D104 /* DataFlowAndArchitectureLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFlowAndArchitectureLesson.swift; sourceTree = "<group>"; };
 		DA03DF142F21FB000080D104 /* DataFlowAndArchitectureBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFlowAndArchitectureBootcamp.swift; sourceTree = "<group>"; };
 		DA03DF172F21FBB10080D104 /* DataFlowAndArchitectureCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFlowAndArchitectureCoordinator.swift; sourceTree = "<group>"; };
+		DA03DF202F2214F30080D104 /* MultiSelectRowListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectRowListView.swift; sourceTree = "<group>"; };
 		DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
 		DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
@@ -604,11 +606,20 @@
 		DA03DF102F21FA460080D104 /* OneWay-DataFlow-Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				DA03DF1E2F2213230080D104 /* Demo */,
 				DA03DF112F21FA9A0080D104 /* DataFlowAndArchitectureLesson.swift */,
 				DA03DF142F21FB000080D104 /* DataFlowAndArchitectureBootcamp.swift */,
 				DA03DF172F21FBB10080D104 /* DataFlowAndArchitectureCoordinator.swift */,
 			);
 			path = "OneWay-DataFlow-Architecture";
+			sourceTree = "<group>";
+		};
+		DA03DF1E2F2213230080D104 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				DA03DF202F2214F30080D104 /* MultiSelectRowListView.swift */,
+			);
+			path = Demo;
 			sourceTree = "<group>";
 		};
 		DA0B4AE52E6FC96800628E53 /* MultiDownloadApp */ = {
@@ -1949,6 +1960,7 @@
 				DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */,
 				DAFC16B42F11400E00D242D3 /* DragViewDemo.swift in Sources */,
 				DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */,
+				DA03DF212F2214F30080D104 /* MultiSelectRowListView.swift in Sources */,
 				DA8656D72F0F76820092426E /* ScrollViewLazyContainersBootcampCoordinator.swift in Sources */,
 				DA61C5B22F0D3A7100FD8181 /* StackViewLessons.swift in Sources */,
 				DA7BF6722E992DEF00224BCF /* HTextField.swift in Sources */,
