@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-struct Item: Identifiable {
+struct Item: Identifiable, Hashable {
     let id = UUID()
     let title: String
+    var isOn = false
 }
 
 struct SectionModel: Identifiable {
