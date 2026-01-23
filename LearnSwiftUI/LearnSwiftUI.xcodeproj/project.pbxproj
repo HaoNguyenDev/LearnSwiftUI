@@ -13,6 +13,9 @@
 		DA03DF152F21FB000080D104 /* DataFlowAndArchitectureBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DF142F21FB000080D104 /* DataFlowAndArchitectureBootcamp.swift */; };
 		DA03DF182F21FBB10080D104 /* DataFlowAndArchitectureCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DF172F21FBB10080D104 /* DataFlowAndArchitectureCoordinator.swift */; };
 		DA03DF212F2214F30080D104 /* MultiSelectRowListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DF202F2214F30080D104 /* MultiSelectRowListView.swift */; };
+		DA03DFAE2F23BBD60080D104 /* RenderingPerformanceLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DFAD2F23BBD60080D104 /* RenderingPerformanceLesson.swift */; };
+		DA03DFB22F23BC400080D104 /* RenderingPerformanceBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DFB12F23BC400080D104 /* RenderingPerformanceBootcamp.swift */; };
+		DA03DFB72F23BCD50080D104 /* RenderignPerformanceBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DFB62F23BCD50080D104 /* RenderignPerformanceBootcampCoordinator.swift */; };
 		DA0B4AE72E6FC9A400628E53 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */; };
 		DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */; };
 		DA0B4AEB2E6FCBB700628E53 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */; };
@@ -295,6 +298,9 @@
 		DA03DF142F21FB000080D104 /* DataFlowAndArchitectureBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFlowAndArchitectureBootcamp.swift; sourceTree = "<group>"; };
 		DA03DF172F21FBB10080D104 /* DataFlowAndArchitectureCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFlowAndArchitectureCoordinator.swift; sourceTree = "<group>"; };
 		DA03DF202F2214F30080D104 /* MultiSelectRowListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectRowListView.swift; sourceTree = "<group>"; };
+		DA03DFAD2F23BBD60080D104 /* RenderingPerformanceLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderingPerformanceLesson.swift; sourceTree = "<group>"; };
+		DA03DFB12F23BC400080D104 /* RenderingPerformanceBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderingPerformanceBootcamp.swift; sourceTree = "<group>"; };
+		DA03DFB62F23BCD50080D104 /* RenderignPerformanceBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderignPerformanceBootcampCoordinator.swift; sourceTree = "<group>"; };
 		DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
 		DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
@@ -622,6 +628,16 @@
 			path = Demo;
 			sourceTree = "<group>";
 		};
+		DA03DFA52F23BBB30080D104 /* Rendering-Performance */ = {
+			isa = PBXGroup;
+			children = (
+				DA03DFAD2F23BBD60080D104 /* RenderingPerformanceLesson.swift */,
+				DA03DFB12F23BC400080D104 /* RenderingPerformanceBootcamp.swift */,
+				DA03DFB62F23BCD50080D104 /* RenderignPerformanceBootcampCoordinator.swift */,
+			);
+			path = "Rendering-Performance";
+			sourceTree = "<group>";
+		};
 		DA0B4AE52E6FC96800628E53 /* MultiDownloadApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -832,6 +848,7 @@
 				DAA609C62F129E1E00B625CE /* Animation-LayoutInteraction */,
 				DA28F59D2F1F781B00079318 /* View-Identity */,
 				DA03DF102F21FA460080D104 /* OneWay-DataFlow-Architecture */,
+				DA03DFA52F23BBB30080D104 /* Rendering-Performance */,
 				DA83D7352EFC08B40050EF92 /* Text */,
 				DA415E8A2DE5C845009F515E /* ShapesBootcamp.swift */,
 				DA415E8C2DE5CD41009F515E /* ColorsBootcamp.swift */,
@@ -1947,6 +1964,7 @@
 				DA61C5242F0C075C00FD8181 /* StackViewBootcampCoordinator.swift in Sources */,
 				DA9614F82F1CABBD00AEEB25 /* ClassicAnimation.swift in Sources */,
 				DAED677E2E20E45C00309382 /* StateObjectBootcamp.swift in Sources */,
+				DA03DFB72F23BCD50080D104 /* RenderignPerformanceBootcampCoordinator.swift in Sources */,
 				DAE365DB2E9CE2EE005EF803 /* UserSettings.swift in Sources */,
 				DAA45E772EF977B100BC57E9 /* BootcampEnums.swift in Sources */,
 				DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */,
@@ -1974,6 +1992,7 @@
 				DA37F9A22E8EE4C30001599E /* CombineDefinitionHomeVC.swift in Sources */,
 				DAE365A32E9CC23B005EF803 /* DefaultThemeFonts.swift in Sources */,
 				DAE365A42E9CC23B005EF803 /* DefaultThemeColors.swift in Sources */,
+				DA03DFB22F23BC400080D104 /* RenderingPerformanceBootcamp.swift in Sources */,
 				DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */,
 				DAA709122E75D447006F8E70 /* MomoPaymentService.swift in Sources */,
 				DAA709252E787C52006F8E70 /* TransactionResult.swift in Sources */,
@@ -2016,6 +2035,7 @@
 				DAFC16722F11240C00D242D3 /* StickyHeaderViewDemo.swift in Sources */,
 				DA6075272EFE9AC7002907E4 /* ResultBlockView.swift in Sources */,
 				DAA609672F12328E00B625CE /* SafeAreaInsetsBootcamp.swift in Sources */,
+				DA03DFAE2F23BBD60080D104 /* RenderingPerformanceLesson.swift in Sources */,
 				DA7BE0A62E806040006821CE /* LoginInteractor.swift in Sources */,
 				DA5476E42EB39FCD005C8868 /* AlamofireSampleAPICallSyntax.swift in Sources */,
 				DAAE8CBD2E45028300FCBA4E /* CounterState.swift in Sources */,
