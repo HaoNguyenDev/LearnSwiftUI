@@ -8,36 +8,64 @@
 import SwiftUI
 
 struct MultiSelectRowListView: View {
-    @State private var items = (0...20).map { Item(title: "Item \($0)")}
+    private var items: [Item]
+    @State private var isExpandedIDs: [UUID]
+    
+    init() {
+        self.items = (0...20).map { Item(title: "Item \($0)")}
+        self.isExpandedIDs = []
+    }
     
     var body: some View {
         ScrollView {
             LazyVStack {
-                ForEach($items) { $item in
-                    SelectableRowView(title: item.title, isOn: $item.isOn)
+                ForEach(items) { item in
+                    ExpandableRowView(title: item.title, isExpand: isExpandedIDs.contains(item.id))
                         .contentShape(Rectangle())
+                        .onTapGesture {
+                            updateStateIDs(for: item.id)
+                    }
                 }
             }
         }
     }
 }
 
-struct SelectableRowView: View {
+extension MultiSelectRowListView {
+    private func updateStateIDs(for id: UUID) {
+        withAnimation(.spring) {
+            if isExpandedIDs.contains(id) {
+                isExpandedIDs.removeAll { $0 == id }
+            } else {
+                isExpandedIDs.append(id)
+            }
+        }
+    }
+}
+
+struct ExpandableRowView: View {
     var title: String
-    @Binding var isOn: Bool
+    var isExpand: Bool
     
     var body: some View {
-        Text(title)
-            .foregroundStyle((isOn ? Color.white : Color.black))
-            .frame(maxWidth: .infinity, minHeight: 50)
-            .background(
-                isOn ? Color.green : Color.gray
-            )
-            .clipShape(RoundedRectangle(cornerRadius: 10))
-            .padding(.horizontal)
-            .onTapGesture {
-                isOn.toggle()
+        VStack(spacing: 0) {
+            Text(title)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 5)
+            if isExpand {
+                Text("\(title) description")
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 5)
+                    .transition(.opacity.combined(with: .scale))
             }
+        }
+        .foregroundStyle((isExpand ? Color.white : Color.black))
+        .background(
+            isExpand ? Color.green : Color.gray
+        )
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .padding(.horizontal)
+        
     }
 }
 
