@@ -124,6 +124,7 @@
 		DA61C5DF2F0E180400FD8181 /* AlignmentBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61C5DE2F0E180400FD8181 /* AlignmentBootcampCoordinator.swift */; };
 		DA61C5E52F0E192A00FD8181 /* AlignmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61C5E42F0E192A00FD8181 /* AlignmentBootcamp.swift */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
+		DA723C882F24D446009BEC1C /* DemoEquatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723C872F24D446009BEC1C /* DemoEquatableView.swift */; };
 		DA7BE09E2E805F4B006821CE /* VIPER-Architecture.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA7BE09D2E805F4B006821CE /* VIPER-Architecture.txt */; };
 		DA7BE0A02E805F95006821CE /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE09F2E805F95006821CE /* LoginProtocol.swift */; };
 		DA7BE0A22E805FEE006821CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0A12E805FEE006821CE /* LoginViewController.swift */; };
@@ -419,6 +420,7 @@
 		DA6E0BBB2E4A32D0009B3778 /* OperationQueueTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OperationQueueTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA6E0BBC2E4A4BA5009B3778 /* RaceConditionAvoid.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RaceConditionAvoid.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA6E0D702E4CEE68009B3778 /* StackQueueAndHeap.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StackQueueAndHeap.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DA723C872F24D446009BEC1C /* DemoEquatableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoEquatableView.swift; sourceTree = "<group>"; };
 		DA7BE0982E7F0883006821CE /* SwiftAccessLevel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftAccessLevel.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA7BE0992E7F0E14006821CE /* SwiftTypeModifiers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftTypeModifiers.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA7BE09D2E805F4B006821CE /* VIPER-Architecture.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "VIPER-Architecture.txt"; sourceTree = "<group>"; };
@@ -631,6 +633,7 @@
 		DA03DFA52F23BBB30080D104 /* Rendering-Performance */ = {
 			isa = PBXGroup;
 			children = (
+				DA723C852F24D434009BEC1C /* Demo */,
 				DA03DFAD2F23BBD60080D104 /* RenderingPerformanceLesson.swift */,
 				DA03DFB12F23BC400080D104 /* RenderingPerformanceBootcamp.swift */,
 				DA03DFB62F23BCD50080D104 /* RenderignPerformanceBootcampCoordinator.swift */,
@@ -1215,6 +1218,14 @@
 				DA5C98BB2E3924AA007AC9E9 /* TodoDetailView.swift */,
 			);
 			path = TodoApp;
+			sourceTree = "<group>";
+		};
+		DA723C852F24D434009BEC1C /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				DA723C872F24D446009BEC1C /* DemoEquatableView.swift */,
+			);
+			path = Demo;
 			sourceTree = "<group>";
 		};
 		DA7BE09A2E805F33006821CE /* VIPER */ = {
@@ -1890,6 +1901,7 @@
 				DAAE8CBA2E44BDFF00FCBA4E /* FormView.swift in Sources */,
 				DA5477492EB65729005C8868 /* Profile.swift in Sources */,
 				DA61C5DF2F0E180400FD8181 /* AlignmentBootcampCoordinator.swift in Sources */,
+				DA723C882F24D446009BEC1C /* DemoEquatableView.swift in Sources */,
 				DAEBAE402DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift in Sources */,
 				DAC97DE72EA3960500F8A22F /* ActorBootcamp.swift in Sources */,
 				DA60751A2EFE99C2002907E4 /* CodeExample.swift in Sources */,
