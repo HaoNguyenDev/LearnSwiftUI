@@ -133,7 +133,7 @@ struct SettingView2: View {
     NavigationStackCustomItemView()
 }
 
-struct Itemview: Hashable {
+struct Itemview: Hashable, Equatable {
     var id = UUID()
     var itemName: String
 }

@@ -18,3 +18,8 @@ struct RenderingPerformanceBootcamp: View {
         }
     }
 }
+
+#Preview {
+    RenderingPerformanceBootcamp()
+}
+
