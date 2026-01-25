@@ -133,33 +133,33 @@ struct SettingView2: View {
     NavigationStackCustomItemView()
 }
 
-struct Itemview: Hashable, Equatable {
+struct ItemModel: Hashable, Equatable {
     var id = UUID()
     var itemName: String
 }
 
 struct NavigationStackCustomItemView: View {
     
-    @State private var navigationPathItems: [Itemview] = []
+    @State private var navigationPathItems: [ItemModel] = []
     
     var body: some View {
         NavigationStack(path: $navigationPathItems) {
             VStack {
                 Button("Push to Detail") {
-                    navigationPathItems.append(Itemview(itemName: "Detail"))
+                    navigationPathItems.append(ItemModel(itemName: "Detail"))
                 }.buttonStyle(.borderedProminent)
                 
                 Button("Push to Profile") {
-                    navigationPathItems.append(Itemview(itemName: "Profile"))
+                    navigationPathItems.append(ItemModel(itemName: "Profile"))
                 }.buttonStyle(.borderedProminent)
                 
                 Button("Push to Setting") {
-                    navigationPathItems.append(Itemview(itemName: "Setting"))
+                    navigationPathItems.append(ItemModel(itemName: "Setting"))
                 }.buttonStyle(.borderedProminent)
             }
             .navigationTitle("NavigationStackCustomItemView")
             .navigationBarTitleDisplayMode(.inline)
-            .navigationDestination(for: Itemview.self) { itemView in
+            .navigationDestination(for: ItemModel.self) { itemView in
                 ItemViewDetail(navigationPathItems: $navigationPathItems, itemView: itemView)
             }
         }
@@ -167,14 +167,14 @@ struct NavigationStackCustomItemView: View {
 }
 
 struct ItemViewDetail: View {
-    @Binding var navigationPathItems: [Itemview]
-    var itemView: Itemview
+    @Binding var navigationPathItems: [ItemModel]
+    var itemView: ItemModel
     
     var body: some View {
         VStack(spacing: 30) {
             Text(itemView.itemName)
             Button("Go further") {
-                navigationPathItems.append(Itemview(itemName: "Further Detail \(Int.random(in: 1...100))"))
+                navigationPathItems.append(ItemModel(itemName: "Further Detail \(Int.random(in: 1...100))"))
             }.buttonStyle(.borderedProminent)
             
             Button("Back") {

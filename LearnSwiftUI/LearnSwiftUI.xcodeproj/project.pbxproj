@@ -125,6 +125,7 @@
 		DA61C5E52F0E192A00FD8181 /* AlignmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61C5E42F0E192A00FD8181 /* AlignmentBootcamp.swift */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
 		DA723C882F24D446009BEC1C /* DemoEquatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723C872F24D446009BEC1C /* DemoEquatableView.swift */; };
+		DA723C8E2F25FC5D009BEC1C /* DemoRedrawList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723C8D2F25FC5D009BEC1C /* DemoRedrawList.swift */; };
 		DA7BE09E2E805F4B006821CE /* VIPER-Architecture.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA7BE09D2E805F4B006821CE /* VIPER-Architecture.txt */; };
 		DA7BE0A02E805F95006821CE /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE09F2E805F95006821CE /* LoginProtocol.swift */; };
 		DA7BE0A22E805FEE006821CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0A12E805FEE006821CE /* LoginViewController.swift */; };
@@ -421,6 +422,7 @@
 		DA6E0BBC2E4A4BA5009B3778 /* RaceConditionAvoid.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RaceConditionAvoid.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA6E0D702E4CEE68009B3778 /* StackQueueAndHeap.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StackQueueAndHeap.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA723C872F24D446009BEC1C /* DemoEquatableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoEquatableView.swift; sourceTree = "<group>"; };
+		DA723C8D2F25FC5D009BEC1C /* DemoRedrawList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoRedrawList.swift; sourceTree = "<group>"; };
 		DA7BE0982E7F0883006821CE /* SwiftAccessLevel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftAccessLevel.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA7BE0992E7F0E14006821CE /* SwiftTypeModifiers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftTypeModifiers.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA7BE09D2E805F4B006821CE /* VIPER-Architecture.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "VIPER-Architecture.txt"; sourceTree = "<group>"; };
@@ -1224,6 +1226,7 @@
 			isa = PBXGroup;
 			children = (
 				DA723C872F24D446009BEC1C /* DemoEquatableView.swift */,
+				DA723C8D2F25FC5D009BEC1C /* DemoRedrawList.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -1891,6 +1894,7 @@
 				DA54770E2EB63A7E005C8868 /* LoginRequest.swift in Sources */,
 				DAA45E6B2EF974A000BC57E9 /* AppCoordinator.swift in Sources */,
 				DA54769E2EB34A47005C8868 /* Encodable.swift in Sources */,
+				DA723C8E2F25FC5D009BEC1C /* DemoRedrawList.swift in Sources */,
 				DAEBAE462DF11C7300082B1C /* ButtonBootcamp.swift in Sources */,
 				DAC35AE72E9F87230019021D /* GitHubAPIEndpointEnum.swift in Sources */,
 				DA9614FE2F1CAD4C00AEEB25 /* JumpAnimationBehaviorExample.swift in Sources */,
