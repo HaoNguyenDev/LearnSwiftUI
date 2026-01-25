@@ -33,6 +33,9 @@ struct SafeAreaInsetsBootcampCoordinator: View, ScreenCoordinator {
     
     private func getView() -> some View {
         SafeAreaInsetsBootcamp()
+            .navigationDestination(for: ScreenRouter.self, destination: { router in
+                    viewForRouter(router: router)
+            })
             .navigationTitle("SafeArea, Insets & Keyboard Layout Traps")
     }
 }

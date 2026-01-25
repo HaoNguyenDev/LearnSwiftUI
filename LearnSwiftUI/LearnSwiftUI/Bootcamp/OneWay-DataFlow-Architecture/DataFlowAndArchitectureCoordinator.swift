@@ -29,6 +29,9 @@ struct DataFlowAndArchitectureCoordinator: View, ScreenCoordinator {
     @ViewBuilder
     private func getView() -> some View {
         DataFlowAndArchitectureBootcamp()
+            .navigationDestination(for: ScreenRouter.self, destination: { router in
+                    viewForRouter(router: router)
+            })
             .navigationTitle("ONE-WAY DATA FLOW & ARCHITECTURE")
     }
 }

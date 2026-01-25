@@ -29,6 +29,9 @@ struct RenderignPerformanceBootcampCoordinator: View, ScreenCoordinator {
     @ViewBuilder
     private func getView() -> some View {
         RenderingPerformanceBootcamp()
+            .navigationDestination(for: ScreenRouter.self, destination: { router in
+                    viewForRouter(router: router)
+            })
             .navigationTitle("Rendering & Performance")
     }
 }

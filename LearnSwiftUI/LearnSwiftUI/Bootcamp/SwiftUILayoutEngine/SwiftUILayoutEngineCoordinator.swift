@@ -35,6 +35,9 @@ struct SwiftUILayoutEngineCoordinator: View, ScreenCoordinator {
     @ViewBuilder
     private func getView() -> some View {
         SwiftUILayoutEngineBootcamp()
+            .navigationDestination(for: ScreenRouter.self, destination: { router in
+                    viewForRouter(router: router)
+            })
             .navigationTitle("SwiftUI Layout Engine")
     }
 }
