@@ -35,6 +35,9 @@ struct GeometryReaderCoordinateSpaceBootcampCoordinator: View, ScreenCoordinator
     @ViewBuilder
     private func getView() -> some View {
         GeometryReaderBootcamp()
+            .navigationDestination(for: ScreenRouter.self, destination: { router in
+                    viewForRouter(router: router)
+            })
             .navigationTitle("GeometryReader & coordinateSpace")
     }
 }

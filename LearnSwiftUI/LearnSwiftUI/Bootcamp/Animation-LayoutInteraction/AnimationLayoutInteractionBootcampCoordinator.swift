@@ -30,6 +30,9 @@ struct AnimationLayoutInteractionBootcampCoordinator: View, ScreenCoordinator {
     @ViewBuilder
     private func getView() -> some View {
         AnimationLayoutInteractionBootcamp()
+            .navigationDestination(for: ScreenRouter.self, destination: { router in
+                    viewForRouter(router: router)
+            })
             .navigationTitle("ANIMATION & LAYOUT INTERACTION")
     }
 }

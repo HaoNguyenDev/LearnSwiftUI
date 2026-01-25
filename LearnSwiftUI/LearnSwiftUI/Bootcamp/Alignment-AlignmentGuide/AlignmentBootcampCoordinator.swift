@@ -35,6 +35,9 @@ struct AlignmentBootcampCoordinator: View, ScreenCoordinator {
     @ViewBuilder
     private func getView() -> some View {
         AlignmentBootcamp()
+            .navigationDestination(for: ScreenRouter.self, destination: { router in
+                    viewForRouter(router: router)
+            })
             .navigationTitle("Alignment-AlignmentGuide")
     }
 }
