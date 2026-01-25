@@ -129,6 +129,9 @@
 		DA723CE62F264DBB009BEC1C /* BootcampTemplateLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723CE52F264DBB009BEC1C /* BootcampTemplateLesson.swift */; };
 		DA723CEA2F264DEB009BEC1C /* BootcampTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723CE92F264DEB009BEC1C /* BootcampTemplateView.swift */; };
 		DA723CED2F264E7D009BEC1C /* BootcampTemplateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723CEC2F264E7D009BEC1C /* BootcampTemplateCoordinator.swift */; };
+		DA723D142F267247009BEC1C /* EquatableViewLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723D132F267247009BEC1C /* EquatableViewLesson.swift */; };
+		DA723D182F26726A009BEC1C /* EquatableViewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723D172F26726A009BEC1C /* EquatableViewBootcamp.swift */; };
+		DA723D1C2F2672DC009BEC1C /* EquatableViewBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723D1B2F2672DC009BEC1C /* EquatableViewBootcampCoordinator.swift */; };
 		DA7BE09E2E805F4B006821CE /* VIPER-Architecture.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA7BE09D2E805F4B006821CE /* VIPER-Architecture.txt */; };
 		DA7BE0A02E805F95006821CE /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE09F2E805F95006821CE /* LoginProtocol.swift */; };
 		DA7BE0A22E805FEE006821CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0A12E805FEE006821CE /* LoginViewController.swift */; };
@@ -429,6 +432,9 @@
 		DA723CE52F264DBB009BEC1C /* BootcampTemplateLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampTemplateLesson.swift; sourceTree = "<group>"; };
 		DA723CE92F264DEB009BEC1C /* BootcampTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampTemplateView.swift; sourceTree = "<group>"; };
 		DA723CEC2F264E7D009BEC1C /* BootcampTemplateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampTemplateCoordinator.swift; sourceTree = "<group>"; };
+		DA723D132F267247009BEC1C /* EquatableViewLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquatableViewLesson.swift; sourceTree = "<group>"; };
+		DA723D172F26726A009BEC1C /* EquatableViewBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquatableViewBootcamp.swift; sourceTree = "<group>"; };
+		DA723D1B2F2672DC009BEC1C /* EquatableViewBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquatableViewBootcampCoordinator.swift; sourceTree = "<group>"; };
 		DA7BE0982E7F0883006821CE /* SwiftAccessLevel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftAccessLevel.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA7BE0992E7F0E14006821CE /* SwiftTypeModifiers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftTypeModifiers.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA7BE09D2E805F4B006821CE /* VIPER-Architecture.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "VIPER-Architecture.txt"; sourceTree = "<group>"; };
@@ -861,6 +867,7 @@
 				DA28F59D2F1F781B00079318 /* View-Identity */,
 				DA03DF102F21FA460080D104 /* OneWay-DataFlow-Architecture */,
 				DA03DFA52F23BBB30080D104 /* Rendering-Performance */,
+				DA723D122F267227009BEC1C /* EquatableView */,
 				DA83D7352EFC08B40050EF92 /* Text */,
 				DA415E8A2DE5C845009F515E /* ShapesBootcamp.swift */,
 				DA415E8C2DE5CD41009F515E /* ColorsBootcamp.swift */,
@@ -1246,6 +1253,16 @@
 				DA723CEC2F264E7D009BEC1C /* BootcampTemplateCoordinator.swift */,
 			);
 			path = BootcampTemplate;
+			sourceTree = "<group>";
+		};
+		DA723D122F267227009BEC1C /* EquatableView */ = {
+			isa = PBXGroup;
+			children = (
+				DA723D132F267247009BEC1C /* EquatableViewLesson.swift */,
+				DA723D172F26726A009BEC1C /* EquatableViewBootcamp.swift */,
+				DA723D1B2F2672DC009BEC1C /* EquatableViewBootcampCoordinator.swift */,
+			);
+			path = EquatableView;
 			sourceTree = "<group>";
 		};
 		DA7BE09A2E805F33006821CE /* VIPER */ = {
@@ -1921,6 +1938,7 @@
 				DA5D718B2E3FB25700C78E40 /* UserListView.swift in Sources */,
 				DAAE8CBA2E44BDFF00FCBA4E /* FormView.swift in Sources */,
 				DA5477492EB65729005C8868 /* Profile.swift in Sources */,
+				DA723D142F267247009BEC1C /* EquatableViewLesson.swift in Sources */,
 				DA61C5DF2F0E180400FD8181 /* AlignmentBootcampCoordinator.swift in Sources */,
 				DA723C882F24D446009BEC1C /* DemoEquatableView.swift in Sources */,
 				DAEBAE402DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift in Sources */,
@@ -2006,6 +2024,7 @@
 				DAA709142E75D553006F8E70 /* ThaiPaymentService.swift in Sources */,
 				DA723CE62F264DBB009BEC1C /* BootcampTemplateLesson.swift in Sources */,
 				DAA709192E75D6F5006F8E70 /* PaymentProvider.swift in Sources */,
+				DA723D1C2F2672DC009BEC1C /* EquatableViewBootcampCoordinator.swift in Sources */,
 				DA87489B2E6B007D00B189F3 /* WeatherListView.swift in Sources */,
 				DAA609D12F129F6900B625CE /* AnimationLayoutInteractionBootcampCoordinator.swift in Sources */,
 				DAA45E542EF933C400BC57E9 /* NavRouter.swift in Sources */,
@@ -2102,6 +2121,7 @@
 				DA7BE0A22E805FEE006821CE /* LoginViewController.swift in Sources */,
 				DA0C4B5D2E52218A00D64C7C /* FocusStateBootcamp.swift in Sources */,
 				DA37F9B12E8EE8C30001599E /* CombineDefinitionViewWrapper.swift in Sources */,
+				DA723D182F26726A009BEC1C /* EquatableViewBootcamp.swift in Sources */,
 				DAA930402E33C99C000FE238 /* ButtonModifier.swift in Sources */,
 				DA5C98BA2E39237C007AC9E9 /* TodoRowView.swift in Sources */,
 				DAEA78AA2EA27FC4001C1F26 /* KeychainService.swift in Sources */,

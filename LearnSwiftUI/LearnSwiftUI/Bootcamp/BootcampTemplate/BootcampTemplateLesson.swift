@@ -8,7 +8,7 @@
 import Foundation
 
 struct BootcampTemplateLesson {
-    static let all = [Lesson(title: "", code: """
-
+    static let all = [Lesson(title: "Lesson 1", code: """
+    print("Hello SwiftUI")
 """, result: nil)]
 }

@@ -18,6 +18,7 @@ enum BootcampEnums: String, CaseIterable {
     case viewIdentity = "View Identity & Diffing System"
     case dataFlowAndArchitecture = "One-Way Data Flow and Architecture"
     case renderingPerformance = "Rendering & Performance"
+    case equatableview = "EquatableView"
     case text = "Text"
     case shape = "Shape"
     case color = "Color"
