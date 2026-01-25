@@ -126,6 +126,9 @@
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
 		DA723C882F24D446009BEC1C /* DemoEquatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723C872F24D446009BEC1C /* DemoEquatableView.swift */; };
 		DA723C8E2F25FC5D009BEC1C /* DemoRedrawList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723C8D2F25FC5D009BEC1C /* DemoRedrawList.swift */; };
+		DA723CE62F264DBB009BEC1C /* BootcampTemplateLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723CE52F264DBB009BEC1C /* BootcampTemplateLesson.swift */; };
+		DA723CEA2F264DEB009BEC1C /* BootcampTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723CE92F264DEB009BEC1C /* BootcampTemplateView.swift */; };
+		DA723CED2F264E7D009BEC1C /* BootcampTemplateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723CEC2F264E7D009BEC1C /* BootcampTemplateCoordinator.swift */; };
 		DA7BE09E2E805F4B006821CE /* VIPER-Architecture.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA7BE09D2E805F4B006821CE /* VIPER-Architecture.txt */; };
 		DA7BE0A02E805F95006821CE /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE09F2E805F95006821CE /* LoginProtocol.swift */; };
 		DA7BE0A22E805FEE006821CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BE0A12E805FEE006821CE /* LoginViewController.swift */; };
@@ -423,6 +426,9 @@
 		DA6E0D702E4CEE68009B3778 /* StackQueueAndHeap.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StackQueueAndHeap.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA723C872F24D446009BEC1C /* DemoEquatableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoEquatableView.swift; sourceTree = "<group>"; };
 		DA723C8D2F25FC5D009BEC1C /* DemoRedrawList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoRedrawList.swift; sourceTree = "<group>"; };
+		DA723CE52F264DBB009BEC1C /* BootcampTemplateLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampTemplateLesson.swift; sourceTree = "<group>"; };
+		DA723CE92F264DEB009BEC1C /* BootcampTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampTemplateView.swift; sourceTree = "<group>"; };
+		DA723CEC2F264E7D009BEC1C /* BootcampTemplateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampTemplateCoordinator.swift; sourceTree = "<group>"; };
 		DA7BE0982E7F0883006821CE /* SwiftAccessLevel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftAccessLevel.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA7BE0992E7F0E14006821CE /* SwiftTypeModifiers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftTypeModifiers.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA7BE09D2E805F4B006821CE /* VIPER-Architecture.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "VIPER-Architecture.txt"; sourceTree = "<group>"; };
@@ -843,6 +849,7 @@
 		DA415E6A2DE5BFAF009F515E /* Bootcamp */ = {
 			isa = PBXGroup;
 			children = (
+				DA723CE02F264D9D009BEC1C /* BootcampTemplate */,
 				DAA45E6E2EF9756300BC57E9 /* BootcampList */,
 				DA61C5522F0CC38100FD8181 /* SwiftUILayoutEngine */,
 				DA61C5212F0C073A00FD8181 /* StackView */,
@@ -1229,6 +1236,16 @@
 				DA723C8D2F25FC5D009BEC1C /* DemoRedrawList.swift */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		DA723CE02F264D9D009BEC1C /* BootcampTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				DA723CE52F264DBB009BEC1C /* BootcampTemplateLesson.swift */,
+				DA723CE92F264DEB009BEC1C /* BootcampTemplateView.swift */,
+				DA723CEC2F264E7D009BEC1C /* BootcampTemplateCoordinator.swift */,
+			);
+			path = BootcampTemplate;
 			sourceTree = "<group>";
 		};
 		DA7BE09A2E805F33006821CE /* VIPER */ = {
@@ -1924,6 +1941,7 @@
 				DA37F9872E8D898B0001599E /* CbLoginResult.swift in Sources */,
 				DA8656C62F0F75750092426E /* GeometryReaderBootcamp.swift in Sources */,
 				DA8656C72F0F75750092426E /* GeometryReaderCoordinateSpaceBootcampCoordinator.swift in Sources */,
+				DA723CEA2F264DEB009BEC1C /* BootcampTemplateView.swift in Sources */,
 				DA28F5A52F1F78BE00079318 /* ViewIdentityBootcamp.swift in Sources */,
 				DA8656C82F0F75750092426E /* GeometryReaderCoordinateSpaceLessons.swift in Sources */,
 				DA54774E2EB658E6005C8868 /* AlamofireTestView.swift in Sources */,
@@ -1986,6 +2004,7 @@
 				DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */,
 				DA7BF5E62E98F2B400224BCF /* RswiftResources+ImageResource.swift in Sources */,
 				DAA709142E75D553006F8E70 /* ThaiPaymentService.swift in Sources */,
+				DA723CE62F264DBB009BEC1C /* BootcampTemplateLesson.swift in Sources */,
 				DAA709192E75D6F5006F8E70 /* PaymentProvider.swift in Sources */,
 				DA87489B2E6B007D00B189F3 /* WeatherListView.swift in Sources */,
 				DAA609D12F129F6900B625CE /* AnimationLayoutInteractionBootcampCoordinator.swift in Sources */,
@@ -1997,6 +2016,7 @@
 				DA03DF212F2214F30080D104 /* MultiSelectRowListView.swift in Sources */,
 				DA8656D72F0F76820092426E /* ScrollViewLazyContainersBootcampCoordinator.swift in Sources */,
 				DA61C5B22F0D3A7100FD8181 /* StackViewLessons.swift in Sources */,
+				DA723CED2F264E7D009BEC1C /* BootcampTemplateCoordinator.swift in Sources */,
 				DA7BF6722E992DEF00224BCF /* HTextField.swift in Sources */,
 				DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */,
 				DAEBAE3A2DEAF92400082B1C /* StacksBootcamp.swift in Sources */,

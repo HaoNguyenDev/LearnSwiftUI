@@ -81,7 +81,7 @@ struct BootcampListCoordinator: View, ScreenCoordinator {
 
 extension BootcampListCoordinator {
     @ViewBuilder
-    func viewForRouter(router: Router.BootcampListRouter) -> some View {
+    func viewForRouter(router: ScreenRouter) -> some View {
         switch router {
         case .swiftuiLayoutEngine:
             SwiftUILayoutEngineCoordinator(navRouter: navRouter)
