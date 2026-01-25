@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MultiSelectRowListView: View {
     private var items: [Item]
-    @State private var isExpandedIDs: [UUID]
+    @State private var isExpandedIDs: Set<UUID>
     
     init() {
         self.items = (0...20).map { Item(title: "Item \($0)")}
@@ -35,9 +35,9 @@ extension MultiSelectRowListView {
     private func updateStateIDs(for id: UUID) {
         withAnimation(.spring) {
             if isExpandedIDs.contains(id) {
-                isExpandedIDs.removeAll { $0 == id }
+                isExpandedIDs.remove(id)
             } else {
-                isExpandedIDs.append(id)
+                isExpandedIDs.insert(id)
             }
         }
     }
