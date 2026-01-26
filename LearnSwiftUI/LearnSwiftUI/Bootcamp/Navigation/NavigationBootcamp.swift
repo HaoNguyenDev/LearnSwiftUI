@@ -1,24 +1,24 @@
 //
-//  EquatableViewBootcamp.swift
+//  NavigationBootcamp.swift
 //  LearnSwiftUI
 //
-//  Created by Hao Nguyen on 25/1/26.
+//  Created by Hao Nguyen on 26/1/26.
 //
 
 import SwiftUI
 
-struct EquatableViewBootcamp: View {
-    var gotoDemo: SingleResult<Router.EquatableViewRouter>?
+struct NavigationBootcamp: View {
+    let gotoDemo: SingleResult<Router.NavigationRouter>?
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 24.0) {
-                ForEach(EquatableViewLesson.all) { lesson in
+                ForEach(NavigationLesson.all) { lesson in
                     CodePreviewContainer(title: lesson.title, code: lesson.code, resultView: lesson.result?())
                 }
             }
             
             LazyVStack(spacing: 24.0) {
-                ForEach(Router.EquatableViewRouter.allCases) { demo in
+                ForEach(Router.NavigationRouter.allCases) { demo in
                     demoTitle(demo: demo)
                 }
             }
@@ -26,10 +26,10 @@ struct EquatableViewBootcamp: View {
     }
 }
 
-extension EquatableViewBootcamp {
-
+extension NavigationBootcamp {
+    
     @ViewBuilder
-    private func demoTitle(demo: Router.EquatableViewRouter) -> some View {
+    private func demoTitle(demo: Router.NavigationRouter) -> some View {
         Text(demo.title)
             .foregroundStyle(.white)
             .frame(maxWidth: .infinity, minHeight: 50)
