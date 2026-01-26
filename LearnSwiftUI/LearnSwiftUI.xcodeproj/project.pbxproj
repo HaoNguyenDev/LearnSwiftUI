@@ -239,6 +239,7 @@
 		DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE8CB72E43B46800FCBA4E /* GestureBootcamp.swift */; };
 		DAAE8CBA2E44BDFF00FCBA4E /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE8CB92E44BDFF00FCBA4E /* FormView.swift */; };
 		DAAE8CBD2E45028300FCBA4E /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE8CBC2E45028300FCBA4E /* CounterState.swift */; };
+		DABC5F9C2F2772A000957964 /* EquatableViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC5F9B2F2772A000957964 /* EquatableViewDemo.swift */; };
 		DABDF7B42E70466B00DEC7C6 /* DownloadTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABDF7B32E70466B00DEC7C6 /* DownloadTask.swift */; };
 		DAC35AE72E9F87230019021D /* GitHubAPIEndpointEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC35AE62E9F87230019021D /* GitHubAPIEndpointEnum.swift */; };
 		DAC35AF32E9F88FA0019021D /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC35AF22E9F88FA0019021D /* UserListViewModel.swift */; };
@@ -551,6 +552,7 @@
 		DAAE8CB72E43B46800FCBA4E /* GestureBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureBootcamp.swift; sourceTree = "<group>"; };
 		DAAE8CB92E44BDFF00FCBA4E /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		DAAE8CBC2E45028300FCBA4E /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
+		DABC5F9B2F2772A000957964 /* EquatableViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquatableViewDemo.swift; sourceTree = "<group>"; };
 		DABDF7B32E70466B00DEC7C6 /* DownloadTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadTask.swift; sourceTree = "<group>"; };
 		DAC35AE62E9F87230019021D /* GitHubAPIEndpointEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIEndpointEnum.swift; sourceTree = "<group>"; };
 		DAC35AF22E9F88FA0019021D /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
@@ -1258,6 +1260,7 @@
 		DA723D122F267227009BEC1C /* EquatableView */ = {
 			isa = PBXGroup;
 			children = (
+				DABC5F9A2F27727B00957964 /* Demo */,
 				DA723D132F267247009BEC1C /* EquatableViewLesson.swift */,
 				DA723D172F26726A009BEC1C /* EquatableViewBootcamp.swift */,
 				DA723D1B2F2672DC009BEC1C /* EquatableViewBootcampCoordinator.swift */,
@@ -1668,6 +1671,14 @@
 			path = Architecture;
 			sourceTree = "<group>";
 		};
+		DABC5F9A2F27727B00957964 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				DABC5F9B2F2772A000957964 /* EquatableViewDemo.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
 		DAC35ACC2E9F83070019021D /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -1969,6 +1980,7 @@
 				DA37F9B32E8EE8CA0001599E /* CombineDefinitionContentView.swift in Sources */,
 				DA4F7F1C2E9A954D001CB7B2 /* LoginButtonView.swift in Sources */,
 				DA7BF61C2E99036200224BCF /* View+Themed.swift in Sources */,
+				DABC5F9C2F2772A000957964 /* EquatableViewDemo.swift in Sources */,
 				DA8748912E6B005800B189F3 /* WeatherErrorView.swift in Sources */,
 				DAA45E712EF9759100BC57E9 /* BootcampListCoordinator.swift in Sources */,
 				DAC35B3F2E9FED3F0019021D /* TextFieldModifiers.swift in Sources */,

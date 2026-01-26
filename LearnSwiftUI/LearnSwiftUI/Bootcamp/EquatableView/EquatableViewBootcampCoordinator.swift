@@ -9,13 +9,11 @@ import SwiftUI
 
 extension Router {
     enum EquatableViewRouter: String, CaseIterable, Routable {
-        case demo1
-        case demo2
+        case equatableViewDemo
         var id: String { self.rawValue }
         var title: String {
             switch self {
-            case .demo1: "Demo 1"
-            case .demo2: "Demo 2"
+            case .equatableViewDemo: "EquatableView Demo"
             }
         }
     }
@@ -48,8 +46,7 @@ struct EquatableViewBootcampCoordinator: View, ScreenCoordinator {
 extension EquatableViewBootcampCoordinator {
     func viewForRouter(router: ScreenRouter) -> some View {
         switch router {
-        case .demo1: Text(router.title)
-        case .demo2: Text(router.title)
+        case .equatableViewDemo: EquatableViewDemo()
         }
     }
 }
