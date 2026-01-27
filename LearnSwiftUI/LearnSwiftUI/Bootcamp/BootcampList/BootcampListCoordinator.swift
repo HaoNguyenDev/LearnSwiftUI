@@ -21,6 +21,7 @@ extension Router {
         case textBootcamp
         case renderingPerformance
         case equatableview
+        case navigation
         var id: String { self.rawValue }
     }
 }
@@ -70,6 +71,8 @@ struct BootcampListCoordinator: View, ScreenCoordinator {
                 navRouter.push(ScreenRouter.renderingPerformance, animate: true)
             case .equatableview:
                 navRouter.push(ScreenRouter.equatableview, animate: true)
+            case .naviagtion:
+                navRouter.push(ScreenRouter.navigation, animate: true)
             case .text:
                 navRouter.push(ScreenRouter.textBootcamp, animate: true)
             case .shape: break
@@ -108,6 +111,8 @@ extension BootcampListCoordinator {
             RenderignPerformanceBootcampCoordinator(navRouter: navRouter)
         case .equatableview:
             EquatableViewBootcampCoordinator(navRouter: navRouter)
+        case .navigation:
+            NavigationBootcampCoordinator(navRouter: navRouter)
         case .textBootcamp:
             TextBootcampCoordinator(navRouter: navRouter)
         }

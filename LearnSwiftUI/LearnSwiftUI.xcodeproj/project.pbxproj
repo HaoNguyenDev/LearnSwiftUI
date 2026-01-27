@@ -20,6 +20,8 @@
 		DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */; };
 		DA0B4AEB2E6FCBB700628E53 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */; };
 		DA0C4B5D2E52218A00D64C7C /* FocusStateBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0C4B5C2E52218A00D64C7C /* FocusStateBootcamp.swift */; };
+		DA10D4302F2903940035A6A2 /* NavigationStackExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10D42F2F2903940035A6A2 /* NavigationStackExample.swift */; };
+		DA10D4412F2907980035A6A2 /* NavigationPathExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA10D4402F2907980035A6A2 /* NavigationPathExample.swift */; };
 		DA13CE212E89999B005B6D2D /* MVVM.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA13CE202E89999B005B6D2D /* MVVM.txt */; };
 		DA1D081B2E9D282100B76DFD /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = DA1D081A2E9D282100B76DFD /* KeychainAccess */; };
 		DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */; };
@@ -317,6 +319,8 @@
 		DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
 		DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
 		DA0C4B5C2E52218A00D64C7C /* FocusStateBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusStateBootcamp.swift; sourceTree = "<group>"; };
+		DA10D42F2F2903940035A6A2 /* NavigationStackExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackExample.swift; sourceTree = "<group>"; };
+		DA10D4402F2907980035A6A2 /* NavigationPathExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPathExample.swift; sourceTree = "<group>"; };
 		DA13CE202E89999B005B6D2D /* MVVM.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MVVM.txt; sourceTree = "<group>"; };
 		DA1D32272E6F050F007BDEA2 /* DownloadOperation.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DownloadOperation.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewBootcamp.swift; sourceTree = "<group>"; };
@@ -672,6 +676,15 @@
 				DABDF7B32E70466B00DEC7C6 /* DownloadTask.swift */,
 			);
 			path = MultiDownloadApp;
+			sourceTree = "<group>";
+		};
+		DA10D42D2F2903780035A6A2 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				DA10D42F2F2903940035A6A2 /* NavigationStackExample.swift */,
+				DA10D4402F2907980035A6A2 /* NavigationPathExample.swift */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 		DA28F59D2F1F781B00079318 /* View-Identity */ = {
@@ -1689,6 +1702,7 @@
 		DABC5FC12F27B22300957964 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				DA10D42D2F2903780035A6A2 /* Example */,
 				DABC5FC32F27B23C00957964 /* NavigationLesson.swift */,
 				DABC5FC72F27B27200957964 /* NavigationBootcamp.swift */,
 				DABC5FCB2F27B2D300957964 /* NavigationBootcampCoordinator.swift */,
@@ -2043,6 +2057,7 @@
 				DAA8E2182EA0D89800CDBDC1 /* TimerPublisherBootcamp.swift in Sources */,
 				DA8748932E6B006000B189F3 /* GradientBackgroundAnimation.swift in Sources */,
 				DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */,
+				DA10D4302F2903940035A6A2 /* NavigationStackExample.swift in Sources */,
 				DA61C5242F0C075C00FD8181 /* StackViewBootcampCoordinator.swift in Sources */,
 				DA9614F82F1CABBD00AEEB25 /* ClassicAnimation.swift in Sources */,
 				DAED677E2E20E45C00309382 /* StateObjectBootcamp.swift in Sources */,
@@ -2125,6 +2140,7 @@
 				DA5476E42EB39FCD005C8868 /* AlamofireSampleAPICallSyntax.swift in Sources */,
 				DAAE8CBD2E45028300FCBA4E /* CounterState.swift in Sources */,
 				DAE366252E9D1047005EF803 /* AppSettings.swift in Sources */,
+				DA10D4412F2907980035A6A2 /* NavigationPathExample.swift in Sources */,
 				DA8748872E6AFBC900B189F3 /* WeatherService.swift in Sources */,
 				DA60279D2EA3D9A400271E00 /* MVVMDemoUIKit_ViewModel.swift in Sources */,
 				DA415E952DE5E707009F515E /* ImagesBootcamp.swift in Sources */,
