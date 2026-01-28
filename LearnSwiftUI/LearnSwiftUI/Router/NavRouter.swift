@@ -10,16 +10,16 @@ import SwiftUI
 protocol NavRouterProtocol: AnyObject {
     var path: NavigationPath { get set }
     
-    func setRoot(to view: AnyHashable)
-    func push<T: Hashable>(_ view: T, animate: Bool)
+    func setRoot(to route: AnyHashable)
+    func push<T: Hashable>(_ route: T, animate: Bool)
     func pop(animate: Bool)
-    func pop(to view: AnyHashable)
-    func pop(to view: AnyHashable, animate: Bool)
+    func pop(to route: AnyHashable)
+    func pop(to route: AnyHashable, animate: Bool)
     func popToRoot()
-    func replaceLast(with view: AnyHashable)
+    func replaceLast(with route: AnyHashable)
     func contains(_ subpath: AnyHashable) -> Bool
-    func showSheet(_ view: RouterView)
-    func showFullScreenCover(_ view: RouterView)
+    func showSheet(_ route: RouterView)
+    func showFullScreenCover(_ route: RouterView)
     func dismiss()
 }
 
@@ -32,20 +32,20 @@ protocol NavRouterProtocol: AnyObject {
 
 // MARK: - Methods
 extension NavRouter {
-    func setRoot(to view: AnyHashable) {
+    func setRoot(to route: AnyHashable) {
         path = .init()
-        path.append(view)
-        children.append(view)
+        path.append(route)
+        children.append(route)
     }
     
-    func push<T: Hashable>(_ view: T, animate: Bool = true) {
+    func push<T: Hashable>(_ route: T, animate: Bool = true) {
         var transaction = Transaction(animation: .linear)
         transaction.disablesAnimations = !animate
         
         withTransaction(transaction) {
-            path.append(view)
+            path.append(route)
         }
-        children.append(view)
+        children.append(route)
     }
     
     func pop(animate: Bool = true) {
@@ -68,15 +68,15 @@ extension NavRouter {
         }
     }
     
-    func pop(to view: AnyHashable, animate: Bool) {
+    func pop(to route: AnyHashable, animate: Bool) {
         if animate {
-            self.pop(to: view)
+            self.pop(to: route)
         } else {
             var transaction = Transaction(animation: .linear)
             transaction.disablesAnimations = !animate
             
             withTransaction(transaction) {
-                self.pop(to: view)
+                self.pop(to: route)
             }
         }
     }
@@ -99,29 +99,29 @@ extension NavRouter {
 //        path.removeLast(countToRemove)
 //    }
     
-    func replaceLast(with view: AnyHashable) {
+    func replaceLast(with route: AnyHashable) {
         guard !children.isEmpty else {
-            path.append(view)
-            children.append(view)
+            path.append(route)
+            children.append(route)
             return
         }
         children.removeLast()
         path.removeLast()
         
-        path.append(view)
-        children.append(view)
+        path.append(route)
+        children.append(route)
     }
     
     func contains(_ subpath: AnyHashable) -> Bool {
         children.last != subpath && children.contains(subpath)
     }
     
-    func showSheet(_ view: RouterView) {
-        sheet = view
+    func showSheet(_ route: RouterView) {
+        sheet = route
     }
     
-    func showFullScreenCover(_ view: RouterView) {
-        fullScreenCover = view
+    func showFullScreenCover(_ route: RouterView) {
+        fullScreenCover = route
     }
     
     func dismiss() {
