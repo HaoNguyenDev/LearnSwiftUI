@@ -26,7 +26,7 @@ struct NavigationPathExample: View {
                 case "page1":
                     Page1Example(path: $path)
                 case "page2":
-                    Page2Example()
+                    Page2Example(path: $path)
                 default:
                     EmptyView()
                 }
@@ -40,13 +40,41 @@ struct Page1Example: View {
     @Binding var path: NavigationPath
     
     var body: some View {
-        Text("Page 1")
+        VStack(spacing: 24.0) {
+            Button("push to Page 2") {
+                path.append("page2")
+            }
+            
+            Button("pop") {
+                path.removeLast()
+            }
+            
+            Button("pop to root") {
+                path.removeLast(path.count)
+            }
+        }
+        .navigationDestination(for: String.self) { value in
+            if value == "page2" {
+                Page2Example(path: $path)
+            }
+        }
+        .navigationTitle("Page 1")
     }
 }
 
 struct Page2Example: View {
+    @Binding var path: NavigationPath
+    
     var body: some View {
-        Text("Page 2")
+        VStack(spacing: 24.0) {
+            Button("pop") {
+                path.removeLast()
+            }
+            Button("pop to root") {
+                path.removeLast(path.count)
+            }
+        }
+        .navigationTitle("Page 2")
     }
 }
 
