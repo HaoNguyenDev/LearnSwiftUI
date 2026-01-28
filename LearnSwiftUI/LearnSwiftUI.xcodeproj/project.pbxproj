@@ -25,6 +25,7 @@
 		DA13CE212E89999B005B6D2D /* MVVM.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA13CE202E89999B005B6D2D /* MVVM.txt */; };
 		DA1D081B2E9D282100B76DFD /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = DA1D081A2E9D282100B76DFD /* KeychainAccess */; };
 		DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */; };
+		DA2237542F2A09B70065C9CD /* NaviagtionExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2237532F2A09B70065C9CD /* NaviagtionExampleView.swift */; };
 		DA28F59F2F1F786000079318 /* ViewIdentityLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F59E2F1F786000079318 /* ViewIdentityLessons.swift */; };
 		DA28F5A52F1F78BE00079318 /* ViewIdentityBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F5A42F1F78BE00079318 /* ViewIdentityBootcamp.swift */; };
 		DA28F5A82F1F798700079318 /* ViewIdentityBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F5A72F1F798700079318 /* ViewIdentityBootcampCoordinator.swift */; };
@@ -324,6 +325,7 @@
 		DA13CE202E89999B005B6D2D /* MVVM.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MVVM.txt; sourceTree = "<group>"; };
 		DA1D32272E6F050F007BDEA2 /* DownloadOperation.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DownloadOperation.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewBootcamp.swift; sourceTree = "<group>"; };
+		DA2237532F2A09B70065C9CD /* NaviagtionExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviagtionExampleView.swift; sourceTree = "<group>"; };
 		DA2745842E61E8D0000B436D /* SingletonPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SingletonPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA2745852E61FB2C000B436D /* Final.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Final.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA28F59E2F1F786000079318 /* ViewIdentityLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentityLessons.swift; sourceTree = "<group>"; };
@@ -683,6 +685,7 @@
 			children = (
 				DA10D42F2F2903940035A6A2 /* NavigationStackExample.swift */,
 				DA10D4402F2907980035A6A2 /* NavigationPathExample.swift */,
+				DA2237532F2A09B70065C9CD /* NaviagtionExampleView.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -2150,6 +2153,7 @@
 				DA5477012EB4EBA7005C8868 /* AuthService.swift in Sources */,
 				DA7BE0AE2E8061D1006821CE /* LoginModuleBuilder.swift in Sources */,
 				DABC5FC82F27B27200957964 /* NavigationBootcamp.swift in Sources */,
+				DA2237542F2A09B70065C9CD /* NaviagtionExampleView.swift in Sources */,
 				DAA709162E75D60C006F8E70 /* VisaPaymentService.swift in Sources */,
 				DA83D7392EFC08D20050EF92 /* TextBootcampCoordinator.swift in Sources */,
 				DA61C5282F0C076B00FD8181 /* StackViewBootcamp.swift in Sources */,
