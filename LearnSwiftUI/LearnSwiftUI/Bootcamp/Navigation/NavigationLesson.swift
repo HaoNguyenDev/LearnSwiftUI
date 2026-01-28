@@ -8,7 +8,17 @@
 import SwiftUI
 
 struct NavigationLesson {
-    static let all = [Lesson(title: "NavigationStack in SwiftUI", code: """
+    static let all = [Lesson(title: "Navigation & One-way Data Flow", code: """
+    App State
+       ↓
+    NavigationPath
+       ↓
+    NavigationStack
+       ↓
+    Screen
+📌 NavigationPath chính là source of truth
+""", result: nil),
+                      Lesson(title: "NavigationStack in SwiftUI", code: """
 NavigationStack is a view container introduced in iOS 16, replacing the older NavigationView. 
 It provides a more modern and powerful way to manage navigation within SwiftUI.
 
@@ -102,17 +112,47 @@ struct Page1Example: View {
     }
 }
 """, result: nil),
-                      Lesson(title: "", code: """
+                      Lesson(title: "Enum Route — STANDARD ARCHITECTURE", code: """
+🔑 Should do this
 
+    enum Route: Hashable { 
+        case home 
+        case details(Item) 
+        case settings
+    }
+    .navigationDestination(for: Route.self) { route in 
+        switch route { 
+            case .home: 
+                HomeView() 
+            case .detail(let item): 
+                DetailView(item: item) 
+            case .settings: 
+                SettingsView() 
+        }
+    }
+
+📌 Strongly-typed navigation
+📌 Not string-based
 """, result: nil),
-                      Lesson(title: "", code: """
+                      Lesson(title: "Deep Linking (EXTREMELY IMPORTANT)", code: """
+🧠 Idea
+Deep link = initializes NavigationPath
 
+    path.append(.home)
+    ath.append(.detail(item))
+
+➡️ App opens on the correct screen
+➡️ No need for manual pushing
 """, result: nil),
-                      Lesson(title: "", code: """
+                      Lesson(title: "COMMON PERFORMANCE TRAPS & BUGS ⚠️", code: """
+❌ Trap 1 — Nested NavigationStacks
+➡️ Confusing State, Incorrect Backspace
 
-""", result: nil),
-                      Lesson(title: "", code: """
+❌ Trap 2 — Self-Push Views
+➡️ Coupling + Difficult to Test
 
+❌ Trap 3 — NavigationLink + onTapGesture
+➡️ Unpredictable Behavior
 """, result: nil),
                       Lesson(title: "", code: """
 
