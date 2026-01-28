@@ -41,23 +41,28 @@ extension NavigationExampleView {
      private func viewForRoute(route: NavigationExampleRoute) -> some View {
          switch route {
          case .detail(let item):
-             NavigationExampleDetailView(navPath: $navPath, item: item)
+             NavigationExampleDetailView(item: item, onPop: {
+                 navPath.removeLast()
+             }, onPopToRoot: {
+                 navPath.removeLast(navPath.count)
+             })
          }
     }
 }
 
 struct NavigationExampleDetailView: View {
-    @Binding var navPath: NavigationPath
     let item: Item
+    let onPop: VoidResult?
+    let onPopToRoot: VoidResult?
     
     var body: some View {
         VStack(spacing: 24.0) {
             Text(item.title)
             Button("pop") {
-                navPath.removeLast()
+                onPop?()
             }
             Button("pop to root") {
-                navPath.removeLast(navPath.count)
+                onPopToRoot?()
             }
         }
     }
