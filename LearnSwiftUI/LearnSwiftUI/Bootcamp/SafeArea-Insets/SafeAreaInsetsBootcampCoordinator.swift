@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Router {
+extension Route {
     enum SafeAreaInsetsBootcampRouter: Routable {
         case exampleSubview
         
@@ -20,11 +20,11 @@ extension Router {
 }
 
 struct SafeAreaInsetsBootcampCoordinator: View, ScreenCoordinator {
-    typealias ScreenRouter = Router.SafeAreaInsetsBootcampRouter
-    var navRouter: any NavRouterProtocol
+    typealias ScreenRoute = Route.SafeAreaInsetsBootcampRouter
+    var navRoute: any NavRouterProtocol
     
     init(navRouter: any NavRouterProtocol) {
-        self.navRouter = navRouter
+        self.navRoute = navRouter
     }
     
     var body: some View {
@@ -33,16 +33,16 @@ struct SafeAreaInsetsBootcampCoordinator: View, ScreenCoordinator {
     
     private func getView() -> some View {
         SafeAreaInsetsBootcamp()
-            .navigationDestination(for: ScreenRouter.self, destination: { router in
-                    viewForRouter(router: router)
+            .navigationDestination(for: ScreenRoute.self, destination: { router in
+                    viewForRoute(route: router)
             })
             .navigationTitle("SafeArea, Insets & Keyboard Layout Traps")
     }
 }
 
 extension SafeAreaInsetsBootcampCoordinator {
-    func viewForRouter(router: Router.SafeAreaInsetsBootcampRouter) -> some View {
-        switch router {
+    func viewForRoute(route: Route.SafeAreaInsetsBootcampRouter) -> some View {
+        switch route {
         case .exampleSubview:
             EmptyView()
         }

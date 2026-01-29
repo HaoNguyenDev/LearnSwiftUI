@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Router {
+extension Route {
     enum RenderignPerformanceRouter: String, Routable {
         case exampleView
         var id: String { self.rawValue }
@@ -15,11 +15,11 @@ extension Router {
 }
 
 struct RenderignPerformanceBootcampCoordinator: View, ScreenCoordinator {
-    typealias ScreenRouter = Router.RenderignPerformanceRouter
-    var navRouter: any NavRouterProtocol
+    typealias ScreenRoute = Route.RenderignPerformanceRouter
+    var navRoute: any NavRouterProtocol
     
     init(navRouter: any NavRouterProtocol) {
-        self.navRouter = navRouter
+        self.navRoute = navRouter
     }
     
     var body: some View {
@@ -29,16 +29,16 @@ struct RenderignPerformanceBootcampCoordinator: View, ScreenCoordinator {
     @ViewBuilder
     private func getView() -> some View {
         RenderingPerformanceBootcamp()
-            .navigationDestination(for: ScreenRouter.self, destination: { router in
-                    viewForRouter(router: router)
+            .navigationDestination(for: ScreenRoute.self, destination: { router in
+                    viewForRoute(route: router)
             })
             .navigationTitle("Rendering & Performance")
     }
 }
 
 extension RenderignPerformanceBootcampCoordinator {
-    func viewForRouter(router: Router.RenderignPerformanceRouter) -> some View {
-        switch router {
+    func viewForRoute(route: Route.RenderignPerformanceRouter) -> some View {
+        switch route {
         case .exampleView: EmptyView()
         }
     }

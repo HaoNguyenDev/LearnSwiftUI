@@ -210,8 +210,8 @@
 		DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D32E3A65110051F62F /* SharedModel.swift */; };
 		DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */; };
 		DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */; };
-		DAA45E452EF931B700BC57E9 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E442EF931B700BC57E9 /* Router.swift */; };
-		DAA45E542EF933C400BC57E9 /* NavRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E532EF933C400BC57E9 /* NavRouter.swift */; };
+		DAA45E452EF931B700BC57E9 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E442EF931B700BC57E9 /* Route.swift */; };
+		DAA45E542EF933C400BC57E9 /* NavRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E532EF933C400BC57E9 /* NavRoute.swift */; };
 		DAA45E592EF9357D00BC57E9 /* ScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E582EF9357D00BC57E9 /* ScreenCoordinator.swift */; };
 		DAA45E6B2EF974A000BC57E9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E6A2EF974A000BC57E9 /* AppCoordinator.swift */; };
 		DAA45E712EF9759100BC57E9 /* BootcampListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E702EF9759100BC57E9 /* BootcampListCoordinator.swift */; };
@@ -529,8 +529,8 @@
 		DAA3B8D32E3A65110051F62F /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
 		DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentBootcamp.swift; sourceTree = "<group>"; };
 		DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableBootcamp.swift; sourceTree = "<group>"; };
-		DAA45E442EF931B700BC57E9 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		DAA45E532EF933C400BC57E9 /* NavRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavRouter.swift; sourceTree = "<group>"; };
+		DAA45E442EF931B700BC57E9 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		DAA45E532EF933C400BC57E9 /* NavRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavRoute.swift; sourceTree = "<group>"; };
 		DAA45E582EF9357D00BC57E9 /* ScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCoordinator.swift; sourceTree = "<group>"; };
 		DAA45E6A2EF974A000BC57E9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		DAA45E702EF9759100BC57E9 /* BootcampListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampListCoordinator.swift; sourceTree = "<group>"; };
@@ -1561,8 +1561,8 @@
 		DAA45E2D2EF92E8900BC57E9 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				DAA45E442EF931B700BC57E9 /* Router.swift */,
-				DAA45E532EF933C400BC57E9 /* NavRouter.swift */,
+				DAA45E442EF931B700BC57E9 /* Route.swift */,
+				DAA45E532EF933C400BC57E9 /* NavRoute.swift */,
 				DAA45E582EF9357D00BC57E9 /* ScreenCoordinator.swift */,
 			);
 			path = Router;
@@ -1940,7 +1940,7 @@
 				DA86566F2F0E1AA50092426E /* AlignmentLessons.swift in Sources */,
 				DA7BF5D72E98ED4000224BCF /* DefaultTheme.swift in Sources */,
 				DA415E8D2DE5CD41009F515E /* ColorsBootcamp.swift in Sources */,
-				DAA45E452EF931B700BC57E9 /* Router.swift in Sources */,
+				DAA45E452EF931B700BC57E9 /* Route.swift in Sources */,
 				DA7BE0AC2E8060A8006821CE /* LoginEntity.swift in Sources */,
 				DAA7091F2E75E2CC006F8E70 /* ResultAndError.swift in Sources */,
 				DA6075112EFE99AB002907E4 /* CodePreviewContainer.swift in Sources */,
@@ -2093,7 +2093,7 @@
 				DA723D1C2F2672DC009BEC1C /* EquatableViewBootcampCoordinator.swift in Sources */,
 				DA87489B2E6B007D00B189F3 /* WeatherListView.swift in Sources */,
 				DAA609D12F129F6900B625CE /* AnimationLayoutInteractionBootcampCoordinator.swift in Sources */,
-				DAA45E542EF933C400BC57E9 /* NavRouter.swift in Sources */,
+				DAA45E542EF933C400BC57E9 /* NavRoute.swift in Sources */,
 				DA54770B2EB63A37005C8868 /* TokenResponse.swift in Sources */,
 				DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */,
 				DAFC16B42F11400E00D242D3 /* DragViewDemo.swift in Sources */,

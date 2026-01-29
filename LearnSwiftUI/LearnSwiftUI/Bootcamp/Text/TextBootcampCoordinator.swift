@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-extension Router {
+extension Route {
     enum TextRouter: Routable {
         case subviewExample
         
@@ -22,11 +22,11 @@ extension Router {
 }
 
 struct TextBootcampCoordinator: View, ScreenCoordinator {
-    typealias ScreenRouter = Router.TextRouter
-    var navRouter: any NavRouterProtocol
+    typealias ScreenRoute = Route.TextRouter
+    var navRoute: any NavRouterProtocol
     
     init(navRouter: any NavRouterProtocol) {
-        self.navRouter = navRouter
+        self.navRoute = navRouter
     }
     
     var body: some View {
@@ -41,8 +41,8 @@ struct TextBootcampCoordinator: View, ScreenCoordinator {
 }
 
 extension TextBootcampCoordinator {
-    func viewForRouter(router: Router.TextRouter) -> some View {
-        switch router {
+    func viewForRoute(route: Route.TextRouter) -> some View {
+        switch route {
         case .subviewExample: EmptyView()
         }
     }

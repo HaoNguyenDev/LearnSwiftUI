@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Router {
+extension Route {
     enum AdvancedAnimationBootcampRoute: String, CaseIterable, Routable {
         case stickyHeader
         
@@ -21,11 +21,11 @@ extension Router {
 }
 
 struct AdvancedAnimationBootcampCoordinator: View, ScreenCoordinator {
-    typealias ScreenRouter = Router.AdvancedAnimationBootcampRoute
-    var navRouter: any NavRouterProtocol
+    typealias ScreenRoute = Route.AdvancedAnimationBootcampRoute
+    var navRoute: any NavRouterProtocol
     
     init(navRouter: any NavRouterProtocol) {
-        self.navRouter = navRouter
+        self.navRoute = navRouter
     }
     
     var body: some View {
@@ -36,17 +36,17 @@ struct AdvancedAnimationBootcampCoordinator: View, ScreenCoordinator {
     @ViewBuilder
     private func getView() -> some View {
         AdvancedAnimationBootcamp(gotoDemo: { demo in
-            navRouter.push(demo, animate: true)
+            navRoute.push(demo, animate: true)
         })
-        .navigationDestination(for: ScreenRouter.self) { route in
-            viewForRouter(router: route)
+        .navigationDestination(for: ScreenRoute.self) { route in
+            viewForRoute(route: route)
         }
     }
 }
 
 extension AdvancedAnimationBootcampCoordinator {
-    func viewForRouter(router: Router.AdvancedAnimationBootcampRoute) -> some View {
-        switch router {
+    func viewForRoute(route: Route.AdvancedAnimationBootcampRoute) -> some View {
+        switch route {
         case .stickyHeader:
             StickyListView()
         }

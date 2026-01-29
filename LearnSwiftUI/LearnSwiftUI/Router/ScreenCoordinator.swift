@@ -8,12 +8,12 @@
 import SwiftUI
 
 protocol ScreenCoordinator {
-    associatedtype ScreenRouter
+    associatedtype ScreenRoute
     associatedtype Screen: View
 
-    var navRouter: NavRouterProtocol { get set }
+    var navRoute: NavRouterProtocol { get set }
     @ViewBuilder
-    func viewForRouter(router: ScreenRouter) -> Screen
+    func viewForRoute(route: ScreenRoute) -> Screen
 }
 
 //extension ScreenCoordinator {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Router {
+extension Route {
     enum DataFlowAndArchitectureRouter: String, Routable {
         case exampleView
         var id: String { self.rawValue }
@@ -15,11 +15,11 @@ extension Router {
 }
 
 struct DataFlowAndArchitectureCoordinator: View, ScreenCoordinator {
-    typealias ScreenRouter = Router.DataFlowAndArchitectureRouter
-    var navRouter: any NavRouterProtocol
+    typealias ScreenRoute = Route.DataFlowAndArchitectureRouter
+    var navRoute: any NavRouterProtocol
     
     init(navRouter: any NavRouterProtocol) {
-        self.navRouter = navRouter
+        self.navRoute = navRouter
     }
     
     var body: some View {
@@ -29,16 +29,16 @@ struct DataFlowAndArchitectureCoordinator: View, ScreenCoordinator {
     @ViewBuilder
     private func getView() -> some View {
         DataFlowAndArchitectureBootcamp()
-            .navigationDestination(for: ScreenRouter.self, destination: { router in
-                    viewForRouter(router: router)
+            .navigationDestination(for: ScreenRoute.self, destination: { router in
+                    viewForRoute(route: router)
             })
             .navigationTitle("ONE-WAY DATA FLOW & ARCHITECTURE")
     }
 }
 
 extension DataFlowAndArchitectureCoordinator {
-    func viewForRouter(router: ScreenRouter) -> some View {
-        switch router {
+    func viewForRoute(route: ScreenRoute) -> some View {
+        switch route {
         case .exampleView: EmptyView()
         }
     }

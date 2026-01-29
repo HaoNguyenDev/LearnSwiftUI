@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Router {
+extension Route {
     enum AppCoordinator: Routable {
         case login
         case home
@@ -21,7 +21,7 @@ extension Router {
 }
 
 struct AppCoordinator: View {
-    @State private var rootRouter = NavRouter()
+    @State private var rootRouter = NavRoute()
     var body: some View {
         contentView
     }
@@ -34,11 +34,11 @@ struct AppCoordinator: View {
         .ignoresSafeArea()
         
         .sheet(item: $rootRouter.sheet) { sheet in
-            showSheet(routable: sheet.routerable)
+            showSheet(routable: sheet.presentableView)
         }
         
         .fullScreenCover(item: $rootRouter.fullScreenCover) { fullScreenCover in
-            showFullScreen(routable: fullScreenCover.routerable)
+            showFullScreen(routable: fullScreenCover.presentableView)
         }
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NavigationBootcamp: View {
-    let gotoDemo: SingleResult<Router.NavigationRouter>?
+    let gotoDemo: SingleResult<Route.NavigationRouter>?
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 24.0) {
@@ -18,7 +18,7 @@ struct NavigationBootcamp: View {
             }
             
             LazyVStack(spacing: 24.0) {
-                ForEach(Router.NavigationRouter.allCases) { demo in
+                ForEach(Route.NavigationRouter.allCases) { demo in
                     demoTitle(demo: demo)
                 }
             }
@@ -29,7 +29,7 @@ struct NavigationBootcamp: View {
 extension NavigationBootcamp {
     
     @ViewBuilder
-    private func demoTitle(demo: Router.NavigationRouter) -> some View {
+    private func demoTitle(demo: Route.NavigationRouter) -> some View {
         Text(demo.title)
             .foregroundStyle(.white)
             .frame(maxWidth: .infinity, minHeight: 50)

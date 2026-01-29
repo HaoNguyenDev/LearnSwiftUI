@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Router {
+extension Route {
     enum EquatableViewRouter: String, CaseIterable, Routable {
         case equatableViewDemo
         var id: String { self.rawValue }
@@ -20,11 +20,11 @@ extension Router {
 }
 
 struct EquatableViewBootcampCoordinator: View, ScreenCoordinator {
-    typealias ScreenRouter = Router.EquatableViewRouter
-    var navRouter: any NavRouterProtocol
+    typealias ScreenRoute = Route.EquatableViewRouter
+    var navRoute: any NavRouterProtocol
     
     init(navRouter: any NavRouterProtocol) {
-        self.navRouter = navRouter
+        self.navRoute = navRouter
     }
     
     var body: some View {
@@ -34,28 +34,28 @@ struct EquatableViewBootcampCoordinator: View, ScreenCoordinator {
     @ViewBuilder
     private func getView() -> some View {
         EquatableViewBootcamp(gotoDemo: { demo in
-            navRouter.push(demo, animate: true)
+            navRoute.push(demo, animate: true)
         })
-        .navigationDestination(for: ScreenRouter.self, destination: { router in
-            viewForRouter(router: router)
+        .navigationDestination(for: ScreenRoute.self, destination: { router in
+            viewForRoute(route: router)
         })
         .navigationTitle("EquatableView")
     }
 }
 
 extension EquatableViewBootcampCoordinator {
-    func viewForRouter(router: ScreenRouter) -> some View {
-        switch router {
+    func viewForRoute(route: ScreenRoute) -> some View {
+        switch route {
         case .equatableViewDemo: EquatableViewDemo()
         }
     }
 }
 
 struct TestEquatableBootcamp: View {
-    @State private var root: NavRouter
+    @State private var root: NavRoute
     
     init() {
-        self.root = NavRouter()
+        self.root = NavRoute()
     }
     
     var body: some View {
