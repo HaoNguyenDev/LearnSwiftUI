@@ -126,6 +126,9 @@
 		DA61C5B22F0D3A7100FD8181 /* StackViewLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61C5B12F0D3A7100FD8181 /* StackViewLessons.swift */; };
 		DA61C5DF2F0E180400FD8181 /* AlignmentBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61C5DE2F0E180400FD8181 /* AlignmentBootcampCoordinator.swift */; };
 		DA61C5E52F0E192A00FD8181 /* AlignmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA61C5E42F0E192A00FD8181 /* AlignmentBootcamp.swift */; };
+		DA64B7C22F2BA64800144CC6 /* AdvancedAnimationLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA64B7C12F2BA64800144CC6 /* AdvancedAnimationLesson.swift */; };
+		DA64B7C52F2BA6AD00144CC6 /* AdvancedAnimationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA64B7C42F2BA6AD00144CC6 /* AdvancedAnimationBootcamp.swift */; };
+		DA64B7C82F2BA73F00144CC6 /* AdvancedAnimationBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA64B7C72F2BA73F00144CC6 /* AdvancedAnimationBootcampCoordinator.swift */; };
 		DA65B7352E37D34600BF8A59 /* TodoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65B7342E37D34600BF8A59 /* TodoStore.swift */; };
 		DA723C882F24D446009BEC1C /* DemoEquatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723C872F24D446009BEC1C /* DemoEquatableView.swift */; };
 		DA723C8E2F25FC5D009BEC1C /* DemoRedrawList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723C8D2F25FC5D009BEC1C /* DemoRedrawList.swift */; };
@@ -433,6 +436,9 @@
 		DA61C5B12F0D3A7100FD8181 /* StackViewLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewLessons.swift; sourceTree = "<group>"; };
 		DA61C5DE2F0E180400FD8181 /* AlignmentBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentBootcampCoordinator.swift; sourceTree = "<group>"; };
 		DA61C5E42F0E192A00FD8181 /* AlignmentBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentBootcamp.swift; sourceTree = "<group>"; };
+		DA64B7C12F2BA64800144CC6 /* AdvancedAnimationLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedAnimationLesson.swift; sourceTree = "<group>"; };
+		DA64B7C42F2BA6AD00144CC6 /* AdvancedAnimationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedAnimationBootcamp.swift; sourceTree = "<group>"; };
+		DA64B7C72F2BA73F00144CC6 /* AdvancedAnimationBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedAnimationBootcampCoordinator.swift; sourceTree = "<group>"; };
 		DA65B7342E37D34600BF8A59 /* TodoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStore.swift; sourceTree = "<group>"; };
 		DA6E0BBB2E4A32D0009B3778 /* OperationQueueTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OperationQueueTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA6E0BBC2E4A4BA5009B3778 /* RaceConditionAvoid.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RaceConditionAvoid.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -894,6 +900,7 @@
 				DA03DFA52F23BBB30080D104 /* Rendering-Performance */,
 				DA723D122F267227009BEC1C /* EquatableView */,
 				DABC5FC12F27B22300957964 /* Navigation */,
+				DA64B7BF2F2BA61E00144CC6 /* Advanced-Animation */,
 				DA83D7352EFC08B40050EF92 /* Text */,
 				DA415E8A2DE5C845009F515E /* ShapesBootcamp.swift */,
 				DA415E8C2DE5CD41009F515E /* ColorsBootcamp.swift */,
@@ -1233,6 +1240,16 @@
 				DA86566E2F0E1AA50092426E /* AlignmentLessons.swift */,
 			);
 			path = "Alignment-AlignmentGuide";
+			sourceTree = "<group>";
+		};
+		DA64B7BF2F2BA61E00144CC6 /* Advanced-Animation */ = {
+			isa = PBXGroup;
+			children = (
+				DA64B7C12F2BA64800144CC6 /* AdvancedAnimationLesson.swift */,
+				DA64B7C42F2BA6AD00144CC6 /* AdvancedAnimationBootcamp.swift */,
+				DA64B7C72F2BA73F00144CC6 /* AdvancedAnimationBootcampCoordinator.swift */,
+			);
+			path = "Advanced-Animation";
 			sourceTree = "<group>";
 		};
 		DA65B7322E37D31200BF8A59 /* AppDemo */ = {
@@ -2051,6 +2068,7 @@
 				DA8656D32F0F75FA0092426E /* ScrollViewLazyContainersBootcamp.swift in Sources */,
 				DA5D717E2E3FA57800C78E40 /* NetworkProtocols.swift in Sources */,
 				DA58DD9C2E9E5FF90042D1AD /* String+Extensions.swift in Sources */,
+				DA64B7C52F2BA6AD00144CC6 /* AdvancedAnimationBootcamp.swift in Sources */,
 				DA7BE0A02E805F95006821CE /* LoginProtocol.swift in Sources */,
 				DAA6096F2F12348000B625CE /* SafeAreaInsetsBootcampCoordinator.swift in Sources */,
 				DA7BE0B42E806329006821CE /* HomeViewController.swift in Sources */,
@@ -2142,6 +2160,7 @@
 				DA7BE0A62E806040006821CE /* LoginInteractor.swift in Sources */,
 				DA5476E42EB39FCD005C8868 /* AlamofireSampleAPICallSyntax.swift in Sources */,
 				DAAE8CBD2E45028300FCBA4E /* CounterState.swift in Sources */,
+				DA64B7C22F2BA64800144CC6 /* AdvancedAnimationLesson.swift in Sources */,
 				DAE366252E9D1047005EF803 /* AppSettings.swift in Sources */,
 				DA10D4412F2907980035A6A2 /* NavigationPathExample.swift in Sources */,
 				DA8748872E6AFBC900B189F3 /* WeatherService.swift in Sources */,
@@ -2162,6 +2181,7 @@
 				DAA609CE2F129EDE00B625CE /* AnimationLayoutInteractionBootcamp.swift in Sources */,
 				DAA609CB2F129E7B00B625CE /* AnimationLayoutInteractionLessons.swift in Sources */,
 				DAE365BD2E9CC288005EF803 /* DarkTheme.swift in Sources */,
+				DA64B7C82F2BA73F00144CC6 /* AdvancedAnimationBootcampCoordinator.swift in Sources */,
 				DAE365BE2E9CC288005EF803 /* DarkThemeAssets.swift in Sources */,
 				DA9615052F1CAF2C00AEEB25 /* ImplicitvsExplicitAnimationExample.swift in Sources */,
 				DAE365BF2E9CC288005EF803 /* DarkThemeColors.swift in Sources */,

@@ -20,6 +20,7 @@ enum BootcampEnums: String, CaseIterable {
     case renderingPerformance = "Rendering & Performance"
     case equatableview = "EquatableView"
     case naviagtion = "Navigation"
+    case advancedAnimation = "Advanced Animation"
     case text = "Text"
     case shape = "Shape"
     case color = "Color"
