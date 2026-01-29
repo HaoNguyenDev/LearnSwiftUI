@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Router {
+extension Route {
     enum ScrollViewLazyContainersRouter: Routable {
         case exampleSubview
         
@@ -21,11 +21,11 @@ extension Router {
 }
 
 struct ScrollViewLazyContainersBootcampCoordinator: View, ScreenCoordinator {
-    typealias ScreenRouter = Router.ScrollViewLazyContainersRouter
-    var navRouter: any NavRouterProtocol
+    typealias ScreenRoute = Route.ScrollViewLazyContainersRouter
+    var navRoute: any NavRouterProtocol
     
     init(navRouter: any NavRouterProtocol) {
-        self.navRouter = navRouter
+        self.navRoute = navRouter
     }
     
     var body: some View {
@@ -35,16 +35,16 @@ struct ScrollViewLazyContainersBootcampCoordinator: View, ScreenCoordinator {
     @ViewBuilder
     private func getView() -> some View {
         ScrollViewLazyContainersBootcamp()
-            .navigationDestination(for: ScreenRouter.self, destination: { router in
-                    viewForRouter(router: router)
+            .navigationDestination(for: ScreenRoute.self, destination: { router in
+                    viewForRoute(route: router)
             })
             .navigationTitle("ScrollView & Lazy Containers")
     }
 }
 
 extension ScrollViewLazyContainersBootcampCoordinator {
-    func viewForRouter(router: Router.ScrollViewLazyContainersRouter) -> some View {
-        switch router {
+    func viewForRoute(route: Route.ScrollViewLazyContainersRouter) -> some View {
+        switch route {
         case .exampleSubview:
             EmptyView()
         }

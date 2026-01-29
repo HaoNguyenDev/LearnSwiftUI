@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Router {
+extension Route {
     enum AnimationLayoutInteractionRouter: String, Routable {
         case exampleSubview
         
@@ -16,11 +16,11 @@ extension Router {
 }
 
 struct AnimationLayoutInteractionBootcampCoordinator: View, ScreenCoordinator {
-    typealias ScreenRouter = Router.AnimationLayoutInteractionRouter
-    var navRouter: any NavRouterProtocol
+    typealias ScreenRoute = Route.AnimationLayoutInteractionRouter
+    var navRoute: any NavRouterProtocol
     
     init(navRouter: any NavRouterProtocol) {
-        self.navRouter = navRouter
+        self.navRoute = navRouter
     }
     
     var body: some View {
@@ -30,16 +30,16 @@ struct AnimationLayoutInteractionBootcampCoordinator: View, ScreenCoordinator {
     @ViewBuilder
     private func getView() -> some View {
         AnimationLayoutInteractionBootcamp()
-            .navigationDestination(for: ScreenRouter.self, destination: { router in
-                    viewForRouter(router: router)
+            .navigationDestination(for: ScreenRoute.self, destination: { router in
+                    viewForRoute(route: router)
             })
             .navigationTitle("ANIMATION & LAYOUT INTERACTION")
     }
 }
 
 extension AnimationLayoutInteractionBootcampCoordinator {
-    func viewForRouter(router: Router.AnimationLayoutInteractionRouter) -> some View {
-        switch router {
+    func viewForRoute(route: Route.AnimationLayoutInteractionRouter) -> some View {
+        switch route {
         case .exampleSubview:
             EmptyView()
         }

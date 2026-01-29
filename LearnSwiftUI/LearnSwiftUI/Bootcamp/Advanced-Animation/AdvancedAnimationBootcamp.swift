@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AdvancedAnimationBootcamp: View {
-    var gotoDemo: SingleResult<Router.AdvancedAnimationBootcampRoute>?
+    var gotoDemo: SingleResult<Route.AdvancedAnimationBootcampRoute>?
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 24.0) {
@@ -18,7 +18,7 @@ struct AdvancedAnimationBootcamp: View {
             }
             
             LazyVStack(spacing: 24.0) {
-                ForEach(Router.AdvancedAnimationBootcampRoute.allCases) { demo in
+                ForEach(Route.AdvancedAnimationBootcampRoute.allCases) { demo in
                     demoTitle(demo: demo)
                 }
             }
@@ -29,7 +29,7 @@ struct AdvancedAnimationBootcamp: View {
 extension AdvancedAnimationBootcamp {
 
     @ViewBuilder
-    private func demoTitle(demo: Router.AdvancedAnimationBootcampRoute) -> some View {
+    private func demoTitle(demo: Route.AdvancedAnimationBootcampRoute) -> some View {
         Text(demo.title)
             .foregroundStyle(.white)
             .frame(maxWidth: .infinity, minHeight: 50)

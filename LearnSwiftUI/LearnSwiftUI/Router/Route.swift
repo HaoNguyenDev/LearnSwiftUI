@@ -13,9 +13,9 @@ protocol Routable: Identifiable, Hashable {
 
 struct Presentable: Identifiable {
     let id = UUID()
-    let routerable: any Routable
+    let presentableView: any Routable
 }
 
-enum Router { }
+enum Route { }
 
 

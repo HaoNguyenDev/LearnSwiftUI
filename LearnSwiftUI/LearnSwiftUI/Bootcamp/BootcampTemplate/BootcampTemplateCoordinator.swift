@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Router {
+extension Route {
     enum BootcampTemplateRouter: String, CaseIterable, Routable {
         case childView1
         case childView2
@@ -21,11 +21,11 @@ extension Router {
     }
 }
 struct BootcampTemplateCoordinator: View, ScreenCoordinator {
-    typealias ScreenRouter = Router.BootcampTemplateRouter
-    var navRouter: any NavRouterProtocol
+    typealias ScreenRoute = Route.BootcampTemplateRouter
+    var navRoute: any NavRouterProtocol
     
     init(navRouter: any NavRouterProtocol) {
-        self.navRouter = navRouter
+        self.navRoute = navRouter
     }
     
     var body: some View {
@@ -37,29 +37,29 @@ struct BootcampTemplateCoordinator: View, ScreenCoordinator {
         BootcampTemplateView() { child in
             switch child {
             case .childView1:
-                navRouter.push(ScreenRouter.childView1, animate: true)
+                navRoute.push(ScreenRoute.childView1, animate: true)
             case .childView2:
-                navRouter.push(ScreenRouter.childView2, animate: true)
+                navRoute.push(ScreenRoute.childView2, animate: true)
             }
         }
-        .navigationDestination(for: ScreenRouter.self, destination: { router in
-            viewForRouter(router: router)
+        .navigationDestination(for: ScreenRoute.self, destination: { router in
+            viewForRoute(route: router)
         })
         .navigationTitle("Bootcamp Template")
     }
 }
 
 extension BootcampTemplateCoordinator {
-    func viewForRouter(router: ScreenRouter) -> some View {
-        switch router {
-        case .childView1: Text(router.title)
-        case .childView2: Text(router.title)
+    func viewForRoute(route: ScreenRoute) -> some View {
+        switch route {
+        case .childView1: Text(route.title)
+        case .childView2: Text(route.title)
         }
     }
 }
 
 struct RootDemo: View {
-    @State private var nav = NavRouter()
+    @State private var nav = NavRoute()
     
     var body: some View {
         NavigationStack(path: $nav.path) {

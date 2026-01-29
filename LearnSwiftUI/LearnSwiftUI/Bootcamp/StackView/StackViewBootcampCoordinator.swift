@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Router {
+extension Route {
     enum StackViewRouter: Routable {
         case subviewExample
         
@@ -21,11 +21,11 @@ extension Router {
 }
 
 struct StackViewBootcampCoordinator: View, ScreenCoordinator {
-    typealias ScreenRouter = Router.StackViewRouter
-    var navRouter: any NavRouterProtocol
+    typealias ScreenRoute = Route.StackViewRouter
+    var navRoute: any NavRouterProtocol
     
     init(navRouter: any NavRouterProtocol) {
-        self.navRouter = navRouter
+        self.navRoute = navRouter
     }
     
     var body: some View {
@@ -35,8 +35,8 @@ struct StackViewBootcampCoordinator: View, ScreenCoordinator {
     @ViewBuilder
     private func getView() -> some View {
         StackViewBootcamp()
-            .navigationDestination(for: ScreenRouter.self, destination: { router in
-                    viewForRouter(router: router)
+            .navigationDestination(for: ScreenRoute.self, destination: { router in
+                    viewForRoute(route: router)
             })
             .navigationTitle("VStack / HStack / ZStack")
     }
@@ -44,8 +44,8 @@ struct StackViewBootcampCoordinator: View, ScreenCoordinator {
 }
 
 extension StackViewBootcampCoordinator {
-    func viewForRouter(router: Router.StackViewRouter) -> some View {
-        switch router {
+    func viewForRoute(route: Route.StackViewRouter) -> some View {
+        switch route {
         case .subviewExample:
             EmptyView()
         }

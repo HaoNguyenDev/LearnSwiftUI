@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Router {
+extension Route {
     enum AlignmentRouter: Routable {
         case subviewExample
         
@@ -21,11 +21,11 @@ extension Router {
 }
 
 struct AlignmentBootcampCoordinator: View, ScreenCoordinator {
-    typealias ScreenRouter = Router.AlignmentRouter
-    var navRouter: any NavRouterProtocol
+    typealias ScreenRoute = Route.AlignmentRouter
+    var navRoute: any NavRouterProtocol
     
     init(navRouter: any NavRouterProtocol) {
-        self.navRouter = navRouter
+        self.navRoute = navRouter
     }
     
     var body: some View {
@@ -35,16 +35,16 @@ struct AlignmentBootcampCoordinator: View, ScreenCoordinator {
     @ViewBuilder
     private func getView() -> some View {
         AlignmentBootcamp()
-            .navigationDestination(for: ScreenRouter.self, destination: { router in
-                    viewForRouter(router: router)
+            .navigationDestination(for: ScreenRoute.self, destination: { router in
+                    viewForRoute(route: router)
             })
             .navigationTitle("Alignment-AlignmentGuide")
     }
 }
 
 extension AlignmentBootcampCoordinator {
-    func viewForRouter(router: Router.AlignmentRouter) -> some View {
-        switch router {
+    func viewForRoute(route: Route.AlignmentRouter) -> some View {
+        switch route {
         case .subviewExample:
             EmptyView()
         }

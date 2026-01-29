@@ -23,7 +23,7 @@ protocol NavRouterProtocol: AnyObject {
     func dismiss()
 }
 
-@Observable final class NavRouter: NavRouterProtocol {
+@Observable final class NavRoute: NavRouterProtocol {
     var path: NavigationPath = NavigationPath()
     var sheet: Presentable?
     var fullScreenCover: Presentable?
@@ -31,7 +31,7 @@ protocol NavRouterProtocol: AnyObject {
 }
 
 // MARK: - Methods
-extension NavRouter {
+extension NavRoute {
     func setRoot(to route: AnyHashable) {
         path = .init()
         path.append(route)

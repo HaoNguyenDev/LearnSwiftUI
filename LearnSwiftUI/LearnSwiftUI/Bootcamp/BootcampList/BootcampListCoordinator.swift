@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Router {
+extension Route {
     enum BootcampListRouter: String, Routable {
         case swiftuiLayoutEngine
         case stackViewBootcamp
@@ -28,17 +28,17 @@ extension Router {
 }
 
 struct BootcampListCoordinator: View, ScreenCoordinator {
-    typealias ScreenRouter = Router.BootcampListRouter
-    var navRouter: any NavRouterProtocol
+    typealias ScreenRoute = Route.BootcampListRouter
+    var navRoute: any NavRouterProtocol
     
     init(navRouter: any NavRouterProtocol) {
-        self.navRouter = navRouter
+        self.navRoute = navRouter
     }
     
     var body: some View {
         getView()
-            .navigationDestination(for: ScreenRouter.self) { router in
-                viewForRouter(router: router)
+            .navigationDestination(for: ScreenRoute.self) { router in
+                viewForRoute(route: router)
             }
             .toolbar(.hidden, for: .bottomBar)
             .toolbar(.hidden, for: .tabBar)
@@ -51,33 +51,33 @@ struct BootcampListCoordinator: View, ScreenCoordinator {
             debugPrint("\(bootcamp.rawValue)")
             switch bootcamp {
             case .swiftuiLayoutSystem:
-                navRouter.push(ScreenRouter.swiftuiLayoutEngine, animate: true)
+                navRoute.push(ScreenRoute.swiftuiLayoutEngine, animate: true)
             case .stackView:
-                navRouter.push(ScreenRouter.stackViewBootcamp, animate: true)
+                navRoute.push(ScreenRoute.stackViewBootcamp, animate: true)
             case .alignmentAlignmentGuide:
-                navRouter.push(ScreenRouter.alignmentAlignmentGuide, animate: true)
+                navRoute.push(ScreenRoute.alignmentAlignmentGuide, animate: true)
             case .geometryReaderCoordinateSpace:
-                navRouter.push(ScreenRouter.geometryReaderCoordinateSpace, animate: true)
+                navRoute.push(ScreenRoute.geometryReaderCoordinateSpace, animate: true)
             case .scrollViewLazyContainers:
-                navRouter.push(ScreenRouter.scrollViewLazyContainers, animate: true)
+                navRoute.push(ScreenRoute.scrollViewLazyContainers, animate: true)
             case .safeAreaInsets:
-                navRouter.push(ScreenRouter.safeAreaInsets, animate: true)
+                navRoute.push(ScreenRoute.safeAreaInsets, animate: true)
             case .animationLayoutInteraction:
-                navRouter.push(ScreenRouter.animationLayoutInteraction, animate: true)
+                navRoute.push(ScreenRoute.animationLayoutInteraction, animate: true)
             case .viewIdentity:
-                navRouter.push(ScreenRouter.viewIndentity, animate: true)
+                navRoute.push(ScreenRoute.viewIndentity, animate: true)
             case .dataFlowAndArchitecture:
-                navRouter.push(ScreenRouter.dataFlowAndArchitecture, animate: true)
+                navRoute.push(ScreenRoute.dataFlowAndArchitecture, animate: true)
             case .renderingPerformance:
-                navRouter.push(ScreenRouter.renderingPerformance, animate: true)
+                navRoute.push(ScreenRoute.renderingPerformance, animate: true)
             case .equatableview:
-                navRouter.push(ScreenRouter.equatableview, animate: true)
+                navRoute.push(ScreenRoute.equatableview, animate: true)
             case .naviagtion:
-                navRouter.push(ScreenRouter.navigation, animate: true)
+                navRoute.push(ScreenRoute.navigation, animate: true)
             case .advancedAnimation:
-                navRouter.push(ScreenRouter.advancedAnimation, animate: true)
+                navRoute.push(ScreenRoute.advancedAnimation, animate: true)
             case .text:
-                navRouter.push(ScreenRouter.textBootcamp, animate: true)
+                navRoute.push(ScreenRoute.textBootcamp, animate: true)
             case .shape: break
                 // TODO:
             case .color: break
@@ -90,36 +90,36 @@ struct BootcampListCoordinator: View, ScreenCoordinator {
 
 extension BootcampListCoordinator {
     @ViewBuilder
-    func viewForRouter(router: ScreenRouter) -> some View {
-        switch router {
+    func viewForRoute(route: ScreenRoute) -> some View {
+        switch route {
         case .swiftuiLayoutEngine:
-            SwiftUILayoutEngineCoordinator(navRouter: navRouter)
+            SwiftUILayoutEngineCoordinator(navRouter: navRoute)
         case .stackViewBootcamp:
-            StackViewBootcampCoordinator(navRouter: navRouter)
+            StackViewBootcampCoordinator(navRouter: navRoute)
         case .alignmentAlignmentGuide:
-            AlignmentBootcampCoordinator(navRouter: navRouter)
+            AlignmentBootcampCoordinator(navRouter: navRoute)
         case .geometryReaderCoordinateSpace:
-            GeometryReaderCoordinateSpaceBootcampCoordinator(navRouter: navRouter)
+            GeometryReaderCoordinateSpaceBootcampCoordinator(navRouter: navRoute)
         case .scrollViewLazyContainers:
-            ScrollViewLazyContainersBootcampCoordinator(navRouter: navRouter)
+            ScrollViewLazyContainersBootcampCoordinator(navRouter: navRoute)
         case .safeAreaInsets:
-            SafeAreaInsetsBootcampCoordinator(navRouter: navRouter)
+            SafeAreaInsetsBootcampCoordinator(navRouter: navRoute)
         case .animationLayoutInteraction:
-            AnimationLayoutInteractionBootcampCoordinator(navRouter: navRouter)
+            AnimationLayoutInteractionBootcampCoordinator(navRouter: navRoute)
         case .viewIndentity:
-            ViewIdentityBootcampCoordinator(navRouter: navRouter)
+            ViewIdentityBootcampCoordinator(navRouter: navRoute)
         case .dataFlowAndArchitecture:
-            DataFlowAndArchitectureCoordinator(navRouter: navRouter)
+            DataFlowAndArchitectureCoordinator(navRouter: navRoute)
         case .renderingPerformance:
-            RenderignPerformanceBootcampCoordinator(navRouter: navRouter)
+            RenderignPerformanceBootcampCoordinator(navRouter: navRoute)
         case .equatableview:
-            EquatableViewBootcampCoordinator(navRouter: navRouter)
+            EquatableViewBootcampCoordinator(navRouter: navRoute)
         case .navigation:
-            NavigationBootcampCoordinator(navRouter: navRouter)
+            NavigationBootcampCoordinator(navRouter: navRoute)
         case .advancedAnimation:
-            AdvancedAnimationBootcampCoordinator(navRouter: navRouter)
+            AdvancedAnimationBootcampCoordinator(navRouter: navRoute)
         case .textBootcamp:
-            TextBootcampCoordinator(navRouter: navRouter)
+            TextBootcampCoordinator(navRouter: navRoute)
         }
     }
 }

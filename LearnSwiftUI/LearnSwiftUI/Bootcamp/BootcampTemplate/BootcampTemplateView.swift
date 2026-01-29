@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BootcampTemplateView: View {
-    var gotoChildView: SingleResult<Router.BootcampTemplateRouter>?
+    var gotoChildView: SingleResult<Route.BootcampTemplateRouter>?
     
     var body: some View {
         ScrollView {
@@ -19,7 +19,7 @@ struct BootcampTemplateView: View {
             }
             
             LazyVStack(spacing: 24.0) {
-                ForEach(Router.BootcampTemplateRouter.allCases) { router in
+                ForEach(Route.BootcampTemplateRouter.allCases) { router in
                     childTitle(child: router)
                 }
             }
@@ -27,7 +27,7 @@ struct BootcampTemplateView: View {
     }
     
     @ViewBuilder
-    private func childTitle(child: Router.BootcampTemplateRouter) -> some View {
+    private func childTitle(child: Route.BootcampTemplateRouter) -> some View {
         Text(child.title)
             .foregroundStyle(.white)
             .frame(maxWidth: .infinity, minHeight: 50)

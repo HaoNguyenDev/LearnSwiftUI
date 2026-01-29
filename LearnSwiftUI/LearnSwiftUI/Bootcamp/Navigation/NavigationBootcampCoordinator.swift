@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Router {
+extension Route {
     enum NavigationRouter: String, CaseIterable, Routable {
         case demo1
         
@@ -20,11 +20,11 @@ extension Router {
     }
 }
 struct NavigationBootcampCoordinator: View, ScreenCoordinator {
-    typealias ScreenRouter = Router.NavigationRouter
-    var navRouter: any NavRouterProtocol
+    typealias ScreenRoute = Route.NavigationRouter
+    var navRoute: any NavRouterProtocol
     
     init(navRouter: any NavRouterProtocol) {
-        self.navRouter = navRouter
+        self.navRoute = navRouter
     }
     
     var body: some View {
@@ -36,11 +36,11 @@ struct NavigationBootcampCoordinator: View, ScreenCoordinator {
         NavigationBootcamp(gotoDemo: { demo in
             switch demo {
             case .demo1:
-                navRouter.push(ScreenRouter.demo1, animate: true)
+                navRoute.push(ScreenRoute.demo1, animate: true)
             }
         })
-        .navigationDestination(for: ScreenRouter.self) { router in
-            viewForRouter(router: router)
+        .navigationDestination(for: ScreenRoute.self) { router in
+            viewForRoute(route: router)
         }
         .navigationTitle("Navigation Bootcamp")
     }
@@ -48,18 +48,18 @@ struct NavigationBootcampCoordinator: View, ScreenCoordinator {
 }
 
 extension NavigationBootcampCoordinator {
-    func viewForRouter(router: ScreenRouter) -> some View {
-        switch router {
+    func viewForRoute(route: ScreenRoute) -> some View {
+        switch route {
         case .demo1: Text("Demo 1")
         }
     }
 }
 
 struct NaviationBootcampRootView: View {
-    @State private var nav: NavRouter
+    @State private var nav: NavRoute
     
     init() {
-        self.nav = NavRouter()
+        self.nav = NavRoute()
     }
     var body: some View {
         NavigationStack(path: $nav.path) {

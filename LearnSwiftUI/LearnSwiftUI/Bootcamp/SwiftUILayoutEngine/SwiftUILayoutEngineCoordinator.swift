@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Router {
+extension Route {
     enum SwiftUILayoutEngineRouter: Routable {
         case subviewExample
         
@@ -21,11 +21,11 @@ extension Router {
 }
 
 struct SwiftUILayoutEngineCoordinator: View, ScreenCoordinator {
-    typealias ScreenRouter = Router.SwiftUILayoutEngineRouter
-    var navRouter: any NavRouterProtocol
+    typealias ScreenRoute = Route.SwiftUILayoutEngineRouter
+    var navRoute: any NavRouterProtocol
     
     init(navRouter: any NavRouterProtocol) {
-        self.navRouter = navRouter
+        self.navRoute = navRouter
     }
     
     var body: some View {
@@ -35,16 +35,16 @@ struct SwiftUILayoutEngineCoordinator: View, ScreenCoordinator {
     @ViewBuilder
     private func getView() -> some View {
         SwiftUILayoutEngineBootcamp()
-            .navigationDestination(for: ScreenRouter.self, destination: { router in
-                    viewForRouter(router: router)
+            .navigationDestination(for: ScreenRoute.self, destination: { router in
+                    viewForRoute(route: router)
             })
             .navigationTitle("SwiftUI Layout Engine")
     }
 }
 
 extension SwiftUILayoutEngineCoordinator {
-    func viewForRouter(router: Router.SwiftUILayoutEngineRouter) -> some View {
-        switch router {
+    func viewForRoute(route: Route.SwiftUILayoutEngineRouter) -> some View {
+        switch route {
         case .subviewExample:
             EmptyView()
         }

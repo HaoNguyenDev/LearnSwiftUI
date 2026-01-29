@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Router {
+extension Route {
     enum GeometryReaderCoordinateSpaceRouter: Routable {
         case exampleSubview
         
@@ -21,11 +21,11 @@ extension Router {
 }
 
 struct GeometryReaderCoordinateSpaceBootcampCoordinator: View, ScreenCoordinator {
-    typealias ScreenRouter = Router.GeometryReaderCoordinateSpaceRouter
-    var navRouter: any NavRouterProtocol
+    typealias ScreenRoute = Route.GeometryReaderCoordinateSpaceRouter
+    var navRoute: any NavRouterProtocol
     
     init(navRouter: any NavRouterProtocol) {
-        self.navRouter = navRouter
+        self.navRoute = navRouter
     }
     
     var body: some View {
@@ -35,16 +35,16 @@ struct GeometryReaderCoordinateSpaceBootcampCoordinator: View, ScreenCoordinator
     @ViewBuilder
     private func getView() -> some View {
         GeometryReaderBootcamp()
-            .navigationDestination(for: ScreenRouter.self, destination: { router in
-                    viewForRouter(router: router)
+            .navigationDestination(for: ScreenRoute.self, destination: { router in
+                    viewForRoute(route: router)
             })
             .navigationTitle("GeometryReader & coordinateSpace")
     }
 }
 
 extension GeometryReaderCoordinateSpaceBootcampCoordinator {
-    func viewForRouter(router: Router.GeometryReaderCoordinateSpaceRouter) -> some View {
-        switch router {
+    func viewForRoute(route: Route.GeometryReaderCoordinateSpaceRouter) -> some View {
+        switch route {
         case .exampleSubview:
             EmptyView()
         }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension Router {
+extension Route {
     enum ViewIdentityRouter: String, Routable {
         case exampleView
         var id: String { self.rawValue }
@@ -15,11 +15,11 @@ extension Router {
 }
 
 struct ViewIdentityBootcampCoordinator: View, ScreenCoordinator {
-    typealias ScreenRouter = Router.ViewIdentityRouter
-    var navRouter: any NavRouterProtocol
+    typealias ScreenRoute = Route.ViewIdentityRouter
+    var navRoute: any NavRouterProtocol
     
     init(navRouter: any NavRouterProtocol) {
-        self.navRouter = navRouter
+        self.navRoute = navRouter
     }
     
     var body: some View {
@@ -29,16 +29,16 @@ struct ViewIdentityBootcampCoordinator: View, ScreenCoordinator {
     @ViewBuilder
     private func getView() -> some View {
         ViewIdentityBootcamp()
-            .navigationDestination(for: ScreenRouter.self, destination: { router in
-                    viewForRouter(router: router)
+            .navigationDestination(for: ScreenRoute.self, destination: { router in
+                    viewForRoute(route: router)
             })
             .navigationTitle("VIEW IDENTITY & DIFFING SYSTEM")
     }
 }
 
 extension ViewIdentityBootcampCoordinator {
-    func viewForRouter(router: Router.ViewIdentityRouter) -> some View {
-        switch router {
+    func viewForRoute(route: Route.ViewIdentityRouter) -> some View {
+        switch route {
         case .exampleView: EmptyView()
         }
     }
