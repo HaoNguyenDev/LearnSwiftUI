@@ -154,8 +154,9 @@ Deep link = initializes NavigationPath
 ❌ Trap 3 — NavigationLink + onTapGesture
 ➡️ Unpredictable Behavior
 """, result: nil),
-                      Lesson(title: "", code: """
-
+                      Lesson(title: "Full demo NavigationManager", code: """
+For a complete demo of the NavigationManager class,
+ please refer to the NavigationManagerBootcamp struct in our project.
 """, result: nil)
     ]
 }

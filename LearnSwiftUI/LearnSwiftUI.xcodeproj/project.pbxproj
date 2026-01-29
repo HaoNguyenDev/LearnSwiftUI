@@ -686,6 +686,7 @@
 				DA10D42F2F2903940035A6A2 /* NavigationStackExample.swift */,
 				DA10D4402F2907980035A6A2 /* NavigationPathExample.swift */,
 				DA2237532F2A09B70065C9CD /* NaviagtionExampleView.swift */,
+				DA5164312E3CB57600642709 /* NavigationManager.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -921,7 +922,6 @@
 				DA5D71462E3F589A00C78E40 /* CustomEnvironmentValues.swift */,
 				DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */,
 				DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */,
-				DA5164312E3CB57600642709 /* NavigationManager.swift */,
 				DA5D71442E3F43B100C78E40 /* ObservablePattern.swift */,
 				DA5D719F2E40CC8300C78E40 /* AsyncAwaitBootcamp.swift */,
 				DAAE8CB72E43B46800FCBA4E /* GestureBootcamp.swift */,
