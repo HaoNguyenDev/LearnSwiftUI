@@ -11,7 +11,7 @@ protocol Routable: Identifiable, Hashable {
     var id: String { get }
 }
 
-struct RouterView: Identifiable {
+struct Presentable: Identifiable {
     let id = UUID()
     let routerable: any Routable
 }

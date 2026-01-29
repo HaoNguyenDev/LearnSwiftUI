@@ -18,15 +18,15 @@ protocol NavRouterProtocol: AnyObject {
     func popToRoot()
     func replaceLast(with route: AnyHashable)
     func contains(_ subpath: AnyHashable) -> Bool
-    func showSheet(_ route: RouterView)
-    func showFullScreenCover(_ route: RouterView)
+    func showSheet(_ route: Presentable)
+    func showFullScreenCover(_ route: Presentable)
     func dismiss()
 }
 
 @Observable final class NavRouter: NavRouterProtocol {
     var path: NavigationPath = NavigationPath()
-    var sheet: RouterView?
-    var fullScreenCover: RouterView?
+    var sheet: Presentable?
+    var fullScreenCover: Presentable?
     private var children: [AnyHashable] = []
 }
 
@@ -116,11 +116,11 @@ extension NavRouter {
         children.last != subpath && children.contains(subpath)
     }
     
-    func showSheet(_ route: RouterView) {
+    func showSheet(_ route: Presentable) {
         sheet = route
     }
     
-    func showFullScreenCover(_ route: RouterView) {
+    func showFullScreenCover(_ route: Presentable) {
         fullScreenCover = route
     }
     
