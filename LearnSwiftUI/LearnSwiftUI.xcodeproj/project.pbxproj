@@ -261,6 +261,7 @@
 		DAC97E282EA3C22700F8A22F /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC97E272EA3C22700F8A22F /* Double+Extensions.swift */; };
 		DADA946C2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA946B2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift */; };
 		DADA94732F2CC6D5008ED262 /* CustomTabBarExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA94722F2CC6D5008ED262 /* CustomTabBarExample.swift */; };
+		DADA947C2F2CFF5C008ED262 /* CardExpansionExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA947B2F2CFF5C008ED262 /* CardExpansionExample.swift */; };
 		DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */; };
 		DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */; };
 		DAE2EACA2DF5DE280083E733 /* SheetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC92DF5DE280083E733 /* SheetBootcamp.swift */; };
@@ -585,6 +586,7 @@
 		DAC97E272EA3C22700F8A22F /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		DADA946B2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMatchedGeometryExample.swift; sourceTree = "<group>"; };
 		DADA94722F2CC6D5008ED262 /* CustomTabBarExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarExample.swift; sourceTree = "<group>"; };
+		DADA947B2F2CFF5C008ED262 /* CardExpansionExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardExpansionExample.swift; sourceTree = "<group>"; };
 		DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBootcamp.swift; sourceTree = "<group>"; };
 		DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBootcamp.swift; sourceTree = "<group>"; };
 		DAE2EAC92DF5DE280083E733 /* SheetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetBootcamp.swift; sourceTree = "<group>"; };
@@ -1785,6 +1787,7 @@
 		DADA94612F2CC1BF008ED262 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				DADA947B2F2CFF5C008ED262 /* CardExpansionExample.swift */,
 				DADA946B2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift */,
 				DADA94722F2CC6D5008ED262 /* CustomTabBarExample.swift */,
 			);
@@ -2145,6 +2148,7 @@
 				DA9615402F1CF80E00AEEB25 /* GeometryChangeVsTransformExample.swift in Sources */,
 				DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */,
 				DA3979102E9BBC1200838584 /* TextViewModifiers.swift in Sources */,
+				DADA947C2F2CFF5C008ED262 /* CardExpansionExample.swift in Sources */,
 				DA5C98BC2E3924AA007AC9E9 /* TodoDetailView.swift in Sources */,
 				DAC35B022E9F8E8F0019021D /* UserListContentView.swift in Sources */,
 				DAED67802E21089A00309382 /* ObservedObjectBootcamp.swift in Sources */,
