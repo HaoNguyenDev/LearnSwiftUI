@@ -57,11 +57,49 @@ It tells SwiftUI:
     SwiftUI does not animate
     SwiftUI interpolate geometry between 2 frames
 ➡️ Identity is wrong = SwiftUI doesn't know where to interpolate from → FAIL
-""", result: nil),Lesson(title: "", code: """
+""", result: nil),Lesson(title: "PhaseAnimator (iOS 17+) — PHASE ANIMATION", code: """
+🧠 When to use?
+    Animation has many logical phases
+    Not just on/off
 
-""", result: nil),Lesson(title: "", code: """
+🔬 Example:
 
-""", result: nil),Lesson(title: "", code: """
+PhaseAnimator([.idle, .loading, .done]) { phase in 
+    switch phase { 
+        case .idle: 
+            Text("Idle") 
+        case .loading: 
+            ProgressView() 
+        case .done: 
+            Text("Done") 
+    }
+} animation: { phase in 
+    switch phase { 
+        case .idle: .default 
+        case .loading: .easeInOut 
+        case .done: .spring() 
+    }
+}
+📌 Phase = state machine for animation
+""", result: nil),Lesson(title: "TimelineView — REAL-TIME ANIMATION", code: """
+🧠 When to use it?
+    Clock
+    Audio waveform
+    Live data
+    Animation independent of user action
+""", result: {
+        AnyView(
+            ResultBlockView(content: {
+                TimelineView(.animation) { context in
+                    let t = context.date.timeIntervalSince1970
+                    RoundedRectangle(cornerRadius: 10)
+                        .frame(width: 100, height: 100)
+                        .rotationEffect(.degrees(t * 60))
+                }
+                .padding()
+            })
+        )
+    }),Lesson(title: "", code: """
 
 """, result: nil),Lesson(title: "", code: """
 
