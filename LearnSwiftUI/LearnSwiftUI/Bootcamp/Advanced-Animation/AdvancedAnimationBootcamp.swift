@@ -19,8 +19,16 @@ struct AdvancedAnimationBootcamp: View {
             
             LazyVStack(spacing: 24.0) {
                 ForEach(Route.AdvancedAnimationBootcampRoute.allCases) { demo in
-                    demoTitle(demo: demo)
+                    Section {
+                        demoTitle(demo.title)
+                            .onTapGesture {
+                                gotoDemo?(demo)
+                            }
+                    } header: {
+                        Text(demo.sectionTitle)
+                    }
                 }
+                
             }
         }
     }
@@ -29,15 +37,12 @@ struct AdvancedAnimationBootcamp: View {
 extension AdvancedAnimationBootcamp {
 
     @ViewBuilder
-    private func demoTitle(demo: Route.AdvancedAnimationBootcampRoute) -> some View {
-        Text(demo.title)
+    private func demoTitle(_ title: String) -> some View {
+        Text(title)
             .foregroundStyle(.white)
             .frame(maxWidth: .infinity, minHeight: 50)
             .background(.green)
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .padding(.horizontal)
-            .onTapGesture {
-                gotoDemo?(demo)
-            }
     }
 }

@@ -259,6 +259,8 @@
 		DAC35B3F2E9FED3F0019021D /* TextFieldModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC35B3E2E9FED3F0019021D /* TextFieldModifiers.swift */; };
 		DAC97DE72EA3960500F8A22F /* ActorBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC97DE62EA3960500F8A22F /* ActorBootcamp.swift */; };
 		DAC97E282EA3C22700F8A22F /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC97E272EA3C22700F8A22F /* Double+Extensions.swift */; };
+		DADA946C2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA946B2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift */; };
+		DADA94732F2CC6D5008ED262 /* CustomTabBarExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA94722F2CC6D5008ED262 /* CustomTabBarExample.swift */; };
 		DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */; };
 		DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */; };
 		DAE2EACA2DF5DE280083E733 /* SheetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC92DF5DE280083E733 /* SheetBootcamp.swift */; };
@@ -581,6 +583,8 @@
 		DAC35B3E2E9FED3F0019021D /* TextFieldModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifiers.swift; sourceTree = "<group>"; };
 		DAC97DE62EA3960500F8A22F /* ActorBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorBootcamp.swift; sourceTree = "<group>"; };
 		DAC97E272EA3C22700F8A22F /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		DADA946B2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMatchedGeometryExample.swift; sourceTree = "<group>"; };
+		DADA94722F2CC6D5008ED262 /* CustomTabBarExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarExample.swift; sourceTree = "<group>"; };
 		DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBootcamp.swift; sourceTree = "<group>"; };
 		DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBootcamp.swift; sourceTree = "<group>"; };
 		DAE2EAC92DF5DE280083E733 /* SheetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetBootcamp.swift; sourceTree = "<group>"; };
@@ -1245,6 +1249,7 @@
 		DA64B7BF2F2BA61E00144CC6 /* Advanced-Animation */ = {
 			isa = PBXGroup;
 			children = (
+				DADA94612F2CC1BF008ED262 /* Demo */,
 				DA64B7C12F2BA64800144CC6 /* AdvancedAnimationLesson.swift */,
 				DA64B7C42F2BA6AD00144CC6 /* AdvancedAnimationBootcamp.swift */,
 				DA64B7C72F2BA73F00144CC6 /* AdvancedAnimationBootcampCoordinator.swift */,
@@ -1777,6 +1782,15 @@
 			path = ViewWrapper;
 			sourceTree = "<group>";
 		};
+		DADA94612F2CC1BF008ED262 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				DADA946B2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift */,
+				DADA94722F2CC6D5008ED262 /* CustomTabBarExample.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
 		DAE365BB2E9CC288005EF803 /* DarkTheme */ = {
 			isa = PBXGroup;
 			children = (
@@ -2000,6 +2014,7 @@
 				DA5D718B2E3FB25700C78E40 /* UserListView.swift in Sources */,
 				DAAE8CBA2E44BDFF00FCBA4E /* FormView.swift in Sources */,
 				DA5477492EB65729005C8868 /* Profile.swift in Sources */,
+				DADA946C2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift in Sources */,
 				DA723D142F267247009BEC1C /* EquatableViewLesson.swift in Sources */,
 				DA61C5DF2F0E180400FD8181 /* AlignmentBootcampCoordinator.swift in Sources */,
 				DA723C882F24D446009BEC1C /* DemoEquatableView.swift in Sources */,
@@ -2135,6 +2150,7 @@
 				DAED67802E21089A00309382 /* ObservedObjectBootcamp.swift in Sources */,
 				DAAA67222E616D8C004075B7 /* TextFieldBootcamp.swift in Sources */,
 				DA54773A2EB654A3005C8868 /* Category.swift in Sources */,
+				DADA94732F2CC6D5008ED262 /* CustomTabBarExample.swift in Sources */,
 				DA96155B2F1D18AE00AEEB25 /* ExpandCardAnimationDemo.swift in Sources */,
 				DA5477182EB63BAC005C8868 /* AuthServiceError.swift in Sources */,
 				DA7BE0BC2E8063AD006821CE /* HomeModuleBuilder.swift in Sources */,

@@ -10,11 +10,24 @@ import SwiftUI
 extension Route {
     enum AdvancedAnimationBootcampRoute: String, CaseIterable, Routable {
         case stickyHeader
+        case basicExample
+        case tabbar
         
         var id: String { rawValue }
+        
         var title: String {
             switch self {
-            case .stickyHeader: "Sticky Header View"
+            case .stickyHeader: "Sticky header"
+            case .basicExample: "Basic"
+            case .tabbar: "Tabbar"
+            }
+        }
+        
+        var sectionTitle: String {
+            switch self {
+            case .stickyHeader: "Sticky Header"
+            case .basicExample: "Basic example - Converting between two shapes"
+            case .tabbar: "Tab Bar with dynamic indicators"
             }
         }
     }
@@ -45,10 +58,15 @@ struct AdvancedAnimationBootcampCoordinator: View, ScreenCoordinator {
 }
 
 extension AdvancedAnimationBootcampCoordinator {
+    @ViewBuilder
     func viewForRoute(route: Route.AdvancedAnimationBootcampRoute) -> some View {
         switch route {
         case .stickyHeader:
             StickyListView()
+        case .basicExample:
+            BasicMatchedGeometryExample()
+        case .tabbar:
+            CustomTabBarExample()
         }
     }
 }
