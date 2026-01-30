@@ -12,6 +12,7 @@ extension Route {
         case stickyHeader
         case basicExample
         case tabbar
+        case cardExpansionExample
         
         var id: String { rawValue }
         
@@ -20,6 +21,7 @@ extension Route {
             case .stickyHeader: "Sticky header"
             case .basicExample: "Basic"
             case .tabbar: "Tabbar"
+            case .cardExpansionExample: "Card Expansion"
             }
         }
         
@@ -28,6 +30,7 @@ extension Route {
             case .stickyHeader: "Sticky Header"
             case .basicExample: "Basic example - Converting between two shapes"
             case .tabbar: "Tab Bar with dynamic indicators"
+            case .cardExpansionExample: "Card Expansion"
             }
         }
     }
@@ -67,6 +70,8 @@ extension AdvancedAnimationBootcampCoordinator {
             BasicMatchedGeometryExample()
         case .tabbar:
             CustomTabBarExample()
+        case .cardExpansionExample:
+            CardExpansionExample()
         }
     }
 }
