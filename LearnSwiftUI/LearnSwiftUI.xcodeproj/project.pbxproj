@@ -262,6 +262,7 @@
 		DADA946C2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA946B2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift */; };
 		DADA94732F2CC6D5008ED262 /* CustomTabBarExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA94722F2CC6D5008ED262 /* CustomTabBarExample.swift */; };
 		DADA947C2F2CFF5C008ED262 /* CardExpansionExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA947B2F2CFF5C008ED262 /* CardExpansionExample.swift */; };
+		DADA94862F2D00E4008ED262 /* AnimatedToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA94852F2D00E4008ED262 /* AnimatedToggle.swift */; };
 		DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */; };
 		DAE2EAC82DF4A6CF0083E733 /* AnimationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */; };
 		DAE2EACA2DF5DE280083E733 /* SheetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2EAC92DF5DE280083E733 /* SheetBootcamp.swift */; };
@@ -587,6 +588,7 @@
 		DADA946B2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMatchedGeometryExample.swift; sourceTree = "<group>"; };
 		DADA94722F2CC6D5008ED262 /* CustomTabBarExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarExample.swift; sourceTree = "<group>"; };
 		DADA947B2F2CFF5C008ED262 /* CardExpansionExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardExpansionExample.swift; sourceTree = "<group>"; };
+		DADA94852F2D00E4008ED262 /* AnimatedToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedToggle.swift; sourceTree = "<group>"; };
 		DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBootcamp.swift; sourceTree = "<group>"; };
 		DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBootcamp.swift; sourceTree = "<group>"; };
 		DAE2EAC92DF5DE280083E733 /* SheetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetBootcamp.swift; sourceTree = "<group>"; };
@@ -1787,6 +1789,7 @@
 		DADA94612F2CC1BF008ED262 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				DADA94852F2D00E4008ED262 /* AnimatedToggle.swift */,
 				DADA947B2F2CFF5C008ED262 /* CardExpansionExample.swift */,
 				DADA946B2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift */,
 				DADA94722F2CC6D5008ED262 /* CustomTabBarExample.swift */,
@@ -1990,6 +1993,7 @@
 				DA5D712A2E3D19A000C78E40 /* Logger.swift in Sources */,
 				DA7BF5EA2E98F2DA00224BCF /* RswiftResources+FontResource.swift in Sources */,
 				DA61C5592F0CCE8B00FD8181 /* Lesson.swift in Sources */,
+				DADA94862F2D00E4008ED262 /* AnimatedToggle.swift in Sources */,
 				DAAA67242E617101004075B7 /* ViewAndAdditional.swift in Sources */,
 				DA5D71822E3FA59900C78E40 /* NetworkError.swift in Sources */,
 				DA5D71862E3FA5B400C78E40 /* NetworkManager.swift in Sources */,
