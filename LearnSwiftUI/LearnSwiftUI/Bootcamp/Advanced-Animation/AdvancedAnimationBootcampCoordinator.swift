@@ -9,7 +9,6 @@ import SwiftUI
 
 extension Route {
     enum AdvancedAnimationBootcampRoute: String, CaseIterable, Routable {
-        case stickyHeader
         case basicExample
         case tabbar
         case cardExpansionExample
@@ -18,16 +17,6 @@ extension Route {
         
         var title: String {
             switch self {
-            case .stickyHeader: "Sticky header"
-            case .basicExample: "Basic"
-            case .tabbar: "Tabbar"
-            case .cardExpansionExample: "Card Expansion"
-            }
-        }
-        
-        var sectionTitle: String {
-            switch self {
-            case .stickyHeader: "Sticky Header"
             case .basicExample: "Basic example - Converting between two shapes"
             case .tabbar: "Tab Bar with dynamic indicators"
             case .cardExpansionExample: "Card Expansion"
@@ -64,8 +53,6 @@ extension AdvancedAnimationBootcampCoordinator {
     @ViewBuilder
     func viewForRoute(route: Route.AdvancedAnimationBootcampRoute) -> some View {
         switch route {
-        case .stickyHeader:
-            StickyListView()
         case .basicExample:
             BasicMatchedGeometryExample()
         case .tabbar:
