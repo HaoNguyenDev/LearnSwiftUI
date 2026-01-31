@@ -133,6 +133,25 @@ Good for one-time animations    Automatic state management
 Requires                        @State management 
 iOS 17+                         iOS 13+
 
+⚡ Tips & Tricks
+
+Use Enum for clearer phases
+Trigger parameters to restart animations
+CaseIterable makes it easier to iterate through phases
+Combine with GeometryReader for responsive animations
+Do not abuse - use for continuous animations, not all animations
+
+🎨 Common Use Cases
+
+Loading spinners
+Breathing buttons
+Attention-grabbing effects
+Progress indicators
+Notification badges pulsing
+Onboarding animations
+
+PhaseAnimator makes code cleaner and easier to maintain when working with multi-stage animations! 🚀
+
 """, result: {
         AnyView(ResultBlockView(content: {
             VStack {
