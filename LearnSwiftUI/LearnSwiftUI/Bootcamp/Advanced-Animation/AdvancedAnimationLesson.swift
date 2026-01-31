@@ -79,22 +79,36 @@ PhaseAnimator is suitable when you need:
 
 🔬 Example:
 
-PhaseAnimator([.idle, .loading, .done]) { phase in 
-    switch phase { 
-        case .idle: 
-            Text("Idle") 
-        case .loading: 
-            ProgressView() 
-        case .done: 
-            Text("Done") 
-    }
-} animation: { phase in 
-    switch phase { 
-        case .idle: .default 
-        case .loading: .easeInOut 
-        case .done: .spring() 
+enum SampleAnimationPhase: CaseIterable {
+    case idle
+    case loading
+    case done
+}
+
+struct PhaseAnimationExample: View {
+
+    var body: some View {
+        VStack {
+            PhaseAnimator(SampleAnimationPhase.allCases) { phase in
+                switch phase {
+                case .idle:
+                    Text("Idle")
+                case .loading:
+                    ProgressView()
+                case .done:
+                    Text("Done")
+                }
+            } animation: { phase in
+                switch phase {
+                case .idle: .default
+                case .loading: .easeInOut
+                case .done: .spring
+                }
+            }
+        }
     }
 }
+
 📌 Phase = state machine for animation
 
 struct PulsingCircle: View {
@@ -111,13 +125,25 @@ struct PulsingCircle: View {
     }
 }
 
+🔄 Comparison with withAnimation
+PhaseAnimator                   withAnimation
+Automatically                   loops through phases 
+Requires manual triggers        Good for continuous animations
+Good for one-time animations    Automatic state management 
+Requires                        @State management 
+iOS 17+                         iOS 13+
+
 """, result: {
         AnyView(ResultBlockView(content: {
             VStack {
                 PhaseAnimationExample()
                 Spacer()
                 PulsingCircle()
-            }.frame(height: 100)
+                Spacer()
+                BouncingText()
+                Spacer()
+                ColorRotator()
+            }.frame(height: 250)
         }))
     }),Lesson(title: "TimelineView — REAL-TIME ANIMATION", code: """
 🧠 When to use it?

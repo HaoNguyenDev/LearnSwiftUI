@@ -7,22 +7,17 @@
 
 import SwiftUI
 
-enum SampleAnimationPhase {
+enum SampleAnimationPhase: CaseIterable {
     case idle
     case loading
     case done
 }
 
 struct PhaseAnimationExample: View {
-    private let animationPhases: [SampleAnimationPhase]
-    
-    init() {
-        animationPhases = [SampleAnimationPhase.idle, SampleAnimationPhase.loading, SampleAnimationPhase.done]
-    }
-    
+
     var body: some View {
         VStack {
-            PhaseAnimator(animationPhases) { phase in
+            PhaseAnimator(SampleAnimationPhase.allCases) { phase in
                 switch phase {
                 case .idle:
                     Text("Idle")
