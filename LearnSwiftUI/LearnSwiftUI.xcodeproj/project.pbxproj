@@ -734,6 +734,17 @@
 			path = TimelineAnimation;
 			sourceTree = "<group>";
 		};
+		DA257F212F2E28800024DC9B /* matchedGeometryEffect */ = {
+			isa = PBXGroup;
+			children = (
+				DADA94852F2D00E4008ED262 /* AnimatedToggle.swift */,
+				DADA947B2F2CFF5C008ED262 /* CardExpansionExample.swift */,
+				DADA946B2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift */,
+				DADA94722F2CC6D5008ED262 /* CustomTabBarExample.swift */,
+			);
+			path = matchedGeometryEffect;
+			sourceTree = "<group>";
+		};
 		DA28F59D2F1F781B00079318 /* View-Identity */ = {
 			isa = PBXGroup;
 			children = (
@@ -1818,12 +1829,9 @@
 		DADA94612F2CC1BF008ED262 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				DA257F212F2E28800024DC9B /* matchedGeometryEffect */,
 				DA257EFA2F2E0B940024DC9B /* TimelineAnimation */,
 				DA257EE32F2E06980024DC9B /* PhaseAnimation */,
-				DADA94852F2D00E4008ED262 /* AnimatedToggle.swift */,
-				DADA947B2F2CFF5C008ED262 /* CardExpansionExample.swift */,
-				DADA946B2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift */,
-				DADA94722F2CC6D5008ED262 /* CustomTabBarExample.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
