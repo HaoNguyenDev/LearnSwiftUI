@@ -26,6 +26,9 @@
 		DA1D081B2E9D282100B76DFD /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = DA1D081A2E9D282100B76DFD /* KeychainAccess */; };
 		DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */; };
 		DA2237542F2A09B70065C9CD /* NaviagtionExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2237532F2A09B70065C9CD /* NaviagtionExampleView.swift */; };
+		DA257EE52F2E06B70024DC9B /* PhaseAnimationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA257EE42F2E06B70024DC9B /* PhaseAnimationExample.swift */; };
+		DA257EEB2F2E08BB0024DC9B /* PulsingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA257EEA2F2E08BB0024DC9B /* PulsingCircle.swift */; };
+		DA257EFC2F2E0BAB0024DC9B /* TimelineAnimationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA257EFB2F2E0BAB0024DC9B /* TimelineAnimationExample.swift */; };
 		DA28F59F2F1F786000079318 /* ViewIdentityLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F59E2F1F786000079318 /* ViewIdentityLessons.swift */; };
 		DA28F5A52F1F78BE00079318 /* ViewIdentityBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F5A42F1F78BE00079318 /* ViewIdentityBootcamp.swift */; };
 		DA28F5A82F1F798700079318 /* ViewIdentityBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F5A72F1F798700079318 /* ViewIdentityBootcampCoordinator.swift */; };
@@ -333,6 +336,9 @@
 		DA1D32272E6F050F007BDEA2 /* DownloadOperation.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DownloadOperation.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewBootcamp.swift; sourceTree = "<group>"; };
 		DA2237532F2A09B70065C9CD /* NaviagtionExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviagtionExampleView.swift; sourceTree = "<group>"; };
+		DA257EE42F2E06B70024DC9B /* PhaseAnimationExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseAnimationExample.swift; sourceTree = "<group>"; };
+		DA257EEA2F2E08BB0024DC9B /* PulsingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsingCircle.swift; sourceTree = "<group>"; };
+		DA257EFB2F2E0BAB0024DC9B /* TimelineAnimationExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineAnimationExample.swift; sourceTree = "<group>"; };
 		DA2745842E61E8D0000B436D /* SingletonPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SingletonPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA2745852E61FB2C000B436D /* Final.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Final.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA28F59E2F1F786000079318 /* ViewIdentityLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentityLessons.swift; sourceTree = "<group>"; };
@@ -703,6 +709,23 @@
 				DA5164312E3CB57600642709 /* NavigationManager.swift */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		DA257EE32F2E06980024DC9B /* PhaseAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				DA257EEA2F2E08BB0024DC9B /* PulsingCircle.swift */,
+				DA257EE42F2E06B70024DC9B /* PhaseAnimationExample.swift */,
+			);
+			path = PhaseAnimation;
+			sourceTree = "<group>";
+		};
+		DA257EFA2F2E0B940024DC9B /* TimelineAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				DA257EFB2F2E0BAB0024DC9B /* TimelineAnimationExample.swift */,
+			);
+			path = TimelineAnimation;
 			sourceTree = "<group>";
 		};
 		DA28F59D2F1F781B00079318 /* View-Identity */ = {
@@ -1789,6 +1812,8 @@
 		DADA94612F2CC1BF008ED262 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				DA257EFA2F2E0B940024DC9B /* TimelineAnimation */,
+				DA257EE32F2E06980024DC9B /* PhaseAnimation */,
 				DADA94852F2D00E4008ED262 /* AnimatedToggle.swift */,
 				DADA947B2F2CFF5C008ED262 /* CardExpansionExample.swift */,
 				DADA946B2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift */,
@@ -2050,6 +2075,7 @@
 				DA61C55C2F0CCF0500FD8181 /* SwiftUILayoutEngineLessons.swift in Sources */,
 				DAA45E742EF976EA00BC57E9 /* BootcampListView.swift in Sources */,
 				DA58DDAD2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift in Sources */,
+				DA257EEB2F2E08BB0024DC9B /* PulsingCircle.swift in Sources */,
 				DA37F9B32E8EE8CA0001599E /* CombineDefinitionContentView.swift in Sources */,
 				DA4F7F1C2E9A954D001CB7B2 /* LoginButtonView.swift in Sources */,
 				DA7BF61C2E99036200224BCF /* View+Themed.swift in Sources */,
@@ -2087,6 +2113,7 @@
 				DA61C5662F0CD15E00FD8181 /* TextLessons.swift in Sources */,
 				DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */,
 				DABC5FCC2F27B2D300957964 /* NavigationBootcampCoordinator.swift in Sources */,
+				DA257EFC2F2E0BAB0024DC9B /* TimelineAnimationExample.swift in Sources */,
 				DA8656D32F0F75FA0092426E /* ScrollViewLazyContainersBootcamp.swift in Sources */,
 				DA5D717E2E3FA57800C78E40 /* NetworkProtocols.swift in Sources */,
 				DA58DD9C2E9E5FF90042D1AD /* String+Extensions.swift in Sources */,
@@ -2142,6 +2169,7 @@
 				DA5477A22EB7983D005C8868 /* FakeStoreCommonRequest.swift in Sources */,
 				DAA7090B2E75D29E006F8E70 /* LocationManager.swift in Sources */,
 				DA8748952E6B006A00B189F3 /* WeatherLoadingView.swift in Sources */,
+				DA257EE52F2E06B70024DC9B /* PhaseAnimationExample.swift in Sources */,
 				DAA7090F2E75D3CE006F8E70 /* PaymentServiceProtocol.swift in Sources */,
 				DAC35AF32E9F88FA0019021D /* UserListViewModel.swift in Sources */,
 				DA5D71A02E40CC8300C78E40 /* AsyncAwaitBootcamp.swift in Sources */,
