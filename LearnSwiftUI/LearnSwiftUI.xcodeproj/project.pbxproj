@@ -293,6 +293,9 @@
 		DAEBAE4A2DF28E1E00082B1C /* SubviewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE492DF28E1E00082B1C /* SubviewBootcamp.swift */; };
 		DAED677E2E20E45C00309382 /* StateObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED677D2E20E45C00309382 /* StateObjectBootcamp.swift */; };
 		DAED67802E21089A00309382 /* ObservedObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED677F2E21089A00309382 /* ObservedObjectBootcamp.swift */; };
+		DAEEA2C52F2E507600AE6218 /* SwiftUIArchitectureAndViewLifeCycleLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEEA2C42F2E507600AE6218 /* SwiftUIArchitectureAndViewLifeCycleLesson.swift */; };
+		DAEEA2CB2F2E50BD00AE6218 /* SwiftUIArchitectureAndViewLifeCycleBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEEA2CA2F2E50BD00AE6218 /* SwiftUIArchitectureAndViewLifeCycleBootcamp.swift */; };
+		DAEEA2CF2F2E510400AE6218 /* SwiftUIArchitectureAndViewLifeCycleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEEA2CE2F2E510400AE6218 /* SwiftUIArchitectureAndViewLifeCycleCoordinator.swift */; };
 		DAEEFB762E366D4000E78DA2 /* ObservableObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEEFB752E366D2F00E78DA2 /* ObservableObjectBootcamp.swift */; };
 		DAFC16602F11155200D242D3 /* GeometryReaderDemos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC165F2F11155200D242D3 /* GeometryReaderDemos.swift */; };
 		DAFC16722F11240C00D242D3 /* StickyHeaderViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC16712F11240C00D242D3 /* StickyHeaderViewDemo.swift */; };
@@ -625,6 +628,9 @@
 		DAEBAE492DF28E1E00082B1C /* SubviewBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubviewBootcamp.swift; sourceTree = "<group>"; };
 		DAED677D2E20E45C00309382 /* StateObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAED677F2E21089A00309382 /* ObservedObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedObjectBootcamp.swift; sourceTree = "<group>"; };
+		DAEEA2C42F2E507600AE6218 /* SwiftUIArchitectureAndViewLifeCycleLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIArchitectureAndViewLifeCycleLesson.swift; sourceTree = "<group>"; };
+		DAEEA2CA2F2E50BD00AE6218 /* SwiftUIArchitectureAndViewLifeCycleBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIArchitectureAndViewLifeCycleBootcamp.swift; sourceTree = "<group>"; };
+		DAEEA2CE2F2E510400AE6218 /* SwiftUIArchitectureAndViewLifeCycleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIArchitectureAndViewLifeCycleCoordinator.swift; sourceTree = "<group>"; };
 		DAEEFB752E366D2F00E78DA2 /* ObservableObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAFC165F2F11155200D242D3 /* GeometryReaderDemos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderDemos.swift; sourceTree = "<group>"; };
 		DAFC16712F11240C00D242D3 /* StickyHeaderViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderViewDemo.swift; sourceTree = "<group>"; };
@@ -937,7 +943,7 @@
 				DA723CE02F264D9D009BEC1C /* BootcampTemplate */,
 				DAA45E6E2EF9756300BC57E9 /* BootcampList */,
 				DA61C5522F0CC38100FD8181 /* SwiftUILayoutEngine */,
-				DA61C5212F0C073A00FD8181 /* StackView */,
+				DAEEA2A92F2E44D100AE6218 /* SwiftUI-Architecture-AndView-Lifecycle */,
 				DA61C5DD2F0E17D300FD8181 /* Alignment-AlignmentGuide */,
 				DA8656C52F0F75750092426E /* GeometryReader-coordinateSpace */,
 				DA8656CB2F0F757B0092426E /* ScrollView-LazyContainers */,
@@ -949,6 +955,7 @@
 				DA723D122F267227009BEC1C /* EquatableView */,
 				DABC5FC12F27B22300957964 /* Navigation */,
 				DA64B7BF2F2BA61E00144CC6 /* Advanced-Animation */,
+				DA61C5212F0C073A00FD8181 /* StackView */,
 				DA83D7352EFC08B40050EF92 /* Text */,
 				DA415E8A2DE5C845009F515E /* ShapesBootcamp.swift */,
 				DA415E8C2DE5CD41009F515E /* ColorsBootcamp.swift */,
@@ -1875,6 +1882,16 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		DAEEA2A92F2E44D100AE6218 /* SwiftUI-Architecture-AndView-Lifecycle */ = {
+			isa = PBXGroup;
+			children = (
+				DAEEA2C42F2E507600AE6218 /* SwiftUIArchitectureAndViewLifeCycleLesson.swift */,
+				DAEEA2CA2F2E50BD00AE6218 /* SwiftUIArchitectureAndViewLifeCycleBootcamp.swift */,
+				DAEEA2CE2F2E510400AE6218 /* SwiftUIArchitectureAndViewLifeCycleCoordinator.swift */,
+			);
+			path = "SwiftUI-Architecture-AndView-Lifecycle";
+			sourceTree = "<group>";
+		};
 		DAFC16702F11240700D242D3 /* Demos */ = {
 			isa = PBXGroup;
 			children = (
@@ -2111,6 +2128,7 @@
 				DA87488A2E6AFC6A00B189F3 /* WeatherItem.swift in Sources */,
 				DA7BF5E82E98F2C900224BCF /* RswiftResources+ColorResource.swift in Sources */,
 				DA5477332EB651AE005C8868 /* AlamofireNetworking.swift in Sources */,
+				DAEEA2CB2F2E50BD00AE6218 /* SwiftUIArchitectureAndViewLifeCycleBootcamp.swift in Sources */,
 				DAFC16602F11155200D242D3 /* GeometryReaderDemos.swift in Sources */,
 				DA37F9A02E8EE3AC0001599E /* CombineItemType.swift in Sources */,
 				DA7BF5DD2E98ED7300224BCF /* DefaultThemeAssets.swift in Sources */,
@@ -2218,6 +2236,7 @@
 				DA4726582EA7C31E000D596A /* AppTextStyleSize.swift in Sources */,
 				DA4F7EF12E9A6B6D001CB7B2 /* HButtonStyle.swift in Sources */,
 				DA87489E2E6B16B500B189F3 /* WeatherMainView.swift in Sources */,
+				DAEEA2CF2F2E510400AE6218 /* SwiftUIArchitectureAndViewLifeCycleCoordinator.swift in Sources */,
 				DAA709222E787C42006F8E70 /* PaymentVM.swift in Sources */,
 				DA03DEF42F20A8CA0080D104 /* BodyRecomputeDemo.swift in Sources */,
 				DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */,
@@ -2238,6 +2257,7 @@
 				DA28F59F2F1F786000079318 /* ViewIdentityLessons.swift in Sources */,
 				DAC35B102E9F91520019021D /* UserListViewController.swift in Sources */,
 				DA5477012EB4EBA7005C8868 /* AuthService.swift in Sources */,
+				DAEEA2C52F2E507600AE6218 /* SwiftUIArchitectureAndViewLifeCycleLesson.swift in Sources */,
 				DA7BE0AE2E8061D1006821CE /* LoginModuleBuilder.swift in Sources */,
 				DABC5FC82F27B27200957964 /* NavigationBootcamp.swift in Sources */,
 				DA2237542F2A09B70065C9CD /* NaviagtionExampleView.swift in Sources */,
@@ -2405,10 +2425,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LearnSwiftUI/LearnSwiftUI.entitlements;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LearnSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 958VLT7HQ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LearnSwiftUI/Info.plist;
@@ -2443,10 +2464,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LearnSwiftUI/LearnSwiftUI.entitlements;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LearnSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 958VLT7HQ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LearnSwiftUI/Info.plist;
@@ -2538,10 +2560,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LearnSwiftUI/LearnSwiftUI.entitlements;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LearnSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 958VLT7HQ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LearnSwiftUI/Info.plist;

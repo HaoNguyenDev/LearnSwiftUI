@@ -10,6 +10,7 @@ import SwiftUI
 extension Route {
     enum BootcampListRouter: String, Routable {
         case swiftuiLayoutEngine
+        case swiftuiArchitectureAndViewLifeCycle
         case stackViewBootcamp
         case alignmentAlignmentGuide
         case geometryReaderCoordinateSpace
@@ -76,6 +77,8 @@ struct BootcampListCoordinator: View, ScreenCoordinator {
                 navRoute.push(ScreenRoute.navigation, animate: true)
             case .advancedAnimation:
                 navRoute.push(ScreenRoute.advancedAnimation, animate: true)
+            case .swiftuiArchitectureAndViewLifeCycle:
+                navRoute.push(ScreenRoute.swiftuiArchitectureAndViewLifeCycle, animate: true)
             case .text:
                 navRoute.push(ScreenRoute.textBootcamp, animate: true)
             case .shape: break
@@ -94,6 +97,8 @@ extension BootcampListCoordinator {
         switch route {
         case .swiftuiLayoutEngine:
             SwiftUILayoutEngineCoordinator(navRouter: navRoute)
+        case .swiftuiArchitectureAndViewLifeCycle:
+            SwiftUIArchitectureAndViewLifeCycleCoordinator(navRoute: navRoute)
         case .stackViewBootcamp:
             StackViewBootcampCoordinator(navRouter: navRoute)
         case .alignmentAlignmentGuide:

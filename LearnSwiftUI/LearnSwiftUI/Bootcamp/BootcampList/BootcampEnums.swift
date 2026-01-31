@@ -9,6 +9,7 @@ import Foundation
 
 enum BootcampEnums: String, CaseIterable {
     case swiftuiLayoutSystem = "SwiftUI Layout Engine"
+    case swiftuiArchitectureAndViewLifeCycle = "SwiftUI Architecture - View LifeCycle"
     case stackView = "Stack View"
     case alignmentAlignmentGuide = "Alignment-AlignmentGuide"
     case geometryReaderCoordinateSpace = "GeometryReader-CoordinateSpace"
