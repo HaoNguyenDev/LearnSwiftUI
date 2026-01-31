@@ -8,22 +8,22 @@
 import SwiftUI
 
 struct CardExpansionExample: View {
-    @State private var selectedCard: Int? = nil
+    @State private var selectedCardIndex: Int?
     @Namespace private var animation
     
     let colors: [Color] = [.red, .green, .blue, .orange]
-    
+    let columsSetup = [GridItem(.flexible()), GridItem(.flexible())]
     var body: some View {
         ZStack {
-            if selectedCard == nil {
+            if selectedCardIndex == nil {
                 // Grid view
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
-                    ForEach(0..<4) { index in
+                LazyVGrid(columns: columsSetup) {
+                    ForEach(0..<colors.count, id: \.self) { index in
                         CardView(color: colors[index])
                             .matchedGeometryEffect(id: index, in: animation)
                             .onTapGesture {
                                 withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
-                                    selectedCard = index
+                                    selectedCardIndex = index
                                 }
                             }
                     }
@@ -32,19 +32,17 @@ struct CardExpansionExample: View {
             } else {
                 // Full screen view
                 ZStack(alignment: .topTrailing) {
-                    CardView(color: colors[selectedCard!])
-                        .matchedGeometryEffect(id: selectedCard!, in: animation)
-                    
-                    Button(action: {
-                        withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
-                            selectedCard = nil
+                    CardView(color: colors[selectedCardIndex ?? 0])
+                        .matchedGeometryEffect(id: selectedCardIndex!, in: animation)
+                    Image(systemName: "xmark.circle.fill")
+                        .font(.title)
+                        .foregroundStyle(.white)
+                        .padding()
+                        .onTapGesture {
+                            withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
+                                selectedCardIndex = nil
+                            }
                         }
-                    }) {
-                        Image(systemName: "xmark.circle.fill")
-                            .font(.title)
-                            .foregroundColor(.white)
-                            .padding()
-                    }
                 }
                 .padding()
             }
