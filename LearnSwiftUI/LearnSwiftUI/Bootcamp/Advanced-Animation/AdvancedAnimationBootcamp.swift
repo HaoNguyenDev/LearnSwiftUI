@@ -25,8 +25,8 @@ enum AdvancedAnimationDemoType: String, CaseIterable, Identifiable, Hashable {
     var demo: [Route.AdvancedAnimationBootcampRoute] {
         switch self {
         case .matchedGeometryEffect: [Route.AdvancedAnimationBootcampRoute.basicExample, Route.AdvancedAnimationBootcampRoute.tabbar, Route.AdvancedAnimationBootcampRoute.cardExpansionExample]
-        case .timelineAnimation: [Route.AdvancedAnimationBootcampRoute.basicExample]
-        case .phaseAnimation: [Route.AdvancedAnimationBootcampRoute.basicExample]
+        case .timelineAnimation: [Route.AdvancedAnimationBootcampRoute.phaseAnimationExample, Route.AdvancedAnimationBootcampRoute.pulsingCircle]
+        case .phaseAnimation: [Route.AdvancedAnimationBootcampRoute.timelineAnimation]
         }
     }
 }

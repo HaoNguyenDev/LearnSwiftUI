@@ -58,9 +58,24 @@ It tells SwiftUI:
     SwiftUI interpolate geometry between 2 frames
 ➡️ Identity is wrong = SwiftUI doesn't know where to interpolate from → FAIL
 """, result: nil),Lesson(title: "PhaseAnimator (iOS 17+) — PHASE ANIMATION", code: """
-🧠 When to use?
-    Animation has many logical phases
-    Not just on/off
+🎯 Basic Concept
+PhaseAnimator is a new view modifier in iOS 17+ 
+that allows you to create animations through multiple phases sequentially and automatically.
+
+🧠 When to Use It?
+PhaseAnimator is suitable when you need:
+    Repeating animations with multiple different states
+    Animation sequences with a clear order (A → B → C → A...)
+    Loading effects or progress indicators
+    Complex animations where you don't want to manually manage state
+    Breathing effects, pulsing, or continuous animations
+
+💡 Basic Syntax
+    swiftPhaseAnimator(phases) { phase in
+        // View changes according to phase
+    } animation: { phase in
+        // Animation for each phase
+    }
 
 🔬 Example:
 
@@ -81,23 +96,54 @@ PhaseAnimator([.idle, .loading, .done]) { phase in
     }
 }
 📌 Phase = state machine for animation
-""", result: nil),Lesson(title: "TimelineView — REAL-TIME ANIMATION", code: """
+
+struct PulsingCircle: View {
+    var body: some View {
+        PhaseAnimator([false, true]) { phase in
+            Circle()
+                .fill(.blue)
+                .frame(width: 50, height: 50)
+                .scaleEffect(phase ? 1.5 : 1.0)
+                .opacity(phase ? 0.3 : 1.0)
+        } animation: { phase in
+            .easeInOut(duration: 0.8)
+        }
+    }
+}
+
+""", result: {
+        AnyView(ResultBlockView(content: {
+            VStack {
+                PhaseAnimationExample()
+                Spacer()
+                PulsingCircle()
+            }.frame(height: 100)
+        }))
+    }),Lesson(title: "TimelineView — REAL-TIME ANIMATION", code: """
 🧠 When to use it?
     Clock
     Audio waveform
     Live data
     Animation independent of user action
+
+Example:
+
+TimelineView(.animation) { context in
+    let t = context.date.timeIntervalSince1970
+    RoundedRectangle(cornerRadius: 10)
+        .fill(.gray)
+        .frame(width: 100, height: 100)
+        .rotationEffect(.degrees(t * 360))
+        .overlay {
+            Rectangle()
+                .frame(maxWidth: .infinity, maxHeight: 5)
+                .rotationEffect(.degrees(t * 60))
+                .padding()
+        }
+}
 """, result: {
         AnyView(
-            ResultBlockView(content: {
-                TimelineView(.animation) { context in
-                    let t = context.date.timeIntervalSince1970
-                    RoundedRectangle(cornerRadius: 10)
-                        .frame(width: 100, height: 100)
-                        .rotationEffect(.degrees(t * 60))
-                }
-                .padding()
-            })
+            TimelineAnimationExample()
         )
     }),Lesson(title: "", code: """
 

@@ -12,6 +12,9 @@ extension Route {
         case basicExample
         case tabbar
         case cardExpansionExample
+        case phaseAnimationExample
+        case pulsingCircle
+        case timelineAnimation
         
         var id: String { rawValue }
         
@@ -20,6 +23,9 @@ extension Route {
             case .basicExample: "Basic example - Converting between two shapes"
             case .tabbar: "Tab Bar with dynamic indicators"
             case .cardExpansionExample: "Card Expansion"
+            case .phaseAnimationExample: "Phase Animation Loading"
+            case .pulsingCircle: "Pulsing Circle"
+            case .timelineAnimation: "Timeline Animation"
             }
         }
     }
@@ -59,6 +65,12 @@ extension AdvancedAnimationBootcampCoordinator {
             CustomTabBarExample()
         case .cardExpansionExample:
             CardExpansionExample()
+        case .phaseAnimationExample:
+            PhaseAnimationExample()
+        case .pulsingCircle:
+            PulsingCircle()
+        case .timelineAnimation:
+            TimelineAnimationExample()
         }
     }
 }
