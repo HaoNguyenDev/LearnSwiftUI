@@ -141,6 +141,7 @@
 		DA6DB89C2F2F4DCA001781BD /* SomeViewAnyViewAndViewBuilderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6DB89B2F2F4DCA001781BD /* SomeViewAnyViewAndViewBuilderCoordinator.swift */; };
 		DA6DB8A12F2F6DF8001781BD /* ProfileViewViewBuilderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6DB8A02F2F6DF8001781BD /* ProfileViewViewBuilderExample.swift */; };
 		DA6DB8B32F2F6FA2001781BD /* DashboardViewViewBuilderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6DB8B22F2F6FA2001781BD /* DashboardViewViewBuilderExample.swift */; };
+		DA6DB8BD2F2F9DDF001781BD /* OptionalViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6DB8BC2F2F9DDF001781BD /* OptionalViewExample.swift */; };
 		DA723C882F24D446009BEC1C /* DemoEquatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723C872F24D446009BEC1C /* DemoEquatableView.swift */; };
 		DA723C8E2F25FC5D009BEC1C /* DemoRedrawList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723C8D2F25FC5D009BEC1C /* DemoRedrawList.swift */; };
 		DA723CE62F264DBB009BEC1C /* BootcampTemplateLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723CE52F264DBB009BEC1C /* BootcampTemplateLesson.swift */; };
@@ -469,6 +470,7 @@
 		DA6DB89B2F2F4DCA001781BD /* SomeViewAnyViewAndViewBuilderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeViewAnyViewAndViewBuilderCoordinator.swift; sourceTree = "<group>"; };
 		DA6DB8A02F2F6DF8001781BD /* ProfileViewViewBuilderExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewViewBuilderExample.swift; sourceTree = "<group>"; };
 		DA6DB8B22F2F6FA2001781BD /* DashboardViewViewBuilderExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewViewBuilderExample.swift; sourceTree = "<group>"; };
+		DA6DB8BC2F2F9DDF001781BD /* OptionalViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalViewExample.swift; sourceTree = "<group>"; };
 		DA6E0BBB2E4A32D0009B3778 /* OperationQueueTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OperationQueueTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA6E0BBC2E4A4BA5009B3778 /* RaceConditionAvoid.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RaceConditionAvoid.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA6E0D702E4CEE68009B3778 /* StackQueueAndHeap.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StackQueueAndHeap.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -1372,6 +1374,7 @@
 				DA6DB8B22F2F6FA2001781BD /* DashboardViewViewBuilderExample.swift */,
 				DA6DB88C2F2F4CCB001781BD /* CustomCardWithViewBuilder.swift */,
 				DA6DB8A02F2F6DF8001781BD /* ProfileViewViewBuilderExample.swift */,
+				DA6DB8BC2F2F9DDF001781BD /* OptionalViewExample.swift */,
 			);
 			path = "ViewBuilder Demo";
 			sourceTree = "<group>";
@@ -2281,6 +2284,7 @@
 				DA87A2122EB7ACF500749349 /* FakeStoreAuthRequest.swift in Sources */,
 				DA5164322E3CB57600642709 /* NavigationManager.swift in Sources */,
 				DA4726582EA7C31E000D596A /* AppTextStyleSize.swift in Sources */,
+				DA6DB8BD2F2F9DDF001781BD /* OptionalViewExample.swift in Sources */,
 				DA4F7EF12E9A6B6D001CB7B2 /* HButtonStyle.swift in Sources */,
 				DA87489E2E6B16B500B189F3 /* WeatherMainView.swift in Sources */,
 				DAEEA2CF2F2E510400AE6218 /* SwiftUIArchitectureAndViewLifeCycleCoordinator.swift in Sources */,
