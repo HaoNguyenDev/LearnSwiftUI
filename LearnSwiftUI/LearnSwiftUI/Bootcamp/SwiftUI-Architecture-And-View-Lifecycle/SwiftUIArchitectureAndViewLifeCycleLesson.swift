@@ -285,6 +285,46 @@ struct ItemListViewIdentityTest: View {
                 ItemListViewIdentityTest()
             }
         }))
-    })
+    }),
+                      Lesson(title: "View Identity Performance Impact", code: """
+// ❌ BAD: Recreate view every toggle
+
+struct BadApproach: View { 
+    @State private var isExpanded = false 
+
+    var body: some View { 
+        if isExpanded { 
+            ExpandedView() // New instance each time 
+        } else { 
+            CollapsedView() // New instance each time 
+        } 
+    }
+}
+
+// ✅ GOOD: Reuse view, only change state
+struct GoodApproach: View { 
+    @State private var isExpanded = false 
+
+    var body: some View { 
+        FlexibleView(isExpanded: isExpanded) 
+        // Same view, different state 
+    }
+}
+```
+
+---
+
+### **1.4 SwiftUI Rendering Pipeline**
+
+#### **4-Stage Rendering Process**
+```
+1. VIEW CREATION 
+        ↓
+2. BODY EVALUATION 
+        ↓
+3. LAYOUT CALCULATION
+        ↓
+4. RENDERING
+""", result: nil)
     ]
 }
