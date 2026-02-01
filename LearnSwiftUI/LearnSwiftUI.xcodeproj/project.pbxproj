@@ -139,6 +139,8 @@
 		DA6DB88D2F2F4CCB001781BD /* CustomCardWithViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6DB88C2F2F4CCB001781BD /* CustomCardWithViewBuilder.swift */; };
 		DA6DB8972F2F4D56001781BD /* SomeViewAnyViewAndViewBuilderBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6DB8962F2F4D56001781BD /* SomeViewAnyViewAndViewBuilderBootcamp.swift */; };
 		DA6DB89C2F2F4DCA001781BD /* SomeViewAnyViewAndViewBuilderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6DB89B2F2F4DCA001781BD /* SomeViewAnyViewAndViewBuilderCoordinator.swift */; };
+		DA6DB8A12F2F6DF8001781BD /* ProfileViewViewBuilderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6DB8A02F2F6DF8001781BD /* ProfileViewViewBuilderExample.swift */; };
+		DA6DB8B32F2F6FA2001781BD /* DashboardViewViewBuilderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6DB8B22F2F6FA2001781BD /* DashboardViewViewBuilderExample.swift */; };
 		DA723C882F24D446009BEC1C /* DemoEquatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723C872F24D446009BEC1C /* DemoEquatableView.swift */; };
 		DA723C8E2F25FC5D009BEC1C /* DemoRedrawList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723C8D2F25FC5D009BEC1C /* DemoRedrawList.swift */; };
 		DA723CE62F264DBB009BEC1C /* BootcampTemplateLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723CE52F264DBB009BEC1C /* BootcampTemplateLesson.swift */; };
@@ -465,6 +467,8 @@
 		DA6DB88C2F2F4CCB001781BD /* CustomCardWithViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardWithViewBuilder.swift; sourceTree = "<group>"; };
 		DA6DB8962F2F4D56001781BD /* SomeViewAnyViewAndViewBuilderBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeViewAnyViewAndViewBuilderBootcamp.swift; sourceTree = "<group>"; };
 		DA6DB89B2F2F4DCA001781BD /* SomeViewAnyViewAndViewBuilderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeViewAnyViewAndViewBuilderCoordinator.swift; sourceTree = "<group>"; };
+		DA6DB8A02F2F6DF8001781BD /* ProfileViewViewBuilderExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewViewBuilderExample.swift; sourceTree = "<group>"; };
+		DA6DB8B22F2F6FA2001781BD /* DashboardViewViewBuilderExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewViewBuilderExample.swift; sourceTree = "<group>"; };
 		DA6E0BBB2E4A32D0009B3778 /* OperationQueueTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OperationQueueTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA6E0BBC2E4A4BA5009B3778 /* RaceConditionAvoid.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RaceConditionAvoid.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA6E0D702E4CEE68009B3778 /* StackQueueAndHeap.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StackQueueAndHeap.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -1357,9 +1361,19 @@
 		DA6DB8882F2F4CC5001781BD /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				DA6DB88C2F2F4CCB001781BD /* CustomCardWithViewBuilder.swift */,
+				DA6DB8B12F2F6F9C001781BD /* ViewBuilder Demo */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		DA6DB8B12F2F6F9C001781BD /* ViewBuilder Demo */ = {
+			isa = PBXGroup;
+			children = (
+				DA6DB8B22F2F6FA2001781BD /* DashboardViewViewBuilderExample.swift */,
+				DA6DB88C2F2F4CCB001781BD /* CustomCardWithViewBuilder.swift */,
+				DA6DB8A02F2F6DF8001781BD /* ProfileViewViewBuilderExample.swift */,
+			);
+			path = "ViewBuilder Demo";
 			sourceTree = "<group>";
 		};
 		DA723C852F24D434009BEC1C /* Demo */ = {
@@ -2146,6 +2160,7 @@
 				DA8748912E6B005800B189F3 /* WeatherErrorView.swift in Sources */,
 				DAA45E712EF9759100BC57E9 /* BootcampListCoordinator.swift in Sources */,
 				DAC35B3F2E9FED3F0019021D /* TextFieldModifiers.swift in Sources */,
+				DA6DB8B32F2F6FA2001781BD /* DashboardViewViewBuilderExample.swift in Sources */,
 				DA9615772F1D273400AEEB25 /* CustomTabBarAnimationDemo.swift in Sources */,
 				DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */,
 				DAAA67262E6173FD004075B7 /* PickerBootcamp.swift in Sources */,
@@ -2299,6 +2314,7 @@
 				DAE365BC2E9CC288005EF803 /* DarkThemeFonts.swift in Sources */,
 				DA4725302EA62DF7000D596A /* Closure.swift in Sources */,
 				DAA609CE2F129EDE00B625CE /* AnimationLayoutInteractionBootcamp.swift in Sources */,
+				DA6DB8A12F2F6DF8001781BD /* ProfileViewViewBuilderExample.swift in Sources */,
 				DAA609CB2F129E7B00B625CE /* AnimationLayoutInteractionLessons.swift in Sources */,
 				DAE365BD2E9CC288005EF803 /* DarkTheme.swift in Sources */,
 				DA64B7C82F2BA73F00144CC6 /* AdvancedAnimationBootcampCoordinator.swift in Sources */,
