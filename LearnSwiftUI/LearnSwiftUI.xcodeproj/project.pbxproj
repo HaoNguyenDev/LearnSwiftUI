@@ -142,6 +142,10 @@
 		DA6DB8A12F2F6DF8001781BD /* ProfileViewViewBuilderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6DB8A02F2F6DF8001781BD /* ProfileViewViewBuilderExample.swift */; };
 		DA6DB8B32F2F6FA2001781BD /* DashboardViewViewBuilderExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6DB8B22F2F6FA2001781BD /* DashboardViewViewBuilderExample.swift */; };
 		DA6DB8BD2F2F9DDF001781BD /* OptionalViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6DB8BC2F2F9DDF001781BD /* OptionalViewExample.swift */; };
+		DA6DB8CE2F2FA3B0001781BD /* CounterViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6DB8CD2F2FA3B0001781BD /* CounterViewExample.swift */; };
+		DA6DB8D92F2FA552001781BD /* ConditionalViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6DB8D82F2FA552001781BD /* ConditionalViewExample.swift */; };
+		DA6DB8E12F2FA692001781BD /* StableIdentityViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6DB8E02F2FA692001781BD /* StableIdentityViewExample.swift */; };
+		DA6DB8EE2F2FAB65001781BD /* ItemListViewIdentityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6DB8ED2F2FAB65001781BD /* ItemListViewIdentityTest.swift */; };
 		DA723C882F24D446009BEC1C /* DemoEquatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723C872F24D446009BEC1C /* DemoEquatableView.swift */; };
 		DA723C8E2F25FC5D009BEC1C /* DemoRedrawList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723C8D2F25FC5D009BEC1C /* DemoRedrawList.swift */; };
 		DA723CE62F264DBB009BEC1C /* BootcampTemplateLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA723CE52F264DBB009BEC1C /* BootcampTemplateLesson.swift */; };
@@ -471,6 +475,10 @@
 		DA6DB8A02F2F6DF8001781BD /* ProfileViewViewBuilderExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewViewBuilderExample.swift; sourceTree = "<group>"; };
 		DA6DB8B22F2F6FA2001781BD /* DashboardViewViewBuilderExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewViewBuilderExample.swift; sourceTree = "<group>"; };
 		DA6DB8BC2F2F9DDF001781BD /* OptionalViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalViewExample.swift; sourceTree = "<group>"; };
+		DA6DB8CD2F2FA3B0001781BD /* CounterViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewExample.swift; sourceTree = "<group>"; };
+		DA6DB8D82F2FA552001781BD /* ConditionalViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalViewExample.swift; sourceTree = "<group>"; };
+		DA6DB8E02F2FA692001781BD /* StableIdentityViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableIdentityViewExample.swift; sourceTree = "<group>"; };
+		DA6DB8ED2F2FAB65001781BD /* ItemListViewIdentityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewIdentityTest.swift; sourceTree = "<group>"; };
 		DA6E0BBB2E4A32D0009B3778 /* OperationQueueTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OperationQueueTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA6E0BBC2E4A4BA5009B3778 /* RaceConditionAvoid.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RaceConditionAvoid.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA6E0D702E4CEE68009B3778 /* StackQueueAndHeap.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StackQueueAndHeap.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -1379,6 +1387,17 @@
 			path = "ViewBuilder Demo";
 			sourceTree = "<group>";
 		};
+		DA6DB8CC2F2FA3AC001781BD /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				DA6DB8ED2F2FAB65001781BD /* ItemListViewIdentityTest.swift */,
+				DA6DB8E02F2FA692001781BD /* StableIdentityViewExample.swift */,
+				DA6DB8D82F2FA552001781BD /* ConditionalViewExample.swift */,
+				DA6DB8CD2F2FA3B0001781BD /* CounterViewExample.swift */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
 		DA723C852F24D434009BEC1C /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -1930,6 +1949,7 @@
 		DAEEA2A92F2E44D100AE6218 /* SwiftUI-Architecture-And-View-Lifecycle */ = {
 			isa = PBXGroup;
 			children = (
+				DA6DB8CC2F2FA3AC001781BD /* Example */,
 				DAEEA2C42F2E507600AE6218 /* SwiftUIArchitectureAndViewLifeCycleLesson.swift */,
 				DAEEA2CA2F2E50BD00AE6218 /* SwiftUIArchitectureAndViewLifeCycleBootcamp.swift */,
 				DAEEA2CE2F2E510400AE6218 /* SwiftUIArchitectureAndViewLifeCycleCoordinator.swift */,
@@ -2145,6 +2165,7 @@
 				DA03DEFE2F2116A30080D104 /* ViewRecreatedDemo.swift in Sources */,
 				DABDF7B42E70466B00DEC7C6 /* DownloadTask.swift in Sources */,
 				DA37F99D2E8D93F60001599E /* CbDemoLoginContentView.swift in Sources */,
+				DA6DB8E12F2FA692001781BD /* StableIdentityViewExample.swift in Sources */,
 				DA37F9872E8D898B0001599E /* CbLoginResult.swift in Sources */,
 				DA8656C62F0F75750092426E /* GeometryReaderBootcamp.swift in Sources */,
 				DA8656C72F0F75750092426E /* GeometryReaderCoordinateSpaceBootcampCoordinator.swift in Sources */,
@@ -2165,6 +2186,7 @@
 				DAC35B3F2E9FED3F0019021D /* TextFieldModifiers.swift in Sources */,
 				DA6DB8B32F2F6FA2001781BD /* DashboardViewViewBuilderExample.swift in Sources */,
 				DA9615772F1D273400AEEB25 /* CustomTabBarAnimationDemo.swift in Sources */,
+				DA6DB8EE2F2FAB65001781BD /* ItemListViewIdentityTest.swift in Sources */,
 				DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */,
 				DAAA67262E6173FD004075B7 /* PickerBootcamp.swift in Sources */,
 				DA7BE0B22E80630A006821CE /* HomeViewProtocol.swift in Sources */,
@@ -2257,6 +2279,7 @@
 				DAC35AF32E9F88FA0019021D /* UserListViewModel.swift in Sources */,
 				DA5D71A02E40CC8300C78E40 /* AsyncAwaitBootcamp.swift in Sources */,
 				DA5D71432E3E4BF700C78E40 /* BackButton.swift in Sources */,
+				DA6DB8CE2F2FA3B0001781BD /* CounterViewExample.swift in Sources */,
 				DA60751D2EFE9A13002907E4 /* CodeBlockView.swift in Sources */,
 				DA5D71892E3FB05100C78E40 /* UserRowView.swift in Sources */,
 				DAFCDF6A2E630B2C00B97C00 /* ErrorBanner.swift in Sources */,
@@ -2281,6 +2304,7 @@
 				DA03DF122F21FA9A0080D104 /* DataFlowAndArchitectureLesson.swift in Sources */,
 				DAEBAE442DECC2D100082B1C /* GridBootcamp.swift in Sources */,
 				DA257F042F2E24DB0024DC9B /* BouncingText.swift in Sources */,
+				DA6DB8D92F2FA552001781BD /* ConditionalViewExample.swift in Sources */,
 				DA87A2122EB7ACF500749349 /* FakeStoreAuthRequest.swift in Sources */,
 				DA5164322E3CB57600642709 /* NavigationManager.swift in Sources */,
 				DA4726582EA7C31E000D596A /* AppTextStyleSize.swift in Sources */,
