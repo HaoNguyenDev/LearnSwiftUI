@@ -11,6 +11,7 @@ extension Route {
     enum BootcampListRouter: String, Routable {
         case swiftuiLayoutEngine
         case swiftuiArchitectureAndViewLifeCycle
+        case someViewAnyViewAndViewBuilder
         case stackViewBootcamp
         case alignmentAlignmentGuide
         case geometryReaderCoordinateSpace
@@ -79,6 +80,8 @@ struct BootcampListCoordinator: View, ScreenCoordinator {
                 navRoute.push(ScreenRoute.advancedAnimation, animate: true)
             case .swiftuiArchitectureAndViewLifeCycle:
                 navRoute.push(ScreenRoute.swiftuiArchitectureAndViewLifeCycle, animate: true)
+            case .someViewAnyViewAndViewBuilder:
+                navRoute.push(ScreenRoute.someViewAnyViewAndViewBuilder, animate: true)
             case .text:
                 navRoute.push(ScreenRoute.textBootcamp, animate: true)
             case .shape: break
@@ -99,6 +102,8 @@ extension BootcampListCoordinator {
             SwiftUILayoutEngineCoordinator(navRouter: navRoute)
         case .swiftuiArchitectureAndViewLifeCycle:
             SwiftUIArchitectureAndViewLifeCycleCoordinator(navRoute: navRoute)
+        case .someViewAnyViewAndViewBuilder:
+            SomeViewAnyViewAndViewBuilderCoordinator(navRoute: navRoute)
         case .stackViewBootcamp:
             StackViewBootcampCoordinator(navRouter: navRoute)
         case .alignmentAlignmentGuide:

@@ -7,6 +7,18 @@
 
 import SwiftUI
 
+extension View {
+    func demoTitle(_ title: String) -> some View {
+        Text(title)
+            .foregroundStyle(.white)
+            .frame(maxWidth: .infinity, minHeight: 50)
+            .background(.green)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .padding(.horizontal)
+    }
+}
+
+
 struct BootcampTemplateView: View {
     var gotoChildView: SingleResult<Route.BootcampTemplateRouter>?
     
