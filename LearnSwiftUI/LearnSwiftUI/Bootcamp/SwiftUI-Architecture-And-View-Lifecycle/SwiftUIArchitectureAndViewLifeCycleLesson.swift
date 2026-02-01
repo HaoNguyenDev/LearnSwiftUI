@@ -143,5 +143,148 @@ Opaque Types: some View
 // - No dynamic dispatch
 // - View diffing is O(1) instead of O(n)
 """, result: nil),
+                      Lesson(title: "View Lifecycle", code: """
+View Creation & Destruction
+
+Example:
+
+struct CounterViewExample: View {
+    @State private var count = 0
+    
+    init() {
+        debugPrint("🏗️ View struct created")
+        // Called MANY times - every render time!
+    }
+    
+    var body: some View {
+        debugPrint("🎨 Body evaluated")
+        return VStack {
+            Text("Count: (count)")
+            Button("Increment") {
+                count += 1
+            }
+        }
+    }
+}
+
+// Output when running:
+// 🏗️ View struct created
+// 🎨 Body evaluated
+// [User clicks button]
+// 🏗️ View struct created ← Create again!
+// 🎨 Body evaluated
+
+Important: View structs are created every time a render is performed, but:
+
+Structs are very cheap (stack allocation)
+State is managed separately by SwiftUI
+View lifetime ≠ State lifetime
+""", result: {
+        AnyView(ResultBlockView(content: {
+            CounterViewExample()
+        }))
+    }),
+                      Lesson(title: "View Identity", code: """
+// 1. STRUCTURAL IDENTITY (default)
+struct ConditionalViewExample: View {
+    @State private var showRed = true
+    
+    var body: some View {
+        debugPrint("🎨 ConditionalViewExample Body evaluated")
+        return VStack {
+            if showRed {
+                CustomCircleViewIdentityTest(.red) // Identity = position in tree
+                    .frame(height: 100)
+            } else {
+                CustomCircleViewIdentityTest(.blue) // DIFFERENT identity!
+                    .frame(height: 100)
+            }
+            
+            Button("Toggle") {
+                showRed.toggle()
+            }
+            .buttonStyle(.bordered)
+        }
+    }
+}
+// When toggle: Red circle destroyed, Blue circle created, new circle with new ID created
+
+struct CustomCircleViewIdentityTest: View {
+    @State private var viewID = UUID()
+    var background: Color
+    
+    init(_ background: Color) {
+        debugPrint("🏗️ CustomCircleViewIdentityTest View struct created")
+        // Called every render time!
+        self.background = background
+    }
+
+    var body: some View {
+        debugPrint("🎨 CustomCircleViewIdentityTest Body evaluated")
+        return Circle()
+            .fill(background)
+            .overlay {
+                Text("(viewID)")
+            }
+    }
+}
+
+""", result: {
+        AnyView(ResultBlockView(content: {
+            ConditionalViewExample()
+        }))
+    }),
+                      Lesson(title: "", code: """
+// 2. EXPLICIT IDENTITY with .id()
+struct StableIdentityViewExample: View {
+    @State private var showRed = true
+    init() {
+        debugPrint("🏗️ StableIdentityViewExample View struct created")
+        // Called every render time!
+    }
+    
+    var body: some View {
+        debugPrint("🎨 StableIdentityViewExample Body evaluated")
+        return VStack {
+            CustomCircleViewIdentityTest(showRed ? .red : .blue)
+//                .id(stableID) // Stable identity
+                .frame(height: 100)
+            Button("Toggle") {
+                showRed.toggle()
+            }
+            .buttonStyle(.bordered)
+        }
+    }
+}
+// When toggle: Same circle with the same ID, only color changed
+""", result: {
+        AnyView(ResultBlockView(content: {
+            StableIdentityViewExample()
+        }))
+    }),
+                      Lesson(title: "", code: """
+// 3. IDENTITY in List
+struct ItemListViewIdentityTest: View {
+    let items = ["A", "B", "C"]
+    
+    var body: some View {
+        ScrollView {
+            LazyVStack {
+                ForEach(items, id: .self) { item in
+                    Text(item)
+                        .background(FillShapeStyle())
+                }
+            }
+        }
+    }
+}
+// SwiftUI tracks each item by id
+""", result: {
+        AnyView(ResultBlockView(content: {
+            VStack {
+                ItemListViewIdentityTest()
+            }
+        }))
+    })
     ]
 }
