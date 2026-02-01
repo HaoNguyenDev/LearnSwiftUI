@@ -422,7 +422,11 @@ var tooManyViews: some View {
         }
     }
 
-""", result: nil),
+""", result: {
+        AnyView(ResultBlockView(content: {
+            OptionalViewExample(title: "Hello Swift")
+        }))
+    }),
     Lesson(title: "Alternatives to AnyView", code: """
 In many cases, you can avoid using AnyView:
 
