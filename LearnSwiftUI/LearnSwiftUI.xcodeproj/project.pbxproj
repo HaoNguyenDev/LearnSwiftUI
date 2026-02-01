@@ -943,7 +943,7 @@
 				DA723CE02F264D9D009BEC1C /* BootcampTemplate */,
 				DAA45E6E2EF9756300BC57E9 /* BootcampList */,
 				DA61C5522F0CC38100FD8181 /* SwiftUILayoutEngine */,
-				DAEEA2A92F2E44D100AE6218 /* SwiftUI-Architecture-AndView-Lifecycle */,
+				DAEEA2A92F2E44D100AE6218 /* SwiftUI-Architecture-And-View-Lifecycle */,
 				DA61C5DD2F0E17D300FD8181 /* Alignment-AlignmentGuide */,
 				DA8656C52F0F75750092426E /* GeometryReader-coordinateSpace */,
 				DA8656CB2F0F757B0092426E /* ScrollView-LazyContainers */,
@@ -1882,14 +1882,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		DAEEA2A92F2E44D100AE6218 /* SwiftUI-Architecture-AndView-Lifecycle */ = {
+		DAEEA2A92F2E44D100AE6218 /* SwiftUI-Architecture-And-View-Lifecycle */ = {
 			isa = PBXGroup;
 			children = (
 				DAEEA2C42F2E507600AE6218 /* SwiftUIArchitectureAndViewLifeCycleLesson.swift */,
 				DAEEA2CA2F2E50BD00AE6218 /* SwiftUIArchitectureAndViewLifeCycleBootcamp.swift */,
 				DAEEA2CE2F2E510400AE6218 /* SwiftUIArchitectureAndViewLifeCycleCoordinator.swift */,
 			);
-			path = "SwiftUI-Architecture-AndView-Lifecycle";
+			path = "SwiftUI-Architecture-And-View-Lifecycle";
 			sourceTree = "<group>";
 		};
 		DAFC16702F11240700D242D3 /* Demos */ = {
