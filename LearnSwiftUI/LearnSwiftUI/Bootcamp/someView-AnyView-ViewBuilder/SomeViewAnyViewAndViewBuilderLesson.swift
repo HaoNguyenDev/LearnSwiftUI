@@ -164,7 +164,6 @@ func makeConditionalView(show: Bool) -> some View {
 
 """, result: nil),
                       Lesson(title: "When to use @ViewBuilder?", code: """
-
 1. Create custom container views
 
 struct CustomCardWithViewBuilder<Content: View>: View {
@@ -201,6 +200,229 @@ CustomCardWithViewBuilder {
             }
         }))
     }),
+                      Lesson(title: "", code: """
+2. Create computed properties that returns multiple views.
+
+struct ProfileViewViewBuilderExample: View {
+    let isLoggedIn: Bool
+    
+    var body: some View {
+        VStack {
+            header
+            content
+        }
+    }
+    
+    @ViewBuilder
+    var header: some View {
+        if isLoggedIn {
+            Text("Welcome back!")
+            Image(systemName: "person.circle.fill")
+        } else {
+            Text("Please login")
+        }
+    }
+    
+    @ViewBuilder
+    var content: some View {
+        Text("Content here")
+        Divider()
+        Text("More content")
+    }
+}
+""", result: {
+        AnyView(
+            ResultBlockView(content: {
+                VStack(spacing: 20.0) {
+                    ProfileViewViewBuilderExample(isLoggedIn: false)
+                    ProfileViewViewBuilderExample(isLoggedIn: true)
+                }
+            })
+        )
+    }),
+                      Lesson(title: "", code: """
+3. Create helper functions to reuse UI
+
+struct DashboardViewViewBuilderExample: View { 
+    var body: some View { 
+        VStack { 
+            makeHeader() 
+            makeStats() 
+            makeFooter() 
+        } 
+    } 
+
+    @ViewBuilder 
+    func makeHeader() -> some View { 
+        Text("Dashboard") 
+            .font(.largeTitle) 
+        Text("Last updated: Now") 
+            .font(.caption) 
+    } 
+
+    @ViewBuilder 
+    func makeStats() -> some View { 
+        HStack { 
+            StatCard(title: "Users", value: "1.2K") 
+            StatCard(title: "Revenue", value: "$45K") 
+        } 
+    } 
+
+    @ViewBuilder 
+    func makeFooter() -> some View { 
+        Divider() 
+        Text("© 2024") 
+    }
+}
+""", result: {
+        AnyView(ResultBlockView(content: {
+            DashboardViewViewBuilderExample()
+        }))
+    }),
+                      Lesson(title: "", code: """
+4. Handle complex conditional rendering
+
+struct ContentView: View { 
+    let userRole: UserRole 
+
+    var body: some View { 
+        VStack { 
+            menuItems 
+        } 
+    } 
+
+    @ViewBuilder 
+    var menuItems: some View { 
+        Text("Home") 
+        Text("Profile") 
+
+        if userRole == .admin { 
+            Text("Admin Panel") 
+            Text("User Management") 
+        } else if userRole == .moderator { 
+            Text("Moderation Tools") 
+        } 
+
+        Text("Settings") 
+    }
+}
+""", result: nil),
+    Lesson(title: "Important Notes", code: """
+1. Limit of 10 views
+SwiftUI only supports a maximum of 10 child views directly within a @ViewBuilder block:
+
+@ViewBuilder
+var tooManyViews: some View {
+    Text("1")
+    Text("2")
+    Text("3")
+    Text("4")
+    Text("5")
+    Text("6")
+    Text("7")
+    Text("8")
+    Text("9")
+    Text("10")
+    Text("11") // ❌ Error: "Extra argument in call"
+}
+
+// Solution: Group views
+    @ViewBuilder
+    var fixedViews: some View {
+        Group {
+            Text("1")
+            Text("2")
+            // ... 8 views
+        }
+        Text("11") // ✅ OK
+    }
+
+""", result: nil),
+                      Lesson(title: "", code: """
+2. Cannot return directly
+
+    @ViewBuilder
+    func makeView() -> some View {
+        return Text("Hello") // ❌ Error: Cannot use 'return' with @ViewBuilder
+    }
+
+// Correct way:
+
+    @ViewBuilder
+    func makeView() -> some View {
+        Text("Hello") // ✅ No 'return' needed
+    }
+""", result: nil),
+                      Lesson(title: "", code: """
+3. Only supports certain statements
+
+    @ViewBuilder
+    func conditionalView(show: Bool) -> some View {
+        if show {
+            Text("Visible")
+        } else {
+            Text("Hidden")
+        }
+
+// ✅ if-else OK
+
+// ❌ NOT supported:
+// - for-in loops
+// - while loops
+// - do-catch
+// - guard
+}
+
+// Solution for loops: Use ForEach
+    @ViewBuilder
+    func listView(items: [String]) -> some View {
+        ForEach(items, id: .self) { item in
+            Text(item)
+        }
+    }
+
+""", result: nil),
+                      Lesson(title: "", code: """
+4. Switch statements. statements
+
+    enum ViewType { 
+        case home, profile, settings
+    }
+
+    @ViewBuilder
+    func makeView(for type: ViewType) -> some View { 
+        switch type { 
+            case .home: 
+                Text("Home") 
+                Image(systemName: "house") 
+            case .profile: 
+                Text("Profile") 
+                Image(systemName: "person") 
+            case .settings: 
+                Text("Settings") 
+                Image(systemName: "gear") 
+        }
+    }
+""", result: nil),
+                      Lesson(title: "", code: """
+5. Optional views
+
+    struct OptionalView: View { 
+        let title: String? 
+
+        var body: some View { 
+            VStack { 
+                // Method 1: Use if-let 
+                if let title = title { 
+                    Text(title) 
+                } 
+                // Method 2: Inline (no need for separate @ViewBuilder) 
+                title.map { Text($0) } 
+            } 
+        }
+    }
+
+""", result: nil),
     Lesson(title: "Alternatives to AnyView", code: """
 In many cases, you can avoid using AnyView:
 
