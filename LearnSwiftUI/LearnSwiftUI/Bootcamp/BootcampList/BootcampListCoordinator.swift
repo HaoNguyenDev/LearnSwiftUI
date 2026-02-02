@@ -74,7 +74,7 @@ struct BootcampListCoordinator: View, ScreenCoordinator {
     
     @ViewBuilder
     func getView() -> some View {
-        BootcampListView(selecteRoute: { bootcamp in
+        BootcampListView(selectedRoute: { bootcamp in
             debugPrint("\(bootcamp.rawValue)")
             navRoute.push(bootcamp, animate: true)
         })
