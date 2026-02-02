@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension Route {
-    enum SwiftUILayoutEngineRouter: Routable {
+    enum SwiftUILayoutEngineRoute: Routable {
         case subviewExample
         
         var id: String {
@@ -21,7 +21,7 @@ extension Route {
 }
 
 struct SwiftUILayoutEngineCoordinator: View, ScreenCoordinator {
-    typealias ScreenRoute = Route.SwiftUILayoutEngineRouter
+    typealias ScreenRoute = Route.SwiftUILayoutEngineRoute
     var navRoute: any NavRouterProtocol
     
     init(navRouter: any NavRouterProtocol) {
@@ -43,7 +43,7 @@ struct SwiftUILayoutEngineCoordinator: View, ScreenCoordinator {
 }
 
 extension SwiftUILayoutEngineCoordinator {
-    func viewForRoute(route: Route.SwiftUILayoutEngineRouter) -> some View {
+    func viewForRoute(route: Route.SwiftUILayoutEngineRoute) -> some View {
         switch route {
         case .subviewExample:
             EmptyView()
