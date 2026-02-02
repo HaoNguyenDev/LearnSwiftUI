@@ -68,6 +68,29 @@ enum SwiftUILayoutEngineLessons {
         stack direction
         spacing
     
+    🔁 Step 4️⃣ — Rendering
+        SwiftUI creates render tree
+        Sends draw commands to GPU
+        Only changed parts are redrawn
+    
+    View Tree vs Render Tree
+    
+    // VIEW TREE (logical)
+    VStack {
+        Text("Title")
+        HStack {
+            Image("icon")
+            Text("Subtitle")
+        }
+    }
+
+    // RENDER TREE (actual drawing)
+    [
+        DrawText("Title", at: CGPoint(x: 100, y: 50)),
+        DrawImage("icon", at: CGPoint(x: 100, y: 100)),
+        DrawText("Subtitle", at: CGPoint(x: 150, y: 100))
+    ]
+    
     📌 Senior Interview
     Is SwiftUI layout a push or pull system?
     
