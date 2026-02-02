@@ -325,6 +325,91 @@ struct GoodApproach: View {
 3. LAYOUT CALCULATION
         ↓
 4. RENDERING
+""", result: nil),
+                      Lesson(title: "Question???", code: """
+Q: How does view identity work?
+A:
+Structural identity: Based on position in the view tree
+Explicit identity: Uses the .id() modifier
+Identity determines whether the view is updated or recreated
+Important for animations and state preservation
+""", result: nil),
+                      Lesson(title: "", code: """
+Q: Differentiate between View tree and Render tree
+A:
+View tree: Logical hierarchy (VStack, HStack, Text...)
+Render tree: Actual rendering commands (DrawText, DrawShape...) SwiftUI converts view tree → render tree
+Optimization occurs at this conversion step
+""", result: nil),
+                      Lesson(title: "", code: """
+Q: How does the SwiftUI diffing algorithm work?
+A:
+SwiftUI uses structural diffing:
+// 1. Compare view types
+// 2. If same type, compare properties
+// 3. If different type, recreate
+// 4. Use identity for tracking
+
+// Example:
+
+ForEach(items, id: .id) { item in 
+    ItemView(item: item)
+}
+
+// SwiftUI tracks each ItemView by item.id
+// When items change: add/remove/move operations
+""", result: nil),
+                      Lesson(title: "", code: """
+Q: Why should you not use AnyView?
+A:
+Type erasure → takes compile-time type info
+SwiftUI cannot optimize view diffing
+Cannot inline code
+Performance penalty: dynamic dispatch
+Only use when really needed (very rare)
+""", result: nil),
+                      Lesson(title: "", code: """
+Q: How does ViewBuilder transform code?
+A:
+// Input:
+
+@ViewBuilder 
+var content: some View { 
+    Text("A") 
+    Text("B") 
+    if condition { 
+        Text("C") 
+    }
+}
+
+// Transform into:
+var content: some View { 
+    _ConditionalContent( 
+        TupleView((Text("A"), Text("B"))),
+        condition ? Text("C") : nil 
+    )
+}
+""", result: nil),
+                      Lesson(title: "", code: """
+Q: How to debug view update performance?
+A:
+1. Use Self._printChanges()
+
+    struct MyView: View { 
+        @State private var count = 0 
+        var body: some View { 
+            let _ = Self._printChanges() 
+            Text("(count)") 
+        }
+    }
+
+// 2. Instruments: SwiftUI profiler
+// 3. View body execution counter
+// 4. TimelineView for monitoring
+""", result: nil),
+                      Lesson(title: "", code: """
+""", result: nil),
+                      Lesson(title: "", code: """
 """, result: nil)
     ]
 }
