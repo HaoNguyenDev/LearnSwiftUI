@@ -10,7 +10,7 @@ import SwiftUI
 struct BootcampListView: View {
     @Environment(\.theme) var theme
     
-    var bootcampOnTap: SingleResult<BootcampEnums>?
+    var selecteRoute: SingleResult<Route.BootcampListRoute>?
     
     var body: some View {
         NavigationView {
@@ -22,14 +22,14 @@ struct BootcampListView: View {
     private var bootcampList: some View {
         VStack {
             List {
-                ForEach(BootcampEnums.allCases, id: \.self) { bootcamp in
+                ForEach(Route.BootcampListRoute.allCases, id: \.self) { bootcamp in
                     bootcampItem(bootcamp: bootcamp)
                 }
             }
         }
     }
     
-    private func bootcampItem(bootcamp: BootcampEnums) -> some View {
+    private func bootcampItem(bootcamp: Route.BootcampListRoute) -> some View {
         VStack {
             Text(bootcamp.rawValue)
                 .font(theme.font.bold(ofSize: 18.0))
@@ -40,8 +40,7 @@ struct BootcampListView: View {
 //        .background(Color.gray)
         .contentShape(Rectangle())
         .onTapGesture {
-            guard let bootcampOnTap else { return }
-            bootcampOnTap(bootcamp)
+            selecteRoute?(bootcamp)
         }
     }
 }
