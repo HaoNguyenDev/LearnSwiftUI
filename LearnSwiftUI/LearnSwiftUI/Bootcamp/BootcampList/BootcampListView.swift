@@ -10,22 +10,25 @@ import SwiftUI
 enum BootcampSection: String, Identifiable, CaseIterable {
     case fundamentals = "FUNDAMENTALS"
     case advancedStateAndDataFlow = "ADVANCED STATE & DATA FLOW"
+    case layoutAndAnimation = "LAYOUT AND ANIMATION"
     case others = "Others"
     
     var id: String { rawValue }
     var title: String { rawValue }
     var routes: [Route.BootcampListRoute] {
         switch self {
-        case .fundamentals: [Route.BootcampListRoute.swiftuiLayoutEngine,
-                             Route.BootcampListRoute.swiftuiArchitectureAndViewLifeCycle,
-                             Route.BootcampListRoute.viewIdentity,
-                             Route.BootcampListRoute.someViewAnyViewAndViewBuilder,
-                             Route.BootcampListRoute.renderingPerformance,
-                             Route.BootcampListRoute.equatableview]
+        case .fundamentals:
+            [Route.BootcampListRoute.swiftuiLayoutEngine,
+             Route.BootcampListRoute.swiftuiArchitectureAndViewLifeCycle,
+             Route.BootcampListRoute.viewIdentity,
+             Route.BootcampListRoute.someViewAnyViewAndViewBuilder,
+             Route.BootcampListRoute.renderingPerformance,
+             Route.BootcampListRoute.equatableview]
         case .advancedStateAndDataFlow: [Route.BootcampListRoute.dataFlowAndArchitecture]
+        case .layoutAndAnimation:
+            [Route.BootcampListRoute.geometryReaderCoordinateSpace]
         case .others: [Route.BootcampListRoute.stackView,
                        Route.BootcampListRoute.alignmentAlignmentGuide,
-                       Route.BootcampListRoute.geometryReaderCoordinateSpace,
                        Route.BootcampListRoute.scrollViewLazyContainers,
                        Route.BootcampListRoute.safeAreaInsets,
                        Route.BootcampListRoute.animationLayoutInteraction,
@@ -71,7 +74,7 @@ struct BootcampListView: View {
                                     RoundedRectangle(cornerRadius: 10)
                                 )
                                 .padding([.leading])
-                                
+                            
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                     }
