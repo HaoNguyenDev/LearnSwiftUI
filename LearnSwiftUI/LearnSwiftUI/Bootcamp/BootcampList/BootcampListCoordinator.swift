@@ -8,29 +8,54 @@
 import SwiftUI
 
 extension Route {
-    enum BootcampListRouter: String, Routable {
+    enum BootcampListRoute: String, CaseIterable, Routable {
         case swiftuiLayoutEngine
         case swiftuiArchitectureAndViewLifeCycle
+        case viewIdentity
         case someViewAnyViewAndViewBuilder
-        case stackViewBootcamp
+        case stackView
         case alignmentAlignmentGuide
         case geometryReaderCoordinateSpace
         case scrollViewLazyContainers
         case safeAreaInsets
         case animationLayoutInteraction
-        case viewIndentity
         case dataFlowAndArchitecture
-        case textBootcamp
         case renderingPerformance
         case equatableview
         case navigation
         case advancedAnimation
+        case text
+        case shape
+        case color
         var id: String { self.rawValue }
+        
+        var title: String {
+            switch self {
+            case .swiftuiLayoutEngine: "SwiftUI Layout Engine"
+            case .swiftuiArchitectureAndViewLifeCycle: "SwiftUI Architecture - View LifeCycle"
+            case .someViewAnyViewAndViewBuilder: "some View - AnyView - @ViewBuilder"
+            case .stackView: "Stack View"
+            case .alignmentAlignmentGuide: "Alignment-AlignmentGuide"
+            case .geometryReaderCoordinateSpace: "GeometryReader-CoordinateSpace"
+            case .scrollViewLazyContainers: "ScrollView-Lazy containers"
+            case .safeAreaInsets: "SafeArea & Insets"
+            case .animationLayoutInteraction: "Animation-Layout Interaction"
+            case .viewIdentity: "View Identity & Diffing System"
+            case .dataFlowAndArchitecture: "One-Way Data Flow and Architecture"
+            case .renderingPerformance: "Rendering & Performance"
+            case .equatableview: "EquatableView"
+            case .navigation: "Navigation"
+            case .advancedAnimation: "Advanced Animation"
+            case .text: "Text"
+            case .shape: "Shape"
+            case .color: "Color"
+            }
+        }
     }
 }
 
 struct BootcampListCoordinator: View, ScreenCoordinator {
-    typealias ScreenRoute = Route.BootcampListRouter
+    typealias ScreenRoute = Route.BootcampListRoute
     var navRoute: any NavRouterProtocol
     
     init(navRouter: any NavRouterProtocol) {
@@ -49,47 +74,9 @@ struct BootcampListCoordinator: View, ScreenCoordinator {
     
     @ViewBuilder
     func getView() -> some View {
-        BootcampListView(bootcampOnTap: { bootcamp in
+        BootcampListView(selecteRoute: { bootcamp in
             debugPrint("\(bootcamp.rawValue)")
-            switch bootcamp {
-            case .swiftuiLayoutSystem:
-                navRoute.push(ScreenRoute.swiftuiLayoutEngine, animate: true)
-            case .stackView:
-                navRoute.push(ScreenRoute.stackViewBootcamp, animate: true)
-            case .alignmentAlignmentGuide:
-                navRoute.push(ScreenRoute.alignmentAlignmentGuide, animate: true)
-            case .geometryReaderCoordinateSpace:
-                navRoute.push(ScreenRoute.geometryReaderCoordinateSpace, animate: true)
-            case .scrollViewLazyContainers:
-                navRoute.push(ScreenRoute.scrollViewLazyContainers, animate: true)
-            case .safeAreaInsets:
-                navRoute.push(ScreenRoute.safeAreaInsets, animate: true)
-            case .animationLayoutInteraction:
-                navRoute.push(ScreenRoute.animationLayoutInteraction, animate: true)
-            case .viewIdentity:
-                navRoute.push(ScreenRoute.viewIndentity, animate: true)
-            case .dataFlowAndArchitecture:
-                navRoute.push(ScreenRoute.dataFlowAndArchitecture, animate: true)
-            case .renderingPerformance:
-                navRoute.push(ScreenRoute.renderingPerformance, animate: true)
-            case .equatableview:
-                navRoute.push(ScreenRoute.equatableview, animate: true)
-            case .naviagtion:
-                navRoute.push(ScreenRoute.navigation, animate: true)
-            case .advancedAnimation:
-                navRoute.push(ScreenRoute.advancedAnimation, animate: true)
-            case .swiftuiArchitectureAndViewLifeCycle:
-                navRoute.push(ScreenRoute.swiftuiArchitectureAndViewLifeCycle, animate: true)
-            case .someViewAnyViewAndViewBuilder:
-                navRoute.push(ScreenRoute.someViewAnyViewAndViewBuilder, animate: true)
-            case .text:
-                navRoute.push(ScreenRoute.textBootcamp, animate: true)
-            case .shape: break
-                // TODO:
-            case .color: break
-                // TODO:
-            }
-            
+            navRoute.push(bootcamp, animate: true)
         })
     }
 }
@@ -104,7 +91,7 @@ extension BootcampListCoordinator {
             SwiftUIArchitectureAndViewLifeCycleCoordinator(navRoute: navRoute)
         case .someViewAnyViewAndViewBuilder:
             SomeViewAnyViewAndViewBuilderCoordinator(navRoute: navRoute)
-        case .stackViewBootcamp:
+        case .stackView:
             StackViewBootcampCoordinator(navRouter: navRoute)
         case .alignmentAlignmentGuide:
             AlignmentBootcampCoordinator(navRouter: navRoute)
@@ -116,7 +103,7 @@ extension BootcampListCoordinator {
             SafeAreaInsetsBootcampCoordinator(navRouter: navRoute)
         case .animationLayoutInteraction:
             AnimationLayoutInteractionBootcampCoordinator(navRouter: navRoute)
-        case .viewIndentity:
+        case .viewIdentity:
             ViewIdentityBootcampCoordinator(navRouter: navRoute)
         case .dataFlowAndArchitecture:
             DataFlowAndArchitectureCoordinator(navRouter: navRoute)
@@ -128,8 +115,10 @@ extension BootcampListCoordinator {
             NavigationBootcampCoordinator(navRouter: navRoute)
         case .advancedAnimation:
             AdvancedAnimationBootcampCoordinator(navRouter: navRoute)
-        case .textBootcamp:
+        case .text:
             TextBootcampCoordinator(navRouter: navRoute)
+        case .shape, .color:
+            EmptyView()
         }
     }
 }

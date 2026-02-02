@@ -232,7 +232,6 @@
 		DAA45E6B2EF974A000BC57E9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E6A2EF974A000BC57E9 /* AppCoordinator.swift */; };
 		DAA45E712EF9759100BC57E9 /* BootcampListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E702EF9759100BC57E9 /* BootcampListCoordinator.swift */; };
 		DAA45E742EF976EA00BC57E9 /* BootcampListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E732EF976EA00BC57E9 /* BootcampListView.swift */; };
-		DAA45E772EF977B100BC57E9 /* BootcampEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E762EF977B100BC57E9 /* BootcampEnums.swift */; };
 		DAA609672F12328E00B625CE /* SafeAreaInsetsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA609662F12328E00B625CE /* SafeAreaInsetsBootcamp.swift */; };
 		DAA6096A2F1232D700B625CE /* SafeAreaInsetsLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA609692F1232D700B625CE /* SafeAreaInsetsLessons.swift */; };
 		DAA6096F2F12348000B625CE /* SafeAreaInsetsBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA6096E2F12348000B625CE /* SafeAreaInsetsBootcampCoordinator.swift */; };
@@ -574,7 +573,6 @@
 		DAA45E6A2EF974A000BC57E9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		DAA45E702EF9759100BC57E9 /* BootcampListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampListCoordinator.swift; sourceTree = "<group>"; };
 		DAA45E732EF976EA00BC57E9 /* BootcampListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampListView.swift; sourceTree = "<group>"; };
-		DAA45E762EF977B100BC57E9 /* BootcampEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampEnums.swift; sourceTree = "<group>"; };
 		DAA609662F12328E00B625CE /* SafeAreaInsetsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsetsBootcamp.swift; sourceTree = "<group>"; };
 		DAA609692F1232D700B625CE /* SafeAreaInsetsLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsetsLessons.swift; sourceTree = "<group>"; };
 		DAA6096E2F12348000B625CE /* SafeAreaInsetsBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsetsBootcampCoordinator.swift; sourceTree = "<group>"; };
@@ -1701,7 +1699,6 @@
 			children = (
 				DAA45E702EF9759100BC57E9 /* BootcampListCoordinator.swift */,
 				DAA45E732EF976EA00BC57E9 /* BootcampListView.swift */,
-				DAA45E762EF977B100BC57E9 /* BootcampEnums.swift */,
 			);
 			path = BootcampList;
 			sourceTree = "<group>";
@@ -2237,7 +2234,6 @@
 				DAED677E2E20E45C00309382 /* StateObjectBootcamp.swift in Sources */,
 				DA03DFB72F23BCD50080D104 /* RenderignPerformanceBootcampCoordinator.swift in Sources */,
 				DAE365DB2E9CE2EE005EF803 /* UserSettings.swift in Sources */,
-				DAA45E772EF977B100BC57E9 /* BootcampEnums.swift in Sources */,
 				DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */,
 				DA7BF5E62E98F2B400224BCF /* RswiftResources+ImageResource.swift in Sources */,
 				DAA709142E75D553006F8E70 /* ThaiPaymentService.swift in Sources */,
