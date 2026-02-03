@@ -33,6 +33,12 @@
 		DA257F0C2F2E264C0024DC9B /* ColorRotator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA257F0B2F2E264C0024DC9B /* ColorRotator.swift */; };
 		DA278EE42F31A97D0079AF56 /* CustomNavigationTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278EE32F31A97D0079AF56 /* CustomNavigationTitle.swift */; };
 		DA278EFE2F31D04D0079AF56 /* NavBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278EFD2F31D04D0079AF56 /* NavBackButton.swift */; };
+		DA278F2F2F31DE920079AF56 /* GoodCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278F2E2F31DE920079AF56 /* GoodCalculator.swift */; };
+		DA278F3C2F31DFA40079AF56 /* BindingExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278F3B2F31DFA40079AF56 /* BindingExample.swift */; };
+		DA278F582F31E4AB0079AF56 /* MyBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278F572F31E4AB0079AF56 /* MyBinding.swift */; };
+		DA278F5C2F31E6930079AF56 /* TemperatureViewCustomBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278F5B2F31E6930079AF56 /* TemperatureViewCustomBinding.swift */; };
+		DA278F622F31E7400079AF56 /* ParentAndChildCommunicationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278F612F31E7400079AF56 /* ParentAndChildCommunicationExample.swift */; };
+		DA278F6B2F31FACB0079AF56 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278F6A2F31FACB0079AF56 /* Binding.swift */; };
 		DA28F59F2F1F786000079318 /* ViewIdentityLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F59E2F1F786000079318 /* ViewIdentityLessons.swift */; };
 		DA28F5A52F1F78BE00079318 /* ViewIdentityBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F5A42F1F78BE00079318 /* ViewIdentityBootcamp.swift */; };
 		DA28F5A82F1F798700079318 /* ViewIdentityBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F5A72F1F798700079318 /* ViewIdentityBootcampCoordinator.swift */; };
@@ -365,6 +371,12 @@
 		DA2745852E61FB2C000B436D /* Final.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Final.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA278EE32F31A97D0079AF56 /* CustomNavigationTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationTitle.swift; sourceTree = "<group>"; };
 		DA278EFD2F31D04D0079AF56 /* NavBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBackButton.swift; sourceTree = "<group>"; };
+		DA278F2E2F31DE920079AF56 /* GoodCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodCalculator.swift; sourceTree = "<group>"; };
+		DA278F3B2F31DFA40079AF56 /* BindingExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingExample.swift; sourceTree = "<group>"; };
+		DA278F572F31E4AB0079AF56 /* MyBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBinding.swift; sourceTree = "<group>"; };
+		DA278F5B2F31E6930079AF56 /* TemperatureViewCustomBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewCustomBinding.swift; sourceTree = "<group>"; };
+		DA278F612F31E7400079AF56 /* ParentAndChildCommunicationExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentAndChildCommunicationExample.swift; sourceTree = "<group>"; };
+		DA278F6A2F31FACB0079AF56 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
 		DA28F59E2F1F786000079318 /* ViewIdentityLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentityLessons.swift; sourceTree = "<group>"; };
 		DA28F5A42F1F78BE00079318 /* ViewIdentityBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentityBootcamp.swift; sourceTree = "<group>"; };
 		DA28F5A72F1F798700079318 /* ViewIdentityBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentityBootcampCoordinator.swift; sourceTree = "<group>"; };
@@ -781,6 +793,18 @@
 			path = matchedGeometryEffect;
 			sourceTree = "<group>";
 		};
+		DA278F272F31DE810079AF56 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				DA278F572F31E4AB0079AF56 /* MyBinding.swift */,
+				DA278F2E2F31DE920079AF56 /* GoodCalculator.swift */,
+				DA278F3B2F31DFA40079AF56 /* BindingExample.swift */,
+				DA278F5B2F31E6930079AF56 /* TemperatureViewCustomBinding.swift */,
+				DA278F612F31E7400079AF56 /* ParentAndChildCommunicationExample.swift */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
 		DA28F59D2F1F781B00079318 /* View-Identity */ = {
 			isa = PBXGroup;
 			children = (
@@ -1068,6 +1092,7 @@
 				DA58DD9B2E9E5FF90042D1AD /* String+Extensions.swift */,
 				DAC35B152E9FCCDA0019021D /* Array+Extensions.swift */,
 				DAC97E272EA3C22700F8A22F /* Double+Extensions.swift */,
+				DA278F6A2F31FACB0079AF56 /* Binding.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1918,6 +1943,7 @@
 		DACD47DC2F31A1D4007A6D06 /* State-Management-Deep-Dive */ = {
 			isa = PBXGroup;
 			children = (
+				DA278F272F31DE810079AF56 /* Example */,
 				DACD47E12F31A205007A6D06 /* StateManagementDeepDiveLesson.swift */,
 				DACD47E72F31A23B007A6D06 /* StateManagementDeepDiveBootcamp.swift */,
 				DACD47EB2F31A2A2007A6D06 /* StateManagementDeepDiveCoordinator.swift */,
@@ -2123,6 +2149,7 @@
 				DA37F9822E8D88FE0001599E /* CbLoginErrors.swift in Sources */,
 				DA7BE0A82E806048006821CE /* LoginRouter.swift in Sources */,
 				DAA7091C2E75D85F006F8E70 /* PaymentView.swift in Sources */,
+				DA278F5C2F31E6930079AF56 /* TemperatureViewCustomBinding.swift in Sources */,
 				DA37F9922E8D8E100001599E /* CbLoginViewController.swift in Sources */,
 				DA8748992E6B007700B189F3 /* WeatherDataPill.swift in Sources */,
 				DA7BF5C92E98EC2000224BCF /* ThemeProtocol.swift in Sources */,
@@ -2181,6 +2208,7 @@
 				DA60751A2EFE99C2002907E4 /* CodeExample.swift in Sources */,
 				DA39793F2E9BE5BD00838584 /* ImageStylingModifier.swift in Sources */,
 				DA8748972E6B007100B189F3 /* WeatherCard.swift in Sources */,
+				DA278F6B2F31FACB0079AF56 /* Binding.swift in Sources */,
 				DA5D71982E3FBCBA00C78E40 /* GithubNetworkService.swift in Sources */,
 				DAEBAE3E2DEB149C00082B1C /* InitializerBootcamp.swift in Sources */,
 				DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */,
@@ -2219,6 +2247,7 @@
 				DA6DB8EE2F2FAB65001781BD /* ItemListViewIdentityTest.swift in Sources */,
 				DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */,
 				DAAA67262E6173FD004075B7 /* PickerBootcamp.swift in Sources */,
+				DA278F582F31E4AB0079AF56 /* MyBinding.swift in Sources */,
 				DA7BE0B22E80630A006821CE /* HomeViewProtocol.swift in Sources */,
 				DAFC169A2F113AFA00D242D3 /* MeasureSizeViewDemo.swift in Sources */,
 				DAFC16842F11362C00D242D3 /* ParallaxViewDemo.swift in Sources */,
@@ -2268,6 +2297,7 @@
 				DA03DFB72F23BCD50080D104 /* RenderignPerformanceBootcampCoordinator.swift in Sources */,
 				DAE365DB2E9CE2EE005EF803 /* UserSettings.swift in Sources */,
 				DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */,
+				DA278F2F2F31DE920079AF56 /* GoodCalculator.swift in Sources */,
 				DA7BF5E62E98F2B400224BCF /* RswiftResources+ImageResource.swift in Sources */,
 				DAA709142E75D553006F8E70 /* ThaiPaymentService.swift in Sources */,
 				DA723CE62F264DBB009BEC1C /* BootcampTemplateLesson.swift in Sources */,
@@ -2285,6 +2315,7 @@
 				DA8656D72F0F76820092426E /* ScrollViewLazyContainersBootcampCoordinator.swift in Sources */,
 				DA61C5B22F0D3A7100FD8181 /* StackViewLessons.swift in Sources */,
 				DA278EE42F31A97D0079AF56 /* CustomNavigationTitle.swift in Sources */,
+				DA278F622F31E7400079AF56 /* ParentAndChildCommunicationExample.swift in Sources */,
 				DA723CED2F264E7D009BEC1C /* BootcampTemplateCoordinator.swift in Sources */,
 				DA7BF6722E992DEF00224BCF /* HTextField.swift in Sources */,
 				DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */,
@@ -2338,6 +2369,7 @@
 				DA6DB8D92F2FA552001781BD /* ConditionalViewExample.swift in Sources */,
 				DA87A2122EB7ACF500749349 /* FakeStoreAuthRequest.swift in Sources */,
 				DA5164322E3CB57600642709 /* NavigationManager.swift in Sources */,
+				DA278F3C2F31DFA40079AF56 /* BindingExample.swift in Sources */,
 				DA4726582EA7C31E000D596A /* AppTextStyleSize.swift in Sources */,
 				DA6DB8BD2F2F9DDF001781BD /* OptionalViewExample.swift in Sources */,
 				DA4F7EF12E9A6B6D001CB7B2 /* HButtonStyle.swift in Sources */,
