@@ -12,6 +12,7 @@ extension Route {
         case swiftuiLayoutEngine
         case swiftuiArchitectureAndViewLifeCycle
         case viewIdentity
+        case stateManagementDeepDive
         case someViewAnyViewAndViewBuilder
         case stackView
         case alignmentAlignmentGuide
@@ -27,12 +28,13 @@ extension Route {
         case text
         case shape
         case color
-        var id: String { self.rawValue }
+        var id: String { rawValue }
         
         var title: String {
             switch self {
             case .swiftuiLayoutEngine: "SwiftUI Layout Engine"
             case .swiftuiArchitectureAndViewLifeCycle: "SwiftUI Architecture - View LifeCycle"
+            case .stateManagementDeepDive: "State Management Deep Dive (@State, @Binding)"
             case .someViewAnyViewAndViewBuilder: "some View - AnyView - @ViewBuilder"
             case .stackView: "Stack View"
             case .alignmentAlignmentGuide: "Alignment-AlignmentGuide"
@@ -63,13 +65,14 @@ struct BootcampListCoordinator: View, ScreenCoordinator {
     }
     
     var body: some View {
-        getView()
-            .navigationDestination(for: ScreenRoute.self) { router in
-                viewForRoute(route: router)
-            }
-            .toolbar(.hidden, for: .bottomBar)
-            .toolbar(.hidden, for: .tabBar)
-            .navigationBarBackButtonHidden(true)
+            getView()
+                .navigationBarTitle("SwiftUI Bootcamp")
+                .navigationDestination(for: ScreenRoute.self) { router in
+                    viewForRoute(route: router)
+                }
+                .toolbar(.hidden, for: .bottomBar)
+                .toolbar(.hidden, for: .tabBar)
+                .navigationBarBackButtonHidden(true)
     }
     
     @ViewBuilder
@@ -91,6 +94,10 @@ extension BootcampListCoordinator {
             SwiftUIArchitectureAndViewLifeCycleCoordinator(navRoute: navRoute)
         case .someViewAnyViewAndViewBuilder:
             SomeViewAnyViewAndViewBuilderCoordinator(navRoute: navRoute)
+        case .viewIdentity:
+            ViewIdentityBootcampCoordinator(navRouter: navRoute)
+        case .stateManagementDeepDive:
+            StateManagementDeepDiveCoordinator(navRoute: navRoute)
         case .stackView:
             StackViewBootcampCoordinator(navRouter: navRoute)
         case .alignmentAlignmentGuide:
@@ -103,8 +110,6 @@ extension BootcampListCoordinator {
             SafeAreaInsetsBootcampCoordinator(navRouter: navRoute)
         case .animationLayoutInteraction:
             AnimationLayoutInteractionBootcampCoordinator(navRouter: navRoute)
-        case .viewIdentity:
-            ViewIdentityBootcampCoordinator(navRouter: navRoute)
         case .dataFlowAndArchitecture:
             DataFlowAndArchitectureCoordinator(navRouter: navRoute)
         case .renderingPerformance:

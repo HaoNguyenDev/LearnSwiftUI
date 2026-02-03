@@ -23,6 +23,7 @@ enum BootcampSection: String, Identifiable, CaseIterable {
              Route.BootcampListRoute.viewIdentity,
              Route.BootcampListRoute.someViewAnyViewAndViewBuilder,
              Route.BootcampListRoute.renderingPerformance,
+             Route.BootcampListRoute.stateManagementDeepDive,
              Route.BootcampListRoute.equatableview]
         case .advancedStateAndDataFlow: [Route.BootcampListRoute.dataFlowAndArchitecture]
         case .layoutAndAnimation:
@@ -53,10 +54,7 @@ struct BootcampListView: View {
     var selectedRoute: SingleResult<Route.BootcampListRoute>?
     
     var body: some View {
-        NavigationView {
             bootcampList
-                .navigationBarTitle("SwiftUI Bootcamp List")
-        }
     }
     
     private var bootcampList: some View {
@@ -72,15 +70,15 @@ struct BootcampListView: View {
                                 .padding()
                                 .background(
                                     RoundedRectangle(cornerRadius: 10)
+                                        .fill(.black)
                                 )
-                                .padding([.leading])
-                            
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                     }
                 }
             }
         }
+        .padding(.horizontal, 8)
     }
 }
 
@@ -104,7 +102,6 @@ extension BootcampListView {
             .frame(maxWidth: .infinity, minHeight: 50)
             .background(.green)
             .clipShape(RoundedRectangle(cornerRadius: 10))
-            .padding(.horizontal)
     }
 }
 #Preview {
