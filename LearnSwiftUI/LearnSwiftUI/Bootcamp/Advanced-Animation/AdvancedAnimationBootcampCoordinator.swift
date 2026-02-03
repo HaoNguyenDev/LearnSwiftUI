@@ -40,12 +40,12 @@ struct AdvancedAnimationBootcampCoordinator: View, ScreenCoordinator {
     }
     
     var body: some View {
-        getView()
-            .navigationTitle("Advanced Animation")
+        contentView
+            .customNavigationTitle("Advanced Animation")
     }
     
     @ViewBuilder
-    private func getView() -> some View {
+    private var contentView: some View {
         AdvancedAnimationBootcamp(gotoDemo: { demo in
             navRoute.push(demo, animate: true)
         })

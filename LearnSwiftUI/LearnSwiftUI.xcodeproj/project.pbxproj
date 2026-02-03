@@ -31,6 +31,7 @@
 		DA257EFC2F2E0BAB0024DC9B /* TimelineAnimationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA257EFB2F2E0BAB0024DC9B /* TimelineAnimationExample.swift */; };
 		DA257F042F2E24DB0024DC9B /* BouncingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA257F032F2E24DB0024DC9B /* BouncingText.swift */; };
 		DA257F0C2F2E264C0024DC9B /* ColorRotator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA257F0B2F2E264C0024DC9B /* ColorRotator.swift */; };
+		DA278EE42F31A97D0079AF56 /* CustomNavigationTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278EE32F31A97D0079AF56 /* CustomNavigationTitle.swift */; };
 		DA28F59F2F1F786000079318 /* ViewIdentityLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F59E2F1F786000079318 /* ViewIdentityLessons.swift */; };
 		DA28F5A52F1F78BE00079318 /* ViewIdentityBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F5A42F1F78BE00079318 /* ViewIdentityBootcamp.swift */; };
 		DA28F5A82F1F798700079318 /* ViewIdentityBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F5A72F1F798700079318 /* ViewIdentityBootcampCoordinator.swift */; };
@@ -361,6 +362,7 @@
 		DA257F0B2F2E264C0024DC9B /* ColorRotator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRotator.swift; sourceTree = "<group>"; };
 		DA2745842E61E8D0000B436D /* SingletonPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SingletonPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA2745852E61FB2C000B436D /* Final.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Final.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DA278EE32F31A97D0079AF56 /* CustomNavigationTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationTitle.swift; sourceTree = "<group>"; };
 		DA28F59E2F1F786000079318 /* ViewIdentityLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentityLessons.swift; sourceTree = "<group>"; };
 		DA28F5A42F1F78BE00079318 /* ViewIdentityBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentityBootcamp.swift; sourceTree = "<group>"; };
 		DA28F5A72F1F798700079318 /* ViewIdentityBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentityBootcampCoordinator.swift; sourceTree = "<group>"; };
@@ -901,6 +903,7 @@
 				DA39793E2E9BE5BD00838584 /* ImageStylingModifier.swift */,
 				DA58DDAC2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift */,
 				DAC35B3E2E9FED3F0019021D /* TextFieldModifiers.swift */,
+				DA278EE32F31A97D0079AF56 /* CustomNavigationTitle.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -2277,6 +2280,7 @@
 				DACD47E82F31A23B007A6D06 /* StateManagementDeepDiveBootcamp.swift in Sources */,
 				DA8656D72F0F76820092426E /* ScrollViewLazyContainersBootcampCoordinator.swift in Sources */,
 				DA61C5B22F0D3A7100FD8181 /* StackViewLessons.swift in Sources */,
+				DA278EE42F31A97D0079AF56 /* CustomNavigationTitle.swift in Sources */,
 				DA723CED2F264E7D009BEC1C /* BootcampTemplateCoordinator.swift in Sources */,
 				DA7BF6722E992DEF00224BCF /* HTextField.swift in Sources */,
 				DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */,

@@ -29,16 +29,16 @@ struct StackViewBootcampCoordinator: View, ScreenCoordinator {
     }
     
     var body: some View {
-        getView()
+        contentView
+            .customNavigationTitle("VStack / HStack / ZStack")
     }
     
     @ViewBuilder
-    private func getView() -> some View {
+    private var contentView: some View {
         StackViewBootcamp()
             .navigationDestination(for: ScreenRoute.self, destination: { router in
                     viewForRoute(route: router)
             })
-            .navigationTitle("VStack / HStack / ZStack")
     }
     
 }

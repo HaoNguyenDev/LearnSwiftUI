@@ -23,16 +23,16 @@ struct ViewIdentityBootcampCoordinator: View, ScreenCoordinator {
     }
     
     var body: some View {
-        getView()
+        contentView
+            .customNavigationTitle("VIEW IDENTITY & DIFFING SYSTEM")
     }
     
     @ViewBuilder
-    private func getView() -> some View {
+    private var contentView: some View {
         ViewIdentityBootcamp()
             .navigationDestination(for: ScreenRoute.self, destination: { router in
                     viewForRoute(route: router)
             })
-            .navigationTitle("VIEW IDENTITY & DIFFING SYSTEM")
     }
 }
 

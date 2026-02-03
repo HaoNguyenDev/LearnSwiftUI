@@ -28,11 +28,12 @@ struct NavigationBootcampCoordinator: View, ScreenCoordinator {
     }
     
     var body: some View {
-        getView()
+        contentView
+            .customNavigationTitle("Navigation Bootcamp")
     }
     
     @ViewBuilder
-    private func getView() -> some View {
+    private var contentView: some View {
         NavigationBootcamp(gotoDemo: { demo in
             switch demo {
             case .demo1:
@@ -42,7 +43,6 @@ struct NavigationBootcampCoordinator: View, ScreenCoordinator {
         .navigationDestination(for: ScreenRoute.self) { router in
             viewForRoute(route: router)
         }
-        .navigationTitle("Navigation Bootcamp")
     }
     
 }
