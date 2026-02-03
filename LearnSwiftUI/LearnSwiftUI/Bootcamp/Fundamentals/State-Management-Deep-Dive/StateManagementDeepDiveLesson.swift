@@ -744,5 +744,157 @@ struct Transaction {
 // 2. Apply state changes
 // 3. Commit transaction
 // 4. SwiftUI interpolates between old/new values
-""", result: nil)]
+""", result: nil),
+    Lesson(title: "Counter Exercise", code: """
+struct CounterExercise: View {
+    @State private var number = 0
+    
+    private var counterType: String {
+        number.isMultiple(of: 2) ? "Even" : "Odd"
+    }
+    
+    var body: some View {
+        VStack(spacing: 20) {
+            Text("(number)")
+                .font(.system(size: 60, weight: .bold))
+            
+            Text(counterType)
+                .font(.title)
+                .foregroundColor(.secondary)
+
+            HStack(spacing: 16) {
+                Button("Decrease") {
+                    number -= 1
+                }
+                .disabled(number == 0)
+                
+                Button("Increment") {
+                    number += 1
+                }
+                
+                Button("Reset") {
+                    number = 0
+                }
+                .opacity(number == 0 ? 0.5 : 1)
+            }
+            .buttonStyle(.borderedProminent)
+        }
+        .padding()
+    }
+}
+""", result: {
+    AnyView(ResultBlockView(content: {
+        CounterExercise()
+    }))
+}),
+    Lesson(title: "ColorPicker Exercise", code: """
+struct ColorPickerExercise: View {
+    @State private var red: Double = 0
+    @State private var green: Double = 0
+    @State private var blue: Double = 0
+    
+    private var color: Color {
+        Color(red: red, green: green, blue: blue)
+    }
+    
+    private var hexCode: String {
+        let r = Int(red * 255)
+        let g = Int(green * 255)
+        let b = Int(blue * 255)
+        return String(format: "#%02X%02X%02X", r, g, b)
+    }
+    
+    var body: some View {
+        VStack(spacing: 20) {
+            Rectangle()
+                .fill(color)
+                .frame(height: 200)
+                .cornerRadius(12)
+            
+            Text(hexCode)
+                .font(.system(.title, design: .monospaced))
+            
+            ColorSlider(value: $red, color: .red, label: "Red")
+            ColorSlider(value: $green, color: .green, label: "Green")
+            ColorSlider(value: $blue, color: .blue, label: "Blue")
+        }
+        .padding()
+    }
+}
+
+struct ColorSlider: View {
+    @Binding var value: Double
+    let color: Color
+    let label: String
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("(label): (Int(value * 255))")
+                .font(.caption)
+            Slider(value: $value, in: 0...1)
+                .accentColor(color)
+        }
+    }
+}
+""", result: {
+    AnyView(ResultBlockView(content: {
+        ColorPickerExercise()
+    }))
+}),
+    Lesson(title: "TemperatureConverter Excercies", code: """
+struct TemperatureConverter: View {
+    @State private var celsius: Double = 0
+    
+    private var fahrenheitBinding: Binding<Double> {
+        Binding(
+            get: { celsius * 9/5 + 32 },
+            set: { celsius = ($0 - 32) * 5/9 }
+        )
+    }
+    
+    private var kelvinBinding: Binding<Double> {
+        Binding(
+            get: { celsius + 273.15 },
+            set: { celsius = $0 - 273.15 }
+        )
+    }
+    
+    var body: some View {
+        Form {
+            Section("Temperature") {
+                HStack {
+                    Text("Celsius")
+                    Spacer()
+                    TextField("", value: $celsius, format: .number)
+                        .textFieldStyle(.roundedBorder)
+                        .frame(width: 100)
+                        .multilineTextAlignment(.trailing)
+                }
+                
+                HStack {
+                    Text("Fahrenheit")
+                    Spacer()
+                    TextField("", value: fahrenheitBinding, format: .number)
+                        .textFieldStyle(.roundedBorder)
+                        .frame(width: 100)
+                        .multilineTextAlignment(.trailing)
+                }
+                
+                HStack {
+                    Text("Kelvin")
+                    Spacer()
+                    TextField("", value: kelvinBinding, format: .number)
+                        .textFieldStyle(.roundedBorder)
+                        .frame(width: 100)
+                        .multilineTextAlignment(.trailing)
+                }
+            }
+        }
+    }
+}
+""", result: {
+    AnyView(ResultBlockView(content: {
+        TemperatureConverter()
+    }))
+})]
 }
