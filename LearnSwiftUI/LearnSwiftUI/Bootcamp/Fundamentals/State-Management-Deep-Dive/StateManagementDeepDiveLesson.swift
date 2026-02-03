@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct StateManagementDeepDiveLesson {
-    static let all = [Lesson(title: "@State - Single Source of Truth", code: """
+    static let all = [
+        Lesson(title: "PART 1: CORE KNOWLEDGE", code: "", result: nil),
+                      Lesson(title: "@State - Single Source of Truth", code: """
 What is @State and how does it work?
 
 struct CounterView: View { 
@@ -179,7 +181,7 @@ struct GoodCalculator: View {
             GoodCalculator()
         }))
     }),
-    Lesson(title: "@Binding - Two-way Connection", code: """
+                      Lesson(title: "@Binding - Two-way Connection", code: """
 What's @Binding?
 // @Binding creates a reference to @State
 
@@ -207,7 +209,7 @@ struct ToggleView: View {
             BindingExample()
         }))
     }),
-    Lesson(title: "@Binding Implementation", code: """
+                      Lesson(title: "@Binding Implementation", code: """
 // Simplified implementation:
 
 @propertyWrapper
@@ -234,9 +236,9 @@ struct MyBinding<Value> {
 // - Writes to parent's storage
 """, result: nil),
                       
-    Lesson(title: "Binding Patterns", code: """
+                      Lesson(title: "Binding Patterns", code: """
 """, result: nil),
-    Lesson(title: "Pattern 1: Parent → Child communication", code: """
+                      Lesson(title: "Pattern 1: Parent → Child communication", code: """
 struct ParentView: View {
     @State private var username = ""
     
@@ -260,7 +262,7 @@ struct UsernameInput: View {
             ParentAndChildCommunicationExample()
         }))
     }),
-    Lesson(title: "Pattern 2: Custom bindings", code: """
+                      Lesson(title: "Pattern 2: Custom bindings", code: """
 struct TemperatureView: View {
     @State private var celsius: Double = 0
     
@@ -281,10 +283,10 @@ struct TemperatureView: View {
 }
 """, result: {
         AnyView(ResultBlockView(content: {
-                TemperatureViewCustomBinding()
-            }))
+            TemperatureViewCustomBinding()
+        }))
     }),
-    Lesson(title: "Binding with Optional", code: """
+                      Lesson(title: "Binding with Optional", code: """
 struct OptionalBindingView: View {
     @State private var selectedItem: Item?
     
@@ -315,7 +317,7 @@ extension Binding {
     }
 }
 """, result: nil),
-    Lesson(title: "@State vs @Binding Decision Tree**", code: """
+                      Lesson(title: "@State vs @Binding Decision Tree**", code: """
 Does the view OWN the data? 
 │ 
 ├─ YES → @State 
@@ -349,5 +351,398 @@ struct TextField: View {
         // ... text field implementation
     }
 }
+""", result: nil),
+                      Lesson(title: "PARD 2: ADVANCED STATE PATTERNS", code: "", result: nil),
+                      Lesson(title: "State Hoisting", code: """
+
+ State Hoisting
+
+// ❌ BAD: State too low in hierarchy
+struct BadExample: View {
+    var body: some View {
+        VStack {
+            CounterDisplay()
+            CounterButton()
+            // Problem: Can't share counter between views!
+        }
+    }
+}
+
+struct CounterDisplay: View {
+    @State private var count = 0  // Isolated state
+    
+    var body: some View {
+        Text("(count)")
+    }
+}
+
+// ✅ GOOD: Hoist state to parent
+struct GoodExample: View {
+    @State private var count = 0  // Shared state
+    
+    var body: some View {
+        VStack {
+            CounterDisplay(count: count)
+            CounterButton(count: $count)
+        }
+    }
+}
+
+struct CounterDisplay: View {
+    let count: Int
+    var body: some View { Text("(count)") }
+}
+
+struct CounterButton: View {
+    @Binding var count: Int
+    var body: some View {
+        Button("Increment") { count += 1 }
+    }
+}
+
+Rule of Thumb:
+
+Hoist state to the lowest common ancestor.
+Do not hoist too high (performance).
+Do not let it be too low (can't share).
+""", result: {
+        AnyView(ResultBlockView(content: {
+            SharedStateExample()
+        }))
+    }),
+                      Lesson(title: "Derived State", code: """
+// Derived state = State calculated from other state
+
+struct TodoList: View {
+    @State private var todos: [Todo] = []
+    @State private var filter: Filter = .all
+    
+    // ✅ Derived state: Computed property
+    private var filteredTodos: [Todo] {
+        switch filter {
+        case .all: return todos
+        case .active: return todos.filter { !$0.isCompleted }
+        case .completed: return todos.filter { $0.isCompleted }
+        }
+    }
+    
+    // ✅ Derived state: Statistics
+    private var completionRate: Double {
+        guard !todos.isEmpty else { return 0 }
+        let completed = todos.filter(.isCompleted).count
+        return Double(completed) / Double(todos.count)
+    }
+    
+    var body: some View {
+        VStack {
+            ProgressView(value: completionRate)
+            List(filteredTodos) { todo in
+                TodoRow(todo: todo)
+            }
+        }
+    }
+}
+""", result: nil),
+                      Lesson(title: "State Normalization", code: """
+// ❌ BAD: Nested duplicated state
+struct BadUserList: View { 
+    @State private var users: [User] = [ 
+        User(id: 1, name: "Alice", posts: [Post(id: 1, title: "Hello")]), 
+        User(id: 2, name: "Bob", posts: [Post(id: 2, title: "World")]) 
+    ] 
+// Problem: Post is duplicated if many users share
+}
+
+// ✅ GOOD: Normalized state
+struct GoodUserList: View { 
+    @State private var users: [Int: User] = [:] // Dictionary by ID 
+    @State private var posts: [Int: Post] = [:] // Dictionary by ID 
+    @State private var userPosts: [Int: [Int]] = [:] // User ID → Post IDs 
+
+    var body: some View { 
+        List(Array(users.values)) { users print 
+            UserRow(user: user, posts: posts(for: user.id)) 
+        } 
+    } 
+
+    private func posts(for userId: Int) -> [Post] { 
+        let postIds = userPosts[userId] ?? [] 
+        return postIds.compactMap { posts[$0] } 
+    }
+}
+""", result: nil), Lesson(title: "PART 3: PERFORMANCE OPTIMIZATION", code: """
+""", result: nil),
+    Lesson(title: "", code: """
+State Granularity
+
+// ❌ BAD: Coarse-grained state
+struct BadFormView: View { 
+    @State private var formData = FormData() // Entire form is one state 
+
+    var body: some View { 
+        Form { 
+            TextField("Name", text: $formData.name) 
+            TextField("Email", text: $formData.email) 
+            TextField("Phone", text: $formData.phone) 
+            // Problem: Each keystroke updates the entire form! 
+        } 
+    }
+}
+
+// ✅ GOOD: Fine-grained state
+struct GoodFormView: View { 
+    @State private var name = "" 
+    @State private var email = "" 
+    @State private var phone = "" 
+
+    var body: some View { 
+        Form { 
+            TextField("Name", text: $name) // Only name field updates 
+            TextField("Email", text: $email) // Only email field updates 
+            TextField("Phone", text: $phone) // Only phone field updates 
+        } 
+    }
+}
+
+// Trade-off: More @State properties vs performance
+""", result: nil),
+    Lesson(title: "Avoid Unnecessary Re-renders", code: """
+// ❌ BAD: Parent re-renders all children
+struct BadParent: View {
+    @State private var counter = 0
+    
+    var body: some View {
+        VStack {
+            Text("(counter)")
+            ExpensiveChildView()  // Re-renders everytime counter changes!
+            ExpensiveChildView()
+            ExpensiveChildView()
+        }
+    }
+}
+
+// ✅ GOOD: Extract stable views
+struct GoodParent: View {
+    @State private var counter = 0
+    
+    var body: some View {
+        VStack {
+            CounterView(counter: counter)  // Only this updates
+            StaticChildView()  // No re-render
+            StaticChildView()
+            StaticChildView()
+        }
+    }
+}
+
+struct CounterView: View {
+    let counter: Int
+    var body: some View { Text("(counter)") }
+}
+""", result: nil), Lesson(title: " @State with Large Collections", code: """
+// ❌ BAD: Mutate large arrays directly
+struct BadListView: View {
+    @State private var items: [Item] = Array(repeating: Item(), count: 10000)
+    
+    var body: some View {
+        List {
+            ForEach(items) { item in
+                ItemRow(item: item)
+            }
+            Button("Add") {
+                items.append(Item())  // Copies entire array!
+            }
+        }
+    }
+}
+
+// ✅ BETTER: Use indices or IDs
+struct BetterListView: View {
+    @State private var items: [Item] = []
+    
+    var body: some View {
+        List {
+            ForEach(items.indices, id: .self) { index in
+                ItemRow(item: items[index])
+            }
+        }
+    }
+}
+
+// ✅ BEST: Use @StateObject and ObservableObject
+class ItemStore: ObservableObject {
+    @Published var items: [Item] = []
+    
+    func addItem() {
+        items.append(Item())
+    }
+}
+
+struct BestListView: View {
+    @StateObject private var store = ItemStore()
+    
+    var body: some View {
+        List(store.items) { item in
+            ItemRow(item: item)
+        }
+    }
+}
+""", result: nil),
+    Lesson(title: "INTERVIEW QUESTIONs", code: "", result: nil),
+    Lesson(title: "", code: """
+Junior Level:
+Q1: What is the difference between @State and @Binding?
+A:
+@State:
+    View owns the data
+    Source of truth
+    Private, local state
+    Example: @State private var counter = 0
+
+@Binding:
+    View references parent's state
+    Two-way connection
+    Shared state
+    Example: @Binding var counter: Int
+
+Q2: Why must @State be private?
+A:
+    @State is the implementation detail of the view
+    Encapsulation: state should not be accessed from outside
+    SwiftUI manages the @State lifecycle
+    If sharing is needed → use @Binding or @ObservedObject
+
+Q3: Where is @State stored?
+A:
+    Not stored in View struct (struct is immutable)
+    SwiftUI stores in separate persistent storage (heap)
+    Lifetime tied to view identity
+    When the view is destroyed → @State is also destroyed
+""", result: nil),
+    Lesson(title: "", code: """
+Mid-Senior Level:
+Q4: Explain "state hoisting" and why is it necessary?
+A:
+// State hoisting = put state on parent to share between children
+
+// Problem: State too low
+struct Problem: View { 
+    var body: some View { 
+        HStack { 
+            ChildA() // Has @State counter 
+            ChildB() // Has different @State counter 
+            // Can't synchronize! 
+        } 
+    }
+}
+
+// Solution: Hoist to parent
+struct Solution: View { 
+@State private var counter = 0 // Shared 
+
+    var body: some View { 
+        HStack { 
+            ChildA(counter: $counter) 
+            ChildB(counter: $counter) 
+            // Now synchronized! 
+        } 
+    }
+}
+
+Q5: How does Custom Binding work?
+A:
+// Custom binding transforms get/set
+Binding( 
+    get: { /* read transformation */ }, 
+    set: { /* write transformation */ }
+)
+
+// Example: Uppercase binding
+var uppercaseBinding: Binding<String> { 
+Binding( 
+    get: { text }, 
+    set: { text = $0.uppercased() } 
+)
+}
+Q6: When should you use derived state vs stored state?
+A:
+Derived (computed): When value can be calculated from existing state
+
+swift 
+    private var fullName: String { firstName + " " + lastName }
+
+Stored (@State): When value is independent, cannot be derived
+
+swift
+    @State private var firstName = "" 
+    @State private var lastName = ""
+""", result: nil),
+    Lesson(title: "", code: """
+Q8: Are state updates atomic?
+A:
+// NO - State updates are NOT atomic!
+
+@State private var counter = 0
+
+// Problem:
+DispatchQueue.global().async { 
+    counter += 1 // ⚠️ Race condition!
+}
+
+DispatchQueue.global().async { 
+    counter += 1 // ⚠️ Race condition!
+}
+
+// Solution 1: Dispatch to main
+DispatchQueue.main.async { 
+    counter += 1 // ✅ Safe
+}
+
+// Solution 2: Use actor
+actor CounterStore { 
+    private(set) var counter = 0 
+    func increment() { counter += 1 }
+}
+Q9: Performance: @State with large struct?
+A:
+struct LargeData { 
+    var array: [Int] = Array(repeating: 0, count: 10000) 
+    var dict: [String: String] = [:]
+}
+
+// ❌ BAD: Copy-on-write penalty
+@State private var data = LargeData()
+
+// Every mutation copies entire struct!
+data.array[0] = 1 // Copies 10000 elements!
+
+// ✅ GOOD: Use class with @StateObject
+class LargeDataStore: ObservableObject { 
+    @Published var array: [Int] 
+    @Published var dict: [String: String]
+}
+
+@StateObject private var store = LargeDataStore()
+store.array[0] = 1 // No copy!
+
+Q10: Explain @State transaction and animation:
+A:
+// @State changes can be animated
+withAnimation { 
+    isExpanded.toggle() // Animated state change
+}
+
+// SwiftUI creates Transaction:
+struct Transaction { 
+    var animation: Animation? 
+    var disablesAnimations: Bool 
+// ...
+}
+
+// Transaction wraps state changes:
+// 1. Begin transaction
+// 2. Apply state changes
+// 3. Commit transaction
+// 4. SwiftUI interpolates between old/new values
 """, result: nil)]
 }
