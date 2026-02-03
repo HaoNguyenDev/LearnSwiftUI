@@ -28,15 +28,16 @@ struct SafeAreaInsetsBootcampCoordinator: View, ScreenCoordinator {
     }
     
     var body: some View {
-        getView()
+        contentView
+            .customNavigationTitle("SafeArea, Insets & Keyboard Layout Traps")
     }
     
-    private func getView() -> some View {
+    @ViewBuilder
+    private var contentView: some View {
         SafeAreaInsetsBootcamp()
             .navigationDestination(for: ScreenRoute.self, destination: { router in
                     viewForRoute(route: router)
             })
-            .navigationTitle("SafeArea, Insets & Keyboard Layout Traps")
     }
 }
 

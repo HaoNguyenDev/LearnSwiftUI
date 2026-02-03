@@ -29,16 +29,16 @@ struct GeometryReaderCoordinateSpaceBootcampCoordinator: View, ScreenCoordinator
     }
     
     var body: some View {
-        getView()
+        contentView
+            .customNavigationTitle("GeometryReader & coordinateSpace")
     }
     
     @ViewBuilder
-    private func getView() -> some View {
+    private var contentView: some View {
         GeometryReaderBootcamp()
             .navigationDestination(for: ScreenRoute.self, destination: { router in
                     viewForRoute(route: router)
             })
-            .navigationTitle("GeometryReader & coordinateSpace")
     }
 }
 

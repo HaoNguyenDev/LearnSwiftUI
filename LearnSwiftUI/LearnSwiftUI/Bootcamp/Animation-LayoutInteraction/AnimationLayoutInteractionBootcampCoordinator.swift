@@ -24,16 +24,16 @@ struct AnimationLayoutInteractionBootcampCoordinator: View, ScreenCoordinator {
     }
     
     var body: some View {
-        getView()
+        contentView
+            .customNavigationTitle("ANIMATION & LAYOUT INTERACTION")
     }
     
     @ViewBuilder
-    private func getView() -> some View {
+    private var contentView: some View {
         AnimationLayoutInteractionBootcamp()
             .navigationDestination(for: ScreenRoute.self, destination: { router in
                     viewForRoute(route: router)
             })
-            .navigationTitle("ANIMATION & LAYOUT INTERACTION")
     }
 }
 

@@ -29,16 +29,16 @@ struct AlignmentBootcampCoordinator: View, ScreenCoordinator {
     }
     
     var body: some View {
-        getView()
+        contentView
+            .customNavigationTitle("Alignment-AlignmentGuide")
     }
     
     @ViewBuilder
-    private func getView() -> some View {
+    private var contentView: some View {
         AlignmentBootcamp()
             .navigationDestination(for: ScreenRoute.self, destination: { router in
                     viewForRoute(route: router)
             })
-            .navigationTitle("Alignment-AlignmentGuide")
     }
 }
 

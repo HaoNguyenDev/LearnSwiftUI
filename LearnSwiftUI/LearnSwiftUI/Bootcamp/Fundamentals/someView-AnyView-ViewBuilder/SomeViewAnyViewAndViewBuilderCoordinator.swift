@@ -27,13 +27,14 @@ struct SomeViewAnyViewAndViewBuilderCoordinator: View, ScreenCoordinator {
     init(navRoute: any NavRouterProtocol) {
         self.navRoute = navRoute
     }
-    
+
     var body: some View {
-        getView()
-            .navigationTitle("some View - AnyView - @ViewBuilder")
+        contentView
+            .customNavigationTitle("some View - AnyView - @ViewBuilder")
     }
     
-    private func getView() -> some View {
+    @ViewBuilder
+    private var contentView: some View {
         SomeViewAnyViewAndViewBuilderBootcamp(gotoDemo: {demo in
             navRoute.push(demo, animate: true)
         })

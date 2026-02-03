@@ -30,13 +30,13 @@ struct TextBootcampCoordinator: View, ScreenCoordinator {
     }
     
     var body: some View {
-        getView()
+        contentView
+            .customNavigationTitle("Text")
     }
     
     @ViewBuilder
-    func getView() -> some View {
+    private var contentView: some View {
         TextBootcamp()
-            .navigationTitle("Text")
     }
 }
 

@@ -28,11 +28,12 @@ struct SwiftUIArchitectureAndViewLifeCycleCoordinator: View, ScreenCoordinator {
     }
     
     var body: some View {
-        getView()
-            .navigationTitle("SwiftUI Architecture - View LifeCycle")
+        contentView
+            .customNavigationTitle("SwiftUI Architecture - View LifeCycle")
     }
     
-    private func getView() -> some View {
+    @ViewBuilder
+    private var contentView: some View {
         SwiftUIArchitectureAndViewLifeCycleBootcamp(gotoDemo: { demo in
             navRoute.push(demo, animate: true)
         })
