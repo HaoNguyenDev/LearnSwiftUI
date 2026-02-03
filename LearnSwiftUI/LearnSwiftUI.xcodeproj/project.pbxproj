@@ -39,6 +39,7 @@
 		DA278F5C2F31E6930079AF56 /* TemperatureViewCustomBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278F5B2F31E6930079AF56 /* TemperatureViewCustomBinding.swift */; };
 		DA278F622F31E7400079AF56 /* ParentAndChildCommunicationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278F612F31E7400079AF56 /* ParentAndChildCommunicationExample.swift */; };
 		DA278F6B2F31FACB0079AF56 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278F6A2F31FACB0079AF56 /* Binding.swift */; };
+		DA278F762F31FD630079AF56 /* SharedStateExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278F752F31FD630079AF56 /* SharedStateExample.swift */; };
 		DA28F59F2F1F786000079318 /* ViewIdentityLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F59E2F1F786000079318 /* ViewIdentityLessons.swift */; };
 		DA28F5A52F1F78BE00079318 /* ViewIdentityBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F5A42F1F78BE00079318 /* ViewIdentityBootcamp.swift */; };
 		DA28F5A82F1F798700079318 /* ViewIdentityBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F5A72F1F798700079318 /* ViewIdentityBootcampCoordinator.swift */; };
@@ -377,6 +378,7 @@
 		DA278F5B2F31E6930079AF56 /* TemperatureViewCustomBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewCustomBinding.swift; sourceTree = "<group>"; };
 		DA278F612F31E7400079AF56 /* ParentAndChildCommunicationExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentAndChildCommunicationExample.swift; sourceTree = "<group>"; };
 		DA278F6A2F31FACB0079AF56 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
+		DA278F752F31FD630079AF56 /* SharedStateExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStateExample.swift; sourceTree = "<group>"; };
 		DA28F59E2F1F786000079318 /* ViewIdentityLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentityLessons.swift; sourceTree = "<group>"; };
 		DA28F5A42F1F78BE00079318 /* ViewIdentityBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentityBootcamp.swift; sourceTree = "<group>"; };
 		DA28F5A72F1F798700079318 /* ViewIdentityBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentityBootcampCoordinator.swift; sourceTree = "<group>"; };
@@ -801,6 +803,7 @@
 				DA278F3B2F31DFA40079AF56 /* BindingExample.swift */,
 				DA278F5B2F31E6930079AF56 /* TemperatureViewCustomBinding.swift */,
 				DA278F612F31E7400079AF56 /* ParentAndChildCommunicationExample.swift */,
+				DA278F752F31FD630079AF56 /* SharedStateExample.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -2317,6 +2320,7 @@
 				DA278EE42F31A97D0079AF56 /* CustomNavigationTitle.swift in Sources */,
 				DA278F622F31E7400079AF56 /* ParentAndChildCommunicationExample.swift in Sources */,
 				DA723CED2F264E7D009BEC1C /* BootcampTemplateCoordinator.swift in Sources */,
+				DA278F762F31FD630079AF56 /* SharedStateExample.swift in Sources */,
 				DA7BF6722E992DEF00224BCF /* HTextField.swift in Sources */,
 				DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */,
 				DAEBAE3A2DEAF92400082B1C /* StacksBootcamp.swift in Sources */,
