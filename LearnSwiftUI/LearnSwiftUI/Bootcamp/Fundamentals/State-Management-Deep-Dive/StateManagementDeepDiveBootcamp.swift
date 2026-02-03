@@ -18,3 +18,7 @@ struct StateManagementDeepDiveBootcamp: View {
         }
     }
 }
+
+#Preview {
+    StateManagementDeepDiveBootcamp()
+}
