@@ -32,11 +32,17 @@ struct TextBootcampCoordinator: View, ScreenCoordinator {
     var body: some View {
         contentView
             .customNavigationTitle("Text")
+            .defaultNavBackButton(onTap: {
+                navRoute.pop(animate: true)
+            })
     }
     
     @ViewBuilder
     private var contentView: some View {
         TextBootcamp()
+            .navigationDestination(for: ScreenRoute.self) { route in
+                viewForRoute(route: route)
+            }
     }
 }
 

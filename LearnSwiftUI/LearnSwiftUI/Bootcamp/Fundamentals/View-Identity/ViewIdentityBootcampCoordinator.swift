@@ -25,6 +25,9 @@ struct ViewIdentityBootcampCoordinator: View, ScreenCoordinator {
     var body: some View {
         contentView
             .customNavigationTitle("VIEW IDENTITY & DIFFING SYSTEM")
+            .defaultNavBackButton(onTap: {
+                navRoute.pop(animate: true)
+            })
     }
     
     @ViewBuilder

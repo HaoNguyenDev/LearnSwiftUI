@@ -72,7 +72,6 @@ struct BootcampListCoordinator: View, ScreenCoordinator {
                 }
                 .toolbar(.hidden, for: .bottomBar)
                 .toolbar(.hidden, for: .tabBar)
-                .navigationBarBackButtonHidden(true)
     }
     
     @ViewBuilder
@@ -128,3 +127,14 @@ extension BootcampListCoordinator {
     }
 }
 
+struct PreviewBootcamp: View {
+    @State private var navRoute = NavRoute()
+    var body: some View {
+        NavigationStack(path: $navRoute.path) {
+            BootcampListCoordinator(navRouter: navRoute)
+        }
+    }
+}
+#Preview {
+    PreviewBootcamp()
+}

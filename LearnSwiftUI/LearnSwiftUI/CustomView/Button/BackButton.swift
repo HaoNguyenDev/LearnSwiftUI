@@ -19,10 +19,13 @@ struct BackButton: View {
     var body: some View {
         HStack {
             Image(R.image.ic_back)
-                .frame(width: 25, height: 25)
+                .frame(width: 40, height: 40, alignment: .leading)
         }
         .foregroundColor(theme.color.textBlack)
         .padding(.leading, 0)
+        .onTapGesture {
+            action?()
+        }
     }
 }
 

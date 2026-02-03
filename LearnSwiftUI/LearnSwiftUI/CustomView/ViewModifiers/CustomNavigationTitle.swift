@@ -48,7 +48,7 @@ extension View {
     ) -> some View {
         modifier(CustomNavigationTitle(title: title,
                                        subtitle: subtitle,
-                                       titleColor: titleColors ?? [.black, .gray],
+                                       titleColor: titleColors ?? [.black, .green],
                                        subtitleColor: subtitleColor ?? .gray))
     }
 }

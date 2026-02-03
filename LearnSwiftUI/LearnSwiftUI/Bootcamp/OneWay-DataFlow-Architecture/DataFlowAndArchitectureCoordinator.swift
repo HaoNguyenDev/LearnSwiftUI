@@ -25,6 +25,9 @@ struct DataFlowAndArchitectureCoordinator: View, ScreenCoordinator {
     var body: some View {
         contentView
             .customNavigationTitle("ONE-WAY DATA FLOW & ARCHITECTURE")
+            .defaultNavBackButton(onTap: {
+                navRoute.pop(animate: true)
+            })
     }
     
     @ViewBuilder
