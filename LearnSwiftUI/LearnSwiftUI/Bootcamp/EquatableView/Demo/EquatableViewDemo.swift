@@ -33,14 +33,14 @@ struct EquatableViewDemo: View {
     @State private var selectedIds: Set<UUID>
     
     init() {
-        items = (0...20).map{ Item(title: "Item \($0)")}
+        items = (0...20).map{ Item(name: "Item \($0)")}
         selectedIds = []
     }
     
     var body: some View {
         ScrollView {
             ForEach(items) { item in
-                RowView(title: item.title, isSelected: selectedIds.contains(item.id))
+                RowView(title: item.name, isSelected: selectedIds.contains(item.id))
                     .onTapGesture {
                         selectId(id: item.id)
                     }

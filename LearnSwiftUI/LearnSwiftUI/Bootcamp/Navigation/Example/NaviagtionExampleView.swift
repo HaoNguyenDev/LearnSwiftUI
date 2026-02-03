@@ -13,13 +13,13 @@ enum NavigationExampleRoute: Hashable {
 
 struct NavigationExampleView: View {
     @State private var navPath = NavigationPath()
-    let items = (0...10).map( { Item(title: "Item \($0)")})
+    let items = (0...10).map( { Item(name: "Item \($0)")})
     
     var body: some View {
         NavigationStack(path: $navPath) {
             List {
                 ForEach(items) { item in
-                    Text(item.title)
+                    Text(item.name)
                         .frame(maxWidth: .infinity, maxHeight: 40, alignment: .leading)
                         .contentShape(Rectangle())
                         .onTapGesture {
@@ -57,7 +57,7 @@ struct NavigationExampleDetailView: View {
     
     var body: some View {
         VStack(spacing: 24.0) {
-            Text(item.title)
+            Text(item.name)
             Button("pop") {
                 onPop?()
             }

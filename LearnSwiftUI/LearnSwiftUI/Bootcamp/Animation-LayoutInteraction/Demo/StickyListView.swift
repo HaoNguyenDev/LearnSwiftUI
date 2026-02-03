@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Item: Identifiable, Hashable {
     let id = UUID()
-    let title: String
+    let name: String
 }
 
 struct SectionModel: Identifiable {
@@ -34,40 +34,40 @@ struct StickyHeaderView: View {
 struct StickyListView: View {
     let sections = [
         SectionModel(header: "Fruit", items: [
-            Item(title: "Apple"),
-            Item(title: "Orange"),
-            Item(title: "Banana"),
-            Item(title: "Grape"),
-            Item(title: "Watermelon")
+            Item(name: "Apple"),
+            Item(name: "Orange"),
+            Item(name: "Banana"),
+            Item(name: "Grape"),
+            Item(name: "Watermelon")
         ]),
         SectionModel(header: "Vegetables", items: [
-            Item(title: "Carrot"),
-            Item(title: "Tomato"),
-            Item(title: "Potato"),
-            Item(title: "Cabbage"),
-            Item(title: "Water Spinach")
+            Item(name: "Carrot"),
+            Item(name: "Tomato"),
+            Item(name: "Potato"),
+            Item(name: "Cabbage"),
+            Item(name: "Water Spinach")
         ]),
         SectionModel(header: "Drinks", items: [
-            Item(title: "Orange Juice"),
-            Item(title: "Green Tea"),
-            Item(title: "Coffee"),
-            Item(title: "Fresh Milk"),
-            Item(title: "Watermelon Juice")
+            Item(name: "Orange Juice"),
+            Item(name: "Green Tea"),
+            Item(name: "Coffee"),
+            Item(name: "Fresh Milk"),
+            Item(name: "Watermelon Juice")
         ]),
         SectionModel(header: "Beer", items: [
-            Item(title: "Tiger"),
-            Item(title: "Heniken"),
-            Item(title: "Quynhon"),
-            Item(title: "Saigon"),
-            Item(title: "Hanoi"),
-            Item(title: "333")
+            Item(name: "Tiger"),
+            Item(name: "Heniken"),
+            Item(name: "Quynhon"),
+            Item(name: "Saigon"),
+            Item(name: "Hanoi"),
+            Item(name: "333")
         ]),
         SectionModel(header: "Sweets", items: [
-            Item(title: "Cookie"),
-            Item(title: "Gummy Candy"),
-            Item(title: "Chocolate"),
-            Item(title: "Sponge Cake"),
-            Item(title: "Cupcake")
+            Item(name: "Cookie"),
+            Item(name: "Gummy Candy"),
+            Item(name: "Chocolate"),
+            Item(name: "Sponge Cake"),
+            Item(name: "Cupcake")
         ])
     ]
     
@@ -78,7 +78,7 @@ struct StickyListView: View {
                     Section {
                         ForEach(section.items) { item in
                             HStack {
-                                Text(item.title)
+                                Text(item.name)
                                     .padding()
                                 Spacer()
                             }
