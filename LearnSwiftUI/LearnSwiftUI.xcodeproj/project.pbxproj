@@ -40,6 +40,9 @@
 		DA278F622F31E7400079AF56 /* ParentAndChildCommunicationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278F612F31E7400079AF56 /* ParentAndChildCommunicationExample.swift */; };
 		DA278F6B2F31FACB0079AF56 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278F6A2F31FACB0079AF56 /* Binding.swift */; };
 		DA278F762F31FD630079AF56 /* SharedStateExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278F752F31FD630079AF56 /* SharedStateExample.swift */; };
+		DA278F862F3233BF0079AF56 /* CounterExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278F852F3233BF0079AF56 /* CounterExercise.swift */; };
+		DA278FA52F32398F0079AF56 /* ColorPickerExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278FA42F32398F0079AF56 /* ColorPickerExercise.swift */; };
+		DA278FAC2F323A360079AF56 /* TemperatureConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278FAB2F323A360079AF56 /* TemperatureConverter.swift */; };
 		DA28F59F2F1F786000079318 /* ViewIdentityLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F59E2F1F786000079318 /* ViewIdentityLessons.swift */; };
 		DA28F5A52F1F78BE00079318 /* ViewIdentityBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F5A42F1F78BE00079318 /* ViewIdentityBootcamp.swift */; };
 		DA28F5A82F1F798700079318 /* ViewIdentityBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F5A72F1F798700079318 /* ViewIdentityBootcampCoordinator.swift */; };
@@ -379,6 +382,9 @@
 		DA278F612F31E7400079AF56 /* ParentAndChildCommunicationExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentAndChildCommunicationExample.swift; sourceTree = "<group>"; };
 		DA278F6A2F31FACB0079AF56 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
 		DA278F752F31FD630079AF56 /* SharedStateExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStateExample.swift; sourceTree = "<group>"; };
+		DA278F852F3233BF0079AF56 /* CounterExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterExercise.swift; sourceTree = "<group>"; };
+		DA278FA42F32398F0079AF56 /* ColorPickerExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerExercise.swift; sourceTree = "<group>"; };
+		DA278FAB2F323A360079AF56 /* TemperatureConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConverter.swift; sourceTree = "<group>"; };
 		DA28F59E2F1F786000079318 /* ViewIdentityLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentityLessons.swift; sourceTree = "<group>"; };
 		DA28F5A42F1F78BE00079318 /* ViewIdentityBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentityBootcamp.swift; sourceTree = "<group>"; };
 		DA28F5A72F1F798700079318 /* ViewIdentityBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentityBootcampCoordinator.swift; sourceTree = "<group>"; };
@@ -806,6 +812,16 @@
 				DA278F752F31FD630079AF56 /* SharedStateExample.swift */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		DA278F842F3233A60079AF56 /* Excercies */ = {
+			isa = PBXGroup;
+			children = (
+				DA278FAB2F323A360079AF56 /* TemperatureConverter.swift */,
+				DA278FA42F32398F0079AF56 /* ColorPickerExercise.swift */,
+				DA278F852F3233BF0079AF56 /* CounterExercise.swift */,
+			);
+			path = Excercies;
 			sourceTree = "<group>";
 		};
 		DA28F59D2F1F781B00079318 /* View-Identity */ = {
@@ -1946,6 +1962,7 @@
 		DACD47DC2F31A1D4007A6D06 /* State-Management-Deep-Dive */ = {
 			isa = PBXGroup;
 			children = (
+				DA278F842F3233A60079AF56 /* Excercies */,
 				DA278F272F31DE810079AF56 /* Example */,
 				DACD47E12F31A205007A6D06 /* StateManagementDeepDiveLesson.swift */,
 				DACD47E72F31A23B007A6D06 /* StateManagementDeepDiveBootcamp.swift */,
@@ -2300,6 +2317,7 @@
 				DA03DFB72F23BCD50080D104 /* RenderignPerformanceBootcampCoordinator.swift in Sources */,
 				DAE365DB2E9CE2EE005EF803 /* UserSettings.swift in Sources */,
 				DAE2EAC62DF41FAB0083E733 /* BindingBootcamp.swift in Sources */,
+				DA278FAC2F323A360079AF56 /* TemperatureConverter.swift in Sources */,
 				DA278F2F2F31DE920079AF56 /* GoodCalculator.swift in Sources */,
 				DA7BF5E62E98F2B400224BCF /* RswiftResources+ImageResource.swift in Sources */,
 				DAA709142E75D553006F8E70 /* ThaiPaymentService.swift in Sources */,
@@ -2388,9 +2406,11 @@
 				DA03DFAE2F23BBD60080D104 /* RenderingPerformanceLesson.swift in Sources */,
 				DA7BE0A62E806040006821CE /* LoginInteractor.swift in Sources */,
 				DA5476E42EB39FCD005C8868 /* AlamofireSampleAPICallSyntax.swift in Sources */,
+				DA278F862F3233BF0079AF56 /* CounterExercise.swift in Sources */,
 				DAAE8CBD2E45028300FCBA4E /* CounterState.swift in Sources */,
 				DA64B7C22F2BA64800144CC6 /* AdvancedAnimationLesson.swift in Sources */,
 				DAE366252E9D1047005EF803 /* AppSettings.swift in Sources */,
+				DA278FA52F32398F0079AF56 /* ColorPickerExercise.swift in Sources */,
 				DA10D4412F2907980035A6A2 /* NavigationPathExample.swift in Sources */,
 				DA8748872E6AFBC900B189F3 /* WeatherService.swift in Sources */,
 				DA60279D2EA3D9A400271E00 /* MVVMDemoUIKit_ViewModel.swift in Sources */,
