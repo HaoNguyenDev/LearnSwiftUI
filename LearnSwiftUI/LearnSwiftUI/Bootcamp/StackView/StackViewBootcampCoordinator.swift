@@ -31,6 +31,9 @@ struct StackViewBootcampCoordinator: View, ScreenCoordinator {
     var body: some View {
         contentView
             .customNavigationTitle("VStack / HStack / ZStack")
+            .defaultNavBackButton(onTap: {
+                navRoute.pop(animate: true)
+            })
     }
     
     @ViewBuilder

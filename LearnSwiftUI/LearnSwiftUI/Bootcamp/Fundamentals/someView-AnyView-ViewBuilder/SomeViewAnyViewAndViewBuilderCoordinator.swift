@@ -31,6 +31,9 @@ struct SomeViewAnyViewAndViewBuilderCoordinator: View, ScreenCoordinator {
     var body: some View {
         contentView
             .customNavigationTitle("some View - AnyView - @ViewBuilder")
+            .defaultNavBackButton(onTap: {
+                navRoute.pop(animate: true)
+            })
     }
     
     @ViewBuilder

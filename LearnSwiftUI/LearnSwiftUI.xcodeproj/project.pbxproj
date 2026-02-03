@@ -32,6 +32,7 @@
 		DA257F042F2E24DB0024DC9B /* BouncingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA257F032F2E24DB0024DC9B /* BouncingText.swift */; };
 		DA257F0C2F2E264C0024DC9B /* ColorRotator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA257F0B2F2E264C0024DC9B /* ColorRotator.swift */; };
 		DA278EE42F31A97D0079AF56 /* CustomNavigationTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278EE32F31A97D0079AF56 /* CustomNavigationTitle.swift */; };
+		DA278EFE2F31D04D0079AF56 /* NavBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278EFD2F31D04D0079AF56 /* NavBackButton.swift */; };
 		DA28F59F2F1F786000079318 /* ViewIdentityLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F59E2F1F786000079318 /* ViewIdentityLessons.swift */; };
 		DA28F5A52F1F78BE00079318 /* ViewIdentityBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F5A42F1F78BE00079318 /* ViewIdentityBootcamp.swift */; };
 		DA28F5A82F1F798700079318 /* ViewIdentityBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F5A72F1F798700079318 /* ViewIdentityBootcampCoordinator.swift */; };
@@ -363,6 +364,7 @@
 		DA2745842E61E8D0000B436D /* SingletonPattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SingletonPattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA2745852E61FB2C000B436D /* Final.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Final.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA278EE32F31A97D0079AF56 /* CustomNavigationTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationTitle.swift; sourceTree = "<group>"; };
+		DA278EFD2F31D04D0079AF56 /* NavBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBackButton.swift; sourceTree = "<group>"; };
 		DA28F59E2F1F786000079318 /* ViewIdentityLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentityLessons.swift; sourceTree = "<group>"; };
 		DA28F5A42F1F78BE00079318 /* ViewIdentityBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentityBootcamp.swift; sourceTree = "<group>"; };
 		DA28F5A72F1F798700079318 /* ViewIdentityBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentityBootcampCoordinator.swift; sourceTree = "<group>"; };
@@ -904,6 +906,7 @@
 				DA58DDAC2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift */,
 				DAC35B3E2E9FED3F0019021D /* TextFieldModifiers.swift */,
 				DA278EE32F31A97D0079AF56 /* CustomNavigationTitle.swift */,
+				DA278EFD2F31D04D0079AF56 /* NavBackButton.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -2207,6 +2210,7 @@
 				DA4F7F1C2E9A954D001CB7B2 /* LoginButtonView.swift in Sources */,
 				DA7BF61C2E99036200224BCF /* View+Themed.swift in Sources */,
 				DABC5F9C2F2772A000957964 /* EquatableViewDemo.swift in Sources */,
+				DA278EFE2F31D04D0079AF56 /* NavBackButton.swift in Sources */,
 				DA8748912E6B005800B189F3 /* WeatherErrorView.swift in Sources */,
 				DAA45E712EF9759100BC57E9 /* BootcampListCoordinator.swift in Sources */,
 				DAC35B3F2E9FED3F0019021D /* TextFieldModifiers.swift in Sources */,

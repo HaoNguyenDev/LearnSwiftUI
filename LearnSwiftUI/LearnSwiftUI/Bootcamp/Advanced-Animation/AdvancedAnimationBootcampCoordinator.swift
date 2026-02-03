@@ -42,6 +42,9 @@ struct AdvancedAnimationBootcampCoordinator: View, ScreenCoordinator {
     var body: some View {
         contentView
             .customNavigationTitle("Advanced Animation")
+            .defaultNavBackButton(onTap: {
+                navRoute.pop(animate: true)
+            })
     }
     
     @ViewBuilder

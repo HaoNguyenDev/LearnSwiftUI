@@ -31,6 +31,9 @@ struct AlignmentBootcampCoordinator: View, ScreenCoordinator {
     var body: some View {
         contentView
             .customNavigationTitle("Alignment-AlignmentGuide")
+            .defaultNavBackButton(onTap: {
+                navRoute.pop(animate: true)
+            })
     }
     
     @ViewBuilder

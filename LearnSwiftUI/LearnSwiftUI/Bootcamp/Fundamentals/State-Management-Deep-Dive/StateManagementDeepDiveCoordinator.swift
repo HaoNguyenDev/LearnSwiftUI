@@ -24,25 +24,10 @@ struct StateManagementDeepDiveCoordinator: View, ScreenCoordinator {
     
     var body: some View {
         contentView
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    VStack {
-                        Text("State Management Deep Dive")
-                            .font(.system(size: 20, weight: .bold, design: .rounded))
-                            .foregroundStyle(
-                                LinearGradient(
-                                    colors: [.black, .gray],
-                                    startPoint: .leading,
-                                    endPoint: .trailing
-                                )
-                            )
-                        Text("(@State, @Binding)")
-                            .font(.caption)
-                            .foregroundColor(.gray)
-                    }
-                }
-            }
+            .customNavigationTitle("State Management Deep Dive", subtitle: "(@State, @Binding)")
+            .defaultNavBackButton(onTap: {
+                navRoute.pop(animate: true)
+            })
     }
     
     @ViewBuilder

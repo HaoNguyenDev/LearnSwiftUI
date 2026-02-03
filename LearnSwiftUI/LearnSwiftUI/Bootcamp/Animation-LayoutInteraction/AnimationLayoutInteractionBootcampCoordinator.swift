@@ -26,6 +26,9 @@ struct AnimationLayoutInteractionBootcampCoordinator: View, ScreenCoordinator {
     var body: some View {
         contentView
             .customNavigationTitle("ANIMATION & LAYOUT INTERACTION")
+            .defaultNavBackButton(onTap: {
+                navRoute.pop(animate: true)
+            })
     }
     
     @ViewBuilder

@@ -30,6 +30,9 @@ struct SafeAreaInsetsBootcampCoordinator: View, ScreenCoordinator {
     var body: some View {
         contentView
             .customNavigationTitle("SafeArea, Insets & Keyboard Layout Traps")
+            .defaultNavBackButton(onTap: {
+                navRoute.pop(animate: true)
+            })
     }
     
     @ViewBuilder

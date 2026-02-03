@@ -30,6 +30,9 @@ struct SwiftUIArchitectureAndViewLifeCycleCoordinator: View, ScreenCoordinator {
     var body: some View {
         contentView
             .customNavigationTitle("SwiftUI Architecture - View LifeCycle")
+            .defaultNavBackButton(onTap: {
+                navRoute.pop(animate: true)
+            })
     }
     
     @ViewBuilder

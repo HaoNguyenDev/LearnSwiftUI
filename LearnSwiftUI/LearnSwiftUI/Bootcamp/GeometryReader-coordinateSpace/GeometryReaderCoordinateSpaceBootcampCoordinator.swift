@@ -31,6 +31,9 @@ struct GeometryReaderCoordinateSpaceBootcampCoordinator: View, ScreenCoordinator
     var body: some View {
         contentView
             .customNavigationTitle("GeometryReader & coordinateSpace")
+            .defaultNavBackButton(onTap: {
+                navRoute.pop(animate: true)
+            })
     }
     
     @ViewBuilder

@@ -31,6 +31,9 @@ struct SwiftUILayoutEngineCoordinator: View, ScreenCoordinator {
     var body: some View {
         contentView
             .customNavigationTitle("SwiftUI Layout Engine")
+            .defaultNavBackButton(onTap: {
+                navRoute.pop(animate: true)
+            })
     }
     
     @ViewBuilder
