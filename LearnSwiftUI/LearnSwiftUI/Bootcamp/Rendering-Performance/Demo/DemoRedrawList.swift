@@ -13,14 +13,14 @@ struct DemoRedrawList: View {
     @State private var selectedIds: Set<UUID>
     
     init() {
-        self.items = (0...100).map { Item(title: "Item \($0)")}
+        self.items = (0...100).map { Item(name: "Item \($0)")}
         self.selectedIds = []
     }
     
     var body: some View {
         List {
             ForEach(items) { item in
-                DemoRow(title: item.title, isSelected: selectedIds.contains(item.id))
+                DemoRow(title: item.name, isSelected: selectedIds.contains(item.id))
                     .contentShape(Rectangle())
                     .onTapGesture {
                         updateSelectedIds(item.id)

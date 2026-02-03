@@ -12,7 +12,7 @@ struct MultiSelectRowListView: View {
     @State private var isExpandedIDs: Set<UUID>
     
     init() {
-        self.items = (0...20).map { Item(title: "Item \($0)")}
+        self.items = (0...20).map { Item(name: "Item \($0)")}
         self.isExpandedIDs = []
     }
     
@@ -20,7 +20,7 @@ struct MultiSelectRowListView: View {
         ScrollView {
             LazyVStack {
                 ForEach(items) { item in
-                    ExpandableRowView(title: item.title, isExpand: isExpandedIDs.contains(item.id))
+                    ExpandableRowView(title: item.name, isExpand: isExpandedIDs.contains(item.id))
                         .contentShape(Rectangle())
                         .onTapGesture {
                             updateStateIDs(for: item.id)

@@ -43,6 +43,7 @@
 		DA278F862F3233BF0079AF56 /* CounterExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278F852F3233BF0079AF56 /* CounterExercise.swift */; };
 		DA278FA52F32398F0079AF56 /* ColorPickerExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278FA42F32398F0079AF56 /* ColorPickerExercise.swift */; };
 		DA278FAC2F323A360079AF56 /* TemperatureConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278FAB2F323A360079AF56 /* TemperatureConverter.swift */; };
+		DA278FB92F323E170079AF56 /* OptimizedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA278FB82F323E170079AF56 /* OptimizedList.swift */; };
 		DA28F59F2F1F786000079318 /* ViewIdentityLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F59E2F1F786000079318 /* ViewIdentityLessons.swift */; };
 		DA28F5A52F1F78BE00079318 /* ViewIdentityBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F5A42F1F78BE00079318 /* ViewIdentityBootcamp.swift */; };
 		DA28F5A82F1F798700079318 /* ViewIdentityBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28F5A72F1F798700079318 /* ViewIdentityBootcampCoordinator.swift */; };
@@ -385,6 +386,7 @@
 		DA278F852F3233BF0079AF56 /* CounterExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterExercise.swift; sourceTree = "<group>"; };
 		DA278FA42F32398F0079AF56 /* ColorPickerExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerExercise.swift; sourceTree = "<group>"; };
 		DA278FAB2F323A360079AF56 /* TemperatureConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConverter.swift; sourceTree = "<group>"; };
+		DA278FB82F323E170079AF56 /* OptimizedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptimizedList.swift; sourceTree = "<group>"; };
 		DA28F59E2F1F786000079318 /* ViewIdentityLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentityLessons.swift; sourceTree = "<group>"; };
 		DA28F5A42F1F78BE00079318 /* ViewIdentityBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentityBootcamp.swift; sourceTree = "<group>"; };
 		DA28F5A72F1F798700079318 /* ViewIdentityBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentityBootcampCoordinator.swift; sourceTree = "<group>"; };
@@ -817,6 +819,7 @@
 		DA278F842F3233A60079AF56 /* Excercies */ = {
 			isa = PBXGroup;
 			children = (
+				DA278FB82F323E170079AF56 /* OptimizedList.swift */,
 				DA278FAB2F323A360079AF56 /* TemperatureConverter.swift */,
 				DA278FA42F32398F0079AF56 /* ColorPickerExercise.swift */,
 				DA278F852F3233BF0079AF56 /* CounterExercise.swift */,
@@ -2443,6 +2446,7 @@
 				DA58DD8E2E9E35630042D1AD /* NetworkingBootcamp.swift in Sources */,
 				DA7BE0A22E805FEE006821CE /* LoginViewController.swift in Sources */,
 				DABC5FC42F27B23C00957964 /* NavigationLesson.swift in Sources */,
+				DA278FB92F323E170079AF56 /* OptimizedList.swift in Sources */,
 				DA0C4B5D2E52218A00D64C7C /* FocusStateBootcamp.swift in Sources */,
 				DA37F9B12E8EE8C30001599E /* CombineDefinitionViewWrapper.swift in Sources */,
 				DA723D182F26726A009BEC1C /* EquatableViewBootcamp.swift in Sources */,
