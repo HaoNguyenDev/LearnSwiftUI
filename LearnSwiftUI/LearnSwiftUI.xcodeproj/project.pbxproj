@@ -274,6 +274,9 @@
 		DAC35B3F2E9FED3F0019021D /* TextFieldModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC35B3E2E9FED3F0019021D /* TextFieldModifiers.swift */; };
 		DAC97DE72EA3960500F8A22F /* ActorBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC97DE62EA3960500F8A22F /* ActorBootcamp.swift */; };
 		DAC97E282EA3C22700F8A22F /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC97E272EA3C22700F8A22F /* Double+Extensions.swift */; };
+		DACD47E22F31A205007A6D06 /* StateManagementDeepDiveLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD47E12F31A205007A6D06 /* StateManagementDeepDiveLesson.swift */; };
+		DACD47E82F31A23B007A6D06 /* StateManagementDeepDiveBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD47E72F31A23B007A6D06 /* StateManagementDeepDiveBootcamp.swift */; };
+		DACD47EC2F31A2A2007A6D06 /* StateManagementDeepDiveCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD47EB2F31A2A2007A6D06 /* StateManagementDeepDiveCoordinator.swift */; };
 		DADA946C2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA946B2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift */; };
 		DADA94732F2CC6D5008ED262 /* CustomTabBarExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA94722F2CC6D5008ED262 /* CustomTabBarExample.swift */; };
 		DADA947C2F2CFF5C008ED262 /* CardExpansionExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA947B2F2CFF5C008ED262 /* CardExpansionExample.swift */; };
@@ -618,6 +621,9 @@
 		DAC35B3E2E9FED3F0019021D /* TextFieldModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifiers.swift; sourceTree = "<group>"; };
 		DAC97DE62EA3960500F8A22F /* ActorBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorBootcamp.swift; sourceTree = "<group>"; };
 		DAC97E272EA3C22700F8A22F /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		DACD47E12F31A205007A6D06 /* StateManagementDeepDiveLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManagementDeepDiveLesson.swift; sourceTree = "<group>"; };
+		DACD47E72F31A23B007A6D06 /* StateManagementDeepDiveBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManagementDeepDiveBootcamp.swift; sourceTree = "<group>"; };
+		DACD47EB2F31A2A2007A6D06 /* StateManagementDeepDiveCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManagementDeepDiveCoordinator.swift; sourceTree = "<group>"; };
 		DADA946B2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMatchedGeometryExample.swift; sourceTree = "<group>"; };
 		DADA94722F2CC6D5008ED262 /* CustomTabBarExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarExample.swift; sourceTree = "<group>"; };
 		DADA947B2F2CFF5C008ED262 /* CardExpansionExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardExpansionExample.swift; sourceTree = "<group>"; };
@@ -962,15 +968,12 @@
 			children = (
 				DA723CE02F264D9D009BEC1C /* BootcampTemplate */,
 				DAA45E6E2EF9756300BC57E9 /* BootcampList */,
-				DA61C5522F0CC38100FD8181 /* SwiftUILayoutEngine */,
-				DAEEA2A92F2E44D100AE6218 /* SwiftUI-Architecture-And-View-Lifecycle */,
-				DA6DB87F2F2F4BBB001781BD /* someView-AnyView-ViewBuilder */,
+				DACD47D72F31A1B2007A6D06 /* Fundamentals */,
 				DA61C5DD2F0E17D300FD8181 /* Alignment-AlignmentGuide */,
 				DA8656C52F0F75750092426E /* GeometryReader-coordinateSpace */,
 				DA8656CB2F0F757B0092426E /* ScrollView-LazyContainers */,
 				DAA609632F12325D00B625CE /* SafeArea-Insets */,
 				DAA609C62F129E1E00B625CE /* Animation-LayoutInteraction */,
-				DA28F59D2F1F781B00079318 /* View-Identity */,
 				DA03DF102F21FA460080D104 /* OneWay-DataFlow-Architecture */,
 				DA03DFA52F23BBB30080D104 /* Rendering-Performance */,
 				DA723D122F267227009BEC1C /* EquatableView */,
@@ -1894,6 +1897,28 @@
 			path = ViewWrapper;
 			sourceTree = "<group>";
 		};
+		DACD47D72F31A1B2007A6D06 /* Fundamentals */ = {
+			isa = PBXGroup;
+			children = (
+				DA61C5522F0CC38100FD8181 /* SwiftUILayoutEngine */,
+				DAEEA2A92F2E44D100AE6218 /* SwiftUI-Architecture-And-View-Lifecycle */,
+				DA28F59D2F1F781B00079318 /* View-Identity */,
+				DA6DB87F2F2F4BBB001781BD /* someView-AnyView-ViewBuilder */,
+				DACD47DC2F31A1D4007A6D06 /* State-Management-Deep-Dive */,
+			);
+			path = Fundamentals;
+			sourceTree = "<group>";
+		};
+		DACD47DC2F31A1D4007A6D06 /* State-Management-Deep-Dive */ = {
+			isa = PBXGroup;
+			children = (
+				DACD47E12F31A205007A6D06 /* StateManagementDeepDiveLesson.swift */,
+				DACD47E72F31A23B007A6D06 /* StateManagementDeepDiveBootcamp.swift */,
+				DACD47EB2F31A2A2007A6D06 /* StateManagementDeepDiveCoordinator.swift */,
+			);
+			path = "State-Management-Deep-Dive";
+			sourceTree = "<group>";
+		};
 		DADA94612F2CC1BF008ED262 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -2159,6 +2184,7 @@
 				DA6DB88D2F2F4CCB001781BD /* CustomCardWithViewBuilder.swift in Sources */,
 				DA7BE0B82E806362006821CE /* HomeInteractor.swift in Sources */,
 				DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */,
+				DACD47EC2F31A2A2007A6D06 /* StateManagementDeepDiveCoordinator.swift in Sources */,
 				DA03DEFE2F2116A30080D104 /* ViewRecreatedDemo.swift in Sources */,
 				DABDF7B42E70466B00DEC7C6 /* DownloadTask.swift in Sources */,
 				DA37F99D2E8D93F60001599E /* CbDemoLoginContentView.swift in Sources */,
@@ -2248,6 +2274,7 @@
 				DAFC16B42F11400E00D242D3 /* DragViewDemo.swift in Sources */,
 				DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */,
 				DA03DF212F2214F30080D104 /* MultiSelectRowListView.swift in Sources */,
+				DACD47E82F31A23B007A6D06 /* StateManagementDeepDiveBootcamp.swift in Sources */,
 				DA8656D72F0F76820092426E /* ScrollViewLazyContainersBootcampCoordinator.swift in Sources */,
 				DA61C5B22F0D3A7100FD8181 /* StackViewLessons.swift in Sources */,
 				DA723CED2F264E7D009BEC1C /* BootcampTemplateCoordinator.swift in Sources */,
@@ -2347,6 +2374,7 @@
 				DAE365BF2E9CC288005EF803 /* DarkThemeColors.swift in Sources */,
 				DA37F9A42E8EE50F0001599E /* CombineDefinitionHomeViewModel.swift in Sources */,
 				DA28F5A82F1F798700079318 /* ViewIdentityBootcampCoordinator.swift in Sources */,
+				DACD47E22F31A205007A6D06 /* StateManagementDeepDiveLesson.swift in Sources */,
 				DA5D71962E3FBC9100C78E40 /* GitHubAPIEndpoint.swift in Sources */,
 				DA58DD8E2E9E35630042D1AD /* NetworkingBootcamp.swift in Sources */,
 				DA7BE0A22E805FEE006821CE /* LoginViewController.swift in Sources */,
