@@ -934,5 +934,12 @@ struct OptimizedList: View {
     AnyView(ResultBlockView(content: {
         OptimizedList()
     }))
+}),
+    Lesson(title: "Advanced Counter Exercise", code: """
+AdvancedCounterExercise()
+""", result: {
+    AnyView(ResultBlockView(content: {
+        AdvancedCounterExercise()
+    }))
 })]
 }
