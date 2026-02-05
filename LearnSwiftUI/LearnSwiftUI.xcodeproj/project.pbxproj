@@ -323,6 +323,7 @@
 		DAEEA2CB2F2E50BD00AE6218 /* SwiftUIArchitectureAndViewLifeCycleBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEEA2CA2F2E50BD00AE6218 /* SwiftUIArchitectureAndViewLifeCycleBootcamp.swift */; };
 		DAEEA2CF2F2E510400AE6218 /* SwiftUIArchitectureAndViewLifeCycleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEEA2CE2F2E510400AE6218 /* SwiftUIArchitectureAndViewLifeCycleCoordinator.swift */; };
 		DAEEFB762E366D4000E78DA2 /* ObservableObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEEFB752E366D2F00E78DA2 /* ObservableObjectBootcamp.swift */; };
+		DAFBB5042F338A8D006E4E48 /* AdvancedCounterExcercies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFBB5032F338A8D006E4E48 /* AdvancedCounterExcercies.swift */; };
 		DAFC16602F11155200D242D3 /* GeometryReaderDemos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC165F2F11155200D242D3 /* GeometryReaderDemos.swift */; };
 		DAFC16722F11240C00D242D3 /* StickyHeaderViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC16712F11240C00D242D3 /* StickyHeaderViewDemo.swift */; };
 		DAFC16842F11362C00D242D3 /* ParallaxViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFC16832F11362C00D242D3 /* ParallaxViewDemo.swift */; };
@@ -684,6 +685,7 @@
 		DAEEA2CA2F2E50BD00AE6218 /* SwiftUIArchitectureAndViewLifeCycleBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIArchitectureAndViewLifeCycleBootcamp.swift; sourceTree = "<group>"; };
 		DAEEA2CE2F2E510400AE6218 /* SwiftUIArchitectureAndViewLifeCycleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIArchitectureAndViewLifeCycleCoordinator.swift; sourceTree = "<group>"; };
 		DAEEFB752E366D2F00E78DA2 /* ObservableObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObjectBootcamp.swift; sourceTree = "<group>"; };
+		DAFBB5032F338A8D006E4E48 /* AdvancedCounterExcercies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedCounterExcercies.swift; sourceTree = "<group>"; };
 		DAFC165F2F11155200D242D3 /* GeometryReaderDemos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderDemos.swift; sourceTree = "<group>"; };
 		DAFC16712F11240C00D242D3 /* StickyHeaderViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderViewDemo.swift; sourceTree = "<group>"; };
 		DAFC16832F11362C00D242D3 /* ParallaxViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxViewDemo.swift; sourceTree = "<group>"; };
@@ -823,6 +825,7 @@
 				DA278FAB2F323A360079AF56 /* TemperatureConverter.swift */,
 				DA278FA42F32398F0079AF56 /* ColorPickerExercise.swift */,
 				DA278F852F3233BF0079AF56 /* CounterExercise.swift */,
+				DAFBB5032F338A8D006E4E48 /* AdvancedCounterExcercies.swift */,
 			);
 			path = Excercies;
 			sourceTree = "<group>";
@@ -2445,6 +2448,7 @@
 				DA5D71962E3FBC9100C78E40 /* GitHubAPIEndpoint.swift in Sources */,
 				DA58DD8E2E9E35630042D1AD /* NetworkingBootcamp.swift in Sources */,
 				DA7BE0A22E805FEE006821CE /* LoginViewController.swift in Sources */,
+				DAFBB5042F338A8D006E4E48 /* AdvancedCounterExcercies.swift in Sources */,
 				DABC5FC42F27B23C00957964 /* NavigationLesson.swift in Sources */,
 				DA278FB92F323E170079AF56 /* OptimizedList.swift in Sources */,
 				DA0C4B5D2E52218A00D64C7C /* FocusStateBootcamp.swift in Sources */,
