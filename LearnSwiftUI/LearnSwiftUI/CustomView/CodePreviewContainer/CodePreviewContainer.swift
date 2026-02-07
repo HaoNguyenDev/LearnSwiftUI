@@ -21,7 +21,6 @@ struct CodePreviewContainer: View {
         VStack(alignment: .leading, spacing: 16) {
             Text(example.title)
                 .font(.headline)
-
             CodeBlockView(code: example.code)
 
             resultView()
