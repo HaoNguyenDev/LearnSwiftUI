@@ -18,7 +18,6 @@ extension View {
     }
 }
 
-
 struct BootcampTemplateView: View {
     var gotoChildView: SingleResult<Route.BootcampTemplateRouter>?
     
