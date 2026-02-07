@@ -208,6 +208,9 @@
 		DA7BF6212E99038300224BCF /* Environment+ThemeKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF6202E99038300224BCF /* Environment+ThemeKeys.swift */; };
 		DA7BF6722E992DEF00224BCF /* HTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF6712E992DEF00224BCF /* HTextField.swift */; };
 		DA7BF6902E995FAC00224BCF /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF68F2E995FAC00224BCF /* View+Extensions.swift */; };
+		DA82B92C2F378A80004463EF /* ViewCompositionAndViewBuilderLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82B92B2F378A80004463EF /* ViewCompositionAndViewBuilderLesson.swift */; };
+		DA82B9302F378AB1004463EF /* ViewCompositionAndViewBuilderBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82B92F2F378AB1004463EF /* ViewCompositionAndViewBuilderBootcamp.swift */; };
+		DA82B9342F378B4F004463EF /* ViewCompositionAndViewBuilderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82B9332F378B4F004463EF /* ViewCompositionAndViewBuilderCoordinator.swift */; };
 		DA83D7392EFC08D20050EF92 /* TextBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D7382EFC08D20050EF92 /* TextBootcampCoordinator.swift */; };
 		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
 		DA86566F2F0E1AA50092426E /* AlignmentLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86566E2F0E1AA50092426E /* AlignmentLessons.swift */; };
@@ -562,6 +565,9 @@
 		DA7BF6202E99038300224BCF /* Environment+ThemeKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+ThemeKeys.swift"; sourceTree = "<group>"; };
 		DA7BF6712E992DEF00224BCF /* HTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTextField.swift; sourceTree = "<group>"; };
 		DA7BF68F2E995FAC00224BCF /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		DA82B92B2F378A80004463EF /* ViewCompositionAndViewBuilderLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCompositionAndViewBuilderLesson.swift; sourceTree = "<group>"; };
+		DA82B92F2F378AB1004463EF /* ViewCompositionAndViewBuilderBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCompositionAndViewBuilderBootcamp.swift; sourceTree = "<group>"; };
+		DA82B9332F378B4F004463EF /* ViewCompositionAndViewBuilderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCompositionAndViewBuilderCoordinator.swift; sourceTree = "<group>"; };
 		DA83D7382EFC08D20050EF92 /* TextBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBootcampCoordinator.swift; sourceTree = "<group>"; };
 		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DA86566E2F0E1AA50092426E /* AlignmentLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentLessons.swift; sourceTree = "<group>"; };
@@ -1599,6 +1605,16 @@
 			path = RswiftExtensions;
 			sourceTree = "<group>";
 		};
+		DA82B9282F378A39004463EF /* View Composition and ViewBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				DA82B92B2F378A80004463EF /* ViewCompositionAndViewBuilderLesson.swift */,
+				DA82B92F2F378AB1004463EF /* ViewCompositionAndViewBuilderBootcamp.swift */,
+				DA82B9332F378B4F004463EF /* ViewCompositionAndViewBuilderCoordinator.swift */,
+			);
+			path = "View Composition and ViewBuilder";
+			sourceTree = "<group>";
+		};
 		DA83D7352EFC08B40050EF92 /* Text */ = {
 			isa = PBXGroup;
 			children = (
@@ -1961,6 +1977,7 @@
 				DA28F59D2F1F781B00079318 /* View-Identity */,
 				DA6DB87F2F2F4BBB001781BD /* someView-AnyView-ViewBuilder */,
 				DACD47DC2F31A1D4007A6D06 /* State-Management-Deep-Dive */,
+				DA82B9282F378A39004463EF /* View Composition and ViewBuilder */,
 			);
 			path = Fundamentals;
 			sourceTree = "<group>";
@@ -2309,6 +2326,7 @@
 				DA64B7C52F2BA6AD00144CC6 /* AdvancedAnimationBootcamp.swift in Sources */,
 				DA7BE0A02E805F95006821CE /* LoginProtocol.swift in Sources */,
 				DAA6096F2F12348000B625CE /* SafeAreaInsetsBootcampCoordinator.swift in Sources */,
+				DA82B9302F378AB1004463EF /* ViewCompositionAndViewBuilderBootcamp.swift in Sources */,
 				DA7BE0B42E806329006821CE /* HomeViewController.swift in Sources */,
 				DA5D71472E3F589A00C78E40 /* CustomEnvironmentValues.swift in Sources */,
 				DA5476F82EB3C292005C8868 /* AuthInterceptor.swift in Sources */,
@@ -2362,6 +2380,7 @@
 				DAA709122E75D447006F8E70 /* MomoPaymentService.swift in Sources */,
 				DAA709252E787C52006F8E70 /* TransactionResult.swift in Sources */,
 				DA5477A22EB7983D005C8868 /* FakeStoreCommonRequest.swift in Sources */,
+				DA82B92C2F378A80004463EF /* ViewCompositionAndViewBuilderLesson.swift in Sources */,
 				DAA7090B2E75D29E006F8E70 /* LocationManager.swift in Sources */,
 				DA8748952E6B006A00B189F3 /* WeatherLoadingView.swift in Sources */,
 				DA257EE52F2E06B70024DC9B /* PhaseAnimationExample.swift in Sources */,
@@ -2401,6 +2420,7 @@
 				DA4726582EA7C31E000D596A /* AppTextStyleSize.swift in Sources */,
 				DA6DB8BD2F2F9DDF001781BD /* OptionalViewExample.swift in Sources */,
 				DA4F7EF12E9A6B6D001CB7B2 /* HButtonStyle.swift in Sources */,
+				DA82B9342F378B4F004463EF /* ViewCompositionAndViewBuilderCoordinator.swift in Sources */,
 				DA87489E2E6B16B500B189F3 /* WeatherMainView.swift in Sources */,
 				DAEEA2CF2F2E510400AE6218 /* SwiftUIArchitectureAndViewLifeCycleCoordinator.swift in Sources */,
 				DAA709222E787C42006F8E70 /* PaymentVM.swift in Sources */,

@@ -9,11 +9,15 @@ import SwiftUI
 
 extension Route {
     enum BootcampListRoute: String, CaseIterable, Routable {
+        //FUNDAMENTALS
         case swiftuiLayoutEngine
         case swiftuiArchitectureAndViewLifeCycle
         case viewIdentity
         case stateManagementDeepDive
         case someViewAnyViewAndViewBuilder
+        case renderingPerformance
+        case equatableview
+        case viewCompositionAndViewBuilder
         case stackView
         case alignmentAlignmentGuide
         case geometryReaderCoordinateSpace
@@ -21,8 +25,7 @@ extension Route {
         case safeAreaInsets
         case animationLayoutInteraction
         case dataFlowAndArchitecture
-        case renderingPerformance
-        case equatableview
+        
         case navigation
         case advancedAnimation
         case text
@@ -36,6 +39,7 @@ extension Route {
             case .swiftuiArchitectureAndViewLifeCycle: "SwiftUI Architecture - View LifeCycle"
             case .stateManagementDeepDive: "State Management Deep Dive (@State, @Binding)"
             case .someViewAnyViewAndViewBuilder: "some View - AnyView - @ViewBuilder"
+            case .viewCompositionAndViewBuilder: "View Composition - ViewBuilder"
             case .stackView: "Stack View"
             case .alignmentAlignmentGuide: "Alignment-AlignmentGuide"
             case .geometryReaderCoordinateSpace: "GeometryReader-CoordinateSpace"
@@ -97,6 +101,8 @@ extension BootcampListCoordinator {
             ViewIdentityBootcampCoordinator(navRouter: navRoute)
         case .stateManagementDeepDive:
             StateManagementDeepDiveCoordinator(navRoute: navRoute)
+        case .viewCompositionAndViewBuilder:
+            ViewCompositionAndViewBuilderCoordinator(navRoute: navRoute)
         case .stackView:
             StackViewBootcampCoordinator(navRouter: navRoute)
         case .alignmentAlignmentGuide:

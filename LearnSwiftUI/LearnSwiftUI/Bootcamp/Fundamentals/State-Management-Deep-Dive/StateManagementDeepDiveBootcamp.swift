@@ -10,7 +10,7 @@ import SwiftUI
 struct StateManagementDeepDiveBootcamp: View {
     var body: some View {
         ScrollView {
-            LazyVStack {
+            LazyVStack(spacing: 24.0) {
                 ForEach(StateManagementDeepDiveLesson.all) { lesson in
                     CodePreviewContainer(title: lesson.title, code: lesson.code, resultView: lesson.result?())
                 }
