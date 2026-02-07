@@ -10,8 +10,8 @@ import SwiftUI
 struct AdvancedCounterExercise: View {
     // MARK: - State
     @State private var currentNumber = 0
-    @State private var history: [Int] = []      // Undo stack
-    @State private var redoStack: [Int] = []    // ✅ Redo stack
+    @State private var history: [Int] = []
+    @State private var redoStack: [Int] = []
     @State private var stepSize = 5
     
     // MARK: - Constants
@@ -36,33 +36,30 @@ struct AdvancedCounterExercise: View {
         currentNumber - stepSize >= minValue
     }
     
+    private var canReset: Bool {
+        history.isEmpty && redoStack.isEmpty
+    }
+    
     // MARK: - Body
     var body: some View {
         VStack(spacing: 30) {
-            // Display
-            numberDisplay
-            
-            // History visualization
+            currentNumberView
             historyView
-            
-            // Redo history
-            redoHistoryView
-            
-            // Step size picker
-            stepSizePicker
-            
-            // Controls
-            controlButtons
+            redoStackView
+            stepPickerView
+            undoRedoActionView
+            stepButtonActions
+            resetButtonView
         }
         .padding()
     }
     
     // MARK: - View Components
-    private var numberDisplay: some View {
+    private var currentNumberView: some View {
         VStack(spacing: 8) {
             Text("\(currentNumber)")
                 .font(.system(size: 80, weight: .bold, design: .rounded))
-//                .contentTransition(.numericText())
+                .contentTransition(.numericText())
             
             Text("Range: \(minValue) - \(maxValue)")
                 .font(.caption)
@@ -81,10 +78,14 @@ struct AdvancedCounterExercise: View {
                     ForEach(history.suffix(10), id: \.self) { value in
                         Text("\(value)")
                             .font(.system(.body, design: .monospaced))
+                            .foregroundStyle(.white)
                             .padding(.horizontal, 12)
                             .padding(.vertical, 6)
-                            .background(Color.blue.opacity(0.1))
-                            .cornerRadius(8)
+                            .background {
+                                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                    .fill(Color.blue)
+                                
+                            }
                     }
                 }
             }
@@ -92,9 +93,9 @@ struct AdvancedCounterExercise: View {
         }
     }
     
-    private var redoHistoryView: some View {
+    private var redoStackView: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Redo history (last 10):")
+            Text("RedoStack (last 10):")
                 .font(.caption)
                 .foregroundColor(.secondary)
             
@@ -103,130 +104,123 @@ struct AdvancedCounterExercise: View {
                     ForEach(redoStack.suffix(10), id: \.self) { value in
                         Text("\(value)")
                             .font(.system(.body, design: .monospaced))
+                            .foregroundStyle(.white)
                             .padding(.horizontal, 12)
                             .padding(.vertical, 6)
-                            .background(Color.blue.opacity(0.1))
-                            .cornerRadius(8)
+                            .background {
+                                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                    .fill(Color.blue)
+                                
+                            }
                     }
                 }
             }
             .frame(height: 40)
         }
+        
     }
     
-    private var stepSizePicker: some View {
-        VStack(spacing: 8) {
-            Text("Step Size: \(stepSize)")
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-            
-            Picker("Step Size", selection: $stepSize) {
+    private var stepPickerView: some View {
+        VStack {
+            Text("Step size")
+            Picker("Step size", selection: $stepSize) {
                 ForEach(stepSizes, id: \.self) { size in
                     Text("\(size)").tag(size)
+                        .padding()
                 }
             }
             .pickerStyle(.segmented)
         }
     }
     
-    private var controlButtons: some View {
-        VStack(spacing: 16) {
-            // Undo/Redo
-            HStack(spacing: 16) {
-                Button(action: undo) {
-                    Label("Undo", systemImage: "arrow.uturn.backward")
-                        .frame(maxWidth: .infinity)
-                }
-                .disabled(!canUndo)
-                
-                Button(action: redo) {
-                    Label("Redo", systemImage: "arrow.uturn.forward")
-                        .frame(maxWidth: .infinity)
-                }
-                .disabled(!canRedo)
-            }
-            .buttonStyle(.bordered)
-            
-            // Increment/Decrement
-            HStack(spacing: 16) {
-                Button(action: decrease) {
-                    Label("−\(stepSize)", systemImage: "minus.circle.fill")
-                        .frame(maxWidth: .infinity)
-                }
-                .disabled(!canDecrease)
-                
-                Button(action: increase) {
-                    Label("+\(stepSize)", systemImage: "plus.circle.fill")
-                        .frame(maxWidth: .infinity)
-                }
-                .disabled(!canIncrease)
-            }
-            .buttonStyle(.borderedProminent)
-            
-            // Reset
-            Button(action: reset) {
-                Label("Reset", systemImage: "arrow.counterclockwise")
+    private var undoRedoActionView: some View {
+        HStack {
+            Button(action: undoAction) {
+                Label("Undo", systemImage: "arrow.uturn.backward")
                     .frame(maxWidth: .infinity)
             }
-            .buttonStyle(.bordered)
-            .tint(.red)
+            .disabled(!canUndo)
+            
+            Button(action: redoAction) {
+                Label("Redo", systemImage: "arrow.uturn.forward")
+                    .frame(maxWidth: .infinity)
+            }
+            .disabled(!canRedo)
         }
+        .buttonStyle(.borderedProminent)
+    }
+    private var stepButtonActions: some View {
+        HStack {
+            Button(action: decreaseAction) {
+                Label("-\(stepSize)", systemImage: "minus.circle.fill")
+                    .frame(maxWidth: .infinity)
+            }
+            .disabled(!canDecrease)
+            
+            Button(action: increaseAction) {
+                Label("+\(stepSize)", systemImage: "plus.circle.fill")
+                    .frame(maxWidth: .infinity)
+            }
+            .disabled(!canIncrease)
+        }
+        .buttonStyle(.borderedProminent)
     }
     
-    // MARK: - Actions
-    private func increase() {
+    private var resetButtonView: some View {
+        Button(action: resetAction) {
+            Label("Reset", systemImage: "xmark.square.fill")
+                .frame(maxWidth: .infinity)
+        }
+        .buttonStyle(.borderedProminent)
+        .disabled(canReset)
+    }
+    
+    //MARK: Action
+    private func increaseAction() {
         guard canIncrease else { return }
-        
-        withAnimation(.spring(response: 0.3)) {
+        withAnimation(.spring()) {
             saveToHistory()
             currentNumber += stepSize
-            clampNumber()
-            redoStack.removeAll()  // ✅ Clear redo stack on new action
-        }
+            clampNumber()        }
     }
     
-    private func decrease() {
+    private func decreaseAction() {
         guard canDecrease else { return }
-        
-        withAnimation(.spring(response: 0.3)) {
+        withAnimation(.spring()) {
             saveToHistory()
             currentNumber -= stepSize
             clampNumber()
-            redoStack.removeAll()  // ✅ Clear redo stack on new action
         }
     }
     
-    private func undo() {
+    private func undoAction() {
         guard let previousValue = history.popLast() else { return }
-        
         withAnimation(.spring(response: 0.3)) {
-            redoStack.append(currentNumber)  // ✅ Save current to redo stack
+            redoStack.append(currentNumber)
             currentNumber = previousValue
         }
     }
     
-    private func redo() {
-        guard let nextValue = redoStack.popLast() else { return }
-        
+    private func redoAction() {
+        guard let previousValue = redoStack.popLast() else { return }
         withAnimation(.spring(response: 0.3)) {
-            history.append(currentNumber)  // ✅ Save current to history
-            currentNumber = nextValue
+            history.append(currentNumber)
+            currentNumber = previousValue
         }
     }
     
-    private func reset() {
-        withAnimation(.spring(response: 0.3)) {
-            currentNumber = 0
+    private func resetAction() {
+        withAnimation(.spring()) {
             history.removeAll()
             redoStack.removeAll()
+            currentNumber = 0
+            stepSize = 5
         }
     }
     
-    // MARK: - Helpers
+    //MARK: Helper
     private func saveToHistory() {
         history.append(currentNumber)
-        
-        // ✅ Limit history size to prevent memory issues
         if history.count > 100 {
             history.removeFirst()
         }
