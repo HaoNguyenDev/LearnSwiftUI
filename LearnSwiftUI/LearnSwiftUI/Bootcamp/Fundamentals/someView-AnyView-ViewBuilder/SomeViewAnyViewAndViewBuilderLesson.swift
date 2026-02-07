@@ -118,6 +118,7 @@ Simply put: it allows you to write multiple views consecutively in a block of co
  and SwiftUI will automatically combine them into a single view.
 
 How it works
+
 // NO @ViewBuilder - Error!
 func makeViews() -> some View {
     Text("Hello")
@@ -151,6 +152,40 @@ struct MultipleViews: View {
         )) 
     }
 }
+
+// With @ViewBuilder:
+
+@ViewBuilder
+func makeViews() -> some View { 
+    Text("Line 1") 
+    Text("Line 2") 
+    Text("Line 3")
+}
+// Compiler automatically wraps in TupleView
+
+ViewBuilder Transformations
+// Input code:
+
+@ViewBuilder
+var content: some View {
+    Text("A")
+    Text("B")
+    if condition {
+        Text("C")
+    }
+}
+
+// Compiler transforms to:
+var content: some View {
+    buildBlock(
+        Text("A"),
+        Text("B"),
+        buildIf(condition ? Text("C") : nil)
+    )
+}
+
+// Result type:
+// TupleView<(Text, Text, Text?)>
 
 // Custom ViewBuilder:
 @ViewBuilder
@@ -307,6 +342,79 @@ struct ContentView: View {
     }
 }
 """, result: nil),
+                      Lesson(title: "Advanced: Multiple ViewBuilder Parameters", code: """
+struct SplitView<Leading: View, Trailing: View>: View {
+    let leading: Leading
+    let trailing: Trailing
+    
+    init(
+        @ViewBuilder leading: () -> Leading,
+        @ViewBuilder trailing: () -> Trailing
+    ) {
+        self.leading = leading()
+        self.trailing = trailing()
+    }
+    
+    var body: some View {
+        HStack {
+            leading
+                .frame(maxWidth: .infinity)
+            Divider()
+            trailing
+                .frame(maxWidth: .infinity)
+        }
+    }
+}
+
+// Usage:
+SplitView {
+    Text("Left")
+    Text("Side")
+} trailing: {
+    Text("Right")
+    Text("Side")
+}
+""", result: nil),
+                      Lesson(title: "Generic Container Pattern", code: """
+// Reusable container with custom styling
+struct StyledContainer<Content: View>: View {
+    enum Style {
+        case primary, secondary, danger
+        
+        var color: Color {
+            switch self {
+            case .primary: return .blue
+            case .secondary: return .gray
+            case .danger: return .red
+            }
+        }
+    }
+    
+    let style: Style
+    let content: Content
+    
+    init(style: Style = .primary, @ViewBuilder content: () -> Content) {
+        self.style = style
+        self.content = content()
+    }
+    
+    var body: some View {
+        content
+            .padding()
+            .background(style.color.opacity(0.1))
+            .overlay {
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(style.color, lineWidth: 2)
+            }
+    }
+}
+
+// Usage:
+StyledContainer(style: .danger) {
+    Text("Error!")
+    Text("Something went wrong")
+}
+""", result: nil),
     Lesson(title: "Important Notes", code: """
 1. Limit of 10 views
 SwiftUI only supports a maximum of 10 child views directly within a @ViewBuilder block:
@@ -363,14 +471,18 @@ var tooManyViews: some View {
         } else {
             Text("Hidden")
         }
-
-// ✅ if-else OK
+// ✅ Supported
+// ✅ if
+// ✅ if-else
+// ✅ switch
+// ✅ ForEach 
 
 // ❌ NOT supported:
 // - for-in loops
 // - while loops
 // - do-catch
 // - guard
+// - while
 }
 
 // Solution for loops: Use ForEach
