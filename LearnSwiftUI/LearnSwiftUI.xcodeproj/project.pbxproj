@@ -230,6 +230,8 @@
 		DA87489B2E6B007D00B189F3 /* WeatherListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87489A2E6B007D00B189F3 /* WeatherListView.swift */; };
 		DA87489E2E6B16B500B189F3 /* WeatherMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87489D2E6B16B500B189F3 /* WeatherMainView.swift */; };
 		DA87A2122EB7ACF500749349 /* FakeStoreAuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87A2112EB7ACF500749349 /* FakeStoreAuthRequest.swift */; };
+		DA8D9CC22F3865C5004529FF /* StyledContainerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D9CC12F3865C5004529FF /* StyledContainerExample.swift */; };
+		DA8D9CD52F38A3A1004529FF /* LazyViewLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D9CD42F38A3A1004529FF /* LazyViewLoading.swift */; };
 		DA8F78A22E883F0300826FB2 /* SwiftUI.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA8F78A12E883F0300826FB2 /* SwiftUI.txt */; };
 		DA9614F82F1CABBD00AEEB25 /* ClassicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9614F72F1CABBC00AEEB25 /* ClassicAnimation.swift */; };
 		DA9614FE2F1CAD4C00AEEB25 /* JumpAnimationBehaviorExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9614FD2F1CAD4C00AEEB25 /* JumpAnimationBehaviorExample.swift */; };
@@ -590,6 +592,8 @@
 		DA89A7CF2E48DF73007BF882 /* Closure.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Closure.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA89A7D12E48FEAE007BF882 /* RefreshTokenExample.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RefreshTokenExample.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA89A7D22E490391007BF882 /* GCDTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GCDTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DA8D9CC12F3865C5004529FF /* StyledContainerExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledContainerExample.swift; sourceTree = "<group>"; };
+		DA8D9CD42F38A3A1004529FF /* LazyViewLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyViewLoading.swift; sourceTree = "<group>"; };
 		DA8F789E2E86FB1700826FB2 /* StructAndSwiftUI.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StructAndSwiftUI.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA8F78A12E883F0300826FB2 /* SwiftUI.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwiftUI.txt; sourceTree = "<group>"; };
 		DA9614F72F1CABBC00AEEB25 /* ClassicAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicAnimation.swift; sourceTree = "<group>"; };
@@ -1608,6 +1612,7 @@
 		DA82B9282F378A39004463EF /* View Composition and ViewBuilder */ = {
 			isa = PBXGroup;
 			children = (
+				DA8D9CC02F3865B8004529FF /* Examples */,
 				DA82B92B2F378A80004463EF /* ViewCompositionAndViewBuilderLesson.swift */,
 				DA82B92F2F378AB1004463EF /* ViewCompositionAndViewBuilderBootcamp.swift */,
 				DA82B9332F378B4F004463EF /* ViewCompositionAndViewBuilderCoordinator.swift */,
@@ -1718,6 +1723,15 @@
 				DA5476A22EB34B72005C8868 /* CodableProtocol.playground */,
 			);
 			path = Swift;
+			sourceTree = "<group>";
+		};
+		DA8D9CC02F3865B8004529FF /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				DA8D9CC12F3865C5004529FF /* StyledContainerExample.swift */,
+				DA8D9CD42F38A3A1004529FF /* LazyViewLoading.swift */,
+			);
+			path = Examples;
 			sourceTree = "<group>";
 		};
 		DA9614F62F1CABB000AEEB25 /* Example */ = {
@@ -2264,11 +2278,13 @@
 				DACD47EC2F31A2A2007A6D06 /* StateManagementDeepDiveCoordinator.swift in Sources */,
 				DA03DEFE2F2116A30080D104 /* ViewRecreatedDemo.swift in Sources */,
 				DABDF7B42E70466B00DEC7C6 /* DownloadTask.swift in Sources */,
+				DA8D9CD52F38A3A1004529FF /* LazyViewLoading.swift in Sources */,
 				DA37F99D2E8D93F60001599E /* CbDemoLoginContentView.swift in Sources */,
 				DA6DB8E12F2FA692001781BD /* StableIdentityViewExample.swift in Sources */,
 				DA37F9872E8D898B0001599E /* CbLoginResult.swift in Sources */,
 				DA8656C62F0F75750092426E /* GeometryReaderBootcamp.swift in Sources */,
 				DA8656C72F0F75750092426E /* GeometryReaderCoordinateSpaceBootcampCoordinator.swift in Sources */,
+				DA8D9CC22F3865C5004529FF /* StyledContainerExample.swift in Sources */,
 				DA723CEA2F264DEB009BEC1C /* BootcampTemplateView.swift in Sources */,
 				DA28F5A52F1F78BE00079318 /* ViewIdentityBootcamp.swift in Sources */,
 				DA8656C82F0F75750092426E /* GeometryReaderCoordinateSpaceLessons.swift in Sources */,
