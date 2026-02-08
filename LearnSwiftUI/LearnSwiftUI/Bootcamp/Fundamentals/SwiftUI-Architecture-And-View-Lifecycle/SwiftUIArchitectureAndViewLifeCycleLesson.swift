@@ -406,10 +406,6 @@ A:
 // 2. Instruments: SwiftUI profiler
 // 3. View body execution counter
 // 4. TimelineView for monitoring
-""", result: nil),
-                      Lesson(title: "", code: """
-""", result: nil),
-                      Lesson(title: "", code: """
 """, result: nil)
     ]
 }
