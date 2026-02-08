@@ -474,7 +474,21 @@ StyledContainer(style: .danger) {
     Text("Error!")
     Text("Something went wrong")
 }
-""", result: nil),
+""", result: {
+        AnyView(ResultBlockView(content: {
+            VStack {
+                StyledContainerExample(style: .danger) {
+                    Text("Error!")
+                    Text("Something went wrong!")
+                }
+                
+                StyledContainerExample(style: .primary) {
+                    Text("Welcome!")
+                    Text("Let's style with me!")
+                }
+            }
+        }))
+    }),
                       Lesson(title: "COMPOSITION PATTERNS", code: nil, result: nil),
                       Lesson(title: " Container-Presentational Pattern", code: """
 // Container: Logic + State
@@ -854,7 +868,24 @@ TabView {
     LazyView(ExpensiveView1())  // Only created when tab shown
         .tabItem { Label("Tab 1", systemImage: "1.circle") }
 }
-""", result: nil),
+
+Demo: 
+
+VStack {
+    TabViewWithLazyView()
+        .frame(maxWidth: .infinity, minHeight: 400)
+        .padding()
+}
+""", result: {
+        AnyView(ResultBlockView(content: {
+            VStack {
+                TabViewWithLazyView()
+                    .frame(maxWidth: .infinity, minHeight: 400)
+                    .padding()
+            }
+            
+        }))
+    }),
                       Lesson(title: "INTERVIEW QUESTIONS", code: """
 Q1: When should you extract a view into a separate component?
 
