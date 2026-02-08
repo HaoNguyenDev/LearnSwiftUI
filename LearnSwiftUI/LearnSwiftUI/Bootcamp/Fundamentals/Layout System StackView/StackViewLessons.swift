@@ -402,7 +402,7 @@ ProductCardStackExample()
         ProductCardStackExample()
     }))
 }),
-        Lesson(title: "Spacer & Divider", code: nil, result: nil),
+        Lesson(title: "Spacer & Divider"),
         Lesson(title: "Spacer", code: """
 Spacer in Stacks
 
@@ -512,6 +512,43 @@ so Spacer continues to function even without setting a frame.
         .frame(maxHeight: .infinity)
         .background(.gray)
     }))
-})
+}),
+        Lesson(title: "Best Practices & Performance Tips"),
+        Lesson(title: "Avoid nested stacks too deep", code: """
+// ❌ Not good
+VStack {
+    VStack {
+        VStack {
+            Text("Too nested")
+        }
+    }
+}
+
+// ✅ Better
+VStack(spacing: 20) {
+    Text("Item 1")
+    Text("Item 2")
+    Text("Item 3")
+}
+""", result: nil),
+        Lesson(title: "Use LazyVStack/LazyHStack for long lists", code: """
+// ✅ Good for performance with many items
+ScrollView {
+    LazyVStack(spacing: 10) {
+        ForEach(0..<1000) { index in
+            Text("Item (index)")
+        }
+    }
+}
+""", result: nil),
+        Lesson(title: "Avoid using ZStack when unnecessary", code: """
+// ❌ Unnecessary
+ZStack {
+    Text("Hello")
+}
+
+// ✅ Simpler
+Text("Hello")
+""", result: nil)
     ]
 }

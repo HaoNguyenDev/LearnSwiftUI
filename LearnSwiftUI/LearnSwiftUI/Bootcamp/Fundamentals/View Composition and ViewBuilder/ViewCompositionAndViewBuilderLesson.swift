@@ -35,7 +35,7 @@ struct GoodDashboard: View {
 // 4. Better performance (granular updates)
 // 5. Easy to maintain
 """, result: nil),
-                      Lesson(title: "View Extraction Patterns", code: nil, result: nil),
+                      Lesson(title: "View Extraction Patterns"),
     Lesson(title: "Pattern 1: Extract by Responsibility", code: """
 struct UserProfileView: View {
     let user: User
@@ -552,7 +552,7 @@ StyledContainer(style: .danger) {
             }
         }))
     }),
-                      Lesson(title: "COMPOSITION PATTERNS", code: nil, result: nil),
+                      Lesson(title: "COMPOSITION PATTERNS"),
                       Lesson(title: " Container-Presentational Pattern", code: """
 // Container: Logic + State
 struct TodoListContainer: View {
@@ -804,7 +804,7 @@ AlertBuilder()
     }
     .build()
 """, result: nil),
-                      Lesson(title: "PERFORMANCE OPTIMIZATION", code: nil, result: nil),
+                      Lesson(title: "PERFORMANCE OPTIMIZATION"),
                       Lesson(title: "View Identity & Composition", code: """
 // ❌ BAD: Anonymous views lose identity
 struct BadList: View {
