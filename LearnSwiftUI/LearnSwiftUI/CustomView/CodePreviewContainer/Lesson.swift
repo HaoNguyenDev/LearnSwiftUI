@@ -9,8 +9,7 @@ import SwiftUI
 
 struct Lesson: Identifiable {
     let id = UUID()
-    let isSectionTitle: Bool = false
     let title: String
-    let code: String
+    let code: String?
     let result: (() -> AnyView)?
 }
