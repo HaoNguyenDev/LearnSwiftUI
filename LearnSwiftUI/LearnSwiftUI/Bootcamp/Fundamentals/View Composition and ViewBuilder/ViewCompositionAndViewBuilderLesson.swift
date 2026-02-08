@@ -434,7 +434,70 @@ SplitView {
     Text("Right")
     Text("Side")
 }
-""", result: nil),
+""", result: {
+        AnyView(ResultBlockView(content: {
+            VStack {
+                SplitViewBuilder {
+                    Text("Left")
+                    Text("Side")
+                } trailing: {
+                    Text("Right")
+                    Text("Side")
+                }
+            }
+            .frame(maxWidth: .infinity, minHeight: 200)
+        }))
+    }),
+                      Lesson(title: "Multiple View Builder", code: """
+struct MultipleViewBuilder<Header: View, Content: View, Footer: View>: View {
+    
+    let header: Header
+    let content: Content
+    let footer: Footer
+    
+    init(@ViewBuilder header: () -> Header,
+         @ViewBuilder content: () -> Content,
+         @ViewBuilder footer: () -> Footer) {
+        self.header = header()
+        self.content = content()
+        self.footer = footer()
+    }
+    
+    var body: some View {
+        VStack(spacing: 0) {
+            header
+                .frame(height: 60)
+                .background(Color.gray.opacity(0.1))
+            
+            ScrollView {
+                content
+                    .padding()
+            }
+            
+            footer
+                .frame(height: 60)
+                .background(Color.white)
+                .shadow(radius: 4)
+        }
+        .frame(maxWidth: .infinity)
+    }
+}
+""", result: {
+        AnyView(ResultBlockView(content: {
+            VStack {
+                MultipleViewBuilder {
+                    Text("Title")
+                } content: {
+                    Text("Body")
+                    Text("Content")
+                } footer: {
+                    Button("Save") { }
+                }
+                .frame(maxWidth: .infinity)
+            }
+            .frame(maxWidth: .infinity, minHeight: 300)
+        }))
+    }),
                       Lesson(title: "Generic Container Pattern", code: """
 // Reusable container with custom styling
 struct StyledContainer<Content: View>: View {

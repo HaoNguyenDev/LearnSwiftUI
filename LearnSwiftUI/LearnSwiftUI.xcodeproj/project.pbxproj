@@ -232,6 +232,8 @@
 		DA87A2122EB7ACF500749349 /* FakeStoreAuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87A2112EB7ACF500749349 /* FakeStoreAuthRequest.swift */; };
 		DA8D9CC22F3865C5004529FF /* StyledContainerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D9CC12F3865C5004529FF /* StyledContainerExample.swift */; };
 		DA8D9CD52F38A3A1004529FF /* LazyViewLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D9CD42F38A3A1004529FF /* LazyViewLoading.swift */; };
+		DA8D9CEE2F38A89E004529FF /* MultipleViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D9CED2F38A89E004529FF /* MultipleViewBuilder.swift */; };
+		DA8D9CFE2F38AB0F004529FF /* SplitViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D9CFD2F38AB0F004529FF /* SplitViewBuilder.swift */; };
 		DA8F78A22E883F0300826FB2 /* SwiftUI.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA8F78A12E883F0300826FB2 /* SwiftUI.txt */; };
 		DA9614F82F1CABBD00AEEB25 /* ClassicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9614F72F1CABBC00AEEB25 /* ClassicAnimation.swift */; };
 		DA9614FE2F1CAD4C00AEEB25 /* JumpAnimationBehaviorExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9614FD2F1CAD4C00AEEB25 /* JumpAnimationBehaviorExample.swift */; };
@@ -594,6 +596,8 @@
 		DA89A7D22E490391007BF882 /* GCDTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GCDTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA8D9CC12F3865C5004529FF /* StyledContainerExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledContainerExample.swift; sourceTree = "<group>"; };
 		DA8D9CD42F38A3A1004529FF /* LazyViewLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyViewLoading.swift; sourceTree = "<group>"; };
+		DA8D9CED2F38A89E004529FF /* MultipleViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleViewBuilder.swift; sourceTree = "<group>"; };
+		DA8D9CFD2F38AB0F004529FF /* SplitViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewBuilder.swift; sourceTree = "<group>"; };
 		DA8F789E2E86FB1700826FB2 /* StructAndSwiftUI.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StructAndSwiftUI.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA8F78A12E883F0300826FB2 /* SwiftUI.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwiftUI.txt; sourceTree = "<group>"; };
 		DA9614F72F1CABBC00AEEB25 /* ClassicAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicAnimation.swift; sourceTree = "<group>"; };
@@ -1730,6 +1734,8 @@
 			children = (
 				DA8D9CC12F3865C5004529FF /* StyledContainerExample.swift */,
 				DA8D9CD42F38A3A1004529FF /* LazyViewLoading.swift */,
+				DA8D9CED2F38A89E004529FF /* MultipleViewBuilder.swift */,
+				DA8D9CFD2F38AB0F004529FF /* SplitViewBuilder.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -2306,6 +2312,7 @@
 				DA6DB8EE2F2FAB65001781BD /* ItemListViewIdentityTest.swift in Sources */,
 				DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */,
 				DAAA67262E6173FD004075B7 /* PickerBootcamp.swift in Sources */,
+				DA8D9CEE2F38A89E004529FF /* MultipleViewBuilder.swift in Sources */,
 				DA278F582F31E4AB0079AF56 /* MyBinding.swift in Sources */,
 				DA7BE0B22E80630A006821CE /* HomeViewProtocol.swift in Sources */,
 				DAFC169A2F113AFA00D242D3 /* MeasureSizeViewDemo.swift in Sources */,
@@ -2383,6 +2390,7 @@
 				DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */,
 				DAEBAE3A2DEAF92400082B1C /* StacksBootcamp.swift in Sources */,
 				DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */,
+				DA8D9CFE2F38AB0F004529FF /* SplitViewBuilder.swift in Sources */,
 				DA5164302E3BCD2500642709 /* NavigationStackBootcamp.swift in Sources */,
 				DA6DB8972F2F4D56001781BD /* SomeViewAnyViewAndViewBuilderBootcamp.swift in Sources */,
 				DA7BF5D12E98ED0D00224BCF /* ThemeFontProtocol.swift in Sources */,
