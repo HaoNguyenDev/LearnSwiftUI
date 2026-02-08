@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StateManagementDeepDiveLesson {
     static let all = [
-        Lesson(title: "PART 1: CORE KNOWLEDGE", code: nil, result: nil),
+        Lesson(title: "PART 1: CORE KNOWLEDGE"),
                       Lesson(title: "@State - Single Source of Truth", code: """
 What is @State and how does it work?
 
@@ -236,7 +236,7 @@ struct MyBinding<Value> {
 // - Writes to parent's storage
 """, result: nil),
                       
-                      Lesson(title: "Binding Patterns", code: nil, result: nil),
+                      Lesson(title: "Binding Patterns"),
                       Lesson(title: "Pattern 1: Parent → Child communication", code: """
 struct ParentView: View {
     @State private var username = ""
@@ -351,7 +351,7 @@ struct TextField: View {
     }
 }
 """, result: nil),
-                      Lesson(title: "PARD 2: ADVANCED STATE PATTERNS", code: nil, result: nil),
+                      Lesson(title: "PARD 2: ADVANCED STATE PATTERNS"),
                       Lesson(title: "State Hoisting", code: """
 
  State Hoisting
@@ -469,7 +469,8 @@ struct GoodUserList: View {
         return postIds.compactMap { posts[$0] } 
     }
 }
-""", result: nil), Lesson(title: "PART 3: PERFORMANCE OPTIMIZATION", code: nil, result: nil),
+""", result: nil),
+        Lesson(title: "PART 3: PERFORMANCE OPTIMIZATION"),
     Lesson(title: "", code: """
 State Granularity
 
@@ -586,7 +587,7 @@ struct BestListView: View {
     }
 }
 """, result: nil),
-    Lesson(title: "INTERVIEW QUESTIONs", code: nil, result: nil),
+        Lesson(title: "INTERVIEW QUESTIONS"),
     Lesson(title: "", code: """
 Junior Level:
 Q1: What is the difference between @State and @Binding?
