@@ -40,7 +40,7 @@ extension Route {
             case .stateManagementDeepDive: "State Management Deep Dive (@State, @Binding)"
             case .someViewAnyViewAndViewBuilder: "some View - AnyView - @ViewBuilder"
             case .viewCompositionAndViewBuilder: "View Composition - ViewBuilder"
-            case .stackView: "Stack View"
+            case .stackView: "Layout System - Stack View"
             case .alignmentAlignmentGuide: "Alignment-AlignmentGuide"
             case .geometryReaderCoordinateSpace: "GeometryReader-CoordinateSpace"
             case .scrollViewLazyContainers: "ScrollView-Lazy containers"

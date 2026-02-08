@@ -234,6 +234,9 @@
 		DA8D9CD52F38A3A1004529FF /* LazyViewLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D9CD42F38A3A1004529FF /* LazyViewLoading.swift */; };
 		DA8D9CEE2F38A89E004529FF /* MultipleViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D9CED2F38A89E004529FF /* MultipleViewBuilder.swift */; };
 		DA8D9CFE2F38AB0F004529FF /* SplitViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D9CFD2F38AB0F004529FF /* SplitViewBuilder.swift */; };
+		DA8D9D162F38D205004529FF /* HStackAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D9D152F38D205004529FF /* HStackAlignment.swift */; };
+		DA8D9D1E2F38DC57004529FF /* CombineStackViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D9D1D2F38DC57004529FF /* CombineStackViewExample.swift */; };
+		DA8D9D222F38DD2C004529FF /* ProductCardStackExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D9D212F38DD2C004529FF /* ProductCardStackExample.swift */; };
 		DA8F78A22E883F0300826FB2 /* SwiftUI.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA8F78A12E883F0300826FB2 /* SwiftUI.txt */; };
 		DA9614F82F1CABBD00AEEB25 /* ClassicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9614F72F1CABBC00AEEB25 /* ClassicAnimation.swift */; };
 		DA9614FE2F1CAD4C00AEEB25 /* JumpAnimationBehaviorExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9614FD2F1CAD4C00AEEB25 /* JumpAnimationBehaviorExample.swift */; };
@@ -598,6 +601,9 @@
 		DA8D9CD42F38A3A1004529FF /* LazyViewLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyViewLoading.swift; sourceTree = "<group>"; };
 		DA8D9CED2F38A89E004529FF /* MultipleViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleViewBuilder.swift; sourceTree = "<group>"; };
 		DA8D9CFD2F38AB0F004529FF /* SplitViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewBuilder.swift; sourceTree = "<group>"; };
+		DA8D9D152F38D205004529FF /* HStackAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HStackAlignment.swift; sourceTree = "<group>"; };
+		DA8D9D1D2F38DC57004529FF /* CombineStackViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineStackViewExample.swift; sourceTree = "<group>"; };
+		DA8D9D212F38DD2C004529FF /* ProductCardStackExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardStackExample.swift; sourceTree = "<group>"; };
 		DA8F789E2E86FB1700826FB2 /* StructAndSwiftUI.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StructAndSwiftUI.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA8F78A12E883F0300826FB2 /* SwiftUI.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwiftUI.txt; sourceTree = "<group>"; };
 		DA9614F72F1CABBC00AEEB25 /* ClassicAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicAnimation.swift; sourceTree = "<group>"; };
@@ -1048,7 +1054,6 @@
 				DA723D122F267227009BEC1C /* EquatableView */,
 				DABC5FC12F27B22300957964 /* Navigation */,
 				DA64B7BF2F2BA61E00144CC6 /* Advanced-Animation */,
-				DA61C5212F0C073A00FD8181 /* StackView */,
 				DA83D7352EFC08B40050EF92 /* Text */,
 				DA415E8A2DE5C845009F515E /* ShapesBootcamp.swift */,
 				DA415E8C2DE5CD41009F515E /* ColorsBootcamp.swift */,
@@ -1361,14 +1366,15 @@
 			path = CodePreviewContainer;
 			sourceTree = "<group>";
 		};
-		DA61C5212F0C073A00FD8181 /* StackView */ = {
+		DA61C5212F0C073A00FD8181 /* Layout System StackView */ = {
 			isa = PBXGroup;
 			children = (
+				DA8D9D142F38D201004529FF /* Examples */,
 				DA61C5232F0C075C00FD8181 /* StackViewBootcampCoordinator.swift */,
 				DA61C5272F0C076B00FD8181 /* StackViewBootcamp.swift */,
 				DA61C5B12F0D3A7100FD8181 /* StackViewLessons.swift */,
 			);
-			path = StackView;
+			path = "Layout System StackView";
 			sourceTree = "<group>";
 		};
 		DA61C5522F0CC38100FD8181 /* SwiftUILayoutEngine */ = {
@@ -1740,6 +1746,16 @@
 			path = Examples;
 			sourceTree = "<group>";
 		};
+		DA8D9D142F38D201004529FF /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				DA8D9D212F38DD2C004529FF /* ProductCardStackExample.swift */,
+				DA8D9D152F38D205004529FF /* HStackAlignment.swift */,
+				DA8D9D1D2F38DC57004529FF /* CombineStackViewExample.swift */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
 		DA9614F62F1CABB000AEEB25 /* Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -1998,6 +2014,7 @@
 				DA6DB87F2F2F4BBB001781BD /* someView-AnyView-ViewBuilder */,
 				DACD47DC2F31A1D4007A6D06 /* State-Management-Deep-Dive */,
 				DA82B9282F378A39004463EF /* View Composition and ViewBuilder */,
+				DA61C5212F0C073A00FD8181 /* Layout System StackView */,
 			);
 			path = Fundamentals;
 			sourceTree = "<group>";
@@ -2320,6 +2337,7 @@
 				DA7BE0B62E806344006821CE /* HomePresenter.swift in Sources */,
 				DA7BF6902E995FAC00224BCF /* View+Extensions.swift in Sources */,
 				DA7BF5D32E98ED1400224BCF /* ThemeAssetsProtocol.swift in Sources */,
+				DA8D9D222F38DD2C004529FF /* ProductCardStackExample.swift in Sources */,
 				DAC35AFC2E9F8E010019021D /* UserListViewWrapper.swift in Sources */,
 				DA87488A2E6AFC6A00B189F3 /* WeatherItem.swift in Sources */,
 				DA7BF5E82E98F2C900224BCF /* RswiftResources+ColorResource.swift in Sources */,
@@ -2369,6 +2387,7 @@
 				DA7BF5E62E98F2B400224BCF /* RswiftResources+ImageResource.swift in Sources */,
 				DAA709142E75D553006F8E70 /* ThaiPaymentService.swift in Sources */,
 				DA723CE62F264DBB009BEC1C /* BootcampTemplateLesson.swift in Sources */,
+				DA8D9D1E2F38DC57004529FF /* CombineStackViewExample.swift in Sources */,
 				DAA709192E75D6F5006F8E70 /* PaymentProvider.swift in Sources */,
 				DA723D1C2F2672DC009BEC1C /* EquatableViewBootcampCoordinator.swift in Sources */,
 				DA87489B2E6B007D00B189F3 /* WeatherListView.swift in Sources */,
@@ -2439,6 +2458,7 @@
 				DA257F042F2E24DB0024DC9B /* BouncingText.swift in Sources */,
 				DA6DB8D92F2FA552001781BD /* ConditionalViewExample.swift in Sources */,
 				DA87A2122EB7ACF500749349 /* FakeStoreAuthRequest.swift in Sources */,
+				DA8D9D162F38D205004529FF /* HStackAlignment.swift in Sources */,
 				DA5164322E3CB57600642709 /* NavigationManager.swift in Sources */,
 				DA278F3C2F31DFA40079AF56 /* BindingExample.swift in Sources */,
 				DA4726582EA7C31E000D596A /* AppTextStyleSize.swift in Sources */,

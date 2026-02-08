@@ -8,15 +8,10 @@
 import SwiftUI
 
 extension Route {
-    enum StackViewRouter: Routable {
-        case subviewExample
+    enum StackViewRouter: String, Routable {
+        case subviewExample = "subviewExample"
         
-        var id: String {
-            switch self {
-            case .subviewExample:
-                return "StackView.subviewExample"
-            }
-        }
+        var id: String { rawValue }
     }
 }
 

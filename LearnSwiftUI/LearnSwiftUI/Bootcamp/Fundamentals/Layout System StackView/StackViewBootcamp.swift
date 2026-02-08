@@ -15,7 +15,6 @@ struct StackViewBootcamp: View {
                     CodePreviewContainer(title: lesson.title, code: lesson.code, resultView: lesson.result?())
                 }
             }
-            .padding()
         }
     }
 }
