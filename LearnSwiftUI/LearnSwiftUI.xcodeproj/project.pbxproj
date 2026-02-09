@@ -66,6 +66,11 @@
 		DA39793F2E9BE5BD00838584 /* ImageStylingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39793E2E9BE5BD00838584 /* ImageStylingModifier.swift */; };
 		DA3F45402F39A88B008F50AB /* ModifiersViewProtocolLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3F453F2F39A88B008F50AB /* ModifiersViewProtocolLesson.swift */; };
 		DA3F45472F39A8E2008F50AB /* ModifiersViewProtocolCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3F45462F39A8E2008F50AB /* ModifiersViewProtocolCoordinator.swift */; };
+		DA3F45532F39B119008F50AB /* LifecycleDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3F45522F39B119008F50AB /* LifecycleDemo.swift */; };
+		DA3F45572F3A2501008F50AB /* OrderMattersDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3F45562F3A2501008F50AB /* OrderMattersDemo.swift */; };
+		DA3F455E2F3A2694008F50AB /* ModifierPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3F455D2F3A2694008F50AB /* ModifierPatterns.swift */; };
+		DA3F45662F3A36A9008F50AB /* CardViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3F45652F3A36A9008F50AB /* CardViewModifier.swift */; };
+		DA3F458C2F3A3AAC008F50AB /* ConditionalModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3F458B2F3A3AAC008F50AB /* ConditionalModifier.swift */; };
 		DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E632DE5BFAB009F515E /* ContentView.swift */; };
 		DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */; };
 		DA415E682DE5BFAB009F515E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA415E602DE5BFAB009F515E /* Preview Assets.xcassets */; };
@@ -421,6 +426,11 @@
 		DA39793E2E9BE5BD00838584 /* ImageStylingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStylingModifier.swift; sourceTree = "<group>"; };
 		DA3F453F2F39A88B008F50AB /* ModifiersViewProtocolLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiersViewProtocolLesson.swift; sourceTree = "<group>"; };
 		DA3F45462F39A8E2008F50AB /* ModifiersViewProtocolCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiersViewProtocolCoordinator.swift; sourceTree = "<group>"; };
+		DA3F45522F39B119008F50AB /* LifecycleDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifecycleDemo.swift; sourceTree = "<group>"; };
+		DA3F45562F3A2501008F50AB /* OrderMattersDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderMattersDemo.swift; sourceTree = "<group>"; };
+		DA3F455D2F3A2694008F50AB /* ModifierPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierPatterns.swift; sourceTree = "<group>"; };
+		DA3F45652F3A36A9008F50AB /* CardViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModifier.swift; sourceTree = "<group>"; };
+		DA3F458B2F3A3AAC008F50AB /* ConditionalModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalModifier.swift; sourceTree = "<group>"; };
 		DA4127202E6961DE000ED05B /* FactoryMethod.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FactoryMethod.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA415E4F2DE5BF26009F515E /* LearnSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA415E602DE5BFAB009F515E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -995,10 +1005,23 @@
 		DA3F453E2F39A85A008F50AB /* Modifiers & View Protocol Deep Dive */ = {
 			isa = PBXGroup;
 			children = (
+				DA3F45512F39B116008F50AB /* Examples */,
 				DA3F453F2F39A88B008F50AB /* ModifiersViewProtocolLesson.swift */,
 				DA3F45462F39A8E2008F50AB /* ModifiersViewProtocolCoordinator.swift */,
 			);
 			path = "Modifiers & View Protocol Deep Dive";
+			sourceTree = "<group>";
+		};
+		DA3F45512F39B116008F50AB /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				DA3F458B2F3A3AAC008F50AB /* ConditionalModifier.swift */,
+				DA3F45652F3A36A9008F50AB /* CardViewModifier.swift */,
+				DA3F455D2F3A2694008F50AB /* ModifierPatterns.swift */,
+				DA3F45562F3A2501008F50AB /* OrderMattersDemo.swift */,
+				DA3F45522F39B119008F50AB /* LifecycleDemo.swift */,
+			);
+			path = Examples;
 			sourceTree = "<group>";
 		};
 		DA415E462DE5BF26009F515E = {
@@ -2315,6 +2338,7 @@
 				DACD47EC2F31A2A2007A6D06 /* StateManagementDeepDiveCoordinator.swift in Sources */,
 				DA03DEFE2F2116A30080D104 /* ViewRecreatedDemo.swift in Sources */,
 				DABDF7B42E70466B00DEC7C6 /* DownloadTask.swift in Sources */,
+				DA3F455E2F3A2694008F50AB /* ModifierPatterns.swift in Sources */,
 				DA8D9CD52F38A3A1004529FF /* LazyViewLoading.swift in Sources */,
 				DA37F99D2E8D93F60001599E /* CbDemoLoginContentView.swift in Sources */,
 				DA6DB8E12F2FA692001781BD /* StableIdentityViewExample.swift in Sources */,
@@ -2452,6 +2476,7 @@
 				DA5D71892E3FB05100C78E40 /* UserRowView.swift in Sources */,
 				DAFCDF6A2E630B2C00B97C00 /* ErrorBanner.swift in Sources */,
 				DA9615402F1CF80E00AEEB25 /* GeometryChangeVsTransformExample.swift in Sources */,
+				DA3F458C2F3A3AAC008F50AB /* ConditionalModifier.swift in Sources */,
 				DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */,
 				DA3979102E9BBC1200838584 /* TextViewModifiers.swift in Sources */,
 				DADA947C2F2CFF5C008ED262 /* CardExpansionExample.swift in Sources */,
@@ -2507,6 +2532,7 @@
 				DA5477012EB4EBA7005C8868 /* AuthService.swift in Sources */,
 				DAEEA2C52F2E507600AE6218 /* SwiftUIArchitectureAndViewLifeCycleLesson.swift in Sources */,
 				DA7BE0AE2E8061D1006821CE /* LoginModuleBuilder.swift in Sources */,
+				DA3F45662F3A36A9008F50AB /* CardViewModifier.swift in Sources */,
 				DABC5FC82F27B27200957964 /* NavigationBootcamp.swift in Sources */,
 				DA2237542F2A09B70065C9CD /* NaviagtionExampleView.swift in Sources */,
 				DAA709162E75D60C006F8E70 /* VisaPaymentService.swift in Sources */,
@@ -2517,6 +2543,7 @@
 				DAA609CE2F129EDE00B625CE /* AnimationLayoutInteractionBootcamp.swift in Sources */,
 				DA6DB8A12F2F6DF8001781BD /* ProfileViewViewBuilderExample.swift in Sources */,
 				DAA609CB2F129E7B00B625CE /* AnimationLayoutInteractionLessons.swift in Sources */,
+				DA3F45532F39B119008F50AB /* LifecycleDemo.swift in Sources */,
 				DAE365BD2E9CC288005EF803 /* DarkTheme.swift in Sources */,
 				DA64B7C82F2BA73F00144CC6 /* AdvancedAnimationBootcampCoordinator.swift in Sources */,
 				DAE365BE2E9CC288005EF803 /* DarkThemeAssets.swift in Sources */,
@@ -2525,6 +2552,7 @@
 				DA37F9A42E8EE50F0001599E /* CombineDefinitionHomeViewModel.swift in Sources */,
 				DA28F5A82F1F798700079318 /* ViewIdentityBootcampCoordinator.swift in Sources */,
 				DACD47E22F31A205007A6D06 /* StateManagementDeepDiveLesson.swift in Sources */,
+				DA3F45572F3A2501008F50AB /* OrderMattersDemo.swift in Sources */,
 				DA5D71962E3FBC9100C78E40 /* GitHubAPIEndpoint.swift in Sources */,
 				DA58DD8E2E9E35630042D1AD /* NetworkingBootcamp.swift in Sources */,
 				DA7BE0A22E805FEE006821CE /* LoginViewController.swift in Sources */,
