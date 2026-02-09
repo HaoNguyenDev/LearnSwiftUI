@@ -26,20 +26,22 @@ enum BootcampSection: String, Identifiable, CaseIterable {
              Route.BootcampListRoute.stateManagementDeepDive,
              Route.BootcampListRoute.viewCompositionAndViewBuilder,
              Route.BootcampListRoute.equatableview,
-             Route.BootcampListRoute.stackView]
+             Route.BootcampListRoute.stackView,
+             Route.BootcampListRoute.modifiersViewProtocol]
         case .advancedStateAndDataFlow: [Route.BootcampListRoute.dataFlowAndArchitecture]
         case .layoutAndAnimation:
             [Route.BootcampListRoute.geometryReaderCoordinateSpace]
-        case .others: [Route.BootcampListRoute.stackView,
-                       Route.BootcampListRoute.alignmentAlignmentGuide,
-                       Route.BootcampListRoute.scrollViewLazyContainers,
-                       Route.BootcampListRoute.safeAreaInsets,
-                       Route.BootcampListRoute.animationLayoutInteraction,
-                       Route.BootcampListRoute.navigation,
-                       Route.BootcampListRoute.advancedAnimation,
-                       Route.BootcampListRoute.text,
-                       Route.BootcampListRoute.shape,
-                       Route.BootcampListRoute.color]
+        case .others:
+            [Route.BootcampListRoute.stackView,
+             Route.BootcampListRoute.alignmentAlignmentGuide,
+             Route.BootcampListRoute.scrollViewLazyContainers,
+             Route.BootcampListRoute.safeAreaInsets,
+             Route.BootcampListRoute.animationLayoutInteraction,
+             Route.BootcampListRoute.navigation,
+             Route.BootcampListRoute.advancedAnimation,
+             Route.BootcampListRoute.text,
+             Route.BootcampListRoute.shape,
+             Route.BootcampListRoute.color]
         }
     }
 }
@@ -56,7 +58,7 @@ struct BootcampListView: View {
     var selectedRoute: SingleResult<Route.BootcampListRoute>?
     
     var body: some View {
-            bootcampList
+        bootcampList
     }
     
     private var bootcampList: some View {

@@ -64,6 +64,8 @@
 		DA37F9B32E8EE8CA0001599E /* CombineDefinitionContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA37F9B22E8EE8CA0001599E /* CombineDefinitionContentView.swift */; };
 		DA3979102E9BBC1200838584 /* TextViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39790F2E9BBC1200838584 /* TextViewModifiers.swift */; };
 		DA39793F2E9BE5BD00838584 /* ImageStylingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39793E2E9BE5BD00838584 /* ImageStylingModifier.swift */; };
+		DA3F45402F39A88B008F50AB /* ModifiersViewProtocolLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3F453F2F39A88B008F50AB /* ModifiersViewProtocolLesson.swift */; };
+		DA3F45472F39A8E2008F50AB /* ModifiersViewProtocolCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3F45462F39A8E2008F50AB /* ModifiersViewProtocolCoordinator.swift */; };
 		DA415E662DE5BFAB009F515E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E632DE5BFAB009F515E /* ContentView.swift */; };
 		DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E642DE5BFAB009F515E /* LearnSwiftUIApp.swift */; };
 		DA415E682DE5BFAB009F515E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA415E602DE5BFAB009F515E /* Preview Assets.xcassets */; };
@@ -417,6 +419,8 @@
 		DA37F9B22E8EE8CA0001599E /* CombineDefinitionContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineDefinitionContentView.swift; sourceTree = "<group>"; };
 		DA39790F2E9BBC1200838584 /* TextViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewModifiers.swift; sourceTree = "<group>"; };
 		DA39793E2E9BE5BD00838584 /* ImageStylingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStylingModifier.swift; sourceTree = "<group>"; };
+		DA3F453F2F39A88B008F50AB /* ModifiersViewProtocolLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiersViewProtocolLesson.swift; sourceTree = "<group>"; };
+		DA3F45462F39A8E2008F50AB /* ModifiersViewProtocolCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiersViewProtocolCoordinator.swift; sourceTree = "<group>"; };
 		DA4127202E6961DE000ED05B /* FactoryMethod.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FactoryMethod.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA415E4F2DE5BF26009F515E /* LearnSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA415E602DE5BFAB009F515E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -986,6 +990,15 @@
 				DA5D719A2E3FC03D00C78E40 /* AlertHandler.swift */,
 			);
 			path = AlertView;
+			sourceTree = "<group>";
+		};
+		DA3F453E2F39A85A008F50AB /* Modifiers & View Protocol Deep Dive */ = {
+			isa = PBXGroup;
+			children = (
+				DA3F453F2F39A88B008F50AB /* ModifiersViewProtocolLesson.swift */,
+				DA3F45462F39A8E2008F50AB /* ModifiersViewProtocolCoordinator.swift */,
+			);
+			path = "Modifiers & View Protocol Deep Dive";
 			sourceTree = "<group>";
 		};
 		DA415E462DE5BF26009F515E = {
@@ -2015,6 +2028,7 @@
 				DACD47DC2F31A1D4007A6D06 /* State-Management-Deep-Dive */,
 				DA82B9282F378A39004463EF /* View Composition and ViewBuilder */,
 				DA61C5212F0C073A00FD8181 /* Layout System StackView */,
+				DA3F453E2F39A85A008F50AB /* Modifiers & View Protocol Deep Dive */,
 			);
 			path = Fundamentals;
 			sourceTree = "<group>";
@@ -2387,6 +2401,7 @@
 				DA7BF5E62E98F2B400224BCF /* RswiftResources+ImageResource.swift in Sources */,
 				DAA709142E75D553006F8E70 /* ThaiPaymentService.swift in Sources */,
 				DA723CE62F264DBB009BEC1C /* BootcampTemplateLesson.swift in Sources */,
+				DA3F45402F39A88B008F50AB /* ModifiersViewProtocolLesson.swift in Sources */,
 				DA8D9D1E2F38DC57004529FF /* CombineStackViewExample.swift in Sources */,
 				DAA709192E75D6F5006F8E70 /* PaymentProvider.swift in Sources */,
 				DA723D1C2F2672DC009BEC1C /* EquatableViewBootcampCoordinator.swift in Sources */,
@@ -2426,6 +2441,7 @@
 				DA82B92C2F378A80004463EF /* ViewCompositionAndViewBuilderLesson.swift in Sources */,
 				DAA7090B2E75D29E006F8E70 /* LocationManager.swift in Sources */,
 				DA8748952E6B006A00B189F3 /* WeatherLoadingView.swift in Sources */,
+				DA3F45472F39A8E2008F50AB /* ModifiersViewProtocolCoordinator.swift in Sources */,
 				DA257EE52F2E06B70024DC9B /* PhaseAnimationExample.swift in Sources */,
 				DAA7090F2E75D3CE006F8E70 /* PaymentServiceProtocol.swift in Sources */,
 				DAC35AF32E9F88FA0019021D /* UserListViewModel.swift in Sources */,

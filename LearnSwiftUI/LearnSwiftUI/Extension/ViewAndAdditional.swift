@@ -18,3 +18,16 @@ extension View {
         )
     }
 }
+
+extension View {
+    @ViewBuilder
+    func lessonScrollView(_ lessons: [Lesson]) -> some View {
+        ScrollView {
+            LazyVStack(spacing: 24.0) {
+                ForEach(lessons) { lesson in
+                    CodePreviewContainer(title: lesson.title, code: lesson.code, resultView: lesson.result?())
+                }
+            }
+        }
+    }
+}

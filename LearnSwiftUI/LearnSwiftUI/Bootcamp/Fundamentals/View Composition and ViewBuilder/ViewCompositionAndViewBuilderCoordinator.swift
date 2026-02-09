@@ -26,6 +26,9 @@ struct ViewCompositionAndViewBuilderCoordinator: View, ScreenCoordinator {
     var body: some View {
         content
             .customNavigationTitle("View Composition - ViewBuilder")
+            .defaultNavBackButton(onTap: {
+                navRoute.pop(animate: true)
+            })
     }
     
     private var content: some View {
