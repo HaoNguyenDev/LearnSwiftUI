@@ -10,7 +10,6 @@ import SwiftUI
 
 struct HSpacing {
     let paddingText: CGFloat = 5
-    
 }
 
 struct HColor {
