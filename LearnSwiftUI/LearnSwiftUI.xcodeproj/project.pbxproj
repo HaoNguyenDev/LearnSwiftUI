@@ -219,7 +219,7 @@
 		DA82B9302F378AB1004463EF /* ViewCompositionAndViewBuilderBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82B92F2F378AB1004463EF /* ViewCompositionAndViewBuilderBootcamp.swift */; };
 		DA82B9342F378B4F004463EF /* ViewCompositionAndViewBuilderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA82B9332F378B4F004463EF /* ViewCompositionAndViewBuilderCoordinator.swift */; };
 		DA83D7392EFC08D20050EF92 /* TextBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D7382EFC08D20050EF92 /* TextBootcampCoordinator.swift */; };
-		DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */; };
+		DA83D81C2E37891E00913BF5 /* EnvironmentObjectExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA83D81B2E37891100913BF5 /* EnvironmentObjectExample.swift */; };
 		DA86566F2F0E1AA50092426E /* AlignmentLessons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA86566E2F0E1AA50092426E /* AlignmentLessons.swift */; };
 		DA8656C62F0F75750092426E /* GeometryReaderBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8656C22F0F75750092426E /* GeometryReaderBootcamp.swift */; };
 		DA8656C72F0F75750092426E /* GeometryReaderCoordinateSpaceBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8656C32F0F75750092426E /* GeometryReaderCoordinateSpaceBootcampCoordinator.swift */; };
@@ -254,7 +254,7 @@
 		DA9615692F1D23D400AEEB25 /* AccordionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9615682F1D23D400AEEB25 /* AccordionItem.swift */; };
 		DA9615772F1D273400AEEB25 /* CustomTabBarAnimationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9615762F1D273400AEEB25 /* CustomTabBarAnimationDemo.swift */; };
 		DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D32E3A65110051F62F /* SharedModel.swift */; };
-		DAA3B8D62E3B2C610051F62F /* EnvironmentDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D52E3B2C610051F62F /* EnvironmentDemo.swift */; };
+		DAA3B8D62E3B2C610051F62F /* EnvironmentStoreExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D52E3B2C610051F62F /* EnvironmentStoreExample.swift */; };
 		DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */; };
 		DAA45E452EF931B700BC57E9 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E442EF931B700BC57E9 /* Route.swift */; };
 		DAA45E542EF933C400BC57E9 /* NavRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E532EF933C400BC57E9 /* NavRoute.swift */; };
@@ -592,7 +592,7 @@
 		DA82B92F2F378AB1004463EF /* ViewCompositionAndViewBuilderBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCompositionAndViewBuilderBootcamp.swift; sourceTree = "<group>"; };
 		DA82B9332F378B4F004463EF /* ViewCompositionAndViewBuilderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCompositionAndViewBuilderCoordinator.swift; sourceTree = "<group>"; };
 		DA83D7382EFC08D20050EF92 /* TextBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBootcampCoordinator.swift; sourceTree = "<group>"; };
-		DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
+		DA83D81B2E37891100913BF5 /* EnvironmentObjectExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectExample.swift; sourceTree = "<group>"; };
 		DA86566E2F0E1AA50092426E /* AlignmentLessons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentLessons.swift; sourceTree = "<group>"; };
 		DA8656C22F0F75750092426E /* GeometryReaderBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderBootcamp.swift; sourceTree = "<group>"; };
 		DA8656C32F0F75750092426E /* GeometryReaderCoordinateSpaceBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderCoordinateSpaceBootcampCoordinator.swift; sourceTree = "<group>"; };
@@ -631,7 +631,7 @@
 		DA9615682F1D23D400AEEB25 /* AccordionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionItem.swift; sourceTree = "<group>"; };
 		DA9615762F1D273400AEEB25 /* CustomTabBarAnimationDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarAnimationDemo.swift; sourceTree = "<group>"; };
 		DAA3B8D32E3A65110051F62F /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
-		DAA3B8D52E3B2C610051F62F /* EnvironmentDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentDemo.swift; sourceTree = "<group>"; };
+		DAA3B8D52E3B2C610051F62F /* EnvironmentStoreExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentStoreExample.swift; sourceTree = "<group>"; };
 		DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableBootcamp.swift; sourceTree = "<group>"; };
 		DAA45E442EF931B700BC57E9 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		DAA45E532EF933C400BC57E9 /* NavRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavRoute.swift; sourceTree = "<group>"; };
@@ -1117,9 +1117,6 @@
 				DAED677D2E20E45C00309382 /* StateObjectBootcamp.swift */,
 				DAED677F2E21089A00309382 /* ObservedObjectBootcamp.swift */,
 				DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */,
-				DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */,
-				DAA3B8D52E3B2C610051F62F /* EnvironmentDemo.swift */,
-				DA5D71462E3F589A00C78E40 /* CustomEnvironmentValues.swift */,
 				DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */,
 				DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */,
 				DA5D71442E3F43B100C78E40 /* ObservablePattern.swift */,
@@ -2114,10 +2111,21 @@
 		DAEB64D72F3CC28300929CA6 /* Environment System */ = {
 			isa = PBXGroup;
 			children = (
+				DAEB64EB2F3CC5DA00929CA6 /* Examples */,
 				DAEB64D82F3CC29800929CA6 /* EnvironmentLesson.swift */,
 				DAEB64DC2F3CC31100929CA6 /* EnvironmentBootcamp.swift */,
 			);
 			path = "Environment System";
+			sourceTree = "<group>";
+		};
+		DAEB64EB2F3CC5DA00929CA6 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				DA5D71462E3F589A00C78E40 /* CustomEnvironmentValues.swift */,
+				DAA3B8D52E3B2C610051F62F /* EnvironmentStoreExample.swift */,
+				DA83D81B2E37891100913BF5 /* EnvironmentObjectExample.swift */,
+			);
+			path = Examples;
 			sourceTree = "<group>";
 		};
 		DAEBAE4B2DF2907900082B1C /* Components */ = {
@@ -2275,7 +2283,7 @@
 				DA415E8B2DE5C845009F515E /* ShapesBootcamp.swift in Sources */,
 				DA6027A72EA4A42C00271E00 /* MVVMDemoUIKitViewWrapper.swift in Sources */,
 				DA5D718E2E3FBA6A00C78E40 /* GithubUser.swift in Sources */,
-				DA83D81C2E37891E00913BF5 /* EnvironmentObjectBootcamp.swift in Sources */,
+				DA83D81C2E37891E00913BF5 /* EnvironmentObjectExample.swift in Sources */,
 				DAEEFB762E366D4000E78DA2 /* ObservableObjectBootcamp.swift in Sources */,
 				DA37F9822E8D88FE0001599E /* CbLoginErrors.swift in Sources */,
 				DA7BE0A82E806048006821CE /* LoginRouter.swift in Sources */,
@@ -2493,7 +2501,7 @@
 				DAFCDF6A2E630B2C00B97C00 /* ErrorBanner.swift in Sources */,
 				DA9615402F1CF80E00AEEB25 /* GeometryChangeVsTransformExample.swift in Sources */,
 				DA3F458C2F3A3AAC008F50AB /* ConditionalModifier.swift in Sources */,
-				DAA3B8D62E3B2C610051F62F /* EnvironmentDemo.swift in Sources */,
+				DAA3B8D62E3B2C610051F62F /* EnvironmentStoreExample.swift in Sources */,
 				DA3979102E9BBC1200838584 /* TextViewModifiers.swift in Sources */,
 				DADA947C2F2CFF5C008ED262 /* CardExpansionExample.swift in Sources */,
 				DA5C98BC2E3924AA007AC9E9 /* TodoDetailView.swift in Sources */,

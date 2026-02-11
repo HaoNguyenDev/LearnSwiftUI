@@ -18,7 +18,7 @@ class Counter: ObservableObject {
     }
 }
 
-struct EnvironmentObjectBootcamp: View {
+struct EnvironmentObjectExample: View {
     @StateObject private var counter = Counter()
     
     var body: some View {
@@ -58,5 +58,5 @@ struct EnvironmentObjectSubView2: View {
 }
 
 #Preview {
-    EnvironmentObjectBootcamp()
+    EnvironmentObjectExample()
 }
