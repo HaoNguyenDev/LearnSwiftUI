@@ -27,7 +27,8 @@ enum BootcampSection: String, Identifiable, CaseIterable {
              Route.BootcampListRoute.viewCompositionAndViewBuilder,
              Route.BootcampListRoute.equatableview,
              Route.BootcampListRoute.stackView,
-             Route.BootcampListRoute.modifiersViewProtocol]
+             Route.BootcampListRoute.modifiersViewProtocol,
+             Route.BootcampListRoute.environment]
         case .advancedStateAndDataFlow: [Route.BootcampListRoute.dataFlowAndArchitecture]
         case .layoutAndAnimation:
             [Route.BootcampListRoute.geometryReaderCoordinateSpace]
