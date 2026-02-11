@@ -17,7 +17,7 @@ class EnvironmentBootcampStore {
     }
 }
 
-struct EnvironmentBootcamp: View {
+struct EnvironmentDemo: View {
     @State private var store = EnvironmentBootcampStore()
     
     var body: some View {
@@ -27,7 +27,7 @@ struct EnvironmentBootcamp: View {
     }
 }
 
-extension EnvironmentBootcamp { // Can create object before inject
+extension EnvironmentDemo { // Can create object before inject
     private func createEnvironmentStore() -> EnvironmentBootcampStore {
         let listItems = [AppleProduct(name: "iPhone 13", price: 1000.0),
                               AppleProduct(name: "MacBook Pro", price: 2000.0),
@@ -85,7 +85,7 @@ struct EnvironmentSubView: View {
 }
 
 #Preview {
-    EnvironmentBootcamp()
+    EnvironmentDemo()
 }
 
 //---------------------//---------------------//---------------------//

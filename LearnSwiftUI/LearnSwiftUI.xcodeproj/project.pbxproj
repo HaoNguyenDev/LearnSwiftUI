@@ -254,7 +254,7 @@
 		DA9615692F1D23D400AEEB25 /* AccordionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9615682F1D23D400AEEB25 /* AccordionItem.swift */; };
 		DA9615772F1D273400AEEB25 /* CustomTabBarAnimationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9615762F1D273400AEEB25 /* CustomTabBarAnimationDemo.swift */; };
 		DAA3B8D42E3A65110051F62F /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D32E3A65110051F62F /* SharedModel.swift */; };
-		DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */; };
+		DAA3B8D62E3B2C610051F62F /* EnvironmentDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D52E3B2C610051F62F /* EnvironmentDemo.swift */; };
 		DAA3B8DA2E3B61C20051F62F /* ObservableBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */; };
 		DAA45E452EF931B700BC57E9 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E442EF931B700BC57E9 /* Route.swift */; };
 		DAA45E542EF933C400BC57E9 /* NavRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA45E532EF933C400BC57E9 /* NavRoute.swift */; };
@@ -324,6 +324,8 @@
 		DAE366252E9D1047005EF803 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE366242E9D1047005EF803 /* AppSettings.swift */; };
 		DAE676E82E9552D900F3D956 /* AppSecurity.txt in Resources */ = {isa = PBXBuildFile; fileRef = DAE676E72E9552D900F3D956 /* AppSecurity.txt */; };
 		DAEA78AA2EA27FC4001C1F26 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA78A92EA27FC4001C1F26 /* KeychainService.swift */; };
+		DAEB64D92F3CC29800929CA6 /* EnvironmentLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB64D82F3CC29800929CA6 /* EnvironmentLesson.swift */; };
+		DAEB64DD2F3CC31100929CA6 /* EnvironmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB64DC2F3CC31100929CA6 /* EnvironmentBootcamp.swift */; };
 		DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE052DE9C2F800082B1C /* FrameBootcamp.swift */; };
 		DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE072DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift */; };
 		DAEBAE3A2DEAF92400082B1C /* StacksBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE392DEAF92400082B1C /* StacksBootcamp.swift */; };
@@ -629,7 +631,7 @@
 		DA9615682F1D23D400AEEB25 /* AccordionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionItem.swift; sourceTree = "<group>"; };
 		DA9615762F1D273400AEEB25 /* CustomTabBarAnimationDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarAnimationDemo.swift; sourceTree = "<group>"; };
 		DAA3B8D32E3A65110051F62F /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
-		DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentBootcamp.swift; sourceTree = "<group>"; };
+		DAA3B8D52E3B2C610051F62F /* EnvironmentDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentDemo.swift; sourceTree = "<group>"; };
 		DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableBootcamp.swift; sourceTree = "<group>"; };
 		DAA45E442EF931B700BC57E9 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		DAA45E532EF933C400BC57E9 /* NavRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavRoute.swift; sourceTree = "<group>"; };
@@ -703,6 +705,8 @@
 		DAE676E42E914AFE00F3D956 /* CombineFramework.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombineFramework.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAE676E72E9552D900F3D956 /* AppSecurity.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppSecurity.txt; sourceTree = "<group>"; };
 		DAEA78A92EA27FC4001C1F26 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		DAEB64D82F3CC29800929CA6 /* EnvironmentLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentLesson.swift; sourceTree = "<group>"; };
+		DAEB64DC2F3CC31100929CA6 /* EnvironmentBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE052DE9C2F800082B1C /* FrameBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE072DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAndOverlayBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE392DEAF92400082B1C /* StacksBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StacksBootcamp.swift; sourceTree = "<group>"; };
@@ -1114,7 +1118,7 @@
 				DAED677F2E21089A00309382 /* ObservedObjectBootcamp.swift */,
 				DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */,
 				DA83D81B2E37891100913BF5 /* EnvironmentObjectBootcamp.swift */,
-				DAA3B8D52E3B2C610051F62F /* EnvironmentBootcamp.swift */,
+				DAA3B8D52E3B2C610051F62F /* EnvironmentDemo.swift */,
 				DA5D71462E3F589A00C78E40 /* CustomEnvironmentValues.swift */,
 				DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */,
 				DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */,
@@ -2052,6 +2056,7 @@
 				DA82B9282F378A39004463EF /* View Composition and ViewBuilder */,
 				DA61C5212F0C073A00FD8181 /* Layout System StackView */,
 				DA3F453E2F39A85A008F50AB /* Modifiers & View Protocol Deep Dive */,
+				DAEB64D72F3CC28300929CA6 /* Environment System */,
 			);
 			path = Fundamentals;
 			sourceTree = "<group>";
@@ -2104,6 +2109,15 @@
 				DAEA78A92EA27FC4001C1F26 /* KeychainService.swift */,
 			);
 			path = KeychainAccess;
+			sourceTree = "<group>";
+		};
+		DAEB64D72F3CC28300929CA6 /* Environment System */ = {
+			isa = PBXGroup;
+			children = (
+				DAEB64D82F3CC29800929CA6 /* EnvironmentLesson.swift */,
+				DAEB64DC2F3CC31100929CA6 /* EnvironmentBootcamp.swift */,
+			);
+			path = "Environment System";
 			sourceTree = "<group>";
 		};
 		DAEBAE4B2DF2907900082B1C /* Components */ = {
@@ -2367,6 +2381,7 @@
 				DA6DB8EE2F2FAB65001781BD /* ItemListViewIdentityTest.swift in Sources */,
 				DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */,
 				DAAA67262E6173FD004075B7 /* PickerBootcamp.swift in Sources */,
+				DAEB64D92F3CC29800929CA6 /* EnvironmentLesson.swift in Sources */,
 				DA8D9CEE2F38A89E004529FF /* MultipleViewBuilder.swift in Sources */,
 				DA278F582F31E4AB0079AF56 /* MyBinding.swift in Sources */,
 				DA7BE0B22E80630A006821CE /* HomeViewProtocol.swift in Sources */,
@@ -2405,6 +2420,7 @@
 				DA64B7C52F2BA6AD00144CC6 /* AdvancedAnimationBootcamp.swift in Sources */,
 				DA7BE0A02E805F95006821CE /* LoginProtocol.swift in Sources */,
 				DAA6096F2F12348000B625CE /* SafeAreaInsetsBootcampCoordinator.swift in Sources */,
+				DAEB64DD2F3CC31100929CA6 /* EnvironmentBootcamp.swift in Sources */,
 				DA82B9302F378AB1004463EF /* ViewCompositionAndViewBuilderBootcamp.swift in Sources */,
 				DA7BE0B42E806329006821CE /* HomeViewController.swift in Sources */,
 				DA5D71472E3F589A00C78E40 /* CustomEnvironmentValues.swift in Sources */,
@@ -2477,7 +2493,7 @@
 				DAFCDF6A2E630B2C00B97C00 /* ErrorBanner.swift in Sources */,
 				DA9615402F1CF80E00AEEB25 /* GeometryChangeVsTransformExample.swift in Sources */,
 				DA3F458C2F3A3AAC008F50AB /* ConditionalModifier.swift in Sources */,
-				DAA3B8D62E3B2C610051F62F /* EnvironmentBootcamp.swift in Sources */,
+				DAA3B8D62E3B2C610051F62F /* EnvironmentDemo.swift in Sources */,
 				DA3979102E9BBC1200838584 /* TextViewModifiers.swift in Sources */,
 				DADA947C2F2CFF5C008ED262 /* CardExpansionExample.swift in Sources */,
 				DA5C98BC2E3924AA007AC9E9 /* TodoDetailView.swift in Sources */,

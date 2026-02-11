@@ -20,6 +20,7 @@ extension Route {
         case viewCompositionAndViewBuilder
         case stackView
         case modifiersViewProtocol
+        case environment
         
         case alignmentAlignmentGuide
         case geometryReaderCoordinateSpace
@@ -44,6 +45,7 @@ extension Route {
             case .viewCompositionAndViewBuilder: "View Composition - ViewBuilder"
             case .stackView: "Layout System - Stack View"
             case .modifiersViewProtocol: "Modifiers & View Protocol Deep Dive"
+            case .environment: "Environment System"
             case .alignmentAlignmentGuide: "Alignment-AlignmentGuide"
             case .geometryReaderCoordinateSpace: "GeometryReader-CoordinateSpace"
             case .scrollViewLazyContainers: "ScrollView-Lazy containers"
@@ -110,6 +112,8 @@ extension BootcampListCoordinator {
             StackViewBootcampCoordinator(navRouter: navRoute)
         case .modifiersViewProtocol:
             ModifiersViewProtocolCoordinator(navRoute: navRoute)
+        case .environment:
+            EnvironmentCoordinator(navRoute: navRoute)
         case .alignmentAlignmentGuide:
             AlignmentBootcampCoordinator(navRouter: navRoute)
         case .geometryReaderCoordinateSpace:

@@ -24,7 +24,7 @@ extension View {
     func lessonScrollView(_ lessons: [Lesson]) -> some View {
         ScrollView {
             LazyVStack(spacing: 24.0) {
-                ForEach(lessons) { lesson in
+                ForEach(lessons, id: \.id) { lesson in
                     CodePreviewContainer(title: lesson.title, code: lesson.code, resultView: lesson.result?())
                 }
             }
