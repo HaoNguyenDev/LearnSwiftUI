@@ -283,6 +283,30 @@ struct ButtonShadowModifier: ViewModifier {
             .shadow(color: .blue.opacity(0.3), radius: 5, x: 0, y: 3)
     }
 }
-""", result: nil)
+""", result: nil),
+        Lesson(title: "Modifier Performance", code: #"""
+// Reusable modifiers are better than repeated code.
+struct PerformanceDemo: View {
+    var body: some View {
+        VStack {
+            // ✅ GOOD - reusable modifier
+            ForEach(0..<100) { _ in
+                Text("Item")
+                    .cardStyle()
+            }
+        }
+    }
+}
+
+extension View {
+    func cardStyle() -> some View {
+        self
+            .padding()
+            .background(Color.white)
+            .cornerRadius(8)
+            .shadow(radius: 2)
+    }
+}
+"""#, result: nil)
     ]
 }

@@ -142,6 +142,110 @@ struct ContentView: View {
             .font(.system(size: settings.fontSize))
     }
 }
+"""#, result: nil),
+         Lesson(title: "Performance Considerations"),
+        Lesson(title: "View Identity & Equatable", code: #"""
+// SwiftUI uses struct equality to decide when to re-render.
+
+struct ExpensiveView: View, Equatable {
+    let data: String
+    
+    var body: some View {
+        Text(data)
+            .onAppear {
+                print("ExpensiveView appeared")
+            }
+    }
+    
+    // Custom equality
+    static func == (lhs: ExpensiveView, rhs: ExpensiveView) -> Bool {
+        lhs.data == rhs.data
+    }
+}
+
+struct ParentView: View {
+    @State private var counter = 0
+    
+    var body: some View {
+        VStack {
+            // Only re-render when the data changes.
+            ExpensiveView(data: "Static")
+                .equatable()
+            
+            Button("Increment: \(counter)") {
+                counter += 1
+            }
+        }
+    }
+}
+"""#, result: nil),
+        Lesson(title: "Avoid Heavy Computations in Body", code: #"""
+// ❌ BAD - computed each time the body is called
+struct BadExample: View {
+    @State private var items: [Item] = []
+    
+    var body: some View {
+        let processedItems = items.map { expensiveProcess($0) }
+        
+        List(processedItems) { item in
+            Text(item.name)
+        }
+    }
+}
+
+// ✅ GOOD - Use a computed property or @State
+struct GoodExample: View {
+    @State private var items: [Item] = []
+    
+    private var processedItems: [Item] {
+        items.map { expensiveProcess($0) }
+    }
+    
+    var body: some View {
+        List(processedItems) { item in
+            Text(item.name)
+        }
+    }
+}
+
+// ✅ BETTER - results cache
+struct BetterExample: View {
+    @State private var items: [Item] = []
+    @State private var processedItems: [Item] = []
+    
+    var body: some View {
+        List(processedItems) { item in
+            Text(item.name)
+        }
+        .onChange(of: items) { newItems in
+            processedItems = newItems.map { expensiveProcess($0) }
+        }
+    }
+}
+"""#, result: nil),
+        Lesson(title: "Modifier Performance", code: #"""
+// Reusable modifiers are better than repeated code.
+struct PerformanceDemo: View {
+    var body: some View {
+        VStack {
+            // ✅ GOOD - reusable modifier
+            ForEach(0..<100) { _ in
+                Text("Item")
+                    .cardStyle()
+            }
+        }
+    }
+}
+
+extension View {
+    func cardStyle() -> some View {
+        self
+            .padding()
+            .background(Color.white)
+            .cornerRadius(8)
+            .shadow(radius: 2)
+    }
+}
 """#, result: nil)
     ]
 }
