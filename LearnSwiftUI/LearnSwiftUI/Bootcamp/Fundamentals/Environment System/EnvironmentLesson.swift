@@ -87,6 +87,61 @@ struct ParentView: View {
             .theme(.dark) 
     }
 }
+"""#, result: nil),
+        Lesson(title: "Environment Objects vs Environment Values", code: #"""
+// Environment Values - for simple values
+// @Environment(\.colorScheme) var colorScheme
+
+// Environment Objects - for complex objects
+
+// Old syntax
+class UserSettings: ObservableObject {
+    @Published var fontSize: CGFloat = 16
+    @Published var isDarkMode = false
+}
+
+struct RootView: View {
+    @StateObject private var settings = UserSettings()
+    
+    var body: some View {
+        ContentView()
+            .environmentObject(settings)
+    }
+}
+
+struct ContentView: View {
+    @EnvironmentObject var settings: UserSettings
+    
+    var body: some View {
+        Text("Hello")
+            .font(.system(size: settings.fontSize))
+    }
+}
+
+// New syntax iOS 17+
+@Observable
+class UserSettings {
+    var fontSize: CGFloat = 16
+    var isDarkMode = false
+}
+
+struct RootView: View {
+    @State private var settings = UserSettings()
+    
+    var body: some View {
+        ContentView()
+            .environment(settings)
+    }
+}
+
+struct ContentView: View {
+    @Environment(UserSettings.self) var settings
+    
+    var body: some View {
+        Text("Hello")
+            .font(.system(size: settings.fontSize))
+    }
+}
 """#, result: nil)
     ]
 }
