@@ -106,6 +106,79 @@ Object is injected from the parent
 | Owner               | Yes                       | No              |
 | When view recreate  | the object is not lost.   | Can lost        |
 
+""", result: nil),
+        Lesson(title: "6️⃣ Extremely Important Visual Examples", code: #"""
+❌ Common Mistakes
+
+struct ParentView: View {
+    var body: some View {
+        ChildView()
+    }
+}
+
+struct ChildView: View {
+    @ObservedObject var vm = CounterViewModel()
+}
+👉 Every time the body runs again → the vm is recreated
+👉 State reset
+
+✅ Correct Way
+struct ParentView: View {
+    @StateObject private var vm = CounterViewModel()
+
+    var body: some View {
+        ChildView(vm: vm)
+    }
+}
+
+struct ChildView: View {
+    @ObservedObject var vm: CounterViewModel
+}
+"""#, result: nil),
+        Lesson(title: "7️⃣ Lifecycle Flow Diagram", code: """
+View init
+    ↓
+@StateObject create object
+    ↓
+View re-render
+    ↓
+Object not recreate
+
+        vs
+
+View init
+    ↓
+@ObservedObject create object
+    ↓
+View re-render
+    ↓
+Object recreate
+
+""", result: nil),
+        Lesson(title: "8️⃣ Common production errors", code: """
+⚠️ 1. Multiple network calls due to recreated ViewModel
+
+@ObservedObject var vm = NetworkViewModel()
+→ Persistent callback API
+
+⚠️ 2. Data reset when navigating back
+Because ViewModel is destroyed
+
+⚠️ 3. Memory leak
+When:
+ViewModel holds a strong reference to View
+Combine retain cycle
+""", result: nil),
+        Lesson(title: "9️⃣ Nested ObservableObject problem", code: """
+class ParentVM: ObservableObject { 
+    @Published var child = ChildVM()
+}
+When child.property changes
+👉 Parents do not automatically emit changes
+
+Solution:
+Manually forward objectWillChange
+Or flatten state
 """, result: nil)
     ]
 }
