@@ -327,6 +327,8 @@
 		DAEB64D92F3CC29800929CA6 /* EnvironmentLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB64D82F3CC29800929CA6 /* EnvironmentLesson.swift */; };
 		DAEB64DD2F3CC31100929CA6 /* EnvironmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB64DC2F3CC31100929CA6 /* EnvironmentBootcamp.swift */; };
 		DAEB64F42F3CC86D00929CA6 /* EnvironmentDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB64F32F3CC86D00929CA6 /* EnvironmentDemo.swift */; };
+		DAEB652F2F3DBBFB00929CA6 /* SwiftUIPropertyWrapperLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB652E2F3DBBFB00929CA6 /* SwiftUIPropertyWrapperLesson.swift */; };
+		DAEB65382F3DBC5900929CA6 /* SwiftUIPropertyWrapperBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB65372F3DBC5900929CA6 /* SwiftUIPropertyWrapperBootcamp.swift */; };
 		DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE052DE9C2F800082B1C /* FrameBootcamp.swift */; };
 		DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE072DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift */; };
 		DAEBAE3A2DEAF92400082B1C /* StacksBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE392DEAF92400082B1C /* StacksBootcamp.swift */; };
@@ -709,6 +711,8 @@
 		DAEB64D82F3CC29800929CA6 /* EnvironmentLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentLesson.swift; sourceTree = "<group>"; };
 		DAEB64DC2F3CC31100929CA6 /* EnvironmentBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentBootcamp.swift; sourceTree = "<group>"; };
 		DAEB64F32F3CC86D00929CA6 /* EnvironmentDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentDemo.swift; sourceTree = "<group>"; };
+		DAEB652E2F3DBBFB00929CA6 /* SwiftUIPropertyWrapperLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPropertyWrapperLesson.swift; sourceTree = "<group>"; };
+		DAEB65372F3DBC5900929CA6 /* SwiftUIPropertyWrapperBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPropertyWrapperBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE052DE9C2F800082B1C /* FrameBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE072DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAndOverlayBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE392DEAF92400082B1C /* StacksBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StacksBootcamp.swift; sourceTree = "<group>"; };
@@ -1086,6 +1090,7 @@
 				DA723CE02F264D9D009BEC1C /* BootcampTemplate */,
 				DAA45E6E2EF9756300BC57E9 /* BootcampList */,
 				DACD47D72F31A1B2007A6D06 /* Fundamentals */,
+				DAEB651C2F3DBB1500929CA6 /* Advanced State And Data Flow */,
 				DA61C5DD2F0E17D300FD8181 /* Alignment-AlignmentGuide */,
 				DA8656C52F0F75750092426E /* GeometryReader-coordinateSpace */,
 				DA8656CB2F0F757B0092426E /* ScrollView-LazyContainers */,
@@ -1093,7 +1098,6 @@
 				DAA609C62F129E1E00B625CE /* Animation-LayoutInteraction */,
 				DA03DF102F21FA460080D104 /* OneWay-DataFlow-Architecture */,
 				DA03DFA52F23BBB30080D104 /* Rendering-Performance */,
-				DA723D122F267227009BEC1C /* EquatableView */,
 				DABC5FC12F27B22300957964 /* Navigation */,
 				DA64B7BF2F2BA61E00144CC6 /* Advanced-Animation */,
 				DA83D7352EFC08B40050EF92 /* Text */,
@@ -2056,6 +2060,7 @@
 				DA61C5212F0C073A00FD8181 /* Layout System StackView */,
 				DA3F453E2F39A85A008F50AB /* Modifiers & View Protocol Deep Dive */,
 				DAEB64D72F3CC28300929CA6 /* Environment System */,
+				DA723D122F267227009BEC1C /* EquatableView */,
 			);
 			path = Fundamentals;
 			sourceTree = "<group>";
@@ -2129,6 +2134,23 @@
 				DA83D81B2E37891100913BF5 /* EnvironmentObjectExample.swift */,
 			);
 			path = Examples;
+			sourceTree = "<group>";
+		};
+		DAEB651C2F3DBB1500929CA6 /* Advanced State And Data Flow */ = {
+			isa = PBXGroup;
+			children = (
+				DAEB65252F3DBB7D00929CA6 /* SwiftUI Property Wrapper */,
+			);
+			path = "Advanced State And Data Flow";
+			sourceTree = "<group>";
+		};
+		DAEB65252F3DBB7D00929CA6 /* SwiftUI Property Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				DAEB652E2F3DBBFB00929CA6 /* SwiftUIPropertyWrapperLesson.swift */,
+				DAEB65372F3DBC5900929CA6 /* SwiftUIPropertyWrapperBootcamp.swift */,
+			);
+			path = "SwiftUI Property Wrapper";
 			sourceTree = "<group>";
 		};
 		DAEBAE4B2DF2907900082B1C /* Components */ = {
@@ -2314,6 +2336,7 @@
 				DA7BF5EA2E98F2DA00224BCF /* RswiftResources+FontResource.swift in Sources */,
 				DA61C5592F0CCE8B00FD8181 /* Lesson.swift in Sources */,
 				DADA94862F2D00E4008ED262 /* AnimatedToggle.swift in Sources */,
+				DAEB652F2F3DBBFB00929CA6 /* SwiftUIPropertyWrapperLesson.swift in Sources */,
 				DAAA67242E617101004075B7 /* ViewAndAdditional.swift in Sources */,
 				DA5D71822E3FA59900C78E40 /* NetworkError.swift in Sources */,
 				DA5D71862E3FA5B400C78E40 /* NetworkManager.swift in Sources */,
@@ -2561,6 +2584,7 @@
 				DAEEA2C52F2E507600AE6218 /* SwiftUIArchitectureAndViewLifeCycleLesson.swift in Sources */,
 				DA7BE0AE2E8061D1006821CE /* LoginModuleBuilder.swift in Sources */,
 				DA3F45662F3A36A9008F50AB /* CardViewModifier.swift in Sources */,
+				DAEB65382F3DBC5900929CA6 /* SwiftUIPropertyWrapperBootcamp.swift in Sources */,
 				DABC5FC82F27B27200957964 /* NavigationBootcamp.swift in Sources */,
 				DA2237542F2A09B70065C9CD /* NaviagtionExampleView.swift in Sources */,
 				DAA709162E75D60C006F8E70 /* VisaPaymentService.swift in Sources */,
