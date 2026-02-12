@@ -8,6 +8,63 @@
 import Foundation
 import SwiftUI
 
+protocol MyThemeProtocol {
+    var backgroundColor: Color { get }
+    var textColor: Color { get }
+}
+
+enum MyTheme: MyThemeProtocol {
+    case dark, light
+    
+    var textColor: Color {
+        return self == .light ? Color.black : Color.white
+    }
+    
+    var backgroundColor: Color {
+        return self == .light ? Color.white : Color.black
+    }
+}
+
+//Step 1: Define the environment key
+struct ThemeKey: EnvironmentKey {
+    static let defaultValue: MyTheme = .light
+}
+
+//Step 2: Extend EnvironmentValues
+extension EnvironmentValues {
+    var myTheme: MyTheme {
+        get { self[ThemeKey.self] }
+        set { self[ThemeKey.self] = newValue }
+    }
+}
+
+// 3. Extend View for convenience
+extension View {
+    func setTheme(_ newTheme: MyTheme) -> some View {
+        environment(\.myTheme, newTheme)
+    }
+}
+
+// Usage
+struct ParentViewTheme: View {
+    var body: some View {
+        ThemeView()
+            .environment(\.myTheme, .light)
+    }
+}
+
+struct ThemeView: View {
+    @Environment(\.myTheme) var myTheme
+    
+    var body: some View {
+        Text("Hello SwiftUI!")
+            .foregroundStyle(myTheme.textColor)
+            .background(myTheme.backgroundColor)
+    }
+}
+
+
+
 struct HSpacing {
     let paddingText: CGFloat = 5
 }

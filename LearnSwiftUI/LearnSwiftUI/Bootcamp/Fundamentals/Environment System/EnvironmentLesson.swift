@@ -90,6 +90,3 @@ struct ParentView: View {
 """#, result: nil)
     ]
 }
-
-
-
