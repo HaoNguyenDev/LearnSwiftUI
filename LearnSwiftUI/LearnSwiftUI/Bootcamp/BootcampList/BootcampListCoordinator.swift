@@ -22,6 +22,8 @@ extension Route {
         case modifiersViewProtocol
         case environment
         
+        //ADVANCED STATE AND DATA FLOW
+        case swIftuiPropertyWrapper
         case alignmentAlignmentGuide
         case geometryReaderCoordinateSpace
         case scrollViewLazyContainers
@@ -46,6 +48,7 @@ extension Route {
             case .stackView: "Layout System - Stack View"
             case .modifiersViewProtocol: "Modifiers & View Protocol Deep Dive"
             case .environment: "Environment System"
+            case .swIftuiPropertyWrapper: "SwiftUI Property Wrapper"
             case .alignmentAlignmentGuide: "Alignment-AlignmentGuide"
             case .geometryReaderCoordinateSpace: "GeometryReader-CoordinateSpace"
             case .scrollViewLazyContainers: "ScrollView-Lazy containers"
@@ -114,6 +117,8 @@ extension BootcampListCoordinator {
             ModifiersViewProtocolCoordinator(navRoute: navRoute)
         case .environment:
             EnvironmentCoordinator(navRoute: navRoute)
+        case .swIftuiPropertyWrapper:
+            SwiftUIPropertyWrapperCoordinator(navRoute: navRoute)
         case .alignmentAlignmentGuide:
             AlignmentBootcampCoordinator(navRouter: navRoute)
         case .geometryReaderCoordinateSpace:
