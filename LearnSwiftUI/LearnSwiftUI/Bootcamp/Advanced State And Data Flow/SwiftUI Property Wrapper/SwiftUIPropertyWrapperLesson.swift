@@ -179,6 +179,26 @@ When child.property changes
 Solution:
 Manually forward objectWillChange
 Or flatten state
+""", result: nil),
+        Lesson(title: "Interview Questions"),
+        Lesson(title: "10 Interview Deep Questions", code: """
+❓1. When does SwiftUI recreate a view?
+When the state changes
+When the identity changes
+When the parent changes
+
+❓2. Why should @StateObject be used at the top level?
+Because it determines ownership and the lifecycle
+
+❓3. How does objectWillChange work?
+It combines the publisher, the view subscribes, and the view invalidates.
+
+❓4. Why shouldn't @ObservedObject be used in the root view?
+Because it doesn't maintain the lifecycle → recreate.
+
+❓5. Is ObservableObject thread-safe?
+No.
+Updates must go to the main thread if they affect the UI.
 """, result: nil)
     ]
 }
