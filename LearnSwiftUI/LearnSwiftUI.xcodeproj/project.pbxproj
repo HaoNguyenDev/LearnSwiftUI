@@ -113,6 +113,7 @@
 		DA58DDAD2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58DDAC2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift */; };
 		DA5A80822F3F19D900531852 /* EnvironmentEnvironmentObjectLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5A80812F3F19D900531852 /* EnvironmentEnvironmentObjectLesson.swift */; };
 		DA5A80862F3F1A4200531852 /* EnvironmentEnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5A80852F3F1A4200531852 /* EnvironmentEnvironmentObjectBootcamp.swift */; };
+		DA5A80952F3F558300531852 /* CustomEnvironmentKeyExcercies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5A80942F3F558300531852 /* CustomEnvironmentKeyExcercies.swift */; };
 		DA5C98B62E391F4B007AC9E9 /* TodoAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B52E391F4B007AC9E9 /* TodoAppView.swift */; };
 		DA5C98B82E391F91007AC9E9 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B72E391F91007AC9E9 /* TodoListView.swift */; };
 		DA5C98BA2E39237C007AC9E9 /* TodoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B92E39237C007AC9E9 /* TodoRowView.swift */; };
@@ -487,6 +488,7 @@
 		DA58DDAC2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewModifiers.swift; sourceTree = "<group>"; };
 		DA5A80812F3F19D900531852 /* EnvironmentEnvironmentObjectLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentEnvironmentObjectLesson.swift; sourceTree = "<group>"; };
 		DA5A80852F3F1A4200531852 /* EnvironmentEnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentEnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
+		DA5A80942F3F558300531852 /* CustomEnvironmentKeyExcercies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEnvironmentKeyExcercies.swift; sourceTree = "<group>"; };
 		DA5C98B52E391F4B007AC9E9 /* TodoAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppView.swift; sourceTree = "<group>"; };
 		DA5C98B72E391F91007AC9E9 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		DA5C98B92E39237C007AC9E9 /* TodoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRowView.swift; sourceTree = "<group>"; };
@@ -1287,10 +1289,19 @@
 		DA5A80802F3F19C900531852 /* Environment EnvironmentObject */ = {
 			isa = PBXGroup;
 			children = (
+				DA5A80912F3F556400531852 /* Excercies */,
 				DA5A80812F3F19D900531852 /* EnvironmentEnvironmentObjectLesson.swift */,
 				DA5A80852F3F1A4200531852 /* EnvironmentEnvironmentObjectBootcamp.swift */,
 			);
 			path = "Environment EnvironmentObject";
+			sourceTree = "<group>";
+		};
+		DA5A80912F3F556400531852 /* Excercies */ = {
+			isa = PBXGroup;
+			children = (
+				DA5A80942F3F558300531852 /* CustomEnvironmentKeyExcercies.swift */,
+			);
+			path = Excercies;
 			sourceTree = "<group>";
 		};
 		DA5D71282E3D198100C78E40 /* Utilities */ = {
@@ -2612,6 +2623,7 @@
 				DAA609CB2F129E7B00B625CE /* AnimationLayoutInteractionLessons.swift in Sources */,
 				DA3F45532F39B119008F50AB /* LifecycleDemo.swift in Sources */,
 				DAE365BD2E9CC288005EF803 /* DarkTheme.swift in Sources */,
+				DA5A80952F3F558300531852 /* CustomEnvironmentKeyExcercies.swift in Sources */,
 				DA64B7C82F2BA73F00144CC6 /* AdvancedAnimationBootcampCoordinator.swift in Sources */,
 				DAE365BE2E9CC288005EF803 /* DarkThemeAssets.swift in Sources */,
 				DA9615052F1CAF2C00AEEB25 /* ImplicitvsExplicitAnimationExample.swift in Sources */,
