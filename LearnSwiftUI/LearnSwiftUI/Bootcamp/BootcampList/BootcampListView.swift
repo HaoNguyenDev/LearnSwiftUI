@@ -28,9 +28,10 @@ enum BootcampSection: String, Identifiable, CaseIterable {
              Route.BootcampListRoute.equatableview,
              Route.BootcampListRoute.stackView,
              Route.BootcampListRoute.modifiersViewProtocol,
-             Route.BootcampListRoute.environment]
+             Route.BootcampListRoute.environmentSystem]
         case .advancedStateAndDataFlow: [
-            Route.BootcampListRoute.swIftuiPropertyWrapper,
+            Route.BootcampListRoute.swiftUIPropertyWrapper,
+            Route.BootcampListRoute.environmentEnvironmentObject,
             Route.BootcampListRoute.dataFlowAndArchitecture]
         case .layoutAndAnimation:
             [Route.BootcampListRoute.geometryReaderCoordinateSpace]
@@ -71,16 +72,7 @@ struct BootcampListView: View {
                     Section {
                         bootcampSection(routes: section.routes)
                     } header: {
-                        VStack(alignment: .leading) {
-                            Text(section.title)
-                                .foregroundStyle(.white)
-                                .padding()
-                                .background(
-                                    RoundedRectangle(cornerRadius: 10)
-                                        .fill(.black)
-                                )
-                        }
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                        headerView(section.title)
                     }
                 }
             }
@@ -90,11 +82,10 @@ struct BootcampListView: View {
 }
 
 extension BootcampListView {
-    @ViewBuilder
     private func bootcampSection(routes: [Route.BootcampListRoute]) -> some View {
         LazyVStack {
             ForEach(routes, id: \.id) { route in
-                bootcampTitle(route.title)
+                bootcampTitle(route.rawValue)
                     .onTapGesture {
                         selectedRoute?(route)
                     }
@@ -102,7 +93,6 @@ extension BootcampListView {
         }
     }
     
-    @ViewBuilder
     private func bootcampTitle(_ title: String) -> some View {
         Text(title)
             .foregroundStyle(.white)
@@ -110,7 +100,21 @@ extension BootcampListView {
             .background(.green)
             .clipShape(RoundedRectangle(cornerRadius: 10))
     }
+    
+    private func headerView(_ title: String) -> some View {
+        VStack(alignment: .leading) {
+            Text(title)
+                .foregroundStyle(.white)
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(.black)
+                )
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
 }
+
 #Preview {
     BootcampListView()
 }

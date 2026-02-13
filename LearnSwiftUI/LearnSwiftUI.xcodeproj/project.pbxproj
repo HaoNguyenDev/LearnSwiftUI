@@ -111,6 +111,8 @@
 		DA58DD8E2E9E35630042D1AD /* NetworkingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58DD8D2E9E35630042D1AD /* NetworkingBootcamp.swift */; };
 		DA58DD9C2E9E5FF90042D1AD /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58DD9B2E9E5FF90042D1AD /* String+Extensions.swift */; };
 		DA58DDAD2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58DDAC2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift */; };
+		DA5A80822F3F19D900531852 /* EnvironmentEnvironmentObjectLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5A80812F3F19D900531852 /* EnvironmentEnvironmentObjectLesson.swift */; };
+		DA5A80862F3F1A4200531852 /* EnvironmentEnvironmentObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5A80852F3F1A4200531852 /* EnvironmentEnvironmentObjectBootcamp.swift */; };
 		DA5C98B62E391F4B007AC9E9 /* TodoAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B52E391F4B007AC9E9 /* TodoAppView.swift */; };
 		DA5C98B82E391F91007AC9E9 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B72E391F91007AC9E9 /* TodoListView.swift */; };
 		DA5C98BA2E39237C007AC9E9 /* TodoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C98B92E39237C007AC9E9 /* TodoRowView.swift */; };
@@ -483,6 +485,8 @@
 		DA58DD8D2E9E35630042D1AD /* NetworkingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingBootcamp.swift; sourceTree = "<group>"; };
 		DA58DD9B2E9E5FF90042D1AD /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		DA58DDAC2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewModifiers.swift; sourceTree = "<group>"; };
+		DA5A80812F3F19D900531852 /* EnvironmentEnvironmentObjectLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentEnvironmentObjectLesson.swift; sourceTree = "<group>"; };
+		DA5A80852F3F1A4200531852 /* EnvironmentEnvironmentObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentEnvironmentObjectBootcamp.swift; sourceTree = "<group>"; };
 		DA5C98B52E391F4B007AC9E9 /* TodoAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppView.swift; sourceTree = "<group>"; };
 		DA5C98B72E391F91007AC9E9 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		DA5C98B92E39237C007AC9E9 /* TodoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRowView.swift; sourceTree = "<group>"; };
@@ -1278,6 +1282,15 @@
 				DA5477A12EB7983D005C8868 /* FakeStoreCommonRequest.swift */,
 			);
 			path = ClientService;
+			sourceTree = "<group>";
+		};
+		DA5A80802F3F19C900531852 /* Environment EnvironmentObject */ = {
+			isa = PBXGroup;
+			children = (
+				DA5A80812F3F19D900531852 /* EnvironmentEnvironmentObjectLesson.swift */,
+				DA5A80852F3F1A4200531852 /* EnvironmentEnvironmentObjectBootcamp.swift */,
+			);
+			path = "Environment EnvironmentObject";
 			sourceTree = "<group>";
 		};
 		DA5D71282E3D198100C78E40 /* Utilities */ = {
@@ -2140,6 +2153,7 @@
 			isa = PBXGroup;
 			children = (
 				DAEB65252F3DBB7D00929CA6 /* SwiftUI Property Wrapper */,
+				DA5A80802F3F19C900531852 /* Environment EnvironmentObject */,
 			);
 			path = "Advanced State And Data Flow";
 			sourceTree = "<group>";
@@ -2475,6 +2489,7 @@
 				DA7BF5E62E98F2B400224BCF /* RswiftResources+ImageResource.swift in Sources */,
 				DAA709142E75D553006F8E70 /* ThaiPaymentService.swift in Sources */,
 				DA723CE62F264DBB009BEC1C /* BootcampTemplateLesson.swift in Sources */,
+				DA5A80862F3F1A4200531852 /* EnvironmentEnvironmentObjectBootcamp.swift in Sources */,
 				DA3F45402F39A88B008F50AB /* ModifiersViewProtocolLesson.swift in Sources */,
 				DA8D9D1E2F38DC57004529FF /* CombineStackViewExample.swift in Sources */,
 				DAA709192E75D6F5006F8E70 /* PaymentProvider.swift in Sources */,
@@ -2610,6 +2625,7 @@
 				DA7BE0A22E805FEE006821CE /* LoginViewController.swift in Sources */,
 				DAFBB5042F338A8D006E4E48 /* AdvancedCounterExcercies.swift in Sources */,
 				DABC5FC42F27B23C00957964 /* NavigationLesson.swift in Sources */,
+				DA5A80822F3F19D900531852 /* EnvironmentEnvironmentObjectLesson.swift in Sources */,
 				DA278FB92F323E170079AF56 /* OptimizedList.swift in Sources */,
 				DA0C4B5D2E52218A00D64C7C /* FocusStateBootcamp.swift in Sources */,
 				DA37F9B12E8EE8C30001599E /* CombineDefinitionViewWrapper.swift in Sources */,
