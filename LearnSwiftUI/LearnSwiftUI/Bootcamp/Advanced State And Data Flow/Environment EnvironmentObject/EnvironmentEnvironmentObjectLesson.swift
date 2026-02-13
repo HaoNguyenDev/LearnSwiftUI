@@ -160,6 +160,119 @@ struct Content: View {
             .background(theme.backgroundColor)
     }
 }
+"""#, result: nil),
+    Lesson(title: "4️⃣ EnvironmentObject", code: """
+🔎 Definition
+@EnvironmentObject is a way to inject an ObservableObject into the entire subtree.
+
+Unlike @Environment:
+
+@Environment    @EnvironmentObject
+Value type      Reference type
+Not Observable  ObservableObject
+No auto-update  Auto-update when @Published changes
+""", result: nil),
+    Lesson(title: "", code: """
+1️⃣ Define ViewModel
+class AppState: ObservableObject {
+    @Published var isLoggedIn = false
+}
+
+2️⃣ Inject at root
+@main
+struct MyApp: App {
+    @StateObject var appState = AppState()
+    
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .environmentObject(appState)
+        }
+    }
+}
+
+3️⃣ Read read from any subview
+struct ProfileView: View {
+    @EnvironmentObject var appState: AppState
+    
+    var body: some View {
+        Button("Logout") {
+            appState.isLoggedIn = false
+        }
+    }
+}
+""", result: nil),
+    Lesson(title: "⚠️ Classic Error", code: """
+❌ Crash if injection is not performed
+Fatal error: No ObservableObject of type AppState found
+SwiftUI will crash runtime if injection is missing.
+""", result: nil),
+    Lesson(title: "🧠 Deep Understanding", code: """
+@EnvironmentObject is:
+    Runtime lookup
+    Type-based matching
+    No compile-time guarantee
+    SwiftUI finds objects by type.
+If there are 2 objects of the same type → unpredictable behavior.
+""", result: nil),
+    Lesson(title: "5️⃣ Environment vs EnvironmentObject vs ObservedObject", code: """
+|           | Environment | EnvironmentObject | ObservedObject |
+| --------- | ----------- | ----------------- | -------------- |
+| Type      | Value       | Reference         | Reference      |
+| Update    | Manual      | Auto              | Auto           |
+| Injection | Key-based   | Type-based        | Init-based     |
+| Scope     | Subtree     | Subtree           | 1 view         |
+""", result: nil),
+    Lesson(title: "6️⃣ When should you use which?", code: """
+🟢 Use Environment when:
+    Theme
+    Locale
+    App config
+    Lightweight dependency
+
+🟢 Use EnvironmentObject when:
+    App-wide state
+    Auth state
+    Global router
+    User session
+
+🔴 Do not use EnvironmentObject for:
+    Local state
+    Child-specific data
+    Single screen view model
+""", result: nil),
+    Lesson(title: "7️⃣ Performance Considerations", code: """
+⚠️ EnvironmentObject updates can cause:
+Whole subtree re-render
+
+Example:
+
+Root
+├── ViewA
+├── ViewB
+├── ViewC
+
+If AppState changes → the entire subtree re-renders.
+
+👉 It's recommended to break down the state into smaller parts.
+""", result: nil),
+    Lesson(title: "8️⃣ Practical Case Studies", code: #"""
+🔥 Auth Flow
+
+if appState.isLoggedIn { 
+    HomeView()
+} else { 
+    LoginView()
+}
+
+AppState changes → entire root swap.
+
+🔥 Theme System
+Inject custom themes:
+    .environment(\.myTheme, "Corporate Blue")
+Override private subtree:
+    SettingsView() 
+        .environment(\.myTheme, "High Contrast")
 """#, result: nil)]
 }
 
