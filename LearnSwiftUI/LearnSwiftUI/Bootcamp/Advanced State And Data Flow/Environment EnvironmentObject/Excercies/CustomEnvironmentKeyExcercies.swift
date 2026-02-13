@@ -140,7 +140,7 @@ extension View {
     }
 }
 
-struct ParentViewAppThemeExcercies: View {
+struct AppThemeEnvironmentExcercies: View {
     @State private var switchTheme = false
     
     var body: some View {
@@ -185,5 +185,5 @@ struct SubviewAppThemeExcercies: View {
 }
 
 #Preview {
-    ParentViewAppThemeExcercies()
+    AppThemeEnvironmentExcercies()
 }
