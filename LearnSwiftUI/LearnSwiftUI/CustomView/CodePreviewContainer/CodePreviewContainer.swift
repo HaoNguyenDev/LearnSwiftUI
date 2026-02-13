@@ -19,14 +19,20 @@ struct CodePreviewContainer: View {
     }
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text(example.title)
-                .font(.headline)
+            titleView
             codeBlockView
             resultView
         }
         .padding(8)
     }
     
+    @ViewBuilder
+    private var titleView: some View {
+        if !example.title.isEmpty {
+            Text(example.title)
+                .font(.headline)
+        }
+    }
     
     @ViewBuilder
     private var codeBlockView: some View {
