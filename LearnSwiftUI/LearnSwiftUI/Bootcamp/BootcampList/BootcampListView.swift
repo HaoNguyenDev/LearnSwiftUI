@@ -15,37 +15,48 @@ enum BootcampSection: String, Identifiable, CaseIterable {
     
     var id: String { rawValue }
     var title: String { rawValue }
+    var fundamentalRoutes: [Route.BootcampListRoute] {
+        [Route.BootcampListRoute.swiftuiLayoutEngine,
+                            Route.BootcampListRoute.swiftuiArchitectureAndViewLifeCycle,
+                            Route.BootcampListRoute.viewIdentity,
+                            Route.BootcampListRoute.someViewAnyViewAndViewBuilder,
+                            Route.BootcampListRoute.renderingPerformance,
+                            Route.BootcampListRoute.stateManagementDeepDive,
+                            Route.BootcampListRoute.viewCompositionAndViewBuilder,
+                            Route.BootcampListRoute.equatableview,
+                            Route.BootcampListRoute.stackView,
+                            Route.BootcampListRoute.modifiersViewProtocol,
+                            Route.BootcampListRoute.environmentSystem]
+    }
+    
+    var advancedStateAndDataFlowRoutes: [Route.BootcampListRoute] {
+        [Route.BootcampListRoute.swiftUIPropertyWrapper,
+            Route.BootcampListRoute.environmentEnvironmentObject,
+            Route.BootcampListRoute.dataFlowAndArchitecture]
+    }
+    
+    var otherRoutes: [Route.BootcampListRoute] {
+        [Route.BootcampListRoute.stackView,
+         Route.BootcampListRoute.alignmentAlignmentGuide,
+         Route.BootcampListRoute.scrollViewLazyContainers,
+         Route.BootcampListRoute.safeAreaInsets,
+         Route.BootcampListRoute.animationLayoutInteraction,
+         Route.BootcampListRoute.navigation,
+         Route.BootcampListRoute.advancedAnimation,
+         Route.BootcampListRoute.text,
+         Route.BootcampListRoute.shape,
+         Route.BootcampListRoute.color]
+    }
     var routes: [Route.BootcampListRoute] {
         switch self {
         case .fundamentals:
-            [Route.BootcampListRoute.swiftuiLayoutEngine,
-             Route.BootcampListRoute.swiftuiArchitectureAndViewLifeCycle,
-             Route.BootcampListRoute.viewIdentity,
-             Route.BootcampListRoute.someViewAnyViewAndViewBuilder,
-             Route.BootcampListRoute.renderingPerformance,
-             Route.BootcampListRoute.stateManagementDeepDive,
-             Route.BootcampListRoute.viewCompositionAndViewBuilder,
-             Route.BootcampListRoute.equatableview,
-             Route.BootcampListRoute.stackView,
-             Route.BootcampListRoute.modifiersViewProtocol,
-             Route.BootcampListRoute.environmentSystem]
-        case .advancedStateAndDataFlow: [
-            Route.BootcampListRoute.swiftUIPropertyWrapper,
-            Route.BootcampListRoute.environmentEnvironmentObject,
-            Route.BootcampListRoute.dataFlowAndArchitecture]
+            fundamentalRoutes
+        case .advancedStateAndDataFlow:
+            advancedStateAndDataFlowRoutes
         case .layoutAndAnimation:
             [Route.BootcampListRoute.geometryReaderCoordinateSpace]
         case .others:
-            [Route.BootcampListRoute.stackView,
-             Route.BootcampListRoute.alignmentAlignmentGuide,
-             Route.BootcampListRoute.scrollViewLazyContainers,
-             Route.BootcampListRoute.safeAreaInsets,
-             Route.BootcampListRoute.animationLayoutInteraction,
-             Route.BootcampListRoute.navigation,
-             Route.BootcampListRoute.advancedAnimation,
-             Route.BootcampListRoute.text,
-             Route.BootcampListRoute.shape,
-             Route.BootcampListRoute.color]
+            otherRoutes
         }
     }
 }
