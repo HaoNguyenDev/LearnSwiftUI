@@ -9,62 +9,37 @@ import SwiftUI
 
 extension Route {
     enum BootcampListRoute: String, CaseIterable, Routable {
-        //FUNDAMENTALS
-        case swiftuiLayoutEngine
-        case swiftuiArchitectureAndViewLifeCycle
-        case viewIdentity
-        case stateManagementDeepDive
-        case someViewAnyViewAndViewBuilder
-        case renderingPerformance
-        case equatableview
-        case viewCompositionAndViewBuilder
-        case stackView
-        case modifiersViewProtocol
-        case environment
-        
-        //ADVANCED STATE AND DATA FLOW
-        case swIftuiPropertyWrapper
-        case alignmentAlignmentGuide
-        case geometryReaderCoordinateSpace
-        case scrollViewLazyContainers
-        case safeAreaInsets
-        case animationLayoutInteraction
-        case dataFlowAndArchitecture
-        
-        case navigation
-        case advancedAnimation
-        case text
-        case shape
-        case color
         var id: String { rawValue }
         
-        var title: String {
-            switch self {
-            case .swiftuiLayoutEngine: "SwiftUI Layout Engine"
-            case .swiftuiArchitectureAndViewLifeCycle: "SwiftUI Architecture - View LifeCycle"
-            case .stateManagementDeepDive: "State Management Deep Dive (@State, @Binding)"
-            case .someViewAnyViewAndViewBuilder: "some View - AnyView - @ViewBuilder"
-            case .viewCompositionAndViewBuilder: "View Composition - ViewBuilder"
-            case .stackView: "Layout System - Stack View"
-            case .modifiersViewProtocol: "Modifiers & View Protocol Deep Dive"
-            case .environment: "Environment System"
-            case .swIftuiPropertyWrapper: "SwiftUI Property Wrapper"
-            case .alignmentAlignmentGuide: "Alignment-AlignmentGuide"
-            case .geometryReaderCoordinateSpace: "GeometryReader-CoordinateSpace"
-            case .scrollViewLazyContainers: "ScrollView-Lazy containers"
-            case .safeAreaInsets: "SafeArea & Insets"
-            case .animationLayoutInteraction: "Animation-Layout Interaction"
-            case .viewIdentity: "View Identity & Diffing System"
-            case .dataFlowAndArchitecture: "One-Way Data Flow and Architecture"
-            case .renderingPerformance: "Rendering & Performance"
-            case .equatableview: "EquatableView"
-            case .navigation: "Navigation"
-            case .advancedAnimation: "Advanced Animation"
-            case .text: "Text"
-            case .shape: "Shape"
-            case .color: "Color"
-            }
-        }
+        //FUNDAMENTALS
+        case swiftuiLayoutEngine = "SwiftUI Layout Engine"
+        case swiftuiArchitectureAndViewLifeCycle = "SwiftUI Architecture - View LifeCycle"
+        case viewIdentity = "View Identity & Diffing System"
+        case stateManagementDeepDive = "State Management Deep Dive (@State, @Binding)"
+        case someViewAnyViewAndViewBuilder = "some View - AnyView - @ViewBuilder"
+        case renderingPerformance = "Rendering & Performance"
+        case equatableview = "EquatableView"
+        case viewCompositionAndViewBuilder = "View Composition - ViewBuilder"
+        case stackView = "Layout System - Stack View"
+        case modifiersViewProtocol = "Modifiers & View Protocol Deep Dive"
+        case environmentSystem = "Environment System"
+        
+        //ADVANCED STATE AND DATA FLOW
+        case swiftUIPropertyWrapper = "SwiftUI Property Wrapper"
+        case environmentEnvironmentObject = "Environment EnvironmentObject"
+        
+        case alignmentAlignmentGuide = "Alignment-AlignmentGuide"
+        case geometryReaderCoordinateSpace = "GeometryReader-CoordinateSpace"
+        case scrollViewLazyContainers = "ScrollView-Lazy containers"
+        case safeAreaInsets = "SafeArea & Insets"
+        case animationLayoutInteraction = "Animation-Layout Interaction"
+        case dataFlowAndArchitecture = "One-Way Data Flow and Architecture"
+        
+        case navigation = "Navigation"
+        case advancedAnimation = "Advanced Animation"
+        case text = "Text"
+        case shape = "Shape"
+        case color = "Color"
     }
 }
 
@@ -115,10 +90,12 @@ extension BootcampListCoordinator {
             StackViewBootcampCoordinator(navRouter: navRoute)
         case .modifiersViewProtocol:
             ModifiersViewProtocolCoordinator(navRoute: navRoute)
-        case .environment:
+        case .environmentSystem:
             EnvironmentCoordinator(navRoute: navRoute)
-        case .swIftuiPropertyWrapper:
+        case .swiftUIPropertyWrapper:
             SwiftUIPropertyWrapperCoordinator(navRoute: navRoute)
+        case .environmentEnvironmentObject:
+            EnvironmentEnvironmentObjectCoordinator(navRoute: navRoute)
         case .alignmentAlignmentGuide:
             AlignmentBootcampCoordinator(navRouter: navRoute)
         case .geometryReaderCoordinateSpace:
