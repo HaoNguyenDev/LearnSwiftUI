@@ -7,68 +7,135 @@
 
 import SwiftUI
 
-protocol CustomAppFont {
-    var titleFont: Font { get }
-    var subtitleFont: Font { get }
-}
-
-protocol CustomAppTextColor {
-    var primaryTextColor: Color { get }
+protocol CustomThemeColorProtocol {
+    // Background
+    var bgColor: Color { get }
+    var gradientBgColors: [Color] { get }
+    
+    // Text
+    var textColor: Color { get }
     var secondaryTextColor: Color { get }
+    var errorMessage: Color { get }
+    
+    // Button
+    var buttonBgColor: Color { get }
+    var buttonBgDisableColor: Color { get }
+    var buttonBgSelectedColor: Color { get }
 }
 
-protocol CustomAppBackground {
-    var primaryBackground: Color { get }
-    var secondaryBackground: Color { get }
+protocol CustomThemeFontProtocol {
+    func bold(ofSize size: CGFloat) -> Font
+    func regular(ofSize size: CGFloat) -> Font
+    func semibold(ofSize size: CGFloat) -> Font
 }
 
-enum CustomAppThemeExcercies {
-    case light, dark
+protocol CustomThemeAssetsProtocol {
+    var currentThemeIconSf: String { get }
+    var userAvatar: UIImage { get }
 }
 
-extension CustomAppThemeExcercies: CustomAppFont {
-    var titleFont: Font {
-        .system(size: 30, weight: .bold, design: .rounded)
+protocol CustomThemeProtocol {
+    var color: CustomThemeColorProtocol { get }
+    var font: CustomThemeFontProtocol { get }
+    var assets: CustomThemeAssetsProtocol { get }
+}
+
+struct CustomLightThemeColors: CustomThemeColorProtocol {
+    // Background
+    var bgColor = Color(hex: "#ffffff")
+    var gradientBgColors = [Color(hex: "#ffffff"), Color(hex: "#4C4CFF")]
+    
+    // Text
+    var textColor = Color(hex: "#333333")
+    var secondaryTextColor: Color = .secondary
+    var errorMessage = Color(hex: "#cc0000")
+    
+    // Button
+    var buttonBgColor = Color(hex: "#007AFF")
+    var buttonBgDisableColor = Color(hex: "#007AFF").opacity(0.5)
+    var buttonBgSelectedColor = Color(hex: "#006de5")
+}
+
+struct CustomLightThemeFonts: CustomThemeFontProtocol {
+    func bold(ofSize size: CGFloat) -> Font {
+        R.font.ttHovesProTrialBd.font(size: size)
     }
     
-    var subtitleFont: Font {
-        .system(size: 18, weight: .semibold, design: .rounded)
+    func regular(ofSize size: CGFloat) -> Font {
+        R.font.ttHovesProTrialRg.font(size: size)
+    }
+    
+    func semibold(ofSize size: CGFloat) -> Font {
+        R.font.ttHovesProTrialDmBd.font(size: size)
     }
 }
 
-extension CustomAppThemeExcercies: CustomAppTextColor {
-    var primaryTextColor: Color {
-        return self == .light ? .black : .white
+struct CustomLightThemeAssets: CustomThemeAssetsProtocol {
+    var currentThemeIconSf: String { "sun.max.fill" }
+    var userAvatar: UIImage { UIImage() }
+}
+
+struct CustomDarkThemeColors: CustomThemeColorProtocol {
+    // Background
+    var bgColor = Color(hex: "#1C2526")
+    var gradientBgColors = [Color(hex: "#4c4c4c"), Color(hex: "#000000")]
+    
+    // Text
+    var textColor = Color(hex: "#ffffff")
+    var secondaryTextColor: Color = .white.opacity(0.5)
+    var errorMessage = Color(hex: "#cc0000")
+    
+    // Button
+    var buttonBgColor = Color(hex: "#FFD700")
+    var buttonBgDisableColor = Color(hex: "#FFD700").opacity(0.5)
+    var buttonBgSelectedColor = Color(hex: "#FFD700")
+}
+
+struct CustomDarkThemeFonts: CustomThemeFontProtocol {
+    func bold(ofSize size: CGFloat) -> Font {
+        R.font.ttHovesProTrialBd.font(size: size)
     }
     
-    var secondaryTextColor: Color {
-        return .secondary
+    func regular(ofSize size: CGFloat) -> Font {
+        R.font.ttHovesProTrialRg.font(size: size)
+    }
+    
+    func semibold(ofSize size: CGFloat) -> Font {
+        R.font.ttHovesProTrialDmBd.font(size: size)
     }
 }
 
-extension CustomAppThemeExcercies: CustomAppBackground {
-    var primaryBackground: Color {
-        return self == .light ? .white : .black
-    }
-    
-    var secondaryBackground: Color {
-        return self == .light ? .secondary : .white
-    }
+struct CustomDarkThemeAssets: CustomThemeAssetsProtocol {
+    var currentThemeIconSf: String { "moon.fill" }
+    var userAvatar: UIImage { UIImage() }
 }
+
+struct CustomDarkTheme: CustomThemeProtocol {
+    var color: any CustomThemeColorProtocol = CustomDarkThemeColors()
+    var font: any CustomThemeFontProtocol = CustomDarkThemeFonts()
+    var assets: any CustomThemeAssetsProtocol = CustomDarkThemeAssets()
+}
+
+struct CustomLightTheme: CustomThemeProtocol {
+    var color: CustomThemeColorProtocol = CustomLightThemeColors()
+    var font: CustomThemeFontProtocol = CustomLightThemeFonts()
+    var assets: CustomThemeAssetsProtocol = CustomLightThemeAssets()
+}
+
 
 struct CustomAppThemeKey: EnvironmentKey {
-    static var defaultValue: CustomAppThemeExcercies = .light
+    static var defaultValue: CustomThemeProtocol = CustomLightTheme()
 }
 
 extension EnvironmentValues {
-    var customAppThemeKey: CustomAppThemeExcercies {
+    var customAppThemeKey: any CustomThemeProtocol {
         get { self[CustomAppThemeKey.self] }
         set { self[CustomAppThemeKey.self] = newValue }
     }
 }
 
 extension View {
-    func setCustomAppThemeExcercies(_ theme: CustomAppThemeExcercies) -> some View {
+    func setCustomAppThemeExcercies(_ theme: CustomThemeProtocol) -> some View {
         environment(\.customAppThemeKey, theme)
     }
 }
@@ -77,33 +144,41 @@ struct ParentViewAppThemeExcercies: View {
     @State private var switchTheme = false
     
     var body: some View {
-        VStack{
-            SubviewAppThemeExcercies()
-                .setCustomAppThemeExcercies(switchTheme ? .light : .dark)
-            Button("Switch Theme") {
-                switchTheme.toggle()
-            }
-            .buttonStyle(.borderedProminent)
-        }
+        SubviewAppThemeExcercies(switchTheme: $switchTheme)
+            .setCustomAppThemeExcercies(switchTheme ? CustomLightTheme() : CustomDarkTheme())
     }
 }
 
 struct SubviewAppThemeExcercies: View {
-    @Environment(\.customAppThemeKey) var appTheme
+    @Environment(\.customAppThemeKey) var theme
+    @Binding var switchTheme: Bool
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack() {
             Text("Hello SwiftUI!")
-                .font(appTheme.titleFont)
-                .foregroundStyle(appTheme.primaryTextColor)
-                .background(appTheme.primaryBackground)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .font(theme.font.bold(ofSize: 30))
+                .foregroundStyle(theme.color.textColor)
+                .background(theme.color.bgColor)
+                .frame(maxWidth: .infinity)
             
             Text("Let's discovery SwiftUI with me....")
-                .font(appTheme.subtitleFont)
-                .foregroundStyle(appTheme.secondaryTextColor)
-                .background(appTheme.secondaryBackground)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .font(theme.font.regular(ofSize: 18))
+                .foregroundStyle(theme.color.secondaryTextColor)
+                .background(theme.color.bgColor)
+                .frame(maxWidth: .infinity)
+                Spacer()
+                .frame(height: 30)
+            
+            Button {
+                switchTheme.toggle()
+            } label: {
+                Text("Switch Theme")
+                    .font(theme.font.bold(ofSize: 30))
+                    .foregroundStyle(theme.color.textColor)
+                    .padding()
+                    .background(theme.color.buttonBgColor)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+            }
         }
         .padding()
     }
