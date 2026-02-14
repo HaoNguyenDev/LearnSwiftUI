@@ -153,6 +153,27 @@ import Observation
 
 ❌ Error 3: Not understanding dependency tracking
 View doesn't update because that property isn't read in the body.
+""", result: nil),
+        Lesson(title: "Advanced Concept"),
+        Lesson(title: "9️⃣ Observation Tracking Mechanism", code: """
+SwiftUI uses:
+
+    withObservationTracking
+
+to track access properties.
+
+This means:
+When the body runs,
+SwiftUI records which properties are accessed.
+When that property changes, the view is invalidated.
+This is reactive at the language level, not Combine.
+""", result: nil),
+        Lesson(title: "10 Performance Insight", code: """
+@Observable:
+- Fine-grained invalidation
+- No broadcasting of entire objects
+- More optimized in large lists
+- In large apps → noticeable difference.
 """, result: nil)
     ]
 }
