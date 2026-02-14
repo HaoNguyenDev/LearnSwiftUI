@@ -18,6 +18,7 @@
 		DA03DFB72F23BCD50080D104 /* RenderignPerformanceBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DFB62F23BCD50080D104 /* RenderignPerformanceBootcampCoordinator.swift */; };
 		DA051B312F402B61003F3BAA /* ObservableMacroLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA051B302F402B61003F3BAA /* ObservableMacroLesson.swift */; };
 		DA051B352F402B9C003F3BAA /* ObservableMacroBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA051B342F402B9C003F3BAA /* ObservableMacroBootcamp.swift */; };
+		DA051B422F40C2E4003F3BAA /* DemoObservableVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA051B412F40C2E4003F3BAA /* DemoObservableVM.swift */; };
 		DA0B4AE72E6FC9A400628E53 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */; };
 		DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */; };
 		DA0B4AEB2E6FCBB700628E53 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */; };
@@ -387,6 +388,7 @@
 		DA03DFB62F23BCD50080D104 /* RenderignPerformanceBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderignPerformanceBootcampCoordinator.swift; sourceTree = "<group>"; };
 		DA051B302F402B61003F3BAA /* ObservableMacroLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableMacroLesson.swift; sourceTree = "<group>"; };
 		DA051B342F402B9C003F3BAA /* ObservableMacroBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableMacroBootcamp.swift; sourceTree = "<group>"; };
+		DA051B412F40C2E4003F3BAA /* DemoObservableVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoObservableVM.swift; sourceTree = "<group>"; };
 		DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
 		DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
@@ -861,10 +863,19 @@
 		DA051B2E2F402B3F003F3BAA /* Observable Macro */ = {
 			isa = PBXGroup;
 			children = (
+				DA051B402F40C2BD003F3BAA /* Excercies */,
 				DA051B302F402B61003F3BAA /* ObservableMacroLesson.swift */,
 				DA051B342F402B9C003F3BAA /* ObservableMacroBootcamp.swift */,
 			);
 			path = "Observable Macro";
+			sourceTree = "<group>";
+		};
+		DA051B402F40C2BD003F3BAA /* Excercies */ = {
+			isa = PBXGroup;
+			children = (
+				DA051B412F40C2E4003F3BAA /* DemoObservableVM.swift */,
+			);
+			path = Excercies;
 			sourceTree = "<group>";
 		};
 		DA0B4AE52E6FC96800628E53 /* MultiDownloadApp */ = {
@@ -2602,6 +2613,7 @@
 				DA8D9D162F38D205004529FF /* HStackAlignment.swift in Sources */,
 				DA5164322E3CB57600642709 /* NavigationManager.swift in Sources */,
 				DA278F3C2F31DFA40079AF56 /* BindingExample.swift in Sources */,
+				DA051B422F40C2E4003F3BAA /* DemoObservableVM.swift in Sources */,
 				DA4726582EA7C31E000D596A /* AppTextStyleSize.swift in Sources */,
 				DA6DB8BD2F2F9DDF001781BD /* OptionalViewExample.swift in Sources */,
 				DA4F7EF12E9A6B6D001CB7B2 /* HButtonStyle.swift in Sources */,
