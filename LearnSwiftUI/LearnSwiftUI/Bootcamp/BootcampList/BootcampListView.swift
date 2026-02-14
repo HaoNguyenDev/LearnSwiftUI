@@ -17,22 +17,23 @@ enum BootcampSection: String, Identifiable, CaseIterable {
     var title: String { rawValue }
     var fundamentalRoutes: [Route.BootcampListRoute] {
         [Route.BootcampListRoute.swiftuiLayoutEngine,
-                            Route.BootcampListRoute.swiftuiArchitectureAndViewLifeCycle,
-                            Route.BootcampListRoute.viewIdentity,
-                            Route.BootcampListRoute.someViewAnyViewAndViewBuilder,
-                            Route.BootcampListRoute.renderingPerformance,
-                            Route.BootcampListRoute.stateManagementDeepDive,
-                            Route.BootcampListRoute.viewCompositionAndViewBuilder,
-                            Route.BootcampListRoute.equatableview,
-                            Route.BootcampListRoute.stackView,
-                            Route.BootcampListRoute.modifiersViewProtocol,
-                            Route.BootcampListRoute.environmentSystem]
+         Route.BootcampListRoute.swiftuiArchitectureAndViewLifeCycle,
+         Route.BootcampListRoute.viewIdentity,
+         Route.BootcampListRoute.someViewAnyViewAndViewBuilder,
+         Route.BootcampListRoute.renderingPerformance,
+         Route.BootcampListRoute.stateManagementDeepDive,
+         Route.BootcampListRoute.viewCompositionAndViewBuilder,
+         Route.BootcampListRoute.equatableview,
+         Route.BootcampListRoute.stackView,
+         Route.BootcampListRoute.modifiersViewProtocol,
+         Route.BootcampListRoute.environmentSystem]
     }
     
     var advancedStateAndDataFlowRoutes: [Route.BootcampListRoute] {
         [Route.BootcampListRoute.swiftUIPropertyWrapper,
-            Route.BootcampListRoute.environmentEnvironmentObject,
-            Route.BootcampListRoute.dataFlowAndArchitecture]
+         Route.BootcampListRoute.dataFlowAndArchitecture,
+         Route.BootcampListRoute.environmentEnvironmentObject,
+         Route.BootcampListRoute.observableMacro]
     }
     
     var otherRoutes: [Route.BootcampListRoute] {
