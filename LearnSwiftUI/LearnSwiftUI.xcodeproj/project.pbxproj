@@ -16,6 +16,8 @@
 		DA03DFAE2F23BBD60080D104 /* RenderingPerformanceLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DFAD2F23BBD60080D104 /* RenderingPerformanceLesson.swift */; };
 		DA03DFB22F23BC400080D104 /* RenderingPerformanceBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DFB12F23BC400080D104 /* RenderingPerformanceBootcamp.swift */; };
 		DA03DFB72F23BCD50080D104 /* RenderignPerformanceBootcampCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03DFB62F23BCD50080D104 /* RenderignPerformanceBootcampCoordinator.swift */; };
+		DA051B312F402B61003F3BAA /* ObservableMacroLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA051B302F402B61003F3BAA /* ObservableMacroLesson.swift */; };
+		DA051B352F402B9C003F3BAA /* ObservableMacroBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA051B342F402B9C003F3BAA /* ObservableMacroBootcamp.swift */; };
 		DA0B4AE72E6FC9A400628E53 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */; };
 		DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */; };
 		DA0B4AEB2E6FCBB700628E53 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */; };
@@ -383,6 +385,8 @@
 		DA03DFAD2F23BBD60080D104 /* RenderingPerformanceLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderingPerformanceLesson.swift; sourceTree = "<group>"; };
 		DA03DFB12F23BC400080D104 /* RenderingPerformanceBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderingPerformanceBootcamp.swift; sourceTree = "<group>"; };
 		DA03DFB62F23BCD50080D104 /* RenderignPerformanceBootcampCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderignPerformanceBootcampCoordinator.swift; sourceTree = "<group>"; };
+		DA051B302F402B61003F3BAA /* ObservableMacroLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableMacroLesson.swift; sourceTree = "<group>"; };
+		DA051B342F402B9C003F3BAA /* ObservableMacroBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableMacroBootcamp.swift; sourceTree = "<group>"; };
 		DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
 		DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
@@ -803,6 +807,66 @@
 			path = "Rendering-Performance";
 			sourceTree = "<group>";
 		};
+		DA051B292F402B03003F3BAA /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				DA61C5DD2F0E17D300FD8181 /* Alignment-AlignmentGuide */,
+				DA8656C52F0F75750092426E /* GeometryReader-coordinateSpace */,
+				DA8656CB2F0F757B0092426E /* ScrollView-LazyContainers */,
+				DAA609632F12325D00B625CE /* SafeArea-Insets */,
+				DAA609C62F129E1E00B625CE /* Animation-LayoutInteraction */,
+				DA03DF102F21FA460080D104 /* OneWay-DataFlow-Architecture */,
+				DA03DFA52F23BBB30080D104 /* Rendering-Performance */,
+				DABC5FC12F27B22300957964 /* Navigation */,
+				DA64B7BF2F2BA61E00144CC6 /* Advanced-Animation */,
+				DA83D7352EFC08B40050EF92 /* Text */,
+				DA415E8A2DE5C845009F515E /* ShapesBootcamp.swift */,
+				DA415E8C2DE5CD41009F515E /* ColorsBootcamp.swift */,
+				DA415E902DE5DF63009F515E /* GradientsColorBootcamp.swift */,
+				DA415E942DE5E707009F515E /* ImagesBootcamp.swift */,
+				DAEBAE052DE9C2F800082B1C /* FrameBootcamp.swift */,
+				DAEBAE072DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift */,
+				DAEBAE392DEAF92400082B1C /* StacksBootcamp.swift */,
+				DAEBAE3B2DEB07A500082B1C /* SpacerBootcamp.swift */,
+				DAEBAE3D2DEB149C00082B1C /* InitializerBootcamp.swift */,
+				DAEBAE3F2DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift */,
+				DAEBAE432DECC2D100082B1C /* GridBootcamp.swift */,
+				DAEBAE452DF11C7300082B1C /* ButtonBootcamp.swift */,
+				DAEBAE472DF2692E00082B1C /* SateBootcamp.swift */,
+				DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */,
+				DAEBAE492DF28E1E00082B1C /* SubviewBootcamp.swift */,
+				DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */,
+				DAE2EAC92DF5DE280083E733 /* SheetBootcamp.swift */,
+				DA0C4B5C2E52218A00D64C7C /* FocusStateBootcamp.swift */,
+				DAEEFB752E366D2F00E78DA2 /* ObservableObjectBootcamp.swift */,
+				DAED677D2E20E45C00309382 /* StateObjectBootcamp.swift */,
+				DAED677F2E21089A00309382 /* ObservedObjectBootcamp.swift */,
+				DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */,
+				DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */,
+				DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */,
+				DA5D71442E3F43B100C78E40 /* ObservablePattern.swift */,
+				DA5D719F2E40CC8300C78E40 /* AsyncAwaitBootcamp.swift */,
+				DAAE8CB72E43B46800FCBA4E /* GestureBootcamp.swift */,
+				DAAE8CB92E44BDFF00FCBA4E /* FormView.swift */,
+				DA53B7392E6086DE001EFC52 /* ListBootcamp.swift */,
+				DAAA67212E616D8C004075B7 /* TextFieldBootcamp.swift */,
+				DAAA67252E6173FD004075B7 /* PickerBootcamp.swift */,
+				DA58DD8D2E9E35630042D1AD /* NetworkingBootcamp.swift */,
+				DAA8E2172EA0D89800CDBDC1 /* TimerPublisherBootcamp.swift */,
+				DAC97DE62EA3960500F8A22F /* ActorBootcamp.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		DA051B2E2F402B3F003F3BAA /* Observable Macro */ = {
+			isa = PBXGroup;
+			children = (
+				DA051B302F402B61003F3BAA /* ObservableMacroLesson.swift */,
+				DA051B342F402B9C003F3BAA /* ObservableMacroBootcamp.swift */,
+			);
+			path = "Observable Macro";
+			sourceTree = "<group>";
+		};
 		DA0B4AE52E6FC96800628E53 /* MultiDownloadApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -1097,50 +1161,7 @@
 				DAA45E6E2EF9756300BC57E9 /* BootcampList */,
 				DACD47D72F31A1B2007A6D06 /* Fundamentals */,
 				DAEB651C2F3DBB1500929CA6 /* Advanced State And Data Flow */,
-				DA61C5DD2F0E17D300FD8181 /* Alignment-AlignmentGuide */,
-				DA8656C52F0F75750092426E /* GeometryReader-coordinateSpace */,
-				DA8656CB2F0F757B0092426E /* ScrollView-LazyContainers */,
-				DAA609632F12325D00B625CE /* SafeArea-Insets */,
-				DAA609C62F129E1E00B625CE /* Animation-LayoutInteraction */,
-				DA03DF102F21FA460080D104 /* OneWay-DataFlow-Architecture */,
-				DA03DFA52F23BBB30080D104 /* Rendering-Performance */,
-				DABC5FC12F27B22300957964 /* Navigation */,
-				DA64B7BF2F2BA61E00144CC6 /* Advanced-Animation */,
-				DA83D7352EFC08B40050EF92 /* Text */,
-				DA415E8A2DE5C845009F515E /* ShapesBootcamp.swift */,
-				DA415E8C2DE5CD41009F515E /* ColorsBootcamp.swift */,
-				DA415E902DE5DF63009F515E /* GradientsColorBootcamp.swift */,
-				DA415E942DE5E707009F515E /* ImagesBootcamp.swift */,
-				DAEBAE052DE9C2F800082B1C /* FrameBootcamp.swift */,
-				DAEBAE072DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift */,
-				DAEBAE392DEAF92400082B1C /* StacksBootcamp.swift */,
-				DAEBAE3B2DEB07A500082B1C /* SpacerBootcamp.swift */,
-				DAEBAE3D2DEB149C00082B1C /* InitializerBootcamp.swift */,
-				DAEBAE3F2DEC754F00082B1C /* ForEachAndLoopsBootcamp.swift */,
-				DAEBAE432DECC2D100082B1C /* GridBootcamp.swift */,
-				DAEBAE452DF11C7300082B1C /* ButtonBootcamp.swift */,
-				DAEBAE472DF2692E00082B1C /* SateBootcamp.swift */,
-				DAE2EAC52DF41FAB0083E733 /* BindingBootcamp.swift */,
-				DAEBAE492DF28E1E00082B1C /* SubviewBootcamp.swift */,
-				DAE2EAC72DF4A6CF0083E733 /* AnimationBootcamp.swift */,
-				DAE2EAC92DF5DE280083E733 /* SheetBootcamp.swift */,
-				DA0C4B5C2E52218A00D64C7C /* FocusStateBootcamp.swift */,
-				DAEEFB752E366D2F00E78DA2 /* ObservableObjectBootcamp.swift */,
-				DAED677D2E20E45C00309382 /* StateObjectBootcamp.swift */,
-				DAED677F2E21089A00309382 /* ObservedObjectBootcamp.swift */,
-				DAA3B8D92E3B61C20051F62F /* ObservableBootcamp.swift */,
-				DA1F27822E37A8BB00295829 /* NavigationViewBootcamp.swift */,
-				DA51642F2E3BCD2500642709 /* NavigationStackBootcamp.swift */,
-				DA5D71442E3F43B100C78E40 /* ObservablePattern.swift */,
-				DA5D719F2E40CC8300C78E40 /* AsyncAwaitBootcamp.swift */,
-				DAAE8CB72E43B46800FCBA4E /* GestureBootcamp.swift */,
-				DAAE8CB92E44BDFF00FCBA4E /* FormView.swift */,
-				DA53B7392E6086DE001EFC52 /* ListBootcamp.swift */,
-				DAAA67212E616D8C004075B7 /* TextFieldBootcamp.swift */,
-				DAAA67252E6173FD004075B7 /* PickerBootcamp.swift */,
-				DA58DD8D2E9E35630042D1AD /* NetworkingBootcamp.swift */,
-				DAA8E2172EA0D89800CDBDC1 /* TimerPublisherBootcamp.swift */,
-				DAC97DE62EA3960500F8A22F /* ActorBootcamp.swift */,
+				DA051B292F402B03003F3BAA /* Others */,
 			);
 			path = Bootcamp;
 			sourceTree = "<group>";
@@ -2165,6 +2186,7 @@
 			children = (
 				DAEB65252F3DBB7D00929CA6 /* SwiftUI Property Wrapper */,
 				DA5A80802F3F19C900531852 /* Environment EnvironmentObject */,
+				DA051B2E2F402B3F003F3BAA /* Observable Macro */,
 			);
 			path = "Advanced State And Data Flow";
 			sourceTree = "<group>";
@@ -2325,6 +2347,7 @@
 				DA7BF5D72E98ED4000224BCF /* DefaultTheme.swift in Sources */,
 				DA415E8D2DE5CD41009F515E /* ColorsBootcamp.swift in Sources */,
 				DAA45E452EF931B700BC57E9 /* Route.swift in Sources */,
+				DA051B352F402B9C003F3BAA /* ObservableMacroBootcamp.swift in Sources */,
 				DA7BE0AC2E8060A8006821CE /* LoginEntity.swift in Sources */,
 				DAA7091F2E75E2CC006F8E70 /* ResultAndError.swift in Sources */,
 				DA6075112EFE99AB002907E4 /* CodePreviewContainer.swift in Sources */,
@@ -2635,6 +2658,7 @@
 				DA5D71962E3FBC9100C78E40 /* GitHubAPIEndpoint.swift in Sources */,
 				DA58DD8E2E9E35630042D1AD /* NetworkingBootcamp.swift in Sources */,
 				DA7BE0A22E805FEE006821CE /* LoginViewController.swift in Sources */,
+				DA051B312F402B61003F3BAA /* ObservableMacroLesson.swift in Sources */,
 				DAFBB5042F338A8D006E4E48 /* AdvancedCounterExcercies.swift in Sources */,
 				DABC5FC42F27B23C00957964 /* NavigationLesson.swift in Sources */,
 				DA5A80822F3F19D900531852 /* EnvironmentEnvironmentObjectLesson.swift in Sources */,

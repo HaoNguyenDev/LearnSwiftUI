@@ -27,6 +27,7 @@ extension Route {
         //ADVANCED STATE AND DATA FLOW
         case swiftUIPropertyWrapper = "SwiftUI Property Wrapper"
         case environmentEnvironmentObject = "Environment EnvironmentObject"
+        case observableMacro = "Observable Macro"
         
         case alignmentAlignmentGuide = "Alignment-AlignmentGuide"
         case geometryReaderCoordinateSpace = "GeometryReader-CoordinateSpace"
@@ -96,6 +97,8 @@ extension BootcampListCoordinator {
             SwiftUIPropertyWrapperCoordinator(navRoute: navRoute)
         case .environmentEnvironmentObject:
             EnvironmentEnvironmentObjectCoordinator(navRoute: navRoute)
+        case .observableMacro:
+            ObservableMacroCoordinator(navRoute: navRoute)
         case .alignmentAlignmentGuide:
             AlignmentBootcampCoordinator(navRouter: navRoute)
         case .geometryReaderCoordinateSpace:
