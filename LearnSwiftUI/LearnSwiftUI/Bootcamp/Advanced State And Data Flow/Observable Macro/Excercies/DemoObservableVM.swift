@@ -74,7 +74,11 @@ struct TaskStoreView: View {
 
 struct TaskStorDetailView: View {
     @Bindable var vm: DemoObservableVM
-    let task: TaskStore
+    let taskId: UUID
+        
+    private var task: TaskStore {
+        vm.taskStoreFiltered.first(where: { $0.id == taskId }) ?? TaskStore(title: "Task not found")
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -106,7 +110,7 @@ struct TaskStorDetailView: View {
             
         }
         .padding()
-        .navigationTitle("Dettail")
+        .navigationTitle("Detail")
         .navigationBarTitleDisplayMode(.inline)
     }
 }
@@ -161,7 +165,7 @@ struct TaskStoreList: View {
             LazyVStack(alignment: .leading) {
                 ForEach(vm.taskStoreFiltered, id: \.id) { task in
                     NavigationLink {
-                        TaskStorDetailView(vm: vm, task: task)
+                        TaskStorDetailView(vm: vm, taskId: task.id)
                     } label: {
                         HStack {
                             Image(systemName: task.isCompleted ? "checkmark.circle": "circle")
