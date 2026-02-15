@@ -11,33 +11,39 @@ extension Route {
     enum BootcampListRoute: String, CaseIterable, Routable {
         var id: String { rawValue }
         
-        //FUNDAMENTALS
+        // FUNDAMENTALS
         case swiftuiLayoutEngine = "SwiftUI Layout Engine"
         case swiftuiArchitectureAndViewLifeCycle = "SwiftUI Architecture - View LifeCycle"
-        case viewIdentity = "View Identity & Diffing System"
         case stateManagementDeepDive = "State Management Deep Dive (@State, @Binding)"
-        case someViewAnyViewAndViewBuilder = "some View - AnyView - @ViewBuilder"
-        case renderingPerformance = "Rendering & Performance"
-        case equatableview = "EquatableView"
         case viewCompositionAndViewBuilder = "View Composition - ViewBuilder"
-        case stackView = "Layout System - Stack View"
         case modifiersViewProtocol = "Modifiers & View Protocol Deep Dive"
-        case environmentSystem = "Environment System"
         
-        //ADVANCED STATE AND DATA FLOW
+        // ADVANCED STATE AND DATA FLOW
+        case environmentSystem = "Environment System"
         case swiftUIPropertyWrapper = "SwiftUI Property Wrapper"
         case environmentEnvironmentObject = "Environment EnvironmentObject"
         case observableMacro = "Observable Macro"
         
+        // LAYOUT & ANIMATION
+        case safeAreaInsets = "SafeArea & Insets"
         case alignmentAlignmentGuide = "Alignment-AlignmentGuide"
         case geometryReaderCoordinateSpace = "GeometryReader-CoordinateSpace"
-        case scrollViewLazyContainers = "ScrollView-Lazy containers"
-        case safeAreaInsets = "SafeArea & Insets"
         case animationLayoutInteraction = "Animation-Layout Interaction"
-        case dataFlowAndArchitecture = "One-Way Data Flow and Architecture"
-        
-        case navigation = "Navigation"
         case advancedAnimation = "Advanced Animation"
+        
+        // LISTS, GRIDS & NAVIGATION
+        case stackView = "Layout System - Stack View"
+        case scrollViewLazyContainers = "ScrollView-Lazy containers"
+        case navigation = "Navigation"
+        
+        // PERFORMANCE OPTIMIZATION
+        case viewIdentity = "View Identity & Diffing System"
+        case equatableview = "EquatableView"
+        case someViewAnyViewAndViewBuilder = "some View - AnyView - @ViewBuilder"
+        case renderingPerformance = "Rendering & Performance"
+        
+        // OTHERS
+        case dataFlowAndArchitecture = "One-Way Data Flow and Architecture"
         case text = "Text"
         case shape = "Shape"
         case color = "Color"
