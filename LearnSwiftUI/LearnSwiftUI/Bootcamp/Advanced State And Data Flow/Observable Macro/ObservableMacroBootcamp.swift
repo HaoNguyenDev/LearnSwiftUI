@@ -87,7 +87,7 @@ struct ObservableMacroCoordinator: View, ScreenCoordinator {
 extension ObservableMacroCoordinator {
     func viewForRoute(route: Route.ObservableMacroRoute) -> some View {
         switch route {
-        case .demo1: Text("Please refer DemoObservableVM excercies")
+        case .demo1: TaskStoreViewCoordinator(navRoute: navRoute)
         }
     }
 }
