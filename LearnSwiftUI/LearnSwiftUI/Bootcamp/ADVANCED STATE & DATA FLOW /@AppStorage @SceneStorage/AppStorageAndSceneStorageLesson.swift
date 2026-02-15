@@ -160,6 +160,25 @@ It uses:
 | @StateObject  | ❌         | View lifecycle | ObservableObject     |
 | @AppStorage   | ✅         | App            | UserDefaults change  |
 | @SceneStorage | ✅ (scene) | Scene          | Scene restore        |
+""", result: nil),
+        Lesson(title: "9️⃣ Advanced Design Thinking", code: """
+Never use @AppStorage as business state.
+It should only be:
+- Configuration layer
+- UI preference
+- Feature flag
+
+Clean Architecture:
+View
+     ↓
+ViewModel
+    ↓
+UseCase
+    ↓
+Persistence Layer (UserDefaults)
+
+Do not:
+View → AppStorage → Business Logic
 """, result: nil)
     ]
 }
