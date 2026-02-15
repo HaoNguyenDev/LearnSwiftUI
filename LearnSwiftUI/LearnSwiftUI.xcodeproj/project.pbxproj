@@ -313,6 +313,8 @@
 		DACD47E22F31A205007A6D06 /* StateManagementDeepDiveLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD47E12F31A205007A6D06 /* StateManagementDeepDiveLesson.swift */; };
 		DACD47E82F31A23B007A6D06 /* StateManagementDeepDiveBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD47E72F31A23B007A6D06 /* StateManagementDeepDiveBootcamp.swift */; };
 		DACD47EC2F31A2A2007A6D06 /* StateManagementDeepDiveCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD47EB2F31A2A2007A6D06 /* StateManagementDeepDiveCoordinator.swift */; };
+		DAD527CE2F41AF8B006C8B6B /* TaskStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD527CD2F41AF8B006C8B6B /* TaskStoreView.swift */; };
+		DAD527D22F41AFAA006C8B6B /* TaskStorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD527D12F41AFAA006C8B6B /* TaskStorDetailView.swift */; };
 		DADA946C2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA946B2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift */; };
 		DADA94732F2CC6D5008ED262 /* CustomTabBarExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA94722F2CC6D5008ED262 /* CustomTabBarExample.swift */; };
 		DADA947C2F2CFF5C008ED262 /* CardExpansionExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADA947B2F2CFF5C008ED262 /* CardExpansionExample.swift */; };
@@ -702,6 +704,8 @@
 		DACD47E12F31A205007A6D06 /* StateManagementDeepDiveLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManagementDeepDiveLesson.swift; sourceTree = "<group>"; };
 		DACD47E72F31A23B007A6D06 /* StateManagementDeepDiveBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManagementDeepDiveBootcamp.swift; sourceTree = "<group>"; };
 		DACD47EB2F31A2A2007A6D06 /* StateManagementDeepDiveCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManagementDeepDiveCoordinator.swift; sourceTree = "<group>"; };
+		DAD527CD2F41AF8B006C8B6B /* TaskStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStoreView.swift; sourceTree = "<group>"; };
+		DAD527D12F41AFAA006C8B6B /* TaskStorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStorDetailView.swift; sourceTree = "<group>"; };
 		DADA946B2F2CC3DA008ED262 /* BasicMatchedGeometryExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMatchedGeometryExample.swift; sourceTree = "<group>"; };
 		DADA94722F2CC6D5008ED262 /* CustomTabBarExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarExample.swift; sourceTree = "<group>"; };
 		DADA947B2F2CFF5C008ED262 /* CardExpansionExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardExpansionExample.swift; sourceTree = "<group>"; };
@@ -873,7 +877,8 @@
 		DA051B402F40C2BD003F3BAA /* Excercies */ = {
 			isa = PBXGroup;
 			children = (
-				DA051B412F40C2E4003F3BAA /* DemoObservableVM.swift */,
+				DAD527C92F41AF66006C8B6B /* View */,
+				DAD527CB2F41AF6F006C8B6B /* VM */,
 			);
 			path = Excercies;
 			sourceTree = "<group>";
@@ -2133,6 +2138,23 @@
 			path = "State-Management-Deep-Dive";
 			sourceTree = "<group>";
 		};
+		DAD527C92F41AF66006C8B6B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DAD527CD2F41AF8B006C8B6B /* TaskStoreView.swift */,
+				DAD527D12F41AFAA006C8B6B /* TaskStorDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAD527CB2F41AF6F006C8B6B /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				DA051B412F40C2E4003F3BAA /* DemoObservableVM.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
 		DADA94612F2CC1BF008ED262 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -2379,6 +2401,7 @@
 				DA96150C2F1CC70D00AEEB25 /* TransitionVsAnimationExample.swift in Sources */,
 				DA03DF182F21FBB10080D104 /* DataFlowAndArchitectureCoordinator.swift in Sources */,
 				DAC35B162E9FCCDA0019021D /* Array+Extensions.swift in Sources */,
+				DAD527CE2F41AF8B006C8B6B /* TaskStoreView.swift in Sources */,
 				DAA45E592EF9357D00BC57E9 /* ScreenCoordinator.swift in Sources */,
 				DAA609AD2F12765400B625CE /* LoginViewSafeAreaInset.swift in Sources */,
 				DA54779D2EB7936F005C8868 /* Env.swift in Sources */,
@@ -2522,6 +2545,7 @@
 				DAA8E2182EA0D89800CDBDC1 /* TimerPublisherBootcamp.swift in Sources */,
 				DA8748932E6B006000B189F3 /* GradientBackgroundAnimation.swift in Sources */,
 				DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */,
+				DAD527D22F41AFAA006C8B6B /* TaskStorDetailView.swift in Sources */,
 				DA10D4302F2903940035A6A2 /* NavigationStackExample.swift in Sources */,
 				DA61C5242F0C075C00FD8181 /* StackViewBootcampCoordinator.swift in Sources */,
 				DA9614F82F1CABBD00AEEB25 /* ClassicAnimation.swift in Sources */,
