@@ -23,6 +23,7 @@ extension Route {
         case stateObjectObservedObject = "@ObservableObject, @StateObject, @ObservedObject"
         case environmentEnvironmentObject = "Environment EnvironmentObject"
         case observableMacro = "Observable Macro"
+        case appStorageAndSceneStorage = "@AppStorage @SceneStorage"
         
         // LAYOUT & ANIMATION
         case safeAreaInsets = "SafeArea & Insets"
@@ -101,6 +102,8 @@ extension BootcampListCoordinator {
             EnvironmentCoordinator(navRoute: navRoute)
         case .stateObjectObservedObject:
             StateObjectObservedObjectCoordinator(navRoute: navRoute)
+        case .appStorageAndSceneStorage:
+            AppStorageAndSceneStorageCoordinator(navRoute: navRoute)
         case .environmentEnvironmentObject:
             EnvironmentEnvironmentObjectCoordinator(navRoute: navRoute)
         case .observableMacro:
