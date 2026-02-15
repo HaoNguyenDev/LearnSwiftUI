@@ -1,5 +1,5 @@
 //
-//  SwiftUIPropertyWrapperLesson.swift
+//  StateObjectObservedObjectLesson.swift
 //  LearnSwiftUI
 //
 //  Created by Hao Nguyen on 12/2/26.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SwiftUIPropertyWrapperLesson {
+struct StateObjectObservedObjectLesson {
     static let all = [
         Lesson(title: "ObservableObject, Published. @StateObject vs @ObservedObject"),
         Lesson(title: "1️⃣ CORE PROBLEM", code: """

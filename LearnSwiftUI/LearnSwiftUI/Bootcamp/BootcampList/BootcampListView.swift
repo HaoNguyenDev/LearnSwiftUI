@@ -28,7 +28,7 @@ enum BootcampSection: String, Identifiable, CaseIterable {
     
     var advancedStateAndDataFlowRoutes: [Route.BootcampListRoute] {
         [Route.BootcampListRoute.dataFlowAndArchitecture,
-         Route.BootcampListRoute.swiftUIPropertyWrapper,
+         Route.BootcampListRoute.stateObjectObservedObject,
          Route.BootcampListRoute.environmentSystem,
          Route.BootcampListRoute.environmentEnvironmentObject,
          Route.BootcampListRoute.observableMacro

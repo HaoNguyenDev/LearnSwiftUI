@@ -1,5 +1,5 @@
 //
-//  SwiftUIPropertyWrapperBootcamp.swift
+//  StateObjectObservedObjectBootcamp.swift
 //  LearnSwiftUI
 //
 //  Created by Hao Nguyen on 12/2/26.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct SwiftUIPropertyWrapperBootcamp: View {
-    private let lesson = SwiftUIPropertyWrapperLesson.all
+struct StateObjectObservedObjectBootcamp: View {
+    private let lesson = StateObjectObservedObjectLesson.all
     
     var body: some View {
         lessonScrollView(lesson)
@@ -16,13 +16,13 @@ struct SwiftUIPropertyWrapperBootcamp: View {
 }
 
 extension Route {
-    enum SwiftUIPropertyWrapperRoute: String, CaseIterable, Routable {
+    enum StateObjectObservedObjectRoute: String, CaseIterable, Routable {
         case demo1 = "Demo 1"
         var id: String { rawValue }
     }
 }
 
-struct SwiftUIPropertyWrapperCoordinator: View, ScreenCoordinator {
+struct StateObjectObservedObjectCoordinator: View, ScreenCoordinator {
     typealias ScreenRoute = Route.SwiftUILayoutEngineRoute
     var navRoute: any NavRouterProtocol
     
@@ -32,21 +32,21 @@ struct SwiftUIPropertyWrapperCoordinator: View, ScreenCoordinator {
     
     var body: some View {
         content
-            .customNavigationTitle("SwiftUI Property Wrapper")
+            .customNavigationTitle("@Observable, @StateObject, @ObservedObject")
             .defaultNavBackButton(onTap: {
                 navRoute.pop(animate: true)
             })
     }
     
     var content: some View {
-        SwiftUIPropertyWrapperBootcamp()
+        StateObjectObservedObjectBootcamp()
             .navigationDestination(for: ScreenRoute.self) { route in
                 viewForRoute(route: route)
             }
     }
 }
 
-extension SwiftUIPropertyWrapperCoordinator {
+extension StateObjectObservedObjectCoordinator {
     func viewForRoute(route: Route.SwiftUILayoutEngineRoute) -> some View {
         Text("Not implement yet!")
     }
