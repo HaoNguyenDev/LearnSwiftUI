@@ -335,8 +335,8 @@
 		DAEB64D92F3CC29800929CA6 /* EnvironmentLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB64D82F3CC29800929CA6 /* EnvironmentLesson.swift */; };
 		DAEB64DD2F3CC31100929CA6 /* EnvironmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB64DC2F3CC31100929CA6 /* EnvironmentBootcamp.swift */; };
 		DAEB64F42F3CC86D00929CA6 /* EnvironmentDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB64F32F3CC86D00929CA6 /* EnvironmentDemo.swift */; };
-		DAEB652F2F3DBBFB00929CA6 /* SwiftUIPropertyWrapperLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB652E2F3DBBFB00929CA6 /* SwiftUIPropertyWrapperLesson.swift */; };
-		DAEB65382F3DBC5900929CA6 /* SwiftUIPropertyWrapperBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB65372F3DBC5900929CA6 /* SwiftUIPropertyWrapperBootcamp.swift */; };
+		DAEB652F2F3DBBFB00929CA6 /* StateObjectObservedObjectLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB652E2F3DBBFB00929CA6 /* StateObjectObservedObjectLesson.swift */; };
+		DAEB65382F3DBC5900929CA6 /* StateObjectObservedObjectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB65372F3DBC5900929CA6 /* StateObjectObservedObjectBootcamp.swift */; };
 		DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE052DE9C2F800082B1C /* FrameBootcamp.swift */; };
 		DAEBAE082DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE072DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift */; };
 		DAEBAE3A2DEAF92400082B1C /* StacksBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEBAE392DEAF92400082B1C /* StacksBootcamp.swift */; };
@@ -727,8 +727,8 @@
 		DAEB64D82F3CC29800929CA6 /* EnvironmentLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentLesson.swift; sourceTree = "<group>"; };
 		DAEB64DC2F3CC31100929CA6 /* EnvironmentBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentBootcamp.swift; sourceTree = "<group>"; };
 		DAEB64F32F3CC86D00929CA6 /* EnvironmentDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentDemo.swift; sourceTree = "<group>"; };
-		DAEB652E2F3DBBFB00929CA6 /* SwiftUIPropertyWrapperLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPropertyWrapperLesson.swift; sourceTree = "<group>"; };
-		DAEB65372F3DBC5900929CA6 /* SwiftUIPropertyWrapperBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPropertyWrapperBootcamp.swift; sourceTree = "<group>"; };
+		DAEB652E2F3DBBFB00929CA6 /* StateObjectObservedObjectLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateObjectObservedObjectLesson.swift; sourceTree = "<group>"; };
+		DAEB65372F3DBC5900929CA6 /* StateObjectObservedObjectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateObjectObservedObjectBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE052DE9C2F800082B1C /* FrameBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE072DE9C54500082B1C /* BackgroundAndOverlayBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAndOverlayBootcamp.swift; sourceTree = "<group>"; };
 		DAEBAE392DEAF92400082B1C /* StacksBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StacksBootcamp.swift; sourceTree = "<group>"; };
@@ -2240,7 +2240,7 @@
 			isa = PBXGroup;
 			children = (
 				DA03DF102F21FA460080D104 /* OneWay-DataFlow-Architecture */,
-				DAEB65252F3DBB7D00929CA6 /* SwiftUI Property Wrapper */,
+				DAEB65252F3DBB7D00929CA6 /* @ObservableObject @StateObject @ObservedObject */,
 				DAEB64D72F3CC28300929CA6 /* Environment System */,
 				DA5A80802F3F19C900531852 /* Environment EnvironmentObject */,
 				DA051B2E2F402B3F003F3BAA /* Observable Macro */,
@@ -2248,13 +2248,13 @@
 			path = "ADVANCED STATE & DATA FLOW ";
 			sourceTree = "<group>";
 		};
-		DAEB65252F3DBB7D00929CA6 /* SwiftUI Property Wrapper */ = {
+		DAEB65252F3DBB7D00929CA6 /* @ObservableObject @StateObject @ObservedObject */ = {
 			isa = PBXGroup;
 			children = (
-				DAEB652E2F3DBBFB00929CA6 /* SwiftUIPropertyWrapperLesson.swift */,
-				DAEB65372F3DBC5900929CA6 /* SwiftUIPropertyWrapperBootcamp.swift */,
+				DAEB652E2F3DBBFB00929CA6 /* StateObjectObservedObjectLesson.swift */,
+				DAEB65372F3DBC5900929CA6 /* StateObjectObservedObjectBootcamp.swift */,
 			);
-			path = "SwiftUI Property Wrapper";
+			path = "@ObservableObject @StateObject @ObservedObject";
 			sourceTree = "<group>";
 		};
 		DAEBAE4B2DF2907900082B1C /* Components */ = {
@@ -2442,7 +2442,7 @@
 				DA7BF5EA2E98F2DA00224BCF /* RswiftResources+FontResource.swift in Sources */,
 				DA61C5592F0CCE8B00FD8181 /* Lesson.swift in Sources */,
 				DADA94862F2D00E4008ED262 /* AnimatedToggle.swift in Sources */,
-				DAEB652F2F3DBBFB00929CA6 /* SwiftUIPropertyWrapperLesson.swift in Sources */,
+				DAEB652F2F3DBBFB00929CA6 /* StateObjectObservedObjectLesson.swift in Sources */,
 				DAAA67242E617101004075B7 /* ViewAndAdditional.swift in Sources */,
 				DA5D71822E3FA59900C78E40 /* NetworkError.swift in Sources */,
 				DA5D71862E3FA5B400C78E40 /* NetworkManager.swift in Sources */,
@@ -2693,7 +2693,7 @@
 				DAEEA2C52F2E507600AE6218 /* SwiftUIArchitectureAndViewLifeCycleLesson.swift in Sources */,
 				DA7BE0AE2E8061D1006821CE /* LoginModuleBuilder.swift in Sources */,
 				DA3F45662F3A36A9008F50AB /* CardViewModifier.swift in Sources */,
-				DAEB65382F3DBC5900929CA6 /* SwiftUIPropertyWrapperBootcamp.swift in Sources */,
+				DAEB65382F3DBC5900929CA6 /* StateObjectObservedObjectBootcamp.swift in Sources */,
 				DABC5FC82F27B27200957964 /* NavigationBootcamp.swift in Sources */,
 				DA2237542F2A09B70065C9CD /* NaviagtionExampleView.swift in Sources */,
 				DAA709162E75D60C006F8E70 /* VisaPaymentService.swift in Sources */,

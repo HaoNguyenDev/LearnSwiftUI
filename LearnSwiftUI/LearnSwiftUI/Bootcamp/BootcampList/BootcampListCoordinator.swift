@@ -20,7 +20,7 @@ extension Route {
         
         // ADVANCED STATE AND DATA FLOW
         case environmentSystem = "Environment System"
-        case swiftUIPropertyWrapper = "SwiftUI Property Wrapper"
+        case stateObjectObservedObject = "@ObservableObject, @StateObject, @ObservedObject"
         case environmentEnvironmentObject = "Environment EnvironmentObject"
         case observableMacro = "Observable Macro"
         
@@ -99,8 +99,8 @@ extension BootcampListCoordinator {
             ModifiersViewProtocolCoordinator(navRoute: navRoute)
         case .environmentSystem:
             EnvironmentCoordinator(navRoute: navRoute)
-        case .swiftUIPropertyWrapper:
-            SwiftUIPropertyWrapperCoordinator(navRoute: navRoute)
+        case .stateObjectObservedObject:
+            StateObjectObservedObjectCoordinator(navRoute: navRoute)
         case .environmentEnvironmentObject:
             EnvironmentEnvironmentObjectCoordinator(navRoute: navRoute)
         case .observableMacro:
