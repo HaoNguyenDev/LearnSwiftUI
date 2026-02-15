@@ -11,6 +11,8 @@ enum BootcampSection: String, Identifiable, CaseIterable {
     case fundamentals = "FUNDAMENTALS"
     case advancedStateAndDataFlow = "ADVANCED STATE & DATA FLOW"
     case layoutAndAnimation = "LAYOUT AND ANIMATION"
+    case listsGridsAndNavigation = "STACKS, LISTS, GRIDS & NAVIGATION"
+    case performanceOptimization = "PERFORMANCE OPTIMIZATION"
     case others = "Others"
     
     var id: String { rawValue }
@@ -18,36 +20,52 @@ enum BootcampSection: String, Identifiable, CaseIterable {
     var fundamentalRoutes: [Route.BootcampListRoute] {
         [Route.BootcampListRoute.swiftuiLayoutEngine,
          Route.BootcampListRoute.swiftuiArchitectureAndViewLifeCycle,
-         Route.BootcampListRoute.viewIdentity,
-         Route.BootcampListRoute.someViewAnyViewAndViewBuilder,
-         Route.BootcampListRoute.renderingPerformance,
          Route.BootcampListRoute.stateManagementDeepDive,
          Route.BootcampListRoute.viewCompositionAndViewBuilder,
-         Route.BootcampListRoute.equatableview,
-         Route.BootcampListRoute.stackView,
          Route.BootcampListRoute.modifiersViewProtocol,
-         Route.BootcampListRoute.environmentSystem]
+        ]
     }
     
     var advancedStateAndDataFlowRoutes: [Route.BootcampListRoute] {
-        [Route.BootcampListRoute.swiftUIPropertyWrapper,
-         Route.BootcampListRoute.dataFlowAndArchitecture,
+        [Route.BootcampListRoute.dataFlowAndArchitecture,
+         Route.BootcampListRoute.swiftUIPropertyWrapper,
+         Route.BootcampListRoute.environmentSystem,
          Route.BootcampListRoute.environmentEnvironmentObject,
-         Route.BootcampListRoute.observableMacro]
+         Route.BootcampListRoute.observableMacro
+        ]
+    }
+    
+    var layoutAndAnimationRoutes: [Route.BootcampListRoute] {
+        [Route.BootcampListRoute.safeAreaInsets,
+         Route.BootcampListRoute.alignmentAlignmentGuide,
+         Route.BootcampListRoute.geometryReaderCoordinateSpace,
+         Route.BootcampListRoute.animationLayoutInteraction,
+         Route.BootcampListRoute.advancedAnimation,
+        ]
+    }
+    
+    var listsGridsAndNavigationRoutes: [Route.BootcampListRoute] {
+        [Route.BootcampListRoute.stackView,
+         Route.BootcampListRoute.scrollViewLazyContainers,
+         Route.BootcampListRoute.navigation,
+        ]
+    }
+    
+    var performanceOptimizationRoutes: [Route.BootcampListRoute] {
+        [Route.BootcampListRoute.viewIdentity,
+         Route.BootcampListRoute.equatableview,
+         Route.BootcampListRoute.someViewAnyViewAndViewBuilder,
+         Route.BootcampListRoute.renderingPerformance
+        ]
     }
     
     var otherRoutes: [Route.BootcampListRoute] {
-        [Route.BootcampListRoute.stackView,
-         Route.BootcampListRoute.alignmentAlignmentGuide,
-         Route.BootcampListRoute.scrollViewLazyContainers,
-         Route.BootcampListRoute.safeAreaInsets,
-         Route.BootcampListRoute.animationLayoutInteraction,
-         Route.BootcampListRoute.navigation,
-         Route.BootcampListRoute.advancedAnimation,
-         Route.BootcampListRoute.text,
+        [Route.BootcampListRoute.text,
          Route.BootcampListRoute.shape,
-         Route.BootcampListRoute.color]
+         Route.BootcampListRoute.color
+        ]
     }
+    
     var routes: [Route.BootcampListRoute] {
         switch self {
         case .fundamentals:
@@ -55,7 +73,11 @@ enum BootcampSection: String, Identifiable, CaseIterable {
         case .advancedStateAndDataFlow:
             advancedStateAndDataFlowRoutes
         case .layoutAndAnimation:
-            [Route.BootcampListRoute.geometryReaderCoordinateSpace]
+            layoutAndAnimationRoutes
+        case .listsGridsAndNavigation:
+            listsGridsAndNavigationRoutes
+        case .performanceOptimization:
+            performanceOptimizationRoutes
         case .others:
             otherRoutes
         }

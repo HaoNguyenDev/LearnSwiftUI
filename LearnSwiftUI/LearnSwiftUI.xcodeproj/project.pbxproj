@@ -813,18 +813,9 @@
 			path = "Rendering-Performance";
 			sourceTree = "<group>";
 		};
-		DA051B292F402B03003F3BAA /* Others */ = {
+		DA051B292F402B03003F3BAA /* OTHERS */ = {
 			isa = PBXGroup;
 			children = (
-				DA61C5DD2F0E17D300FD8181 /* Alignment-AlignmentGuide */,
-				DA8656C52F0F75750092426E /* GeometryReader-coordinateSpace */,
-				DA8656CB2F0F757B0092426E /* ScrollView-LazyContainers */,
-				DAA609632F12325D00B625CE /* SafeArea-Insets */,
-				DAA609C62F129E1E00B625CE /* Animation-LayoutInteraction */,
-				DA03DF102F21FA460080D104 /* OneWay-DataFlow-Architecture */,
-				DA03DFA52F23BBB30080D104 /* Rendering-Performance */,
-				DABC5FC12F27B22300957964 /* Navigation */,
-				DA64B7BF2F2BA61E00144CC6 /* Advanced-Animation */,
 				DA83D7352EFC08B40050EF92 /* Text */,
 				DA415E8A2DE5C845009F515E /* ShapesBootcamp.swift */,
 				DA415E8C2DE5CD41009F515E /* ColorsBootcamp.swift */,
@@ -861,7 +852,7 @@
 				DAA8E2172EA0D89800CDBDC1 /* TimerPublisherBootcamp.swift */,
 				DAC97DE62EA3960500F8A22F /* ActorBootcamp.swift */,
 			);
-			path = Others;
+			path = OTHERS;
 			sourceTree = "<group>";
 		};
 		DA051B2E2F402B3F003F3BAA /* Observable Macro */ = {
@@ -1175,9 +1166,12 @@
 			children = (
 				DA723CE02F264D9D009BEC1C /* BootcampTemplate */,
 				DAA45E6E2EF9756300BC57E9 /* BootcampList */,
-				DACD47D72F31A1B2007A6D06 /* Fundamentals */,
-				DAEB651C2F3DBB1500929CA6 /* Advanced State And Data Flow */,
-				DA051B292F402B03003F3BAA /* Others */,
+				DACD47D72F31A1B2007A6D06 /* FUNDAMENTALS */,
+				DAEB651C2F3DBB1500929CA6 /* ADVANCED STATE & DATA FLOW  */,
+				DAD527E12F41B540006C8B6B /* LAYOUT & ANIMATION */,
+				DAD527FE2F41B61E006C8B6B /* STACKS, LISTS, GRIDS & NAVIGATION */,
+				DAD527F42F41B5B6006C8B6B /* PERFORMANCE OPTIMIZATION */,
+				DA051B292F402B03003F3BAA /* OTHERS */,
 			);
 			path = Bootcamp;
 			sourceTree = "<group>";
@@ -2109,21 +2103,16 @@
 			path = ViewWrapper;
 			sourceTree = "<group>";
 		};
-		DACD47D72F31A1B2007A6D06 /* Fundamentals */ = {
+		DACD47D72F31A1B2007A6D06 /* FUNDAMENTALS */ = {
 			isa = PBXGroup;
 			children = (
 				DA61C5522F0CC38100FD8181 /* SwiftUILayoutEngine */,
 				DAEEA2A92F2E44D100AE6218 /* SwiftUI-Architecture-And-View-Lifecycle */,
-				DA28F59D2F1F781B00079318 /* View-Identity */,
-				DA6DB87F2F2F4BBB001781BD /* someView-AnyView-ViewBuilder */,
 				DACD47DC2F31A1D4007A6D06 /* State-Management-Deep-Dive */,
 				DA82B9282F378A39004463EF /* View Composition and ViewBuilder */,
-				DA61C5212F0C073A00FD8181 /* Layout System StackView */,
 				DA3F453E2F39A85A008F50AB /* Modifiers & View Protocol Deep Dive */,
-				DAEB64D72F3CC28300929CA6 /* Environment System */,
-				DA723D122F267227009BEC1C /* EquatableView */,
 			);
-			path = Fundamentals;
+			path = FUNDAMENTALS;
 			sourceTree = "<group>";
 		};
 		DACD47DC2F31A1D4007A6D06 /* State-Management-Deep-Dive */ = {
@@ -2153,6 +2142,39 @@
 				DA051B412F40C2E4003F3BAA /* DemoObservableVM.swift */,
 			);
 			path = VM;
+			sourceTree = "<group>";
+		};
+		DAD527E12F41B540006C8B6B /* LAYOUT & ANIMATION */ = {
+			isa = PBXGroup;
+			children = (
+				DAA609632F12325D00B625CE /* SafeArea-Insets */,
+				DA61C5DD2F0E17D300FD8181 /* Alignment-AlignmentGuide */,
+				DA8656C52F0F75750092426E /* GeometryReader-coordinateSpace */,
+				DAA609C62F129E1E00B625CE /* Animation-LayoutInteraction */,
+				DA64B7BF2F2BA61E00144CC6 /* Advanced-Animation */,
+			);
+			path = "LAYOUT & ANIMATION";
+			sourceTree = "<group>";
+		};
+		DAD527F42F41B5B6006C8B6B /* PERFORMANCE OPTIMIZATION */ = {
+			isa = PBXGroup;
+			children = (
+				DA28F59D2F1F781B00079318 /* View-Identity */,
+				DA723D122F267227009BEC1C /* EquatableView */,
+				DA6DB87F2F2F4BBB001781BD /* someView-AnyView-ViewBuilder */,
+				DA03DFA52F23BBB30080D104 /* Rendering-Performance */,
+			);
+			path = "PERFORMANCE OPTIMIZATION";
+			sourceTree = "<group>";
+		};
+		DAD527FE2F41B61E006C8B6B /* STACKS, LISTS, GRIDS & NAVIGATION */ = {
+			isa = PBXGroup;
+			children = (
+				DA61C5212F0C073A00FD8181 /* Layout System StackView */,
+				DA8656CB2F0F757B0092426E /* ScrollView-LazyContainers */,
+				DABC5FC12F27B22300957964 /* Navigation */,
+			);
+			path = "STACKS, LISTS, GRIDS & NAVIGATION";
 			sourceTree = "<group>";
 		};
 		DADA94612F2CC1BF008ED262 /* Demo */ = {
@@ -2214,14 +2236,16 @@
 			path = Examples;
 			sourceTree = "<group>";
 		};
-		DAEB651C2F3DBB1500929CA6 /* Advanced State And Data Flow */ = {
+		DAEB651C2F3DBB1500929CA6 /* ADVANCED STATE & DATA FLOW  */ = {
 			isa = PBXGroup;
 			children = (
+				DA03DF102F21FA460080D104 /* OneWay-DataFlow-Architecture */,
 				DAEB65252F3DBB7D00929CA6 /* SwiftUI Property Wrapper */,
+				DAEB64D72F3CC28300929CA6 /* Environment System */,
 				DA5A80802F3F19C900531852 /* Environment EnvironmentObject */,
 				DA051B2E2F402B3F003F3BAA /* Observable Macro */,
 			);
-			path = "Advanced State And Data Flow";
+			path = "ADVANCED STATE & DATA FLOW ";
 			sourceTree = "<group>";
 		};
 		DAEB65252F3DBB7D00929CA6 /* SwiftUI Property Wrapper */ = {
