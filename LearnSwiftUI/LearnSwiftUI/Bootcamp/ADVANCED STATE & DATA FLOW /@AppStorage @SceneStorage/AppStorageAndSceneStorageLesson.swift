@@ -126,6 +126,40 @@ User for:
 | Login session token   | ⚠️ (Keychain recommended)  |
 | Shopping cart data    | ❌                         |
 | Filter UI state       | ❌                         |
+""", result: nil),
+        Lesson(title: "7️⃣ @SceneStorage — State by Scene", code: """
+🔎 Definition
+@SceneStorage stores state per window/scene.
+Unlike @AppStorage:
+                    AppStorage  SceneStorage
+Scope               App-wide    Scene
+Persistent          Yes         Yes (scene lifetime)
+Multi-window safe   ❌          ✅
+
+🧠 When do you need SceneStorage?
+On iPad / macOS:
+    Multi-window
+    Each window needs to keep its own state
+
+🧾 Example
+    @SceneStorage("selectedTab") var selectedTab: Int = 0
+Each window:
+    Has its own selectedTab
+    Close window → state is lost
+
+🧠 Internally
+It uses:
+    UIKit state restoration
+    Scene session storage
+    Not UserDefaults.
+""", result: nil),
+        Lesson(title: "8️⃣ Comprehensive Comparison", code: """
+| Wrappers      | Persist    | Scope          | Re-render trigger    |
+| ------------- | ---------  | -------------- | -------------------  |
+| @State        | ❌         | View           | Local mutations      |
+| @StateObject  | ❌         | View lifecycle | ObservableObject     |
+| @AppStorage   | ✅         | App            | UserDefaults change  |
+| @SceneStorage | ✅ (scene) | Scene          | Scene restore        |
 """, result: nil)
     ]
 }
