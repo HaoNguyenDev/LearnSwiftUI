@@ -10,7 +10,7 @@ import KeychainAccess
 
 extension UserSettings {
     // MARK: - Keys
-    private enum UserSettingKeys {
+    private enum UserSettingStorageKeys {
         static let languageCode = "languageCode"
         static let isDarkMode = "isDarkMode"
     }
@@ -24,7 +24,7 @@ extension UserSettings {
     private var _username: String? = nil
     
     private init() {
-        let initialIsDarkMode = defaults.value(forKey: UserSettingKeys.isDarkMode) as? Bool
+        let initialIsDarkMode = defaults.value(forKey: UserSettingStorageKeys.isDarkMode) as? Bool
         isDarkMode = initialIsDarkMode ?? false
         // Sync theme value with ThemeManager
         ThemeManager.shared.isDarkEnabled = initialIsDarkMode ?? false
@@ -70,13 +70,13 @@ extension UserSettings {
     
     var languageCode: String? {
         didSet {
-            defaults.set(languageCode, forKey: UserSettingKeys.languageCode)
+            defaults.set(languageCode, forKey: UserSettingStorageKeys.languageCode)
         }
     }
     
     var isDarkMode: Bool {
         didSet {
-            defaults.set(isDarkMode, forKey: UserSettingKeys.isDarkMode)
+            defaults.set(isDarkMode, forKey: UserSettingStorageKeys.isDarkMode)
             ThemeManager.shared.isDarkEnabled = isDarkMode
         }
     }

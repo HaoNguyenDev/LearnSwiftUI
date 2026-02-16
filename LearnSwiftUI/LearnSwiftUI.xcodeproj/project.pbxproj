@@ -87,6 +87,10 @@
 		DA415E952DE5E707009F515E /* ImagesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA415E942DE5E707009F515E /* ImagesBootcamp.swift */; };
 		DA4725302EA62DF7000D596A /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47252F2EA62DF7000D596A /* Closure.swift */; };
 		DA4726582EA7C31E000D596A /* AppTextStyleSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4726572EA7C31E000D596A /* AppTextStyleSize.swift */; };
+		DA499D2B2F435A530067777A /* AppStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA499D2A2F435A530067777A /* AppStorageKeys.swift */; };
+		DA499D322F435AC00067777A /* AppStorageCentralizeKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA499D312F435AC00067777A /* AppStorageCentralizeKeys.swift */; };
+		DA499D372F435BC80067777A /* AppStorageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA499D362F435BC80067777A /* AppStorageExtension.swift */; };
+		DA499D3A2F435C110067777A /* DemoAppStorageSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA499D392F435C110067777A /* DemoAppStorageSettingsView.swift */; };
 		DA4A09EA2F1E6492002C9FDF /* StickyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A09E92F1E6492002C9FDF /* StickyListView.swift */; };
 		DA4F7EF12E9A6B6D001CB7B2 /* HButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F7EF02E9A6B6D001CB7B2 /* HButtonStyle.swift */; };
 		DA4F7F1C2E9A954D001CB7B2 /* LoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F7F1B2E9A954D001CB7B2 /* LoginButtonView.swift */; };
@@ -217,7 +221,7 @@
 		DA7BF6082E99003A00224BCF /* TT Hoves Pro Trial ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA7BF5F82E99003A00224BCF /* TT Hoves Pro Trial ExtraBold.ttf */; };
 		DA7BF6092E99003A00224BCF /* TT Hoves Pro Trial ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA7BF5F92E99003A00224BCF /* TT Hoves Pro Trial ExtraLight.ttf */; };
 		DA7BF60A2E99003A00224BCF /* TT Hoves Pro Trial DemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA7BF5F72E99003A00224BCF /* TT Hoves Pro Trial DemiBold.ttf */; };
-		DA7BF61C2E99036200224BCF /* View+Themed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF61B2E99036200224BCF /* View+Themed.swift */; };
+		DA7BF61C2E99036200224BCF /* ThemeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF61B2E99036200224BCF /* ThemeModifier.swift */; };
 		DA7BF6212E99038300224BCF /* Environment+ThemeKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF6202E99038300224BCF /* Environment+ThemeKeys.swift */; };
 		DA7BF6722E992DEF00224BCF /* HTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF6712E992DEF00224BCF /* HTextField.swift */; };
 		DA7BF6902E995FAC00224BCF /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF68F2E995FAC00224BCF /* View+Extensions.swift */; };
@@ -464,6 +468,10 @@
 		DA415E942DE5E707009F515E /* ImagesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesBootcamp.swift; sourceTree = "<group>"; };
 		DA47252F2EA62DF7000D596A /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
 		DA4726572EA7C31E000D596A /* AppTextStyleSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextStyleSize.swift; sourceTree = "<group>"; };
+		DA499D2A2F435A530067777A /* AppStorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageKeys.swift; sourceTree = "<group>"; };
+		DA499D312F435AC00067777A /* AppStorageCentralizeKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageCentralizeKeys.swift; sourceTree = "<group>"; };
+		DA499D362F435BC80067777A /* AppStorageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageExtension.swift; sourceTree = "<group>"; };
+		DA499D392F435C110067777A /* DemoAppStorageSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppStorageSettingsView.swift; sourceTree = "<group>"; };
 		DA4A09E92F1E6492002C9FDF /* StickyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyListView.swift; sourceTree = "<group>"; };
 		DA4F7EF02E9A6B6D001CB7B2 /* HButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HButtonStyle.swift; sourceTree = "<group>"; };
 		DA4F7F1B2E9A954D001CB7B2 /* LoginButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonView.swift; sourceTree = "<group>"; };
@@ -603,7 +611,7 @@
 		DA7BF5FD2E99003A00224BCF /* TT Hoves Pro Trial Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Hoves Pro Trial Regular.ttf"; sourceTree = "<group>"; };
 		DA7BF5FE2E99003A00224BCF /* TT Hoves Pro Trial Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Hoves Pro Trial Thin.ttf"; sourceTree = "<group>"; };
 		DA7BF5FF2E99003A00224BCF /* TT Hoves Pro Trial Variable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Hoves Pro Trial Variable.ttf"; sourceTree = "<group>"; };
-		DA7BF61B2E99036200224BCF /* View+Themed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Themed.swift"; sourceTree = "<group>"; };
+		DA7BF61B2E99036200224BCF /* ThemeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModifier.swift; sourceTree = "<group>"; };
 		DA7BF6202E99038300224BCF /* Environment+ThemeKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+ThemeKeys.swift"; sourceTree = "<group>"; };
 		DA7BF6712E992DEF00224BCF /* HTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTextField.swift; sourceTree = "<group>"; };
 		DA7BF68F2E995FAC00224BCF /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
@@ -1225,6 +1233,17 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		DA499D292F435A4D0067777A /* AppStorageManagerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DA499D2A2F435A530067777A /* AppStorageKeys.swift */,
+				DA499D312F435AC00067777A /* AppStorageCentralizeKeys.swift */,
+				DA499D362F435BC80067777A /* AppStorageExtension.swift */,
+				DA499D392F435C110067777A /* DemoAppStorageSettingsView.swift */,
+			);
+			path = AppStorageManagerDemo;
+			sourceTree = "<group>";
+		};
 		DA5476602EB23363005C8868 /* Swift Algorithms */ = {
 			isa = PBXGroup;
 			children = (
@@ -1705,7 +1724,7 @@
 			isa = PBXGroup;
 			children = (
 				DA7BF6202E99038300224BCF /* Environment+ThemeKeys.swift */,
-				DA7BF61B2E99036200224BCF /* View+Themed.swift */,
+				DA7BF61B2E99036200224BCF /* ThemeModifier.swift */,
 				DA7BF5E42E98F2AB00224BCF /* RswiftExtensions */,
 			);
 			path = Extensions;
@@ -2184,6 +2203,7 @@
 		DAD528232F421A1B006C8B6B /* @AppStorage @SceneStorage */ = {
 			isa = PBXGroup;
 			children = (
+				DA499D292F435A4D0067777A /* AppStorageManagerDemo */,
 				DAD528252F421A3A006C8B6B /* AppStorageAndSceneStorageLesson.swift */,
 				DAD528282F421A65006C8B6B /* AppStorageAndSceneStorageBootcamp.swift */,
 			);
@@ -2418,6 +2438,7 @@
 				DA7BF5D72E98ED4000224BCF /* DefaultTheme.swift in Sources */,
 				DA415E8D2DE5CD41009F515E /* ColorsBootcamp.swift in Sources */,
 				DAA45E452EF931B700BC57E9 /* Route.swift in Sources */,
+				DA499D322F435AC00067777A /* AppStorageCentralizeKeys.swift in Sources */,
 				DA051B352F402B9C003F3BAA /* ObservableMacroBootcamp.swift in Sources */,
 				DA7BE0AC2E8060A8006821CE /* LoginEntity.swift in Sources */,
 				DAA7091F2E75E2CC006F8E70 /* ResultAndError.swift in Sources */,
@@ -2524,7 +2545,7 @@
 				DA257EEB2F2E08BB0024DC9B /* PulsingCircle.swift in Sources */,
 				DA37F9B32E8EE8CA0001599E /* CombineDefinitionContentView.swift in Sources */,
 				DA4F7F1C2E9A954D001CB7B2 /* LoginButtonView.swift in Sources */,
-				DA7BF61C2E99036200224BCF /* View+Themed.swift in Sources */,
+				DA7BF61C2E99036200224BCF /* ThemeModifier.swift in Sources */,
 				DABC5F9C2F2772A000957964 /* EquatableViewDemo.swift in Sources */,
 				DA278EFE2F31D04D0079AF56 /* NavBackButton.swift in Sources */,
 				DA8748912E6B005800B189F3 /* WeatherErrorView.swift in Sources */,
@@ -2555,6 +2576,7 @@
 				DA7BF5DD2E98ED7300224BCF /* DefaultThemeAssets.swift in Sources */,
 				DA61C5532F0CC38100FD8181 /* SwiftUILayoutEngineBootcamp.swift in Sources */,
 				DA61C5542F0CC38100FD8181 /* SwiftUILayoutEngineCoordinator.swift in Sources */,
+				DA499D3A2F435C110067777A /* DemoAppStorageSettingsView.swift in Sources */,
 				DA5D71902E3FBA7400C78E40 /* GithubUserDetail.swift in Sources */,
 				DA8656D02F0F75A30092426E /* ScrollViewLazyContainersLessons.swift in Sources */,
 				DAC97E282EA3C22700F8A22F /* Double+Extensions.swift in Sources */,
@@ -2610,6 +2632,7 @@
 				DAFC16B42F11400E00D242D3 /* DragViewDemo.swift in Sources */,
 				DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */,
 				DA03DF212F2214F30080D104 /* MultiSelectRowListView.swift in Sources */,
+				DA499D372F435BC80067777A /* AppStorageExtension.swift in Sources */,
 				DACD47E82F31A23B007A6D06 /* StateManagementDeepDiveBootcamp.swift in Sources */,
 				DA8656D72F0F76820092426E /* ScrollViewLazyContainersBootcampCoordinator.swift in Sources */,
 				DA61C5B22F0D3A7100FD8181 /* StackViewLessons.swift in Sources */,
@@ -2699,6 +2722,7 @@
 				DAE366252E9D1047005EF803 /* AppSettings.swift in Sources */,
 				DA278FA52F32398F0079AF56 /* ColorPickerExercise.swift in Sources */,
 				DA10D4412F2907980035A6A2 /* NavigationPathExample.swift in Sources */,
+				DA499D2B2F435A530067777A /* AppStorageKeys.swift in Sources */,
 				DA8748872E6AFBC900B189F3 /* WeatherService.swift in Sources */,
 				DA60279D2EA3D9A400271E00 /* MVVMDemoUIKit_ViewModel.swift in Sources */,
 				DA415E952DE5E707009F515E /* ImagesBootcamp.swift in Sources */,

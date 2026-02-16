@@ -179,6 +179,36 @@ Persistence Layer (UserDefaults)
 
 Do not:
 View → AppStorage → Business Logic
+""", result: nil),
+        Lesson(title: "🎯 INTERVIEW QUESTIONS", code: """
+1. How is @AppStorage different from @State?
+Expect:
+    Persistence
+    Lifecycle
+    Data source
+
+2. Is @AppStorage thread-safe?
+    UserDefaults thread-safe read
+    Write async
+    Not suitable for high frequency
+
+3. When should @AppStorage not be used?
+    Business data
+    Sensitive data
+    Large data
+
+4. How does SceneStorage work in multi-window?
+    Per scene session
+    No sharing between scenes
+
+5. How do you test @AppStorage?
+    Inject custom suite
+    Reset UserDefaults in test
+
+🧠 Advanced Thinking
+    @AppStorage and @SceneStorage are NOT state management.
+These are simply:
+    Persistence Bridge Layer
 """, result: nil)
     ]
 }
