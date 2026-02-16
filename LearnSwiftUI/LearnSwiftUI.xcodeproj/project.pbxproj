@@ -91,6 +91,8 @@
 		DA499D322F435AC00067777A /* AppStorageCentralizeKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA499D312F435AC00067777A /* AppStorageCentralizeKeys.swift */; };
 		DA499D372F435BC80067777A /* AppStorageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA499D362F435BC80067777A /* AppStorageExtension.swift */; };
 		DA499D3A2F435C110067777A /* DemoAppStorageSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA499D392F435C110067777A /* DemoAppStorageSettingsView.swift */; };
+		DA499E4F2F4372DA0067777A /* BindingAdvancedPatternLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA499E4E2F4372DA0067777A /* BindingAdvancedPatternLesson.swift */; };
+		DA499E522F4373300067777A /* BindingAdvancedPatternsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA499E512F4373300067777A /* BindingAdvancedPatternsBootcamp.swift */; };
 		DA4A09EA2F1E6492002C9FDF /* StickyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4A09E92F1E6492002C9FDF /* StickyListView.swift */; };
 		DA4F7EF12E9A6B6D001CB7B2 /* HButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F7EF02E9A6B6D001CB7B2 /* HButtonStyle.swift */; };
 		DA4F7F1C2E9A954D001CB7B2 /* LoginButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4F7F1B2E9A954D001CB7B2 /* LoginButtonView.swift */; };
@@ -472,6 +474,8 @@
 		DA499D312F435AC00067777A /* AppStorageCentralizeKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageCentralizeKeys.swift; sourceTree = "<group>"; };
 		DA499D362F435BC80067777A /* AppStorageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageExtension.swift; sourceTree = "<group>"; };
 		DA499D392F435C110067777A /* DemoAppStorageSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppStorageSettingsView.swift; sourceTree = "<group>"; };
+		DA499E4E2F4372DA0067777A /* BindingAdvancedPatternLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingAdvancedPatternLesson.swift; sourceTree = "<group>"; };
+		DA499E512F4373300067777A /* BindingAdvancedPatternsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingAdvancedPatternsBootcamp.swift; sourceTree = "<group>"; };
 		DA4A09E92F1E6492002C9FDF /* StickyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyListView.swift; sourceTree = "<group>"; };
 		DA4F7EF02E9A6B6D001CB7B2 /* HButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HButtonStyle.swift; sourceTree = "<group>"; };
 		DA4F7F1B2E9A954D001CB7B2 /* LoginButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonView.swift; sourceTree = "<group>"; };
@@ -1242,6 +1246,15 @@
 				DA499D392F435C110067777A /* DemoAppStorageSettingsView.swift */,
 			);
 			path = AppStorageManagerDemo;
+			sourceTree = "<group>";
+		};
+		DA499E4C2F4372A30067777A /* Binding Avanced Patterns - Custom Bindings */ = {
+			isa = PBXGroup;
+			children = (
+				DA499E4E2F4372DA0067777A /* BindingAdvancedPatternLesson.swift */,
+				DA499E512F4373300067777A /* BindingAdvancedPatternsBootcamp.swift */,
+			);
+			path = "Binding Avanced Patterns - Custom Bindings";
 			sourceTree = "<group>";
 		};
 		DA5476602EB23363005C8868 /* Swift Algorithms */ = {
@@ -2278,6 +2291,7 @@
 				DAEB64D72F3CC28300929CA6 /* Environment System */,
 				DA5A80802F3F19C900531852 /* Environment EnvironmentObject */,
 				DA051B2E2F402B3F003F3BAA /* Observable Macro */,
+				DA499E4C2F4372A30067777A /* Binding Avanced Patterns - Custom Bindings */,
 			);
 			path = "ADVANCED STATE & DATA FLOW ";
 			sourceTree = "<group>";
@@ -2489,6 +2503,7 @@
 				DA61C5E52F0E192A00FD8181 /* AlignmentBootcamp.swift in Sources */,
 				DA415E8F2DE5DCC0009F515E /* Color.swift in Sources */,
 				DA4A09EA2F1E6492002C9FDF /* StickyListView.swift in Sources */,
+				DA499E522F4373300067777A /* BindingAdvancedPatternsBootcamp.swift in Sources */,
 				DA37F98E2E8D8BE00001599E /* ViewModelTransformableProtocol.swift in Sources */,
 				DA5D71452E3F43B100C78E40 /* ObservablePattern.swift in Sources */,
 				DA7BF5CF2E98ED0300224BCF /* ThemeColorProtocol.swift in Sources */,
@@ -2530,6 +2545,7 @@
 				DA3F455E2F3A2694008F50AB /* ModifierPatterns.swift in Sources */,
 				DA8D9CD52F38A3A1004529FF /* LazyViewLoading.swift in Sources */,
 				DA37F99D2E8D93F60001599E /* CbDemoLoginContentView.swift in Sources */,
+				DA499E4F2F4372DA0067777A /* BindingAdvancedPatternLesson.swift in Sources */,
 				DA6DB8E12F2FA692001781BD /* StableIdentityViewExample.swift in Sources */,
 				DA37F9872E8D898B0001599E /* CbLoginResult.swift in Sources */,
 				DA8656C62F0F75750092426E /* GeometryReaderBootcamp.swift in Sources */,
