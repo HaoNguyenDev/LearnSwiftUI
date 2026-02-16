@@ -221,7 +221,7 @@
 		DA7BF6082E99003A00224BCF /* TT Hoves Pro Trial ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA7BF5F82E99003A00224BCF /* TT Hoves Pro Trial ExtraBold.ttf */; };
 		DA7BF6092E99003A00224BCF /* TT Hoves Pro Trial ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA7BF5F92E99003A00224BCF /* TT Hoves Pro Trial ExtraLight.ttf */; };
 		DA7BF60A2E99003A00224BCF /* TT Hoves Pro Trial DemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA7BF5F72E99003A00224BCF /* TT Hoves Pro Trial DemiBold.ttf */; };
-		DA7BF61C2E99036200224BCF /* View+Themed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF61B2E99036200224BCF /* View+Themed.swift */; };
+		DA7BF61C2E99036200224BCF /* ThemeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF61B2E99036200224BCF /* ThemeModifier.swift */; };
 		DA7BF6212E99038300224BCF /* Environment+ThemeKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF6202E99038300224BCF /* Environment+ThemeKeys.swift */; };
 		DA7BF6722E992DEF00224BCF /* HTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF6712E992DEF00224BCF /* HTextField.swift */; };
 		DA7BF6902E995FAC00224BCF /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7BF68F2E995FAC00224BCF /* View+Extensions.swift */; };
@@ -611,7 +611,7 @@
 		DA7BF5FD2E99003A00224BCF /* TT Hoves Pro Trial Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Hoves Pro Trial Regular.ttf"; sourceTree = "<group>"; };
 		DA7BF5FE2E99003A00224BCF /* TT Hoves Pro Trial Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Hoves Pro Trial Thin.ttf"; sourceTree = "<group>"; };
 		DA7BF5FF2E99003A00224BCF /* TT Hoves Pro Trial Variable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Hoves Pro Trial Variable.ttf"; sourceTree = "<group>"; };
-		DA7BF61B2E99036200224BCF /* View+Themed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Themed.swift"; sourceTree = "<group>"; };
+		DA7BF61B2E99036200224BCF /* ThemeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModifier.swift; sourceTree = "<group>"; };
 		DA7BF6202E99038300224BCF /* Environment+ThemeKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+ThemeKeys.swift"; sourceTree = "<group>"; };
 		DA7BF6712E992DEF00224BCF /* HTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTextField.swift; sourceTree = "<group>"; };
 		DA7BF68F2E995FAC00224BCF /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
@@ -1724,7 +1724,7 @@
 			isa = PBXGroup;
 			children = (
 				DA7BF6202E99038300224BCF /* Environment+ThemeKeys.swift */,
-				DA7BF61B2E99036200224BCF /* View+Themed.swift */,
+				DA7BF61B2E99036200224BCF /* ThemeModifier.swift */,
 				DA7BF5E42E98F2AB00224BCF /* RswiftExtensions */,
 			);
 			path = Extensions;
@@ -2545,7 +2545,7 @@
 				DA257EEB2F2E08BB0024DC9B /* PulsingCircle.swift in Sources */,
 				DA37F9B32E8EE8CA0001599E /* CombineDefinitionContentView.swift in Sources */,
 				DA4F7F1C2E9A954D001CB7B2 /* LoginButtonView.swift in Sources */,
-				DA7BF61C2E99036200224BCF /* View+Themed.swift in Sources */,
+				DA7BF61C2E99036200224BCF /* ThemeModifier.swift in Sources */,
 				DABC5F9C2F2772A000957964 /* EquatableViewDemo.swift in Sources */,
 				DA278EFE2F31D04D0079AF56 /* NavBackButton.swift in Sources */,
 				DA8748912E6B005800B189F3 /* WeatherErrorView.swift in Sources */,
