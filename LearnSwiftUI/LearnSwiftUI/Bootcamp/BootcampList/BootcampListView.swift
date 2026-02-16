@@ -32,7 +32,8 @@ enum BootcampSection: String, Identifiable, CaseIterable {
          Route.BootcampListRoute.appStorageAndSceneStorage,
          Route.BootcampListRoute.environmentSystem,
          Route.BootcampListRoute.environmentEnvironmentObject,
-         Route.BootcampListRoute.observableMacro
+         Route.BootcampListRoute.observableMacro,
+         Route.BootcampListRoute.bindingAdvancedPatterns
         ]
     }
     

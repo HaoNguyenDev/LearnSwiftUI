@@ -24,6 +24,7 @@ extension Route {
         case environmentEnvironmentObject = "Environment EnvironmentObject"
         case observableMacro = "Observable Macro"
         case appStorageAndSceneStorage = "@AppStorage @SceneStorage"
+        case bindingAdvancedPatterns = "Binding Advanced Patterns"
         
         // LAYOUT & ANIMATION
         case safeAreaInsets = "SafeArea & Insets"
@@ -108,6 +109,8 @@ extension BootcampListCoordinator {
             EnvironmentEnvironmentObjectCoordinator(navRoute: navRoute)
         case .observableMacro:
             ObservableMacroCoordinator(navRoute: navRoute)
+        case .bindingAdvancedPatterns:
+            BindingAdvancedPatternCoordinator(navRoute: navRoute)
         case .alignmentAlignmentGuide:
             AlignmentBootcampCoordinator(navRouter: navRoute)
         case .geometryReaderCoordinateSpace:
