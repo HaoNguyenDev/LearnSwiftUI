@@ -249,6 +249,7 @@
 		DA87489B2E6B007D00B189F3 /* WeatherListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87489A2E6B007D00B189F3 /* WeatherListView.swift */; };
 		DA87489E2E6B16B500B189F3 /* WeatherMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87489D2E6B16B500B189F3 /* WeatherMainView.swift */; };
 		DA87A2122EB7ACF500749349 /* FakeStoreAuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87A2112EB7ACF500749349 /* FakeStoreAuthRequest.swift */; };
+		DA87FD7F2F4483F300EF13F4 /* CollectionBindingExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87FD7E2F4483F300EF13F4 /* CollectionBindingExample.swift */; };
 		DA8D9CC22F3865C5004529FF /* StyledContainerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D9CC12F3865C5004529FF /* StyledContainerExample.swift */; };
 		DA8D9CD52F38A3A1004529FF /* LazyViewLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D9CD42F38A3A1004529FF /* LazyViewLoading.swift */; };
 		DA8D9CEE2F38A89E004529FF /* MultipleViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D9CED2F38A89E004529FF /* MultipleViewBuilder.swift */; };
@@ -641,6 +642,7 @@
 		DA87489A2E6B007D00B189F3 /* WeatherListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListView.swift; sourceTree = "<group>"; };
 		DA87489D2E6B16B500B189F3 /* WeatherMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMainView.swift; sourceTree = "<group>"; };
 		DA87A2112EB7ACF500749349 /* FakeStoreAuthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeStoreAuthRequest.swift; sourceTree = "<group>"; };
+		DA87FD7E2F4483F300EF13F4 /* CollectionBindingExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBindingExample.swift; sourceTree = "<group>"; };
 		DA89A7CF2E48DF73007BF882 /* Closure.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Closure.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA89A7D12E48FEAE007BF882 /* RefreshTokenExample.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RefreshTokenExample.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA89A7D22E490391007BF882 /* GCDTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GCDTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -1251,6 +1253,7 @@
 		DA499E4C2F4372A30067777A /* Binding Avanced Patterns - Custom Bindings */ = {
 			isa = PBXGroup;
 			children = (
+				DA87FD752F44820300EF13F4 /* Example */,
 				DA499E4E2F4372DA0067777A /* BindingAdvancedPatternLesson.swift */,
 				DA499E512F4373300067777A /* BindingAdvancedPatternsBootcamp.swift */,
 			);
@@ -1826,6 +1829,14 @@
 				DA8748902E6B005800B189F3 /* WeatherErrorView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DA87FD752F44820300EF13F4 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				DA87FD7E2F4483F300EF13F4 /* CollectionBindingExample.swift */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 		DA8991362E47670600C2BD27 /* Button */ = {
@@ -2644,6 +2655,7 @@
 				DAA609D12F129F6900B625CE /* AnimationLayoutInteractionBootcampCoordinator.swift in Sources */,
 				DAA45E542EF933C400BC57E9 /* NavRoute.swift in Sources */,
 				DA54770B2EB63A37005C8868 /* TokenResponse.swift in Sources */,
+				DA87FD7F2F4483F300EF13F4 /* CollectionBindingExample.swift in Sources */,
 				DAEBAE482DF2692E00082B1C /* SateBootcamp.swift in Sources */,
 				DAFC16B42F11400E00D242D3 /* DragViewDemo.swift in Sources */,
 				DA415E6E2DE5BFDD009F515E /* TextBootcamp.swift in Sources */,
