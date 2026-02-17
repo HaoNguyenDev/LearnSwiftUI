@@ -59,6 +59,23 @@ let stringBinding = Binding<String>(
     get: { isOn ? "ON" : "OFF" },
     set: { isOn = ($0 == "ON") }
 )
-""", result: nil)
+""", result: nil),
+        Lesson(title: "2️⃣ Binding with Collections", code: """
+❗ Problem
+@State var items: [Todo]
+
+How to bind each element?
+
+✅ Correct way
+ForEach($items) { $item in
+    Toggle(item.title, isOn: $item.isDone)
+} 
+
+SwiftUI creates binding for each element.
+""", result: {
+    AnyView(ResultBlockView(content: {
+        CollectionBindingExampleParrent()
+    }))
+})
     ]
 }

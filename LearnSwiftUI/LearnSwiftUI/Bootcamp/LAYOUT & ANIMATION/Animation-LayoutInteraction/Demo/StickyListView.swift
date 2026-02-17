@@ -9,7 +9,18 @@ import SwiftUI
 
 struct Item: Identifiable, Hashable {
     let id = UUID()
-    let name: String
+    var name: String
+    var selectedItem: Bool
+    
+    init(name: String) {
+        self.name = name
+        self.selectedItem = false
+    }
+    
+    init(name: String, selectedItem: Bool) {
+        self.name = name
+        self.selectedItem = selectedItem
+    }
 }
 
 struct SectionModel: Identifiable {
