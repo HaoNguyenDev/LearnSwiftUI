@@ -18,3 +18,14 @@ extension Binding {
         )
     }
 }
+
+
+extension Binding {
+func unwrap<T>() -> Binding<T>? where Value == T? {
+    guard let value = wrappedValue else { return nil }
+        return Binding<T>(
+            get: { value },
+            set: { wrappedValue = $0 }
+        )
+    }
+}
