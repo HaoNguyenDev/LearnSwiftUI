@@ -118,6 +118,24 @@ if let taskBinding = $selectedTask.unwrap() {
     DetailView(task: taskBinding) // Binding<Task> ✅ 
 }
 """, result: nil),
+        Lesson(title: "Advanced Knowledge (Very Important)", code: """
+1️⃣ Identity Binding
+Binding doesn't have its own identity → identity is based on the source state.
+
+2️⃣ Binding and Diffing
+SwiftUI doesn't diff binding → view diff.
+
+3️⃣ Binding doesn't trigger re-rendering
+Only state changes trigger it.
+
+4️⃣ Binding is a value type
+It's a struct.
+
+Important Thinking
+👉 State must have a source of truth
+👉 Binding is just a way to mutate state
+👉 Never let a View hold multiple different sources of state
+""", result: nil),
         Lesson(title: "Common errors", code: """
 1️⃣ Infinite update loop
 set: { age = $0; age = age + 1 }
