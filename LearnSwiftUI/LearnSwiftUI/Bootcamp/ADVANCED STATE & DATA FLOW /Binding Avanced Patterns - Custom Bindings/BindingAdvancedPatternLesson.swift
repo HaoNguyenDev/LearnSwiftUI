@@ -22,6 +22,21 @@ struct Binding<Value> {
 } 
 
 👉 In essence, Binding is just a get/set closure.
+
+SwiftUI follows this model:
+State (source of truth)
+    ↓
+View
+    ↓
+User action
+    ↓
+Binding set
+    ↓
+State update
+    ↓
+Re-render
+
+Binding is just a bridge.
 """, result: nil),
         Lesson(title: "🔹 Quick comparison", code: """
 | Property Wrapper      | Owns state?    | Role                      |
@@ -76,6 +91,44 @@ SwiftUI creates binding for each element.
     AnyView(ResultBlockView(content: {
         CollectionBindingExampleParrent()
     }))
-})
+}),
+        Lesson(title: "3️⃣ Binding Optional", code: """
+SwiftUI doesn't like optional binding.
+❌ Wrong
+TextField("Name", text: $user.name) // if user is optional
+
+✅ Yes
+if let userBinding = Binding($user) { 
+    TextField("Name", text: userBinding.name)
+}
+
+Or custom unwrap:
+extension Binding { 
+func unwrap<T>() -> Binding<T>? where Value == T? { 
+    guard let value = wrappedValue else { return nil } 
+        return Binding<T>( 
+            get: { value }, 
+            set: { wrappedValue = $0 } 
+        ) 
+    }
+}
+
+// ✅ Use unwrap() to convert Binding<Task?> → Binding<Task> 
+if let taskBinding = $selectedTask.unwrap() { 
+    DetailView(task: taskBinding) // Binding<Task> ✅ 
+}
+""", result: nil),
+        Lesson(title: "Common errors", code: """
+1️⃣ Infinite update loop
+set: { age = $0; age = age + 1 }
+→ May cause loop render.
+
+2️⃣ Binding capture stale value
+let value = someState
+Binding(get: { value }, set: { value = $0 }) ❌
+
+3️⃣ Using .constant in the wrong place
+.constant = read-only binding
+""", result: nil)
     ]
 }
