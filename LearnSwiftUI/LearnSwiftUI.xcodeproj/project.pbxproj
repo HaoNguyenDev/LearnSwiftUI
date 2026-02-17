@@ -250,6 +250,11 @@
 		DA87489E2E6B16B500B189F3 /* WeatherMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87489D2E6B16B500B189F3 /* WeatherMainView.swift */; };
 		DA87A2122EB7ACF500749349 /* FakeStoreAuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87A2112EB7ACF500749349 /* FakeStoreAuthRequest.swift */; };
 		DA87FD7F2F4483F300EF13F4 /* CollectionBindingExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87FD7E2F4483F300EF13F4 /* CollectionBindingExample.swift */; };
+		DA87FD952F44B97B00EF13F4 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87FD942F44B97B00EF13F4 /* MenuItem.swift */; };
+		DA87FD982F44BABF00EF13F4 /* RoundedCornerShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87FD972F44BABF00EF13F4 /* RoundedCornerShape.swift */; };
+		DA87FD9C2F44BB9E00EF13F4 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87FD9B2F44BB9E00EF13F4 /* MenuItemView.swift */; };
+		DA87FDB22F44C01100EF13F4 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87FDB12F44C01100EF13F4 /* SideMenuView.swift */; };
+		DA87FDBE2F44C8F400EF13F4 /* DemoSideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA87FDBD2F44C8F400EF13F4 /* DemoSideMenuView.swift */; };
 		DA8D9CC22F3865C5004529FF /* StyledContainerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D9CC12F3865C5004529FF /* StyledContainerExample.swift */; };
 		DA8D9CD52F38A3A1004529FF /* LazyViewLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D9CD42F38A3A1004529FF /* LazyViewLoading.swift */; };
 		DA8D9CEE2F38A89E004529FF /* MultipleViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8D9CED2F38A89E004529FF /* MultipleViewBuilder.swift */; };
@@ -643,6 +648,11 @@
 		DA87489D2E6B16B500B189F3 /* WeatherMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMainView.swift; sourceTree = "<group>"; };
 		DA87A2112EB7ACF500749349 /* FakeStoreAuthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeStoreAuthRequest.swift; sourceTree = "<group>"; };
 		DA87FD7E2F4483F300EF13F4 /* CollectionBindingExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBindingExample.swift; sourceTree = "<group>"; };
+		DA87FD942F44B97B00EF13F4 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		DA87FD972F44BABF00EF13F4 /* RoundedCornerShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerShape.swift; sourceTree = "<group>"; };
+		DA87FD9B2F44BB9E00EF13F4 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
+		DA87FDB12F44C01100EF13F4 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		DA87FDBD2F44C8F400EF13F4 /* DemoSideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSideMenuView.swift; sourceTree = "<group>"; };
 		DA89A7CF2E48DF73007BF882 /* Closure.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Closure.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA89A7D12E48FEAE007BF882 /* RefreshTokenExample.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RefreshTokenExample.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DA89A7D22E490391007BF882 /* GCDTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GCDTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -1171,7 +1181,7 @@
 				DA415E722DE5C307009F515E /* Extension */,
 				DAA3B8D22E3A64FC0051F62F /* Models */,
 				DA5D717C2E3FA56900C78E40 /* Networking */,
-				DA65B7322E37D31200BF8A59 /* AppDemo */,
+				DA65B7322E37D31200BF8A59 /* Demo */,
 				DAAE8CBB2E45024800FCBA4E /* Architecture */,
 				DA8991392E48C7A000C2BD27 /* Swift */,
 				DA415E6A2DE5BFAF009F515E /* Bootcamp */,
@@ -1545,7 +1555,7 @@
 			path = "Advanced-Animation";
 			sourceTree = "<group>";
 		};
-		DA65B7322E37D31200BF8A59 /* AppDemo */ = {
+		DA65B7322E37D31200BF8A59 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
 				DA37F99E2E8EE3540001599E /* CombineFrameworkDefinition */,
@@ -1555,8 +1565,9 @@
 				DA8748852E6AFBB000B189F3 /* WeatherList */,
 				DA5D71872E3FB01C00C78E40 /* GithubUsers */,
 				DA65B7332E37D31B00BF8A59 /* TodoApp */,
+				DA87FD912F44B95900EF13F4 /* AnimatedSideMenu */,
 			);
-			path = AppDemo;
+			path = Demo;
 			sourceTree = "<group>";
 		};
 		DA65B7332E37D31B00BF8A59 /* TodoApp */ = {
@@ -1837,6 +1848,18 @@
 				DA87FD7E2F4483F300EF13F4 /* CollectionBindingExample.swift */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		DA87FD912F44B95900EF13F4 /* AnimatedSideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				DA87FD942F44B97B00EF13F4 /* MenuItem.swift */,
+				DA87FD972F44BABF00EF13F4 /* RoundedCornerShape.swift */,
+				DA87FD9B2F44BB9E00EF13F4 /* MenuItemView.swift */,
+				DA87FDB12F44C01100EF13F4 /* SideMenuView.swift */,
+				DA87FDBD2F44C8F400EF13F4 /* DemoSideMenuView.swift */,
+			);
+			path = AnimatedSideMenu;
 			sourceTree = "<group>";
 		};
 		DA8991362E47670600C2BD27 /* Button */ = {
@@ -2469,6 +2492,7 @@
 				DAA7091F2E75E2CC006F8E70 /* ResultAndError.swift in Sources */,
 				DA6075112EFE99AB002907E4 /* CodePreviewContainer.swift in Sources */,
 				DAFC16942F1139C500D242D3 /* ScrollAnimationViewDemo.swift in Sources */,
+				DA87FDBE2F44C8F400EF13F4 /* DemoSideMenuView.swift in Sources */,
 				DAFC16AC2F113EAA00D242D3 /* PagingViewDemo.swift in Sources */,
 				DA415E8B2DE5C845009F515E /* ShapesBootcamp.swift in Sources */,
 				DA6027A72EA4A42C00271E00 /* MVVMDemoUIKitViewWrapper.swift in Sources */,
@@ -2501,6 +2525,7 @@
 				DA5D712A2E3D19A000C78E40 /* Logger.swift in Sources */,
 				DA7BF5EA2E98F2DA00224BCF /* RswiftResources+FontResource.swift in Sources */,
 				DA61C5592F0CCE8B00FD8181 /* Lesson.swift in Sources */,
+				DA87FDB22F44C01100EF13F4 /* SideMenuView.swift in Sources */,
 				DADA94862F2D00E4008ED262 /* AnimatedToggle.swift in Sources */,
 				DAEB652F2F3DBBFB00929CA6 /* StateObjectObservedObjectLesson.swift in Sources */,
 				DAAA67242E617101004075B7 /* ViewAndAdditional.swift in Sources */,
@@ -2513,6 +2538,7 @@
 				DA0B4AE72E6FC9A400628E53 /* DownloadManager.swift in Sources */,
 				DA61C5E52F0E192A00FD8181 /* AlignmentBootcamp.swift in Sources */,
 				DA415E8F2DE5DCC0009F515E /* Color.swift in Sources */,
+				DA87FD982F44BABF00EF13F4 /* RoundedCornerShape.swift in Sources */,
 				DA4A09EA2F1E6492002C9FDF /* StickyListView.swift in Sources */,
 				DA499E522F4373300067777A /* BindingAdvancedPatternsBootcamp.swift in Sources */,
 				DA37F98E2E8D8BE00001599E /* ViewModelTransformableProtocol.swift in Sources */,
@@ -2663,6 +2689,7 @@
 				DA499D372F435BC80067777A /* AppStorageExtension.swift in Sources */,
 				DACD47E82F31A23B007A6D06 /* StateManagementDeepDiveBootcamp.swift in Sources */,
 				DA8656D72F0F76820092426E /* ScrollViewLazyContainersBootcampCoordinator.swift in Sources */,
+				DA87FD952F44B97B00EF13F4 /* MenuItem.swift in Sources */,
 				DA61C5B22F0D3A7100FD8181 /* StackViewLessons.swift in Sources */,
 				DA278EE42F31A97D0079AF56 /* CustomNavigationTitle.swift in Sources */,
 				DA278F622F31E7400079AF56 /* ParentAndChildCommunicationExample.swift in Sources */,
@@ -2767,6 +2794,7 @@
 				DAA709162E75D60C006F8E70 /* VisaPaymentService.swift in Sources */,
 				DA83D7392EFC08D20050EF92 /* TextBootcampCoordinator.swift in Sources */,
 				DA61C5282F0C076B00FD8181 /* StackViewBootcamp.swift in Sources */,
+				DA87FD9C2F44BB9E00EF13F4 /* MenuItemView.swift in Sources */,
 				DAE365BC2E9CC288005EF803 /* DarkThemeFonts.swift in Sources */,
 				DA4725302EA62DF7000D596A /* Closure.swift in Sources */,
 				DAA609CE2F129EDE00B625CE /* AnimationLayoutInteractionBootcamp.swift in Sources */,
