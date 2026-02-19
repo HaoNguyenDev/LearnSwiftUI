@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DemoSideMenuView: View {
-    @State private var isShowingMenu = false
+    @State private var isShowingMenu = true
     
     var body: some View {
         ZStack {
@@ -98,7 +98,7 @@ struct DemoSideMenuView: View {
             )
         }
         .ignoresSafeArea()
-        .animation(.spring(response: 0.3, dampingFraction: 0.8), value: isShowingMenu )
+        .animation(.spring(response: 0.3, dampingFraction: 0.9), value: isShowingMenu )
     }
 }
 
