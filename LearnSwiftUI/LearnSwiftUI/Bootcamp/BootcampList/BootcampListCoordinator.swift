@@ -19,6 +19,7 @@ extension Route {
         case modifiersViewProtocol = "Modifiers & View Protocol Deep Dive"
         
         // ADVANCED STATE AND DATA FLOW
+        case dataFlowAndArchitecture = "One-Way Data Flow and Architecture"
         case environmentSystem = "Environment System"
         case stateObjectObservedObject = "@ObservableObject, @StateObject, @ObservedObject"
         case environmentEnvironmentObject = "Environment EnvironmentObject"
@@ -45,7 +46,6 @@ extension Route {
         case renderingPerformance = "Rendering & Performance"
         
         // OTHERS
-        case dataFlowAndArchitecture = "One-Way Data Flow and Architecture"
         case text = "Text"
         case shape = "Shape"
         case color = "Color"
