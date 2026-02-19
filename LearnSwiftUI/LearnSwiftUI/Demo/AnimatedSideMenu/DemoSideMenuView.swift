@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DemoSideMenuView: View {
-    @State private var isShowingMenu = true
+    @State private var isShowingMenu = false
     
     var body: some View {
         ZStack {
@@ -79,24 +79,7 @@ struct DemoSideMenuView: View {
                     .frame(width: min(geometry.size.width * 0.75, 300))
                     .frame(maxHeight: .infinity)
                     .background(
-                        ZStack {
-                            Color(.systemBackground)
-                            Circle()
-                                .fill(
-                                    LinearGradient(colors: [.blue.opacity(0.2), .purple.opacity(0.2)], startPoint: .topLeading, endPoint: .bottomTrailing)
-                                )
-                                .frame(width: 200)
-                                .blur(radius: 50)
-                                .offset(x: -100, y: -50)
-                            
-                            Circle()
-                                .fill(
-                                    LinearGradient(colors: [.orange.opacity(0.2), .red.opacity(0.2)], startPoint: .topLeading, endPoint: .bottomTrailing)
-                                )
-                                .frame(width: 300)
-                                .blur(radius: 50)
-                                .offset(x: 50, y: geometry.size.height - 100)
-                        }
+                        Color(.systemBackground)
                     )
                     .clipShape(
                         RoundedCornerShape(radius: 30, corners: [.topRight, .bottomRight])
@@ -105,7 +88,7 @@ struct DemoSideMenuView: View {
                 Spacer()
             }
             .background(
-                Color.black.opacity(isShowingMenu ? 0.3 : 0)
+                Color.black.opacity(isShowingMenu ? 0.5 : 0)
                     .ignoresSafeArea()
                     .onTapGesture {
                         withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
