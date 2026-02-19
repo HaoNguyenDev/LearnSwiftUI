@@ -192,9 +192,9 @@ TimelineView(.animation) { context in
         )
     }),Lesson(title: "", code: """
 
-""", result: nil),Lesson(title: "", code: """
-
-""", result: nil),Lesson(title: "", code: """
-
-""", result: nil)]
+""", result: {
+        AnyView(ResultBlockView(content: {
+            DemoSideMenuView()
+        }))
+    })]
 }
