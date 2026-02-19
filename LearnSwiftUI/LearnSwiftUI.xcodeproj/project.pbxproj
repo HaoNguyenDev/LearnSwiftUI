@@ -811,7 +811,7 @@
 			path = Demo;
 			sourceTree = "<group>";
 		};
-		DA03DF102F21FA460080D104 /* OneWay-DataFlow-Architecture */ = {
+		DA03DF102F21FA460080D104 /* DataFlow-Architecture */ = {
 			isa = PBXGroup;
 			children = (
 				DA03DF1E2F2213230080D104 /* Demo */,
@@ -819,7 +819,7 @@
 				DA03DF142F21FB000080D104 /* DataFlowAndArchitectureBootcamp.swift */,
 				DA03DF172F21FBB10080D104 /* DataFlowAndArchitectureCoordinator.swift */,
 			);
-			path = "OneWay-DataFlow-Architecture";
+			path = "DataFlow-Architecture";
 			sourceTree = "<group>";
 		};
 		DA03DF1E2F2213230080D104 /* Demo */ = {
@@ -2319,7 +2319,7 @@
 		DAEB651C2F3DBB1500929CA6 /* ADVANCED STATE & DATA FLOW  */ = {
 			isa = PBXGroup;
 			children = (
-				DA03DF102F21FA460080D104 /* OneWay-DataFlow-Architecture */,
+				DA03DF102F21FA460080D104 /* DataFlow-Architecture */,
 				DAEB65252F3DBB7D00929CA6 /* @ObservableObject @StateObject @ObservedObject */,
 				DAD528232F421A1B006C8B6B /* @AppStorage @SceneStorage */,
 				DAEB64D72F3CC28300929CA6 /* Environment System */,

@@ -9,40 +9,104 @@ import Foundation
 
 struct DataFlowAndArchitectureLesson {
     static let all: [Lesson] = [
-        Lesson(title: "1️⃣ What is One-way Data Flow?", code: """
-❌ Old UIKit mindset (two-way / imperative)
+        Lesson(title: "State Flow Architecture", code: """
+Why do we need "State Flow Architecture"?
 
-    View → mutate model
-    Model → callback → update view
+When the app is small:
+    View → @State → Update UI
 
-Easy to create loops
-Difficult to debug
-Distributed logic
+When the app is large:
+- Multiple screens
+- Shared state
+- Complex business logic
+- Networking / async
+- Dependency injection
+- Testability
+
+Without a clear state architecture:
+❌ State is mutated from multiple places
+❌ Views contain business logic
+❌ Bugs are difficult to debug
+❌ Hard to test
+❌ Data flow is uncontrolled
+
+Therefore, we need:
+State Flow Architecture = An architecture that controls how state is created, passed, mutated, and rendered.
 
 ✅ SwiftUI (one-way data flow)
 
     State (source of truth)
-            ↓
-           View
-            ↓
-        User Action
-            ↓
-        Mutate State
+        ↓
+    View
+        ↓
+    User Action
+        ↓
+    Intent
+        ↓
+    Update State
+        ↓
+    Re-render View
 
 📌 Immutable Law
 View does NOT hold the source state,
 View only reflects the state.
 """, result: nil),
-        Lesson(title: "2️⃣ Source of Truth (MOST IMPORTANT CONCEPT)", code: """
-Each state has only ONE owner
+        Lesson(title: "What is Unidirectional Data Flow (UDF)?", code: """
+1️⃣ Core Definition
+Unidirectional Data Flow is a model in which:
+- State flows in only one direction
+- Events flow in the opposite direction
+- Views do not directly mutate state
 
-❌ False (2 sources):
-    @State var isOn
-    @Binding var isOn
+2️⃣ Standard UDF Cycle
+State → View → User Action → Intent → Update State → Re-render View
 
-✅ True:
-    @State var isOn // source
-    @Binding var isOn // consumer
+or
+        ┌──────────┐
+        │   State  │
+        └────┬─────┘
+             ↓
+        ┌──────────┐
+        │   View   │
+        └────┬─────┘
+             ↓
+        ┌──────────┐
+        │  Action  │
+        └────┬─────┘
+             ↓
+        ┌──────────┐
+        │ Reducer  │
+        └────┬─────┘
+             ↓
+        ┌──────────┐
+        │  NewState│
+        └──────────┘
+
+""", result: nil),
+        Lesson(title: "Two-way vs. one-way comparison", code: """
+❌ Two-way binding (no control)
+
+    TextField("Name", text: $viewModel.name)
+
+- TextField directly mutates the state.
+- Suitable for simple UI,
+but dangerous when:
+- State depends on complex logic
+- Has validation
+- Has business rules
+
+✅ Unidirectional
+TextField("Name", text: Binding(
+    get: { viewModel.state.name },
+    set: { viewModel.send(.nameChanged($0)) }
+))
+
+Here:
+- View does not mutate state
+- View sends action
+- Reducer handles
+- State update is centralized
+→ 100% control
 """, result: nil),
         Lesson(title: "3️⃣ @Binding — NOT a state ❗", code: """
 🧠 Correct definition
