@@ -1,0 +1,33 @@
+1. MVVM + Clean Architecture (Most Balanced)
+This is the most popular architecture and is considered the "sweet spot" for most medium to large applications.
+
+Structure: Combines MVVM (UI management) with Clean Architecture classes such as Repositories (data processing) and Use Cases (containing business logic).
+
+Why use it: * Takes good advantage of SwiftUI's @StateObject and @Observable mechanisms.
+
+Easy to learn and recruit staff because most iOS developers are familiar with it.
+
+Clear separation between logic and interface, making unit testing easier.
+
+Scaleability: Good for teams of 3-10 people.
+
+2. The Composable Architecture - TCA (Powerful & Easiest to scale for complex apps)
+If you are building a super app or an app with extremely complex state, TCA is the "champion".
+
+Structure: Based on the Redux (Unidirectional Data Flow) philosophy. Everything revolves around State, Action, and Reducer.
+
+Why use it: * Consistency: The entire app operates according to a single rule, making it extremely easy to debug.
+
+Modularity: You can break the app down into dozens of independent "Features" and assemble them like Lego pieces.
+
+Absolute testability: TCA is designed so that every line of logic is testable.
+
+Scaleability: Excellent for very large projects with multiple teams working in parallel. However, it has a very steep learning curve.
+
+3. MV (Model-View) - "Vanilla SwiftUI" (Best for small/medium-sized apps)
+Since Apple launched the Observation and SwiftData frameworks, this minimalist architecture has become increasingly powerful.
+
+Structure: Eliminates the traditional ViewModel, instead using intelligent Models (Observables) directly within the View.
+
+Why use it: Extremely concise code, maximizing SwiftUI performance without overlapping intermediate layers.
+Scale potential: Suitable for start-up projects requiring speed-to-market.
