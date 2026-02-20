@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+protocol FeatureState {
+    associatedtype State
+    associatedtype Action
+    associatedtype Effect
+}
+
+// The Composable Architecture
 @MainActor
 final class TCAPattern<State: Equatable, Action, Effect>: ObservableObject {
     @Published private(set) var state: State

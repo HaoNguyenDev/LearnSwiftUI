@@ -932,7 +932,7 @@
 			path = Excercies;
 			sourceTree = "<group>";
 		};
-		DA082EB32F4844C4005621BE /* TCA pattern */ = {
+		DA082EB32F4844C4005621BE /* The Composable Architecture  (TCA) */ = {
 			isa = PBXGroup;
 			children = (
 				DA082F162F48795B005621BE /* Generic TCA Pattern */,
@@ -949,7 +949,7 @@
 				DA082EF92F484B73005621BE /* SuccessView.swift */,
 				DA082F1B2F4879DB005621BE /* LoginFeature.swift */,
 			);
-			path = "TCA pattern";
+			path = "The Composable Architecture  (TCA)";
 			sourceTree = "<group>";
 		};
 		DA082EEE2F484B0C005621BE /* Components */ = {
@@ -1626,7 +1626,7 @@
 		DA65B7322E37D31200BF8A59 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				DA082EB32F4844C4005621BE /* TCA pattern */,
+				DA082EB32F4844C4005621BE /* The Composable Architecture  (TCA) */,
 				DA37F99E2E8EE3540001599E /* CombineFrameworkDefinition */,
 				DA37F97E2E8D85CF0001599E /* CombineAndUIKitDemo */,
 				DAA709092E75D282006F8E70 /* PaymentsApp */,

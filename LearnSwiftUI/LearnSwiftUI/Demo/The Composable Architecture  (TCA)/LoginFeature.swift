@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum LoginFeature {
+enum LoginFeature: FeatureState {
     // MARK: - 1. State
     struct State: Equatable {
         // Field values
