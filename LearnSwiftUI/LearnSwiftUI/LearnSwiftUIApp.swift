@@ -16,7 +16,8 @@ struct LearnSwiftUIApp: App {
     @State private var appSettings = AppSettings.shared
     var body: some Scene {
         WindowGroup {
-            AppCoordinator()
+//            AppCoordinator()
+            LoginView()
 //            TextBootCamp()
 //            ShapesBootCamp()
 //            ColorsBootcamp()
