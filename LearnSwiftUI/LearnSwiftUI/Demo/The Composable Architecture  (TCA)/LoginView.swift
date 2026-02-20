@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
-    @StateObject private var viewModel = LoginViewModel()
+    @StateObject private var viewModel = TCAPattern(initialState: LoginFeature.State(),
+                                                    reducer: LoginFeature.reduce,
+                                                    effectHandler: LoginFeature.handleEffect)
     @State private var showSuccess = false
 
     var body: some View {
