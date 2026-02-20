@@ -32,6 +32,8 @@
 		DA082EEB2F484AF2005621BE /* PasswordStrengthBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082EEA2F484AF2005621BE /* PasswordStrengthBar.swift */; };
 		DA082EF62F484B5C005621BE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082EF52F484B5C005621BE /* LoginView.swift */; };
 		DA082EFA2F484B73005621BE /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082EF92F484B73005621BE /* SuccessView.swift */; };
+		DA082F192F487982005621BE /* TCAPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082F182F487982005621BE /* TCAPattern.swift */; };
+		DA082F1C2F4879DB005621BE /* LoginFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082F1B2F4879DB005621BE /* LoginFeature.swift */; };
 		DA0B4AE72E6FC9A400628E53 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */; };
 		DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */; };
 		DA0B4AEB2E6FCBB700628E53 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */; };
@@ -431,6 +433,8 @@
 		DA082EEA2F484AF2005621BE /* PasswordStrengthBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStrengthBar.swift; sourceTree = "<group>"; };
 		DA082EF52F484B5C005621BE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		DA082EF92F484B73005621BE /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
+		DA082F182F487982005621BE /* TCAPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAPattern.swift; sourceTree = "<group>"; };
+		DA082F1B2F4879DB005621BE /* LoginFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFeature.swift; sourceTree = "<group>"; };
 		DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
 		DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
@@ -931,6 +935,7 @@
 		DA082EB32F4844C4005621BE /* TCA pattern */ = {
 			isa = PBXGroup;
 			children = (
+				DA082F162F48795B005621BE /* Generic TCA Pattern */,
 				DA082EB42F4844E1005621BE /* LoginState.swift */,
 				DA082EB82F484561005621BE /* LoginAction.swift */,
 				DA082EC02F4845A2005621BE /* LoginError.swift */,
@@ -942,6 +947,7 @@
 				DA082EDA2F484A31005621BE /* LoginViewModel.swift */,
 				DA082EF52F484B5C005621BE /* LoginView.swift */,
 				DA082EF92F484B73005621BE /* SuccessView.swift */,
+				DA082F1B2F4879DB005621BE /* LoginFeature.swift */,
 			);
 			path = "TCA pattern";
 			sourceTree = "<group>";
@@ -954,6 +960,14 @@
 				DA082EEA2F484AF2005621BE /* PasswordStrengthBar.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		DA082F162F48795B005621BE /* Generic TCA Pattern */ = {
+			isa = PBXGroup;
+			children = (
+				DA082F182F487982005621BE /* TCAPattern.swift */,
+			);
+			path = "Generic TCA Pattern";
 			sourceTree = "<group>";
 		};
 		DA0B4AE52E6FC96800628E53 /* MultiDownloadApp */ = {
@@ -2703,6 +2717,7 @@
 				DA5476E72EB3A4A8005C8868 /* ViewToTestClass.swift in Sources */,
 				DA61C5662F0CD15E00FD8181 /* TextLessons.swift in Sources */,
 				DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */,
+				DA082F1C2F4879DB005621BE /* LoginFeature.swift in Sources */,
 				DABC5FCC2F27B2D300957964 /* NavigationBootcampCoordinator.swift in Sources */,
 				DA257EFC2F2E0BAB0024DC9B /* TimelineAnimationExample.swift in Sources */,
 				DA8656D32F0F75FA0092426E /* ScrollViewLazyContainersBootcamp.swift in Sources */,
@@ -2867,6 +2882,7 @@
 				DAA609CE2F129EDE00B625CE /* AnimationLayoutInteractionBootcamp.swift in Sources */,
 				DA6DB8A12F2F6DF8001781BD /* ProfileViewViewBuilderExample.swift in Sources */,
 				DAA609CB2F129E7B00B625CE /* AnimationLayoutInteractionLessons.swift in Sources */,
+				DA082F192F487982005621BE /* TCAPattern.swift in Sources */,
 				DA3F45532F39B119008F50AB /* LifecycleDemo.swift in Sources */,
 				DAE365BD2E9CC288005EF803 /* DarkTheme.swift in Sources */,
 				DA5A80952F3F558300531852 /* CustomEnvironmentKeyExcercies.swift in Sources */,
