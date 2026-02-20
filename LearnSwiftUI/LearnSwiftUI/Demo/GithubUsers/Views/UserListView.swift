@@ -105,7 +105,7 @@ struct GHUserList: View {
     var body: some View {
         ScrollView {
             LazyVStack {
-                ForEach(users) { user in
+                ForEach(users, id: \.id) { user in
                     UserRowView(user: user, showDetailFor: didTapUser)
                         .onAppear {
                             if user.id == users.last?.id {
