@@ -35,6 +35,7 @@
 		DA082F192F487982005621BE /* TCAPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082F182F487982005621BE /* TCAPattern.swift */; };
 		DA082F1C2F4879DB005621BE /* LoginFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082F1B2F4879DB005621BE /* LoginFeature.swift */; };
 		DA082F2B2F48A558005621BE /* SwiftUI-Architectures.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA082F2A2F48A558005621BE /* SwiftUI-Architectures.txt */; };
+		DA082F392F48B752005621BE /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = DA082F382F48B752005621BE /* ComposableArchitecture */; };
 		DA0B4AE72E6FC9A400628E53 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */; };
 		DA0B4AE92E6FCBA800628E53 /* DownloadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */; };
 		DA0B4AEB2E6FCBB700628E53 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AEA2E6FCBB600628E53 /* DownloadView.swift */; };
@@ -362,6 +363,7 @@
 		DAE366252E9D1047005EF803 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE366242E9D1047005EF803 /* AppSettings.swift */; };
 		DAE676E82E9552D900F3D956 /* AppSecurity.txt in Resources */ = {isa = PBXBuildFile; fileRef = DAE676E72E9552D900F3D956 /* AppSecurity.txt */; };
 		DAEA78AA2EA27FC4001C1F26 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA78A92EA27FC4001C1F26 /* KeychainService.swift */; };
+		DAEB391B2F49C02300778B1F /* TCACounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB391A2F49C02300778B1F /* TCACounterFeature.swift */; };
 		DAEB64D92F3CC29800929CA6 /* EnvironmentLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB64D82F3CC29800929CA6 /* EnvironmentLesson.swift */; };
 		DAEB64DD2F3CC31100929CA6 /* EnvironmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB64DC2F3CC31100929CA6 /* EnvironmentBootcamp.swift */; };
 		DAEB64F42F3CC86D00929CA6 /* EnvironmentDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB64F32F3CC86D00929CA6 /* EnvironmentDemo.swift */; };
@@ -784,6 +786,7 @@
 		DAE676E42E914AFE00F3D956 /* CombineFramework.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombineFramework.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAE676E72E9552D900F3D956 /* AppSecurity.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppSecurity.txt; sourceTree = "<group>"; };
 		DAEA78A92EA27FC4001C1F26 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		DAEB391A2F49C02300778B1F /* TCACounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCACounterFeature.swift; sourceTree = "<group>"; };
 		DAEB64D82F3CC29800929CA6 /* EnvironmentLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentLesson.swift; sourceTree = "<group>"; };
 		DAEB64DC2F3CC31100929CA6 /* EnvironmentBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentBootcamp.swift; sourceTree = "<group>"; };
 		DAEB64F32F3CC86D00929CA6 /* EnvironmentDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentDemo.swift; sourceTree = "<group>"; };
@@ -825,6 +828,7 @@
 			files = (
 				DA5476822EB33E88005C8868 /* Alamofire in Frameworks */,
 				DA1D081B2E9D282100B76DFD /* KeychainAccess in Frameworks */,
+				DA082F392F48B752005621BE /* ComposableArchitecture in Frameworks */,
 				DA37F9952E8D8E3E0001599E /* CombineCocoa in Frameworks */,
 				DA5D71932E3FBB7C00C78E40 /* SDWebImageSwiftUI in Frameworks */,
 				DA7BF5E22E98F1FB00224BCF /* RswiftLibrary in Frameworks */,
@@ -937,19 +941,7 @@
 		DA082EB32F4844C4005621BE /* The Composable Architecture  (TCA) */ = {
 			isa = PBXGroup;
 			children = (
-				DA082F162F48795B005621BE /* Generic TCA Pattern */,
-				DA082EB42F4844E1005621BE /* LoginState.swift */,
-				DA082EB82F484561005621BE /* LoginAction.swift */,
-				DA082EC02F4845A2005621BE /* LoginError.swift */,
-				DA082EBC2F484593005621BE /* LoginResult.swift */,
-				DA082EC82F484683005621BE /* LoginReducer.swift */,
-				DA082ECE2F4847B6005621BE /* Validator.swift */,
-				DA082ED42F484848005621BE /* PasswordStrength.swift */,
-				DA082EEE2F484B0C005621BE /* Components */,
-				DA082EDA2F484A31005621BE /* LoginViewModel.swift */,
-				DA082EF52F484B5C005621BE /* LoginView.swift */,
-				DA082EF92F484B73005621BE /* SuccessView.swift */,
-				DA082F1B2F4879DB005621BE /* LoginFeature.swift */,
+				DA082F162F48795B005621BE /* Xample TCA Pattern */,
 			);
 			path = "The Composable Architecture  (TCA)";
 			sourceTree = "<group>";
@@ -964,12 +956,32 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		DA082F162F48795B005621BE /* Generic TCA Pattern */ = {
+		DA082F162F48795B005621BE /* Xample TCA Pattern */ = {
 			isa = PBXGroup;
 			children = (
 				DA082F182F487982005621BE /* TCAPattern.swift */,
+				DA082F412F48BA92005621BE /* Login Demo */,
 			);
-			path = "Generic TCA Pattern";
+			path = "Xample TCA Pattern";
+			sourceTree = "<group>";
+		};
+		DA082F412F48BA92005621BE /* Login Demo */ = {
+			isa = PBXGroup;
+			children = (
+				DA082EB42F4844E1005621BE /* LoginState.swift */,
+				DA082EB82F484561005621BE /* LoginAction.swift */,
+				DA082EC02F4845A2005621BE /* LoginError.swift */,
+				DA082EBC2F484593005621BE /* LoginResult.swift */,
+				DA082EC82F484683005621BE /* LoginReducer.swift */,
+				DA082ECE2F4847B6005621BE /* Validator.swift */,
+				DA082ED42F484848005621BE /* PasswordStrength.swift */,
+				DA082EDA2F484A31005621BE /* LoginViewModel.swift */,
+				DA082EF52F484B5C005621BE /* LoginView.swift */,
+				DA082EF92F484B73005621BE /* SuccessView.swift */,
+				DA082F1B2F4879DB005621BE /* LoginFeature.swift */,
+				DA082EEE2F484B0C005621BE /* Components */,
+			);
+			path = "Login Demo";
 			sourceTree = "<group>";
 		};
 		DA0B4AE52E6FC96800628E53 /* MultiDownloadApp */ = {
@@ -2175,6 +2187,7 @@
 				DA6027952EA3D88800271E00 /* MVVM */,
 				DA7BE09A2E805F33006821CE /* VIPER */,
 				DAAE8CBC2E45028300FCBA4E /* CounterState.swift */,
+				DAEB39122F49BFDC00778B1F /* The Composable Architecture (TCA) */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -2367,6 +2380,14 @@
 			path = KeychainAccess;
 			sourceTree = "<group>";
 		};
+		DAEB39122F49BFDC00778B1F /* The Composable Architecture (TCA) */ = {
+			isa = PBXGroup;
+			children = (
+				DAEB391A2F49C02300778B1F /* TCACounterFeature.swift */,
+			);
+			path = "The Composable Architecture (TCA)";
+			sourceTree = "<group>";
+		};
 		DAEB64D72F3CC28300929CA6 /* Environment System */ = {
 			isa = PBXGroup;
 			children = (
@@ -2471,6 +2492,7 @@
 				DA7BF5E12E98F1FB00224BCF /* RswiftLibrary */,
 				DA1D081A2E9D282100B76DFD /* KeychainAccess */,
 				DA5476812EB33E88005C8868 /* Alamofire */,
+				DA082F382F48B752005621BE /* ComposableArchitecture */,
 			);
 			productName = LearnSwiftUI;
 			productReference = DA415E4F2DE5BF26009F515E /* LearnSwiftUI.app */;
@@ -2506,6 +2528,7 @@
 				DA7BF5E02E98F1FB00224BCF /* XCRemoteSwiftPackageReference "R.swift" */,
 				DA1D08192E9D282100B76DFD /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				DA5476802EB33E88005C8868 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				DA082F372F48B752005621BE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DA415E502DE5BF26009F515E /* Products */;
@@ -2889,6 +2912,7 @@
 				DA082F192F487982005621BE /* TCAPattern.swift in Sources */,
 				DA3F45532F39B119008F50AB /* LifecycleDemo.swift in Sources */,
 				DAE365BD2E9CC288005EF803 /* DarkTheme.swift in Sources */,
+				DAEB391B2F49C02300778B1F /* TCACounterFeature.swift in Sources */,
 				DA5A80952F3F558300531852 /* CustomEnvironmentKeyExcercies.swift in Sources */,
 				DA64B7C82F2BA73F00144CC6 /* AdvancedAnimationBootcampCoordinator.swift in Sources */,
 				DAE365BE2E9CC288005EF803 /* DarkThemeAssets.swift in Sources */,
@@ -3247,6 +3271,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DA082F372F48B752005621BE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.23.2;
+			};
+		};
 		DA1D08192E9D282100B76DFD /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
@@ -3290,6 +3322,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DA082F382F48B752005621BE /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA082F372F48B752005621BE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
 		DA1D081A2E9D282100B76DFD /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DA1D08192E9D282100B76DFD /* XCRemoteSwiftPackageReference "KeychainAccess" */;
