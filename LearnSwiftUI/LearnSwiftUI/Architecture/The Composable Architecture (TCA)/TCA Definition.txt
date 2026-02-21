@@ -1,0 +1,108 @@
+What is TCA?
+- The Composable Architecture (TCA) is a Swift library developed by Point-Free
+that helps you build applications with unidirectional data flow.
+https://github.com/pointfreeco/swift-composable-architecture.git
+import ComposableArchitecture
+
+Why use TCA?
+
+Common Problems                            |   	How TCA Solves Them
+  	
+State is fragmented and difficult to track |   	A single, clear State for each feature
+Side effects are difficult to control      |   	Effects are centrally managed
+Complex navigation                         |   	Navigation is modeled through state
+Difficult to test UI logic                 |   	TestStore allows testing each action
+Component reuse is difficult               |   	Each feature is an independent, composable
+
+Reducer
+    ↓
+Action (enum)
+    ↓
+Reducer (State + Action → State, Effect)
+    ↓
+New State → View re-render
+    ↓
+Effect (async, side-effect) → Resend Action
+
+Core Concepts
+
+"State"
+A struct describes all the data of a feature.
+
+@ObservableState
+struct State: Equatable {
+	var count: Int = 0
+	var isLoading: Bool = false
+	var user: User? = nil
+}
+
+@ObservableState (TCA 1.7+): used instead of the Equatable boilerplate, allowing SwiftUI to re-render only when needed.
+
+"Action"
+An enum describes everything that can happen in a feature.
+
+enum Action {
+    case incrementTapped
+    case decrementTapped
+    case fetchUser
+    case userResponse(Result<User, Error>)
+}
+
+"Reducer"
+Logic that handles the action, returning the new state and effects.
+
+@Reducer
+struct CounterFeature {
+    @ObservableState
+    struct State: Equatable { ... }
+    
+    enum Action { ... }
+    
+    var body: some ReducerOf<Self> {
+        Reduce { state, action in
+            switch action {
+            case .incrementTapped:
+                state.count += 1
+                return .none
+            case .decrementTapped:
+                state.count -= 1
+                return .none
+            }
+        }
+    }
+}
+
+"Store"
+The place where state is stored, actions are dispatched, and effects are run.
+
+// Create store
+let store = Store(initialState: CounterFeature.State()) {
+    CounterFeature()
+}
+
+// SwiftUI
+@main
+struct MyApp: App {
+    var body: some Scene {
+        WindowGroup {
+            CounterView(store: Store(initialState: CounterFeature.State()) {
+                CounterFeature()
+            })
+        }
+    }
+}
+
+"Effect"
+Represents side effects (API call, timer, notification...)
+
+// No effect
+return .none
+
+// Run async task
+return .run { send in
+    let user = try await apiClient.fetchUser(id: 1)
+    await send(.userResponse(.success(user)))
+}
+
+// Cancel effect
+return .cancel(id: CancelID.fetchUser)

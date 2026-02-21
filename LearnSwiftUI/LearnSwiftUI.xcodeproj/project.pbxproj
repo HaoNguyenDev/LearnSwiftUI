@@ -364,6 +364,7 @@
 		DAE676E82E9552D900F3D956 /* AppSecurity.txt in Resources */ = {isa = PBXBuildFile; fileRef = DAE676E72E9552D900F3D956 /* AppSecurity.txt */; };
 		DAEA78AA2EA27FC4001C1F26 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA78A92EA27FC4001C1F26 /* KeychainService.swift */; };
 		DAEB391B2F49C02300778B1F /* TCACounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB391A2F49C02300778B1F /* TCACounterFeature.swift */; };
+		DAEB39342F4A02BA00778B1F /* TCA Definition.txt in Resources */ = {isa = PBXBuildFile; fileRef = DAEB39332F4A02BA00778B1F /* TCA Definition.txt */; };
 		DAEB64D92F3CC29800929CA6 /* EnvironmentLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB64D82F3CC29800929CA6 /* EnvironmentLesson.swift */; };
 		DAEB64DD2F3CC31100929CA6 /* EnvironmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB64DC2F3CC31100929CA6 /* EnvironmentBootcamp.swift */; };
 		DAEB64F42F3CC86D00929CA6 /* EnvironmentDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB64F32F3CC86D00929CA6 /* EnvironmentDemo.swift */; };
@@ -787,6 +788,7 @@
 		DAE676E72E9552D900F3D956 /* AppSecurity.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppSecurity.txt; sourceTree = "<group>"; };
 		DAEA78A92EA27FC4001C1F26 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		DAEB391A2F49C02300778B1F /* TCACounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCACounterFeature.swift; sourceTree = "<group>"; };
+		DAEB39332F4A02BA00778B1F /* TCA Definition.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "TCA Definition.txt"; sourceTree = "<group>"; };
 		DAEB64D82F3CC29800929CA6 /* EnvironmentLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentLesson.swift; sourceTree = "<group>"; };
 		DAEB64DC2F3CC31100929CA6 /* EnvironmentBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentBootcamp.swift; sourceTree = "<group>"; };
 		DAEB64F32F3CC86D00929CA6 /* EnvironmentDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentDemo.swift; sourceTree = "<group>"; };
@@ -2383,6 +2385,7 @@
 		DAEB39122F49BFDC00778B1F /* The Composable Architecture (TCA) */ = {
 			isa = PBXGroup;
 			children = (
+				DAEB39332F4A02BA00778B1F /* TCA Definition.txt */,
 				DAEB391A2F49C02300778B1F /* TCACounterFeature.swift */,
 			);
 			path = "The Composable Architecture (TCA)";
@@ -2559,6 +2562,7 @@
 				DA7BF60A2E99003A00224BCF /* TT Hoves Pro Trial DemiBold.ttf in Resources */,
 				DA415E682DE5BFAB009F515E /* Preview Assets.xcassets in Resources */,
 				DA8F78A22E883F0300826FB2 /* SwiftUI.txt in Resources */,
+				DAEB39342F4A02BA00778B1F /* TCA Definition.txt in Resources */,
 				DA13CE212E89999B005B6D2D /* MVVM.txt in Resources */,
 				DA415E692DE5BFAB009F515E /* Assets.xcassets in Resources */,
 				DA37F9972E8D8FBB0001599E /* CbLoginViewController.xib in Resources */,
