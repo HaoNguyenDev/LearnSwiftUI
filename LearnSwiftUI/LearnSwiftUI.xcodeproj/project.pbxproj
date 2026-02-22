@@ -19,21 +19,6 @@
 		DA051B312F402B61003F3BAA /* ObservableMacroLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA051B302F402B61003F3BAA /* ObservableMacroLesson.swift */; };
 		DA051B352F402B9C003F3BAA /* ObservableMacroBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA051B342F402B9C003F3BAA /* ObservableMacroBootcamp.swift */; };
 		DA051B422F40C2E4003F3BAA /* DemoObservableVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA051B412F40C2E4003F3BAA /* DemoObservableVM.swift */; };
-		DA082EB52F4844E1005621BE /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082EB42F4844E1005621BE /* LoginState.swift */; };
-		DA082EB92F484561005621BE /* LoginAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082EB82F484561005621BE /* LoginAction.swift */; };
-		DA082EBD2F484593005621BE /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082EBC2F484593005621BE /* LoginResult.swift */; };
-		DA082EC12F4845A2005621BE /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082EC02F4845A2005621BE /* LoginError.swift */; };
-		DA082EC92F484683005621BE /* LoginReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082EC82F484683005621BE /* LoginReducer.swift */; };
-		DA082ECF2F4847B6005621BE /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082ECE2F4847B6005621BE /* Validator.swift */; };
-		DA082ED52F484848005621BE /* PasswordStrength.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082ED42F484848005621BE /* PasswordStrength.swift */; };
-		DA082EDB2F484A31005621BE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082EDA2F484A31005621BE /* LoginViewModel.swift */; };
-		DA082EDF2F484ABF005621BE /* ValidatedEmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082EDE2F484ABF005621BE /* ValidatedEmailTextField.swift */; };
-		DA082EE62F484ACF005621BE /* ValidatedSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082EE52F484ACF005621BE /* ValidatedSecureField.swift */; };
-		DA082EEB2F484AF2005621BE /* PasswordStrengthBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082EEA2F484AF2005621BE /* PasswordStrengthBar.swift */; };
-		DA082EF62F484B5C005621BE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082EF52F484B5C005621BE /* LoginView.swift */; };
-		DA082EFA2F484B73005621BE /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082EF92F484B73005621BE /* SuccessView.swift */; };
-		DA082F192F487982005621BE /* TCAPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082F182F487982005621BE /* TCAPattern.swift */; };
-		DA082F1C2F4879DB005621BE /* LoginFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082F1B2F4879DB005621BE /* LoginFeature.swift */; };
 		DA082F2B2F48A558005621BE /* SwiftUI-Architectures.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA082F2A2F48A558005621BE /* SwiftUI-Architectures.txt */; };
 		DA082F392F48B752005621BE /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = DA082F382F48B752005621BE /* ComposableArchitecture */; };
 		DA0B4AE72E6FC9A400628E53 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */; };
@@ -424,21 +409,6 @@
 		DA051B302F402B61003F3BAA /* ObservableMacroLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableMacroLesson.swift; sourceTree = "<group>"; };
 		DA051B342F402B9C003F3BAA /* ObservableMacroBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableMacroBootcamp.swift; sourceTree = "<group>"; };
 		DA051B412F40C2E4003F3BAA /* DemoObservableVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoObservableVM.swift; sourceTree = "<group>"; };
-		DA082EB42F4844E1005621BE /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
-		DA082EB82F484561005621BE /* LoginAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAction.swift; sourceTree = "<group>"; };
-		DA082EBC2F484593005621BE /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
-		DA082EC02F4845A2005621BE /* LoginError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginError.swift; sourceTree = "<group>"; };
-		DA082EC82F484683005621BE /* LoginReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReducer.swift; sourceTree = "<group>"; };
-		DA082ECE2F4847B6005621BE /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
-		DA082ED42F484848005621BE /* PasswordStrength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStrength.swift; sourceTree = "<group>"; };
-		DA082EDA2F484A31005621BE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		DA082EDE2F484ABF005621BE /* ValidatedEmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatedEmailTextField.swift; sourceTree = "<group>"; };
-		DA082EE52F484ACF005621BE /* ValidatedSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatedSecureField.swift; sourceTree = "<group>"; };
-		DA082EEA2F484AF2005621BE /* PasswordStrengthBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStrengthBar.swift; sourceTree = "<group>"; };
-		DA082EF52F484B5C005621BE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		DA082EF92F484B73005621BE /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
-		DA082F182F487982005621BE /* TCAPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAPattern.swift; sourceTree = "<group>"; };
-		DA082F1B2F4879DB005621BE /* LoginFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFeature.swift; sourceTree = "<group>"; };
 		DA082F2A2F48A558005621BE /* SwiftUI-Architectures.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SwiftUI-Architectures.txt"; sourceTree = "<group>"; };
 		DA0B4AE62E6FC9A400628E53 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		DA0B4AE82E6FCBA800628E53 /* DownloadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewModel.swift; sourceTree = "<group>"; };
@@ -938,52 +908,6 @@
 				DAD527CB2F41AF6F006C8B6B /* VM */,
 			);
 			path = Excercies;
-			sourceTree = "<group>";
-		};
-		DA082EB32F4844C4005621BE /* The Composable Architecture  (TCA) */ = {
-			isa = PBXGroup;
-			children = (
-				DA082F162F48795B005621BE /* Xample TCA Pattern */,
-			);
-			path = "The Composable Architecture  (TCA)";
-			sourceTree = "<group>";
-		};
-		DA082EEE2F484B0C005621BE /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				DA082EDE2F484ABF005621BE /* ValidatedEmailTextField.swift */,
-				DA082EE52F484ACF005621BE /* ValidatedSecureField.swift */,
-				DA082EEA2F484AF2005621BE /* PasswordStrengthBar.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		DA082F162F48795B005621BE /* Xample TCA Pattern */ = {
-			isa = PBXGroup;
-			children = (
-				DA082F182F487982005621BE /* TCAPattern.swift */,
-				DA082F412F48BA92005621BE /* Login Demo */,
-			);
-			path = "Xample TCA Pattern";
-			sourceTree = "<group>";
-		};
-		DA082F412F48BA92005621BE /* Login Demo */ = {
-			isa = PBXGroup;
-			children = (
-				DA082EB42F4844E1005621BE /* LoginState.swift */,
-				DA082EB82F484561005621BE /* LoginAction.swift */,
-				DA082EC02F4845A2005621BE /* LoginError.swift */,
-				DA082EBC2F484593005621BE /* LoginResult.swift */,
-				DA082EC82F484683005621BE /* LoginReducer.swift */,
-				DA082ECE2F4847B6005621BE /* Validator.swift */,
-				DA082ED42F484848005621BE /* PasswordStrength.swift */,
-				DA082EDA2F484A31005621BE /* LoginViewModel.swift */,
-				DA082EF52F484B5C005621BE /* LoginView.swift */,
-				DA082EF92F484B73005621BE /* SuccessView.swift */,
-				DA082F1B2F4879DB005621BE /* LoginFeature.swift */,
-				DA082EEE2F484B0C005621BE /* Components */,
-			);
-			path = "Login Demo";
 			sourceTree = "<group>";
 		};
 		DA0B4AE52E6FC96800628E53 /* MultiDownloadApp */ = {
@@ -1642,7 +1566,6 @@
 		DA65B7322E37D31200BF8A59 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				DA082EB32F4844C4005621BE /* The Composable Architecture  (TCA) */,
 				DA37F99E2E8EE3540001599E /* CombineFrameworkDefinition */,
 				DA37F97E2E8D85CF0001599E /* CombineAndUIKitDemo */,
 				DAA709092E75D282006F8E70 /* PaymentsApp */,
@@ -2585,13 +2508,11 @@
 				DA86566F2F0E1AA50092426E /* AlignmentLessons.swift in Sources */,
 				DA7BF5D72E98ED4000224BCF /* DefaultTheme.swift in Sources */,
 				DA415E8D2DE5CD41009F515E /* ColorsBootcamp.swift in Sources */,
-				DA082EF62F484B5C005621BE /* LoginView.swift in Sources */,
 				DAA45E452EF931B700BC57E9 /* Route.swift in Sources */,
 				DA499D322F435AC00067777A /* AppStorageCentralizeKeys.swift in Sources */,
 				DA051B352F402B9C003F3BAA /* ObservableMacroBootcamp.swift in Sources */,
 				DA7BE0AC2E8060A8006821CE /* LoginEntity.swift in Sources */,
 				DAA7091F2E75E2CC006F8E70 /* ResultAndError.swift in Sources */,
-				DA082EDB2F484A31005621BE /* LoginViewModel.swift in Sources */,
 				DA6075112EFE99AB002907E4 /* CodePreviewContainer.swift in Sources */,
 				DAFC16942F1139C500D242D3 /* ScrollAnimationViewDemo.swift in Sources */,
 				DA87FDBE2F44C8F400EF13F4 /* DemoSideMenuView.swift in Sources */,
@@ -2650,13 +2571,11 @@
 				DAA45E6B2EF974A000BC57E9 /* AppCoordinator.swift in Sources */,
 				DA54769E2EB34A47005C8868 /* Encodable.swift in Sources */,
 				DA723C8E2F25FC5D009BEC1C /* DemoRedrawList.swift in Sources */,
-				DA082EFA2F484B73005621BE /* SuccessView.swift in Sources */,
 				DAEBAE462DF11C7300082B1C /* ButtonBootcamp.swift in Sources */,
 				DAC35AE72E9F87230019021D /* GitHubAPIEndpointEnum.swift in Sources */,
 				DA9614FE2F1CAD4C00AEEB25 /* JumpAnimationBehaviorExample.swift in Sources */,
 				DA7BF5CC2E98EC4100224BCF /* ThemeManager.swift in Sources */,
 				DA5D719E2E40940400C78E40 /* GithubUserListVM.swift in Sources */,
-				DA082EB92F484561005621BE /* LoginAction.swift in Sources */,
 				DA415E912DE5DF63009F515E /* GradientsColorBootcamp.swift in Sources */,
 				DA5D718B2E3FB25700C78E40 /* UserListView.swift in Sources */,
 				DAAE8CBA2E44BDFF00FCBA4E /* FormView.swift in Sources */,
@@ -2689,9 +2608,7 @@
 				DA499E4F2F4372DA0067777A /* BindingAdvancedPatternLesson.swift in Sources */,
 				DA6DB8E12F2FA692001781BD /* StableIdentityViewExample.swift in Sources */,
 				DA37F9872E8D898B0001599E /* CbLoginResult.swift in Sources */,
-				DA082EE62F484ACF005621BE /* ValidatedSecureField.swift in Sources */,
 				DA8656C62F0F75750092426E /* GeometryReaderBootcamp.swift in Sources */,
-				DA082EDF2F484ABF005621BE /* ValidatedEmailTextField.swift in Sources */,
 				DA8656C72F0F75750092426E /* GeometryReaderCoordinateSpaceBootcampCoordinator.swift in Sources */,
 				DA8D9CC22F3865C5004529FF /* StyledContainerExample.swift in Sources */,
 				DA723CEA2F264DEB009BEC1C /* BootcampTemplateView.swift in Sources */,
@@ -2699,7 +2616,6 @@
 				DA8656C82F0F75750092426E /* GeometryReaderCoordinateSpaceLessons.swift in Sources */,
 				DA54774E2EB658E6005C8868 /* AlamofireTestView.swift in Sources */,
 				DA61C55C2F0CCF0500FD8181 /* SwiftUILayoutEngineLessons.swift in Sources */,
-				DA082EC12F4845A2005621BE /* LoginError.swift in Sources */,
 				DAA45E742EF976EA00BC57E9 /* BootcampListView.swift in Sources */,
 				DA58DDAD2E9E7B2C0042D1AD /* BackgroundViewModifiers.swift in Sources */,
 				DA257EEB2F2E08BB0024DC9B /* PulsingCircle.swift in Sources */,
@@ -2748,7 +2664,6 @@
 				DA5476E72EB3A4A8005C8868 /* ViewToTestClass.swift in Sources */,
 				DA61C5662F0CD15E00FD8181 /* TextLessons.swift in Sources */,
 				DA415E672DE5BFAB009F515E /* LearnSwiftUIApp.swift in Sources */,
-				DA082F1C2F4879DB005621BE /* LoginFeature.swift in Sources */,
 				DABC5FCC2F27B2D300957964 /* NavigationBootcampCoordinator.swift in Sources */,
 				DA257EFC2F2E0BAB0024DC9B /* TimelineAnimationExample.swift in Sources */,
 				DA8656D32F0F75FA0092426E /* ScrollViewLazyContainersBootcamp.swift in Sources */,
@@ -2780,7 +2695,6 @@
 				DA7BF5E62E98F2B400224BCF /* RswiftResources+ImageResource.swift in Sources */,
 				DAA709142E75D553006F8E70 /* ThaiPaymentService.swift in Sources */,
 				DA723CE62F264DBB009BEC1C /* BootcampTemplateLesson.swift in Sources */,
-				DA082EC92F484683005621BE /* LoginReducer.swift in Sources */,
 				DA5A80862F3F1A4200531852 /* EnvironmentEnvironmentObjectBootcamp.swift in Sources */,
 				DA3F45402F39A88B008F50AB /* ModifiersViewProtocolLesson.swift in Sources */,
 				DA8D9D1E2F38DC57004529FF /* CombineStackViewExample.swift in Sources */,
@@ -2820,7 +2734,6 @@
 				DAE365A42E9CC23B005EF803 /* DefaultThemeColors.swift in Sources */,
 				DA03DFB22F23BC400080D104 /* RenderingPerformanceBootcamp.swift in Sources */,
 				DA1F27832E37A8C300295829 /* NavigationViewBootcamp.swift in Sources */,
-				DA082EB52F4844E1005621BE /* LoginState.swift in Sources */,
 				DAA709122E75D447006F8E70 /* MomoPaymentService.swift in Sources */,
 				DAA709252E787C52006F8E70 /* TransactionResult.swift in Sources */,
 				DA5477A22EB7983D005C8868 /* FakeStoreCommonRequest.swift in Sources */,
@@ -2831,7 +2744,6 @@
 				DA257EE52F2E06B70024DC9B /* PhaseAnimationExample.swift in Sources */,
 				DAA7090F2E75D3CE006F8E70 /* PaymentServiceProtocol.swift in Sources */,
 				DAC35AF32E9F88FA0019021D /* UserListViewModel.swift in Sources */,
-				DA082ED52F484848005621BE /* PasswordStrength.swift in Sources */,
 				DA5D71A02E40CC8300C78E40 /* AsyncAwaitBootcamp.swift in Sources */,
 				DA5D71432E3E4BF700C78E40 /* BackButton.swift in Sources */,
 				DA6DB8CE2F2FA3B0001781BD /* CounterViewExample.swift in Sources */,
@@ -2876,7 +2788,6 @@
 				DAA709222E787C42006F8E70 /* PaymentVM.swift in Sources */,
 				DA03DEF42F20A8CA0080D104 /* BodyRecomputeDemo.swift in Sources */,
 				DAEBAE062DE9C2F800082B1C /* FrameBootcamp.swift in Sources */,
-				DA082EEB2F484AF2005621BE /* PasswordStrengthBar.swift in Sources */,
 				DAFC16722F11240C00D242D3 /* StickyHeaderViewDemo.swift in Sources */,
 				DA6075272EFE9AC7002907E4 /* ResultBlockView.swift in Sources */,
 				DAA609672F12328E00B625CE /* SafeAreaInsetsBootcamp.swift in Sources */,
@@ -2894,7 +2805,6 @@
 				DA60279D2EA3D9A400271E00 /* MVVMDemoUIKit_ViewModel.swift in Sources */,
 				DA415E952DE5E707009F515E /* ImagesBootcamp.swift in Sources */,
 				DA5C98B62E391F4B007AC9E9 /* TodoAppView.swift in Sources */,
-				DA082EBD2F484593005621BE /* LoginResult.swift in Sources */,
 				DA28F59F2F1F786000079318 /* ViewIdentityLessons.swift in Sources */,
 				DAC35B102E9F91520019021D /* UserListViewController.swift in Sources */,
 				DA5477012EB4EBA7005C8868 /* AuthService.swift in Sources */,
@@ -2913,7 +2823,6 @@
 				DAA609CE2F129EDE00B625CE /* AnimationLayoutInteractionBootcamp.swift in Sources */,
 				DA6DB8A12F2F6DF8001781BD /* ProfileViewViewBuilderExample.swift in Sources */,
 				DAA609CB2F129E7B00B625CE /* AnimationLayoutInteractionLessons.swift in Sources */,
-				DA082F192F487982005621BE /* TCAPattern.swift in Sources */,
 				DA3F45532F39B119008F50AB /* LifecycleDemo.swift in Sources */,
 				DAE365BD2E9CC288005EF803 /* DarkTheme.swift in Sources */,
 				DAEB391B2F49C02300778B1F /* TCACounterFeature.swift in Sources */,
@@ -2940,7 +2849,6 @@
 				DAA930402E33C99C000FE238 /* ButtonModifier.swift in Sources */,
 				DA5C98BA2E39237C007AC9E9 /* TodoRowView.swift in Sources */,
 				DAEA78AA2EA27FC4001C1F26 /* KeychainService.swift in Sources */,
-				DA082ECF2F4847B6005621BE /* Validator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
