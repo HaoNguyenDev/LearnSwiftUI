@@ -350,7 +350,6 @@
 		DAEB391B2F49C02300778B1F /* TCACounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB391A2F49C02300778B1F /* TCACounterFeature.swift */; };
 		DAEB39342F4A02BA00778B1F /* TCA Definition.txt in Resources */ = {isa = PBXBuildFile; fileRef = DAEB39332F4A02BA00778B1F /* TCA Definition.txt */; };
 		DAEB394B2F4B51B700778B1F /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB394A2F4B51B700778B1F /* CounterFeature.swift */; };
-		DAEB394F2F4B539D00778B1F /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB394E2F4B539D00778B1F /* CounterView.swift */; };
 		DAEB64D92F3CC29800929CA6 /* EnvironmentLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB64D82F3CC29800929CA6 /* EnvironmentLesson.swift */; };
 		DAEB64DD2F3CC31100929CA6 /* EnvironmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB64DC2F3CC31100929CA6 /* EnvironmentBootcamp.swift */; };
 		DAEB64F42F3CC86D00929CA6 /* EnvironmentDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB64F32F3CC86D00929CA6 /* EnvironmentDemo.swift */; };
@@ -760,7 +759,6 @@
 		DAEB391A2F49C02300778B1F /* TCACounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCACounterFeature.swift; sourceTree = "<group>"; };
 		DAEB39332F4A02BA00778B1F /* TCA Definition.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "TCA Definition.txt"; sourceTree = "<group>"; };
 		DAEB394A2F4B51B700778B1F /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
-		DAEB394E2F4B539D00778B1F /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		DAEB64D82F3CC29800929CA6 /* EnvironmentLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentLesson.swift; sourceTree = "<group>"; };
 		DAEB64DC2F3CC31100929CA6 /* EnvironmentBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentBootcamp.swift; sourceTree = "<group>"; };
 		DAEB64F32F3CC86D00929CA6 /* EnvironmentDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentDemo.swift; sourceTree = "<group>"; };
@@ -2320,6 +2318,7 @@
 			isa = PBXGroup;
 			children = (
 				DAEB393E2F4B515700778B1F /* Counter */,
+				DAEB396C2F4B574500778B1F /* Login */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -2328,9 +2327,15 @@
 			isa = PBXGroup;
 			children = (
 				DAEB394A2F4B51B700778B1F /* CounterFeature.swift */,
-				DAEB394E2F4B539D00778B1F /* CounterView.swift */,
 			);
 			path = Counter;
+			sourceTree = "<group>";
+		};
+		DAEB396C2F4B574500778B1F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		DAEB64D72F3CC28300929CA6 /* Environment System */ = {
@@ -2557,7 +2562,6 @@
 				DA54779D2EB7936F005C8868 /* Env.swift in Sources */,
 				DAEBAE4A2DF28E1E00082B1C /* SubviewBootcamp.swift in Sources */,
 				DA7BE0A42E806032006821CE /* LoginPresenter.swift in Sources */,
-				DAEB394F2F4B539D00778B1F /* CounterView.swift in Sources */,
 				DA54773D2EB654BC005C8868 /* Product.swift in Sources */,
 				DA257F0C2F2E264C0024DC9B /* ColorRotator.swift in Sources */,
 				DAA609852F1265A400B625CE /* StickyBottomButton.swift in Sources */,
