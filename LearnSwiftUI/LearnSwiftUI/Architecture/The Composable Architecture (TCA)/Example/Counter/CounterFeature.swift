@@ -6,11 +6,12 @@
 //
 
 import ComposableArchitecture
+import SwiftUI
 
 @Reducer
 struct CounterFeature {
     @ObservableState
-    struct State: Equatable {
+    struct State {
         var count: Int = 0
     }
     
@@ -35,4 +36,33 @@ struct CounterFeature {
             }
         }
     }
+}
+
+struct CounterView: View {
+    let store: StoreOf<CounterFeature>
+    
+    var body: some View {
+        VStack {
+            Text("\(store.count)")
+                .font(.largeTitle).bold()
+            HStack {
+                Button("-") {
+                    store.send(.decrementCountTapped)
+                }.buttonStyle(.borderedProminent)
+                
+                Button("+") {
+                    store.send(.incrementCountTapped)
+                }.buttonStyle(.borderedProminent)
+            }
+            Button("Reset") {
+                store.send(.resetCountTapped)
+            }.buttonStyle(.borderedProminent)
+        }
+    }
+}
+
+#Preview {
+    CounterView(store: Store(initialState: CounterFeature.State(), reducer: {
+        CounterFeature()
+    }))
 }
