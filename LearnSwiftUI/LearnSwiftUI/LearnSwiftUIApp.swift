@@ -17,7 +17,7 @@ struct LearnSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
 //            AppCoordinator()
-            LoginView()
+//            LoginView()
 //            TextBootCamp()
 //            ShapesBootCamp()
 //            ColorsBootcamp()

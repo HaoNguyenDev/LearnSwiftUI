@@ -309,7 +309,6 @@
 		DAAA67262E6173FD004075B7 /* PickerBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAA67252E6173FD004075B7 /* PickerBootcamp.swift */; };
 		DAAE8CB82E43B46800FCBA4E /* GestureBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE8CB72E43B46800FCBA4E /* GestureBootcamp.swift */; };
 		DAAE8CBA2E44BDFF00FCBA4E /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE8CB92E44BDFF00FCBA4E /* FormView.swift */; };
-		DAAE8CBD2E45028300FCBA4E /* CounterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE8CBC2E45028300FCBA4E /* CounterState.swift */; };
 		DABC5F9C2F2772A000957964 /* EquatableViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC5F9B2F2772A000957964 /* EquatableViewDemo.swift */; };
 		DABC5FC42F27B23C00957964 /* NavigationLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC5FC32F27B23C00957964 /* NavigationLesson.swift */; };
 		DABC5FC82F27B27200957964 /* NavigationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC5FC72F27B27200957964 /* NavigationBootcamp.swift */; };
@@ -350,6 +349,8 @@
 		DAEA78AA2EA27FC4001C1F26 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA78A92EA27FC4001C1F26 /* KeychainService.swift */; };
 		DAEB391B2F49C02300778B1F /* TCACounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB391A2F49C02300778B1F /* TCACounterFeature.swift */; };
 		DAEB39342F4A02BA00778B1F /* TCA Definition.txt in Resources */ = {isa = PBXBuildFile; fileRef = DAEB39332F4A02BA00778B1F /* TCA Definition.txt */; };
+		DAEB394B2F4B51B700778B1F /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB394A2F4B51B700778B1F /* CounterFeature.swift */; };
+		DAEB394F2F4B539D00778B1F /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB394E2F4B539D00778B1F /* CounterView.swift */; };
 		DAEB64D92F3CC29800929CA6 /* EnvironmentLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB64D82F3CC29800929CA6 /* EnvironmentLesson.swift */; };
 		DAEB64DD2F3CC31100929CA6 /* EnvironmentBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB64DC2F3CC31100929CA6 /* EnvironmentBootcamp.swift */; };
 		DAEB64F42F3CC86D00929CA6 /* EnvironmentDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEB64F32F3CC86D00929CA6 /* EnvironmentDemo.swift */; };
@@ -717,7 +718,6 @@
 		DAAA67292E61E55F004075B7 /* DelegatePattern.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DelegatePattern.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAAE8CB72E43B46800FCBA4E /* GestureBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureBootcamp.swift; sourceTree = "<group>"; };
 		DAAE8CB92E44BDFF00FCBA4E /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
-		DAAE8CBC2E45028300FCBA4E /* CounterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterState.swift; sourceTree = "<group>"; };
 		DABC5F9B2F2772A000957964 /* EquatableViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquatableViewDemo.swift; sourceTree = "<group>"; };
 		DABC5FC32F27B23C00957964 /* NavigationLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLesson.swift; sourceTree = "<group>"; };
 		DABC5FC72F27B27200957964 /* NavigationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBootcamp.swift; sourceTree = "<group>"; };
@@ -759,6 +759,8 @@
 		DAEA78A92EA27FC4001C1F26 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		DAEB391A2F49C02300778B1F /* TCACounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCACounterFeature.swift; sourceTree = "<group>"; };
 		DAEB39332F4A02BA00778B1F /* TCA Definition.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "TCA Definition.txt"; sourceTree = "<group>"; };
+		DAEB394A2F4B51B700778B1F /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
+		DAEB394E2F4B539D00778B1F /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		DAEB64D82F3CC29800929CA6 /* EnvironmentLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentLesson.swift; sourceTree = "<group>"; };
 		DAEB64DC2F3CC31100929CA6 /* EnvironmentBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentBootcamp.swift; sourceTree = "<group>"; };
 		DAEB64F32F3CC86D00929CA6 /* EnvironmentDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentDemo.swift; sourceTree = "<group>"; };
@@ -2111,7 +2113,6 @@
 				DA082F2A2F48A558005621BE /* SwiftUI-Architectures.txt */,
 				DA6027952EA3D88800271E00 /* MVVM */,
 				DA7BE09A2E805F33006821CE /* VIPER */,
-				DAAE8CBC2E45028300FCBA4E /* CounterState.swift */,
 				DAEB39122F49BFDC00778B1F /* The Composable Architecture (TCA) */,
 			);
 			path = Architecture;
@@ -2310,8 +2311,26 @@
 			children = (
 				DAEB39332F4A02BA00778B1F /* TCA Definition.txt */,
 				DAEB391A2F49C02300778B1F /* TCACounterFeature.swift */,
+				DAEB393A2F4B514400778B1F /* Example */,
 			);
 			path = "The Composable Architecture (TCA)";
+			sourceTree = "<group>";
+		};
+		DAEB393A2F4B514400778B1F /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				DAEB393E2F4B515700778B1F /* Counter */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		DAEB393E2F4B515700778B1F /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				DAEB394A2F4B51B700778B1F /* CounterFeature.swift */,
+				DAEB394E2F4B539D00778B1F /* CounterView.swift */,
+			);
+			path = Counter;
 			sourceTree = "<group>";
 		};
 		DAEB64D72F3CC28300929CA6 /* Environment System */ = {
@@ -2538,6 +2557,7 @@
 				DA54779D2EB7936F005C8868 /* Env.swift in Sources */,
 				DAEBAE4A2DF28E1E00082B1C /* SubviewBootcamp.swift in Sources */,
 				DA7BE0A42E806032006821CE /* LoginPresenter.swift in Sources */,
+				DAEB394F2F4B539D00778B1F /* CounterView.swift in Sources */,
 				DA54773D2EB654BC005C8868 /* Product.swift in Sources */,
 				DA257F0C2F2E264C0024DC9B /* ColorRotator.swift in Sources */,
 				DAA609852F1265A400B625CE /* StickyBottomButton.swift in Sources */,
@@ -2643,6 +2663,7 @@
 				DA7BF5D32E98ED1400224BCF /* ThemeAssetsProtocol.swift in Sources */,
 				DA8D9D222F38DD2C004529FF /* ProductCardStackExample.swift in Sources */,
 				DAC35AFC2E9F8E010019021D /* UserListViewWrapper.swift in Sources */,
+				DAEB394B2F4B51B700778B1F /* CounterFeature.swift in Sources */,
 				DA87488A2E6AFC6A00B189F3 /* WeatherItem.swift in Sources */,
 				DA7BF5E82E98F2C900224BCF /* RswiftResources+ColorResource.swift in Sources */,
 				DA5477332EB651AE005C8868 /* AlamofireNetworking.swift in Sources */,
@@ -2795,7 +2816,6 @@
 				DA7BE0A62E806040006821CE /* LoginInteractor.swift in Sources */,
 				DA5476E42EB39FCD005C8868 /* AlamofireSampleAPICallSyntax.swift in Sources */,
 				DA278F862F3233BF0079AF56 /* CounterExercise.swift in Sources */,
-				DAAE8CBD2E45028300FCBA4E /* CounterState.swift in Sources */,
 				DA64B7C22F2BA64800144CC6 /* AdvancedAnimationLesson.swift in Sources */,
 				DAE366252E9D1047005EF803 /* AppSettings.swift in Sources */,
 				DA278FA52F32398F0079AF56 /* ColorPickerExercise.swift in Sources */,
